@@ -1,0 +1,21 @@
+{
+  "HomePage": {
+    "title": "Merhaba Dünya!",
+    "about": "Hakkımızda sayfasına git"
+  },
+  "site": {
+    "name": "Use Safe"
+  },
+  "meta": {
+    "common": {
+      "title": "Hello world!",
+      "description": "Go to the about page",
+      "keywords": "Hello world!",
+      "og_title": "Hello world!",
+      "og_description": "Go to the about page",
+      "og_image_alt": "Hello world!",
+      "twitter_title": "Hello world!",
+      "twitter_description": "Go to the about page"
+    }
+  }
+}
