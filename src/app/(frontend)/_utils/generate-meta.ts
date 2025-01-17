@@ -3,7 +3,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 
 import { routing } from "@/i18n/routing";
 
-import { deepMerge } from "./deep-merge";
+import { deepMerge } from "@/utils/deep-merge";
 
 type GenerateMetaConfig = {
   /**

@@ -17,5 +17,17 @@
       "twitter_title": "Hello world!",
       "twitter_description": "Go to the about page"
     }
+  },
+  "common": {
+    "homepage": "Home Page",
+    "solutions": "Solutions",
+    "about_us": "About Us",
+    "contact_us": "Contact Us",
+    "digital_product_password": "Digital Product Password",
+    "qr_code_on_product_packaging": "QR Code on Product Packaging",
+    "use_safe_certification": "Use Safe Certification",
+    "try_for_free": "Try for free",
+    "valuable_customers": "Valuable Customers",
+    "top_header_ads": "Special Campaign: 50% discount for the first month!"
   }
 }

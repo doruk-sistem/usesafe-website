@@ -7,7 +7,9 @@ import { notFound } from "next/navigation";
 
 import { routing } from "@/i18n/routing";
 
-import "../globals.css";
+import CraftoProvider from "@/frontend/_providers/CraftoProvider";
+import ReactSlickProvider from "@/frontend/_providers/ReactSlickProvider";
+import "@/frontend/globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,7 +55,9 @@ export default async function LocaleLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <CraftoProvider>
+            <ReactSlickProvider>{children}</ReactSlickProvider>
+          </CraftoProvider>
         </NextIntlClientProvider>
       </body>
     </html>

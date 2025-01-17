@@ -17,5 +17,17 @@
       "twitter_title": "Hello world!",
       "twitter_description": "Go to the about page"
     }
+  },
+  "common": {
+    "homepage": "Ana Sayfa",
+    "solutions": "Çözümler",
+    "about_us": "Hakkımızda",
+    "contact_us": "İletişim",
+    "digital_product_password": "Dijital Ürün Şifresi",
+    "qr_code_on_product_packaging": "Ürün Ambalajı Üzerindeki QR Kod",
+    "use_safe_certification": "Use Safe Sertifikası",
+    "try_for_free": "Ücretsiz Deneyin",
+    "valuable_customers": "Değerli Müşterilerimiz",
+    "top_header_ads": "Özel Kampanya: İlk ay %50 indirim!"
   }
 }
