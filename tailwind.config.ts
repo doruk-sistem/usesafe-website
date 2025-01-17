@@ -17,9 +17,9 @@ export default {
         padding: {
           DEFAULT: "1.5rem",
           sm: "2rem",
-          lg: "4rem",
-          xl: "5rem",
-          "2xl": "5rem",
+          lg: "3rem",
+          xl: "3rem",
+          "2xl": "3rem",
         },
       },
       colors: {

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Section from "../../section";
 
 interface ContentWithImageBlockProps {
   title: string;
@@ -36,7 +37,7 @@ export default function ContentWithImageBlock({
           alt={image.alt}
           width={image.width}
           height={image.height}
-          className="tw-w-full tw-max-w-none tw-object-contain"
+          className="tw-w-full tw-max-w-none tw-object-contain tw-rounded-lg"
         />
       </div>
     </div>
@@ -56,14 +57,12 @@ export default function ContentWithImageBlock({
   );
 
   return (
-    <section className="big-section">
-      <div className="container">
-        <div className="row tw-items-center tw-justify-center tw-space-y-10 tw-space-x-10">
-          {imagePosition === "left" && renderImageArea()}
-          {renderContentArea()}
-          {imagePosition === "right" && renderImageArea()}
-        </div>
+    <Section>
+      <div className="row tw-items-center tw-justify-center tw-space-y-10 tw-space-x-10">
+        {imagePosition === "left" && renderImageArea()}
+        {renderContentArea()}
+        {imagePosition === "right" && renderImageArea()}
       </div>
-    </section>
+    </Section>
   );
 }

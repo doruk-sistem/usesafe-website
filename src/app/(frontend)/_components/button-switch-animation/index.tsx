@@ -17,7 +17,7 @@ export default function ButtonSwitchAnimation({
     <Button
       {...props}
       className={cn(
-        "btn btn-large btn-box-shadow btn-hover-animation-switch btn-round-edge w-100 text-transform-none tw-transition-all",
+        "btn btn-large btn-box-shadow btn-hover-animation-switch !tw-transition-all",
         className
       )}
     >
