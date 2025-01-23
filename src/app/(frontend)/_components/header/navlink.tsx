@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { IoChevronDown } from "react-icons/io5";
-import { Link } from "@/i18n/routing";
 
 import { cn } from "@/utils/cn";
 
@@ -30,7 +29,7 @@ export default function NavLink({
 
   if (!subItems) {
     return (
-      <Link
+      <a
         href={href || "#"}
         className={`primary-font tw-flex tw-items-center tw-text-black tw-transition-colors tw-duration-200 ${
           isMobile
@@ -39,7 +38,7 @@ export default function NavLink({
         }`}
       >
         {label}
-      </Link>
+      </a>
     );
   }
 
@@ -73,7 +72,7 @@ export default function NavLink({
         >
           <div className={`${isMobile ? "tw-pl-6" : "tw-py-1"}`}>
             {subItems.map((item) => (
-              <Link
+              <a
                 key={item.href}
                 href={item.href}
                 className={`tw-block tw-text-gray-700 hover:tw-text-black tw-transition-colors tw-duration-200 ${
@@ -84,7 +83,7 @@ export default function NavLink({
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
-              </Link>
+              </a>
             ))}
           </div>
         </div>

@@ -18,6 +18,7 @@ const eslintConfig = [
       "@typescript-eslint/no-unused-vars": "warn",
       "no-console": "warn",
       "@next/next/no-html-link-for-pages": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
     },
   },
 ];

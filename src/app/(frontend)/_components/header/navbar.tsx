@@ -4,8 +4,6 @@ import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { useTranslations } from "next-intl";
 
-import { Link } from "@/i18n/routing";
-
 import Logo from "../logo";
 import { Button } from "../button";
 import SwitchLanguage from "../switch-language";
@@ -23,15 +21,15 @@ export default function Navbar() {
       subItems: [
         {
           label: t("common.digital_product_password"),
-          href: "/services/web-design",
+          href: "/solutions/digital-product-password",
         },
         {
-          label: t("common.qr_code_on_product_packaging"),
-          href: "/services/mobile-app",
+          label: t("common.qr_code_anti_counterfeiting"),
+          href: "/solutions/qr-code-anti-counterfeiting",
         },
         {
           label: t("common.use_safe_certification"),
-          href: "/services/digital-marketing",
+          href: "/solutions/use-safe-certification",
         },
       ],
     },
@@ -44,12 +42,12 @@ export default function Navbar() {
       <div className="tw-container tw-mx-auto">
         <div className="tw-flex tw-items-center tw-justify-between tw-py-4">
           {/* Logo */}
-          <Link
+          <a
             href="/"
             className="tw-flex tw-items-center tw-justify-center tw-w-20 tw-h-20"
           >
             <Logo />
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="tw-hidden xl:tw-flex tw-items-center tw-space-x-5">
