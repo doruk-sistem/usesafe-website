@@ -176,13 +176,6 @@ export default function PageClient() {
               innerContainer: true,
             },
           },
-          {
-            blockType: "pricing",
-            layout: undefined,
-            sectionOptions: {
-              innerContainer: true,
-            },
-          },
         ]}
       />
       <Footer />
