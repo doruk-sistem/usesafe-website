@@ -2,12 +2,11 @@ import React from "react";
 
 import { HiArrowNarrowRight } from "react-icons/hi";
 
-import ButtonSwitchAnimation from "../../button-switch-animation";
-import Section from "../../section";
+import ButtonSwitchAnimation from "@/frontend/_components/button-switch-animation";
 
-export default function PricingBlock() {
+export function PricingBlock() {
   return (
-    <Section>
+    <>
       <div className="row justify-content-center mb-3">
         <div
           className="col-xl-5 col-lg-6 col-md-7 text-center"
@@ -269,6 +268,6 @@ export default function PricingBlock() {
         </div>
         {/* end features box item */}
       </div>
-    </Section>
+    </>
   );
 }

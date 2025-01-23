@@ -1,24 +1,20 @@
-import Image from "next/image";
 import React from "react";
-import Section from "../../section";
+
+import { Media } from "@/components/Media";
+import { MediaProps } from "@/components/Media/types";
 
 interface ContentWithImageBlockProps {
   title: string;
-  description: string;
-  buttonsComponent: React.ReactNode;
-  image: {
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-  };
+  description?: string;
+  contentFooter?: React.ReactNode;
+  image: MediaProps;
   imagePosition?: "left" | "right";
 }
 
-export default function ContentWithImageBlock({
+export function ContentWithImageBlock({
   title,
   description,
-  buttonsComponent,
+  contentFooter,
   image,
   imagePosition = "left",
 }: ContentWithImageBlockProps) {
@@ -32,13 +28,7 @@ export default function ContentWithImageBlock({
         data-bottom-top="transform: translateY(100px)"
         data-top-bottom="transform: translateY(-100px)"
       >
-        <Image
-          src={image.src}
-          alt={image.alt}
-          width={image.width}
-          height={image.height}
-          className="tw-w-full tw-max-w-none tw-object-contain tw-rounded-lg"
-        />
+        <Media {...image} />
       </div>
     </div>
   );
@@ -52,17 +42,15 @@ export default function ContentWithImageBlock({
         <h1 className="alt-font fw-600 text-dark-gray ls-minus-1px">{title}</h1>
       )}
       {!!description && <p className="w-95 md-w-100">{description}</p>}
-      {buttonsComponent && buttonsComponent}
+      {contentFooter}
     </div>
   );
 
   return (
-    <Section>
-      <div className="row tw-items-center tw-justify-center tw-space-y-10 tw-space-x-10">
-        {imagePosition === "left" && renderImageArea()}
-        {renderContentArea()}
-        {imagePosition === "right" && renderImageArea()}
-      </div>
-    </Section>
+    <div className="row tw-items-center tw-justify-center tw-space-y-10 tw-space-x-10">
+      {imagePosition === "left" && renderImageArea()}
+      {renderContentArea()}
+      {imagePosition === "right" && renderImageArea()}
+    </div>
   );
 }

@@ -2,7 +2,6 @@ import React from "react";
 
 import ClientsSlick from "./clients-slick";
 import ClientsList from "./clients-list";
-import Section from "../../section";
 
 export interface ClientsBlockProps {
   clients: {
@@ -10,7 +9,6 @@ export interface ClientsBlockProps {
     imageSrc: string;
   }[];
   type?: "list" | "slick";
-  footer?: React.ReactNode;
 }
 
 const clientsComponents: Record<NonNullable<ClientsBlockProps["type"]>, any> = {
@@ -18,10 +16,9 @@ const clientsComponents: Record<NonNullable<ClientsBlockProps["type"]>, any> = {
   slick: ClientsSlick,
 };
 
-export default function ClientsBlock({
+export function ClientsBlock({
   clients = [],
   type = "list",
-  footer,
 }: ClientsBlockProps) {
   const Component = clientsComponents[type];
 
@@ -29,9 +26,5 @@ export default function ClientsBlock({
     return null;
   }
 
-  return (
-    <Section footer={footer}>
-      <Component clients={clients} />
-    </Section>
-  );
+  return <Component clients={clients} />;
 }
