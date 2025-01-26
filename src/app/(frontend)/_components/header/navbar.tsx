@@ -33,6 +33,15 @@ export default function Navbar() {
         },
       ],
     },
+    {
+      label: t("common.resources"),
+      subItems: [
+        {
+          label: t("common.about_dpp"),
+          href: "/resources/about-dpp",
+        },
+      ],
+    },
     { label: t("common.about_us"), href: "/about" },
     { label: t("common.contact_us"), href: "/contact" },
   ];
@@ -66,7 +75,9 @@ export default function Navbar() {
             {/* Language Selector */}
             <SwitchLanguage />
 
-            <Button variant="default">{t("common.try_for_free")}</Button>
+            <a href="/demo">
+              <Button variant="default">{t("common.try_for_free")}</Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}

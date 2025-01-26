@@ -1,6 +1,4 @@
-import React from "react";
-
-export function ContactFormBlock() {
+export function ContactFormBlockVariant1() {
   return (
     <div className="row mb-8">
       <div

@@ -70,6 +70,9 @@ export default function PageClient() {
                 </ButtonSwitchAnimation>
               ),
             },
+            sectionOptions: {
+              innerContainer: true,
+            },
           },
           {
             blockType: "contentWithImage",

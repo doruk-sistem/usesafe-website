@@ -142,11 +142,14 @@ export default function DigitalProductPasswordPageClient() {
             layout: undefined,
             sectionOptions: {
               innerContainer: true,
+              sectionId: "pricing",
             },
           },
           {
             blockType: "contactForm",
-            layout: undefined,
+            layout: {
+              variant: "variant-1",
+            },
             sectionOptions: {
               className: "tw-bg-gray-100",
               innerContainer: true,
