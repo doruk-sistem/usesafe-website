@@ -70,6 +70,9 @@ export default function PageClient() {
                 </ButtonSwitchAnimation>
               ),
             },
+            sectionOptions: {
+              innerContainer: true,
+            },
           },
           {
             blockType: "contentWithImage",
@@ -173,13 +176,6 @@ export default function PageClient() {
             },
             sectionOptions: {
               title: "Why Usesafe?",
-              innerContainer: true,
-            },
-          },
-          {
-            blockType: "pricing",
-            layout: undefined,
-            sectionOptions: {
               innerContainer: true,
             },
           },

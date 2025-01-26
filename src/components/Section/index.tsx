@@ -10,6 +10,7 @@ export interface SectionProps {
   footerContent?: React.ReactNode;
   headerContent?: React.ReactNode;
   innerContainer?: boolean;
+  sectionId?: string;
 }
 
 export default function Section({
@@ -20,9 +21,10 @@ export default function Section({
   headerContent = null,
   className,
   innerContainer = false,
+  sectionId,
 }: SectionProps) {
   return (
-    <section className={cn("tw-relative", className)}>
+    <section id={sectionId} className={cn("tw-relative", className)}>
       <div className={cn("tw-space-y-10", innerContainer && "tw-container")}>
         {!!title || !!description ? (
           <div className="tw-flex tw-flex-col tw-items-center tw-justify-center tw-text-center tw-gap-5 tw-max-w-[800px] tw-mx-auto">

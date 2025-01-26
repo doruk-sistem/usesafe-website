@@ -5,6 +5,7 @@ import React from "react";
 interface ProgressItem {
   description: string;
   value: number;
+  suffix?: string;
 }
 
 interface ProgressBarProps {
@@ -38,6 +39,7 @@ export function CounterBlock({ items = defaultItems }: ProgressBarProps) {
           <h1
             className="vertical-counter d-inline-flex tw-font-bold tw-text-primary tw-mb-0"
             data-to={String(item.value)}
+            data-text={item.suffix}
           ></h1>
           <span className="d-block text-dark-gray fw-500 fs-18">
             {item.description}
