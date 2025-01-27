@@ -1,75 +1,264 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import { toast, Toaster } from "react-hot-toast";
+import { FaCheck } from "react-icons/fa";
 
 import ButtonSwitchAnimation from "@/app/(frontend)/_components/button-switch-animation";
 import Footer from "@/app/(frontend)/_components/footer";
 import Header from "@/app/(frontend)/_components/header";
+import { Button } from "@/app/(frontend)/_components/button";
+import { BsArrowUpRight } from "react-icons/bs";
 
 const products = [
   {
+    id: "digital-product-password",
     title: "Digital Product Password",
     description: "Protect your products with unique encryption",
-    href: "/solutions/digital-product-password#request-demo",
+    href: "/solutions/digital-product-password",
     image: "/images/product-security.webp",
   },
   {
+    id: "qr-code-anti-counterfeiting",
     title: "QR Code Anti-Counterfeiting",
     description: "Anti-counterfeiting solution with QR code",
-    href: "/solutions/qr-code-anti-counterfeiting#request-demo",
+    href: "/solutions/qr-code-anti-counterfeiting",
     image: "/images/mobil-product.webp",
   },
   {
+    id: "use-safe-certification",
     title: "Use Safe Certification",
     description: "Secure certification system",
-    href: "/solutions/use-safe-certification#request-demo",
+    href: "/solutions/use-safe-certification",
     image: "/images/products-1.webp",
   },
 ];
 
 export default function DemoPageClient() {
+  const [selectedProduct, setSelectedProduct] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!selectedProduct) {
+      toast.error("Please select a product");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/send-email-for-demo", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          product: selectedProduct,
+        }),
+      });
+
+      if (response.ok) {
+        toast(() => (
+          <div>
+            <h3 className="tw-text-lg tw-mb-0 tw-font-semibold">
+              <FaCheck className="tw-text-green-500 tw-mr-2" />
+              Demo Request Sent
+            </h3>
+            <p className="tw-text-base tw-mb-0">
+              We will contact you as soon as possible.
+            </p>
+          </div>
+        ));
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          message: "",
+        });
+        setSelectedProduct("");
+      } else {
+        throw new Error("An error occurred");
+      }
+    } catch (error) {
+      toast.error("An error occurred while sending the demo request");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="tw-min-h-screen tw-flex tw-flex-col">
       <Header />
+      <Toaster position="bottom-center" />
       <main className="tw-flex-1 tw-container tw-mx-auto tw-px-4 tw-py-12">
-        <h1 className="tw-text-3xl tw-font-bold tw-text-black tw-text-center tw-mb-12">
-          Product Demos
+        <h1 className="tw-text-3xl tw-font-bold tw-text-black tw-text-center tw-mb-6">
+          Request Product Demo
         </h1>
-        <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8">
-          {products.map((product, index) => (
-            <a
-              key={index}
-              href={product.href}
-              className="tw-block tw-group tw-h-full"
-            >
-              <div className="tw-bg-white tw-rounded-lg tw-shadow-lg tw-transition-all tw-duration-300 tw-border tw-border-gray-200 hover:tw-shadow-xl hover:tw-scale-[1.01] tw-overflow-hidden tw-h-full tw-flex tw-flex-col">
-                <div className="tw-relative tw-w-full tw-h-48">
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    fill
-                    className="tw-object-cover"
+
+        <form onSubmit={handleSubmit} className="tw-max-w-4xl tw-mx-auto">
+          <div className="tw-bg-white tw-rounded-lg tw-p-6 tw-shadow-lg">
+            <div className="tw-mb-8">
+              <h2 className="tw-text-xl tw-text-black tw-font-semibold tw-mb-4">
+                Select Product
+              </h2>
+              <div className="tw-flex tw-flex-col tw-gap-4">
+                {products.map((product) => (
+                  <div
+                    key={product.id}
+                    className={`group tw-relative tw-cursor-pointer tw-group hover:tw-ring-2 tw-transition-all tw-duration-300 ${
+                      selectedProduct === product.id
+                        ? "tw-ring-2 tw-ring-primary"
+                        : "tw-ring-1 tw-ring-gray-200"
+                    } tw-rounded-lg tw-overflow-hidden tw-flex`}
+                    onClick={() => setSelectedProduct(product.id)}
+                  >
+                    <div className="tw-relative tw-w-56 tw-overflow-hidden tw-flex-shrink-0">
+                      <Image
+                        src={product.image}
+                        alt={product.title}
+                        fill
+                        className="tw-object-cover tw-h-full tw-w-full group-hover:tw-scale-105 tw-transition-all tw-duration-300"
+                      />
+                    </div>
+                    <div className="tw-py-4 tw-px-8 tw-flex tw-flex-col tw-justify-between tw-flex-1">
+                      <div>
+                        <h3
+                          className={`tw-font-medium tw-mb-2 tw-text-2xl  ${
+                            selectedProduct === product.id
+                              ? "tw-text-primary"
+                              : "tw-text-black"
+                          }`}
+                        >
+                          {product.title}
+                        </h3>
+                        <p className="tw-text-sm tw-text-gray-600">
+                          {product.description}
+                        </p>
+                      </div>
+                      <div className="tw-flex tw-items-center tw-justify-between">
+                        <a href={product.href} target="_blank">
+                          <Button variant="default" size="sm">
+                            More Details
+                            <BsArrowUpRight className="tw-ml-2" />
+                          </Button>
+                        </a>
+                        {selectedProduct === product.id && (
+                          <span className="tw-text-primary tw-text-sm">
+                            ✓ Selected
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="tw-mt-8">
+              <h2 className="tw-text-xl tw-text-black tw-font-semibold tw-mb-6">
+                Contact Information
+              </h2>
+              <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-6">
+                <div>
+                  <label className="tw-block tw-text-sm tw-font-medium tw-mb-2">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="tw-w-full tw-px-4 tw-py-2 tw-border tw-rounded-md focus:tw-ring-primary focus:tw-border-primary"
                   />
                 </div>
-                <div className="tw-p-6 tw-flex tw-flex-col tw-flex-1">
-                  <h2 className="tw-text-xl tw-font-semibold tw-mb-3 tw-text-gray-800 group-hover:tw-text-primary">
-                    {product.title}
-                  </h2>
-                  <p className="tw-text-gray-600 tw-flex-1">
-                    {product.description}
-                  </p>
-                  <div className="tw-mt-4">
-                    <ButtonSwitchAnimation icon={<HiArrowNarrowRight />}>
-                      Request Demo
-                    </ButtonSwitchAnimation>
-                  </div>
+                <div>
+                  <label className="tw-block tw-text-sm tw-font-medium tw-mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="tw-w-full tw-px-4 tw-py-2 tw-border tw-rounded-md focus:tw-ring-primary focus:tw-border-primary"
+                  />
+                </div>
+                <div>
+                  <label className="tw-block tw-text-sm tw-font-medium tw-mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    name="company"
+                    required
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    className="tw-w-full tw-px-4 tw-py-2 tw-border tw-rounded-md focus:tw-ring-primary focus:tw-border-primary"
+                  />
+                </div>
+                <div>
+                  <label className="tw-block tw-text-sm tw-font-medium tw-mb-2">
+                    Phone
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    required
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="tw-w-full tw-px-4 tw-py-2 tw-border tw-rounded-md focus:tw-ring-primary focus:tw-border-primary"
+                  />
+                </div>
+                <div className="md:tw-col-span-2">
+                  <label className="tw-block tw-text-sm tw-font-medium tw-mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    name="message"
+                    rows={4}
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    className="tw-w-full tw-px-4 tw-py-2 tw-border tw-rounded-md focus:tw-ring-primary focus:tw-border-primary"
+                  />
                 </div>
               </div>
-            </a>
-          ))}
-        </div>
+            </div>
+
+            <div className="tw-mt-6">
+              <ButtonSwitchAnimation
+                type="submit"
+                disabled={isSubmitting}
+                icon={<HiArrowNarrowRight />}
+              >
+                {isSubmitting ? "Sending..." : "Request Demo"}
+              </ButtonSwitchAnimation>
+            </div>
+          </div>
+        </form>
       </main>
       <Footer />
     </div>
