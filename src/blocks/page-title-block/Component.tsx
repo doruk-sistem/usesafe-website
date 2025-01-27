@@ -4,16 +4,18 @@ interface PageTitleBlockProps {
   title?: string;
   topTitle?: string;
   backgroundImage?: string;
+  downSectionId?: string;
 }
 
 export function PageTitleBlock({
   title,
   topTitle,
   backgroundImage,
+  downSectionId,
 }: PageTitleBlockProps) {
   return (
     <div
-      className="page-title-big-typography tw-py-0 md:tw-py-10 ipad-top-space-margin tw-bg-black cover-background background-position-center-top"
+      className="page-title-big-typography tw-py-0 md:tw-py-10 ipad-top-space-margin tw-bg-black tw-bg-center tw-bg-cover"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="tw-opacity-85 tw-bg-black tw-w-full tw-h-full tw-absolute tw-top-0 tw-left-0"></div>
@@ -42,7 +44,7 @@ export function PageTitleBlock({
             className="down-section text-center"
             data-anime='{ "translateY": [-50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
           >
-            <a href="#down-section" className="section-link">
+            <a href={`#${downSectionId}`} className="section-link">
               <div className="text-white">
                 <i className="line-icon-Down icon-medium"></i>
               </div>
