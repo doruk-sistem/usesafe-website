@@ -78,13 +78,15 @@ export function PricingBlock() {
               </div>
             </div>
             <div className="pricing-footer ps-12 pe-12 pb-8 text-center">
-              <ButtonSwitchAnimation
-                icon={<HiArrowNarrowRight />}
-                size="lg"
-                className="tw-mb-4"
-              >
-                Join this plan
-              </ButtonSwitchAnimation>
+              <a href="/demo">
+                <ButtonSwitchAnimation
+                  icon={<HiArrowNarrowRight />}
+                  size="lg"
+                  className="tw-mb-4"
+                >
+                  Join this plan
+                </ButtonSwitchAnimation>
+              </a>
               <span className="fs-16 tw-block">Cancel anytime</span>
             </div>
           </div>
@@ -142,14 +144,16 @@ export function PricingBlock() {
               </div>
             </div>
             <div className="pricing-footer ps-12 pe-12 pb-8 text-center">
-              <ButtonSwitchAnimation
-                icon={<HiArrowNarrowRight />}
-                size="lg"
-                variant="white"
-                className="tw-mb-4"
-              >
-                Join this plan
-              </ButtonSwitchAnimation>
+              <a href="/demo">
+                <ButtonSwitchAnimation
+                  icon={<HiArrowNarrowRight />}
+                  size="lg"
+                  variant="white"
+                  className="tw-mb-4"
+                >
+                  Join this plan
+                </ButtonSwitchAnimation>
+              </a>
               <span className="tw-block fs-16 text-white opacity-5 fw-300">
                 Cancel anytime
               </span>
@@ -206,13 +210,15 @@ export function PricingBlock() {
               </div>
             </div>
             <div className="pricing-footer ps-12 pe-12 pb-8 text-center">
-              <ButtonSwitchAnimation
-                icon={<HiArrowNarrowRight />}
-                size="lg"
-                className="tw-mb-4"
-              >
-                Join this plan
-              </ButtonSwitchAnimation>
+              <a href="/demo">
+                <ButtonSwitchAnimation
+                  icon={<HiArrowNarrowRight />}
+                  size="lg"
+                  className="tw-mb-4"
+                >
+                  Join this plan
+                </ButtonSwitchAnimation>
+              </a>
               <span className="fs-16 tw-block">Cancel anytime</span>
             </div>
           </div>

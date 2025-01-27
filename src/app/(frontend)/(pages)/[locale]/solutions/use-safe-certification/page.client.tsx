@@ -78,12 +78,9 @@ export default function UseSafeCertificationPageClient() {
             },
           },
           {
-            blockType: "contactForm",
-            layout: {
-              variant: "variant-1",
-            },
+            blockType: "pricing",
+            layout: undefined,
             sectionOptions: {
-              className: "tw-bg-gray-100",
               innerContainer: true,
               sectionId: "request-demo",
             },
