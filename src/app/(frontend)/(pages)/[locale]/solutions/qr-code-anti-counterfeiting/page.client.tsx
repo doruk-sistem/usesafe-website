@@ -100,17 +100,6 @@ export default function QRCodeAntiCounterfeitingPageClient() {
               innerContainer: true,
             },
           },
-          {
-            blockType: "contactForm",
-            layout: {
-              variant: "variant-1",
-            },
-            sectionOptions: {
-              className: "tw-bg-gray-100",
-              innerContainer: true,
-              sectionId: "request-demo",
-            },
-          },
         ]}
       />
       <Footer />

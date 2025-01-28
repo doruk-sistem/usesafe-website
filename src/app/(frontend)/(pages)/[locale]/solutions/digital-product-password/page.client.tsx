@@ -145,16 +145,6 @@ export default function DigitalProductPasswordPageClient() {
               sectionId: "pricing",
             },
           },
-          {
-            blockType: "contactForm",
-            layout: {
-              variant: "variant-1",
-            },
-            sectionOptions: {
-              className: "tw-bg-gray-100",
-              innerContainer: true,
-            },
-          },
         ]}
       />
       <Footer />
