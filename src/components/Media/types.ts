@@ -9,6 +9,7 @@ export interface MediaProps {
   fill?: boolean; // for NextImage only
   htmlElement?: ElementType | null;
   imgClassName?: string;
+  svgClassName?: string;
   onClick?: () => void;
   onLoad?: () => void;
   loading?: "lazy" | "eager"; // for NextImage only
@@ -21,4 +22,5 @@ export interface MediaProps {
   videoClassName?: string;
   width?: number;
   height?: number;
+  type?: "image" | "video" | "svg";
 }
