@@ -6,9 +6,13 @@ import { ClientsBlockProps } from ".";
 
 interface ClientsSlickProps extends ClientsBlockProps {
   clients: ClientsBlockProps["clients"];
+  gradientColor?: string;
 }
 
-export default function ClientsSlick({ clients }: ClientsSlickProps) {
+export default function ClientsSlick({
+  gradientColor = "white",
+  clients,
+}: ClientsSlickProps) {
   return (
     <div className="tw-w-full tw-relative">
       <Slider
@@ -52,8 +56,18 @@ export default function ClientsSlick({ clients }: ClientsSlickProps) {
         ))}
       </Slider>
       <div className="tw-absolute tw-pointer-events-none tw-top-0 tw-w-full tw-h-full">
-        <div className="tw-w-1/2 tw-h-full tw-inline-block tw-bg-gradient-to-r tw-from-white tw-via-white/10 tw-to-transparent"></div>
-        <div className="tw-w-1/2 tw-h-full tw-inline-block tw-bg-gradient-to-r tw-from-transparent tw-via-white/10 tw-to-white"></div>
+        <div
+          className="tw-w-1/2 tw-h-full tw-inline-block"
+          style={{
+            background: `linear-gradient(to right, ${gradientColor}, transparent, transparent)`,
+          }}
+        ></div>
+        <div
+          className="tw-w-1/2 tw-h-full tw-inline-block"
+          style={{
+            background: `linear-gradient(to right, transparent, transparent, ${gradientColor})`,
+          }}
+        ></div>
       </div>
     </div>
   );

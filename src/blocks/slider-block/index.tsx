@@ -69,11 +69,11 @@ export function SliderBlock() {
         >
           {/* Left side - Content */}
           <div className="tw-w-full tw-h-full tw-flex tw-flex-col tw-justify-center tw-items-center lg:tw-items-start tw-space-y-6">
-            <h2 className="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-text-gray-900 tw-m-0">
+            <h2 className="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-text-gray-900 tw-m-0 tw-text-white">
               {slide.title}
             </h2>
-            <p className="tw-text-lg tw-text-gray-600">{slide.description}</p>
-            <Button>{slide.buttonText}</Button>
+            <p className="tw-text-lg tw-text-gray-300">{slide.description}</p>
+            <Button variant="white">{slide.buttonText}</Button>
           </div>
 
           {/* Right side - Image */}
