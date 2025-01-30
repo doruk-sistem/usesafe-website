@@ -5,36 +5,14 @@ import React, { useState } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { toast, Toaster } from "react-hot-toast";
 import { FaCheck } from "react-icons/fa";
+import { BsArrowUpRight } from "react-icons/bs";
 
 import ButtonSwitchAnimation from "@/app/(frontend)/_components/button-switch-animation";
 import Footer from "@/app/(frontend)/_components/footer";
 import Header from "@/app/(frontend)/_components/header";
 import { Button } from "@/app/(frontend)/_components/button";
-import { BsArrowUpRight } from "react-icons/bs";
 
-const products = [
-  {
-    id: "digital-product-password",
-    title: "Digital Product Password",
-    description: "Protect your products with unique encryption",
-    href: "/solutions/digital-product-password",
-    image: "/images/product-security.webp",
-  },
-  {
-    id: "qr-code-anti-counterfeiting",
-    title: "QR Code Anti-Counterfeiting",
-    description: "Anti-counterfeiting solution with QR code",
-    href: "/solutions/qr-code-anti-counterfeiting",
-    image: "/images/mobil-product.webp",
-  },
-  {
-    id: "use-safe-certification",
-    title: "Use Safe Certification",
-    description: "Secure certification system",
-    href: "/solutions/use-safe-certification",
-    image: "/images/products-1.webp",
-  },
-];
+import products from "@/constants/products";
 
 export default function DemoPageClient() {
   const [selectedProduct, setSelectedProduct] = useState("");
@@ -159,7 +137,7 @@ export default function DemoPageClient() {
                       </div>
                       <div className="tw-flex tw-items-center tw-justify-between">
                         <a href={product.href} target="_blank">
-                          <Button variant="default" size="sm">
+                          <Button variant="default" size="sm" type="button">
                             More Details
                             <BsArrowUpRight className="tw-ml-2" />
                           </Button>

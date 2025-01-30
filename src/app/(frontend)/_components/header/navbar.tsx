@@ -20,12 +20,12 @@ export default function Navbar() {
       label: t("common.solutions"),
       subItems: [
         {
-          label: t("common.digital_product_password"),
-          href: "/solutions/digital-product-password",
+          label: t("common.digital_product_passport"),
+          href: "/solutions/digital-product-passport",
         },
         {
-          label: t("common.qr_code_anti_counterfeiting"),
-          href: "/solutions/qr-code-anti-counterfeiting",
+          label: t("common.digital_twins"),
+          href: "/solutions/digital-twins",
         },
         {
           label: t("common.use_safe_certification"),
@@ -34,15 +34,9 @@ export default function Navbar() {
       ],
     },
     {
-      label: t("common.resources"),
-      subItems: [
-        {
-          label: t("common.about_dpp"),
-          href: "/resources/about-dpp",
-        },
-      ],
+      label: t("common.about_dpp"),
+      href: "/resources/about-dpp",
     },
-    { label: t("common.about_us"), href: "/about" },
     { label: t("common.contact_us"), href: "/contact" },
   ];
 
