@@ -19,7 +19,7 @@ export default function PageClient() {
   return (
     <div>
       <Header />
-      <div>deneme</div>
+      <div>deneme deneme </div>
       <RenderBlocks
         blocks={[
           {
