@@ -9,6 +9,7 @@ import {
   FaInstagram,
   FaLinkedin,
 } from "react-icons/fa";
+import { GoArrowUpRight } from "react-icons/go";
 
 export default function TopHeader() {
   return (
@@ -67,9 +68,31 @@ export default function TopHeader() {
               </a>
             </div>
 
-            {/* Kampanya Duyurusu - Sadece sm ve üstünde görünür */}
-            <div className="tw-hidden sm:tw-block tw-text-sm">
-              🎉 Özel Kampanya: İlk ay %50 indirim!
+            <div className="tw-hidden sm:tw-flex tw-text-sm tw-items-center tw-gap-2">
+              <a
+                href="https://doruksistem.com.tr"
+                target="_blank"
+                className="tw-flex tw-items-center tw-gap-2 tw-text-gray-600 hover:tw-text-primary"
+              >
+                <GoArrowUpRight className="tw-w-4 tw-h-4" />
+                doruksistem.com.tr
+              </a>
+              |
+              <a
+                href="https://msds.com.tr"
+                target="_blank"
+                className="tw-flex tw-items-center tw-gap-2 tw-text-gray-600 hover:tw-text-primary"
+              >
+                msds.com.tr <GoArrowUpRight className="tw-w-4 tw-h-4" />
+              </a>
+              |
+              <a
+                href="https://turkrech.net.tr"
+                target="_blank"
+                className="tw-flex tw-items-center tw-gap-2 tw-text-gray-600 hover:tw-text-primary"
+              >
+                turkrech.net.tr <GoArrowUpRight className="tw-w-4 tw-h-4" />
+              </a>
             </div>
           </div>
         </div>

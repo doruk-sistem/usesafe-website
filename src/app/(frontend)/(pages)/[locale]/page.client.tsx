@@ -11,40 +11,31 @@ import Footer from "@/frontend/_components/footer";
 import ButtonSwitchAnimation from "@/frontend/_components/button-switch-animation";
 
 import RenderBlocks from "@/blocks/RenderBlocks";
+
 import Counter from "../../_components/counter";
+import { ClientsBlock } from "@/blocks/clients-block/Component";
 
 export default function PageClient() {
   return (
     <div>
       <Header />
+      <div>deneme</div>
       <RenderBlocks
         blocks={[
           {
             blockType: "slider",
             layout: undefined,
             sectionOptions: {
+              footerContent: (
+                <ClientsBlock
+                  clients={clients}
+                  type="slick"
+                  gradientColor="transparent"
+                />
+              ),
               innerContainer: true,
               className:
-                "tw-bg-gradient-to-b tw-from-gray-200 tw-to-white tw-py-5",
-            },
-          },
-          {
-            blockType: "clients",
-            layout: {
-              clients: clients,
-              type: "slick",
-            },
-            sectionOptions: {
-              innerContainer: true,
-              className: "tw-py-4",
-              footerContent: (
-                <div className="tw-flex tw-justify-center tw-items-center tw-py-0">
-                  <Button variant="outline" className="tw-rounded-full">
-                    View All Clients
-                    <HiArrowNarrowRight className="tw-ml-2" />
-                  </Button>
-                </div>
-              ),
+                "tw-py-5 tw-bg-[url('/images/background-16-9-1.png')] tw-bg-cover tw-bg-center",
             },
           },
           {

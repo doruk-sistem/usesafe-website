@@ -5,7 +5,7 @@ import { cn } from "@/utils/cn";
 
 const buttonVariants = cva(
   // Base styles
-  "primary-font tw-border-solid tw-inline-flex tw-items-center tw-justify-center tw-rounded tw-text-sm tw-font-medium tw-transition-colors tw-focus-visible:tw-outline-none tw-focus-visible:tw-ring-1 tw-focus-visible:tw-ring-ring tw-disabled:tw-pointer-events-none tw-disabled:tw-opacity-50",
+  "primary-font tw-border-solid tw-border-transparent tw-inline-flex tw-items-center tw-justify-center tw-rounded tw-text-sm tw-font-medium tw-transition-colors tw-focus-visible:tw-outline-none tw-focus-visible:tw-ring-1 tw-focus-visible:tw-ring-ring tw-disabled:tw-pointer-events-none tw-disabled:tw-opacity-50",
   {
     variants: {
       variant: {

@@ -9,6 +9,11 @@ export interface ClientsBlockProps {
     imageSrc: string;
   }[];
   type?: "list" | "slick";
+  /**
+   * Only used for slick type
+   * @default "white"
+   */
+  gradientColor?: string;
 }
 
 const clientsComponents: Record<NonNullable<ClientsBlockProps["type"]>, any> = {
@@ -19,6 +24,7 @@ const clientsComponents: Record<NonNullable<ClientsBlockProps["type"]>, any> = {
 export function ClientsBlock({
   clients = [],
   type = "list",
+  gradientColor = "white",
 }: ClientsBlockProps) {
   const Component = clientsComponents[type];
 
@@ -26,5 +32,5 @@ export function ClientsBlock({
     return null;
   }
 
-  return <Component clients={clients} />;
+  return <Component clients={clients} gradientColor={gradientColor} />;
 }
