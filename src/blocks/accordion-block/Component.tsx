@@ -2,49 +2,21 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 interface AccordionBlockProps {
   title?: string;
   description?: string;
 }
 
-const defaultItems = [
-  {
-    title: "Ensuring Top-Tier Safety and Quality",
-    description:
-      "Usesafe certification involves comprehensive testing of your products to ensure they meet stringent safety and quality standards. Our rigorous evaluation process includes chemical analysis, physical testing, and performance assessments to guarantee the safety and reliability of your products. By passing these rigorous tests, your products are proven to be safe for consumer use, minimizing the risk of accidents, injuries, or health hazards.",
-  },
-  {
-    title: "Compliance with Regulatory Standards",
-    description:
-      "Usesafe ensures that your products comply with all relevant local, national, and international safety regulations. Our certification process is designed to thoroughly check for compliance, protecting your business from legal issues and potential recalls. Staying compliant with regulations not only enhances product safety but also demonstrates your commitment to quality and consumer protection.",
-  },
-  {
-    title: "Building Consumer Trust",
-    description: `Displaying the Usesafe certification mark on your products reassures consumers about their safety and quality. The Usesafe logo is a symbol of trust that increases consumer confidence, leading to higher customer satisfaction and loyalty.
-
-      A strong reputation built on trust attracts more customers and business partners, creating opportunities for growth and collaboration.
-    `,
-  },
-  {
-    title: "Transparency and Accountability",
-    description:
-      "The Usesafe certification process is transparent and accountable. We provide detailed reports and documentation, allowing businesses and consumers to understand the evaluation criteria and results. This transparency fosters trust by showing that the certification is based on objective, rigorous standards rather than subjective judgments. Businesses can confidently showcase their commitment to quality and compliance.",
-  },
-  {
-    title: "Ongoing Monitoring and Support",
-    description:
-      "Usesafe certification involves continuous monitoring and periodic re-evaluation of certified products. This ensures that products maintain their safety and quality over time, adapting to any changes in regulations or standards. Our proactive approach helps identify and address potential safety issues early, preventing them from reaching consumers and maintaining continuous compliance",
-  },
-  {
-    title: "Social Responsibility and Ethical Commitment",
-    description:
-      "By achieving Usesafe certification, businesses show their commitment to social responsibility. They demonstrate that they care about the safety and well-being of their customers and the environment. This commitment to social responsibility enhances trust among socially conscious consumers, who prefer to support brands that align with their values.",
-  },
-];
-
 export function AccordionBlock({ title, description }: AccordionBlockProps) {
+  const t = useTranslations('AccordionBlock');
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const items = Array.from({ length: t.raw('items').length }).map((_, index) => ({
+    title: t(`items.${index}.title`),
+    description: t(`items.${index}.description`)
+  }));
 
   const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -56,7 +28,7 @@ export function AccordionBlock({ title, description }: AccordionBlockProps) {
         <div className="tw-w-full">
           {!!title && (
             <h4 className="alt-font tw-text-black tw-text-3xl tw-font-bold tw-mb-8 sm:tw-mb-6">
-              {title}
+              {t('title')}
             </h4>
           )}
           {!!description && (
@@ -64,7 +36,7 @@ export function AccordionBlock({ title, description }: AccordionBlockProps) {
           )}
 
           <div className="tw-space-y-2">
-            {defaultItems.map((item, index) => (
+            {items.map((item, index) => (
               <div
                 key={index}
                 className="tw-border tw-rounded-lg tw-overflow-hidden"

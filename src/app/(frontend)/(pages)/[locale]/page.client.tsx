@@ -2,6 +2,7 @@
 
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import { useTranslations } from 'next-intl';
 
 import { clients } from "@/constants/clients";
 
@@ -16,10 +17,11 @@ import Counter from "../../_components/counter";
 import { ClientsBlock } from "@/blocks/clients-block/Component";
 
 export default function PageClient() {
+  const t = useTranslations('HomePage');
+
   return (
     <div>
       <Header />
-      <div>deneme</div>
       <RenderBlocks
         blocks={[
           {
@@ -41,9 +43,8 @@ export default function PageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title: "We’re Here to Revolutionize the World of SAFE Products",
-              description:
-                "Usesafe is backed by Doruksistem, a trusted consultancy firm. The project ensures that products on online shopping platforms like are safe and compliant with regulations. Usesafe stands out by rigorously verifying product quality and safety. The core values are trust, transparency, and consumer protection. This site offers detailed information about the Usesafe certification process and its benefits for both consumers and sellers.",
+              title: t('revolutionize_title'),
+              description: t('revolutionize_description'),
               image: {
                 src: "/images/safe_sopping_doruksistem_usesafe_3.webp",
                 alt: "Demo Finance 01",
@@ -57,7 +58,7 @@ export default function PageClient() {
                   uppercase
                   icon={<HiArrowNarrowRight />}
                 >
-                  Join Us
+                  {t('join_us')}
                 </ButtonSwitchAnimation>
               ),
             },
@@ -68,9 +69,8 @@ export default function PageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title: "Join the community of trusted brands",
-              description:
-                "Join the community of trusted brands and gain consumer confidence by certifying your products with UseSafe. Usesafe certification ensures that your products meet the highest safety and regulatory standards, giving your customers peace of mind.",
+              title: t('trusted_brands_title'),
+              description: t('trusted_brands_description'),
               image: {
                 src: "/images/safe_sopping_doruksistem_usesafe.webp",
                 alt: "Demo Finance 01",
@@ -85,12 +85,12 @@ export default function PageClient() {
                     <Counter
                       value={2}
                       suffix="M"
-                      description="Certified Products"
+                      description={t('certified_products')}
                     />
                     <Counter
                       value={3}
                       suffix="K"
-                      description="Certified Partner"
+                      description={t('certified_partner')}
                     />
                   </div>
                   <ButtonSwitchAnimation
@@ -98,7 +98,7 @@ export default function PageClient() {
                     uppercase
                     icon={<HiArrowNarrowRight />}
                   >
-                    Learn More
+                    {t('learn_more')}
                   </ButtonSwitchAnimation>
                 </div>
               ),
@@ -120,11 +120,10 @@ export default function PageClient() {
             sectionOptions: {
               innerContainer: true,
               title: "Digital Product Passport",
-              description:
-                "Digital Product Passports for textiles are live today with global fashion brands. Our DPPs meet traceability requirements for France’s Anti-Waste Law (AGEC) and help brands be prepared for imminent Digital Product Passport rules for textiles.",
+              description: t('dpp_description'),
               footerContent: (
                 <div className="tw-flex tw-justify-center tw-items-center">
-                  <Button>Try Free for 30 Days</Button>
+                  <Button>{t('try_free')}</Button>
                 </div>
               ),
               className: "tw-bg-gradient-to-b tw-from-gray-100 tw-to-white",
@@ -135,38 +134,36 @@ export default function PageClient() {
             layout: {
               items: [
                 {
-                  description: "Employees",
+                  description: t('counter_section.employees'),
                   value: 25,
                 },
                 {
-                  description: "Core Teams",
+                  description: t('counter_section.core_teams'),
                   value: 5,
                 },
                 {
-                  description: "Expected Partners Worldwide",
+                  description: t('counter_section.expected_partners'),
                   value: 1500,
                 },
                 {
-                  description: "Expected Certified Products",
+                  description: t('counter_section.expected_products'),
                   value: 15,
                 },
               ],
             },
             sectionOptions: {
-              title: "New innovative steps forward",
+              title: t('counter_section.title'),
               innerContainer: true,
             },
           },
           {
             blockType: "accordion",
             layout: {
-              title:
-                "A Different Approach, Using a New Method of Trusted Shopping",
-              description:
-                "Usesafe certification ensures that your products meet the highest safety, quality, and regulatory standards, building trust with consumers and enhancing your brand's reputation.",
+              title: t('why_usesafe.approach_title'),
+              description: t('why_usesafe.approach_description'),
             },
             sectionOptions: {
-              title: "Why Usesafe?",
+              title: t('why_usesafe.title'),
               innerContainer: true,
             },
           },
