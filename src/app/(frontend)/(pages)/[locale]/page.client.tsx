@@ -19,6 +19,7 @@ export default function PageClient() {
   return (
     <div>
       <Header />
+      <div>deneme</div>
       <RenderBlocks
         blocks={[
           {
