@@ -15,11 +15,16 @@ import RenderBlocks from "@/blocks/RenderBlocks";
 import Counter from "../../_components/counter";
 import { ClientsBlock } from "@/blocks/clients-block/Component";
 
+// Referans bileşenini import ettik
+import Referance from "@/frontend/_components/Referance/Referance";
+
 export default function PageClient() {
   return (
     <div>
       <Header />
-      <div>deneme</div>
+      {/* Referans bileşenini ana sayfaya ekledim*/}
+      <Referance />
+
       <RenderBlocks
         blocks={[
           {
