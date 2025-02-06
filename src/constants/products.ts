@@ -1,4 +1,10 @@
-const products = [
+interface Product {
+  id: 'digital-product-password' | 'digital-twins' | 'use-safe-certification';
+  href: string;
+  image: string;
+}
+
+const products: Product[] = [
   {
     id: "digital-product-password",
     href: "/solutions/digital-product-password",
