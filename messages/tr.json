@@ -15,27 +15,50 @@
     }
   },
   "HomePage": {
-    "revolutionize_title": "GÜVENLİ Ürünler Dünyasını Yeniden Şekillendiriyoruz",
-    "revolutionize_description": "Usesafe, güvenilir bir danışmanlık firması olan Doruksistem tarafından desteklenmektedir. Proje, çevrimiçi alışveriş platformlarındaki ürünlerin güvenli ve yönetmeliklere uygun olmasını sağlar. Usesafe, ürün kalitesini ve güvenliğini titizlikle doğrulayarak öne çıkar. Temel değerlerimiz güven, şeffaflık ve tüketiciyi korumadır. Bu site, Usesafe sertifikasyon süreci ve bunun hem tüketiciler hem de satıcılar için faydaları hakkında detaylı bilgiler sunar.",
+    "revolutionize_title": "GÜVENLİ Ürünler Dünyasını Dönüştürmeye Buradayız",
+    "revolutionize_description": "Usesafe, güvenilir bir danışmanlık firması olan Doruksistem tarafından desteklenmektedir. Proje, çevrimiçi alışveriş platformlarındaki ürünlerin güvenli ve yönetmeliklere uygun olmasını sağlar. Usesafe, ürün kalitesini ve güvenliğini titizlikle doğrulayarak öne çıkar. Temel değerlerimiz güven, şeffaflık ve tüketici korumasıdır. Bu site, Usesafe sertifikasyon süreci ve hem tüketiciler hem de satıcılar için faydaları hakkında detaylı bilgiler sunar.",
     "join_us": "Bize Katılın",
     "trusted_brands_title": "Güvenilir markalar topluluğuna katılın",
-    "trusted_brands_description": "Ürünlerinizi UseSafe ile sertifikalandırarak güvenilir markalar topluluğuna katılın ve tüketici güvenini kazanın. Usesafe sertifikası, ürünlerinizin en yüksek güvenlik ve düzenleyici standartları karşıladığını garanti ederek müşterilerinize huzur verir.",
-    "certified_products": "Sertifikalı Ürün",
+    "trusted_brands_description": "Ürünlerinizi UseSafe ile sertifikalandırarak güvenilir markalar topluluğuna katılın ve tüketici güvenini kazanın. Usesafe sertifikasyonu, ürünlerinizin en yüksek güvenlik ve düzenleyici standartları karşılamasını sağlayarak müşterilerinize huzur verir.",
+    "certified_products": "Sertifikalı Ürünler",
     "certified_partner": "Sertifikalı Ortak",
     "learn_more": "Daha Fazla Bilgi",
-    "dpp_description": "Tekstil ürünleri için Dijital Ürün Pasaportları bugün küresel moda markalarıyla birlikte kullanılmaktadır. DPP'lerimiz, Fransa'nın Atık Karşıtı Yasası (AGEC) için izlenebilirlik gereksinimlerini karşılar ve markaların yaklaşan Dijital Ürün Pasaportu kurallarına hazır olmalarına yardımcı olur.",
+    "dpp_description": "Tekstil ürünleri için Dijital Ürün Pasaportları bugün global moda markaları ile birlikte kullanılmaktadır. DPP'lerimiz, Fransa'nın Atık Karşıtı Yasası (AGEC) izlenebilirlik gereksinimlerini karşılar ve markaların yaklaşan Dijital Ürün Pasaportu kurallarına hazır olmalarına yardımcı olur.",
     "try_free": "30 Gün Ücretsiz Deneyin",
-    "test": "deneme",
+    "test": "test",
     "counter_section": {
       "employees": "Çalışan",
-      "core_teams": "Çekirdek Takım",
-      "expected_partners": "Beklenen Dünya Çapında Ortak",
+      "core_teams": "Çekirdek Ekip",
+      "expected_partners": "Dünya Çapında Beklenen Ortak",
       "expected_products": "Beklenen Sertifikalı Ürün",
       "title": "Yeni yenilikçi adımlar"
+    },
+    "IconList": {
+  "items": {
+    "security": {
+      "description": "Tedarik zincirinin tüm aşamalarında gerçek zamanlı envanter doğruluğunu sağlama"
+    },
+    "usability": {
+      "description": "Tedarik zinciri optimizasyonu ve operasyonel mükemmellik ile tasarruf, verimlilik ve karlılık sağlama"
+    },
+    "quality": {
+      "description": "Verilerle doğrulanmış sürdürülebilirlik referansları sağlayarak güven ve şeffaflık oluşturma"
+    },
+    "speed": {
+      "description": "Karbon ayak izi haritalama ve azaltma yoluyla net sıfır yolculuğunuzu destekleme"
+    },
+    "privacy": {
+      "description": "Gerçek zamanlı uygulanabilir içgörülerle atık azaltma ve eliminasyonunu sağlama"
+    },
+    "support": {
+      "description": "İlgi çekici ürün etkileşimi yoluyla doğrudan iletişim kanalı oluşturma"
+    }
+  }
     },
     "why_usesafe": {
       "title": "Neden Usesafe?",
       "approach_title": "Güvenilir Alışverişte Yeni Bir Yöntem, Farklı Bir Yaklaşım",
+
       "approach_description": "Usesafe sertifikasyonu, ürünlerinizin en yüksek güvenlik, kalite ve düzenleyici standartları karşılamasını sağlayarak tüketicilerle güven oluşturur ve markanızın itibarını artırır."
     }
   },
@@ -377,7 +400,7 @@
       }
     },
     "products": {
-      "digital-product-password": {
+      "digital-product-passports": {
         "title": "Dijital Ürün Şifresi",
         "description": "Ürünlerinizi benzersiz şifreleme ile koruyun"
       },
@@ -390,35 +413,9 @@
         "description": "Güvenli sertifikasyon sistemi"
       }
     }
-  },
-"AccordionBlock": {
-  "title": "Ürün Güvenliği ve Kalitesini Sağlama",
-  "items": [
-    {
-      "title": "Üst Düzey Güvenlik ve Kalite Sağlama",
-      "description": "Usesafe sertifikasyonu, ürünlerinizin sıkı güvenlik ve kalite standartlarını karşılamasını sağlamak için kapsamlı testler içerir. Titiz değerlendirme sürecimiz, ürünlerinizin güvenliğini ve güvenilirliğini garanti etmek için kimyasal analiz, fiziksel test ve performans değerlendirmelerini içerir. Bu titiz testleri geçerek, ürünlerinizin tüketici kullanımı için güvenli olduğu kanıtlanır ve kaza, yaralanma veya sağlık tehlikesi riski en aza indirilir."
-    },
-    {
-      "title": "Düzenleyici Standartlara Uygunluk",
-      "description": "Usesafe, ürünlerinizin ilgili tüm yerel, ulusal ve uluslararası güvenlik düzenlemelerine uygun olmasını sağlar. Sertifikasyon sürecimiz, işletmenizi yasal sorunlardan ve potansiyel geri çağırmalardan korumak için uygunluğu kapsamlı bir şekilde kontrol etmek üzere tasarlanmıştır. Düzenlemelere uygunluk sadece ürün güvenliğini artırmakla kalmaz, aynı zamanda kalite ve tüketiciyi koruma konusundaki kararlılığınızı gösterir."
-    },
-    {
-      "title": "Tüketici Güveni Oluşturma",
-      "description": "Ürünlerinizde Usesafe sertifikasyon işaretinin görüntülenmesi, tüketicileri güvenlik ve kalite konusunda güvence altına alır. Usesafe logosu, tüketici güvenini artıran, daha yüksek müşteri memnuniyeti ve sadakatine yol açan bir güven sembolüdür.\n\nGüven üzerine kurulu güçlü bir itibar, daha fazla müşteri ve iş ortağı çeker, büyüme ve işbirliği için fırsatlar yaratır."
-    },
-    {
-      "title": "Şeffaflık ve Hesap Verebilirlik",
-      "description": "Usesafe sertifikasyon süreci şeffaf ve hesap verebilirdir. İşletmelerin ve tüketicilerin değerlendirme kriterleri ve sonuçlarını anlamalarını sağlayan detaylı raporlar ve belgeler sunuyoruz. Bu şeffaflık, sertifikasyonun öznel yargılardan ziyade nesnel, titiz standartlara dayandığını göstererek güven oluşturur. İşletmeler kalite ve uygunluk konusundaki kararlılıklarını güvenle sergileyebilirler."
-    },
-    {
-      "title": "Sürekli İzleme ve Destek",
-      "description": "Usesafe sertifikasyonu, sertifikalı ürünlerin sürekli izlenmesini ve periyodik olarak yeniden değerlendirilmesini içerir. Bu, ürünlerin zaman içinde güvenlik ve kalitesini korumasını, düzenlemelerdeki veya standartlardaki değişikliklere uyum sağlamasını sağlar. Proaktif yaklaşımımız, potansiyel güvenlik sorunlarını erken tespit etmeye ve çözmeye yardımcı olur, tüketicilere ulaşmalarını önler ve sürekli uygunluğu sağlar."
-    },
-    {
-      "title": "Sosyal Sorumluluk ve Etik Taahhüt",
-      "description": "Usesafe sertifikasyonunu elde ederek, işletmeler sosyal sorumluluğa olan bağlılıklarını gösterirler. Müşterilerinin ve çevrenin güvenliği ve refahı konusunda özen gösterdiklerini kanıtlarlar. Sosyal sorumluluğa olan bu bağlılık, değerleriyle uyumlu markaları desteklemeyi tercih eden sosyal bilinçli tüketiciler arasında güveni artırır."
-    }
-  ]
-}
+  }
 
-}
+  }
+
+
+

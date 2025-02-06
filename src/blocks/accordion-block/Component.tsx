@@ -28,7 +28,7 @@ export function AccordionBlock({ title, description }: AccordionBlockProps) {
         <div className="tw-w-full">
           {!!title && (
             <h4 className="alt-font tw-text-black tw-text-3xl tw-font-bold tw-mb-8 sm:tw-mb-6">
-              {t('title')}
+              {title}
             </h4>
           )}
           {!!description && (

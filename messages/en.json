@@ -20,7 +20,7 @@
     "join_us": "Join Us",
     "trusted_brands_title": "Join the community of trusted brands",
     "trusted_brands_description": "Join the community of trusted brands and gain consumer confidence by certifying your products with UseSafe. Usesafe certification ensures that your products meet the highest safety and regulatory standards, giving your customers peace of mind.",
-    "certified_products": "Certified Products",
+    "certified_products": "Certified Products", 
     "certified_partner": "Certified Partner",
     "learn_more": "Learn More",
     "dpp_description": "Digital Product Passports for textiles are live today with global fashion brands. Our DPPs meet traceability requirements for France's Anti-Waste Law (AGEC) and help brands be prepared for imminent Digital Product Passport rules for textiles.",
@@ -28,16 +28,39 @@
     "test": "test",
     "counter_section": {
       "employees": "Employees",
-      "core_teams": "Core Teams",
+      "core_teams": "Core Teams", 
       "expected_partners": "Expected Partners Worldwide",
       "expected_products": "Expected Certified Products",
       "title": "New innovative steps forward"
+    },
+    "IconList": {
+      "items": {
+        "security": {
+          "description": "Enabling real-time inventory accuracy across all stages of the supply chain"
+        },
+        "usability": {
+          "description": "Driving savings, efficiency, and profitability through supply chain optimization and operational excellence "
+        },
+        "quality": {
+          "description": "Establishing trust and transparency by providing verified sustainability credentials with data"
+        },
+        "speed": {
+          "description": "Supporting your net-zero journey through carbon footprint mapping and reduction"
+        },
+        "privacy": {
+          "description": "Enabling waste reduction and elimination with real-time actionable insights"
+        },
+        "support": {
+          "description": "Creating a direct communication channel through engaging consumer product interaction"
+        }
+      }
     },
     "why_usesafe": {
       "title": "Why Usesafe?",
       "approach_title": "A Different Approach, Using a New Method of Trusted Shopping",
       "approach_description": "Usesafe certification ensures that your products meet the highest safety, quality, and regulatory standards, building trust with consumers and enhancing your brand's reputation."
     }
+
   },
   "DigitalProductPassport": {
     "page_title": "Digital Product Passport",
@@ -378,7 +401,7 @@
       }
     },
     "products": {
-      "digital-product-password": {
+      "digital-product-passports": {
         "title": "Digital Product Password",
         "description": "Protect your products with unique encryption"
       },
@@ -391,36 +414,7 @@
         "description": "Secure certification system"
       }
     }
-  },
-  "AccordionBlock": {
-  "title": "Ensuring Product Safety and Quality",
-  "items": [
-    {
-      "title": "Ensuring Top-Tier Safety and Quality",
-      "description": "Usesafe certification involves comprehensive testing of your products to ensure they meet stringent safety and quality standards. Our rigorous evaluation process includes chemical analysis, physical testing, and performance assessments to guarantee the safety and reliability of your products. By passing these rigorous tests, your products are proven to be safe for consumer use, minimizing the risk of accidents, injuries, or health hazards."
-    },
-    {
-      "title": "Compliance with Regulatory Standards",
-      "description": "Usesafe ensures that your products comply with all relevant local, national, and international safety regulations. Our certification process is designed to thoroughly check for compliance, protecting your business from legal issues and potential recalls. Staying compliant with regulations not only enhances product safety but also demonstrates your commitment to quality and consumer protection."
-    },
-    {
-      "title": "Building Consumer Trust",
-      "description": "Displaying the Usesafe certification mark on your products reassures consumers about their safety and quality. The Usesafe logo is a symbol of trust that increases consumer confidence, leading to higher customer satisfaction and loyalty.\n\nA strong reputation built on trust attracts more customers and business partners, creating opportunities for growth and collaboration."
-    },
-    {
-      "title": "Transparency and Accountability",
-      "description": "The Usesafe certification process is transparent and accountable. We provide detailed reports and documentation, allowing businesses and consumers to understand the evaluation criteria and results. This transparency fosters trust by showing that the certification is based on objective, rigorous standards rather than subjective judgments. Businesses can confidently showcase their commitment to quality and compliance."
-    },
-    {
-      "title": "Ongoing Monitoring and Support",
-      "description": "Usesafe certification involves continuous monitoring and periodic re-evaluation of certified products. This ensures that products maintain their safety and quality over time, adapting to any changes in regulations or standards. Our proactive approach helps identify and address potential safety issues early, preventing them from reaching consumers and maintaining continuous compliance"
-    },
-    {
-      "title": "Social Responsibility and Ethical Commitment",
-      "description": "By achieving Usesafe certification, businesses show their commitment to social responsibility. They demonstrate that they care about the safety and well-being of their customers and the environment. This commitment to social responsibility enhances trust among socially conscious consumers, who prefer to support brands that align with their values."
-    }
-  ]
-}
+  }
 }
     
   

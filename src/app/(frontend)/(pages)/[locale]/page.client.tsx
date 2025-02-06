@@ -3,8 +3,9 @@
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { useTranslations } from 'next-intl';
-
+import { IconListBlock } from '@/blocks/icon-list-block/Component';
 import { clients } from "@/constants/clients";
+
 
 import { Button } from "@/frontend/_components/button";
 import Header from "@/frontend/_components/header";
@@ -166,6 +167,41 @@ export default function PageClient() {
               title: t('why_usesafe.title'),
               innerContainer: true,
             },
+          },
+          {
+            blockType: "iconList",
+            layout: {
+              items: [
+                {
+                  icon: 'world',
+                  description: t('IconList.items.security.description')
+                },
+                {
+                  icon: 'discount',
+                  description: t('IconList.items.usability.description')
+                },
+                {
+                  icon: 'recycle',
+                  description: t('IconList.items.quality.description')
+                },
+                {
+                  icon: 'footprints',
+                  description: t('IconList.items.speed.description')
+                },
+                {
+                  icon: 'qrcode',
+                  description: t('IconList.items.privacy.description')
+                },
+                {
+                  icon: 'communication',
+                  description: t('IconList.items.support.description')
+                }
+              ]
+            },
+            sectionOptions: {
+              innerContainer: true,
+              className: "tw-bg-gray-50"
+            }
           },
         ]}
       />
