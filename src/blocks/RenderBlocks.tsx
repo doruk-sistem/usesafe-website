@@ -12,6 +12,8 @@ import { CounterBlock } from "./counter-block/Component";
 import { PageTitleBlock } from "./page-title-block/Component";
 import BackgroundVideoBlock from "./background-video/Component";
 import { ContactFormBlock } from "./contact-form-block/Component";
+import { IconListBlock } from "./icon-list-block/Component";
+
 
 const blockComponents = {
   accordion: AccordionBlock,
@@ -24,6 +26,7 @@ const blockComponents = {
   pageTitle: PageTitleBlock,
   backgroundVideo: BackgroundVideoBlock,
   contactForm: ContactFormBlock,
+  iconList: IconListBlock,
 };
 
 type BlockType = keyof typeof blockComponents;

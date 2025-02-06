@@ -1,8 +1,4 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
-  },
   "site": {
     "name": "Use Safe"
   },
@@ -18,6 +14,77 @@
       "twitter_description": "Go to the about page"
     }
   },
+  "HomePage": {
+    "revolutionize_title": "We're Here to Revolutionize the World of SAFE Products",
+    "revolutionize_description": "Usesafe is backed by Doruksistem, a trusted consultancy firm. The project ensures that products on online shopping platforms like are safe and compliant with regulations. Usesafe stands out by rigorously verifying product quality and safety. The core values are trust, transparency, and consumer protection. This site offers detailed information about the Usesafe certification process and its benefits for both consumers and sellers.",
+    "join_us": "Join Us",
+    "trusted_brands_title": "Join the community of trusted brands",
+    "trusted_brands_description": "Join the community of trusted brands and gain consumer confidence by certifying your products with UseSafe. Usesafe certification ensures that your products meet the highest safety and regulatory standards, giving your customers peace of mind.",
+    "certified_products": "Certified Products", 
+    "certified_partner": "Certified Partner",
+    "learn_more": "Learn More",
+    "dpp_description": "Digital Product Passports for textiles are live today with global fashion brands. Our DPPs meet traceability requirements for France's Anti-Waste Law (AGEC) and help brands be prepared for imminent Digital Product Passport rules for textiles.",
+    "try_free": "Try Free for 30 Days",
+    "test": "test",
+    "counter_section": {
+      "employees": "Employees",
+      "core_teams": "Core Teams", 
+      "expected_partners": "Expected Partners Worldwide",
+      "expected_products": "Expected Certified Products",
+      "title": "New innovative steps forward"
+    },
+    "IconList": {
+      "items": {
+        "security": {
+          "description": "Enabling real-time inventory accuracy across all stages of the supply chain"
+        },
+        "usability": {
+          "description": "Driving savings, efficiency, and profitability through supply chain optimization and operational excellence "
+        },
+        "quality": {
+          "description": "Establishing trust and transparency by providing verified sustainability credentials with data"
+        },
+        "speed": {
+          "description": "Supporting your net-zero journey through carbon footprint mapping and reduction"
+        },
+        "privacy": {
+          "description": "Enabling waste reduction and elimination with real-time actionable insights"
+        },
+        "support": {
+          "description": "Creating a direct communication channel through engaging consumer product interaction"
+        }
+      }
+    },
+    "why_usesafe": {
+      "title": "Why Usesafe?",
+      "approach_title": "A Different Approach, Using a New Method of Trusted Shopping",
+      "approach_description": "Usesafe certification ensures that your products meet the highest safety, quality, and regulatory standards, building trust with consumers and enhancing your brand's reputation."
+    }
+
+  },
+  "DigitalProductPassport": {
+    "page_title": "Digital Product Passport",
+    "trusted_brands": "Trusted by Leading Brands Worldwide",
+    "view_all_clients": "View All Clients",
+    "video_section": {
+      "title": "Digital product passport solutions to comply with EU regulations",
+      "description": "Work with an experienced Digital Product Passport solution provider and proven digital labeling tools."
+    },
+    "experienced_provider": {
+      "title": "Work with an experienced DPP solution provider trusted by global brands",
+      "description": "Scantrust has already deployed DPP solutions for global brands across textiles, batteries, food & beverage, and more. We combine a decade's worth of QR code technology development and in-market compliance and standards expertise to make your Digital Product Passport project successful.",
+      "button": "See select case studies"
+    },
+    "standards": {
+      "title": "Know and prepare for the latest developments in DPP standards and regulations",
+      "description": "Scantrust is leading a lighthouse pilot in CIRPASS2, a European Commission-funded consortium piloting Digital Product Passports across textiles, electrical and electronic equipment, tyres, and construction materials. We ensure our clients have access to the latest guidance and are building for the rapidly evolving DPP standards."
+    },
+    "qr_solution": {
+      "title": "Build with the best all-around QR management solution for products",
+      "description": "Our DPP solutions are built on top of proven enterprise-ready tools for QR code generation, URL management, and landing page and dynamic content management.",
+      "button": "See digital labeling solutions"
+    }
+  },
   "common": {
     "homepage": "Home Page",
     "solutions": "Solutions",
@@ -31,5 +98,326 @@
     "about_dpp": "About DPP",
     "resources": "Resources",
     "digital_twins": "Digital Twins"
+  },
+  "DigitalTwins": {
+    "page_title": "Digital Twins",
+    "discover": {
+      "title": "Discover Digital Twin",
+      "description": "Digital Twins are virtual replicas of physical products that enhance the understanding and interaction with various items across multiple industries. They provide detailed and engaging experiences. Digital Twins ensure compliance and offer robust protection against counterfeiting.",
+      "features": {
+        "virtual_experience": {
+          "title": "Virtual Experience",
+          "description": "Detailed and immersive virtual experience for customers"
+        },
+        "traceability": {
+          "title": "Traceability",
+          "description": "Enhanced product authenticity and traceability"
+        },
+        "protection": {
+          "title": "Protection",
+          "description": "Protection against counterfeiting"
+        }
+      }
+    },
+    "key_benefits": {
+      "title": "Key Benefits",
+      "description": "Our Digital Twins solution provides comprehensive benefits that enhance your product experience and security:",
+      "benefits": {
+        "virtual_experience": "Detailed and immersive virtual experience for customers",
+        "traceability": "Enhanced product authenticity and traceability",
+        "protection": "Protection against counterfeiting"
+      }
+    }
+  },
+  "UseSafeCertification": {
+    "page_title": "Use Safe Certification",
+    "trust_symbol": {
+      "title": "The New Symbol of Trust in E-commerce: UseSafe",
+      "description": "UseSafe is your assurance of safety and quality in online shopping. Our certification guarantees that products meet stringent safety standards, providing peace of mind for consumers. From household items to electronics, each UseSafe-marked product has been rigorously tested and verified. Trust in our symbol means trust in the best. Enhance your shopping experience with UseSafe, the new benchmark for reliable and safe e-commerce. Choose products with the UseSafe logo for unparalleled confidence and quality."
+    },
+    "confidence": {
+      "title": "Confidence in Every Purchase",
+      "description": "With UseSafe, every purchase you make is backed by our rigorous safety and quality standards. Our certification process ensures that all products bearing the UseSafe logo meet the highest benchmarks for safety and reliability. Shop with peace of mind, knowing that every item has been thoroughly tested and approved. Whether it's electronics, household items, or personal care products, trust UseSafe to deliver the confidence and assurance you deserve in every purchase."
+    },
+    "user_experience": {
+      "title": "Seamless User Experience",
+      "description": "Discover the ultimate in user-friendly shopping with UseSafe logo products. Our platform ensures a smooth and effortless experience, making it easy to find and purchase items that meet the highest safety standards. Every product featuring the UseSafe logo has undergone rigorous testing and certification, providing you with unparalleled peace of mind. Enjoy a streamlined shopping journey, from browsing to checkout, knowing you are choosing safe and reliable products. Elevate your e-commerce experience with the confidence that comes from UseSafe."
+    }
+  },
+  "AboutDpp": {
+    "dpp_intro": {
+      "title": "Digital Product Passport (DPP)",
+      "description": "The Digital Product Passport is an innovative system designed to increase transparency along the value chain of products. It will become mandatory for almost all products sold in the EU from 2024, providing comprehensive information on the origin, materials, environmental impact and disposal recommendations.",
+      "button": "More Information"
+    },
+    "core_components": {
+      "title": "The Core Components of DPP",
+      "description": "The DPP system includes unique product identifiers, compliance documents, and information about hazardous materials. User manuals, safety instructions, and product disposal guides are also important components of the system. These data improve supply chain management and regulatory compliance."
+    },
+    "benefits": {
+      "title": "Benefits of DPP",
+      "items": {
+        "material_efficiency": {
+          "description": "Material Efficiency",
+          "value": "40",
+          "suffix": "%"
+        },
+        "waste_reduction": {
+          "description": "Waste Reduction",
+          "value": "35",
+          "suffix": "%"
+        },
+        "carbon_footprint": {
+          "description": "Carbon Footprint Reduction",
+          "value": "25",
+          "suffix": "%"
+        }
+      }
+    },
+    "implementation": {
+      "title": "How is DPP Implemented?",
+      "description": "The DPP system provides secure and transparent data sharing using blockchain technology and smart contracts. Easy access to product information is provided through QR codes or RFID tags.",
+      "button": "Free Consultation"
+    }
+  },
+  
+    "ContactUs": {
+      "page_title": "Contact Us",
+      "form": {
+        "title": "Send us a Message",
+        "description": "Fill out the form below and we'll get back to you as soon as possible.",
+        "fields": {
+          "full_name": {
+            "label": "Full Name",
+            "placeholder": "John Doe"
+          },
+          "email": {
+            "label": "Email",
+            "placeholder": "john@example.com"
+          },
+          "phone": {
+            "label": "Phone",
+            "placeholder": "+90 (___) ___ __ __"
+          },
+          "subject": {
+            "label": "Subject",
+            "placeholder": "How can we help?"
+          },
+          "message": {
+            "label": "Message",
+            "placeholder": "Write your message here..."
+          }
+        },
+        "submit": {
+          "sending": "Sending...",
+          "send": "Send Message"
+        },
+        "toast": {
+          "success": {
+            "title": "Message Sent Successfully",
+            "description": "We will get back to you as soon as possible."
+          },
+          "error": "An error occurred while sending your message"
+        }
+      },
+      "Footer": {
+        "company": {
+          "title": "Company",
+          "about": "About",
+          "hosting": "Hosting",
+          "domain": "Domain",
+          "pricing": "Pricing"
+        },
+        "customer": {
+          "title": "Customer",
+          "client_support": "Client support",
+          "help_center": "Help center",
+          "system_status": "System status",
+          "feedback": "Feedback"
+        },
+        "contact": {
+          "title": "Say hello",
+          "need_support": "Need support?",
+          "email": "hi@domain.com",
+          "customer_care": "Customer care",
+          "phone": "+1 234 567 8910"
+        },
+        "newsletter": {
+          "title": "Subscribe our newsletter",
+          "description": "Subscribe our newsletter to get the latest news and updates!",
+          "placeholder": "Enter your email",
+          "button_label": "submit"
+        },
+        "legal": {
+          "recaptcha_text": "This site is protected by reCAPTCHA and the Google",
+          "privacy_policy": "privacy policy",
+          "and": "and",
+          "terms": "terms of service",
+          "disclaimer": "apply. You must not use this website if you disagree with any of these website standard terms and conditions."
+        },
+        "company_description": "Lorem ipsum amet adipiscing elit to eiusmod ad tempor incididunt enim."
+      }
+    },
+    "Slider": {
+      "slides": [
+        {
+          "title": "The Future of Safe Product Shopping",
+          "description": "Step into a World of Safe and Certified Products with UseSafe",
+          "buttonText": "More Details",
+          "buttonUrl": "/about",
+          "image": "/crafto/images/demo-seo-agency-process-01.png"
+        },
+        {
+          "title": "The Future of Safe Product Shopping",
+          "description": "Step into a World of Safe and Certified Products with UseSafe",
+          "buttonText": "More Details",
+          "buttonUrl": "/about",
+          "image": "/crafto/images/demo-seo-agency-process-01.png"
+        }
+      ]
+    },
+    "AccordionBlock": {
+      "items": [
+        {
+          "title": "Ensuring Top-Tier Safety and Quality",
+          "description": "Usesafe certification involves comprehensive testing of your products to ensure they meet stringent safety and quality standards. Our rigorous evaluation process includes chemical analysis, physical testing, and performance assessments to guarantee the safety and reliability of your products. By passing these rigorous tests, your products are proven to be safe for consumer use, minimizing the risk of accidents, injuries, or health hazards."
+        },
+        {
+          "title": "Compliance with Regulatory Standards",
+          "description": "Usesafe ensures that your products comply with all relevant local, national, and international safety regulations. Our certification process is designed to thoroughly check for compliance, protecting your business from legal issues and potential recalls. Staying compliant with regulations not only enhances product safety but also demonstrates your commitment to quality and consumer protection."
+        },
+        {
+          "title": "Building Consumer Trust",
+          "description": "Displaying the Usesafe certification mark on your products reassures consumers about their safety and quality. The Usesafe logo is a symbol of trust that increases consumer confidence, leading to higher customer satisfaction and loyalty.\n\nA strong reputation built on trust attracts more customers and business partners, creating opportunities for growth and collaboration."
+        },
+        {
+          "title": "Transparency and Accountability",
+          "description": "The Usesafe certification process is transparent and accountable. We provide detailed reports and documentation, allowing businesses and consumers to understand the evaluation criteria and results. This transparency fosters trust by showing that the certification is based on objective, rigorous standards rather than subjective judgments. Businesses can confidently showcase their commitment to quality and compliance."
+        },
+        {
+          "title": "Ongoing Monitoring and Support",
+          "description": "Usesafe certification involves continuous monitoring and periodic re-evaluation of certified products. This ensures that products maintain their safety and quality over time, adapting to any changes in regulations or standards. Our proactive approach helps identify and address potential safety issues early, preventing them from reaching consumers and maintaining continuous compliance"
+        },
+        {
+          "title": "Social Responsibility and Ethical Commitment",
+          "description": "By achieving Usesafe certification, businesses show their commitment to social responsibility. They demonstrate that they care about the safety and well-being of their customers and the environment. This commitment to social responsibility enhances trust among socially conscious consumers, who prefer to support brands that align with their values."
+        }
+      ]
+    },
+    "PricingBlock": {
+    "header": {
+      "tag": "Predictable pricing",
+      "title": "Tailored pricing plans for everyone"
+    },
+    "plans": {
+      "starter": {
+        "tag": "Starter",
+        "title": "Individual",
+        "price": "$29",
+        "period": "Per user/month billed annually*",
+        "features": [
+          { "text": "Marketing strategy", "included": true },
+          { "text": "Competitive work analysis", "included": true },
+          { "text": "Social media share audit", "included": false },
+          { "text": "Monthly management", "included": false }
+        ],
+        "button": "Join this plan",
+        "cancel": "Cancel anytime"
+      },
+      "professional": {
+        "tag": "Professional",
+        "title": "Business",
+        "popular": "Popular",
+        "price": "$39",
+        "period": "Per user/month billed annually*",
+        "features": [
+          { "text": "Marketing strategy", "included": true },
+          { "text": "Competitive work analysis", "included": true },
+          { "text": "Social media share audit", "included": true },
+          { "text": "Monthly management", "included": false }
+        ],
+        "button": "Join this plan",
+        "cancel": "Cancel anytime"
+      },
+      "enterprise": {
+        "tag": "Enterprise",
+        "title": "Corporate",
+        "price": "$59",
+        "period": "Per user/month billed annually*",
+        "features": [
+          { "text": "Marketing strategy", "included": true },
+          { "text": "Competitive work analysis", "included": true },
+          { "text": "Social media share audit", "included": true },
+          { "text": "Monthly management", "included": true }
+        ],
+        "button": "Join this plan",
+        "cancel": "Cancel anytime"
+      }
+    },
+    "features": [
+      {
+        "icon": "calendar-check",
+        "text": "Get 30 day free trial"
+      },
+      {
+        "icon": "wallet2",
+        "text": "No any hidden fees pay"
+      },
+      {
+        "icon": "clock",
+        "text": "You can cancel anytime"
+      }
+    ]
+  },
+  "DemoPage": {
+    "title": "Request Product Demo",
+    "productSection": {
+      "title": "Select Product",
+      "moreDetails": "More Details",
+      "selected": "✓ Selected"
+    },
+    "contactSection": {
+      "title": "Contact Information",
+      "fields": {
+        "fullName": "Full Name",
+        "email": "Email",
+        "company": "Company",
+        "phone": "Phone",
+        "message": "Message"
+      }
+    },
+    "button": {
+      "sending": "Sending...",
+      "submit": "Request Demo"
+    },
+    "toast": {
+      "error": {
+        "selectProduct": "Please select a product",
+        "generic": "An error occurred while sending the demo request"
+      },
+      "success": {
+        "title": "Demo Request Sent",
+        "message": "We will contact you as soon as possible"
+      }
+    },
+    "products": {
+      "digital-product-passports": {
+        "title": "Digital Product Password",
+        "description": "Protect your products with unique encryption"
+      },
+      "digital-twins": {
+        "title": "Digital Twins",
+        "description": "Digital twins solution"
+      },
+      "use-safe-certification": {
+        "title": "Use Safe Certification",
+        "description": "Secure certification system"
+      }
+    }
   }
 }
+    
+  
+
+
+    

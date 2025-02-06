@@ -2,7 +2,7 @@
 
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
-
+import { useTranslations } from 'next-intl';
 import { Button } from "@/frontend/_components/button";
 import Header from "@/frontend/_components/header";
 import Footer from "@/frontend/_components/footer";
@@ -10,6 +10,8 @@ import ButtonSwitchAnimation from "@/frontend/_components/button-switch-animatio
 import RenderBlocks from "@/blocks/RenderBlocks";
 
 export default function AboutDppPageClient() {
+  const t = useTranslations('AboutDpp');
+
   return (
     <div>
       <Header />
@@ -18,9 +20,8 @@ export default function AboutDppPageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title: "Digital Product Passport (DPP)",
-              description:
-                "The Digital Product Passport is an innovative system designed to increase transparency along the value chain of products. It will become mandatory for almost all products sold in the EU from 2024, providing comprehensive information on the origin, materials, environmental impact and disposal recommendations.",
+              title: t('dpp_intro.title'),
+              description: t('dpp_intro.description'),
               image: {
                 src: "/images/product-security-1-1.webp",
                 alt: "Digital Product Passport",
@@ -34,7 +35,7 @@ export default function AboutDppPageClient() {
                   uppercase
                   icon={<HiArrowNarrowRight />}
                 >
-                  More Information
+                  {t('dpp_intro.button')}
                 </ButtonSwitchAnimation>
               ),
             },
@@ -45,9 +46,8 @@ export default function AboutDppPageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title: "The Core Components of DPP",
-              description:
-                "The DPP system includes unique product identifiers, compliance documents, and information about hazardous materials. User manuals, safety instructions, and product disposal guides are also important components of the system. These data improve supply chain management and regulatory compliance.",
+              title: t('core_components.title'),
+              description: t('core_components.description'),
               image: {
                 src: "/images/touch-id-1-1.webp",
                 alt: "DPP Components",
@@ -66,24 +66,24 @@ export default function AboutDppPageClient() {
             layout: {
               items: [
                 {
-                  description: "Material Efficiency",
-                  value: 40,
-                  suffix: "%",
+                  description: t('benefits.items.material_efficiency.description'),
+                  value: Number(t('benefits.items.material_efficiency.value')),
+                  suffix: t('benefits.items.material_efficiency.suffix'),
                 },
                 {
-                  description: "Waste Reduction",
-                  value: 35,
-                  suffix: "%",
+                  description: t('benefits.items.waste_reduction.description'),
+                  value: Number(t('benefits.items.waste_reduction.value')),
+                  suffix: t('benefits.items.waste_reduction.suffix'),
                 },
                 {
-                  description: "Carbon Footprint Reduction",
-                  value: 25,
-                  suffix: "%",
+                  description: t('benefits.items.carbon_footprint.description'),
+                  value: Number(t('benefits.items.carbon_footprint.value')),
+                  suffix: t('benefits.items.carbon_footprint.suffix'),
                 },
               ],
             },
             sectionOptions: {
-              title: "Benefits of DPP",
+              title: t('benefits.title'),
               innerContainer: true,
             },
           },
@@ -99,12 +99,11 @@ export default function AboutDppPageClient() {
             },
             sectionOptions: {
               innerContainer: true,
-              title: "How is DPP Implemented?",
-              description:
-                "The DPP system provides secure and transparent data sharing using blockchain technology and smart contracts. Easy access to product information is provided through QR codes or RFID tags.",
+              title: t('implementation.title'),
+              description: t('implementation.description'),
               footerContent: (
                 <div className="tw-flex tw-justify-center tw-items-center">
-                  <Button>Free Consultation</Button>
+                  <Button>{t('implementation.button')}</Button>
                 </div>
               ),
               className: "tw-bg-gradient-to-b tw-from-gray-100 tw-to-white",

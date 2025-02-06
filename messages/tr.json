@@ -1,21 +1,88 @@
 {
-  "HomePage": {
-    "title": "Merhaba Dünya!",
-    "about": "Hakkımızda sayfasına git"
-  },
   "site": {
     "name": "Use Safe"
   },
   "meta": {
     "common": {
-      "title": "Hello world!",
-      "description": "Go to the about page",
-      "keywords": "Hello world!",
-      "og_title": "Hello world!",
-      "og_description": "Go to the about page",
-      "og_image_alt": "Hello world!",
-      "twitter_title": "Hello world!",
-      "twitter_description": "Go to the about page"
+      "title": "Merhaba dünya!",
+      "description": "Hakkımızda sayfasına git",
+      "keywords": "Merhaba dünya!",
+      "og_title": "Merhaba dünya!",
+      "og_description": "Hakkımızda sayfasına git",
+      "og_image_alt": "Merhaba dünya!",
+      "twitter_title": "Merhaba dünya!",
+      "twitter_description": "Hakkımızda sayfasına git"
+    }
+  },
+  "HomePage": {
+    "revolutionize_title": "GÜVENLİ Ürünler Dünyasını Dönüştürmeye Buradayız",
+    "revolutionize_description": "Usesafe, güvenilir bir danışmanlık firması olan Doruksistem tarafından desteklenmektedir. Proje, çevrimiçi alışveriş platformlarındaki ürünlerin güvenli ve yönetmeliklere uygun olmasını sağlar. Usesafe, ürün kalitesini ve güvenliğini titizlikle doğrulayarak öne çıkar. Temel değerlerimiz güven, şeffaflık ve tüketici korumasıdır. Bu site, Usesafe sertifikasyon süreci ve hem tüketiciler hem de satıcılar için faydaları hakkında detaylı bilgiler sunar.",
+    "join_us": "Bize Katılın",
+    "trusted_brands_title": "Güvenilir markalar topluluğuna katılın",
+    "trusted_brands_description": "Ürünlerinizi UseSafe ile sertifikalandırarak güvenilir markalar topluluğuna katılın ve tüketici güvenini kazanın. Usesafe sertifikasyonu, ürünlerinizin en yüksek güvenlik ve düzenleyici standartları karşılamasını sağlayarak müşterilerinize huzur verir.",
+    "certified_products": "Sertifikalı Ürünler",
+    "certified_partner": "Sertifikalı Ortak",
+    "learn_more": "Daha Fazla Bilgi",
+    "dpp_description": "Tekstil ürünleri için Dijital Ürün Pasaportları bugün global moda markaları ile birlikte kullanılmaktadır. DPP'lerimiz, Fransa'nın Atık Karşıtı Yasası (AGEC) izlenebilirlik gereksinimlerini karşılar ve markaların yaklaşan Dijital Ürün Pasaportu kurallarına hazır olmalarına yardımcı olur.",
+    "try_free": "30 Gün Ücretsiz Deneyin",
+    "test": "test",
+    "counter_section": {
+      "employees": "Çalışan",
+      "core_teams": "Çekirdek Ekip",
+      "expected_partners": "Dünya Çapında Beklenen Ortak",
+      "expected_products": "Beklenen Sertifikalı Ürün",
+      "title": "Yeni yenilikçi adımlar"
+    },
+    "IconList": {
+  "items": {
+    "security": {
+      "description": "Tedarik zincirinin tüm aşamalarında gerçek zamanlı envanter doğruluğunu sağlama"
+    },
+    "usability": {
+      "description": "Tedarik zinciri optimizasyonu ve operasyonel mükemmellik ile tasarruf, verimlilik ve karlılık sağlama"
+    },
+    "quality": {
+      "description": "Verilerle doğrulanmış sürdürülebilirlik referansları sağlayarak güven ve şeffaflık oluşturma"
+    },
+    "speed": {
+      "description": "Karbon ayak izi haritalama ve azaltma yoluyla net sıfır yolculuğunuzu destekleme"
+    },
+    "privacy": {
+      "description": "Gerçek zamanlı uygulanabilir içgörülerle atık azaltma ve eliminasyonunu sağlama"
+    },
+    "support": {
+      "description": "İlgi çekici ürün etkileşimi yoluyla doğrudan iletişim kanalı oluşturma"
+    }
+  }
+    },
+    "why_usesafe": {
+      "title": "Neden Usesafe?",
+      "approach_title": "Güvenilir Alışverişte Yeni Bir Yöntem, Farklı Bir Yaklaşım",
+
+      "approach_description": "Usesafe sertifikasyonu, ürünlerinizin en yüksek güvenlik, kalite ve düzenleyici standartları karşılamasını sağlayarak tüketicilerle güven oluşturur ve markanızın itibarını artırır."
+    }
+  },
+  "DigitalProductPassport": {
+    "page_title": "Dijital Ürün Pasaportu",
+    "trusted_brands": "Dünya Çapında Önde Gelen Markalar Tarafından Güvenilir",
+    "view_all_clients": "Tüm Müşterileri Görüntüle",
+    "video_section": {
+      "title": "AB düzenlemelerine uygun dijital ürün pasaportu çözümleri",
+      "description": "Deneyimli bir Dijital Ürün Pasaportu çözüm sağlayıcısı ve kanıtlanmış dijital etiketleme araçlarıyla çalışın."
+    },
+    "experienced_provider": {
+      "title": "Global markalar tarafından güvenilen deneyimli bir DPP çözüm sağlayıcısı ile çalışın",
+      "description": "Scantrust, tekstil, pil, gıda ve içecek ve daha fazlası için global markalar genelinde DPP çözümleri sunmuştur. Dijital Ürün Pasaportu projenizi başarılı kılmak için on yıllık QR kodu teknolojisi geliştirme ve pazar uyumluluğu ve standartlar uzmanlığını birleştiriyoruz.",
+      "button": "Seçili vaka çalışmalarını gör"
+    },
+    "standards": {
+      "title": "DPP standartları ve düzenlemelerindeki en son gelişmeleri öğrenin ve hazırlanın",
+      "description": "Scantrust, Avrupa Komisyonu tarafından finanse edilen ve tekstil, elektrikli ve elektronik ekipman, lastik ve inşaat malzemeleri genelinde Dijital Ürün Pasaportlarını pilot uygulayan CIRPASS2 konsorsiyumunda öncü bir pilot proje yürütmektedir. Müşterilerimizin en son rehberliğe erişmesini ve hızla gelişen DPP standartları için hazır olmalarını sağlıyoruz."
+    },
+    "qr_solution": {
+      "title": "Ürünler için en iyi kapsamlı QR yönetim çözümü ile oluşturun",
+      "description": "DPP çözümlerimiz, QR kodu oluşturma, URL yönetimi ve açılış sayfası ve dinamik içerik yönetimi için kanıtlanmış kurumsal düzeyde araçlar üzerine inşa edilmiştir.",
+      "button": "Dijital etiketleme çözümlerini gör"
     }
   },
   "common": {
@@ -30,6 +97,325 @@
     "top_header_ads": "Özel Kampanya: İlk ay %50 indirim!",
     "about_dpp": "DPP Hakkında",
     "resources": "Kaynaklar",
-    "digital_twins": "Dijital Twins"
+    "digital_twins": "Dijital İkizler"
+  },
+  "DigitalTwins": {
+    "page_title": "Dijital İkizler",
+    "discover": {
+      "title": "Dijital İkizi Keşfedin",
+      "description": "Dijital İkizler, çeşitli endüstrilerdeki ürünlerin anlaşılmasını ve etkileşimini geliştiren sanal kopyalardır. Detaylı ve ilgi çekici deneyimler sunarlar. Dijital İkizler uyumluluğu sağlar ve sahteciliğe karşı güçlü koruma sunar.",
+      "features": {
+        "virtual_experience": {
+          "title": "Sanal Deneyim",
+          "description": "Müşteriler için detaylı ve sürükleyici sanal deneyim"
+        },
+        "traceability": {
+          "title": "İzlenebilirlik",
+          "description": "Geliştirilmiş ürün orijinalliği ve izlenebilirlik"
+        },
+        "protection": {
+          "title": "Koruma",
+          "description": "Sahteciliğe karşı koruma"
+        }
+      }
+    },
+    "key_benefits": {
+      "title": "Temel Faydalar",
+      "description": "Dijital İkiz çözümümüz, ürün deneyiminizi ve güvenliğinizi geliştiren kapsamlı faydalar sağlar:",
+      "benefits": {
+        "virtual_experience": "Müşteriler için detaylı ve sürükleyici sanal deneyim",
+        "traceability": "Geliştirilmiş ürün orijinalliği ve izlenebilirlik",
+        "protection": "Sahteciliğe karşı koruma"
+      }
+    }
+  },
+  "UseSafeCertification": {
+    "page_title": "Use Safe Sertifikası",
+    "trust_symbol": {
+      "title": "E-ticarette Güvenin Yeni Sembolü: UseSafe",
+      "description": "UseSafe, online alışverişte güvenlik ve kalitenin güvencesidir. Sertifikamız, ürünlerin sıkı güvenlik standartlarını karşıladığını garanti eder ve tüketicilere huzur sağlar. Ev eşyalarından elektroniğe kadar, UseSafe işaretli her ürün titizlikle test edilmiş ve doğrulanmıştır. Sembolümüze güvenmek, en iyisine güvenmek demektir. Alışveriş deneyiminizi UseSafe ile geliştirin, güvenilir ve güvenli e-ticaretin yeni standardı. Eşsiz güven ve kalite için UseSafe logolu ürünleri tercih edin."
+    },
+    "confidence": {
+      "title": "Her Alışverişte Güven",
+      "description": "UseSafe ile yaptığınız her alışveriş, sıkı güvenlik ve kalite standartlarımızla desteklenmektedir. Sertifikasyon sürecimiz, UseSafe logosunu taşıyan tüm ürünlerin güvenlik ve güvenilirlik konusunda en yüksek standartları karşıladığını garanti eder. Her ürünün kapsamlı bir şekilde test edildiğini ve onaylandığını bilerek gönül rahatlığıyla alışveriş yapın. Elektronik, ev eşyaları veya kişisel bakım ürünleri olsun, her alışverişte hak ettiğiniz güven ve güvenceyi sağlamak için UseSafe'e güvenin."
+    },
+    "user_experience": {
+      "title": "Kusursuz Kullanıcı Deneyimi",
+      "description": "UseSafe logolu ürünlerle kullanıcı dostu alışverişin en iyisini keşfedin. Platformumuz, en yüksek güvenlik standartlarını karşılayan ürünleri bulmanızı ve satın almanızı kolaylaştıran pürüzsüz ve zahmetsiz bir deneyim sunar. UseSafe logosunu taşıyan her ürün, size eşsiz bir huzur sağlamak için titiz test ve sertifikasyon süreçlerinden geçmiştir. Güvenli ve güvenilir ürünleri seçtiğinizi bilerek, göz atmadan ödemeye kadar sorunsuz bir alışveriş yolculuğunun keyfini çıkarın. E-ticaret deneyiminizi UseSafe'in getirdiği güvenle yükseltin."
+    }
+  },
+  "AboutDpp": {
+    "dpp_intro": {
+      "title": "Dijital Ürün Pasaportu (DPP)",
+      "description": "Dijital Ürün Pasaportu, ürünlerin değer zinciri boyunca şeffaflığı artırmak için tasarlanmış yenilikçi bir sistemdir. 2024'ten itibaren AB'de satılan neredeyse tüm ürünler için zorunlu hale gelecek ve ürünlerin kökeni, malzemeleri, çevresel etkileri ve imha önerileri hakkında kapsamlı bilgiler sağlayacaktır.",
+      "button": "Daha Fazla Bilgi"
+    },
+    "core_components": {
+      "title": "DPP'nin Temel Bileşenleri",
+      "description": "DPP sistemi, benzersiz ürün tanımlayıcıları, uygunluk belgeleri ve tehlikeli maddeler hakkında bilgileri içerir. Kullanım kılavuzları, güvenlik talimatları ve ürün imha kılavuzları da sistemin önemli bileşenleridir. Bu veriler tedarik zinciri yönetimini ve düzenleyici uyumluluğu iyileştirir."
+    },
+    "benefits": {
+      "title": "DPP'nin Faydaları",
+      "items": {
+        "material_efficiency": {
+          "description": "Malzeme Verimliliği",
+          "value": "40",
+          "suffix": "%"
+        },
+        "waste_reduction": {
+          "description": "Atık Azaltımı",
+          "value": "35",
+          "suffix": "%"
+        },
+        "carbon_footprint": {
+          "description": "Karbon Ayak İzi Azaltımı",
+          "value": "25",
+          "suffix": "%"
+        }
+      }
+    },
+    "implementation": {
+      "title": "DPP Nasıl Uygulanır?",
+      "description": "DPP sistemi, blockchain teknolojisi ve akıllı sözleşmeler kullanarak güvenli ve şeffaf veri paylaşımı sağlar. QR kodları veya RFID etiketleri aracılığıyla ürün bilgilerine kolay erişim sağlanır.",
+      "button": "Ücretsiz Danışmanlık"
+    }
   }
-}
+  ,"ContactUs": {
+    "page_title": "İletişim",
+    "form": {
+      "title": "Bize Mesaj Gönderin",
+      "description": "Aşağıdaki formu doldurun, en kısa sürede size geri döneceğiz.",
+      "fields": {
+        "full_name": {
+          "label": "Ad Soyad",
+          "placeholder": "John Doe"
+        },
+        "email": {
+          "label": "E-posta",
+          "placeholder": "john@example.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+90 (___) ___ __ __"
+        },
+        "subject": {
+          "label": "Konu",
+          "placeholder": "Size nasıl yardımcı olabiliriz?"
+        },
+        "message": {
+          "label": "Mesaj",
+          "placeholder": "Mesajınızı buraya yazın..."
+        }
+      },
+      "submit": {
+        "sending": "Gönderiliyor...",
+        "send": "Mesaj Gönder"
+      },
+      "toast": {
+        "success": {
+          "title": "Mesaj Başarıyla Gönderildi",
+          "description": "En kısa sürede size geri dönüş yapacağız."
+        },
+        "error": "Mesajınız gönderilirken bir hata oluştu"
+      }
+    },
+    "Footer": {
+      "company": {
+        "title": "Şirket",
+        "about": "Hakkımızda",
+        "hosting": "Hosting",
+        "domain": "Alan Adı",
+        "pricing": "Fiyatlandırma"
+      },
+      "customer": {
+        "title": "Müşteri",
+        "client_support": "Müşteri desteği",
+        "help_center": "Yardım merkezi",
+        "system_status": "Sistem durumu",
+        "feedback": "Geri bildirim"
+      },
+      "contact": {
+        "title": "Merhaba deyin",
+        "need_support": "Desteğe mi ihtiyacınız var?",
+        "email": "hi@domain.com",
+        "customer_care": "Müşteri hizmetleri",
+        "phone": "+1 234 567 8910"
+      },
+      "newsletter": {
+        "title": "Bültenimize abone olun",
+        "description": "En son haberler ve güncellemeler için bültenimize abone olun!",
+        "placeholder": "E-posta adresinizi girin",
+        "button_label": "gönder"
+      },
+      "legal": {
+        "recaptcha_text": "Bu site reCAPTCHA ile korunmaktadır ve Google",
+        "privacy_policy": "gizlilik politikası",
+        "and": "ve",
+        "terms": "hizmet şartları",
+        "disclaimer": "geçerlidir. Bu web sitesinin standart hüküm ve koşullarının herhangi biriyle aynı fikirde değilseniz, bu web sitesini kullanmamalısınız."
+      },
+      "company_description": "Lorem ipsum amet adipiscing elit to eiusmod ad tempor incididunt enim."
+    }
+  },
+  "Slider": {
+    "slides": [
+      {
+        "title": "Güvenli Ürün Alışverişinin Geleceği",
+        "description": "UseSafe ile Güvenli ve Sertifikalı Ürünler Dünyasına Adım Atın",
+        "buttonText": "Daha Fazla Bilgi",
+        "buttonUrl": "/about",
+        "image": "/crafto/images/demo-seo-agency-process-01.png"
+      },
+      {
+        "title": "Güvenli Ürün Alışverişinin Geleceği",
+        "description": "UseSafe ile Güvenli ve Sertifikalı Ürünler Dünyasına Adım Atın",
+        "buttonText": "Daha Fazla Bilgi",
+        "buttonUrl": "/about",
+        "image": "/crafto/images/demo-seo-agency-process-01.png"
+      }
+    ]
+  },
+  "AccordionBlock": {
+    "items": [
+      {
+        "title": "Üst Düzey Güvenlik ve Kalite Sağlama",
+        "description": "Usesafe sertifikasyonu, ürünlerinizin sıkı güvenlik ve kalite standartlarını karşılamasını sağlamak için kapsamlı testler içerir. Titiz değerlendirme sürecimiz, ürünlerinizin güvenliğini ve güvenilirliğini garanti etmek için kimyasal analiz, fiziksel test ve performans değerlendirmelerini içerir. Bu titiz testleri geçerek, ürünlerinizin tüketici kullanımı için güvenli olduğu kanıtlanır ve kaza, yaralanma veya sağlık tehlikesi riski en aza indirilir."
+      },
+      {
+        "title": "Düzenleyici Standartlara Uygunluk",
+        "description": "Usesafe, ürünlerinizin ilgili tüm yerel, ulusal ve uluslararası güvenlik düzenlemelerine uygun olmasını sağlar. Sertifikasyon sürecimiz, işletmenizi yasal sorunlardan ve potansiyel geri çağırmalardan korumak için uygunluğu kapsamlı bir şekilde kontrol etmek üzere tasarlanmıştır. Düzenlemelere uygunluk sadece ürün güvenliğini artırmakla kalmaz, aynı zamanda kalite ve tüketiciyi koruma konusundaki kararlılığınızı gösterir."
+      },
+      {
+        "title": "Tüketici Güveni Oluşturma",
+        "description": "Ürünlerinizde Usesafe sertifikasyon işaretinin görüntülenmesi, tüketicileri güvenlik ve kalite konusunda güvence altına alır. Usesafe logosu, tüketici güvenini artıran, daha yüksek müşteri memnuniyeti ve sadakatine yol açan bir güven sembolüdür.\n\nGüven üzerine kurulu güçlü bir itibar, daha fazla müşteri ve iş ortağı çeker, büyüme ve işbirliği için fırsatlar yaratır."
+      },
+      {
+        "title": "Şeffaflık ve Hesap Verebilirlik",
+        "description": "Usesafe sertifikasyon süreci şeffaf ve hesap verebilirdir. İşletmelerin ve tüketicilerin değerlendirme kriterleri ve sonuçlarını anlamalarını sağlayan detaylı raporlar ve belgeler sunuyoruz. Bu şeffaflık, sertifikasyonun öznel yargılardan ziyade nesnel, titiz standartlara dayandığını göstererek güven oluşturur. İşletmeler kalite ve uygunluk konusundaki kararlılıklarını güvenle sergileyebilirler."
+      },
+      {
+        "title": "Sürekli İzleme ve Destek",
+        "description": "Usesafe sertifikasyonu, sertifikalı ürünlerin sürekli izlenmesini ve periyodik olarak yeniden değerlendirilmesini içerir. Bu, ürünlerin zaman içinde güvenlik ve kalitesini korumasını, düzenlemelerdeki veya standartlardaki değişikliklere uyum sağlamasını sağlar. Proaktif yaklaşımımız, potansiyel güvenlik sorunlarını erken tespit etmeye ve çözmeye yardımcı olur, tüketicilere ulaşmalarını önler ve sürekli uygunluğu sağlar."
+      },
+      {
+        "title": "Sosyal Sorumluluk ve Etik Taahhüt",
+        "description": "Usesafe sertifikasyonunu elde ederek, işletmeler sosyal sorumluluğa olan bağlılıklarını gösterirler. Müşterilerinin ve çevrenin güvenliği ve refahı konusunda özen gösterdiklerini kanıtlarlar. Sosyal sorumluluğa olan bu bağlılık, değerleriyle uyumlu markaları desteklemeyi tercih eden sosyal bilinçli tüketiciler arasında güveni artırır."
+      }
+    ]
+  },
+  "PricingBlock": {
+    "header": {
+      "tag": "Öngörülebilir fiyatlandırma",
+      "title": "Herkes için özel fiyatlandırma planları"
+    },
+    "plans": {
+      "starter": {
+        "tag": "Başlangıç",
+        "title": "Bireysel",
+        "price": "$29",
+        "period": "Kullanıcı/ay yıllık faturalandırma*",
+        "features": [
+          { "text": "Pazarlama stratejisi", "included": true },
+          { "text": "Rekabet analizi", "included": true },
+          { "text": "Sosyal medya paylaşım denetimi", "included": false },
+          { "text": "Aylık yönetim", "included": false }
+        ],
+        "button": "Bu planı seç",
+        "cancel": "İstediğiniz zaman iptal edin"
+      },
+      "professional": {
+        "tag": "Profesyonel",
+        "title": "İşletme",
+        "popular": "Popüler",
+        "price": "$39",
+        "period": "Kullanıcı/ay yıllık faturalandırma*",
+        "features": [
+          { "text": "Pazarlama stratejisi", "included": true },
+          { "text": "Rekabet analizi", "included": true },
+          { "text": "Sosyal medya paylaşım denetimi", "included": true },
+          { "text": "Aylık yönetim", "included": false }
+        ],
+        "button": "Bu planı seç",
+        "cancel": "İstediğiniz zaman iptal edin"
+      },
+      "enterprise": {
+        "tag": "Kurumsal",
+        "title": "Şirket",
+        "price": "$59",
+        "period": "Kullanıcı/ay yıllık faturalandırma*",
+        "features": [
+          { "text": "Pazarlama stratejisi", "included": true },
+          { "text": "Rekabet analizi", "included": true },
+          { "text": "Sosyal medya paylaşım denetimi", "included": true },
+          { "text": "Aylık yönetim", "included": true }
+        ],
+        "button": "Bu planı seç",
+        "cancel": "İstediğiniz zaman iptal edin"
+      }
+    },
+    "features": [
+      {
+        "icon": "calendar-check",
+        "text": "30 gün ücretsiz deneme"
+      },
+      {
+        "icon": "wallet2",
+        "text": "Gizli ücret yok"
+      },
+      {
+        "icon": "clock",
+        "text": "İstediğiniz zaman iptal edebilirsiniz"
+      }
+    ]
+  },
+  "DemoPage": {
+    "title": "Ürün Demosu İsteği",
+    "productSection": {
+      "title": "Ürün Seçin",
+      "moreDetails": "Daha Fazla Bilgi",
+      "selected": "✓ Seçildi"
+    },
+    "contactSection": {
+      "title": "İletişim Bilgileri",
+      "fields": {
+        "fullName": "Ad Soyad",
+        "email": "E-posta",
+        "company": "Şirket",
+        "phone": "Telefon",
+        "message": "Mesaj"
+      }
+    },
+    "button": {
+      "sending": "Gönderiliyor...",
+      "submit": "Demo İste"
+    },
+    "toast": {
+      "error": {
+        "selectProduct": "Lütfen bir ürün seçin",
+        "generic": "Demo isteği gönderilirken bir hata oluştu"
+      },
+      "success": {
+        "title": "Demo İsteği Gönderildi",
+        "message": "En kısa sürede sizinle iletişime geçeceğiz"
+      }
+    },
+    "products": {
+      "digital-product-passports": {
+        "title": "Dijital Ürün Şifresi",
+        "description": "Ürünlerinizi benzersiz şifreleme ile koruyun"
+      },
+      "digital-twins": {
+        "title": "Dijital İkizler",
+        "description": "Dijital ikiz çözümü"
+      },
+      "use-safe-certification": {
+        "title": "UseSafe Sertifikasyonu",
+        "description": "Güvenli sertifikasyon sistemi"
+      }
+    }
+  }
+
+  }
+
+
+
