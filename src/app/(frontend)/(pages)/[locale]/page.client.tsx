@@ -4,7 +4,6 @@ import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { useTranslations } from 'next-intl';
 import { clients } from "@/constants/clients";
-import { IconListBlock } from '@/blocks/icon-list-block/Component';
 import { GiWorld, GiWaterRecycling, GiConversation } from "react-icons/gi";
 import { CiDiscount1 } from "react-icons/ci";
 import { LuFootprints } from "react-icons/lu";
