@@ -130,7 +130,13 @@
     }
   },
   "UseSafeCertification": {
-    "page_title": "Use Safe Certification",
+    "page_title": "USESAFE CERTIFICATION",
+    "hero": {
+      "title": "Step into a World of Safe and Certified Products with UseSafe",
+      "description": "Experience the ultimate peace of mind with UseSafe. Our certification ensures that every product you buy meets the highest standards of safety and quality. From electronics to personal care items, our rigorous testing and verification process guarantees that you are purchasing only the best. Trust UseSafe for all your shopping needs and enjoy a world where safety and certification are our top priorities. Shop confidently with UseSafe and elevate your e-commerce experience.",
+      "button": "Try Free for 30 Days"
+    },
+
     "trust_symbol": {
       "title": "The New Symbol of Trust in E-commerce: UseSafe",
       "description": "UseSafe is your assurance of safety and quality in online shopping. Our certification guarantees that products meet stringent safety standards, providing peace of mind for consumers. From household items to electronics, each UseSafe-marked product has been rigorously tested and verified. Trust in our symbol means trust in the best. Enhance your shopping experience with UseSafe, the new benchmark for reliable and safe e-commerce. Choose products with the UseSafe logo for unparalleled confidence and quality."
