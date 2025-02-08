@@ -2,6 +2,7 @@
 
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import { useTranslations } from 'next-intl';
 
 import { Button } from "@/frontend/_components/button";
 import Header from "@/frontend/_components/header";
@@ -13,6 +14,8 @@ import RenderBlocks from "@/blocks/RenderBlocks";
 import { clients } from "@/constants/clients";
 
 export default function DigitalProductPasswordPageClient() {
+  const t = useTranslations('DigitalProductPassport');
+
   return (
     <div>
       <Header />
@@ -21,7 +24,7 @@ export default function DigitalProductPasswordPageClient() {
           {
             blockType: "pageTitle",
             layout: {
-              title: "Digital Product Passport",
+              title: t('page_title'),
               backgroundImage: "/images/product-security.webp",
             },
             sectionOptions: {
@@ -35,11 +38,11 @@ export default function DigitalProductPasswordPageClient() {
               type: "slick",
             },
             sectionOptions: {
-              description: "Trusted by Leading Brands Worldwide",
+              description: t('trusted_brands'),
               footerContent: (
                 <div className="tw-flex tw-justify-center tw-items-center tw-py-0">
                   <Button variant="outline" className="tw-rounded-full">
-                    View All Clients
+                    {t('view_all_clients')}
                     <HiArrowNarrowRight className="tw-ml-2" />
                   </Button>
                 </div>
@@ -49,10 +52,8 @@ export default function DigitalProductPasswordPageClient() {
           {
             blockType: "backgroundVideo",
             layout: {
-              title:
-                "Digital product passport solutions to comply with EU regulations",
-              description:
-                "Work with an experienced Digital Product Passport solution provider and proven digital labeling tools.",
+              title: t('video_section.title'),
+              description: t('video_section.description'),
               video: {
                 src: "/videos/product-security-network.mp4",
                 poster: "/images/product-security.webp",
@@ -65,10 +66,8 @@ export default function DigitalProductPasswordPageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title:
-                "Work with an experienced DPP solution provider trusted by global brands",
-              description:
-                "Scantrust has already deployed DPP solutions for global brands across textiles, batteries, food & beverage, and more. We combine a decade’s worth of QR code technology development and in-market compliance and standards expertise to make your Digital Product Passport project successful.",
+              title: t('experienced_provider.title'),
+              description: t('experienced_provider.description'),
               image: {
                 src: "/images/remy-testimonial-u-label.webp",
                 alt: "Demo Finance 01",
@@ -82,7 +81,7 @@ export default function DigitalProductPasswordPageClient() {
                   uppercase
                   icon={<HiArrowNarrowRight />}
                 >
-                  See select case studies
+                  {t('experienced_provider.button')}
                 </ButtonSwitchAnimation>
               ),
             },
@@ -93,10 +92,8 @@ export default function DigitalProductPasswordPageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title:
-                "Know and prepare for the latest developments in DPP standards and regulations",
-              description:
-                "Scantrust is leading a lighthouse pilot in CIRPASS2, a European Commission-funded consortium piloting Digital Product Passports across textiles, electrical and electronic equipment, tyres, and construction materials. We ensure our clients have access to the latest guidance and are building for the rapidly evolving DPP standards.",
+              title: t('standards.title'),
+              description: t('standards.description'),
               image: {
                 src: "/images/cirpass-logo.webp",
                 width: 580,
@@ -112,10 +109,8 @@ export default function DigitalProductPasswordPageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title:
-                "Build with the best all-around QR management solution for products",
-              description:
-                "Our DPP solutions are built on top of proven enterprise-ready tools for QR code generation, URL management, and landing page and dynamic content management.",
+              title: t('qr_solution.title'),
+              description: t('qr_solution.description'),
               image: {
                 src: "/images/visual-2a_forjitter-3.webp",
                 alt: "Demo Finance 01",
@@ -129,7 +124,7 @@ export default function DigitalProductPasswordPageClient() {
                   uppercase
                   icon={<HiArrowNarrowRight />}
                 >
-                  See digital labeling solutions
+                  {t('qr_solution.button')}
                 </ButtonSwitchAnimation>
               ),
             },
