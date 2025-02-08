@@ -3,9 +3,11 @@
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { useTranslations } from 'next-intl';
-import { IconListBlock } from '@/blocks/icon-list-block/Component';
 import { clients } from "@/constants/clients";
-
+import { GiWorld, GiWaterRecycling, GiConversation } from "react-icons/gi";
+import { CiDiscount1 } from "react-icons/ci";
+import { LuFootprints } from "react-icons/lu";
+import { IoQrCodeOutline } from "react-icons/io5";
 
 import { Button } from "@/frontend/_components/button";
 import Header from "@/frontend/_components/header";
@@ -173,27 +175,27 @@ export default function PageClient() {
             layout: {
               items: [
                 {
-                  icon: 'world',
+                  icon: <GiWorld />,
                   description: t('IconList.items.security.description')
                 },
                 {
-                  icon: 'discount',
+                  icon: <CiDiscount1 />,
                   description: t('IconList.items.usability.description')
                 },
                 {
-                  icon: 'recycle',
+                  icon: <GiWaterRecycling />,
                   description: t('IconList.items.quality.description')
                 },
                 {
-                  icon: 'footprints',
+                  icon: <LuFootprints />,
                   description: t('IconList.items.speed.description')
                 },
                 {
-                  icon: 'qrcode',
+                  icon: <IoQrCodeOutline />,
                   description: t('IconList.items.privacy.description')
                 },
                 {
-                  icon: 'communication',
+                  icon: <GiConversation />,
                   description: t('IconList.items.support.description')
                 }
               ]

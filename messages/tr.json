@@ -130,7 +130,12 @@
     }
   },
   "UseSafeCertification": {
-    "page_title": "Use Safe Sertifikası",
+    "page_title": "USESAFE SERTİFİKASYONU",
+    "hero": {
+      "title": "UseSafe ile Güvenli ve Sertifikalı Ürünler Dünyasına Adım Atın",
+      "description": "UseSafe ile en üst düzeyde huzuru deneyimleyin. Sertifikasyonumuz, satın aldığınız her ürünün en yüksek güvenlik ve kalite standartlarını karşılamasını sağlar. Elektronik ürünlerden kişisel bakım ürünlerine kadar, titiz test ve doğrulama sürecimiz sadece en iyisini satın aldığınızı garanti eder. Tüm alışveriş ihtiyaçlarınız için UseSafe'e güvenin ve güvenlik ile sertifikasyonun önceliğimiz olduğu bir dünyanın keyfini çıkarın. UseSafe ile güvenle alışveriş yapın ve e-ticaret deneyiminizi yükseltin.",
+      "button": "30 Gün Ücretsiz Deneyin"
+    },
     "trust_symbol": {
       "title": "E-ticarette Güvenin Yeni Sembolü: UseSafe",
       "description": "UseSafe, online alışverişte güvenlik ve kalitenin güvencesidir. Sertifikamız, ürünlerin sıkı güvenlik standartlarını karşıladığını garanti eder ve tüketicilere huzur sağlar. Ev eşyalarından elektroniğe kadar, UseSafe işaretli her ürün titizlikle test edilmiş ve doğrulanmıştır. Sembolümüze güvenmek, en iyisine güvenmek demektir. Alışveriş deneyiminizi UseSafe ile geliştirin, güvenilir ve güvenli e-ticaretin yeni standardı. Eşsiz güven ve kalite için UseSafe logolu ürünleri tercih edin."
