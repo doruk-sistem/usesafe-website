@@ -1,13 +1,19 @@
 "use client";
 
 import React from "react";
-
+import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import Header from "@/frontend/_components/header";
 import Footer from "@/frontend/_components/footer";
 
 import RenderBlocks from "@/blocks/RenderBlocks";
 
 export default function UseSafeCertificationPageClient() {
+  const t = useTranslations('UseSafeCertification');
+  const params = useParams();
+  const locale = params.locale as string;
+
   return (
     <div>
       <Header />
@@ -16,8 +22,32 @@ export default function UseSafeCertificationPageClient() {
           {
             blockType: "pageTitle",
             layout: {
-              title: "Use Safe Certification",
+              title: t('page_title'),
               backgroundImage: "/images/products-1.webp",
+            },
+            sectionOptions: {
+              className: "tw-p-0",
+            },
+          },
+          {
+            blockType: "certificationIntro",
+            layout: {
+              title: t('hero.title'),
+              description: t('hero.description'),
+              backgroundImage: "/images/certification-hero-banner.avif",
+              contentFooter: (
+                <div className="container">
+                  <div className="tw-flex tw-justify-center tw-mt-8">
+                    <Link href={`/${locale}/demo`}>
+                      <button 
+                        className="tw-bg-black tw-text-white tw-font-medium tw-px-8 tw-py-3 tw-rounded-md hover:tw-bg-gray-900 tw-transition-all tw-duration-300 tw-transform hover:tw-scale-105 tw-shadow-lg hover:tw-shadow-xl"
+                      >
+                        {t('hero.button')}
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              )
             },
             sectionOptions: {
               className: "tw-p-0",
@@ -26,9 +56,8 @@ export default function UseSafeCertificationPageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title: "The New Symbol of Trust in E-commerce: UseSafe",
-              description:
-                "UseSafe is your assurance of safety and quality in online shopping. Our certification guarantees that products meet stringent safety standards, providing peace of mind for consumers. From household items to electronics, each UseSafe-marked product has been rigorously tested and verified. Trust in our symbol means trust in the best. Enhance your shopping experience with UseSafe, the new benchmark for reliable and safe e-commerce. Choose products with the UseSafe logo for unparalleled confidence and quality.",
+              title: t('trust_symbol.title'),
+              description: t('trust_symbol.description'),
               image: {
                 src: "/images/use-safe-products-2.webp",
                 alt: "Demo Finance 01",
@@ -44,9 +73,8 @@ export default function UseSafeCertificationPageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title: "Confidence in Every Purchase",
-              description:
-                "With UseSafe, every purchase you make is backed by our rigorous safety and quality standards. Our certification process ensures that all products bearing the UseSafe logo meet the highest benchmarks for safety and reliability. Shop with peace of mind, knowing that every item has been thoroughly tested and approved. Whether it's electronics, household items, or personal care products, trust UseSafe to deliver the confidence and assurance you deserve in every purchase.",
+              title: t('confidence.title'),
+              description: t('confidence.description'),
               image: {
                 src: "/images/use-safe-products-3.webp",
                 width: 580,
@@ -62,9 +90,8 @@ export default function UseSafeCertificationPageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title: "Seamless User Experience",
-              description:
-                "Discover the ultimate in user-friendly shopping with UseSafe logo products. Our platform ensures a smooth and effortless experience, making it easy to find and purchase items that meet the highest safety standards. Every product featuring the UseSafe logo has undergone rigorous testing and certification, providing you with unparalleled peace of mind. Enjoy a streamlined shopping journey, from browsing to checkout, knowing you are choosing safe and reliable products. Elevate your e-commerce experience with the confidence that comes from UseSafe.",
+              title: t('user_experience.title'),
+              description: t('user_experience.description'),
               image: {
                 src: "/images/use-safe-products-4.webp",
                 alt: "Demo Finance 01",

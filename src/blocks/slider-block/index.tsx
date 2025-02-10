@@ -3,8 +3,9 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Slider from "react-slick";
-
+import { useTranslations } from 'next-intl';
 import { Button } from "@/frontend/_components/button";
+import Link from 'next/link';
 
 interface SlideItem {
   title: string;
@@ -14,27 +15,18 @@ interface SlideItem {
   image: string;
 }
 
-const slides: SlideItem[] = [
-  {
-    title: "The Future of Safe Product Shopping",
-    description:
-      "Step into a World of Safe and Certified Products with UseSafe",
-    buttonText: "More Details",
-    buttonUrl: "/about",
-    image: "/crafto/images/demo-seo-agency-process-01.png",
-  },
-  {
-    title: "The Future of Safe Product Shopping",
-    description:
-      "Step into a World of Safe and Certified Products with UseSafe",
-    buttonText: "More Details",
-    buttonUrl: "/about",
-    image: "/crafto/images/demo-seo-agency-process-01.png",
-  },
-];
-
 export function SliderBlock() {
+  const t = useTranslations('Slider');
   const [activeSlide, setActiveSlide] = useState(0);
+
+  // Çevirileri kullanarak slides dizisini oluştur
+  const slides: SlideItem[] = [0, 1].map((index) => ({
+    title: t(`slides.${index}.title`),
+    description: t(`slides.${index}.description`),
+    buttonText: t(`slides.${index}.buttonText`),
+    buttonUrl: t(`slides.${index}.buttonUrl`),
+    image: t(`slides.${index}.image`),
+  }));
 
   return (
     <Slider
@@ -67,18 +59,20 @@ export function SliderBlock() {
           className="!tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 tw-px-4 lg:tw-px-12 tw-py-4 tw-space-y-6"
           key={index}
         >
-          {/* Left side - Content */}
-          
+          {/* Sol taraf - İçerik */}
           <div className="tw-w-full tw-h-full tw-flex tw-flex-col tw-justify-center tw-items-center lg:tw-items-start tw-space-y-6">
             <h2 className="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-text-gray-900 tw-m-0 tw-text-white">
               {slide.title}
             </h2>
             <p className="tw-text-lg tw-text-gray-300">{slide.description}</p>
-            <Button variant="white">{slide.buttonText}</Button>
+            <Link href={slide.buttonUrl}>
+              <Button variant="white">
+                {slide.buttonText}
+              </Button>
+            </Link>
           </div>
 
-          {/* Right side - Image */}
-          
+          {/* Sağ taraf - Görsel */}
           <div
         
             className="tw-w-full tw-h-full"

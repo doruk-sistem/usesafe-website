@@ -2,8 +2,12 @@
 
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
-
+import { useTranslations } from 'next-intl';
 import { clients } from "@/constants/clients";
+import { GiWorld, GiWaterRecycling, GiConversation } from "react-icons/gi";
+import { CiDiscount1 } from "react-icons/ci";
+import { LuFootprints } from "react-icons/lu";
+import { IoQrCodeOutline } from "react-icons/io5";
 
 
 import { Button } from "@/frontend/_components/button";
@@ -17,11 +21,11 @@ import { ClientsBlock } from "@/blocks/clients-block/Component";
 import Referance from "@/frontend/_components/Referance/Referance";
 
 export default function PageClient() {
+  const t = useTranslations('HomePage');
+
   return (
     <div>
       <Header />
-      
-
       <RenderBlocks
         blocks={[
           {
@@ -43,9 +47,8 @@ export default function PageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title: "We’re Here to Revolutionize the World of SAFE Products",
-              description:
-                "Usesafe is backed by Doruksistem, a trusted consultancy firm. Usesafe ensures product safety and compliance with regulations.",
+              title: t('revolutionize_title'),
+              description: t('revolutionize_description'),
               image: {
                 src: "/images/safe_sopping_doruksistem_usesafe_3.webp",
                 alt: "Safe Shopping",
@@ -54,8 +57,12 @@ export default function PageClient() {
                 imgClassName: "tw-rounded-lg",
               },
               contentFooter: (
-                <ButtonSwitchAnimation size="lg" uppercase icon={<HiArrowNarrowRight />}>
-                  Join Us
+                <ButtonSwitchAnimation
+                  size="lg"
+                  uppercase
+                  icon={<HiArrowNarrowRight />}
+                >
+                  {t('join_us')}
                 </ButtonSwitchAnimation>
               ),
             },
@@ -67,9 +74,8 @@ export default function PageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title: "Join the Community of Trusted Brands",
-              description:
-                "Join the community and gain consumer confidence with UseSafe certification, ensuring your products meet the highest safety standards.",
+              title: t('trusted_brands_title'),
+              description: t('trusted_brands_description'),
               image: {
                 src: "/images/safe_sopping_doruksistem_usesafe.webp",
                 alt: "Trusted Brands",
@@ -79,11 +85,25 @@ export default function PageClient() {
               },
               imagePosition: "right",
               contentFooter: (
-                <div className="tw-flex tw-items-center tw-gap-10">
-                  <Counter value={2} suffix="M" description="Certified Products" />
-                  <Counter value={3} suffix="K" description="Certified Partners" />
-                  <ButtonSwitchAnimation size="lg" uppercase icon={<HiArrowNarrowRight />}>
-                    Learn More
+                <div>
+                  <div className="tw-flex tw-items-center tw-gap-10">
+                    <Counter
+                      value={2}
+                      suffix="M"
+                      description={t('certified_products')}
+                    />
+                    <Counter
+                      value={3}
+                      suffix="K"
+                      description={t('certified_partner')}
+                    />
+                  </div>
+                  <ButtonSwitchAnimation
+                    size="lg"
+                    uppercase
+                    icon={<HiArrowNarrowRight />}
+                  >
+                    {t('learn_more')}
                   </ButtonSwitchAnimation>
                 </div>
               ),
@@ -105,11 +125,10 @@ export default function PageClient() {
             sectionOptions: {
               innerContainer: true,
               title: "Digital Product Passport",
-              description:
-                "Our DPPs meet traceability requirements for France’s Anti-Waste Law (AGEC) and help brands comply with new regulations.",
+              description: t('dpp_description'),
               footerContent: (
                 <div className="tw-flex tw-justify-center tw-items-center">
-                  <Button>Try Free for 30 Days</Button>
+                  <Button>{t('try_free')}</Button>
                 </div>
               ),
               className: "tw-bg-gradient-to-b tw-from-gray-100 tw-to-white",
@@ -119,28 +138,74 @@ export default function PageClient() {
             blockType: "counter",
             layout: {
               items: [
-                { description: "Employees", value: 25 },
-                { description: "Core Teams", value: 5 },
-                { description: "Expected Partners Worldwide", value: 1500 },
-                { description: "Expected Certified Products", value: 15 },
+                {
+                  description: t('counter_section.employees'),
+                  value: 25,
+                },
+                {
+                  description: t('counter_section.core_teams'),
+                  value: 5,
+                },
+                {
+                  description: t('counter_section.expected_partners'),
+                  value: 1500,
+                },
+                {
+                  description: t('counter_section.expected_products'),
+                  value: 15,
+                },
               ],
             },
             sectionOptions: {
-              title: "New Innovative Steps Forward",
+              title: t('counter_section.title'),
               innerContainer: true,
             },
           },
           {
             blockType: "accordion",
             layout: {
-              title: "A Different Approach to Trusted Shopping",
-              description:
-                "Usesafe certification ensures that your products meet the highest safety and quality standards, building trust with consumers.",
+              title: t('why_usesafe.approach_title'),
+              description: t('why_usesafe.approach_description'),
             },
             sectionOptions: {
-              title: "Why Usesafe?",
+              title: t('why_usesafe.title'),
               innerContainer: true,
             },
+          },
+          {
+            blockType: "iconList",
+            layout: {
+              items: [
+                {
+                  icon: <GiWorld />,
+                  description: t('IconList.items.security.description')
+                },
+                {
+                  icon: <CiDiscount1 />,
+                  description: t('IconList.items.usability.description')
+                },
+                {
+                  icon: <GiWaterRecycling />,
+                  description: t('IconList.items.quality.description')
+                },
+                {
+                  icon: <LuFootprints />,
+                  description: t('IconList.items.speed.description')
+                },
+                {
+                  icon: <IoQrCodeOutline />,
+                  description: t('IconList.items.privacy.description')
+                },
+                {
+                  icon: <GiConversation />,
+                  description: t('IconList.items.support.description')
+                }
+              ]
+            },
+            sectionOptions: {
+              innerContainer: true,
+              className: "tw-bg-gray-50"
+            }
           },
         ]}
       />

@@ -6,6 +6,7 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 import { toast, Toaster } from "react-hot-toast";
 import { FaCheck } from "react-icons/fa";
 import { BsArrowUpRight } from "react-icons/bs";
+import { useTranslations } from "next-intl";
 
 import ButtonSwitchAnimation from "@/app/(frontend)/_components/button-switch-animation";
 import Footer from "@/app/(frontend)/_components/footer";
@@ -15,6 +16,7 @@ import { Button } from "@/app/(frontend)/_components/button";
 import products from "@/constants/products";
 
 export default function DemoPageClient() {
+  const t = useTranslations('DemoPage');
   const [selectedProduct, setSelectedProduct] = useState("");
   const [formData, setFormData] = useState({
     name: "",
@@ -22,6 +24,7 @@ export default function DemoPageClient() {
     company: "",
     phone: "",
     message: "",
+    
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -38,7 +41,7 @@ export default function DemoPageClient() {
     e.preventDefault();
 
     if (!selectedProduct) {
-      toast.error("Please select a product");
+      toast.error(t('toast.error.selectProduct'));
       return;
     }
 
@@ -61,10 +64,10 @@ export default function DemoPageClient() {
           <div>
             <h3 className="tw-text-lg tw-mb-0 tw-font-semibold">
               <FaCheck className="tw-text-green-500 tw-mr-2" />
-              Demo Request Sent
+              {t('toast.success.title')}
             </h3>
             <p className="tw-text-base tw-mb-0">
-              We will contact you as soon as possible.
+              {t('toast.success.message')}
             </p>
           </div>
         ));
@@ -80,7 +83,7 @@ export default function DemoPageClient() {
         throw new Error("An error occurred");
       }
     } catch (error) {
-      toast.error("An error occurred while sending the demo request");
+      toast.error(t('toast.error.generic'));
     } finally {
       setIsSubmitting(false);
     }
@@ -92,14 +95,14 @@ export default function DemoPageClient() {
       <Toaster position="bottom-center" />
       <main className="tw-flex-1 tw-container tw-mx-auto tw-px-4 tw-py-12">
         <h1 className="tw-text-3xl tw-font-bold tw-text-black tw-text-center tw-mb-6">
-          Request Product Demo
+          {t('title')}
         </h1>
 
         <form onSubmit={handleSubmit} className="tw-max-w-4xl tw-mx-auto">
           <div className="tw-bg-white tw-rounded-lg tw-p-6 tw-shadow-lg">
             <div className="tw-mb-8">
               <h2 className="tw-text-xl tw-text-black tw-font-semibold tw-mb-4">
-                Select Product
+                {t('productSection.title')}
               </h2>
               <div className="tw-flex tw-flex-col tw-gap-4">
                 {products.map((product) => (
@@ -115,7 +118,7 @@ export default function DemoPageClient() {
                     <div className="tw-relative tw-w-56 tw-overflow-hidden tw-flex-shrink-0">
                       <Image
                         src={product.image}
-                        alt={product.title}
+                        alt={t(`products.${product.id}.title`)}
                         fill
                         className="tw-object-cover tw-h-full tw-w-full group-hover:tw-scale-105 tw-transition-all tw-duration-300"
                       />
@@ -123,28 +126,28 @@ export default function DemoPageClient() {
                     <div className="tw-py-4 tw-px-8 tw-flex tw-flex-col tw-justify-between tw-flex-1">
                       <div>
                         <h3
-                          className={`tw-font-medium tw-mb-2 tw-text-2xl  ${
+                          className={`tw-font-medium tw-mb-2 tw-text-2xl ${
                             selectedProduct === product.id
                               ? "tw-text-primary"
                               : "tw-text-black"
                           }`}
                         >
-                          {product.title}
+                          {t(`products.${product.id}.title`)}
                         </h3>
                         <p className="tw-text-sm tw-text-gray-600">
-                          {product.description}
+                          {t(`products.${product.id}.description`)}
                         </p>
                       </div>
                       <div className="tw-flex tw-items-center tw-justify-between">
                         <a href={product.href} target="_blank">
                           <Button variant="default" size="sm" type="button">
-                            More Details
+                            {t('productSection.moreDetails')}
                             <BsArrowUpRight className="tw-ml-2" />
                           </Button>
                         </a>
                         {selectedProduct === product.id && (
                           <span className="tw-text-primary tw-text-sm">
-                            ✓ Selected
+                            {t('productSection.selected')}
                           </span>
                         )}
                       </div>
@@ -156,12 +159,12 @@ export default function DemoPageClient() {
 
             <div className="tw-mt-8">
               <h2 className="tw-text-xl tw-text-black tw-font-semibold tw-mb-6">
-                Contact Information
+                {t('contactSection.title')}
               </h2>
               <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-6">
                 <div>
                   <label className="tw-block tw-text-sm tw-font-medium tw-mb-2">
-                    Full Name
+                    {t('contactSection.fields.fullName')}
                   </label>
                   <input
                     type="text"
@@ -174,7 +177,7 @@ export default function DemoPageClient() {
                 </div>
                 <div>
                   <label className="tw-block tw-text-sm tw-font-medium tw-mb-2">
-                    Email
+                    {t('contactSection.fields.email')}
                   </label>
                   <input
                     type="email"
@@ -187,7 +190,7 @@ export default function DemoPageClient() {
                 </div>
                 <div>
                   <label className="tw-block tw-text-sm tw-font-medium tw-mb-2">
-                    Company
+                    {t('contactSection.fields.company')}
                   </label>
                   <input
                     type="text"
@@ -200,7 +203,7 @@ export default function DemoPageClient() {
                 </div>
                 <div>
                   <label className="tw-block tw-text-sm tw-font-medium tw-mb-2">
-                    Phone
+                    {t('contactSection.fields.phone')}
                   </label>
                   <input
                     type="tel"
@@ -213,7 +216,7 @@ export default function DemoPageClient() {
                 </div>
                 <div className="md:tw-col-span-2">
                   <label className="tw-block tw-text-sm tw-font-medium tw-mb-2">
-                    Message
+                    {t('contactSection.fields.message')}
                   </label>
                   <textarea
                     name="message"
@@ -232,7 +235,7 @@ export default function DemoPageClient() {
                 disabled={isSubmitting}
                 icon={<HiArrowNarrowRight />}
               >
-                {isSubmitting ? "Sending..." : "Request Demo"}
+                {isSubmitting ? t('button.sending') : t('button.submit')}
               </ButtonSwitchAnimation>
             </div>
           </div>
