@@ -1,0 +1,12 @@
+{
+  "form": {
+    "name": "Name",
+    "surname": "Surname",
+    "email": "Email",
+    "phone": "Phone",
+    "submit": "Submit"
+  },
+  "references": {
+    "title": "Our References"
+  }
+} 

@@ -1,0 +1,12 @@
+{
+  "form": {
+    "name": "İsim",
+    "surname": "Soyisim",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "submit": "Gönder"
+  },
+  "references": {
+    "title": "Referanslarımız"
+  }
+} 

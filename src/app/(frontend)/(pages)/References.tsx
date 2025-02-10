@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-// Form state
+// Form durumu
 const ReferenceSlider = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -23,7 +23,7 @@ const ReferenceSlider = () => {
     logo: i % 2 === 0 ? "/images/referance/images.png" : "/images/referance/images2.jpg",
   }));
 
-  // Form validation
+  // Form doğrulama
   const validateForm = () => {
     let tempErrors = { ...errors };
 
@@ -47,7 +47,7 @@ const ReferenceSlider = () => {
     return Object.values(tempErrors).every((error) => error === "");
   };
 
-  // Form submission handler
+  // Form gönderim işleyicisi
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
@@ -95,7 +95,6 @@ const ReferenceSlider = () => {
               />
               {errors[field.name as keyof typeof errors] && <p className="tw-text-sm tw-text-red-500 tw-mt-2">{errors[field.name as keyof typeof errors]}</p>}
             </div>
-
           ))}
           <button
             type="submit"

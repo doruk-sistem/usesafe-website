@@ -15,12 +15,14 @@ export function PageTitleBlock({
 }: PageTitleBlockProps) {
   return (
     <div
+    
       className="page-title-big-typography tw-py-0 md:tw-py-10 ipad-top-space-margin tw-bg-black tw-bg-center tw-bg-cover"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="tw-opacity-85 tw-bg-black tw-w-full tw-h-full tw-absolute tw-top-0 tw-left-0"></div>
       <div className="container">
         <div className="row align-items-center justify-content-center small-screen">
+          
           <div
             className="col-xl-6 col-lg-7 col-sm-8 position-relative text-center page-title-extra-small"
             data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 100, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'

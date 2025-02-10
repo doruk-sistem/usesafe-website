@@ -38,7 +38,9 @@ export default function Navbar() {
       href: "/resources/about-dpp",
     },
     { label: t("common.contact_us"), href: "/contact" },
+    { label: "Referanslar", href: "/references" }
   ];
+
 
   return (
     <nav className="tw-border-b-[1px] tw-border-b-gray-200 tw-border-solid tw-border-transparent tw-bg-white/80 tw-backdrop-blur-md">

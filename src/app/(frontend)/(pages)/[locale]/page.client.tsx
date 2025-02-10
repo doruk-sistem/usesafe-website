@@ -5,25 +5,22 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 
 import { clients } from "@/constants/clients";
 
+
 import { Button } from "@/frontend/_components/button";
 import Header from "@/frontend/_components/header";
 import Footer from "@/frontend/_components/footer";
 import ButtonSwitchAnimation from "@/frontend/_components/button-switch-animation";
 
 import RenderBlocks from "@/blocks/RenderBlocks";
-
 import Counter from "../../_components/counter";
 import { ClientsBlock } from "@/blocks/clients-block/Component";
-
-// Referans bileşenini import ettik
 import Referance from "@/frontend/_components/Referance/Referance";
 
 export default function PageClient() {
   return (
     <div>
       <Header />
-      {/* Referans bileşenini ana sayfaya ekledim*/}
-      <Referance />
+      
 
       <RenderBlocks
         blocks={[
@@ -48,20 +45,16 @@ export default function PageClient() {
             layout: {
               title: "We’re Here to Revolutionize the World of SAFE Products",
               description:
-                "Usesafe is backed by Doruksistem, a trusted consultancy firm. The project ensures that products on online shopping platforms like are safe and compliant with regulations. Usesafe stands out by rigorously verifying product quality and safety. The core values are trust, transparency, and consumer protection. This site offers detailed information about the Usesafe certification process and its benefits for both consumers and sellers.",
+                "Usesafe is backed by Doruksistem, a trusted consultancy firm. Usesafe ensures product safety and compliance with regulations.",
               image: {
                 src: "/images/safe_sopping_doruksistem_usesafe_3.webp",
-                alt: "Demo Finance 01",
-                width: 580,
-                height: 684,
+                alt: "Safe Shopping",
+                width: 800,
+                height: 500,
                 imgClassName: "tw-rounded-lg",
               },
               contentFooter: (
-                <ButtonSwitchAnimation
-                  size="lg"
-                  uppercase
-                  icon={<HiArrowNarrowRight />}
-                >
+                <ButtonSwitchAnimation size="lg" uppercase icon={<HiArrowNarrowRight />}>
                   Join Us
                 </ButtonSwitchAnimation>
               ),
@@ -70,39 +63,26 @@ export default function PageClient() {
               innerContainer: true,
             },
           },
+
           {
             blockType: "contentWithImage",
             layout: {
-              title: "Join the community of trusted brands",
+              title: "Join the Community of Trusted Brands",
               description:
-                "Join the community of trusted brands and gain consumer confidence by certifying your products with UseSafe. Usesafe certification ensures that your products meet the highest safety and regulatory standards, giving your customers peace of mind.",
+                "Join the community and gain consumer confidence with UseSafe certification, ensuring your products meet the highest safety standards.",
               image: {
                 src: "/images/safe_sopping_doruksistem_usesafe.webp",
-                alt: "Demo Finance 01",
-                width: 580,
-                height: 684,
+                alt: "Trusted Brands",
+                width: 1200,
+                height: 800,
                 imgClassName: "tw-rounded-lg",
               },
               imagePosition: "right",
               contentFooter: (
-                <div>
-                  <div className="tw-flex tw-items-center tw-gap-10">
-                    <Counter
-                      value={2}
-                      suffix="M"
-                      description="Certified Products"
-                    />
-                    <Counter
-                      value={3}
-                      suffix="K"
-                      description="Certified Partner"
-                    />
-                  </div>
-                  <ButtonSwitchAnimation
-                    size="lg"
-                    uppercase
-                    icon={<HiArrowNarrowRight />}
-                  >
+                <div className="tw-flex tw-items-center tw-gap-10">
+                  <Counter value={2} suffix="M" description="Certified Products" />
+                  <Counter value={3} suffix="K" description="Certified Partners" />
+                  <ButtonSwitchAnimation size="lg" uppercase icon={<HiArrowNarrowRight />}>
                     Learn More
                   </ButtonSwitchAnimation>
                 </div>
@@ -116,17 +96,17 @@ export default function PageClient() {
             blockType: "media",
             layout: {
               src: "/crafto/images/app-demo.webp",
-              alt: "Demo Finance 01",
+              alt: "Digital Product Passport",
+              width: 1400,
+              height: 900,
               imgClassName: "tw-w-full tw-object-contain",
               className: "tw-w-full tw-flex tw-justify-center",
-              width: 1000,
-              height: 1000,
             },
             sectionOptions: {
               innerContainer: true,
               title: "Digital Product Passport",
               description:
-                "Digital Product Passports for textiles are live today with global fashion brands. Our DPPs meet traceability requirements for France’s Anti-Waste Law (AGEC) and help brands be prepared for imminent Digital Product Passport rules for textiles.",
+                "Our DPPs meet traceability requirements for France’s Anti-Waste Law (AGEC) and help brands comply with new regulations.",
               footerContent: (
                 <div className="tw-flex tw-justify-center tw-items-center">
                   <Button>Try Free for 30 Days</Button>
@@ -139,36 +119,23 @@ export default function PageClient() {
             blockType: "counter",
             layout: {
               items: [
-                {
-                  description: "Employees",
-                  value: 25,
-                },
-                {
-                  description: "Core Teams",
-                  value: 5,
-                },
-                {
-                  description: "Expected Partners Worldwide",
-                  value: 1500,
-                },
-                {
-                  description: "Expected Certified Products",
-                  value: 15,
-                },
+                { description: "Employees", value: 25 },
+                { description: "Core Teams", value: 5 },
+                { description: "Expected Partners Worldwide", value: 1500 },
+                { description: "Expected Certified Products", value: 15 },
               ],
             },
             sectionOptions: {
-              title: "New innovative steps forward",
+              title: "New Innovative Steps Forward",
               innerContainer: true,
             },
           },
           {
             blockType: "accordion",
             layout: {
-              title:
-                "A Different Approach, Using a New Method of Trusted Shopping",
+              title: "A Different Approach to Trusted Shopping",
               description:
-                "Usesafe certification ensures that your products meet the highest safety, quality, and regulatory standards, building trust with consumers and enhancing your brand's reputation.",
+                "Usesafe certification ensures that your products meet the highest safety and quality standards, building trust with consumers.",
             },
             sectionOptions: {
               title: "Why Usesafe?",

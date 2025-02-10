@@ -68,6 +68,7 @@ export function SliderBlock() {
           key={index}
         >
           {/* Left side - Content */}
+          
           <div className="tw-w-full tw-h-full tw-flex tw-flex-col tw-justify-center tw-items-center lg:tw-items-start tw-space-y-6">
             <h2 className="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-text-gray-900 tw-m-0 tw-text-white">
               {slide.title}
@@ -77,11 +78,14 @@ export function SliderBlock() {
           </div>
 
           {/* Right side - Image */}
+          
           <div
+        
             className="tw-w-full tw-h-full"
             data-bottom-top="transform: translateY(100px)"
             data-top-bottom="transform: translateY(-100px)"
           >
+            
             <Image
               src={slide.image}
               alt={slide.title}
