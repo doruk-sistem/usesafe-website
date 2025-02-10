@@ -105,7 +105,7 @@ export default function DemoPageClient() {
                 {t('productSection.title')}
               </h2>
               <div className="tw-flex tw-flex-col tw-gap-4">
-                {products.map((product) => (
+                {products.map((product, index) => (
                   <div
                     key={product.id}
                     className={`group tw-relative tw-cursor-pointer tw-group hover:tw-ring-2 tw-transition-all tw-duration-300 ${
@@ -116,12 +116,15 @@ export default function DemoPageClient() {
                     onClick={() => setSelectedProduct(product.id)}
                   >
                     <div className="tw-relative tw-w-56 tw-overflow-hidden tw-flex-shrink-0">
-                      <Image
-                        src={product.image}
-                        alt={t(`products.${product.id}.title`)}
-                        fill
-                        className="tw-object-cover tw-h-full tw-w-full group-hover:tw-scale-105 tw-transition-all tw-duration-300"
-                      />
+                    <Image
+                    src={product.image}
+                    alt={t(`products.${product.id}.title`)}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 224px"
+                    priority={index === 0}
+                    loading={index === 0 ? "eager" : "lazy"} 
+                    className="tw-object-cover tw-h-full tw-w-full group-hover:tw-scale-105 tw-transition-all tw-duration-300"
+                  />
                     </div>
                     <div className="tw-py-4 tw-px-8 tw-flex tw-flex-col tw-justify-between tw-flex-1">
                       <div>

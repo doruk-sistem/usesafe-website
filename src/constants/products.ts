@@ -16,7 +16,7 @@ const products: Product[] = [
     id: "digital-twins",
     title :"products.digital-twins.title",
     href: "/solutions/digital-twins",
-    image: "/images/blockchain-1.webp",
+    image: "/images/blockchain-16-9-1.webp",
   },
   {
     id: "use-safe-certification",
