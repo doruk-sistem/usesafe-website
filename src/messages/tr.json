@@ -1,12 +1,10 @@
 {
-  "form": {
-    "name": "İsim",
-    "surname": "Soyisim",
-    "email": "E-posta",
-    "phone": "Telefon",
-    "submit": "Gönder"
-  },
-  "references": {
-    "title": "Referanslarımız"
-  }
-} 
+  "Name": "İsim",
+  "Surname": "Soyisim",
+  "Mail": "E-posta",
+  "Phone": "Telefon",
+  "Send": "Gönder",
+  "Service Request": "Hizmet Talebi",
+  "References": "Referanslar"
+}
+  
