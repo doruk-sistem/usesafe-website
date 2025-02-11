@@ -299,9 +299,6 @@
         "inclusion": {
           "title": "GİZLİLİK POLİTİKASINA NELER DAHİL EDİLMELİ",
           "content": "Genel olarak konuşursak, bir Gizlilik Politikası genellikle şu tür konuları ele alır: web sitesinin topladığı bilgi türleri ve verileri toplama şekli; web sitesinin bu tür bilgileri neden topladığına dair bir açıklama; web sitesinin bilgileri üçüncü taraflarla paylaşma uygulamaları; ziyaretçilerinizin ve müşterilerinizin ilgili gizlilik mevzuatına göre haklarını kullanabilecekleri yollar; küçüklerin veri toplanmasına ilişkin özel uygulamalar; ve çok daha fazlası."
-        },
-        "learnMore": {
-          "content": "Daha fazla bilgi için, 'Gizlilik Politikası Oluşturma' makalemizi kontrol edin."
         }
       }
     }
@@ -327,10 +324,8 @@
         "inclusion": {
           "title": "Ş&K BELGESİNE NELER DAHİL EDİLMELİ",
           "content": "Genel olarak konuşursak, Ş&K genellikle şu tür konuları ele alır: Web sitesini kimin kullanabileceği; olası ödeme yöntemleri; web sitesi sahibinin gelecekte teklifini değiştirebileceğine dair bir beyan; web sitesi sahibinin müşterilerine verdiği garanti türleri; ilgili olduğunda fikri mülkiyet veya telif hakları konularına atıf; web sitesi sahibinin bir üyenin hesabını askıya alma veya iptal etme hakkı; ve çok daha fazlası."
-        },
-        "learnMore": {
-          "content": "Daha fazla bilgi için, 'Şartlar ve Koşullar Politikası Oluşturma' makalemizi kontrol edin."
         }
+      
       }
     }
   },

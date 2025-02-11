@@ -300,9 +300,6 @@
         "inclusion": {
           "title": "WHAT TO INCLUDE IN THE PRIVACY POLICY",
           "content": "Generally speaking, a Privacy Policy often addresses these types of issues: the types of information the website is collecting and the manner in which it collects the data; an explanation about why is the website collecting these types of information; what are the website's practices on sharing the information with third parties; ways in which your visitors an customers can exercise their rights according to the relevant privacy legislation; the specific practices regarding minors' data collection; and much much more."
-        },
-        "learnMore": {
-          "content": "To learn more about this, check out our article 'Creating a Privacy Policy'."
         }
       }
     }
@@ -328,9 +325,6 @@
           "inclusion": {
             "title": "WHAT TO INCLUDE IN THE T&C DOCUMENT",
             "content": "Generally speaking, T&C often address these types of issues: Who is allowed to use the website; the possible payment methods; a declaration that the website owner may change his or her offering in the future; the types of warranties the website owner gives his or her customers; a reference to issues of intellectual property or copyrights, where relevant; the website owner's right to suspend or cancel a member's account; and much much more."
-          },
-          "learnMore": {
-            "content": "To learn more about this, check out our article “Creating a Terms and Conditions Policy.”"
           }
         }
       }
