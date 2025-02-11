@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import Header from "@/frontend/_components/header";
 import Footer from "@/frontend/_components/footer";
-
+import NewsletterBlock from "@/blocks/newsletter-block";
 import RenderBlocks from "@/blocks/RenderBlocks";
 
 export default function UseSafeCertificationPageClient() {
@@ -114,6 +114,7 @@ export default function UseSafeCertificationPageClient() {
           },
         ]}
       />
+      <NewsletterBlock />
       <Footer />
     </div>
   );

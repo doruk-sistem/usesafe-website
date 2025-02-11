@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import Header from "@/frontend/_components/header";
 import Footer from "@/frontend/_components/footer";
 import RenderBlocks from "@/blocks/RenderBlocks";
-
+import NewsletterBlock from "@/blocks/newsletter-block";
 export default function DigitalTwinsPageClient() {
   const t = useTranslations('DigitalTwins');
 
@@ -130,6 +130,7 @@ export default function DigitalTwinsPageClient() {
           },
         ]}
       />
+      <NewsletterBlock />
       <Footer />
     </div>
   );

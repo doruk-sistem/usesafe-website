@@ -10,7 +10,7 @@ import Footer from "@/frontend/_components/footer";
 import ButtonSwitchAnimation from "@/frontend/_components/button-switch-animation";
 
 import RenderBlocks from "@/blocks/RenderBlocks";
-
+import NewsletterBlock from "@/blocks/newsletter-block";
 import { clients } from "@/constants/clients";
 
 export default function DigitalProductPasswordPageClient() {
@@ -142,6 +142,7 @@ export default function DigitalProductPasswordPageClient() {
           },
         ]}
       />
+      <NewsletterBlock />
       <Footer />
     </div>
   );

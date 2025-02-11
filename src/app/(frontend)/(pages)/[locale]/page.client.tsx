@@ -13,6 +13,7 @@ import { Button } from "@/frontend/_components/button";
 import Header from "@/frontend/_components/header";
 import Footer from "@/frontend/_components/footer";
 import ButtonSwitchAnimation from "@/frontend/_components/button-switch-animation";
+import NewsletterBlock from "@/blocks/newsletter-block";
 
 import RenderBlocks from "@/blocks/RenderBlocks";
 
@@ -207,6 +208,7 @@ export default function PageClient() {
           },
         ]}
       />
+      <NewsletterBlock />
       <Footer />
     </div>
   );

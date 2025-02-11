@@ -373,6 +373,17 @@
       }
     ]
   },
+  "Components": {
+    "Newsletter": {
+      "title": "Bültenimize Abone Olun",
+      "description": "En son haberler ve güncellemelerden haberdar olun",
+      "emailPlaceholder": "E-posta adresinizi girin",
+      "subscribe": "Abone Ol",
+      "subscribing": "Abone olunuyor...",
+      "successMessage": "Abone olduğunuz için teşekkürler!",
+      "errorMessage": "Bir hata oluştu. Lütfen tekrar deneyin."
+    }
+  },
   "DemoPage": {
     "title": "Ürün Demosu İsteği",
     "productSection": {
