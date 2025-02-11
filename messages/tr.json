@@ -225,41 +225,41 @@
       }
     },
     "Footer": {
+      "copyright": "© 2025 by UseSafe.",
       "company": {
-        "title": "Şirket",
-        "about": "Hakkımızda",
-        "hosting": "Hosting",
-        "domain": "Alan Adı",
-        "pricing": "Fiyatlandırma"
-      },
-      "customer": {
-        "title": "Müşteri",
-        "client_support": "Müşteri desteği",
-        "help_center": "Yardım merkezi",
-        "system_status": "Sistem durumu",
-        "feedback": "Geri bildirim"
-      },
-      "contact": {
-        "title": "Merhaba deyin",
-        "need_support": "Desteğe mi ihtiyacınız var?",
-        "email": "hi@domain.com",
-        "customer_care": "Müşteri hizmetleri",
-        "phone": "+1 234 567 8910"
-      },
-      "newsletter": {
-        "title": "Bültenimize abone olun",
-        "description": "En son haberler ve güncellemeler için bültenimize abone olun!",
-        "placeholder": "E-posta adresinizi girin",
-        "button_label": "gönder"
+        "title": "ŞİRKET",
+        "usesafe": "UseSafe",
+        "about": "Hakkımızda"
       },
       "legal": {
-        "recaptcha_text": "Bu site reCAPTCHA ile korunmaktadır ve Google",
-        "privacy_policy": "gizlilik politikası",
-        "and": "ve",
-        "terms": "hizmet şartları",
-        "disclaimer": "geçerlidir. Bu web sitesinin standart hüküm ve koşullarının herhangi biriyle aynı fikirde değilseniz, bu web sitesini kullanmamalısınız."
+        "title": "YASAL",
+        "terms-conditions": "Şartlar & Koşullar",
+        "privacy-policy": "Gizlilik Politikası"
       },
-      "company_description": "Lorem ipsum amet adipiscing elit to eiusmod ad tempor incididunt enim."
+      "social": {
+        "title": "Sosyal Medya",
+        "LinkedIn": "LinkedIn",
+        "Facebook": "Facebook",
+        "Instagram": "Instagram",
+        "X": "X"
+      },
+      "newsletter": {
+        "title": "İLETİŞİM",
+        "company": "DORUKSISTEM",
+        "email": "info@usesafe.net",
+        "phone": "Tel: +90-850-532-35-97",
+        "address": {
+          "germany": {
+            "street": "An der Münze 1",
+            "city": "50668 Köln Almanya"
+          },
+          "turkey": {
+            "street": "Fahrettin Kerim Gökay Cd. 74/2",
+            "city": "34730 Kadıköy Türkiye"
+          }
+        }
+      }
+     
     }
   },
   "Slider": {
@@ -280,9 +280,59 @@
       }
     ]
   },
+  "PrivacyPage": {
+    "PrivacyContent": {
+      "title": "Gizlilik Politikası",
+      "lastUpdated": "Son güncelleme: Mart 2024",
+      "sections": {
+        "legalDisclaimer": {
+          "title": "YASAL UYARI",
+          "content": "Bu sayfada sağlanan açıklamalar ve bilgiler, yalnızca kendi Gizlilik Politikası belgenizi nasıl yazacağınıza dair genel ve üst düzey açıklamalar ve bilgilerdir. İşletmeniz ile müşterileriniz ve ziyaretçileriniz arasında hangi özel gizlilik politikalarını belirlemek istediğinizi önceden bilemeyeceğimiz için, bu makaleye yasal tavsiye veya ne yapmanız gerektiğine dair öneriler olarak güvenmemelisiniz. Kendi Gizlilik Politikanızın oluşturulmasında size yardımcı olması için yasal danışmanlık almanızı öneririz."
+        },
+        "basics": {
+          "title": "GİZLİLİK POLİTİKASI - TEMEL BİLGİLER",
+          "content": "Bunu söyledikten sonra, gizlilik politikası, bir web sitesinin ziyaretçilerinin ve müşterilerinin verilerini toplama, kullanma, açıklama, işleme ve yönetme yollarının bazılarını veya tümünü açıklayan bir bildirimdir. Genellikle web sitesinin ziyaretçilerinin veya müşterilerinin gizliliğini koruma taahhüdünü ve gizliliği korumak için uyguladığı farklı mekanizmaların açıklamasını da içerir."
+        },
+        "jurisdiction": {
+          "content": "Farklı yargı bölgelerinin Gizlilik Politikasına dahil edilmesi gereken farklı yasal yükümlülükleri vardır. Faaliyetlerinize ve konumunuza ilişkin ilgili mevzuata uyduğunuzdan emin olmakla sorumlusunuz."
+        },
+        "inclusion": {
+          "title": "GİZLİLİK POLİTİKASINA NELER DAHİL EDİLMELİ",
+          "content": "Genel olarak konuşursak, bir Gizlilik Politikası genellikle şu tür konuları ele alır: web sitesinin topladığı bilgi türleri ve verileri toplama şekli; web sitesinin bu tür bilgileri neden topladığına dair bir açıklama; web sitesinin bilgileri üçüncü taraflarla paylaşma uygulamaları; ziyaretçilerinizin ve müşterilerinizin ilgili gizlilik mevzuatına göre haklarını kullanabilecekleri yollar; küçüklerin veri toplanmasına ilişkin özel uygulamalar; ve çok daha fazlası."
+        }
+      }
+    }
+  },
+  "TermsPage": {
+    "TermsContent": {
+      "title": "Şartlar ve Koşullar",
+      "sections": {
+        "legalDisclaimer": {
+          "title": "YASAL UYARI",
+          "content": "Bu sayfada sağlanan açıklamalar ve bilgiler, yalnızca kendi Şartlar ve Koşullar belgenizi nasıl yazacağınıza dair genel ve üst düzey açıklamalar ve bilgilerdir. İşletmeniz ile müşterileriniz ve ziyaretçileriniz arasında hangi özel şartları belirlemek istediğinizi önceden bilemeyeceğimiz için, bu makaleye yasal tavsiye veya ne yapmanız gerektiğine dair öneriler olarak güvenmemelisiniz. Kendi Şartlar ve Koşullarınızın oluşturulmasında size yardımcı olması için yasal danışmanlık almanızı öneririz."
+        },
+        "basics": {
+          "title": "ŞARTLAR VE KOŞULLAR - TEMEL BİLGİLER",
+          "content": "Bunu söyledikten sonra, Şartlar ve Koşullar ('Ş&K'), bu web sitesinin sahibi olarak sizin tarafınızdan tanımlanan yasal olarak bağlayıcı şartlar bütünüdür. Ş&K, web sitesi ziyaretçilerinin veya müşterilerinizin bu web sitesini ziyaret ederken veya etkileşimde bulunurken gerçekleştirdikleri faaliyetleri düzenleyen yasal sınırları belirler. Ş&K, site ziyaretçileri ile web sitesi sahibi olarak sizin aranızdaki yasal ilişkiyi kurmayı amaçlar."
+        },
+        "specificity": {
+          "content": "Ş&K, her web sitesinin özel ihtiyaçlarına ve doğasına göre tanımlanmalıdır. Örneğin, e-ticaret işlemlerinde müşterilere ürün sunan bir web sitesi, yalnızca bilgi sağlayan bir web sitesinden (blog, açılış sayfası vb.) farklı Ş&K'lara ihtiyaç duyar."
+        },
+        "protection": {
+          "content": "Ş&K, web sitesi sahibi olarak size potansiyel yasal risklerden kendinizi koruma imkanı sağlar, ancak bu yargı yetkisine göre farklılık gösterebilir, bu nedenle yasal risklerden kendinizi korumaya çalışıyorsanız yerel yasal danışmanlık aldığınızdan emin olun."
+        },
+        "inclusion": {
+          "title": "Ş&K BELGESİNE NELER DAHİL EDİLMELİ",
+          "content": "Genel olarak konuşursak, Ş&K genellikle şu tür konuları ele alır: Web sitesini kimin kullanabileceği; olası ödeme yöntemleri; web sitesi sahibinin gelecekte teklifini değiştirebileceğine dair bir beyan; web sitesi sahibinin müşterilerine verdiği garanti türleri; ilgili olduğunda fikri mülkiyet veya telif hakları konularına atıf; web sitesi sahibinin bir üyenin hesabını askıya alma veya iptal etme hakkı; ve çok daha fazlası."
+        }
+      
+      }
+    }
+  },
   "AccordionBlock": {
     "items": [
       {
+
         "title": "Üst Düzey Güvenlik ve Kalite Sağlama",
         "description": "Usesafe sertifikasyonu, ürünlerinizin sıkı güvenlik ve kalite standartlarını karşılamasını sağlamak için kapsamlı testler içerir. Titiz değerlendirme sürecimiz, ürünlerinizin güvenliğini ve güvenilirliğini garanti etmek için kimyasal analiz, fiziksel test ve performans değerlendirmelerini içerir. Bu titiz testleri geçerek, ürünlerinizin tüketici kullanımı için güvenli olduğu kanıtlanır ve kaza, yaralanma veya sağlık tehlikesi riski en aza indirilir."
       },
@@ -419,6 +469,7 @@
       }
     }
   }
+
 
   }
 

@@ -227,41 +227,41 @@
         }
       },
       "Footer": {
+        "copyright": "© 2025 by UseSafe.",
         "company": {
-          "title": "Company",
-          "about": "About",
-          "hosting": "Hosting",
-          "domain": "Domain",
-          "pricing": "Pricing"
-        },
-        "customer": {
-          "title": "Customer",
-          "client_support": "Client support",
-          "help_center": "Help center",
-          "system_status": "System status",
-          "feedback": "Feedback"
-        },
-        "contact": {
-          "title": "Say hello",
-          "need_support": "Need support?",
-          "email": "hi@domain.com",
-          "customer_care": "Customer care",
-          "phone": "+1 234 567 8910"
-        },
-        "newsletter": {
-          "title": "Subscribe our newsletter",
-          "description": "Subscribe our newsletter to get the latest news and updates!",
-          "placeholder": "Enter your email",
-          "button_label": "submit"
+          "title": "COMPANY",
+          "usesafe": "UseSafe",
+          "about": "About"
         },
         "legal": {
-          "recaptcha_text": "This site is protected by reCAPTCHA and the Google",
-          "privacy_policy": "privacy policy",
-          "and": "and",
-          "terms": "terms of service",
-          "disclaimer": "apply. You must not use this website if you disagree with any of these website standard terms and conditions."
+  "title": "LEGAL",
+  "terms-conditions": "Terms & Conditions",
+  "privacy-policy": "Privacy Policy"
+},
+        "social": {
+          "title": "SOCIAL",
+          "LinkedIn": "LinkedIn",
+          "Facebook": "Facebook",
+          "Instagram": "Instagram",
+          "X": "X"
         },
-        "company_description": "Lorem ipsum amet adipiscing elit to eiusmod ad tempor incididunt enim."
+        "newsletter": {
+        "title": "CONTACT",
+        "company": "DORUKSISTEM",
+        "email": "info@usesafe.net",
+        "phone": "Tell: +90-850-532-35-97",
+        "address": {
+          "germany": {
+            "street": "An der Münze 1",
+            "city": "50668 Köln Germany"
+          },
+          "turkey": {
+            "street": "Fahrettin Kerim Gökay Cd. 74/2",
+            "city": "34730 Kadikoy Turkiye"
+          }
+        }
+      }
+        
       }
     },
     "Slider": {
@@ -282,9 +282,57 @@
         }
       ]
     },
+    "PrivacyPage": {
+    "PrivacyContent": {
+      "title": "Privacy Policy",
+      "sections": {
+        "legalDisclaimer": {
+          "title": "A LEGAL DISCLAIMER",
+          "content": "The explanations and information provided on this page are only general and high-level explanations and information on how to write your own document of a Privacy Policy. You should not rely on this article as legal advice or as recommendations regarding what you should actually do, because we cannot know in advance what are the specific privacy policies you wish to establish between your business and your customers and visitors. We recommend that you seek legal advice to help you understand and to assist you in the creation of your own Privacy Policy."
+        },
+        "basics": {
+          "title": "PRIVACY POLICY - THE BASICS",
+          "content": "Having said that, a privacy policy is a statement that discloses some or all of the ways a website collects, uses, discloses, processes, and manages the data of its visitors and customers. It usually also includes a statement regarding the website's commitment to protecting its visitors' or customers' privacy, and an explanation about the different mechanisms the website is implementing in order to protect privacy."
+        },
+        "jurisdiction": {
+          "content": "Different jurisdictions have different legal obligations of what must be included in a Privacy Policy. You are responsible to make sure you are following the relevant legislation to your activities and location."
+        },
+        "inclusion": {
+          "title": "WHAT TO INCLUDE IN THE PRIVACY POLICY",
+          "content": "Generally speaking, a Privacy Policy often addresses these types of issues: the types of information the website is collecting and the manner in which it collects the data; an explanation about why is the website collecting these types of information; what are the website's practices on sharing the information with third parties; ways in which your visitors an customers can exercise their rights according to the relevant privacy legislation; the specific practices regarding minors' data collection; and much much more."
+        }
+      }
+    }
+  },
+    "TermsPage": {
+      "TermsContent": {
+        "title": "Terms & Conditions",
+        "sections": {
+          "legalDisclaimer": {
+            "title": "A LEGAL DISCLAIMER",
+            "content": "The explanations and information provided on this page are only general and high-level explanations and information on how to write your own document of Terms & Conditions. You should not rely on this article as legal advice or as recommendations regarding what you should actually do, because we cannot know in advance what are the specific terms you wish to establish between your business and your customers and visitors. We recommend that you seek legal advice to help you understand and to assist you in the creation of your own Terms & Conditions."
+          },
+          "basics": {
+            "title": "TERMS & CONDITIONS - THE BASICS",
+            "content": "Having said that, Terms and Conditions (T&C) are a set of legally binding terms defined by you, as the owner of this website. The T&C set forth the legal boundaries governing the activities of the website visitors, or your customers, while they visit or engage with this website. The T&C are meant to establish the legal relationship between the site visitors and you as the website owner."
+          },
+          "specificity": {
+            "content": "T&C should be defined according to the specific needs and nature of each website. For example, a website offering products to customers in e-commerce transactions requires T&C that are different from the T&C of a website only providing information (like a blog, a landing page, and so on)."
+          },
+          "protection": {
+            "content": "T&C provide you as the website owner the ability to protect yourself from potential legal exposure, but this may differ from jurisdiction to jurisdiction, so make sure to receive local legal advice if you are trying to protect yourself from legal exposure."
+          },
+          "inclusion": {
+            "title": "WHAT TO INCLUDE IN THE T&C DOCUMENT",
+            "content": "Generally speaking, T&C often address these types of issues: Who is allowed to use the website; the possible payment methods; a declaration that the website owner may change his or her offering in the future; the types of warranties the website owner gives his or her customers; a reference to issues of intellectual property or copyrights, where relevant; the website owner's right to suspend or cancel a member's account; and much much more."
+          }
+        }
+      }
+    },
     "AccordionBlock": {
       "items": [
         {
+
           "title": "Ensuring Top-Tier Safety and Quality",
           "description": "Usesafe certification involves comprehensive testing of your products to ensure they meet stringent safety and quality standards. Our rigorous evaluation process includes chemical analysis, physical testing, and performance assessments to guarantee the safety and reliability of your products. By passing these rigorous tests, your products are proven to be safe for consumer use, minimizing the risk of accidents, injuries, or health hazards."
         },
