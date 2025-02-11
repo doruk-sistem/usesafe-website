@@ -8,7 +8,7 @@ import Header from "@/frontend/_components/header";
 import Footer from "@/frontend/_components/footer";
 import ButtonSwitchAnimation from "@/frontend/_components/button-switch-animation";
 import RenderBlocks from "@/blocks/RenderBlocks";
-
+import NewsletterBlock from "@/blocks/newsletter-block";
 export default function AboutDppPageClient() {
   const t = useTranslations('AboutDpp');
 
@@ -111,6 +111,7 @@ export default function AboutDppPageClient() {
           },
         ]}
       />
+      <NewsletterBlock />
       <Footer />
     </div>
   );

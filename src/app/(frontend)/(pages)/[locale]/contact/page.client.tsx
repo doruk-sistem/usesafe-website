@@ -10,7 +10,7 @@ import Footer from "@/app/(frontend)/_components/footer";
 import Header from "@/app/(frontend)/_components/header";
 import ButtonSwitchAnimation from "@/app/(frontend)/_components/button-switch-animation";
 import RenderBlocks from "@/blocks/RenderBlocks";
-
+import NewsletterBlock from "@/blocks/newsletter-block";
 export default function ContactPageClient() {
   const t = useTranslations('ContactUs');
 
@@ -204,7 +204,7 @@ export default function ContactPageClient() {
           </form>
         </div>
       </main>
-
+      <NewsletterBlock />
       <Footer />
     </div>
   );

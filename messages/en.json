@@ -423,6 +423,17 @@
       }
     ]
   },
+  "Components": {
+    "Newsletter": {
+      "title": "Subscribe to Our Newsletter",
+      "description": "Stay updated with our latest news and updates",
+      "emailPlaceholder": "Enter your email address",
+      "subscribe": "Subscribe",
+      "subscribing": "Subscribing...",
+      "successMessage": "Thank you for subscribing!",
+      "errorMessage": "An error occurred. Please try again."
+    }
+  },
   "DemoPage": {
     "title": "Request Product Demo",
     "productSection": {

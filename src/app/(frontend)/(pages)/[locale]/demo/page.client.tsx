@@ -12,7 +12,7 @@ import ButtonSwitchAnimation from "@/app/(frontend)/_components/button-switch-an
 import Footer from "@/app/(frontend)/_components/footer";
 import Header from "@/app/(frontend)/_components/header";
 import { Button } from "@/app/(frontend)/_components/button";
-
+import NewsletterBlock from "@/blocks/newsletter-block";
 import products from "@/constants/products";
 
 export default function DemoPageClient() {
@@ -241,6 +241,7 @@ export default function DemoPageClient() {
           </div>
         </form>
       </main>
+      <NewsletterBlock />
       <Footer />
     </div>
   );
