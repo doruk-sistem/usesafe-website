@@ -67,6 +67,7 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
+    'privacy-policy': PrivacyPolicy;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -75,6 +76,7 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    'privacy-policy': PrivacyPolicySelect<false> | PrivacyPolicySelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -149,6 +151,49 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "privacy-policy".
+ */
+export interface PrivacyPolicy {
+  id: number;
+  title: string;
+  sections: {
+    legalDisclaimer: {
+      title: string;
+      content: string;
+    };
+    basics: {
+      title: string;
+      content: string;
+    };
+    inclusion: {
+      title: string;
+      content: string;
+    };
+  };
+  translations?: {
+    tr?: {
+      title?: string | null;
+      sections?: {
+        legalDisclaimer?: {
+          title?: string | null;
+          content?: string | null;
+        };
+        basics?: {
+          title?: string | null;
+          content?: string | null;
+        };
+        inclusion?: {
+          title?: string | null;
+          content?: string | null;
+        };
+      };
+    };
+  };
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -161,6 +206,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'media';
         value: number | Media;
+      } | null)
+    | ({
+        relationTo: 'privacy-policy';
+        value: number | PrivacyPolicy;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -236,6 +285,68 @@ export interface MediaSelect<T extends boolean = true> {
   height?: T;
   focalX?: T;
   focalY?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "privacy-policy_select".
+ */
+export interface PrivacyPolicySelect<T extends boolean = true> {
+  title?: T;
+  sections?:
+    | T
+    | {
+        legalDisclaimer?:
+          | T
+          | {
+              title?: T;
+              content?: T;
+            };
+        basics?:
+          | T
+          | {
+              title?: T;
+              content?: T;
+            };
+        inclusion?:
+          | T
+          | {
+              title?: T;
+              content?: T;
+            };
+      };
+  translations?:
+    | T
+    | {
+        tr?:
+          | T
+          | {
+              title?: T;
+              sections?:
+                | T
+                | {
+                    legalDisclaimer?:
+                      | T
+                      | {
+                          title?: T;
+                          content?: T;
+                        };
+                    basics?:
+                      | T
+                      | {
+                          title?: T;
+                          content?: T;
+                        };
+                    inclusion?:
+                      | T
+                      | {
+                          title?: T;
+                          content?: T;
+                        };
+                  };
+            };
+      };
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
