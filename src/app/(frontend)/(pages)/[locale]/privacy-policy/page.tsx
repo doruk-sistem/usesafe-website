@@ -45,7 +45,6 @@ export default async function PrivacyPolicy(props: Props) {
 
     const privacyData = response.docs[0] as unknown as PrivacyPolicyData;
 
-    // locale'e göre doğru içeriği seç
     const content = locale === 'tr' && privacyData.translations?.tr 
       ? privacyData.translations.tr 
       : privacyData;
