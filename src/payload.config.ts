@@ -6,6 +6,7 @@ import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 
 import { PrivacyPolicy } from './collections/privacy-policy'
+import { Slider } from './collections/slider'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 
@@ -22,7 +23,8 @@ export default buildConfig({
   collections: [
     Users, 
     Media,
-    PrivacyPolicy
+    PrivacyPolicy,
+    Slider,
   ],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',

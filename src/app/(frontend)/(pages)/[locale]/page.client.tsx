@@ -1,13 +1,15 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { useTranslations } from 'next-intl';
 import { clients } from "@/constants/clients";
+import type { SliderData } from '@/collections/slider/types';
 import { GiWorld, GiWaterRecycling, GiConversation } from "react-icons/gi";
 import { CiDiscount1 } from "react-icons/ci";
 import { LuFootprints } from "react-icons/lu";
 import { IoQrCodeOutline } from "react-icons/io5";
+import { useLocale } from "next-intl";
 
 import { Button } from "@/frontend/_components/button";
 import Header from "@/frontend/_components/header";
@@ -20,17 +22,51 @@ import RenderBlocks from "@/blocks/RenderBlocks";
 import Counter from "../../_components/counter";
 import { ClientsBlock } from "@/blocks/clients-block/Component";
 
-export default function PageClient() {
+interface PageClientProps {
+  sliderData: SliderData | null;
+}
+
+export default function PageClient({ sliderData }: PageClientProps) {
   const t = useTranslations('HomePage');
+  const locale = useLocale();
+
+  const slides = useMemo(() => {
+    if (!sliderData?.slides) return [];
+
+    if (locale === 'tr' && sliderData?.translations?.tr?.slides) {
+      return sliderData.slides.map((slide, index) => {
+        const translation = sliderData?.translations?.tr?.slides[index];
+        return {
+          image: slide.image,
+          title: translation?.title || slide.title,
+          description: translation?.description || slide.description,
+          buttonText: translation?.buttonText || slide.buttonText,
+          buttonLink: slide.buttonLink
+        };
+      });
+    }
+
+    return sliderData.slides.map(slide => ({
+      image: slide.image,
+      title: slide.title,
+      description: slide.description,
+      buttonText: slide.buttonText,
+      buttonLink: slide.buttonLink
+    }));
+  }, [sliderData, locale]);
+
 
   return (
     <div>
       <Header />
       <RenderBlocks
+        key={`blocks-${locale}`}
         blocks={[
           {
             blockType: "slider",
-            layout: undefined,
+            layout: {
+              slides
+            },
             sectionOptions: {
               footerContent: (
                 <ClientsBlock
@@ -40,8 +76,7 @@ export default function PageClient() {
                 />
               ),
               innerContainer: true,
-              className:
-                "tw-py-5 tw-bg-[url('/images/background-16-9-1.png')] tw-bg-cover tw-bg-center",
+              className: "tw-py-5 tw-bg-[url('/images/background-16-9-1.png')] tw-bg-cover tw-bg-center",
             },
           },
           {

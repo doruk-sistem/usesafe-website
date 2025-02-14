@@ -68,6 +68,7 @@ export interface Config {
     users: User;
     media: Media;
     'privacy-policy': PrivacyPolicy;
+    sliders: Slider;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -77,6 +78,7 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     'privacy-policy': PrivacyPolicySelect<false> | PrivacyPolicySelect<true>;
+    sliders: SlidersSelect<false> | SlidersSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -194,6 +196,38 @@ export interface PrivacyPolicy {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sliders".
+ */
+export interface Slider {
+  id: number;
+  title: string;
+  slides?:
+    | {
+        image: number | Media;
+        title?: string | null;
+        description?: string | null;
+        buttonText?: string | null;
+        buttonLink?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  translations?: {
+    tr?: {
+      slides?:
+        | {
+            title?: string | null;
+            description?: string | null;
+            buttonText?: string | null;
+            id?: string | null;
+          }[]
+        | null;
+    };
+  };
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -210,6 +244,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'privacy-policy';
         value: number | PrivacyPolicy;
+      } | null)
+    | ({
+        relationTo: 'sliders';
+        value: number | Slider;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -342,6 +380,41 @@ export interface PrivacyPolicySelect<T extends boolean = true> {
                           title?: T;
                           content?: T;
                         };
+                  };
+            };
+      };
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sliders_select".
+ */
+export interface SlidersSelect<T extends boolean = true> {
+  title?: T;
+  slides?:
+    | T
+    | {
+        image?: T;
+        title?: T;
+        description?: T;
+        buttonText?: T;
+        buttonLink?: T;
+        id?: T;
+      };
+  translations?:
+    | T
+    | {
+        tr?:
+          | T
+          | {
+              slides?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    buttonText?: T;
+                    id?: T;
                   };
             };
       };
