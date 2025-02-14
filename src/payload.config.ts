@@ -20,6 +20,20 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     }
   },
+  localization: {
+    locales: [
+      {
+        code: 'en',
+        label: 'English',
+      },
+      {
+        code: 'tr',
+        label: 'Türkçe',
+      },
+    ],
+    defaultLocale: 'en',
+    fallback: true,
+  },
   collections: [
     Users, 
     Media,

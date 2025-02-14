@@ -4,7 +4,6 @@ import React, { useMemo } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { useTranslations } from 'next-intl';
 import { clients } from "@/constants/clients";
-import type { SliderData } from '@/collections/slider/types';
 import { GiWorld, GiWaterRecycling, GiConversation } from "react-icons/gi";
 import { CiDiscount1 } from "react-icons/ci";
 import { LuFootprints } from "react-icons/lu";
@@ -22,8 +21,28 @@ import RenderBlocks from "@/blocks/RenderBlocks";
 import Counter from "../../_components/counter";
 import { ClientsBlock } from "@/blocks/clients-block/Component";
 
+interface SlideContent {
+  title: string;
+  description: string;
+  buttonText?: string;
+  buttonLink?: string;
+  image: {
+    url: string;
+    alt: string;
+  };
+}
+
+interface SliderData {
+  slides: SlideContent[];
+  translations?: {
+    tr?: {
+      slides: Omit<SlideContent, 'image' | 'buttonLink'>[];
+    };
+  };
+}
+
 interface PageClientProps {
-  sliderData: SliderData | null;
+  sliderData?: SliderData;
 }
 
 export default function PageClient({ sliderData }: PageClientProps) {
@@ -35,7 +54,7 @@ export default function PageClient({ sliderData }: PageClientProps) {
 
     if (locale === 'tr' && sliderData?.translations?.tr?.slides) {
       return sliderData.slides.map((slide, index) => {
-        const translation = sliderData?.translations?.tr?.slides[index];
+        const translation = sliderData?.translations?.tr?.slides?.[index];
         return {
           image: slide.image,
           title: translation?.title || slide.title,
@@ -54,6 +73,7 @@ export default function PageClient({ sliderData }: PageClientProps) {
       buttonLink: slide.buttonLink
     }));
   }, [sliderData, locale]);
+
 
 
   return (
