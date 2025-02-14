@@ -7,6 +7,7 @@ import { fileURLToPath } from 'url'
 import { PrivacyPolicy } from './collections/privacy-policy'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
+import { Blogs } from './collections/Blog' 
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -21,7 +22,8 @@ export default buildConfig({
   collections: [
     Users, 
     Media,
-    PrivacyPolicy
+    PrivacyPolicy,
+    Blogs 
   ],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
