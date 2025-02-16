@@ -4,7 +4,7 @@ import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
-
+import { partners } from './collections/partners'
 import { PrivacyPolicy } from './collections/privacy-policy'
 import { Slider } from './collections/slider'
 import { Users } from './collections/Users'
@@ -39,6 +39,7 @@ export default buildConfig({
     Media,
     PrivacyPolicy,
     Slider,
+    partners,
   ],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',

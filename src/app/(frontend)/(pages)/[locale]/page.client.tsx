@@ -20,6 +20,7 @@ import RenderBlocks from "@/blocks/RenderBlocks";
 
 import Counter from "../../_components/counter";
 import { ClientsBlock } from "@/blocks/clients-block/Component";
+import { PartnerContent, PartnersData } from "@/collections/partners/types";
 
 interface SlideContent {
   title: string;
@@ -41,11 +42,13 @@ interface SliderData {
   };
 }
 
+
 interface PageClientProps {
   sliderData?: SliderData;
+  partnersData?: PartnersData;
 }
 
-export default function PageClient({ sliderData }: PageClientProps) {
+export default function PageClient({ sliderData, partnersData }: PageClientProps) {
   const t = useTranslations('HomePage');
   const locale = useLocale();
 
@@ -74,7 +77,17 @@ export default function PageClient({ sliderData }: PageClientProps) {
     }));
   }, [sliderData, locale]);
 
+  const isPartnerContent = (client: any): client is PartnerContent => {
+    return 'logo' in client;
+  };
 
+  const allClients = useMemo(() => {
+    const partnersList = partnersData?.partners || [];
+    return [...clients, ...partnersList].map(client => ({
+      name: client.name,
+      imageSrc: isPartnerContent(client) ? client.logo.url : client.imageSrc
+    }));
+  }, [partnersData]);
 
   return (
     <div>
@@ -90,10 +103,11 @@ export default function PageClient({ sliderData }: PageClientProps) {
             sectionOptions: {
               footerContent: (
                 <ClientsBlock
-                  clients={clients}
-                  type="slick"
-                  gradientColor="transparent"
-                />
+                clients={allClients}
+                type="slick"
+                gradientColor="transparent"
+              />
+              
               ),
               innerContainer: true,
               className: "tw-py-5 tw-bg-[url('/images/background-16-9-1.png')] tw-bg-cover tw-bg-center",
