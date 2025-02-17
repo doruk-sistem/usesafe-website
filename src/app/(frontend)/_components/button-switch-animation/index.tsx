@@ -1,5 +1,6 @@
-import { Button, ButtonProps } from "../button";
 import { cn } from "@/utils/cn";
+
+import { Button, ButtonProps } from "../button";
 
 interface ButtonSwitchAnimationProps extends ButtonProps {
   children: React.ReactNode;
@@ -18,7 +19,7 @@ export default function ButtonSwitchAnimation({
       {...props}
       className={cn(
         "btn btn-large btn-box-shadow btn-hover-animation-switch !tw-transition-all",
-        className
+        className,
       )}
     >
       <span>

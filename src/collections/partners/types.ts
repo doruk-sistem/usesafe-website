@@ -12,4 +12,3 @@ export interface PartnerContent {
 export interface PartnersData {
   partners: PartnerContent[];
 }
-

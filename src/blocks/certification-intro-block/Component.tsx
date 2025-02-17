@@ -40,16 +40,16 @@ export function CertificationIntroBlock({
         <div className="container tw-mt-8">
           <div className="row justify-content-center">
             <div className="col-lg-8 col-md-10">
-              <img 
-                src={backgroundImage} 
-                alt="Background" 
+              <img
+                src={backgroundImage}
+                alt="Background"
                 className="tw-w-full tw-h-auto tw-rounded-lg"
               />
             </div>
           </div>
         </div>
       </div>
-      
+
       {contentFooter}
     </>
   );

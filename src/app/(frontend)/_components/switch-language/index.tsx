@@ -1,10 +1,10 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
-import { MdLanguage } from "react-icons/md";
-import { IoChevronDown } from "react-icons/io5";
 import { useLocale } from "next-intl";
+import React, { useState } from "react";
+import { IoChevronDown } from "react-icons/io5";
+import { MdLanguage } from "react-icons/md";
 
 import { Button, ButtonProps } from "../button";
 
