@@ -10,18 +10,20 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  {
+    ignores: [
+      "**/node_modules/**",
+      "**/.next/**",
+      "**/build/**",
+      "**/dist/**",
+      "**/src/app/(payload)/**",
+      "**/.git/**",
+      "**/*.log",
+    ],
+  },
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     files: ["**/*.ts", "**/*.tsx"],
-    ignorePatterns: [
-      "node_modules/**",
-      ".next/**",
-      "build/**",
-      "dist/**",
-      "src/app/(payload)/**",
-      ".git/**",
-      "*.log",
-    ],
     rules: {
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/no-unused-vars": [
