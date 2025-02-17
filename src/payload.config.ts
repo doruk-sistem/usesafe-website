@@ -5,6 +5,7 @@ import { postgresAdapter } from "@payloadcms/db-postgres";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { buildConfig } from "payload";
 
+import { Blogs } from "./collections/Blog/Blog";
 import { Media } from "./collections/Media";
 import { partners } from "./collections/partners";
 import { PrivacyPolicy } from "./collections/privacy-policy";
@@ -38,6 +39,7 @@ export default buildConfig({
     Users,
     Media,
     PrivacyPolicy,
+    Blogs,
     Slider,
     partners,
   ],
