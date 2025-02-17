@@ -1,10 +1,10 @@
 import React from "react";
+
+import ErrorComponent from "@/app/(frontend)/_components/ErrorComponent";
 import Footer from "@/app/(frontend)/_components/footer";
 import Header from "@/app/(frontend)/_components/header";
 import { initPayload } from "@/app/api/utils/getPayload";
 import type { PrivacyPolicyData } from "@/collections/privacy-policy";
-import ErrorComponent from "@/app/(frontend)/_components/ErrorComponent";
-    
 
 type Props = {
   params: {
@@ -12,7 +12,7 @@ type Props = {
   };
 };
 
-export default async function PrivacyPolicy({ params }: Props) { 
+export default async function PrivacyPolicy({ params }: Props) {
   try {
     const locale = params.locale;
     const payload = await initPayload();
@@ -22,17 +22,15 @@ export default async function PrivacyPolicy({ params }: Props) {
       limit: 1,
     });
 
-   
     if (!response.docs || response.docs.length === 0) {
       return <ErrorComponent message="Privacy Policy content has not been added yet." />;
     }
 
     const privacyData = response.docs[0] as PrivacyPolicyData;
 
-    const content =
-      locale === "tr" && privacyData.translations?.tr
-        ? privacyData.translations.tr
-        : privacyData;
+    const content = locale === "tr" && privacyData.translations?.tr
+      ? privacyData.translations.tr
+      : privacyData;
 
     const { title, sections } = content;
     const { legalDisclaimer, basics, inclusion } = sections;
@@ -50,7 +48,7 @@ export default async function PrivacyPolicy({ params }: Props) {
                   </h1>
 
                   <div>
-                    {[ 
+                    {[
                       { section: legalDisclaimer, title: "Legal Disclaimer" },
                       { section: basics, title: "Basics" },
                       { section: inclusion, title: "Inclusion" },
@@ -72,9 +70,9 @@ export default async function PrivacyPolicy({ params }: Props) {
       </>
     );
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error("Privacy Policy error:", error);
 
-    
     return <ErrorComponent message="Could not load Privacy Policy content. Please try again later." />;
   }
 }

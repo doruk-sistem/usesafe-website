@@ -1,20 +1,19 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import { useTranslations } from 'next-intl';
 
-import { Button } from "@/frontend/_components/button";
-import Header from "@/frontend/_components/header";
-import Footer from "@/frontend/_components/footer";
-import ButtonSwitchAnimation from "@/frontend/_components/button-switch-animation";
-
-import RenderBlocks from "@/blocks/RenderBlocks";
 import NewsletterBlock from "@/blocks/newsletter-block";
+import RenderBlocks from "@/blocks/RenderBlocks";
 import { clients } from "@/constants/clients";
+import { Button } from "@/frontend/_components/button";
+import ButtonSwitchAnimation from "@/frontend/_components/button-switch-animation";
+import Footer from "@/frontend/_components/footer";
+import Header from "@/frontend/_components/header";
 
 export default function DigitalProductPasswordPageClient() {
-  const t = useTranslations('DigitalProductPassport');
+  const t = useTranslations("DigitalProductPassport");
 
   return (
     <div>
@@ -24,7 +23,7 @@ export default function DigitalProductPasswordPageClient() {
           {
             blockType: "pageTitle",
             layout: {
-              title: t('page_title'),
+              title: t("page_title"),
               backgroundImage: "/images/product-security.webp",
             },
             sectionOptions: {
@@ -38,11 +37,11 @@ export default function DigitalProductPasswordPageClient() {
               type: "slick",
             },
             sectionOptions: {
-              description: t('trusted_brands'),
+              description: t("trusted_brands"),
               footerContent: (
                 <div className="tw-flex tw-justify-center tw-items-center tw-py-0">
                   <Button variant="outline" className="tw-rounded-full">
-                    {t('view_all_clients')}
+                    {t("view_all_clients")}
                     <HiArrowNarrowRight className="tw-ml-2" />
                   </Button>
                 </div>
@@ -52,8 +51,8 @@ export default function DigitalProductPasswordPageClient() {
           {
             blockType: "backgroundVideo",
             layout: {
-              title: t('video_section.title'),
-              description: t('video_section.description'),
+              title: t("video_section.title"),
+              description: t("video_section.description"),
               video: {
                 src: "/videos/product-security-network.mp4",
                 poster: "/images/product-security.webp",
@@ -66,8 +65,8 @@ export default function DigitalProductPasswordPageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title: t('experienced_provider.title'),
-              description: t('experienced_provider.description'),
+              title: t("experienced_provider.title"),
+              description: t("experienced_provider.description"),
               image: {
                 src: "/images/remy-testimonial-u-label.webp",
                 alt: "Demo Finance 01",
@@ -81,7 +80,7 @@ export default function DigitalProductPasswordPageClient() {
                   uppercase
                   icon={<HiArrowNarrowRight />}
                 >
-                  {t('experienced_provider.button')}
+                  {t("experienced_provider.button")}
                 </ButtonSwitchAnimation>
               ),
             },
@@ -92,8 +91,8 @@ export default function DigitalProductPasswordPageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title: t('standards.title'),
-              description: t('standards.description'),
+              title: t("standards.title"),
+              description: t("standards.description"),
               image: {
                 src: "/images/cirpass-logo.webp",
                 width: 580,
@@ -109,8 +108,8 @@ export default function DigitalProductPasswordPageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title: t('qr_solution.title'),
-              description: t('qr_solution.description'),
+              title: t("qr_solution.title"),
+              description: t("qr_solution.description"),
               image: {
                 src: "/images/visual-2a_forjitter-3.webp",
                 alt: "Demo Finance 01",
@@ -124,7 +123,7 @@ export default function DigitalProductPasswordPageClient() {
                   uppercase
                   icon={<HiArrowNarrowRight />}
                 >
-                  {t('qr_solution.button')}
+                  {t("qr_solution.button")}
                 </ButtonSwitchAnimation>
               ),
             },

@@ -1,54 +1,114 @@
 "use client";
 
-import React from "react";
-import { HiArrowNarrowRight } from "react-icons/hi";
-import { useTranslations } from 'next-intl';
-import { clients } from "@/constants/clients";
-import { GiWorld, GiWaterRecycling, GiConversation } from "react-icons/gi";
+import { useTranslations , useLocale } from "next-intl";
+import React, { useMemo } from "react";
 import { CiDiscount1 } from "react-icons/ci";
-import { LuFootprints } from "react-icons/lu";
+import { GiWorld, GiWaterRecycling, GiConversation } from "react-icons/gi";
+import { HiArrowNarrowRight } from "react-icons/hi";
 import { IoQrCodeOutline } from "react-icons/io5";
+import { LuFootprints } from "react-icons/lu";
 
-import { Button } from "@/frontend/_components/button";
-import Header from "@/frontend/_components/header";
-import Footer from "@/frontend/_components/footer";
-import ButtonSwitchAnimation from "@/frontend/_components/button-switch-animation";
+import { ClientsBlock } from "@/blocks/clients-block/Component";
 import NewsletterBlock from "@/blocks/newsletter-block";
-
 import RenderBlocks from "@/blocks/RenderBlocks";
+import { PartnersData } from "@/collections/partners/types";
+import { Button } from "@/frontend/_components/button";
+import ButtonSwitchAnimation from "@/frontend/_components/button-switch-animation";
+import Footer from "@/frontend/_components/footer";
+import Header from "@/frontend/_components/header";
 
 import Counter from "../../_components/counter";
-import { ClientsBlock } from "@/blocks/clients-block/Component";
 
-export default function PageClient() {
-  const t = useTranslations('HomePage');
+interface SlideContent {
+  title: string;
+  description: string;
+  buttonText?: string;
+  buttonLink?: string;
+  image: {
+    url: string;
+    alt: string;
+  };
+}
+
+interface SliderData {
+  slides: SlideContent[];
+  translations?: {
+    tr?: {
+      slides: Omit<SlideContent, "image" | "buttonLink">[];
+    };
+  };
+}
+
+interface PageClientProps {
+  sliderData?: SliderData;
+  partnersData?: PartnersData;
+}
+
+export default function PageClient({ sliderData, partnersData }: PageClientProps) {
+  const t = useTranslations("HomePage");
+  const locale = useLocale();
+
+  const slides = useMemo(() => {
+    if (!sliderData?.slides) return [];
+
+    if (locale === "tr" && sliderData?.translations?.tr?.slides) {
+      return sliderData.slides.map((slide, index) => {
+        const translation = sliderData?.translations?.tr?.slides?.[index];
+        return {
+          image: slide.image,
+          title: translation?.title || slide.title,
+          description: translation?.description || slide.description,
+          buttonText: translation?.buttonText || slide.buttonText,
+          buttonLink: slide.buttonLink,
+        };
+      });
+    }
+
+    return sliderData.slides.map((slide) => ({
+      image: slide.image,
+      title: slide.title,
+      description: slide.description,
+      buttonText: slide.buttonText,
+      buttonLink: slide.buttonLink,
+    }));
+  }, [sliderData, locale]);
+
+  const allClients = useMemo(() => {
+    return (partnersData?.partners || []).map((partner) => ({
+      name: partner.name,
+      imageSrc: partner.logo.url,
+    }));
+  }, [partnersData]);
 
   return (
     <div>
       <Header />
       <RenderBlocks
+        key={`blocks-${locale}`}
         blocks={[
           {
             blockType: "slider",
-            layout: undefined,
+            layout: {
+              slides,
+            },
             sectionOptions: {
               footerContent: (
                 <ClientsBlock
-                  clients={clients}
-                  type="slick"
-                  gradientColor="transparent"
-                />
+                clients={allClients}
+                type="slick"
+                gradientColor="transparent"
+              />
+
               ),
               innerContainer: true,
-              className:
-                "tw-py-5 tw-bg-[url('/images/background-16-9-1.png')] tw-bg-cover tw-bg-center",
+              className: "tw-py-5 tw-bg-[url('/images/background-16-9-1.png')] tw-bg-cover tw-bg-center",
             },
           },
           {
             blockType: "contentWithImage",
             layout: {
-              title: t('revolutionize_title'),
-              description: t('revolutionize_description'),
+              title: t("revolutionize_title"),
+              description: t("revolutionize_description"),
               image: {
                 src: "/images/safe_sopping_doruksistem_usesafe_3.webp",
                 alt: "Demo Finance 01",
@@ -62,7 +122,7 @@ export default function PageClient() {
                   uppercase
                   icon={<HiArrowNarrowRight />}
                 >
-                  {t('join_us')}
+                  {t("join_us")}
                 </ButtonSwitchAnimation>
               ),
             },
@@ -73,8 +133,8 @@ export default function PageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title: t('trusted_brands_title'),
-              description: t('trusted_brands_description'),
+              title: t("trusted_brands_title"),
+              description: t("trusted_brands_description"),
               image: {
                 src: "/images/safe_sopping_doruksistem_usesafe.webp",
                 alt: "Demo Finance 01",
@@ -89,12 +149,12 @@ export default function PageClient() {
                     <Counter
                       value={2}
                       suffix="M"
-                      description={t('certified_products')}
+                      description={t("certified_products")}
                     />
                     <Counter
                       value={3}
                       suffix="K"
-                      description={t('certified_partner')}
+                      description={t("certified_partner")}
                     />
                   </div>
                   <ButtonSwitchAnimation
@@ -102,7 +162,7 @@ export default function PageClient() {
                     uppercase
                     icon={<HiArrowNarrowRight />}
                   >
-                    {t('learn_more')}
+                    {t("learn_more")}
                   </ButtonSwitchAnimation>
                 </div>
               ),
@@ -124,10 +184,10 @@ export default function PageClient() {
             sectionOptions: {
               innerContainer: true,
               title: "Digital Product Passport",
-              description: t('dpp_description'),
+              description: t("dpp_description"),
               footerContent: (
                 <div className="tw-flex tw-justify-center tw-items-center">
-                  <Button>{t('try_free')}</Button>
+                  <Button>{t("try_free")}</Button>
                 </div>
               ),
               className: "tw-bg-gradient-to-b tw-from-gray-100 tw-to-white",
@@ -138,36 +198,36 @@ export default function PageClient() {
             layout: {
               items: [
                 {
-                  description: t('counter_section.employees'),
+                  description: t("counter_section.employees"),
                   value: 25,
                 },
                 {
-                  description: t('counter_section.core_teams'),
+                  description: t("counter_section.core_teams"),
                   value: 5,
                 },
                 {
-                  description: t('counter_section.expected_partners'),
+                  description: t("counter_section.expected_partners"),
                   value: 1500,
                 },
                 {
-                  description: t('counter_section.expected_products'),
+                  description: t("counter_section.expected_products"),
                   value: 15,
                 },
               ],
             },
             sectionOptions: {
-              title: t('counter_section.title'),
+              title: t("counter_section.title"),
               innerContainer: true,
             },
           },
           {
             blockType: "accordion",
             layout: {
-              title: t('why_usesafe.approach_title'),
-              description: t('why_usesafe.approach_description'),
+              title: t("why_usesafe.approach_title"),
+              description: t("why_usesafe.approach_description"),
             },
             sectionOptions: {
-              title: t('why_usesafe.title'),
+              title: t("why_usesafe.title"),
               innerContainer: true,
             },
           },
@@ -177,34 +237,34 @@ export default function PageClient() {
               items: [
                 {
                   icon: <GiWorld />,
-                  description: t('IconList.items.security.description')
+                  description: t("IconList.items.security.description"),
                 },
                 {
                   icon: <CiDiscount1 />,
-                  description: t('IconList.items.usability.description')
+                  description: t("IconList.items.usability.description"),
                 },
                 {
                   icon: <GiWaterRecycling />,
-                  description: t('IconList.items.quality.description')
+                  description: t("IconList.items.quality.description"),
                 },
                 {
                   icon: <LuFootprints />,
-                  description: t('IconList.items.speed.description')
+                  description: t("IconList.items.speed.description"),
                 },
                 {
                   icon: <IoQrCodeOutline />,
-                  description: t('IconList.items.privacy.description')
+                  description: t("IconList.items.privacy.description"),
                 },
                 {
                   icon: <GiConversation />,
-                  description: t('IconList.items.support.description')
-                }
-              ]
+                  description: t("IconList.items.support.description"),
+                },
+              ],
             },
             sectionOptions: {
               innerContainer: true,
-              className: "tw-bg-gray-50"
-            }
+              className: "tw-bg-gray-50",
+            },
           },
         ]}
       />

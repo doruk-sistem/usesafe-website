@@ -1,162 +1,162 @@
-import { CollectionConfig } from 'payload';
+import { CollectionConfig } from "payload";
 
 const PrivacyPolicy: CollectionConfig = {
-  slug: 'privacy-policy',
+  slug: "privacy-policy",
   access: {
     read: () => true,
   },
   admin: {
-    useAsTitle: 'title',
-    defaultColumns: ['title'],
+    useAsTitle: "title",
+    defaultColumns: ["title"],
   },
   fields: [
     {
-      name: 'title',
-      type: 'text',
+      name: "title",
+      type: "text",
       required: true,
-      label: 'Privacy Policy Title (English)'
+      label: "Privacy Policy Title (English)",
     },
     {
-      name: 'sections',
-      type: 'group',
-      label: 'Privacy Policy Sections (English)',
+      name: "sections",
+      type: "group",
+      label: "Privacy Policy Sections (English)",
       fields: [
         {
-          name: 'legalDisclaimer',
-          type: 'group',
-          label: 'Legal Disclaimer',
+          name: "legalDisclaimer",
+          type: "group",
+          label: "Legal Disclaimer",
           fields: [
             {
-              name: 'title',
-              type: 'text',
+              name: "title",
+              type: "text",
               required: true,
-              label: 'Section Title'
+              label: "Section Title",
             },
             {
-              name: 'content',
-              type: 'textarea',
+              name: "content",
+              type: "textarea",
               required: true,
-              label: 'Section Content'
-            }
-          ]
+              label: "Section Content",
+            },
+          ],
         },
         {
-          name: 'basics',
-          type: 'group',
-          label: 'Basics',
+          name: "basics",
+          type: "group",
+          label: "Basics",
           fields: [
             {
-              name: 'title',
-              type: 'text',
+              name: "title",
+              type: "text",
               required: true,
-              label: 'Section Title'
+              label: "Section Title",
             },
             {
-              name: 'content',
-              type: 'textarea',
+              name: "content",
+              type: "textarea",
               required: true,
-              label: 'Section Content'
-            }
-          ]
+              label: "Section Content",
+            },
+          ],
         },
         {
-          name: 'inclusion',
-          type: 'group',
-          label: 'Inclusion',
+          name: "inclusion",
+          type: "group",
+          label: "Inclusion",
           fields: [
             {
-              name: 'title',
-              type: 'text',
+              name: "title",
+              type: "text",
               required: true,
-              label: 'Section Title'
+              label: "Section Title",
             },
             {
-              name: 'content',
-              type: 'textarea',
+              name: "content",
+              type: "textarea",
               required: true,
-              label: 'Section Content'
-            }
-          ]
-        }
-      ]
+              label: "Section Content",
+            },
+          ],
+        },
+      ],
     },
     {
-      name: 'translations',
-      type: 'group',
+      name: "translations",
+      type: "group",
       fields: [
         {
-          name: 'tr',
-          type: 'group',
-          label: 'Turkish Translation',
+          name: "tr",
+          type: "group",
+          label: "Turkish Translation",
           fields: [
             {
-              name: 'title',
-              type: 'text',
-              label: 'Privacy Policy Title (Turkish)'
+              name: "title",
+              type: "text",
+              label: "Privacy Policy Title (Turkish)",
             },
             {
-              name: 'sections',
-              type: 'group',
-              label: 'Privacy Policy Sections (Turkish)',
+              name: "sections",
+              type: "group",
+              label: "Privacy Policy Sections (Turkish)",
               fields: [
                 {
-                  name: 'legalDisclaimer',
-                  type: 'group',
-                  label: 'Legal Disclaimer',
+                  name: "legalDisclaimer",
+                  type: "group",
+                  label: "Legal Disclaimer",
                   fields: [
                     {
-                      name: 'title',
-                      type: 'text',
-                      label: 'Section Title'
+                      name: "title",
+                      type: "text",
+                      label: "Section Title",
                     },
                     {
-                      name: 'content',
-                      type: 'textarea',
-                      label: 'Section Content'
-                    }
-                  ]
+                      name: "content",
+                      type: "textarea",
+                      label: "Section Content",
+                    },
+                  ],
                 },
                 {
-                  name: 'basics',
-                  type: 'group',
-                  label: 'Basics',
+                  name: "basics",
+                  type: "group",
+                  label: "Basics",
                   fields: [
                     {
-                      name: 'title',
-                      type: 'text',
-                      label: 'Section Title'
+                      name: "title",
+                      type: "text",
+                      label: "Section Title",
                     },
                     {
-                      name: 'content',
-                      type: 'textarea',
-                      label: 'Section Content'
-                    }
-                  ]
+                      name: "content",
+                      type: "textarea",
+                      label: "Section Content",
+                    },
+                  ],
                 },
                 {
-                  name: 'inclusion',
-                  type: 'group',
-                  label: 'Inclusion',
+                  name: "inclusion",
+                  type: "group",
+                  label: "Inclusion",
                   fields: [
                     {
-                      name: 'title',
-                      type: 'text',
-                      label: 'Section Title'
+                      name: "title",
+                      type: "text",
+                      label: "Section Title",
                     },
                     {
-                      name: 'content',
-                      type: 'textarea',
-                      label: 'Section Content'
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+                      name: "content",
+                      type: "textarea",
+                      label: "Section Content",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
 };
 
 export { PrivacyPolicy };
