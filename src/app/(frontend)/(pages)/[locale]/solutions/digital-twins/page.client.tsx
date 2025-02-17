@@ -1,15 +1,15 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import React from "react";
 import { BsShieldCheck, BsBoxSeam, BsQrCode } from "react-icons/bs";
-import { useTranslations } from 'next-intl';
 
-import Header from "@/frontend/_components/header";
-import Footer from "@/frontend/_components/footer";
-import RenderBlocks from "@/blocks/RenderBlocks";
 import NewsletterBlock from "@/blocks/newsletter-block";
+import RenderBlocks from "@/blocks/RenderBlocks";
+import Footer from "@/frontend/_components/footer";
+import Header from "@/frontend/_components/header";
 export default function DigitalTwinsPageClient() {
-  const t = useTranslations('DigitalTwins');
+  const t = useTranslations("DigitalTwins");
 
   return (
     <div>
@@ -19,7 +19,7 @@ export default function DigitalTwinsPageClient() {
           {
             blockType: "pageTitle",
             layout: {
-              title: t('page_title'),
+              title: t("page_title"),
               backgroundImage: "/images/blockchain-16-9-1.webp",
               downSectionId: "discover",
             },
@@ -30,8 +30,8 @@ export default function DigitalTwinsPageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title: t('discover.title'),
-              description: t('discover.description'),
+              title: t("discover.title"),
+              description: t("discover.description"),
               image: {
                 src: "/images/blockchain-16-9-2.webp",
                 alt: "Digital Twin Technology",
@@ -45,33 +45,33 @@ export default function DigitalTwinsPageClient() {
                     <div>
                       <h3 className="tw-text-left tw-font-medium tw-mb-0 tw-text-2xl tw-text-black">
                         <BsBoxSeam className="tw-w-8 tw-h-8 tw-text-primary tw-mr-4" />
-                        {t('discover.features.virtual_experience.title')}
+                        {t("discover.features.virtual_experience.title")}
                       </h3>
                     </div>
                     <p className="tw-text-left tw-text-base tw-text-gray-600">
-                      {t('discover.features.virtual_experience.description')}
+                      {t("discover.features.virtual_experience.description")}
                     </p>
                   </div>
                   <div className="tw-flex tw-flex-col tw-gap-2">
                     <div>
                       <h3 className="tw-text-left tw-font-medium tw-mb-0 tw-text-2xl tw-text-black">
                         <BsQrCode className="tw-w-8 tw-h-8 tw-text-primary tw-mr-4" />
-                        {t('discover.features.traceability.title')}
+                        {t("discover.features.traceability.title")}
                       </h3>
                     </div>
                     <p className="tw-text-left tw-text-base tw-text-gray-600">
-                      {t('discover.features.traceability.description')}
+                      {t("discover.features.traceability.description")}
                     </p>
                   </div>
                   <div className="tw-flex tw-flex-col tw-gap-2">
                     <div>
                       <h3 className="tw-text-left tw-font-medium tw-mb-0 tw-text-2xl tw-text-black">
                         <BsShieldCheck className="tw-w-8 tw-h-8 tw-text-primary tw-mr-4" />
-                        {t('discover.features.protection.title')}
+                        {t("discover.features.protection.title")}
                       </h3>
                     </div>
                     <p className="tw-text-left tw-text-base tw-text-gray-600">
-                      {t('discover.features.protection.description')}
+                      {t("discover.features.protection.description")}
                     </p>
                   </div>
                 </div>
@@ -85,8 +85,8 @@ export default function DigitalTwinsPageClient() {
           {
             blockType: "contentWithImage",
             layout: {
-              title: t('key_benefits.title'),
-              description: t('key_benefits.description'),
+              title: t("key_benefits.title"),
+              description: t("key_benefits.description"),
               image: {
                 src: "/images/digital-twim-1-1-1.webp",
                 width: 580,
@@ -101,7 +101,7 @@ export default function DigitalTwinsPageClient() {
                       <BsBoxSeam className="tw-w-6 tw-h-6 tw-text-primary" />
                     </div>
                     <p className="tw-text-gray-700 tw-text-lg tw-mb-0">
-                      {t('key_benefits.benefits.virtual_experience')}
+                      {t("key_benefits.benefits.virtual_experience")}
                     </p>
                   </div>
                   <div className="tw-flex tw-items-center tw-gap-3">
@@ -109,7 +109,7 @@ export default function DigitalTwinsPageClient() {
                       <BsQrCode className="tw-w-6 tw-h-6 tw-text-primary" />
                     </div>
                     <p className="tw-text-gray-700 tw-text-lg tw-mb-0">
-                      {t('key_benefits.benefits.traceability')}
+                      {t("key_benefits.benefits.traceability")}
                     </p>
                   </div>
                   <div className="tw-flex tw-items-center tw-gap-3">
@@ -117,7 +117,7 @@ export default function DigitalTwinsPageClient() {
                       <BsShieldCheck className="tw-w-6 tw-h-6 tw-text-primary" />
                     </div>
                     <p className="tw-text-gray-700 tw-text-lg tw-mb-0">
-                      {t('key_benefits.benefits.protection')}
+                      {t("key_benefits.benefits.protection")}
                     </p>
                   </div>
                 </div>

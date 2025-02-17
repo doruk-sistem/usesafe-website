@@ -51,7 +51,7 @@ export default function NavLink({
           "tw-flex tw-items-center tw-gap-1 tw-text-black tw-transition-colors tw-duration-200",
           isMobile
             ? "!tw-px-6 tw-py-2 tw-text-xl tw-w-full tw-justify-between"
-            : "!tw-px-3 primary-font !tw-text-base"
+            : "!tw-px-3 primary-font !tw-text-base",
         )}
       >
         {label}

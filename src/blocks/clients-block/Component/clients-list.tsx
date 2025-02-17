@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+
 import { ClientsBlockProps } from ".";
 
 interface ClientsListProps extends ClientsBlockProps {

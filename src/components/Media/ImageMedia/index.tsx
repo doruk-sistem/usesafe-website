@@ -1,15 +1,15 @@
 "use client";
 
 import type { StaticImageData } from "next/image";
-
 import NextImage from "next/image";
 import React from "react";
+
 import { cn } from "@/utils/cn";
+import { getClientSideURL } from "@/utils/get-url";
 
 import type { MediaProps } from "../types";
 
 // import { cssVariables } from "@/cssVariables";
-import { getClientSideURL } from "@/utils/get-url";
 
 const cssVariables = {
   breakpoints: {
@@ -50,7 +50,6 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
   if (!src && resource && typeof resource === "object") {
     const {
       alt: altFromResource,
-      filename: fullFilename,
       height: fullHeight,
       url,
       width: fullWidth,
