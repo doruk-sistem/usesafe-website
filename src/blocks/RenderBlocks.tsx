@@ -1,7 +1,5 @@
 import React, { ComponentProps, Fragment } from "react";
-
 import Section, { type SectionProps } from "@/components/Section";
-
 import { AccordionBlock } from "./accordion-block/Component";
 import { MediaBlock } from "./media-block/Component";
 import { PricingBlock } from "./pricing-block";
@@ -14,7 +12,6 @@ import BackgroundVideoBlock from "./background-video/Component";
 import { ContactFormBlock } from "./contact-form-block/Component";
 import { IconListBlock } from "./icon-list-block/Component";
 import { CertificationIntroBlock } from "./certification-intro-block/Component";
-
 
 const blockComponents = {
   accordion: AccordionBlock,
@@ -29,11 +26,10 @@ const blockComponents = {
   contactForm: ContactFormBlock,
   iconList: IconListBlock,
   certificationIntro: CertificationIntroBlock,
-};
+} as const;
 
 type BlockType = keyof typeof blockComponents;
 
-// Extract props type for each block type
 type BlockTypeProps = {
   [K in BlockType]: {
     blockType: K;
@@ -42,7 +38,6 @@ type BlockTypeProps = {
   };
 };
 
-// Create a union type for all block types
 type Block = BlockTypeProps[BlockType];
 
 interface RenderBlocksProps {
@@ -58,12 +53,11 @@ export default function RenderBlocks({ blocks }: RenderBlocksProps) {
     <Fragment>
       {blocks.map((block, index) => {
         const { blockType, layout, sectionOptions } = block;
-
         const Component = blockComponents[blockType];
 
         return (
           <Section key={index} {...sectionOptions}>
-            {/* @ts-expect-error */}
+            {/* @ts-expect-error - Type safety is handled by BlockTypeProps */}
             <Component {...layout} />
           </Section>
         );

@@ -20,6 +20,7 @@ import RenderBlocks from "@/blocks/RenderBlocks";
 import Counter from "../../_components/counter";
 import { ClientsBlock } from "@/blocks/clients-block/Component";
 import { PartnerContent, PartnersData } from "@/collections/partners/types";
+import { ContentWithImageData } from "@/collections/content-with-image/types";
 
 
 interface SlideContent {
@@ -46,9 +47,10 @@ interface SliderData {
 interface PageClientProps {
   sliderData?: SliderData;
   partnersData?: PartnersData;
+  contentWithImageData?: ContentWithImageData[];
 }
 
-export default function PageClient({ sliderData, partnersData }: PageClientProps) {
+export default function PageClient({ sliderData, partnersData, contentWithImageData }: PageClientProps) {
   const t = useTranslations('HomePage');
   const locale = useLocale();
 
@@ -92,115 +94,110 @@ export default function PageClient({ sliderData, partnersData }: PageClientProps
     <div>
       <Header />
       <RenderBlocks
-        key={`blocks-${locale}`}
-        blocks={[
-          {
-            blockType: "slider",
-            layout: {
-              slides
-            },
-            sectionOptions: {
-              footerContent: (
-                <ClientsBlock
-                clients={allClients}
-                type="slick"
-                gradientColor="transparent"
+  key={`blocks-${locale}`}
+  blocks={[
+
+    {
+      blockType: "slider",
+      layout: {
+        slides
+      },
+      sectionOptions: {
+        footerContent: (
+          <ClientsBlock
+          clients={allClients}
+          type="slick"
+          gradientColor="transparent"
+        />
+        
+        ),
+        innerContainer: true,
+        className: "tw-py-5 tw-bg-[url('/images/background-16-9-1.png')] tw-bg-cover tw-bg-center",
+      },
+    },
+
+
+    // ContentWithImage bloklarını ekle
+    ...(contentWithImageData || []).map((content: ContentWithImageData) => ({
+      blockType: "contentWithImage" as const,
+      layout: {
+        title: locale === 'tr' && content.translations?.tr?.title 
+          ? content.translations.tr.title 
+          : content.title,
+        description: locale === 'tr' && content.translations?.tr?.description
+          ? content.translations.tr.description
+          : content.description,
+        image: {
+          src: content.image.url,
+          alt: content.image.alt,
+          width: content.image.width || 580,
+          height: content.image.height || 684,
+          imgClassName: "tw-rounded-lg",
+        },
+        imagePosition: content.imagePosition || 'left',
+        contentFooter: content.showCounters ? (
+          <div>
+            <div className="tw-flex tw-items-center tw-gap-10">
+              <Counter
+                value={content.counters?.products || 0}
+                suffix="M"
+                description={t('certified_products')}
               />
-              
-              ),
-              innerContainer: true,
-              className: "tw-py-5 tw-bg-[url('/images/background-16-9-1.png')] tw-bg-cover tw-bg-center",
-            },
-          },
-          {
-            blockType: "contentWithImage",
-            layout: {
-              title: t('revolutionize_title'),
-              description: t('revolutionize_description'),
-              image: {
-                src: "/images/safe_sopping_doruksistem_usesafe_3.webp",
-                alt: "Demo Finance 01",
-                width: 580,
-                height: 684,
-                imgClassName: "tw-rounded-lg",
-              },
-              contentFooter: (
-                <ButtonSwitchAnimation
-                  size="lg"
-                  uppercase
-                  icon={<HiArrowNarrowRight />}
-                >
-                  {t('join_us')}
-                </ButtonSwitchAnimation>
-              ),
-            },
-            sectionOptions: {
-              innerContainer: true,
-            },
-          },
-          {
-            blockType: "contentWithImage",
-            layout: {
-              title: t('trusted_brands_title'),
-              description: t('trusted_brands_description'),
-              image: {
-                src: "/images/safe_sopping_doruksistem_usesafe.webp",
-                alt: "Demo Finance 01",
-                width: 580,
-                height: 684,
-                imgClassName: "tw-rounded-lg",
-              },
-              imagePosition: "right",
-              contentFooter: (
-                <div>
-                  <div className="tw-flex tw-items-center tw-gap-10">
-                    <Counter
-                      value={2}
-                      suffix="M"
-                      description={t('certified_products')}
-                    />
-                    <Counter
-                      value={3}
-                      suffix="K"
-                      description={t('certified_partner')}
-                    />
-                  </div>
-                  <ButtonSwitchAnimation
-                    size="lg"
-                    uppercase
-                    icon={<HiArrowNarrowRight />}
-                  >
-                    {t('learn_more')}
-                  </ButtonSwitchAnimation>
-                </div>
-              ),
-            },
-            sectionOptions: {
-              innerContainer: true,
-            },
-          },
-          {
-            blockType: "media",
-            layout: {
-              src: "/crafto/images/app-demo.webp",
-              alt: "Demo Finance 01",
-              imgClassName: "tw-w-full tw-object-contain",
-              className: "tw-w-full tw-flex tw-justify-center",
-              width: 1000,
-              height: 1000,
-            },
-            sectionOptions: {
-              innerContainer: true,
-              title: "Digital Product Passport",
-              description: t('dpp_description'),
-              footerContent: (
-                <div className="tw-flex tw-justify-center tw-items-center">
-                  <Button>{t('try_free')}</Button>
-                </div>
-              ),
-              className: "tw-bg-gradient-to-b tw-from-gray-100 tw-to-white",
-            },
-          },
+              <Counter
+                value={content.counters?.partners || 0}
+                suffix="K"
+                description={t('certified_partner')}
+              />
+            </div>
+            <ButtonSwitchAnimation
+              size="lg"
+              uppercase
+              icon={<HiArrowNarrowRight />}
+            >
+              {locale === 'tr' && content.translations?.tr?.buttonText 
+                ? content.translations.tr.buttonText 
+                : content.buttonText}
+            </ButtonSwitchAnimation>
+          </div>
+        ) : (
+          <ButtonSwitchAnimation
+            size="lg"
+            uppercase
+            icon={<HiArrowNarrowRight />}
+          >
+            {locale === 'tr' && content.translations?.tr?.buttonText 
+              ? content.translations.tr.buttonText 
+              : content.buttonText}
+          </ButtonSwitchAnimation>
+        ),
+      },
+      sectionOptions: {
+        innerContainer: true,
+      },
+    })),
+    // Diğer statik bloklar
+    {
+      blockType: "media",
+      layout: {
+        src: "/crafto/images/app-demo.webp",
+        alt: "Demo Finance 01",
+        imgClassName: "tw-w-full tw-object-contain",
+        className: "tw-w-full tw-flex tw-justify-center",
+        width: 1000,
+        height: 1000,
+      },
+      sectionOptions: {
+        innerContainer: true,
+        title: "Digital Product Passport",
+        description: t('dpp_description'),
+        footerContent: (
+          <div className="tw-flex tw-justify-center tw-items-center">
+            <Button>{t('try_free')}</Button>
+          </div>
+        ),
+        className: "tw-bg-gradient-to-b tw-from-gray-100 tw-to-white",
+      },
+    },
           {
             blockType: "counter",
             layout: {

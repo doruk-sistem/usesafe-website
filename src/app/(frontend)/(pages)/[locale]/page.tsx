@@ -3,6 +3,7 @@ import { initPayload } from '@/app/api/utils/getPayload';
 import type { SliderData } from '@/collections/slider/types';
 import type { PartnerContent } from '@/collections/partners/types';
 import PageClient from "./page.client";
+import { ContentWithImageData } from "@/collections/content-with-image/types";
 
 export default async function HomePage({ params }: { params: { locale: string } }) {
   try {
@@ -23,13 +24,21 @@ export default async function HomePage({ params }: { params: { locale: string } 
       sort: 'order'
     });
 
+    const contentWithImageResponse = await payload.find({
+      collection: 'content-with-image',
+      where: {
+        active: { equals: true }
+      }
+    });
+
     return <PageClient 
       sliderData={sliderResponse.docs[0] as SliderData}
       partnersData={{ partners: partnersResponse.docs as PartnerContent[] }} 
+      contentWithImageData={contentWithImageResponse.docs as unknown as ContentWithImageData[]}
     />;
   } catch (error) {
     console.error('Error loading homepage:', error);
-    return <PageClient sliderData={undefined} partnersData={undefined} />;
+      return <PageClient sliderData={undefined} partnersData={undefined} />;
   }
 }
 

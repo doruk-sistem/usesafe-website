@@ -70,6 +70,7 @@ export interface Config {
     'privacy-policy': PrivacyPolicy;
     sliders: Slider;
     partners: Partner;
+    'content-with-image': ContentWithImage;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -81,6 +82,7 @@ export interface Config {
     'privacy-policy': PrivacyPolicySelect<false> | PrivacyPolicySelect<true>;
     sliders: SlidersSelect<false> | SlidersSelect<true>;
     partners: PartnersSelect<false> | PartnersSelect<true>;
+    'content-with-image': ContentWithImageSelect<false> | ContentWithImageSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -247,6 +249,33 @@ export interface Partner {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "content-with-image".
+ */
+export interface ContentWithImage {
+  id: number;
+  title: string;
+  description?: string | null;
+  image: number | Media;
+  imagePosition?: ('left' | 'right') | null;
+  showCounters?: boolean | null;
+  counters?: {
+    products?: number | null;
+    partners?: number | null;
+  };
+  buttonText?: string | null;
+  translations?: {
+    tr?: {
+      title?: string | null;
+      description?: string | null;
+      buttonText?: string | null;
+    };
+  };
+  active?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -271,6 +300,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'partners';
         value: number | Partner;
+      } | null)
+    | ({
+        relationTo: 'content-with-image';
+        value: number | ContentWithImage;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -454,6 +487,38 @@ export interface PartnersSelect<T extends boolean = true> {
   order?: T;
   active?: T;
   url?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "content-with-image_select".
+ */
+export interface ContentWithImageSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  image?: T;
+  imagePosition?: T;
+  showCounters?: T;
+  counters?:
+    | T
+    | {
+        products?: T;
+        partners?: T;
+      };
+  buttonText?: T;
+  translations?:
+    | T
+    | {
+        tr?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              buttonText?: T;
+            };
+      };
+  active?: T;
   updatedAt?: T;
   createdAt?: T;
 }

@@ -11,6 +11,7 @@ import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
+import { ContentWithImage } from './collections/content-with-image'
 
 export default buildConfig({
   admin: {
@@ -39,6 +40,7 @@ export default buildConfig({
     PrivacyPolicy,
     Slider,
     partners,
+    ContentWithImage,
   ],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
