@@ -11,7 +11,7 @@ import { LuFootprints } from "react-icons/lu";
 import { ClientsBlock } from "@/blocks/clients-block/Component";
 import NewsletterBlock from "@/blocks/newsletter-block";
 import RenderBlocks from "@/blocks/RenderBlocks";
-import { PartnerContent, PartnersData } from "@/collections/partners/types";
+import { PartnersData } from "@/collections/partners/types";
 import { Button } from "@/frontend/_components/button";
 import ButtonSwitchAnimation from "@/frontend/_components/button-switch-animation";
 import Footer from "@/frontend/_components/footer";
@@ -72,10 +72,6 @@ export default function PageClient({ sliderData, partnersData }: PageClientProps
       buttonLink: slide.buttonLink,
     }));
   }, [sliderData, locale]);
-
-  const isPartnerContent = (client: any): client is PartnerContent => {
-    return "logo" in client;
-  };
 
   const allClients = useMemo(() => {
     return (partnersData?.partners || []).map((partner) => ({

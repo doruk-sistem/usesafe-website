@@ -82,7 +82,6 @@ export default async function PrivacyPolicy({ params }: Props) {
       </>
     );
   } catch (error) {
-    console.error("Detailed error:", error);
     return (
       <>
         <Header />

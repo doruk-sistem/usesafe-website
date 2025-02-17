@@ -66,7 +66,6 @@ const eslintConfig = [
       "no-console": "error",
       "no-debugger": "error",
       "no-alert": "error",
-      "no-unused-vars": "error",
       "no-multiple-empty-lines": ["error", { max: 1, maxEOF: 0 }],
       "no-trailing-spaces": "error",
       "eol-last": ["error", "always"],

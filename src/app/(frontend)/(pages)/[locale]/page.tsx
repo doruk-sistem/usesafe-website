@@ -31,6 +31,7 @@ export default async function HomePage() {
       />
     );
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error("Error loading homepage:", error);
     return <PageClient sliderData={undefined} partnersData={undefined} />;
   }

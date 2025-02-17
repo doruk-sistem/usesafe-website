@@ -82,6 +82,7 @@ export default function DemoPageClient() {
       } else {
         throw new Error("An error occurred");
       }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       toast.error(t("toast.error.generic"));
     } finally {
