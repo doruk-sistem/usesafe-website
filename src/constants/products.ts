@@ -1,5 +1,5 @@
 interface Product {
-  id: 'digital-product-passports' | 'digital-twins' | 'use-safe-certification'; 
+  id: "digital-product-passports" | "digital-twins" | "use-safe-certification";
   title: string;
   href: string;
   image: string;
@@ -7,9 +7,9 @@ interface Product {
 
 const products: Product[] = [
   {
-    id: "digital-product-passports",  
+    id: "digital-product-passports",
     title :"products.digital-product-passports.title",
-    href: "/solutions/digital-product-passports", 
+    href: "/solutions/digital-product-passports",
     image: "/images/product-security.webp",
   },
   {

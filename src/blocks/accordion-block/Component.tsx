@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import React, { useState } from "react";
 
 interface AccordionBlockProps {
   title?: string;
@@ -10,12 +10,12 @@ interface AccordionBlockProps {
 }
 
 export function AccordionBlock({ title, description }: AccordionBlockProps) {
-  const t = useTranslations('AccordionBlock');
+  const t = useTranslations("AccordionBlock");
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const items = Array.from({ length: t.raw('items').length }).map((_, index) => ({
+  const items = Array.from({ length: t.raw("items").length }).map((_, index) => ({
     title: t(`items.${index}.title`),
-    description: t(`items.${index}.description`)
+    description: t(`items.${index}.description`),
   }));
 
   const toggleAccordion = (index: number) => {

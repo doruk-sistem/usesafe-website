@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import createMiddleware from "next-intl/middleware";
+
 import { routing } from "./i18n/routing";
 
 export async function middleware(request: NextRequest) {
-  if (request.nextUrl.pathname.startsWith('/admin')) {
+  if (request.nextUrl.pathname.startsWith("/admin")) {
     return NextResponse.next();
   }
 
@@ -22,8 +23,8 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(
       new URL(
         `/${localeCookie || defaultLocale}/${remainingPath}${searchParamsString}`,
-        request.url
-      )
+        request.url,
+      ),
     );
   }
 
@@ -38,6 +39,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next|api|admin|.*\\.).*)"
-  ]
+    "/((?!_next|api|admin|.*\\.).*)",
+  ],
 };

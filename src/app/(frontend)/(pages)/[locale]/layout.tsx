@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-
+import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
-import { notFound } from "next/navigation";
-
-import { routing } from "@/i18n/routing";
 
 import CraftoProvider from "@/frontend/_providers/CraftoProvider";
 import ReactSlickProvider from "@/frontend/_providers/ReactSlickProvider";
+import { routing } from "@/i18n/routing";
+
 import "@/frontend/globals.css";
 
 const geistSans = Geist({

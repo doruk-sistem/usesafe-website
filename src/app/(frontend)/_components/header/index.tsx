@@ -1,6 +1,7 @@
 import React from "react";
-import TopHeader from "./top-header";
+
 import Navbar from "./navbar";
+import TopHeader from "./top-header";
 
 export default function Header() {
   return (
