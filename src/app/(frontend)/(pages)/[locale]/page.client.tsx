@@ -3,7 +3,6 @@
 import React, { useMemo } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { useTranslations } from 'next-intl';
-import { clients } from "@/constants/clients";
 import { GiWorld, GiWaterRecycling, GiConversation } from "react-icons/gi";
 import { CiDiscount1 } from "react-icons/ci";
 import { LuFootprints } from "react-icons/lu";
@@ -21,6 +20,7 @@ import RenderBlocks from "@/blocks/RenderBlocks";
 import Counter from "../../_components/counter";
 import { ClientsBlock } from "@/blocks/clients-block/Component";
 import { PartnerContent, PartnersData } from "@/collections/partners/types";
+
 
 interface SlideContent {
   title: string;
@@ -82,10 +82,9 @@ export default function PageClient({ sliderData, partnersData }: PageClientProps
   };
 
   const allClients = useMemo(() => {
-    const partnersList = partnersData?.partners || [];
-    return [...clients, ...partnersList].map(client => ({
-      name: client.name,
-      imageSrc: isPartnerContent(client) ? client.logo.url : client.imageSrc
+    return (partnersData?.partners || []).map(partner => ({
+      name: partner.name,
+      imageSrc: partner.logo.url
     }));
   }, [partnersData]);
 

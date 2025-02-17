@@ -9,7 +9,6 @@ import { PrivacyPolicy } from './collections/privacy-policy'
 import { Slider } from './collections/slider'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
-
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
