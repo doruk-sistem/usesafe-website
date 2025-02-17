@@ -27,25 +27,20 @@ export const metadata: Metadata = {
 
 export default async function LocaleLayout({
   children,
-  params: paramsPromise,
+  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }>) {
-  const params = await paramsPromise;
-
   const { locale } = params;
 
-  // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 
-  // Enable static rendering
   setRequestLocale(locale);
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
+  // Client tarafına mesajları gönder
   const messages = await getMessages();
 
   return (
