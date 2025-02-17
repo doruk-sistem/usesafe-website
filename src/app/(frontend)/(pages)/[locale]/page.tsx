@@ -4,6 +4,7 @@ import type { SliderData } from '@/collections/slider/types';
 import type { PartnerContent } from '@/collections/partners/types';
 import PageClient from "./page.client";
 import { ContentWithImageData } from "@/collections/content-with-image/types";
+import { MediaBlockData } from "@/collections/media-block/types";
 
 export default async function HomePage({ params }: { params: { locale: string } }) {
   try {
@@ -31,10 +32,18 @@ export default async function HomePage({ params }: { params: { locale: string } 
       }
     });
 
+    const mediaBlockResponse = await payload.find({
+      collection: 'media-block',
+      where: {
+        active: { equals: true }
+      }
+    });
+
     return <PageClient 
       sliderData={sliderResponse.docs[0] as SliderData}
       partnersData={{ partners: partnersResponse.docs as PartnerContent[] }} 
       contentWithImageData={contentWithImageResponse.docs as unknown as ContentWithImageData[]}
+      mediaBlockData={mediaBlockResponse.docs as unknown as MediaBlockData[]}
     />;
   } catch (error) {
     console.error('Error loading homepage:', error);

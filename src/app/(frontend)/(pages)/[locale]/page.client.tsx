@@ -21,7 +21,8 @@ import Counter from "../../_components/counter";
 import { ClientsBlock } from "@/blocks/clients-block/Component";
 import { PartnerContent, PartnersData } from "@/collections/partners/types";
 import { ContentWithImageData } from "@/collections/content-with-image/types";
-
+import { MediaBlockData } from "@/collections/media-block/types";
+import Link from "next/link";
 
 interface SlideContent {
   title: string;
@@ -48,9 +49,10 @@ interface PageClientProps {
   sliderData?: SliderData;
   partnersData?: PartnersData;
   contentWithImageData?: ContentWithImageData[];
+  mediaBlockData?: MediaBlockData[];
 }
 
-export default function PageClient({ sliderData, partnersData, contentWithImageData }: PageClientProps) {
+export default function PageClient({ sliderData, partnersData, contentWithImageData, mediaBlockData }: PageClientProps) {
   const t = useTranslations('HomePage');
   const locale = useLocale();
 
@@ -176,28 +178,43 @@ export default function PageClient({ sliderData, partnersData, contentWithImageD
       },
     })),
     // Diğer statik bloklar
-    {
-      blockType: "media",
+    
+    ...(mediaBlockData || []).map((media: MediaBlockData) => ({
+      blockType: "media" as const,
       layout: {
-        src: "/crafto/images/app-demo.webp",
-        alt: "Demo Finance 01",
+        src: media.media.url,
+        alt: media.media.alt,
         imgClassName: "tw-w-full tw-object-contain",
         className: "tw-w-full tw-flex tw-justify-center",
-        width: 1000,
-        height: 1000,
+        width: media.media.width || 1000,
+        height: media.media.height || 1000,
       },
       sectionOptions: {
         innerContainer: true,
-        title: "Digital Product Passport",
-        description: t('dpp_description'),
+        title: locale === 'tr' && media.translations?.tr?.title 
+          ? media.translations.tr.title 
+          : media.title,
+        description: locale === 'tr' && media.translations?.tr?.description
+          ? media.translations.tr.description 
+          : media.description,
         footerContent: (
           <div className="tw-flex tw-justify-center tw-items-center">
-            <Button>{t('try_free')}</Button>
+            <Link 
+              href={locale === 'tr' && media.translations?.tr?.buttonLink 
+                ? media.translations.tr.buttonLink 
+                : media.buttonLink || '#'}
+            >
+              <Button>
+                {locale === 'tr' && media.translations?.tr?.buttonText 
+                  ? media.translations.tr.buttonText 
+                  : media.buttonText}
+              </Button>
+            </Link>
           </div>
         ),
         className: "tw-bg-gradient-to-b tw-from-gray-100 tw-to-white",
       },
-    },
+    })),
           {
             blockType: "counter",
             layout: {

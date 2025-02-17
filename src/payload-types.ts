@@ -71,6 +71,7 @@ export interface Config {
     sliders: Slider;
     partners: Partner;
     'content-with-image': ContentWithImage;
+    'media-block': MediaBlock;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -83,6 +84,7 @@ export interface Config {
     sliders: SlidersSelect<false> | SlidersSelect<true>;
     partners: PartnersSelect<false> | PartnersSelect<true>;
     'content-with-image': ContentWithImageSelect<false> | ContentWithImageSelect<true>;
+    'media-block': MediaBlockSelect<false> | MediaBlockSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -276,6 +278,35 @@ export interface ContentWithImage {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "media-block".
+ */
+export interface MediaBlock {
+  id: number;
+  title: string;
+  description?: string | null;
+  media: number | Media;
+  buttonText?: string | null;
+  /**
+   * Enter the URL for button (e.g., /contact, https://example.com)
+   */
+  buttonLink?: string | null;
+  translations?: {
+    tr?: {
+      title?: string | null;
+      description?: string | null;
+      buttonText?: string | null;
+      buttonLink?: string | null;
+    };
+  };
+  /**
+   * Toggle to show/hide this media block
+   */
+  active?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -304,6 +335,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'content-with-image';
         value: number | ContentWithImage;
+      } | null)
+    | ({
+        relationTo: 'media-block';
+        value: number | MediaBlock;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -516,6 +551,32 @@ export interface ContentWithImageSelect<T extends boolean = true> {
               title?: T;
               description?: T;
               buttonText?: T;
+            };
+      };
+  active?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "media-block_select".
+ */
+export interface MediaBlockSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  media?: T;
+  buttonText?: T;
+  buttonLink?: T;
+  translations?:
+    | T
+    | {
+        tr?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              buttonText?: T;
+              buttonLink?: T;
             };
       };
   active?: T;

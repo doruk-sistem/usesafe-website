@@ -12,7 +12,7 @@ import { Media } from './collections/Media'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 import { ContentWithImage } from './collections/content-with-image'
-
+import { MediaBlock } from './collections/media-block'
 export default buildConfig({
   admin: {
     user: Users.slug,
@@ -41,6 +41,7 @@ export default buildConfig({
     Slider,
     partners,
     ContentWithImage,
+    MediaBlock,
   ],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
