@@ -8,15 +8,12 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
- 
   const locales = routing.locales;
   const defaultLocale = routing.defaultLocale;
 
- 
   const [, segment1, ...segments] = request.nextUrl.pathname.split("/");
   const isValidLocale = locales.includes(segment1 as any);
 
- 
   if (!isValidLocale) {
     const localeCookie = request.cookies.get("NEXT_LOCALE")?.value;
     const remainingPath = [segment1, ...segments].join("/");
@@ -31,7 +28,6 @@ export async function middleware(request: NextRequest) {
     );
   }
 
- 
   const handleI18nRouting = createMiddleware({
     locales,
     defaultLocale,
@@ -39,7 +35,6 @@ export async function middleware(request: NextRequest) {
 
   return handleI18nRouting(request);
 }
-
 
 export const config = {
   matcher: [

@@ -1,4 +1,5 @@
 import React from "react";
+
 import Footer from "@/app/(frontend)/_components/footer";
 import Header from "@/app/(frontend)/_components/header";
 import { initPayload } from "@/app/api/utils/getPayload";
