@@ -1,18 +1,23 @@
+import { Metadata } from "next";
 import React from "react";
+
+import ErrorComponent from "@/app/(frontend)/_components/ErrorComponent";
 import Footer from "@/app/(frontend)/_components/footer";
 import Header from "@/app/(frontend)/_components/header";
 import { initPayload } from "@/app/api/utils/getPayload";
 import type { PrivacyPolicyData } from "@/collections/privacy-policy";
 
-type Props = {
-  params: {
-    locale: string;
-  };
+export const metadata: Metadata = {
+  title: "Privacy Policy",
 };
 
-export default async function PrivacyPolicy({ params }: Props) {
+type PageProps = {
+  params: Promise<{ locale: string }>;
+};
+
+const PrivacyPolicy = async ({ params }: PageProps) => {
   try {
-    const locale = params.locale;
+    const { locale } = await params;
     const payload = await initPayload();
 
     const response = await payload.find({
@@ -21,28 +26,14 @@ export default async function PrivacyPolicy({ params }: Props) {
     });
 
     if (!response.docs || response.docs.length === 0) {
-      return (
-        <>
-          <Header />
-          <main>
-            <div className="container tw-py-16">
-              <div className="tw-text-center">
-                <h1>No Content Available</h1>
-                <p>Privacy Policy content has not been added yet.</p>
-              </div>
-            </div>
-          </main>
-          <Footer />
-        </>
-      );
+      return <ErrorComponent message="Privacy Policy content has not been added yet." />;
     }
 
     const privacyData = response.docs[0] as PrivacyPolicyData;
 
-    const content =
-      locale === "tr" && privacyData.translations?.tr
-        ? privacyData.translations.tr
-        : privacyData;
+    const content = locale === "tr" && privacyData.translations?.tr
+      ? privacyData.translations.tr
+      : privacyData;
 
     const { title, sections } = content;
     const { legalDisclaimer, basics, inclusion } = sections;
@@ -82,26 +73,11 @@ export default async function PrivacyPolicy({ params }: Props) {
       </>
     );
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error("Privacy Policy error:", error);
 
-    return (
-      <>
-        <Header />
-        <main>
-          <div className="container tw-py-16">
-            <div className="tw-text-center">
-              <h1>Error</h1>
-              <p>Could not load Privacy Policy content. Please try again later.</p>
-              {process.env.NODE_ENV === "development" && (
-                <pre className="tw-mt-4 tw-p-4 tw-bg-red-50 tw-text-red-600">
-                  {JSON.stringify(error, null, 2)}
-                </pre>
-              )}
-            </div>
-          </div>
-        </main>
-        <Footer />
-      </>
-    );
+    return <ErrorComponent message="Could not load Privacy Policy content. Please try again later." />;
   }
-}
+};
+
+export default PrivacyPolicy;
