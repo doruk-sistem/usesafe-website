@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url'
 import { PrivacyPolicy } from './collections/privacy-policy'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
-import { Blogs } from './collections/Blog' 
+import { Blogs } from './collections/Blog/Blog' 
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)

@@ -34,6 +34,10 @@ export default function Navbar() {
       ],
     },
     {
+      label: t("common.blog"),
+      href: "/blog",
+    },
+    {
       label: t("common.about_dpp"),
       href: "/resources/about-dpp",
     },

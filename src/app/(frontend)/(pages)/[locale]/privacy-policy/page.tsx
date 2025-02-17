@@ -3,6 +3,8 @@ import Footer from "@/app/(frontend)/_components/footer";
 import Header from "@/app/(frontend)/_components/header";
 import { initPayload } from "@/app/api/utils/getPayload";
 import type { PrivacyPolicyData } from "@/collections/privacy-policy";
+import ErrorComponent from "@/app/(frontend)/_components/ErrorComponent";
+    
 
 type Props = {
   params: {
@@ -10,7 +12,7 @@ type Props = {
   };
 };
 
-export default async function PrivacyPolicy({ params }: Props) {
+export default async function PrivacyPolicy({ params }: Props) { 
   try {
     const locale = params.locale;
     const payload = await initPayload();
@@ -20,21 +22,9 @@ export default async function PrivacyPolicy({ params }: Props) {
       limit: 1,
     });
 
+   
     if (!response.docs || response.docs.length === 0) {
-      return (
-        <>
-          <Header />
-          <main>
-            <div className="container tw-py-16">
-              <div className="tw-text-center">
-                <h1>No Content Available</h1>
-                <p>Privacy Policy content has not been added yet.</p>
-              </div>
-            </div>
-          </main>
-          <Footer />
-        </>
-      );
+      return <ErrorComponent message="Privacy Policy content has not been added yet." />;
     }
 
     const privacyData = response.docs[0] as PrivacyPolicyData;
@@ -60,7 +50,7 @@ export default async function PrivacyPolicy({ params }: Props) {
                   </h1>
 
                   <div>
-                    {[
+                    {[ 
                       { section: legalDisclaimer, title: "Legal Disclaimer" },
                       { section: basics, title: "Basics" },
                       { section: inclusion, title: "Inclusion" },
@@ -84,24 +74,7 @@ export default async function PrivacyPolicy({ params }: Props) {
   } catch (error) {
     console.error("Privacy Policy error:", error);
 
-    return (
-      <>
-        <Header />
-        <main>
-          <div className="container tw-py-16">
-            <div className="tw-text-center">
-              <h1>Error</h1>
-              <p>Could not load Privacy Policy content. Please try again later.</p>
-              {process.env.NODE_ENV === "development" && (
-                <pre className="tw-mt-4 tw-p-4 tw-bg-red-50 tw-text-red-600">
-                  {JSON.stringify(error, null, 2)}
-                </pre>
-              )}
-            </div>
-          </div>
-        </main>
-        <Footer />
-      </>
-    );
+    
+    return <ErrorComponent message="Could not load Privacy Policy content. Please try again later." />;
   }
 }
