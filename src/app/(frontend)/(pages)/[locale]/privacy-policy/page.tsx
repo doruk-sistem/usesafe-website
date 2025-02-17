@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import React from "react";
 
 import ErrorComponent from "@/app/(frontend)/_components/ErrorComponent";
@@ -6,15 +7,17 @@ import Header from "@/app/(frontend)/_components/header";
 import { initPayload } from "@/app/api/utils/getPayload";
 import type { PrivacyPolicyData } from "@/collections/privacy-policy";
 
-type Props = {
-  params: {
-    locale: string;
-  };
+export const metadata: Metadata = {
+  title: "Privacy Policy",
 };
 
-export default async function PrivacyPolicy({ params }: Props) {
+type PageProps = {
+  params: Promise<{ locale: string }>;
+};
+
+const PrivacyPolicy = async ({ params }: PageProps) => {
   try {
-    const locale = params.locale;
+    const { locale } = await params;
     const payload = await initPayload();
 
     const response = await payload.find({
@@ -75,4 +78,6 @@ export default async function PrivacyPolicy({ params }: Props) {
 
     return <ErrorComponent message="Could not load Privacy Policy content. Please try again later." />;
   }
-}
+};
+
+export default PrivacyPolicy;
