@@ -5,6 +5,7 @@ import type { PartnerContent } from '@/collections/partners/types';
 import PageClient from "./page.client";
 import { ContentWithImageData } from "@/collections/content-with-image/types";
 import { MediaBlockData } from "@/collections/media-block/types";
+import { CounterData } from "@/collections/counter/types";
 
 export default async function HomePage({ params }: { params: { locale: string } }) {
   try {
@@ -39,11 +40,19 @@ export default async function HomePage({ params }: { params: { locale: string } 
       }
     });
 
+    const counterResponse = await payload.find({
+      collection: 'counter' as 'counter',
+      where: {
+        active: { equals: true }
+      }
+    });
+
     return <PageClient 
       sliderData={sliderResponse.docs[0] as SliderData}
       partnersData={{ partners: partnersResponse.docs as PartnerContent[] }} 
       contentWithImageData={contentWithImageResponse.docs as unknown as ContentWithImageData[]}
       mediaBlockData={mediaBlockResponse.docs as unknown as MediaBlockData[]}
+      counterData={counterResponse.docs as unknown as CounterData[]}
     />;
   } catch (error) {
     console.error('Error loading homepage:', error);

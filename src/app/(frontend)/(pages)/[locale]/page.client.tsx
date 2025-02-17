@@ -23,6 +23,7 @@ import { PartnerContent, PartnersData } from "@/collections/partners/types";
 import { ContentWithImageData } from "@/collections/content-with-image/types";
 import { MediaBlockData } from "@/collections/media-block/types";
 import Link from "next/link";
+import { CounterData } from "@/collections/counter/types";
 
 interface SlideContent {
   title: string;
@@ -50,9 +51,10 @@ interface PageClientProps {
   partnersData?: PartnersData;
   contentWithImageData?: ContentWithImageData[];
   mediaBlockData?: MediaBlockData[];
+  counterData?: CounterData[];
 }
 
-export default function PageClient({ sliderData, partnersData, contentWithImageData, mediaBlockData }: PageClientProps) {
+export default function PageClient({ sliderData, partnersData, contentWithImageData, mediaBlockData, counterData }: PageClientProps) {
   const t = useTranslations('HomePage');
   const locale = useLocale();
 
@@ -215,33 +217,20 @@ export default function PageClient({ sliderData, partnersData, contentWithImageD
         className: "tw-bg-gradient-to-b tw-from-gray-100 tw-to-white",
       },
     })),
-          {
-            blockType: "counter",
-            layout: {
-              items: [
-                {
-                  description: t('counter_section.employees'),
-                  value: 25,
-                },
-                {
-                  description: t('counter_section.core_teams'),
-                  value: 5,
-                },
-                {
-                  description: t('counter_section.expected_partners'),
-                  value: 1500,
-                },
-                {
-                  description: t('counter_section.expected_products'),
-                  value: 15,
-                },
-              ],
-            },
-            sectionOptions: {
-              title: t('counter_section.title'),
-              innerContainer: true,
-            },
-          },
+    ...(counterData || []).map((counter: CounterData) => ({
+      blockType: "counter" as const,
+      layout: {
+        items: locale === 'tr' && counter.translations?.tr?.items 
+          ? counter.translations.tr.items 
+          : counter.items,
+      },
+      sectionOptions: {
+        title: locale === 'tr' && counter.translations?.tr?.title 
+          ? counter.translations.tr.title 
+          : counter.title,
+        innerContainer: true,
+      },
+    })),
           {
             blockType: "accordion",
             layout: {

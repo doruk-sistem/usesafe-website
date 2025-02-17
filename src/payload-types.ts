@@ -72,6 +72,7 @@ export interface Config {
     partners: Partner;
     'content-with-image': ContentWithImage;
     'media-block': MediaBlock;
+    counter: Counter;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -85,6 +86,7 @@ export interface Config {
     partners: PartnersSelect<false> | PartnersSelect<true>;
     'content-with-image': ContentWithImageSelect<false> | ContentWithImageSelect<true>;
     'media-block': MediaBlockSelect<false> | MediaBlockSelect<true>;
+    counter: CounterSelect<false> | CounterSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -307,6 +309,39 @@ export interface MediaBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "counter".
+ */
+export interface Counter {
+  id: number;
+  title: string;
+  items?:
+    | {
+        description: string;
+        value: number;
+        id?: string | null;
+      }[]
+    | null;
+  translations?: {
+    tr?: {
+      title?: string | null;
+      items?:
+        | {
+            description?: string | null;
+            value?: number | null;
+            id?: string | null;
+          }[]
+        | null;
+    };
+  };
+  /**
+   * Toggle to show/hide this counter section
+   */
+  active?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -339,6 +374,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'media-block';
         value: number | MediaBlock;
+      } | null)
+    | ({
+        relationTo: 'counter';
+        value: number | Counter;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -577,6 +616,39 @@ export interface MediaBlockSelect<T extends boolean = true> {
               description?: T;
               buttonText?: T;
               buttonLink?: T;
+            };
+      };
+  active?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "counter_select".
+ */
+export interface CounterSelect<T extends boolean = true> {
+  title?: T;
+  items?:
+    | T
+    | {
+        description?: T;
+        value?: T;
+        id?: T;
+      };
+  translations?:
+    | T
+    | {
+        tr?:
+          | T
+          | {
+              title?: T;
+              items?:
+                | T
+                | {
+                    description?: T;
+                    value?: T;
+                    id?: T;
+                  };
             };
       };
   active?: T;

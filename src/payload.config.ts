@@ -13,6 +13,10 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 import { ContentWithImage } from './collections/content-with-image'
 import { MediaBlock } from './collections/media-block'
+import { Counter } from './collections/counter'
+
+
+
 export default buildConfig({
   admin: {
     user: Users.slug,
@@ -42,6 +46,7 @@ export default buildConfig({
     partners,
     ContentWithImage,
     MediaBlock,
+    Counter,
   ],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
