@@ -6,6 +6,9 @@ export const ContentWithImage: CollectionConfig = {
     useAsTitle: 'title',
     defaultColumns: ['title', 'active'],
   },
+  access: {
+    read: () => true,
+  },
   fields: [
     {
       name: 'title',
@@ -23,63 +26,19 @@ export const ContentWithImage: CollectionConfig = {
       required: true,
     },
     {
-      name: 'imagePosition',
-      type: 'select',
-      options: [
-        { label: 'Left', value: 'left' },
-        { label: 'Right', value: 'right' },
-      ],
-      defaultValue: 'left',
-    },
-    {
-      name: 'showCounters',
-      type: 'checkbox',
-      label: 'Show Counters',
-      defaultValue: false,
-    },
-    {
-      name: 'counters',
-      type: 'group',
-      fields: [
-        {
-          name: 'products',
-          type: 'number',
-          label: 'Products Count',
-        },
-        {
-          name: 'partners',
-          type: 'number',
-          label: 'Partners Count',
-        }
-      ]
-    },
-    {
       name: 'buttonText',
       type: 'text',
     },
     {
-      name: 'translations',
-      type: 'group',
-      fields: [
-        {
-          name: 'tr',
-          type: 'group',
-          fields: [
-            {
-              name: 'title',
-              type: 'text',
-            },
-            {
-              name: 'description',
-              type: 'textarea',
-            },
-            {
-              name: 'buttonText',
-              type: 'text',
-            }
-          ]
-        }
-      ]
+      name: 'buttonLink',
+      type: 'text',
+    },
+    {
+      name: 'order',
+      type: 'number',
+      admin: {
+        hidden: true,
+      },
     },
     {
       name: 'active',
@@ -89,5 +48,22 @@ export const ContentWithImage: CollectionConfig = {
         position: 'sidebar',
       }
     }
-  ]
+  ],
+  hooks: {
+    beforeChange: [
+      async ({ data, req }) => {
+        if (!data) return {};
+        if (!data.order) {
+          const result = await req.payload.find({
+            collection: 'content-with-image',
+            limit: 1,
+            sort: '-order',
+          });
+          const highestOrder = result.docs[0]?.order || 0;
+          data.order = highestOrder + 1;
+        }
+        return data;
+      },
+    ],
+  },
 };

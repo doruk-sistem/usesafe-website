@@ -96,7 +96,7 @@ export interface Config {
   };
   globals: {};
   globalsSelect: {};
-  locale: 'en' | 'tr';
+  locale: null;
   user: User & {
     collection: 'users';
   };
@@ -209,16 +209,14 @@ export interface PrivacyPolicy {
 export interface Slider {
   id: number;
   title: string;
-  slides?:
-    | {
-        image: number | Media;
-        title?: string | null;
-        description?: string | null;
-        buttonText?: string | null;
-        buttonLink?: string | null;
-        id?: string | null;
-      }[]
-    | null;
+  slides: {
+    title: string;
+    description?: string | null;
+    image: number | Media;
+    buttonText?: string | null;
+    buttonLink?: string | null;
+    id?: string | null;
+  }[];
   translations?: {
     tr?: {
       slides?:
@@ -231,6 +229,10 @@ export interface Slider {
         | null;
     };
   };
+  /**
+   * Bu slider aktif mi?
+   */
+  active?: boolean | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -260,20 +262,9 @@ export interface ContentWithImage {
   title: string;
   description?: string | null;
   image: number | Media;
-  imagePosition?: ('left' | 'right') | null;
-  showCounters?: boolean | null;
-  counters?: {
-    products?: number | null;
-    partners?: number | null;
-  };
   buttonText?: string | null;
-  translations?: {
-    tr?: {
-      title?: string | null;
-      description?: string | null;
-      buttonText?: string | null;
-    };
-  };
+  buttonLink?: string | null;
+  order?: number | null;
   active?: boolean | null;
   updatedAt: string;
   createdAt: string;
@@ -525,9 +516,9 @@ export interface SlidersSelect<T extends boolean = true> {
   slides?:
     | T
     | {
-        image?: T;
         title?: T;
         description?: T;
+        image?: T;
         buttonText?: T;
         buttonLink?: T;
         id?: T;
@@ -548,6 +539,7 @@ export interface SlidersSelect<T extends boolean = true> {
                   };
             };
       };
+  active?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -572,26 +564,9 @@ export interface ContentWithImageSelect<T extends boolean = true> {
   title?: T;
   description?: T;
   image?: T;
-  imagePosition?: T;
-  showCounters?: T;
-  counters?:
-    | T
-    | {
-        products?: T;
-        partners?: T;
-      };
   buttonText?: T;
-  translations?:
-    | T
-    | {
-        tr?:
-          | T
-          | {
-              title?: T;
-              description?: T;
-              buttonText?: T;
-            };
-      };
+  buttonLink?: T;
+  order?: T;
   active?: T;
   updatedAt?: T;
   createdAt?: T;

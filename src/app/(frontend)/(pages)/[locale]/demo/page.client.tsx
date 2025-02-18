@@ -82,7 +82,7 @@ export default function DemoPageClient() {
       } else {
         throw new Error("An error occurred");
       }
-    } catch (error) {
+    } catch {
       toast.error(t('toast.error.generic'));
     } finally {
       setIsSubmitting(false);

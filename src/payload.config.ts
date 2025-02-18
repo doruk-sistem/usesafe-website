@@ -9,13 +9,15 @@ import { PrivacyPolicy } from './collections/privacy-policy'
 import { Slider } from './collections/slider'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
-const filename = fileURLToPath(import.meta.url)
-const dirname = path.dirname(filename)
 import { ContentWithImage } from './collections/content-with-image'
 import { MediaBlock } from './collections/media-block'
 import { Counter } from './collections/counter'
 
+import { en } from '@payloadcms/translations/languages/en'
+import { tr } from '@payloadcms/translations/languages/tr'
 
+const filename = fileURLToPath(import.meta.url)
+const dirname = path.dirname(filename)
 
 export default buildConfig({
   admin: {
@@ -24,19 +26,9 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     }
   },
-  localization: {
-    locales: [
-      {
-        code: 'en',
-        label: 'English',
-      },
-      {
-        code: 'tr',
-        label: 'Türkçe',
-      },
-    ],
-    defaultLocale: 'en',
-    fallback: true,
+  i18n: {
+    supportedLanguages: { en, tr },
+    fallbackLanguage: 'en',
   },
   collections: [
     Users, 
@@ -57,8 +49,15 @@ export default buildConfig({
     pool: {
       connectionString: process.env.DATABASE_URI || '',
     },
+    migrationDir: 'auto', // migrate yerine migrationMode: 'auto' kullanıyoruz
   }),
   plugins: [
     payloadCloudPlugin(),
   ],
 })
+
+
+
+
+
+

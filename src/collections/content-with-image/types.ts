@@ -1,3 +1,10 @@
+export interface ContentWithImageTranslation {
+  title?: string;
+  description?: string;
+  buttonText?: string;
+  buttonLink?: string;
+}
+
 export interface ContentWithImageData {
   id: string;
   title: string;
@@ -8,19 +15,10 @@ export interface ContentWithImageData {
     width?: number;
     height?: number;
   };
-  imagePosition?: 'left' | 'right';
-  showCounters?: boolean;
-  counters?: {
-    products?: number;
-    partners?: number;
-  };
   buttonText?: string;
+  buttonLink?: string;
+  order: number;
   translations?: {
-    tr?: {
-      title?: string;
-      description?: string;
-      buttonText?: string;
-    };
+    tr?: ContentWithImageTranslation;
   };
-  active: boolean;
 }

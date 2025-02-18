@@ -8,7 +8,6 @@ import { CiDiscount1 } from "react-icons/ci";
 import { LuFootprints } from "react-icons/lu";
 import { IoQrCodeOutline } from "react-icons/io5";
 import { useLocale } from "next-intl";
-
 import { Button } from "@/frontend/_components/button";
 import Header from "@/frontend/_components/header";
 import Footer from "@/frontend/_components/footer";
@@ -17,9 +16,8 @@ import NewsletterBlock from "@/blocks/newsletter-block";
 
 import RenderBlocks from "@/blocks/RenderBlocks";
 
-import Counter from "../../_components/counter";
 import { ClientsBlock } from "@/blocks/clients-block/Component";
-import { PartnerContent, PartnersData } from "@/collections/partners/types";
+import { PartnersData } from "@/collections/partners/types";
 import { ContentWithImageData } from "@/collections/content-with-image/types";
 import { MediaBlockData } from "@/collections/media-block/types";
 import Link from "next/link";
@@ -83,10 +81,6 @@ export default function PageClient({ sliderData, partnersData, contentWithImageD
     }));
   }, [sliderData, locale]);
 
-  const isPartnerContent = (client: any): client is PartnerContent => {
-    return 'logo' in client;
-  };
-
   const allClients = useMemo(() => {
     return (partnersData?.partners || []).map(partner => ({
       name: partner.name,
@@ -122,11 +116,13 @@ export default function PageClient({ sliderData, partnersData, contentWithImageD
 
 
     // ContentWithImage bloklarını ekle
-    ...(contentWithImageData || []).map((content: ContentWithImageData) => ({
+    ...(contentWithImageData || [])
+    .sort((a, b) => (a.order || 0) - (b.order || 0))
+    .map((content: ContentWithImageData) => ({
       blockType: "contentWithImage" as const,
       layout: {
-        title: locale === 'tr' && content.translations?.tr?.title 
-          ? content.translations.tr.title 
+        title: locale === 'tr' && content.translations?.tr?.title
+          ? content.translations.tr.title
           : content.title,
         description: locale === 'tr' && content.translations?.tr?.description
           ? content.translations.tr.description
@@ -138,21 +134,15 @@ export default function PageClient({ sliderData, partnersData, contentWithImageD
           height: content.image.height || 684,
           imgClassName: "tw-rounded-lg",
         },
-        imagePosition: content.imagePosition || 'left',
-        contentFooter: content.showCounters ? (
-          <div>
-            <div className="tw-flex tw-items-center tw-gap-10">
-              <Counter
-                value={content.counters?.products || 0}
-                suffix="M"
-                description={t('certified_products')}
-              />
-              <Counter
-                value={content.counters?.partners || 0}
-                suffix="K"
-                description={t('certified_partner')}
-              />
-            </div>
+        order: content.order,
+        contentFooter: (
+          <Link 
+            href={
+              locale === 'tr' && content.translations?.tr?.buttonLink 
+                ? content.translations.tr.buttonLink 
+                : content.buttonLink || '#'
+            }
+          >
             <ButtonSwitchAnimation
               size="lg"
               uppercase
@@ -162,17 +152,7 @@ export default function PageClient({ sliderData, partnersData, contentWithImageD
                 ? content.translations.tr.buttonText 
                 : content.buttonText}
             </ButtonSwitchAnimation>
-          </div>
-        ) : (
-          <ButtonSwitchAnimation
-            size="lg"
-            uppercase
-            icon={<HiArrowNarrowRight />}
-          >
-            {locale === 'tr' && content.translations?.tr?.buttonText 
-              ? content.translations.tr.buttonText 
-              : content.buttonText}
-          </ButtonSwitchAnimation>
+          </Link>
         ),
       },
       sectionOptions: {

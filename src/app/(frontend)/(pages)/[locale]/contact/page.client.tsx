@@ -67,7 +67,7 @@ export default function ContactPageClient() {
       } else {
         throw new Error("An error occurred");
       }
-    } catch (error) {
+    } catch{
       toast.error(t('form.toast.error'));
     } finally {
       setIsSubmitting(false);

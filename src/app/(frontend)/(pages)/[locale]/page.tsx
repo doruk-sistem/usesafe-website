@@ -6,15 +6,14 @@ import PageClient from "./page.client";
 import { ContentWithImageData } from "@/collections/content-with-image/types";
 import { MediaBlockData } from "@/collections/media-block/types";
 import { CounterData } from "@/collections/counter/types";
-
-export default async function HomePage({ params }: { params: { locale: string } }) {
+export default async function HomePage({}: { params: { locale: string } }) {
   try {
     const payload = await initPayload();
     
     const sliderResponse = await payload.find({
       collection: 'sliders',
       where: {
-        title: { equals: 'Homepage Main Slider' }
+        active: { equals: true }  // Sadece active kontrolü
       }
     });
 
@@ -41,11 +40,12 @@ export default async function HomePage({ params }: { params: { locale: string } 
     });
 
     const counterResponse = await payload.find({
-      collection: 'counter' as 'counter',
+      collection: 'counter' as const,
       where: {
         active: { equals: true }
       }
     });
+
 
     return <PageClient 
       sliderData={sliderResponse.docs[0] as SliderData}

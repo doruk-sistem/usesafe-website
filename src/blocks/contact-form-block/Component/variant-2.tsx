@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function ContactFormBlockVariant2() {
   return (
     <div
@@ -14,7 +16,7 @@ export function ContactFormBlockVariant2() {
         </p>
         <div className="icon-with-text-style-01 feature-box feature-box-left-icon-middle last-paragraph-no-margin mt-auto">
           <div className="feature-box-icon me-15px">
-            <img src="https://via.placeholder.com/100x62" alt="" />
+            <Image src="https://via.placeholder.com/100x62" alt="" width={100} height={62} />
           </div>
           <div className="feature-box-content">
             <span className="text-dark-gray fs-19 fw-600 d-block">
