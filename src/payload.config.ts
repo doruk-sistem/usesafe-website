@@ -13,22 +13,21 @@ import { ContentWithImage } from './collections/content-with-image'
 import { MediaBlock } from './collections/media-block'
 import { Counter } from './collections/counter'
 
-import { en } from '@payloadcms/translations/languages/en'
-import { tr } from '@payloadcms/translations/languages/tr'
+// import { en } from '@payloadcms/translations/languages/en'
+// import { tr } from '@payloadcms/translations/languages/tr'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
+interface LocaleConfig {
+  label: string;
+  code: string;
+  default?: boolean;
+}
+
 export default buildConfig({
   admin: {
-    user: Users.slug,
-    importMap: {
-      baseDir: path.resolve(dirname),
-    }
-  },
-  i18n: {
-    supportedLanguages: { en, tr },
-    fallbackLanguage: 'en',
+    user: 'users',
   },
   collections: [
     Users, 
@@ -43,21 +42,31 @@ export default buildConfig({
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
-    outputFile: path.resolve(dirname, 'payload-types.ts'),
+    outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
   db: postgresAdapter({
     pool: {
       connectionString: process.env.DATABASE_URI || '',
     },
-    migrationDir: 'auto', // migrate yerine migrationMode: 'auto' kullanıyoruz
+    migrationDir: 'auto',
   }),
   plugins: [
     payloadCloudPlugin(),
   ],
-})
-
-
-
-
-
-
+  // Localization ayarlarını ekliyoruz
+  localization: {
+    locales: [
+      {
+        label: 'Türkçe',
+        code: 'tr', 
+        default: true,
+      } as LocaleConfig,
+      {
+        label: 'English',
+        code: 'en',
+      } as LocaleConfig,
+    ],
+    defaultLocale: 'tr',
+    fallback: true,
+  },
+}); 

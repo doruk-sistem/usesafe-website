@@ -1,13 +1,14 @@
+"use client";
+
 import React from "react";
 import { Media } from "@/components/Media";
-import { MediaProps } from "@/components/Media/types";
 
 interface ContentWithImageBlockProps {
-  title: string;
-  description?: string;
+  title: string;  // Payload'dan gelen veri zaten doğru locale'de olacak
+  description: string;
   contentFooter?: React.ReactNode;
-  image: MediaProps;
-  order: number;
+  image: any;
+  order?: number | string;
 }
 
 export function ContentWithImageBlock({

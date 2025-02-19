@@ -6,7 +6,7 @@ import PageClient from "./page.client";
 import { ContentWithImageData } from "@/collections/content-with-image/types";
 import { MediaBlockData } from "@/collections/media-block/types";
 import { CounterData } from "@/collections/counter/types";
-export default async function HomePage({}: { params: { locale: string } }) {
+export default async function HomePage({params}: { params: { locale: string } }) {
   try {
     const payload = await initPayload();
     
@@ -27,6 +27,8 @@ export default async function HomePage({}: { params: { locale: string } }) {
 
     const contentWithImageResponse = await payload.find({
       collection: 'content-with-image',
+      locale: params.locale as 'tr' | 'all' | 'en' | undefined, // Mevcut locale
+      depth: 2, 
       where: {
         active: { equals: true }
       }

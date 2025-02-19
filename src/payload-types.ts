@@ -96,7 +96,7 @@ export interface Config {
   };
   globals: {};
   globalsSelect: {};
-  locale: null;
+  locale: 'tr' | 'en';
   user: User & {
     collection: 'users';
   };
@@ -259,10 +259,22 @@ export interface Partner {
  */
 export interface ContentWithImage {
   id: number;
+  /**
+   * Title
+   */
   title: string;
+  /**
+   * Description
+   */
   description?: string | null;
   image: number | Media;
+  /**
+   * Button Text
+   */
   buttonText?: string | null;
+  /**
+   * Button Link
+   */
   buttonLink?: string | null;
   order?: number | null;
   active?: boolean | null;

@@ -123,10 +123,10 @@ export default function PageClient({ sliderData, partnersData, contentWithImageD
       layout: {
         title: locale === 'tr' && content.translations?.tr?.title
           ? content.translations.tr.title
-          : content.title,
+          : content.title || '', // Boş string fallback ekledik
         description: locale === 'tr' && content.translations?.tr?.description
           ? content.translations.tr.description
-          : content.description,
+          : content.description || '', // Boş string fallback ekledik
         image: {
           src: content.image.url,
           alt: content.image.alt,
@@ -135,7 +135,7 @@ export default function PageClient({ sliderData, partnersData, contentWithImageD
           imgClassName: "tw-rounded-lg",
         },
         order: content.order,
-        contentFooter: (
+        contentFooter: content.buttonText ? (
           <Link 
             href={
               locale === 'tr' && content.translations?.tr?.buttonLink 
@@ -153,13 +153,14 @@ export default function PageClient({ sliderData, partnersData, contentWithImageD
                 : content.buttonText}
             </ButtonSwitchAnimation>
           </Link>
-        ),
+        ) : null,
       },
       sectionOptions: {
         innerContainer: true,
       },
     })),
     // Diğer statik bloklar
+    
     
     ...(mediaBlockData || []).map((media: MediaBlockData) => ({
       blockType: "media" as const,
