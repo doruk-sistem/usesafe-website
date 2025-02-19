@@ -11,9 +11,12 @@ export default async function HomePage({params}: { params: { locale: string } })
     const payload = await initPayload();
     
     const sliderResponse = await payload.find({
-      collection: 'sliders',
+      collection: 'slider',
+      locale: params.locale as 'tr' | 'all' | 'en' | undefined, // Mevcut locale
       where: {
-        active: { equals: true }  // Sadece active kontrolü
+        active: {
+          equals: true
+        }
       }
     });
 
@@ -36,6 +39,7 @@ export default async function HomePage({params}: { params: { locale: string } })
 
     const mediaBlockResponse = await payload.find({
       collection: 'media-block',
+      locale: params.locale as 'tr' | 'all' | 'en' | undefined, // Mevcut locale
       where: {
         active: { equals: true }
       }
@@ -43,6 +47,7 @@ export default async function HomePage({params}: { params: { locale: string } })
 
     const counterResponse = await payload.find({
       collection: 'counter' as const,
+      locale: params.locale as 'tr' | 'all' | 'en' | undefined, // Mevcut locale
       where: {
         active: { equals: true }
       }

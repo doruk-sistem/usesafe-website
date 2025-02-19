@@ -94,7 +94,6 @@ export default function PageClient({ sliderData, partnersData, contentWithImageD
       <RenderBlocks
   key={`blocks-${locale}`}
   blocks={[
-
     {
       blockType: "slider",
       layout: {
@@ -103,163 +102,150 @@ export default function PageClient({ sliderData, partnersData, contentWithImageD
       sectionOptions: {
         footerContent: (
           <ClientsBlock
-          clients={allClients}
-          type="slick"
-          gradientColor="transparent"
-        />
-        
+            clients={allClients}
+            type="slick"
+            gradientColor="transparent"
+          />
         ),
         innerContainer: true,
         className: "tw-py-5 tw-bg-[url('/images/background-16-9-1.png')] tw-bg-cover tw-bg-center",
       },
     },
-
-
-    // ContentWithImage bloklarını ekle
     ...(contentWithImageData || [])
-    .sort((a, b) => (a.order || 0) - (b.order || 0))
-    .map((content: ContentWithImageData) => ({
-      blockType: "contentWithImage" as const,
-      layout: {
-        title: locale === 'tr' && content.translations?.tr?.title
-          ? content.translations.tr.title
-          : content.title || '', // Boş string fallback ekledik
-        description: locale === 'tr' && content.translations?.tr?.description
-          ? content.translations.tr.description
-          : content.description || '', // Boş string fallback ekledik
-        image: {
-          src: content.image.url,
-          alt: content.image.alt,
-          width: content.image.width || 580,
-          height: content.image.height || 684,
-          imgClassName: "tw-rounded-lg",
-        },
-        order: content.order,
-        contentFooter: content.buttonText ? (
-          <Link 
-            href={
-              locale === 'tr' && content.translations?.tr?.buttonLink 
-                ? content.translations.tr.buttonLink 
-                : content.buttonLink || '#'
-            }
-          >
-            <ButtonSwitchAnimation
-              size="lg"
-              uppercase
-              icon={<HiArrowNarrowRight />}
-            >
-              {locale === 'tr' && content.translations?.tr?.buttonText 
-                ? content.translations.tr.buttonText 
-                : content.buttonText}
-            </ButtonSwitchAnimation>
-          </Link>
-        ) : null,
-      },
-      sectionOptions: {
-        innerContainer: true,
-      },
-    })),
-    // Diğer statik bloklar
-    
-    
-    ...(mediaBlockData || []).map((media: MediaBlockData) => ({
-      blockType: "media" as const,
-      layout: {
-        src: media.media.url,
-        alt: media.media.alt,
-        imgClassName: "tw-w-full tw-object-contain",
-        className: "tw-w-full tw-flex tw-justify-center",
-        width: media.media.width || 1000,
-        height: media.media.height || 1000,
-      },
-      sectionOptions: {
-        innerContainer: true,
-        title: locale === 'tr' && media.translations?.tr?.title 
-          ? media.translations.tr.title 
-          : media.title,
-        description: locale === 'tr' && media.translations?.tr?.description
-          ? media.translations.tr.description 
-          : media.description,
-        footerContent: (
-          <div className="tw-flex tw-justify-center tw-items-center">
-            <Link 
-              href={locale === 'tr' && media.translations?.tr?.buttonLink 
-                ? media.translations.tr.buttonLink 
-                : media.buttonLink || '#'}
-            >
-              <Button>
-                {locale === 'tr' && media.translations?.tr?.buttonText 
-                  ? media.translations.tr.buttonText 
-                  : media.buttonText}
-              </Button>
+      .sort((a, b) => (a.order || 0) - (b.order || 0))
+      .map((content: ContentWithImageData) => ({
+        blockType: "contentWithImage" as const,
+        layout: {
+          title: content.title || '',
+          description: content.description || '',
+          image: {
+            src: content.image.url,
+            alt: content.image.alt,
+            width: content.image.width || 580,
+            height: content.image.height || 684,
+            imgClassName: "tw-rounded-lg",
+          },
+          order: content.order,
+          contentFooter: content.buttonText ? (
+            <Link href={content.buttonLink || '#'}>
+              <ButtonSwitchAnimation
+                size="lg"
+                uppercase
+                icon={<HiArrowNarrowRight />}
+              >
+                {content.buttonText}
+              </ButtonSwitchAnimation>
             </Link>
-          </div>
-        ),
-        className: "tw-bg-gradient-to-b tw-from-gray-100 tw-to-white",
-      },
-    })),
-    ...(counterData || []).map((counter: CounterData) => ({
-      blockType: "counter" as const,
+          ) : null,
+        },
+        sectionOptions: {
+          innerContainer: true,
+        },
+      })),
+      ...(mediaBlockData || []).map((media: MediaBlockData) => ({
+        blockType: "media" as const,
+        layout: {
+          src: media.media.url,
+          alt: media.media.alt,
+          imgClassName: "tw-w-full tw-object-contain",
+          className: "tw-w-full tw-flex tw-justify-center",
+          width: media.media.width || 1000,
+          height: media.media.height || 1000,
+        },
+        sectionOptions: {
+          innerContainer: true,
+          title: locale === 'tr' && media.translations?.tr?.title
+            ? media.translations.tr.title
+            : media.title || '',
+          description: locale === 'tr' && media.translations?.tr?.description
+            ? media.translations.tr.description
+            : media.description || '',
+          footerContent: (
+            <div className="tw-flex tw-justify-center tw-items-center">
+              <Link 
+                href={
+                  locale === 'tr' && media.translations?.tr?.buttonLink 
+                    ? media.translations.tr.buttonLink 
+                    : media.buttonLink || '#'
+                }
+              >
+                <Button>
+                  {locale === 'tr' && media.translations?.tr?.buttonText 
+                    ? media.translations.tr.buttonText 
+                    : media.buttonText || ''}
+                </Button>
+              </Link>
+            </div>
+          ),
+          className: "tw-bg-gradient-to-b tw-from-gray-100 tw-to-white",
+        },
+      })),
+      ...(counterData || []).map((counter: CounterData) => ({
+        blockType: "counter" as const,
+        layout: {
+          items: locale === 'tr' && counter.translations?.tr?.items 
+            ? counter.translations.tr.items  // TR locale ise TR items
+            : locale === 'en' && counter.translations?.en?.items
+            ? counter.translations.en.items  // EN locale ise EN items
+            : counter.items,  // Fallback olarak default items
+        },
+        sectionOptions: {
+          title: locale === 'tr' && counter.translations?.tr?.title 
+            ? counter.translations.tr.title 
+            : locale === 'en' && counter.translations?.en?.title
+            ? counter.translations.en.title
+            : counter.title,
+          innerContainer: true,
+        },
+      })),
+    {
+      blockType: "accordion",
       layout: {
-        items: locale === 'tr' && counter.translations?.tr?.items 
-          ? counter.translations.tr.items 
-          : counter.items,
+        title: t('why_usesafe.approach_title'),
+        description: t('why_usesafe.approach_description'),
       },
       sectionOptions: {
-        title: locale === 'tr' && counter.translations?.tr?.title 
-          ? counter.translations.tr.title 
-          : counter.title,
+        title: t('why_usesafe.title'),
         innerContainer: true,
       },
-    })),
+    },
+    {
+      blockType: "iconList",
+      layout: {
+        items: [
           {
-            blockType: "accordion",
-            layout: {
-              title: t('why_usesafe.approach_title'),
-              description: t('why_usesafe.approach_description'),
-            },
-            sectionOptions: {
-              title: t('why_usesafe.title'),
-              innerContainer: true,
-            },
+            icon: <GiWorld />,
+            description: t('IconList.items.security.description')
           },
           {
-            blockType: "iconList",
-            layout: {
-              items: [
-                {
-                  icon: <GiWorld />,
-                  description: t('IconList.items.security.description')
-                },
-                {
-                  icon: <CiDiscount1 />,
-                  description: t('IconList.items.usability.description')
-                },
-                {
-                  icon: <GiWaterRecycling />,
-                  description: t('IconList.items.quality.description')
-                },
-                {
-                  icon: <LuFootprints />,
-                  description: t('IconList.items.speed.description')
-                },
-                {
-                  icon: <IoQrCodeOutline />,
-                  description: t('IconList.items.privacy.description')
-                },
-                {
-                  icon: <GiConversation />,
-                  description: t('IconList.items.support.description')
-                }
-              ]
-            },
-            sectionOptions: {
-              innerContainer: true,
-              className: "tw-bg-gray-50"
-            }
+            icon: <CiDiscount1 />,
+            description: t('IconList.items.usability.description')
           },
-        ]}
-      />
+          {
+            icon: <GiWaterRecycling />,
+            description: t('IconList.items.quality.description')
+          },
+          {
+            icon: <LuFootprints />,
+            description: t('IconList.items.speed.description')
+          },
+          {
+            icon: <IoQrCodeOutline />,
+            description: t('IconList.items.privacy.description')
+          },
+          {
+            icon: <GiConversation />,
+            description: t('IconList.items.support.description')
+          }
+        ]
+      },
+      sectionOptions: {
+        innerContainer: true,
+        className: "tw-bg-gray-50"
+      }
+    }
+  ]}
+/>
       <NewsletterBlock />
       <Footer />
     </div>

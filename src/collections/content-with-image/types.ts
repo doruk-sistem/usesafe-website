@@ -3,6 +3,7 @@ export interface ContentWithImageTranslation {
   description?: string;
   buttonText?: string;
   buttonLink?: string;
+  order?: number;
 }
 
 export interface ContentWithImageData {

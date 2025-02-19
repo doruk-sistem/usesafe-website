@@ -68,7 +68,7 @@ export interface Config {
     users: User;
     media: Media;
     'privacy-policy': PrivacyPolicy;
-    sliders: Slider;
+    slider: Slider;
     partners: Partner;
     'content-with-image': ContentWithImage;
     'media-block': MediaBlock;
@@ -82,7 +82,7 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     'privacy-policy': PrivacyPolicySelect<false> | PrivacyPolicySelect<true>;
-    sliders: SlidersSelect<false> | SlidersSelect<true>;
+    slider: SliderSelect<false> | SliderSelect<true>;
     partners: PartnersSelect<false> | PartnersSelect<true>;
     'content-with-image': ContentWithImageSelect<false> | ContentWithImageSelect<true>;
     'media-block': MediaBlockSelect<false> | MediaBlockSelect<true>;
@@ -204,34 +204,19 @@ export interface PrivacyPolicy {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "sliders".
+ * via the `definition` "slider".
  */
 export interface Slider {
   id: number;
   title: string;
   slides: {
-    title: string;
-    description?: string | null;
     image: number | Media;
+    title: string;
+    description: string;
     buttonText?: string | null;
     buttonLink?: string | null;
     id?: string | null;
   }[];
-  translations?: {
-    tr?: {
-      slides?:
-        | {
-            title?: string | null;
-            description?: string | null;
-            buttonText?: string | null;
-            id?: string | null;
-          }[]
-        | null;
-    };
-  };
-  /**
-   * Bu slider aktif mi?
-   */
   active?: boolean | null;
   updatedAt: string;
   createdAt: string;
@@ -291,21 +276,7 @@ export interface MediaBlock {
   description?: string | null;
   media: number | Media;
   buttonText?: string | null;
-  /**
-   * Enter the URL for button (e.g., /contact, https://example.com)
-   */
   buttonLink?: string | null;
-  translations?: {
-    tr?: {
-      title?: string | null;
-      description?: string | null;
-      buttonText?: string | null;
-      buttonLink?: string | null;
-    };
-  };
-  /**
-   * Toggle to show/hide this media block
-   */
   active?: boolean | null;
   updatedAt: string;
   createdAt: string;
@@ -317,28 +288,11 @@ export interface MediaBlock {
 export interface Counter {
   id: number;
   title: string;
-  items?:
-    | {
-        description: string;
-        value: number;
-        id?: string | null;
-      }[]
-    | null;
-  translations?: {
-    tr?: {
-      title?: string | null;
-      items?:
-        | {
-            description?: string | null;
-            value?: number | null;
-            id?: string | null;
-          }[]
-        | null;
-    };
-  };
-  /**
-   * Toggle to show/hide this counter section
-   */
+  items: {
+    description: string;
+    value: number;
+    id?: string | null;
+  }[];
   active?: boolean | null;
   updatedAt: string;
   createdAt: string;
@@ -363,7 +317,7 @@ export interface PayloadLockedDocument {
         value: number | PrivacyPolicy;
       } | null)
     | ({
-        relationTo: 'sliders';
+        relationTo: 'slider';
         value: number | Slider;
       } | null)
     | ({
@@ -521,35 +475,19 @@ export interface PrivacyPolicySelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "sliders_select".
+ * via the `definition` "slider_select".
  */
-export interface SlidersSelect<T extends boolean = true> {
+export interface SliderSelect<T extends boolean = true> {
   title?: T;
   slides?:
     | T
     | {
+        image?: T;
         title?: T;
         description?: T;
-        image?: T;
         buttonText?: T;
         buttonLink?: T;
         id?: T;
-      };
-  translations?:
-    | T
-    | {
-        tr?:
-          | T
-          | {
-              slides?:
-                | T
-                | {
-                    title?: T;
-                    description?: T;
-                    buttonText?: T;
-                    id?: T;
-                  };
-            };
       };
   active?: T;
   updatedAt?: T;
@@ -593,18 +531,6 @@ export interface MediaBlockSelect<T extends boolean = true> {
   media?: T;
   buttonText?: T;
   buttonLink?: T;
-  translations?:
-    | T
-    | {
-        tr?:
-          | T
-          | {
-              title?: T;
-              description?: T;
-              buttonText?: T;
-              buttonLink?: T;
-            };
-      };
   active?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -621,22 +547,6 @@ export interface CounterSelect<T extends boolean = true> {
         description?: T;
         value?: T;
         id?: T;
-      };
-  translations?:
-    | T
-    | {
-        tr?:
-          | T
-          | {
-              title?: T;
-              items?:
-                | T
-                | {
-                    description?: T;
-                    value?: T;
-                    id?: T;
-                  };
-            };
       };
   active?: T;
   updatedAt?: T;

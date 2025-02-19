@@ -1,5 +1,6 @@
 import { CollectionConfig } from 'payload';
 
+
 export const ContentWithImage: CollectionConfig = {
   slug: 'content-with-image',
   admin: {

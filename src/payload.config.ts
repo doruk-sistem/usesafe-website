@@ -9,10 +9,9 @@ import { PrivacyPolicy } from './collections/privacy-policy'
 import { Slider } from './collections/slider'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
-import { ContentWithImage } from './collections/content-with-image'
 import { MediaBlock } from './collections/media-block'
 import { Counter } from './collections/counter'
-
+import { ContentWithImage } from './collections/content-with-image'
 // import { en } from '@payloadcms/translations/languages/en'
 // import { tr } from '@payloadcms/translations/languages/tr'
 
@@ -53,7 +52,7 @@ export default buildConfig({
   plugins: [
     payloadCloudPlugin(),
   ],
-  // Localization ayarlarını ekliyoruz
+
   localization: {
     locales: [
       {
