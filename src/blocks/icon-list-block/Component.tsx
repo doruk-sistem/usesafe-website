@@ -3,7 +3,7 @@
 import React from "react";
 
 import { IconListBlock as IconListBlockProps } from "@/payload-types";
-import { getIconComponent } from "@/utils/icons";
+import { getIconComponent } from "@/utils/getIcons";
 
 export function IconListBlock({ items }: IconListBlockProps) {
   const Icon = getIconComponent(items[0]?.icon);

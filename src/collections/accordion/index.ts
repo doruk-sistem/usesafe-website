@@ -1,6 +1,6 @@
 import { CollectionConfig } from "payload";
 
-export const Accordion: CollectionConfig = {
+export const Accordion: CollectionConfig<"accordion"> = {
   slug: "accordion",
   admin: {
     useAsTitle: "title",
