@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import Slider from "react-slick";
+
 import { Button } from "@/frontend/_components/button";
-import Link from 'next/link';
 
 interface SlideItem {
   image: {
@@ -52,7 +53,7 @@ export function SliderBlock({ slides }: SliderBlockProps) {
           className="!tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 tw-px-4 lg:tw-px-12 tw-py-4 tw-space-y-6"
           key={index}
         >
-         
+
           <div className="tw-w-full tw-h-full tw-flex tw-flex-col tw-justify-center tw-items-center lg:tw-items-start tw-space-y-6">
             <h2 className="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-text-gray-900 tw-m-0 tw-text-white">
               {slide.title}
@@ -67,7 +68,6 @@ export function SliderBlock({ slides }: SliderBlockProps) {
             )}
           </div>
 
-          
           <div
             className="tw-w-full tw-h-full"
             data-bottom-top="transform: translateY(100px)"

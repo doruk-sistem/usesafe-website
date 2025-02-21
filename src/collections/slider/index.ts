@@ -1,59 +1,59 @@
 import { CollectionConfig } from "payload";
 
 export const Slider: CollectionConfig = {
-  slug: 'slider',
+  slug: "slider",
   admin: {
-    useAsTitle: 'title',
-    defaultColumns: ['title', 'active'],
+    useAsTitle: "title",
+    defaultColumns: ["title", "active"],
   },
   fields: [
     {
-      name: 'title',
-      type: 'text',
+      name: "title",
+      type: "text",
       required: true,
       localized: true,
     },
     {
-      name: 'slides',
-      type: 'array',
+      name: "slides",
+      type: "array",
       required: true,
       fields: [
         {
-          name: 'image',
-          type: 'upload',
-          relationTo: 'media',
+          name: "image",
+          type: "upload",
+          relationTo: "media",
           required: true,
         },
         {
-          name: 'title',
-          type: 'text',
-          required: true,
-          localized: true,
-        },
-        {
-          name: 'description',
-          type: 'textarea',
+          name: "title",
+          type: "text",
           required: true,
           localized: true,
         },
         {
-          name: 'buttonText',
-          type: 'text',
+          name: "description",
+          type: "textarea",
+          required: true,
           localized: true,
         },
         {
-          name: 'buttonLink',
-          type: 'text',
+          name: "buttonText",
+          type: "text",
           localized: true,
-        }
-      ]
+        },
+        {
+          name: "buttonLink",
+          type: "text",
+          localized: true,
+        },
+      ],
     },
     {
-      name: 'active',
-      type: 'checkbox',
+      name: "active",
+      type: "checkbox",
       defaultValue: true,
       admin: {
-        position: 'sidebar',
+        position: "sidebar",
       },
     },
   ],

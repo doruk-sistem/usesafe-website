@@ -6,12 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "lint:strict": "eslint --max-warnings=0 .",
+    "lint:fix:strict": "eslint --max-warnings=0 --fix ."
   },
   "dependencies": {
     "@payloadcms/db-postgres": "^3.23.0",
     "@payloadcms/next": "^3.23.0",
-    "@payloadcms/payload-cloud": "^3.23.0",
     "@payloadcms/richtext-lexical": "^3.23.0",
     "@payloadcms/translations": "^3.23.0",
     "class-variance-authority": "^0.7.1",

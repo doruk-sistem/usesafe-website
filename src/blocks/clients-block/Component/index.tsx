@@ -1,7 +1,7 @@
 import React from "react";
 
-import ClientsSlick from "./clients-slick";
 import ClientsList from "./clients-list";
+import ClientsSlick from "./clients-slick";
 
 export interface ClientsBlockProps {
   clients: {

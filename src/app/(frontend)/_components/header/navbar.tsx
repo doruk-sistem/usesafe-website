@@ -1,12 +1,13 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
-import { useTranslations } from "next-intl";
 
-import Logo from "../logo";
 import { Button } from "../button";
+import Logo from "../logo";
 import SwitchLanguage from "../switch-language";
+
 import NavLink from "./navlink";
 
 export default function Navbar() {
@@ -32,6 +33,10 @@ export default function Navbar() {
           href: "/solutions/use-safe-certification",
         },
       ],
+    },
+    {
+      label: t("common.blog"),
+      href: "/blog",
     },
     {
       label: t("common.about_dpp"),

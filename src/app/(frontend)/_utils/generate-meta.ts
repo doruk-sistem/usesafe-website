@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 
 import { routing } from "@/i18n/routing";
-
 import { deepMerge } from "@/utils/deep-merge";
 
 type GenerateMetaConfig = {
@@ -28,7 +27,7 @@ type GenerateMetaConfig = {
 
 const generateMeta = async (
   overrides: Metadata | null = null,
-  { path = "", locale: staticLocale = "" }: GenerateMetaConfig = {}
+  { path = "", locale: staticLocale = "" }: GenerateMetaConfig = {},
 ): Promise<Metadata> => {
   const dynamicLocale = await getLocale();
 

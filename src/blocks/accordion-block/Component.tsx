@@ -1,20 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
 import Image from "next/image";
-import { AccordionItem } from '@/collections/accordion/types';
+import React, { useState } from "react";
+
+import { AccordionItem } from "@/collections/accordion/types";
 
 interface AccordionBlockProps {
   title?: string;
   description?: string;
   items?: AccordionItem[];
-  image?: { 
+  image?: {
     url: string;
     alt: string;
   };
 }
 
-export function AccordionBlock({ title, description, items = [], image }: AccordionBlockProps) {
+export function AccordionBlock({ title, description }: AccordionBlockProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
@@ -99,7 +100,7 @@ export function AccordionBlock({ title, description, items = [], image }: Accord
           data-bottom-top="transform: translateY(100px)"
           data-top-bottom="transform: translateY(-100px)"
         >
-         {image && (
+          {image && (
             <Image
               src={image.url}
               alt={image.alt}

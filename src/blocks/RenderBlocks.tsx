@@ -1,17 +1,19 @@
 import React, { ComponentProps, Fragment } from "react";
+
 import Section, { type SectionProps } from "@/components/Section";
+
 import { AccordionBlock } from "./accordion-block/Component";
+import BackgroundVideoBlock from "./background-video/Component";
+import { CertificationIntroBlock } from "./certification-intro-block/Component";
+import { ClientsBlock } from "./clients-block/Component";
+import { ContactFormBlock } from "./contact-form-block/Component";
+import { ContentWithImageBlock } from "./content-with-image-block/Component";
+import { CounterBlock } from "./counter-block/Component";
+import { IconListBlock } from "./icon-list-block/Component";
 import { MediaBlock } from "./media-block/Component";
+import { PageTitleBlock } from "./page-title-block/Component";
 import { PricingBlock } from "./pricing-block";
 import { SliderBlock } from "./slider-block";
-import { ContentWithImageBlock } from "./content-with-image-block/Component";
-import { ClientsBlock } from "./clients-block/Component";
-import { CounterBlock } from "./counter-block/Component";
-import { PageTitleBlock } from "./page-title-block/Component";
-import BackgroundVideoBlock from "./background-video/Component";
-import { ContactFormBlock } from "./contact-form-block/Component";
-import { IconListBlock } from "./icon-list-block/Component";
-import { CertificationIntroBlock } from "./certification-intro-block/Component";
 
 const blockComponents = {
   accordion: AccordionBlock,

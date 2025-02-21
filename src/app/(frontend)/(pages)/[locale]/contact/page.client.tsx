@@ -1,18 +1,18 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
-import { HiArrowNarrowRight } from "react-icons/hi";
 import { FaCheck } from "react-icons/fa";
-import { useTranslations } from 'next-intl';
+import { HiArrowNarrowRight } from "react-icons/hi";
 
+import ButtonSwitchAnimation from "@/app/(frontend)/_components/button-switch-animation";
 import Footer from "@/app/(frontend)/_components/footer";
 import Header from "@/app/(frontend)/_components/header";
-import ButtonSwitchAnimation from "@/app/(frontend)/_components/button-switch-animation";
-import RenderBlocks from "@/blocks/RenderBlocks";
 import NewsletterBlock from "@/blocks/newsletter-block";
+import RenderBlocks from "@/blocks/RenderBlocks";
 export default function ContactPageClient() {
-  const t = useTranslations('ContactUs');
+  const t = useTranslations("ContactUs");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -50,10 +50,10 @@ export default function ContactPageClient() {
           <div>
             <h3 className="tw-text-lg tw-mb-0 tw-font-semibold">
               <FaCheck className="tw-text-green-500 tw-mr-2" />
-              {t('form.toast.success.title')}
+              {t("form.toast.success.title")}
             </h3>
             <p className="tw-text-base tw-mb-0">
-              {t('form.toast.success.description')}
+              {t("form.toast.success.description")}
             </p>
           </div>
         ));
@@ -67,8 +67,9 @@ export default function ContactPageClient() {
       } else {
         throw new Error("An error occurred");
       }
-    } catch{
-      toast.error(t('form.toast.error'));
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error) {
+      toast.error(t("form.toast.error"));
     } finally {
       setIsSubmitting(false);
     }
@@ -84,7 +85,7 @@ export default function ContactPageClient() {
           {
             blockType: "pageTitle",
             layout: {
-              title: t('page_title'),
+              title: t("page_title"),
               backgroundImage: "/images/contact-1.webp",
               downSectionId: "down-section",
             },
@@ -103,18 +104,16 @@ export default function ContactPageClient() {
           >
             <div className="tw-text-center tw-mb-10">
               <h2 className="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-black tw-mb-3">
-                {t('form.title')}
+                {t("form.title")}
               </h2>
-              <p className="tw-text-gray-600">
-                {t('form.description')}
-              </p>
+              <p className="tw-text-gray-600">{t("form.description")}</p>
             </div>
 
             <div className="tw-space-y-6">
               <div className="tw-grid md:tw-grid-cols-2 tw-gap-6">
                 <div className="tw-relative">
                   <label className="tw-block tw-text-sm tw-font-medium tw-mb-2 tw-text-gray-700">
-                    {t('form.fields.full_name.label')}
+                    {t("form.fields.full_name.label")}
                   </label>
                   <input
                     type="text"
@@ -123,13 +122,13 @@ export default function ContactPageClient() {
                     value={formData.name}
                     onChange={handleInputChange}
                     className="tw-w-full tw-px-4 tw-py-3 tw-border tw-rounded-lg focus:tw-ring-2 focus:tw-ring-primary/20 focus:tw-border-primary tw-transition-all"
-                    placeholder={t('form.fields.full_name.placeholder')}
+                    placeholder={t("form.fields.full_name.placeholder")}
                   />
                 </div>
 
                 <div className="tw-relative">
                   <label className="tw-block tw-text-sm tw-font-medium tw-mb-2 tw-text-gray-700">
-                    {t('form.fields.email.label')}
+                    {t("form.fields.email.label")}
                   </label>
                   <input
                     type="email"
@@ -138,7 +137,7 @@ export default function ContactPageClient() {
                     value={formData.email}
                     onChange={handleInputChange}
                     className="tw-w-full tw-px-4 tw-py-3 tw-border tw-rounded-lg focus:tw-ring-2 focus:tw-ring-primary/20 focus:tw-border-primary tw-transition-all"
-                    placeholder={t('form.fields.email.placeholder')}
+                    placeholder={t("form.fields.email.placeholder")}
                   />
                 </div>
               </div>
@@ -146,7 +145,7 @@ export default function ContactPageClient() {
               <div className="tw-grid md:tw-grid-cols-2 tw-gap-6">
                 <div className="tw-relative">
                   <label className="tw-block tw-text-sm tw-font-medium tw-mb-2 tw-text-gray-700">
-                    {t('form.fields.phone.label')}
+                    {t("form.fields.phone.label")}
                   </label>
                   <input
                     type="tel"
@@ -155,13 +154,13 @@ export default function ContactPageClient() {
                     value={formData.phone}
                     onChange={handleInputChange}
                     className="tw-w-full tw-px-4 tw-py-3 tw-border tw-rounded-lg focus:tw-ring-2 focus:tw-ring-primary/20 focus:tw-border-primary tw-transition-all"
-                    placeholder={t('form.fields.phone.placeholder')}
+                    placeholder={t("form.fields.phone.placeholder")}
                   />
                 </div>
 
                 <div className="tw-relative">
                   <label className="tw-block tw-text-sm tw-font-medium tw-mb-2 tw-text-gray-700">
-                    {t('form.fields.subject.label')}
+                    {t("form.fields.subject.label")}
                   </label>
                   <input
                     type="text"
@@ -170,14 +169,14 @@ export default function ContactPageClient() {
                     value={formData.subject}
                     onChange={handleInputChange}
                     className="tw-w-full tw-px-4 tw-py-3 tw-border tw-rounded-lg focus:tw-ring-2 focus:tw-ring-primary/20 focus:tw-border-primary tw-transition-all"
-                    placeholder={t('form.fields.subject.placeholder')}
+                    placeholder={t("form.fields.subject.placeholder")}
                   />
                 </div>
               </div>
 
               <div>
                 <label className="tw-block tw-text-sm tw-font-medium tw-mb-2 tw-text-gray-700">
-                  {t('form.fields.message.label')}
+                  {t("form.fields.message.label")}
                 </label>
                 <textarea
                   name="message"
@@ -186,7 +185,7 @@ export default function ContactPageClient() {
                   value={formData.message}
                   onChange={handleInputChange}
                   className="tw-w-full tw-px-4 tw-py-3 tw-border tw-rounded-lg focus:tw-ring-2 focus:tw-ring-primary/20 focus:tw-border-primary tw-transition-all"
-                  placeholder={t('form.fields.message.placeholder')}
+                  placeholder={t("form.fields.message.placeholder")}
                 />
               </div>
 
@@ -197,7 +196,9 @@ export default function ContactPageClient() {
                   icon={<HiArrowNarrowRight />}
                   className="tw-w-full"
                 >
-                  {isSubmitting ? t('form.submit.sending') : t('form.submit.send')}
+                  {isSubmitting
+                    ? t("form.submit.sending")
+                    : t("form.submit.send")}
                 </ButtonSwitchAnimation>
               </div>
             </div>

@@ -1,5 +1,5 @@
-import React from "react";
 import { VariantProps, cva } from "class-variance-authority";
+import React from "react";
 
 import { cn } from "@/utils/cn";
 
@@ -33,7 +33,7 @@ const buttonVariants = cva(
       size: "default",
       uppercase: false,
     },
-  }
+  },
 );
 
 export interface ButtonProps
@@ -51,7 +51,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 Button.displayName = "Button";

@@ -37,7 +37,7 @@ export async function POST(req: Request) {
     from: '"UseSafe Website" <info@doruksistem.com.tr>',
     to: "info@doruksistem.com.tr",
     subject: "UseSafe Website - Contact",
-    text: `please complete your registration.`,
+    text: "please complete your registration.",
     html: `
             <b>Hello, there is somebody who wants to get in touch for UseSafe website.</b>
             <b>Sender Information:</b>

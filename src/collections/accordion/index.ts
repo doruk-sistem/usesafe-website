@@ -1,63 +1,63 @@
 import { CollectionConfig } from "payload";
 
 export const Accordion: CollectionConfig = {
-  slug: 'accordion',
+  slug: "accordion",
   admin: {
-    useAsTitle: 'title',
-    defaultColumns: ['title', 'active'],
+    useAsTitle: "title",
+    defaultColumns: ["title", "active"],
   },
   fields: [
     {
-        name: 'sectionTitle',  // Yeni alan ekledik
-        type: 'text',
-        required: true,
-        localized: true,
-        admin: {
-          description: 'Bu başlık accordion üzerinde görünecek'
-        }
+      name: "sectionTitle", // Yeni alan ekledik
+      type: "text",
+      required: true,
+      localized: true,
+      admin: {
+        description: "Bu başlık accordion üzerinde görünecek",
       },
+    },
     {
-      name: 'title',
-      type: 'text',
+      name: "title",
+      type: "text",
       required: true,
       localized: true,
     },
     {
-      name: 'description',
-      type: 'textarea',
+      name: "description",
+      type: "textarea",
       required: true,
       localized: true,
     },
     {
-        name: 'image',  
-        type: 'upload',
-        relationTo: 'media',
-        required: true,
-      },
+      name: "image",
+      type: "upload",
+      relationTo: "media",
+      required: true,
+    },
     {
-      name: 'items',
-      type: 'array',
+      name: "items",
+      type: "array",
       required: true,
       localized: true,
       fields: [
         {
-          name: 'title',
-          type: 'text',
+          name: "title",
+          type: "text",
           required: true,
         },
         {
-          name: 'description',
-          type: 'textarea',
+          name: "description",
+          type: "textarea",
           required: true,
-        }
-      ]
+        },
+      ],
     },
     {
-      name: 'active',
-      type: 'checkbox',
+      name: "active",
+      type: "checkbox",
       defaultValue: true,
       admin: {
-        position: 'sidebar',
+        position: "sidebar",
       },
     },
   ],

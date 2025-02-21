@@ -1,10 +1,9 @@
 import React, { Fragment } from "react";
 
-import type { MediaProps } from "./types";
-
 import { ImageMedia } from "./ImageMedia";
-import { VideoMedia } from "./VideoMedia";
 import { SvgMedia } from "./SvgMedia";
+import type { MediaProps } from "./types";
+import { VideoMedia } from "./VideoMedia";
 
 export const Media: React.FC<MediaProps> = (props) => {
   const { className, htmlElement = "div", resource, type = "image" } = props;

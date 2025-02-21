@@ -8,13 +8,13 @@ export interface SlideData {
     buttonText?: string;
     buttonLink?: string;
   }
-  
+
   export interface SliderData {
     title: string;
     slides: SlideData[];
     translations?: {
       tr: {
-        slides: Omit<SlideData, 'image'>[];
+        slides: Omit<SlideData, "image">[];
       };
     };
   }
