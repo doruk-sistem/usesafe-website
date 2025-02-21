@@ -1,21 +1,16 @@
 "use client";
 
-import Image from "next/image";
 import React, { useState } from "react";
 
-import { AccordionItem } from "@/collections/accordion/types";
+import { Media } from "@/components/Media";
+import { AccordionBlock as AccordionBlockProps } from "@/payload-types";
 
-interface AccordionBlockProps {
-  title?: string;
-  description?: string;
-  items?: AccordionItem[];
-  image?: {
-    url: string;
-    alt: string;
-  };
-}
-
-export function AccordionBlock({ title, description }: AccordionBlockProps) {
+export function AccordionBlock({
+  title,
+  description,
+  image,
+  items,
+}: AccordionBlockProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
@@ -101,12 +96,10 @@ export function AccordionBlock({ title, description }: AccordionBlockProps) {
           data-top-bottom="transform: translateY(-100px)"
         >
           {image && (
-            <Image
-              src={image.url}
-              alt={image.alt}
-              width={1000}
-              height={1000}
-              className="tw-w-full tw-h-full tw-object-contain tw-absolute tw-left-0"
+            <Media
+              resource={image}
+              className="tw-w-full tw-h-full"
+              imgClassName="tw-w-full tw-h-full tw-object-contain tw-absolute tw-left-0"
             />
           )}
         </div>

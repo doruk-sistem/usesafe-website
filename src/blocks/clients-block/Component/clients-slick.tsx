@@ -1,6 +1,7 @@
-import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
+
+import { Media } from "@/components/Media";
 
 import { ClientsBlockProps } from ".";
 
@@ -45,12 +46,9 @@ export default function ClientsSlick({
             key={client.name}
             className="tw-px-5 tw-w-full !tw-inline-flex tw-items-center tw-justify-center tw-cursor-move tw-py-6"
           >
-            <Image
-              src={client.imageSrc}
-              className="tw-w-full tw-h-[30px] md:tw-h-[40px] tw-object-contain"
-              alt={client.name}
-              width={150}
-              height={150}
+            <Media
+              resource={client.image}
+              imgClassName="tw-w-full tw-h-[30px] md:tw-h-[40px] tw-object-contain"
             />
           </div>
         ))}

@@ -16,7 +16,7 @@ export const SvgMedia: React.FC<MediaProps> = (props) => {
   if (!src && resource && typeof resource === "object") {
     const { url } = resource;
 
-    src = `${getClientSideURL()}${url}`;
+    src = `${getClientSideURL()}${encodeURI(url)}`;
   }
 
   return <SVG className={cn(svgClassName)} src={src} />;
