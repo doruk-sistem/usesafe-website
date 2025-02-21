@@ -22,7 +22,9 @@ import { ContentWithImageData } from "@/collections/content-with-image/types";
 import { MediaBlockData } from "@/collections/media-block/types";
 import Link from "next/link";
 import { CounterData } from "@/collections/counter/types";
-
+import { AccordionData } from "@/collections/accordion/types";
+import { IconListData } from "@/collections/icon-list/types";
+import { getIconComponent } from "@/utils/icons";
 interface SlideContent {
   title: string;
   description: string;
@@ -50,9 +52,11 @@ interface PageClientProps {
   contentWithImageData?: ContentWithImageData[];
   mediaBlockData?: MediaBlockData[];
   counterData?: CounterData[];
+  accordionData?: AccordionData[];
+  iconListData?: IconListData[];
 }
 
-export default function PageClient({ sliderData, partnersData, contentWithImageData, mediaBlockData, counterData }: PageClientProps) {
+export default function PageClient({ sliderData, partnersData, contentWithImageData, mediaBlockData, counterData, accordionData, iconListData }: PageClientProps) {
   const t = useTranslations('HomePage');
   const locale = useLocale();
 
@@ -198,53 +202,56 @@ export default function PageClient({ sliderData, partnersData, contentWithImageD
           innerContainer: true,
         },
       })),
-    {
-      blockType: "accordion",
-      layout: {
-        title: t('why_usesafe.approach_title'),
-        description: t('why_usesafe.approach_description'),
-      },
-      sectionOptions: {
-        title: t('why_usesafe.title'),
-        innerContainer: true,
-      },
-    },
-    {
-      blockType: "iconList",
-      layout: {
-        items: [
-          {
-            icon: <GiWorld />,
-            description: t('IconList.items.security.description')
-          },
-          {
-            icon: <CiDiscount1 />,
-            description: t('IconList.items.usability.description')
-          },
-          {
-            icon: <GiWaterRecycling />,
-            description: t('IconList.items.quality.description')
-          },
-          {
-            icon: <LuFootprints />,
-            description: t('IconList.items.speed.description')
-          },
-          {
-            icon: <IoQrCodeOutline />,
-            description: t('IconList.items.privacy.description')
-          },
-          {
-            icon: <GiConversation />,
-            description: t('IconList.items.support.description')
-          }
-        ]
-      },
-      sectionOptions: {
-        innerContainer: true,
-        className: "tw-bg-gray-50"
-      }
-    }
-  ]}
+      ...(accordionData && accordionData.length > 0 ? [{
+        blockType: "accordion" as const,
+        layout: {
+          title: locale === 'tr' && accordionData[0]?.translations?.tr?.title 
+            ? accordionData[0].translations.tr.title 
+            : accordionData[0]?.title,
+          description: locale === 'tr' && accordionData[0]?.translations?.tr?.description 
+            ? accordionData[0].translations.tr.description 
+            : accordionData[0]?.description,
+          items: locale === 'tr' && accordionData[0]?.translations?.tr?.items 
+            ? accordionData[0].translations.tr.items 
+            : accordionData[0]?.items,
+          image: accordionData[0]?.image,
+        },
+        sectionOptions: {
+          title: locale === 'tr' && accordionData[0]?.translations?.tr?.sectionTitle  // Section başlığını ekledik
+            ? accordionData[0].translations.tr.sectionTitle 
+            : accordionData[0]?.sectionTitle,
+          innerContainer: true,
+        },
+      }] : []),
+    
+      ...(iconListData && iconListData.length > 0 ? [{
+        blockType: "iconList" as const,
+        layout: {
+          title: locale === 'tr' && iconListData[0]?.translations?.tr?.title 
+            ? iconListData[0].translations.tr.title 
+            : iconListData[0]?.title,
+          description: locale === 'tr' && iconListData[0]?.translations?.tr?.description 
+            ? iconListData[0].translations.tr.description 
+            : iconListData[0]?.description,
+          items: (locale === 'tr' && iconListData[0]?.translations?.tr?.items 
+            ? iconListData[0].translations.tr.items 
+            : iconListData[0]?.items)?.map(item => {
+              const IconComponent = getIconComponent(item.icon);
+              return {
+                icon: IconComponent ? <IconComponent size={24} /> : null,
+                description: item.description
+              };
+            }) || []
+        },
+        sectionOptions: {
+          title: locale === 'tr' && iconListData[0]?.translations?.tr?.sectionTitle 
+            ? iconListData[0].translations.tr.sectionTitle 
+            : iconListData[0]?.sectionTitle,
+          innerContainer: true,
+          className: "tw-bg-gray-50"
+        }
+      }] : [])
+    ]}
 />
       <NewsletterBlock />
       <Footer />

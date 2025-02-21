@@ -329,35 +329,7 @@
       }
     }
   },
-  "AccordionBlock": {
-    "items": [
-      {
-
-        "title": "Üst Düzey Güvenlik ve Kalite Sağlama",
-        "description": "Usesafe sertifikasyonu, ürünlerinizin sıkı güvenlik ve kalite standartlarını karşılamasını sağlamak için kapsamlı testler içerir. Titiz değerlendirme sürecimiz, ürünlerinizin güvenliğini ve güvenilirliğini garanti etmek için kimyasal analiz, fiziksel test ve performans değerlendirmelerini içerir. Bu titiz testleri geçerek, ürünlerinizin tüketici kullanımı için güvenli olduğu kanıtlanır ve kaza, yaralanma veya sağlık tehlikesi riski en aza indirilir."
-      },
-      {
-        "title": "Düzenleyici Standartlara Uygunluk",
-        "description": "Usesafe, ürünlerinizin ilgili tüm yerel, ulusal ve uluslararası güvenlik düzenlemelerine uygun olmasını sağlar. Sertifikasyon sürecimiz, işletmenizi yasal sorunlardan ve potansiyel geri çağırmalardan korumak için uygunluğu kapsamlı bir şekilde kontrol etmek üzere tasarlanmıştır. Düzenlemelere uygunluk sadece ürün güvenliğini artırmakla kalmaz, aynı zamanda kalite ve tüketiciyi koruma konusundaki kararlılığınızı gösterir."
-      },
-      {
-        "title": "Tüketici Güveni Oluşturma",
-        "description": "Ürünlerinizde Usesafe sertifikasyon işaretinin görüntülenmesi, tüketicileri güvenlik ve kalite konusunda güvence altına alır. Usesafe logosu, tüketici güvenini artıran, daha yüksek müşteri memnuniyeti ve sadakatine yol açan bir güven sembolüdür.\n\nGüven üzerine kurulu güçlü bir itibar, daha fazla müşteri ve iş ortağı çeker, büyüme ve işbirliği için fırsatlar yaratır."
-      },
-      {
-        "title": "Şeffaflık ve Hesap Verebilirlik",
-        "description": "Usesafe sertifikasyon süreci şeffaf ve hesap verebilirdir. İşletmelerin ve tüketicilerin değerlendirme kriterleri ve sonuçlarını anlamalarını sağlayan detaylı raporlar ve belgeler sunuyoruz. Bu şeffaflık, sertifikasyonun öznel yargılardan ziyade nesnel, titiz standartlara dayandığını göstererek güven oluşturur. İşletmeler kalite ve uygunluk konusundaki kararlılıklarını güvenle sergileyebilirler."
-      },
-      {
-        "title": "Sürekli İzleme ve Destek",
-        "description": "Usesafe sertifikasyonu, sertifikalı ürünlerin sürekli izlenmesini ve periyodik olarak yeniden değerlendirilmesini içerir. Bu, ürünlerin zaman içinde güvenlik ve kalitesini korumasını, düzenlemelerdeki veya standartlardaki değişikliklere uyum sağlamasını sağlar. Proaktif yaklaşımımız, potansiyel güvenlik sorunlarını erken tespit etmeye ve çözmeye yardımcı olur, tüketicilere ulaşmalarını önler ve sürekli uygunluğu sağlar."
-      },
-      {
-        "title": "Sosyal Sorumluluk ve Etik Taahhüt",
-        "description": "Usesafe sertifikasyonunu elde ederek, işletmeler sosyal sorumluluğa olan bağlılıklarını gösterirler. Müşterilerinin ve çevrenin güvenliği ve refahı konusunda özen gösterdiklerini kanıtlarlar. Sosyal sorumluluğa olan bu bağlılık, değerleriyle uyumlu markaları desteklemeyi tercih eden sosyal bilinçli tüketiciler arasında güveni artırır."
-      }
-    ]
-  },
+  
   "PricingBlock": {
     "header": {
       "tag": "Öngörülebilir fiyatlandırma",

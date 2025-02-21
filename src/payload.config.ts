@@ -12,8 +12,8 @@ import { Media } from './collections/Media'
 import { MediaBlock } from './collections/media-block'
 import { Counter } from './collections/counter'
 import { ContentWithImage } from './collections/content-with-image'
-// import { en } from '@payloadcms/translations/languages/en'
-// import { tr } from '@payloadcms/translations/languages/tr'
+import { Accordion } from './collections/accordion'
+import { IconList } from './collections/icon-list'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -37,6 +37,8 @@ export default buildConfig({
     ContentWithImage,
     MediaBlock,
     Counter,
+    Accordion,
+    IconList,
   ],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',

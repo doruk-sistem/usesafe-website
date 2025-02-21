@@ -6,6 +6,9 @@ import PageClient from "./page.client";
 import { ContentWithImageData } from "@/collections/content-with-image/types";
 import { MediaBlockData } from "@/collections/media-block/types";
 import { CounterData } from "@/collections/counter/types";
+import { AccordionData } from "@/collections/accordion/types";
+import { CollectionSlug } from "payload";
+import { IconListData } from "@/collections/icon-list/types";
 export default async function HomePage({params}: { params: { locale: string } }) {
   try {
     const payload = await initPayload();
@@ -53,6 +56,25 @@ export default async function HomePage({params}: { params: { locale: string } })
       }
     });
 
+    const accordionResponse = await payload.find({
+      collection: 'accordion' as CollectionSlug,  // CollectionSlug tipini kullanalım
+      locale: params.locale as 'tr' | 'all' | 'en' | undefined,
+      where: {
+        active: {
+          equals: true
+        }
+      }
+    });
+  
+    const iconListResponse = await payload.find({
+      collection: 'icon-list',
+      locale: params.locale as 'tr' | 'all' | 'en' | undefined,
+      where: {
+        active: {
+          equals: true
+        }
+      }
+    });
 
     return <PageClient 
       sliderData={sliderResponse.docs[0] as SliderData}
@@ -60,6 +82,8 @@ export default async function HomePage({params}: { params: { locale: string } })
       contentWithImageData={contentWithImageResponse.docs as unknown as ContentWithImageData[]}
       mediaBlockData={mediaBlockResponse.docs as unknown as MediaBlockData[]}
       counterData={counterResponse.docs as unknown as CounterData[]}
+      accordionData={accordionResponse.docs as unknown as AccordionData[]}
+      iconListData={iconListResponse.docs as unknown as IconListData[]}
     />;
   } catch (error) {
     console.error('Error loading homepage:', error);

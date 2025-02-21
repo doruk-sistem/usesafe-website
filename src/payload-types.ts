@@ -73,6 +73,8 @@ export interface Config {
     'content-with-image': ContentWithImage;
     'media-block': MediaBlock;
     counter: Counter;
+    accordion: Accordion;
+    'icon-list': IconList;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -87,6 +89,8 @@ export interface Config {
     'content-with-image': ContentWithImageSelect<false> | ContentWithImageSelect<true>;
     'media-block': MediaBlockSelect<false> | MediaBlockSelect<true>;
     counter: CounterSelect<false> | CounterSelect<true>;
+    accordion: AccordionSelect<false> | AccordionSelect<true>;
+    'icon-list': IconListSelect<false> | IconListSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -299,6 +303,44 @@ export interface Counter {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "accordion".
+ */
+export interface Accordion {
+  id: number;
+  /**
+   * Bu başlık accordion üzerinde görünecek
+   */
+  sectionTitle: string;
+  title: string;
+  description: string;
+  image: number | Media;
+  items: {
+    title: string;
+    description: string;
+    id?: string | null;
+  }[];
+  active?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "icon-list".
+ */
+export interface IconList {
+  id: number;
+  title?: string | null;
+  items: {
+    icon: 'GiWorld' | 'CiDiscount1' | 'GiWaterRecycling' | 'LuFootprints' | 'IoQrCodeOutline' | 'GiConversation';
+    description: string;
+    id?: string | null;
+  }[];
+  active?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -335,6 +377,14 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'counter';
         value: number | Counter;
+      } | null)
+    | ({
+        relationTo: 'accordion';
+        value: number | Accordion;
+      } | null)
+    | ({
+        relationTo: 'icon-list';
+        value: number | IconList;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -546,6 +596,43 @@ export interface CounterSelect<T extends boolean = true> {
     | {
         description?: T;
         value?: T;
+        id?: T;
+      };
+  active?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "accordion_select".
+ */
+export interface AccordionSelect<T extends boolean = true> {
+  sectionTitle?: T;
+  title?: T;
+  description?: T;
+  image?: T;
+  items?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        id?: T;
+      };
+  active?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "icon-list_select".
+ */
+export interface IconListSelect<T extends boolean = true> {
+  title?: T;
+  items?:
+    | T
+    | {
+        icon?: T;
+        description?: T;
         id?: T;
       };
   active?: T;
