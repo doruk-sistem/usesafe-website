@@ -3,7 +3,7 @@ export interface IconListItem {
     icon: string;
     description: string;
   }
-  
+
   export interface IconListData {
     id: string;
     title?: string;

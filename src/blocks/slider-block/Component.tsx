@@ -4,14 +4,16 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Slider from "react-slick";
 
-import { ClientsBlock } from "../clients-block/Component";
-
 import { Media } from "@/components/Media";
 import { Button } from "@/frontend/_components/button";
 import type { SliderBlock } from "@/payload-types";
 
+import { ClientsBlock } from "../clients-block/Component";
+
 export function SliderBlock({ sliders, clients }: SliderBlock) {
   const [activeSlide, setActiveSlide] = useState(0);
+
+  console.log(sliders);
 
   return (
     <div className="tw-py-10 tw-bg-[url('/images/background-16-9-1.png')] tw-bg-cover tw-bg-center">

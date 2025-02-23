@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { CollectionSlug } from "payload";
 import React from "react";
 
 import ErrorComponent from "@/app/(frontend)/_components/ErrorComponent";
@@ -21,7 +22,7 @@ const PrivacyPolicy = async ({ params }: PageProps) => {
     const payload = await initPayload();
 
     const response = await payload.find({
-      collection: "privacy-policy",
+      collection: "privacy-policy" as CollectionSlug,
       limit: 1,
     });
 
@@ -29,7 +30,7 @@ const PrivacyPolicy = async ({ params }: PageProps) => {
       return <ErrorComponent message="Privacy Policy content has not been added yet." />;
     }
 
-    const privacyData = response.docs[0] as PrivacyPolicyData;
+    const privacyData = response.docs[0] as unknown as PrivacyPolicyData;
 
     const content = locale === "tr" && privacyData.translations?.tr
       ? privacyData.translations.tr
@@ -73,7 +74,7 @@ const PrivacyPolicy = async ({ params }: PageProps) => {
       </>
     );
   } catch (error) {
-    // eslint-disable-next-line no-console
+
     console.error("Privacy Policy error:", error);
 
     return <ErrorComponent message="Could not load Privacy Policy content. Please try again later." />;

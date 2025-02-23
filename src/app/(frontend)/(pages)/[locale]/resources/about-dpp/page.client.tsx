@@ -19,7 +19,7 @@ export default function AboutDppPageClient() {
       <RenderBlocks
         blocks={[
           {
-            blockType: "contentWithImage",
+            blockType: "contentWithImageBlock",
             layout: {
               title: t("dpp_intro.title"),
               description: t("dpp_intro.description"),
@@ -45,7 +45,7 @@ export default function AboutDppPageClient() {
             },
           },
           {
-            blockType: "contentWithImage",
+            blockType: "contentWithImageBlock",
             layout: {
               title: t("core_components.title"),
               description: t("core_components.description"),

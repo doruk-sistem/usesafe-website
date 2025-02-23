@@ -77,21 +77,21 @@ export const ContentWithImage: CollectionConfig = {
       },
     },
   ],
-  hooks: {
-    beforeChange: [
-      async ({ data, req }) => {
-        if (!data) return {};
-        if (!data.order) {
-          const result = await req.payload.find({
-            collection: "content-with-image",
-            limit: 1,
-            sort: "-order",
-          });
-          const highestOrder = result.docs[0]?.order || 0;
-          data.order = highestOrder + 1;
-        }
-        return data;
-      },
-    ],
-  },
+  // hooks: {
+  //   beforeChange: [
+  //     async ({ data, req }) => {
+  //       if (!data) return {};
+  //       if (!data.order) {
+  //         const result = await req.payload.find({
+  //           collection: "content-with-image" as CollectionSlug,
+  //           limit: 1,
+  //           sort: "-order",
+  //         });
+  //         // const highestOrder = result.docs[0]?.order || 0;
+  //         // data.order = highestOrder + 1;
+  //       }
+  //       return result.docs[0];
+  //     },
+  //   ],
+  // },
 };

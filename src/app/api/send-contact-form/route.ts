@@ -29,7 +29,7 @@ export async function POST(request: Request) {
       { status: 200 },
     );
   } catch (error) {
-    // eslint-disable-next-line no-console
+
     console.error("Error sending email:", error);
     return NextResponse.json(
       { error: "Failed to send email" },
