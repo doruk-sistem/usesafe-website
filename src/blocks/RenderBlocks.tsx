@@ -51,8 +51,6 @@ interface RenderBlocksProps {
 export default function RenderBlocks({ blocks }: RenderBlocksProps) {
   const hasBlocks = blocks && Array.isArray(blocks) && blocks.length > 0;
 
-  console.log(blocks);
-
   if (!hasBlocks) return null;
 
   return (
