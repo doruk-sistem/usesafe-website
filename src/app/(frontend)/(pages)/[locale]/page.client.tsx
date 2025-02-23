@@ -13,6 +13,8 @@ interface PageClientProps {
 }
 
 export default function PageClient({ layout }: PageClientProps) {
+  console.log(layout);
+
   return (
     <div>
       <Header />
