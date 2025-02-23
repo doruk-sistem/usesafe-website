@@ -19,7 +19,7 @@ export default function ClientsSlick({
       <Slider
         dots={false}
         arrows={false}
-        infinite
+        infinite={false}
         slidesToShow={5}
         slidesToScroll={1}
         speed={500}

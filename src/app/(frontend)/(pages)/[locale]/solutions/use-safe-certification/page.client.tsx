@@ -1,24 +1,24 @@
 "use client";
 
-import Link from "next/link";
-import { useParams } from "next/navigation";
-import { useTranslations } from "next-intl";
+// import Link from "next/link";
+// import { useParams } from "next/navigation";
+// import { useTranslations } from "next-intl";
 import React from "react";
 
 import NewsletterBlock from "@/blocks/newsletter-block";
-import RenderBlocks from "@/blocks/RenderBlocks";
+// import RenderBlocks from "@/blocks/RenderBlocks";
 import Footer from "@/frontend/_components/footer";
 import Header from "@/frontend/_components/header";
 
 export default function UseSafeCertificationPageClient() {
-  const t = useTranslations("UseSafeCertification");
-  const params = useParams();
-  const locale = params.locale as string;
+  // const t = useTranslations("UseSafeCertification");
+  // const params = useParams();
+  // const locale = params.locale as string;
 
   return (
     <div>
       <Header />
-      <RenderBlocks
+      {/* <RenderBlocks
         blocks={[
           {
             blockType: "pageTitle",
@@ -114,7 +114,7 @@ export default function UseSafeCertificationPageClient() {
             },
           },
         ]}
-      />
+      /> */}
       <NewsletterBlock />
       <Footer />
     </div>

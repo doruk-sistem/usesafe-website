@@ -42,4 +42,22 @@ if (process.env.NODE_ENV === "production") {
   plugins.push(s3StoragePlugin);
 }
 
+const s3StoragePlugin = s3Storage({
+  collections: {
+    media: true,
+  },
+  bucket: process.env.S3_BUCKET!,
+  config: {
+    forcePathStyle: true,
+    credentials: {
+      accessKeyId: process.env.S3_ACCESS_KEY_ID!,
+      secretAccessKey: process.env.S3_SECRET_ACCESS_KEY!,
+    },
+    region: process.env.S3_REGION!,
+    endpoint: process.env.S3_ENDPOINT!,
+  },
+});
+
+plugins.push(s3StoragePlugin);
+
 export { plugins };

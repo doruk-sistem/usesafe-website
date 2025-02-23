@@ -89,7 +89,7 @@ export default function ContactPageClient() {
               backgroundImage: "/images/contact-1.webp",
               downSectionId: "down-section",
             },
-            sectionOptions: {
+            blockOptions: {
               className: "tw-py-0",
             },
           },

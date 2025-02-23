@@ -2,13 +2,13 @@ export interface AccordionItem {
     title: string;
     description: string;
   }
-  
+
   export interface AccordionData {
     id: string;
     sectionTitle: string;
     title: string;
     description: string;
-    image: { 
+    image: {
         url: string;
         alt: string;
       };

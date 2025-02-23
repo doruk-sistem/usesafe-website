@@ -11,6 +11,7 @@ const allIcons = {
   LuFootprints: Lu.LuFootprints,
   IoQrCodeOutline: Io.IoQrCodeOutline,
   GiConversation: Gi.GiConversation,
+  GiWaterRecycling: Gi.GiWaterRecycling,
 };
 
 // Icon component'ini getir

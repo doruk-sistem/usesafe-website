@@ -1,20 +1,20 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
 import React from "react";
-import { BsShieldCheck, BsBoxSeam, BsQrCode } from "react-icons/bs";
+// import { BsShieldCheck, BsBoxSeam, BsQrCode } from "react-icons/bs";
 
 import NewsletterBlock from "@/blocks/newsletter-block";
-import RenderBlocks from "@/blocks/RenderBlocks";
+// import RenderBlocks from "@/blocks/RenderBlocks";
 import Footer from "@/frontend/_components/footer";
 import Header from "@/frontend/_components/header";
 export default function DigitalTwinsPageClient() {
-  const t = useTranslations("DigitalTwins");
+  // const t = useTranslations("DigitalTwins");
 
   return (
     <div>
       <Header />
-      <RenderBlocks
+      {/* <RenderBlocks
         blocks={[
           {
             blockType: "pageTitle",
@@ -129,7 +129,7 @@ export default function DigitalTwinsPageClient() {
             },
           },
         ]}
-      />
+      /> */}
       <NewsletterBlock />
       <Footer />
     </div>

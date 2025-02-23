@@ -379,6 +379,7 @@ export interface SliderBlock {
  */
 export interface MediaBlock {
   media?: (number | null) | Media;
+  mediaWidth?: ('full' | 'auto') | null;
   /**
    * Block'a özel ayarlar.
    */
@@ -600,6 +601,7 @@ export interface SliderBlockSelect<T extends boolean = true> {
  */
 export interface MediaBlockSelect<T extends boolean = true> {
   media?: T;
+  mediaWidth?: T;
   blockOptions?:
     | T
     | {
