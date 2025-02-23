@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 interface CertificationIntroBlockProps {
@@ -40,8 +41,10 @@ export function CertificationIntroBlock({
         <div className="container tw-mt-8">
           <div className="row justify-content-center">
             <div className="col-lg-8 col-md-10">
-              <img
-                src={backgroundImage}
+              <Image
+                src={backgroundImage || ""}
+                width={1000}
+                height={1000}
                 alt="Background"
                 className="tw-w-full tw-h-auto tw-rounded-lg"
               />

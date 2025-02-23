@@ -1,39 +1,24 @@
-import { initPayload } from "@/app/api/utils/getPayload";
-import type { PartnerContent } from "@/collections/partners/types";
-import type { SliderData } from "@/collections/slider/types";
+import { getLocale } from "next-intl/server";
+
 import generateMeta from "@/frontend/_utils/generate-meta";
+import { initPayload } from "@/utils/getPayload";
 
 import PageClient from "./page.client";
 
 export default async function HomePage() {
   try {
+    const locale = await getLocale();
     const payload = await initPayload();
 
-    const sliderResponse = await payload.find({
-      collection: "sliders",
-      where: {
-        title: { equals: "Homepage Main Slider" },
-      },
+    const homepage = await payload.findGlobal({
+      slug: "homepage",
+      locale: locale as any,
     });
 
-    const partnersResponse = await payload.find({
-      collection: "partners",
-      where: {
-        active: { equals: true },
-      },
-      sort: "order",
-    });
-
-    return (
-      <PageClient
-        sliderData={sliderResponse.docs[0] as SliderData}
-        partnersData={{ partners: partnersResponse.docs as PartnerContent[] }}
-      />
-    );
+    return <PageClient layout={homepage.layout} />;
   } catch (error) {
-    // eslint-disable-next-line no-console
     console.error("Error loading homepage:", error);
-    return <PageClient sliderData={undefined} partnersData={undefined} />;
+    return <PageClient layout={[]} />;
   }
 }
 

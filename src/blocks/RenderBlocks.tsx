@@ -1,3 +1,5 @@
+"use client";
+
 import React, { ComponentProps, Fragment } from "react";
 
 import Section, { type SectionProps } from "@/components/Section";
@@ -13,35 +15,33 @@ import { IconListBlock } from "./icon-list-block/Component";
 import { MediaBlock } from "./media-block/Component";
 import { PageTitleBlock } from "./page-title-block/Component";
 import { PricingBlock } from "./pricing-block";
-import { SliderBlock } from "./slider-block";
+import { SliderBlock } from "./slider-block/Component";
 
 const blockComponents = {
-  accordion: AccordionBlock,
-  media: MediaBlock,
-  slider: SliderBlock,
+  sliderBlock: SliderBlock,
+  mediaBlock: MediaBlock,
+  contentWithImageBlock: ContentWithImageBlock,
+  accordionBlock: AccordionBlock,
+  iconListBlock: IconListBlock,
   pricing: PricingBlock,
-  contentWithImage: ContentWithImageBlock,
   clients: ClientsBlock,
   counter: CounterBlock,
   pageTitle: PageTitleBlock,
   backgroundVideo: BackgroundVideoBlock,
   contactForm: ContactFormBlock,
-  iconList: IconListBlock,
   certificationIntro: CertificationIntroBlock,
-};
+} as const;
 
 type BlockType = keyof typeof blockComponents;
 
-// Extract props type for each block type
 type BlockTypeProps = {
   [K in BlockType]: {
     blockType: K;
     layout: ComponentProps<(typeof blockComponents)[K]>;
-    sectionOptions?: Omit<SectionProps, "children">;
+    blockOptions?: Omit<SectionProps, "children">;
   };
 };
 
-// Create a union type for all block types
 type Block = BlockTypeProps[BlockType];
 
 interface RenderBlocksProps {
@@ -56,14 +56,26 @@ export default function RenderBlocks({ blocks }: RenderBlocksProps) {
   return (
     <Fragment>
       {blocks.map((block, index) => {
-        const { blockType, layout, sectionOptions } = block;
-
+        const { blockType, blockOptions } = block;
         const Component = blockComponents[blockType];
 
+        if (!Component) {
+          return null;
+        }
+
+        if (blockType === "sliderBlock") {
+          return (
+            <Fragment key={index}>
+              {/* @ts-expect-error - Type safety is handled by BlockTypeProps */}
+              <Component {...block} />
+            </Fragment>
+          );
+        }
+
         return (
-          <Section key={index} {...sectionOptions}>
-            {/* @ts-expect-error */}
-            <Component {...layout} />
+          <Section key={index} {...blockOptions}>
+            {/* @ts-expect-error - Type safety is handled by BlockTypeProps */}
+            <Component {...block} />
           </Section>
         );
       })}

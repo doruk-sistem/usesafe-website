@@ -1,89 +1,60 @@
 import { CollectionConfig } from "payload";
 
 export const Slider: CollectionConfig = {
-    slug: "sliders",
-    access: {
-      read: () => true,
+  slug: "slider",
+  admin: {
+    useAsTitle: "title",
+    defaultColumns: ["title", "active"],
+  },
+  fields: [
+    {
+      name: "title",
+      type: "text",
+      required: true,
+      localized: true,
     },
-    admin: {
-      useAsTitle: "title",
-      defaultColumns: ["title"],
+    {
+      name: "slides",
+      type: "array",
+      required: true,
+      fields: [
+        {
+          name: "image",
+          type: "upload",
+          relationTo: "media",
+          required: true,
+        },
+        {
+          name: "title",
+          type: "text",
+          required: true,
+          localized: true,
+        },
+        {
+          name: "description",
+          type: "textarea",
+          required: true,
+          localized: true,
+        },
+        {
+          name: "buttonText",
+          type: "text",
+          localized: true,
+        },
+        {
+          name: "buttonLink",
+          type: "text",
+          localized: true,
+        },
+      ],
     },
-    fields: [
-      {
-        name: "title",
-        type: "text",
-        required: true,
-        label: "Slider Title",
+    {
+      name: "active",
+      type: "checkbox",
+      defaultValue: true,
+      admin: {
+        position: "sidebar",
       },
-      {
-        name: "slides",
-        type: "array",
-        label: "Slider Items",
-        fields: [
-          {
-            name: "image",
-            type: "upload",
-            relationTo: "media",
-            required: true,
-            label: "Slide Image",
-          },
-          {
-            name: "title",
-            type: "text",
-            label: "Slide Title",
-          },
-          {
-            name: "description",
-            type: "textarea",
-            label: "Slide Description",
-          },
-          {
-            name: "buttonText",
-            type: "text",
-            label: "Button Text (optional)",
-          },
-          {
-            name: "buttonLink",
-            type: "text",
-            label: "Button Link (optional)",
-          },
-        ],
-      },
-      {
-        name: "translations",
-        type: "group",
-        fields: [
-          {
-            name: "tr",
-            type: "group",
-            label: "Turkish Translation",
-            fields: [
-              {
-                name: "slides",
-                type: "array",
-                label: "Slider Items (Turkish)",
-                fields: [
-                  {
-                    name: "title",
-                    type: "text",
-                    label: "Slide Title",
-                  },
-                  {
-                    name: "description",
-                    type: "textarea",
-                    label: "Slide Description",
-                  },
-                  {
-                    name: "buttonText",
-                    type: "text",
-                    label: "Button Text (optional)",
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  };
+    },
+  ],
+};

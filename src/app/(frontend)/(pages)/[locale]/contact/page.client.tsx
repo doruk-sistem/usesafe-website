@@ -24,7 +24,7 @@ export default function ContactPageClient() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({
       ...formData,
@@ -67,7 +67,7 @@ export default function ContactPageClient() {
       } else {
         throw new Error("An error occurred");
       }
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       toast.error(t("form.toast.error"));
     } finally {
@@ -89,7 +89,7 @@ export default function ContactPageClient() {
               backgroundImage: "/images/contact-1.webp",
               downSectionId: "down-section",
             },
-            sectionOptions: {
+            blockOptions: {
               className: "tw-py-0",
             },
           },
@@ -106,9 +106,7 @@ export default function ContactPageClient() {
               <h2 className="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-text-black tw-mb-3">
                 {t("form.title")}
               </h2>
-              <p className="tw-text-gray-600">
-                {t("form.description")}
-              </p>
+              <p className="tw-text-gray-600">{t("form.description")}</p>
             </div>
 
             <div className="tw-space-y-6">
@@ -198,7 +196,9 @@ export default function ContactPageClient() {
                   icon={<HiArrowNarrowRight />}
                   className="tw-w-full"
                 >
-                  {isSubmitting ? t("form.submit.sending") : t("form.submit.send")}
+                  {isSubmitting
+                    ? t("form.submit.sending")
+                    : t("form.submit.send")}
                 </ButtonSwitchAnimation>
               </div>
             </div>

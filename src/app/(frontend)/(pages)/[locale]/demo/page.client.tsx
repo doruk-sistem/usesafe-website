@@ -24,12 +24,11 @@ export default function DemoPageClient() {
     company: "",
     phone: "",
     message: "",
-
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({
       ...formData,
@@ -66,9 +65,7 @@ export default function DemoPageClient() {
               <FaCheck className="tw-text-green-500 tw-mr-2" />
               {t("toast.success.title")}
             </h3>
-            <p className="tw-text-base tw-mb-0">
-              {t("toast.success.message")}
-            </p>
+            <p className="tw-text-base tw-mb-0">{t("toast.success.message")}</p>
           </div>
         ));
         setFormData({
@@ -82,7 +79,7 @@ export default function DemoPageClient() {
       } else {
         throw new Error("An error occurred");
       }
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       toast.error(t("toast.error.generic"));
     } finally {

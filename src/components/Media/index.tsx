@@ -1,7 +1,8 @@
+"use client";
+
 import React, { Fragment } from "react";
 
 import { ImageMedia } from "./ImageMedia";
-import { SvgMedia } from "./SvgMedia";
 import type { MediaProps } from "./types";
 import { VideoMedia } from "./VideoMedia";
 
@@ -11,10 +12,6 @@ export const Media: React.FC<MediaProps> = (props) => {
   const isVideo =
     (typeof resource === "object" && resource?.mimeType?.includes("video")) ||
     type === "video";
-
-  const isSvg =
-    (typeof resource === "object" && resource?.mimeType?.includes("svg")) ||
-    type === "svg";
 
   const isImage =
     (typeof resource === "object" && resource?.mimeType?.includes("image")) ||
@@ -30,9 +27,8 @@ export const Media: React.FC<MediaProps> = (props) => {
           }
         : {})}
     >
-      {isImage ? <ImageMedia {...props} /> : null}
       {isVideo ? <VideoMedia {...props} /> : null}
-      {isSvg ? <SvgMedia {...props} /> : null}
+      {isImage ? <ImageMedia {...props} /> : null}
     </Tag>
   );
 };

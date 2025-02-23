@@ -5,12 +5,11 @@ import { postgresAdapter } from "@payloadcms/db-postgres";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { buildConfig } from "payload";
 
-import { Blogs } from "./collections/Blog/Blog";
-import { Media } from "./collections/Media";
-import { partners } from "./collections/partners";
-import { PrivacyPolicy } from "./collections/privacy-policy";
-import { Slider } from "./collections/slider";
+import collections from "./collections";
 import { Users } from "./collections/Users";
+import globals from "./globals";
+import { plugins } from "./plugins";
+
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
@@ -35,14 +34,8 @@ export default buildConfig({
     defaultLocale: "en",
     fallback: true,
   },
-  collections: [
-    Users,
-    Media,
-    PrivacyPolicy,
-    Blogs,
-    Slider,
-    partners,
-  ],
+  collections,
+  globals,
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {
@@ -52,6 +45,7 @@ export default buildConfig({
     pool: {
       connectionString: process.env.DATABASE_URI || "",
     },
+    migrationDir: "auto",
   }),
-  plugins: [],
+  plugins,
 });
