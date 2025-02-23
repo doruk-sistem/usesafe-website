@@ -76,7 +76,7 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
     <NextImage
       src={src}
       alt={alt || ""}
-      className={cn(imgClassName)}
+      className={cn(imgClassName, "tw-rounded-lg")}
       fill={fill}
       width={!fill ? width : undefined}
       height={!fill ? height : undefined}

@@ -11,6 +11,12 @@ export const MediaBlock: Block = {
       type: "upload",
       relationTo: "media",
     },
+    {
+      name: "mediaWidth",
+      type: "select",
+      options: ["full", "auto"],
+      defaultValue: "auto",
+    },
     blockOptionsField(),
   ],
 };
