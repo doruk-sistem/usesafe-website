@@ -1,22 +1,22 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
 import React from "react";
-import { HiArrowNarrowRight } from "react-icons/hi";
+// import { HiArrowNarrowRight } from "react-icons/hi";
 
 import NewsletterBlock from "@/blocks/newsletter-block";
-import RenderBlocks from "@/blocks/RenderBlocks";
-import { Button } from "@/frontend/_components/button";
-import ButtonSwitchAnimation from "@/frontend/_components/button-switch-animation";
+// import RenderBlocks from "@/blocks/RenderBlocks";
+// import { Button } from "@/frontend/_components/button";
+// import ButtonSwitchAnimation from "@/frontend/_components/button-switch-animation";
 import Footer from "@/frontend/_components/footer";
 import Header from "@/frontend/_components/header";
 export default function AboutDppPageClient() {
-  const t = useTranslations("AboutDpp");
+  // const t = useTranslations("AboutDpp");
 
   return (
     <div>
       <Header />
-      <RenderBlocks
+      {/* <RenderBlocks
         blocks={[
           {
             blockType: "contentWithImageBlock",
@@ -111,7 +111,7 @@ export default function AboutDppPageClient() {
             },
           },
         ]}
-      />
+      /> */}
       <NewsletterBlock />
       <Footer />
     </div>
