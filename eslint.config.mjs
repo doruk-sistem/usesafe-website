@@ -19,6 +19,7 @@ const eslintConfig = [
       "**/src/app/(payload)/**",
       "**/.git/**",
       "**/*.log",
+      "**/auto/**",
     ],
   },
   ...compat.extends("next/core-web-vitals", "next/typescript"),
