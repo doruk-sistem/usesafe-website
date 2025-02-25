@@ -41,17 +41,17 @@ export default function ClientsSlick({
         autoplay
         className="tw-w-full"
       >
-        {clients.map((client) => (
-          <div
-            key={client.name}
-            className="tw-px-5 tw-w-full !tw-inline-flex tw-items-center tw-justify-center tw-cursor-move tw-py-6"
-          >
-            <Media
-              resource={client.image}
-              imgClassName="tw-w-full tw-h-[30px] md:tw-h-[40px] tw-object-contain"
-            />
-          </div>
-        ))}
+       {clients.map((client, index) => (
+  <div
+    key={client.name || `client-${index}`}
+    className="tw-px-5 tw-w-full !tw-inline-flex tw-items-center tw-justify-center tw-cursor-move tw-py-6"
+  >
+    <Media
+      resource={client.image}
+      imgClassName="tw-w-full tw-h-[30px] md:tw-h-[40px] tw-object-contain"
+    />
+  </div>
+))}
       </Slider>
       <div className="tw-absolute tw-pointer-events-none tw-top-0 tw-w-full tw-h-full">
         <div

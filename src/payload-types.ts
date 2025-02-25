@@ -68,6 +68,7 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
+    solutions: Solution;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -76,6 +77,7 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    solutions: SolutionsSelect<false> | SolutionsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -155,6 +157,81 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "solutions".
+ */
+export interface Solution {
+  id: number;
+  title: string;
+  slug: string;
+  layout?:
+    | (
+        | {
+            title: string;
+            topTitle?: string | null;
+            backgroundImage?: (number | null) | Media;
+            downSectionId?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pageTitle';
+          }
+        | {
+            title?: string | null;
+            description?: string | null;
+            image: {
+              src: number | Media;
+              alt?: string | null;
+              width?: number | null;
+              height?: number | null;
+              imgClassName?: string | null;
+            };
+            imagePosition?: ('left' | 'right') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'contentWithImage';
+          }
+        | {
+            title?: string | null;
+            description?: string | null;
+            video: {
+              src: string;
+              poster?: (number | null) | Media;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'backgroundVideo';
+          }
+        | {
+            clients?:
+              | {
+                  name?: string | null;
+                  logo?: (number | null) | Media;
+                  id?: string | null;
+                }[]
+              | null;
+            type?: ('grid' | 'slider') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'clients';
+          }
+        | {
+            title?: string | null;
+            description?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pricing';
+          }
+        | {
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'newsletter';
+          }
+      )[]
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -167,6 +244,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'media';
         value: number | Media;
+      } | null)
+    | ({
+        relationTo: 'solutions';
+        value: number | Solution;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -243,6 +324,90 @@ export interface MediaSelect<T extends boolean = true> {
   height?: T;
   focalX?: T;
   focalY?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "solutions_select".
+ */
+export interface SolutionsSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  layout?:
+    | T
+    | {
+        pageTitle?:
+          | T
+          | {
+              title?: T;
+              topTitle?: T;
+              backgroundImage?: T;
+              downSectionId?: T;
+              id?: T;
+              blockName?: T;
+            };
+        contentWithImage?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              image?:
+                | T
+                | {
+                    src?: T;
+                    alt?: T;
+                    width?: T;
+                    height?: T;
+                    imgClassName?: T;
+                  };
+              imagePosition?: T;
+              id?: T;
+              blockName?: T;
+            };
+        backgroundVideo?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              video?:
+                | T
+                | {
+                    src?: T;
+                    poster?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        clients?:
+          | T
+          | {
+              clients?:
+                | T
+                | {
+                    name?: T;
+                    logo?: T;
+                    id?: T;
+                  };
+              type?: T;
+              id?: T;
+              blockName?: T;
+            };
+        pricing?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              id?: T;
+              blockName?: T;
+            };
+        newsletter?:
+          | T
+          | {
+              id?: T;
+              blockName?: T;
+            };
+      };
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
