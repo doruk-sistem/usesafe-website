@@ -38,45 +38,42 @@ interface BlogCardProps {
 const BlogBanner = ({ locale, scrollToReferences }: { locale: string, scrollToReferences: () => void }) => {
   return (
     <section className="tw-relative tw-w-full tw-h-screen tw-flex tw-items-center tw-justify-center tw-overflow-hidden">
-      <motion.img
-        src="/images/banner.png"
-        alt="Blog Banner"
-        className="tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover tw-scale-105"
-        initial={{ scale: 1.1 }}
+      <motion.div
+        initial={{ scale: 1.2 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
+        transition={{ duration: 1.5 }}
+        className="tw-absolute tw-inset-0"
+      >
+        <Image
+          src="/images/banner.png"
+          alt="Blog Banner"
+          fill
+          className="tw-object-cover"
+          priority
+        />
+      </motion.div>
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.4 }}
+        transition={{ duration: 1 }}
+        className="tw-absolute tw-inset-0 tw-bg-black"
       />
-      <div className="tw-absolute tw-inset-0 tw-bg-black tw-opacity-50"></div>
-
       <div className="tw-relative tw-z-10 tw-text-white tw-text-center tw-w-full tw-h-full tw-flex tw-flex-col tw-justify-center tw-items-center">
-        <motion.h1
-          className="tw-text-5xl tw-font-extrabold tw-tracking-wide tw-mb-4"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+        <motion.h1 
+          className="tw-text-5xl tw-font-bold"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
         >
           Blogs - Business
         </motion.h1>
-
-        <motion.p
-          className="tw-text-lg tw-text-gray-300 tw-max-w-2xl tw-mb-6"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-        >
-          {locale === 'tr' 
-            ? "İş dünyasındaki en son yenilikleri, stratejileri ve başarı hikayelerini keşfedin."
-            : "Discover the latest innovations, strategies, and success stories in the business world."
-          }
-        </motion.p>
-
         <motion.button
           onClick={scrollToReferences}
-          className="tw-absolute tw-bottom-16 tw-text-white tw-bg-transparent tw-border-none tw-outline-none tw-p-0 tw-text-3xl"
+          className="tw-absolute tw-bottom-16 tw-text-white tw-bg-transparent tw-border-none tw-outline-none tw-p-0 tw-text-4xl"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          whileHover={{ scale: 1.3, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1 }}
+          whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Scroll Down"
         >

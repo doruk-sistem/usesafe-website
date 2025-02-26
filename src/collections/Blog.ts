@@ -1,5 +1,6 @@
 import type { CollectionConfig } from "payload";
 import { authenticated } from "@/access/authenticated";
+import { lexicalEditor } from "@payloadcms/richtext-lexical";  // ✅ Rich Text Editor için gerekli import
 
 export const Blog: CollectionConfig = {
   slug: "blogs",
@@ -23,6 +24,7 @@ export const Blog: CollectionConfig = {
     {
       name: "content",
       type: "richText",
+      editor: lexicalEditor(),  // ✅ Rich Text Editörü eklendi!
       required: true,
     },
     {
@@ -76,4 +78,4 @@ export const Blog: CollectionConfig = {
     },
   ],
   timestamps: true,
-}; 
+};
