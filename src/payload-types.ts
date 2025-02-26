@@ -221,26 +221,6 @@ export interface Solution {
             blockType: 'backgroundVideo';
           }
         | {
-            clients?:
-              | {
-                  name?: string | null;
-                  logo?: (number | null) | Media;
-                  id?: string | null;
-                }[]
-              | null;
-            type?: ('grid' | 'slider') | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'clients';
-          }
-        | {
-            title?: string | null;
-            description?: string | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'pricing';
-          }
-        | {
             id?: string | null;
             blockName?: string | null;
             blockType: 'newsletter';
@@ -417,28 +397,6 @@ export interface SolutionsSelect<T extends boolean = true> {
                     src?: T;
                     poster?: T;
                   };
-              id?: T;
-              blockName?: T;
-            };
-        clients?:
-          | T
-          | {
-              clients?:
-                | T
-                | {
-                    name?: T;
-                    logo?: T;
-                    id?: T;
-                  };
-              type?: T;
-              id?: T;
-              blockName?: T;
-            };
-        pricing?:
-          | T
-          | {
-              title?: T;
-              description?: T;
               id?: T;
               blockName?: T;
             };

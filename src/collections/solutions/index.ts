@@ -201,50 +201,7 @@ export const Solutions: CollectionConfig = {
             }
           ]
         },
-        {
-          slug: 'clients',
-          fields: [
-            {
-              name: 'clients',
-              type: 'array',
-              fields: [
-                {
-                  name: 'name',
-                  type: 'text',
-                  localized: true,
-                },
-                {
-                  name: 'logo',
-                  type: 'upload',
-                  relationTo: 'media',
-                }
-              ]
-            },
-            {
-              name: 'type',
-              type: 'select',
-              options: [
-                { label: 'Grid', value: 'grid' },
-                { label: 'Slider', value: 'slider' }
-              ]
-            }
-          ]
-        },
-        {
-          slug: 'pricing',
-          fields: [
-            {
-              name: 'title',
-              type: 'text',
-              localized: true,
-            },
-            {
-              name: 'description',
-              type: 'textarea',
-              localized: true,
-            }
-          ]
-        },
+        
         {
           slug: 'newsletter',
           fields: []

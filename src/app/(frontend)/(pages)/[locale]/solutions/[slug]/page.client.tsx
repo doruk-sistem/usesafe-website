@@ -5,7 +5,6 @@ import React from "react";
 
 import NewsletterBlock from "@/blocks/newsletter-block";
 import { PageTitleBlock } from "@/blocks/page-title-block/Component";
-import { PricingBlock } from "@/blocks/pricing-block";
 import Footer from "@/frontend/_components/footer";
 import Header from "@/frontend/_components/header";
 import { Media, Solution } from "@/payload-types";
@@ -21,7 +20,7 @@ interface PayloadMedia extends Media {
 }
 
 type Block = {
-  blockType: "pageTitle" | "contentWithImage" | "backgroundVideo" | "newsletter" | "pricing" | "clients" | "mediaBlock";
+  blockType: "pageTitle" | "contentWithImage" | "backgroundVideo" | "newsletter" | "mediaBlock";
   title?: string;
   topTitle?: string;
   backgroundImage?: string | Media;
@@ -40,10 +39,7 @@ type Block = {
     src?: string;
     poster?: number | Media;
   };
-  clients?: Array<{
-    name: string;
-    logo: string;
-  }>;
+
   mediaItems?: Array<{
     image: number | Media;
     title?: string;
@@ -265,37 +261,6 @@ export default function PageClient({ solution }: PageClientProps) {
                   </div>
                 );
 
-              case "pricing":
-                return (
-                  <div id={block.sectionOptions?.sectionId}>
-                    <PricingBlock />
-                  </div>
-                );
-
-              case "clients":
-                return (
-                  <div className="tw-text-center">
-                    {block.sectionOptions?.description && (
-                      <p className="tw-text-gray-600 tw-mb-8">
-                        {block.sectionOptions.description}
-                      </p>
-                    )}
-                    <div className="tw-grid tw-grid-cols-2 md:tw-grid-cols-4 lg:tw-grid-cols-6 tw-gap-8">
-                      {block.clients?.map((client, idx) => (
-                        <div key={idx} className="tw-flex tw-items-center tw-justify-center">
-                          <Image
-                            src={client.logo}
-                            alt={client.name}
-                            width={200}
-                            height={100}
-                            className="tw-max-h-12 tw-w-auto"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                    {block.sectionOptions?.footerContent}
-                  </div>
-                );
 
               default:
                 return null;
