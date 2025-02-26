@@ -1,48 +1,49 @@
 import { notFound } from "next/navigation";
 import { getLocale } from "next-intl/server";
-
 import generateMeta from "@/frontend/_utils/generate-meta";
 import { initPayload } from "@/utils/getPayload";
-
 import PageClient from "./page.client";
 
 export default async function SolutionPage({
-  params: { slug },
+  params,
 }: {
-  params: { slug: string };
+  params: { slug: string; locale: string };
 }) {
   try {
-    const locale = await getLocale();
     const payload = await initPayload();
+    const locale = await getLocale();
 
     const solution = await payload.find({
       collection: "solutions",
       where: {
         slug: {
-          equals: slug,
+          equals: params.slug,
         },
       },
       locale: locale as any,
-      depth: 2 
+      depth: 3
     });
 
     if (!solution.docs.length) {
       notFound();
     }
 
-    return <PageClient solution={solution.docs[0]} />;
+    // solution.docs[0] direkt olarak geçiyoruz
+    return <PageClient solution={solution.docs[0] as any} />;
   } catch (error) {
     console.error("Error loading solution:", error);
-    notFound();
+    // Boş solution objesi dönüyoruz
+    return <PageClient solution={{ layout: [] } as any} />;
   }
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: { slug: string; locale: string };
 }) {
   return await generateMeta(null, {
     path: `/solutions/${params.slug}`,
+    locale: params.locale
   });
 }

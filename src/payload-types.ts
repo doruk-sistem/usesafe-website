@@ -175,6 +175,26 @@ export interface Solution {
             blockType: 'pageTitle';
           }
         | {
+            mediaItems?:
+              | {
+                  image: number | Media;
+                  title?: string | null;
+                  description?: string | null;
+                  link?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            sectionOptions: {
+              className?: string | null;
+              innerContainer?: boolean | null;
+              sectionId?: string | null;
+              buttonText: string;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'mediaBlock';
+          }
+        | {
             title?: string | null;
             description?: string | null;
             image: {
@@ -342,6 +362,29 @@ export interface SolutionsSelect<T extends boolean = true> {
               topTitle?: T;
               backgroundImage?: T;
               downSectionId?: T;
+              id?: T;
+              blockName?: T;
+            };
+        mediaBlock?:
+          | T
+          | {
+              mediaItems?:
+                | T
+                | {
+                    image?: T;
+                    title?: T;
+                    description?: T;
+                    link?: T;
+                    id?: T;
+                  };
+              sectionOptions?:
+                | T
+                | {
+                    className?: T;
+                    innerContainer?: T;
+                    sectionId?: T;
+                    buttonText?: T;
+                  };
               id?: T;
               blockName?: T;
             };

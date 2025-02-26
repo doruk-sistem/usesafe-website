@@ -50,6 +50,75 @@ export const Solutions: CollectionConfig = {
           ]
         },
         {
+          slug: 'mediaBlock',
+          fields: [
+            {
+              name: 'mediaItems',
+              type: 'array',
+              label: 'Medya Öğeleri',
+              minRows: 1,
+              maxRows: 6,
+              labels: {
+                singular: 'Medya',
+                plural: 'Medyalar',
+              },
+              fields: [
+                {
+                  name: 'image',
+                  type: 'upload',
+                  relationTo: 'media',
+                  required: true,
+                  label: 'Görsel',
+                },
+                {
+                  name: 'title',
+                  type: 'text',
+                  label: 'Başlık',
+                },
+                {
+                  name: 'description',
+                  type: 'textarea',
+                  label: 'Açıklama',
+                },
+                {
+                  name: 'link',
+                  type: 'text',
+                  label: 'Bağlantı',
+                }
+              ],
+            },
+            {
+              name: 'sectionOptions',
+              type: 'group',
+              label: 'Bölüm Seçenekleri',
+              fields: [
+                {
+                  name: 'className',
+                  type: 'text',
+                  label: 'CSS Sınıfı'
+                },
+                {
+                  name: 'innerContainer',
+                  type: 'checkbox',
+                  label: 'İç Container Kullan'
+                },
+                {
+                  name: 'sectionId',
+                  type: 'text',
+                  label: 'Bölüm ID'
+                },
+                {
+                  name: 'buttonText',
+                  type: 'text',
+                  label: 'Buton Metni',
+                  localized: true,
+                  required: true,
+                }
+              ]
+            }
+          ]
+        },
+        {
           slug: 'contentWithImage',
           fields: [
             {
