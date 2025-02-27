@@ -42,10 +42,6 @@ export const Solutions: CollectionConfig = {
               name: 'backgroundImage',
               type: 'upload',
               relationTo: 'media',
-            },
-            {
-              name: 'downSectionId',
-              type: 'text',
             }
           ]
         },
@@ -93,21 +89,6 @@ export const Solutions: CollectionConfig = {
               label: 'Bölüm Seçenekleri',
               fields: [
                 {
-                  name: 'className',
-                  type: 'text',
-                  label: 'CSS Sınıfı'
-                },
-                {
-                  name: 'innerContainer',
-                  type: 'checkbox',
-                  label: 'İç Container Kullan'
-                },
-                {
-                  name: 'sectionId',
-                  type: 'text',
-                  label: 'Bölüm ID'
-                },
-                {
                   name: 'buttonText',
                   type: 'text',
                   label: 'Buton Metni',
@@ -145,19 +126,8 @@ export const Solutions: CollectionConfig = {
                   name: 'alt',
                   type: 'text',
                   localized: true,
-                },
-                {
-                  name: 'width',
-                  type: 'number',
-                },
-                {
-                  name: 'height',
-                  type: 'number',
-                },
-                {
-                  name: 'imgClassName',
-                  type: 'text',
                 }
+              
               ]
             },
             {
@@ -189,13 +159,12 @@ export const Solutions: CollectionConfig = {
               fields: [
                 {
                   name: 'src',
-                  type: 'text',
-                  required: true,
-                },
-                {
-                  name: 'poster',
                   type: 'upload',
                   relationTo: 'media',
+                  required: true,
+                  filterOptions: {
+                    mimeType: { contains: 'video/' }  // Sadece video dosyalarını kabul et
+                  }
                 }
               ]
             }

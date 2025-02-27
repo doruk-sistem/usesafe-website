@@ -203,7 +203,7 @@ export default function PageClient({ solution }: PageClientProps) {
           >
             <div className="tw-flex tw-justify-center tw-w-full">
               <div className="tw-overflow-hidden tw-rounded-2xl tw-shadow-xl hover:tw-shadow-2xl tw-transition-all tw-duration-300 tw-w-full">
-                <div className="tw-relative tw-w-full tw-pb-[66.67%]"> {/* 3:2 aspect ratio */}
+                <div className="tw-relative tw-w-full tw-pb-[66.67%]">
                   <Image
                     src={(block.image?.src as Media)?.url || ""}
                     alt={block.image?.alt || ""}
@@ -230,9 +230,11 @@ export default function PageClient({ solution }: PageClientProps) {
             muted
             loop
             playsInline
-            poster={(block.video.poster as PayloadMedia)?.url || ""}
           >
-            <source src={block.video.src} type="video/mp4" />
+            <source 
+              src={(block.video.src as unknown as PayloadMedia).url} 
+              type="video/mp4" 
+            />
             Your browser does not support the video tag.
           </video>
         )}
