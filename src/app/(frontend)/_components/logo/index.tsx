@@ -11,6 +11,7 @@ export default function Logo({ className }: { className?: string }) {
       className={cn("tw-w-full tw-h-full tw-object-contain", className)}
       width={100}
       height={100}
+      priority
     />
   );
 }

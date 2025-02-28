@@ -163,7 +163,7 @@ export const Solutions: CollectionConfig = {
                   relationTo: 'media',
                   required: true,
                   filterOptions: {
-                    mimeType: { contains: 'video/' }  // Sadece video dosyalarını kabul et
+                    mimeType: { contains: 'video/' }  
                   }
                 }
               ]

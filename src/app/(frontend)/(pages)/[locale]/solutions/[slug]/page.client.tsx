@@ -2,15 +2,15 @@
 
 import Image from "next/image";
 import React from "react";
-
-import NewsletterBlock from "@/blocks/newsletter-block";
 import { PageTitleBlock } from "@/blocks/page-title-block/Component";
 import Footer from "@/frontend/_components/footer";
 import Header from "@/frontend/_components/header";
 import { Media, Solution } from "@/payload-types";
 import { MediaBlock } from "@/blocks/media-block/Component";
+import NewsletterBlock from "@/blocks/newsletter-block";
 import { useParams } from "next/navigation";
 import { Button } from "@/app/(frontend)/_components/button";
+
 interface PageClientProps {
   solution: Solution;
 }
@@ -64,7 +64,6 @@ type Block = {
 };
 
 export default function PageClient({ solution }: PageClientProps) {
-  const params = useParams();
   if (!solution) {
     return <div>Solution not found</div>;
   }
