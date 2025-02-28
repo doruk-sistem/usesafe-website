@@ -171,10 +171,6 @@ export const Solutions: CollectionConfig = {
           ]
         },
         
-        {
-          slug: 'newsletter',
-          fields: []
-        }
       ]
     }
   ]

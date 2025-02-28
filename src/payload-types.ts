@@ -212,11 +212,6 @@ export interface Solution {
             blockName?: string | null;
             blockType: 'backgroundVideo';
           }
-        | {
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'newsletter';
-          }
       )[]
     | null;
   updatedAt: string;
@@ -381,12 +376,6 @@ export interface SolutionsSelect<T extends boolean = true> {
                 | {
                     src?: T;
                   };
-              id?: T;
-              blockName?: T;
-            };
-        newsletter?:
-          | T
-          | {
               id?: T;
               blockName?: T;
             };
