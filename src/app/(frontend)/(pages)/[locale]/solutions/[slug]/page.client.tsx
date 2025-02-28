@@ -16,11 +16,15 @@ interface PageClientProps {
 }
 
 interface PayloadMedia extends Media {
-  url: string;  
+  url: string;
 }
 
 type Block = {
-  blockType: "pageTitle" | "contentWithImage" | "backgroundVideo" | "newsletter" | "mediaBlock";
+  blockType:
+    | "pageTitle"
+    | "contentWithImage"
+    | "backgroundVideo"
+    | "mediaBlock";
   title?: string;
   topTitle?: string;
   backgroundImage?: string | Media;
@@ -67,7 +71,9 @@ export default function PageClient({ solution }: PageClientProps) {
 
   const renderBlock = (block: Block) => {
     const sectionClass = block.sectionOptions?.className || "";
-    const containerClass = block.sectionOptions?.innerContainer ? "tw-container tw-mx-auto" : "";
+    const containerClass = block.sectionOptions?.innerContainer
+      ? "tw-container tw-mx-auto"
+      : "";
 
     return (
       <div
@@ -79,12 +85,17 @@ export default function PageClient({ solution }: PageClientProps) {
             switch (block.blockType) {
               case "pageTitle":
                 return (
-                  <div className="tw--mt-[80px]" style={{ marginBottom: '-1px' }}>
+                  <div
+                    className="tw--mt-[80px]"
+                    style={{ marginBottom: "-1px" }}
+                  >
                     <div className="tw-relative">
                       <PageTitleBlock
                         title={block.title || ""}
                         topTitle={block.topTitle}
-                        backgroundImage={(block.backgroundImage as Media)?.url || ""}
+                        backgroundImage={
+                          (block.backgroundImage as Media)?.url || ""
+                        }
                         downSectionId={block.downSectionId}
                       />
                       <style jsx global>{`
@@ -122,9 +133,12 @@ export default function PageClient({ solution }: PageClientProps) {
                         <Button
                           variant="default"
                           size="default"
-                          onClick={() => window.location.href = mediaItem?.link || '/contact'}
+                          onClick={() =>
+                            (window.location.href =
+                              mediaItem?.link || "/contact")
+                          }
                         >
-                          {buttonText || 'İletişime Geç'}
+                          {buttonText}
                         </Button>
                       </div>
                     </div>
@@ -143,7 +157,9 @@ export default function PageClient({ solution }: PageClientProps) {
                         >
                           <div className="tw-flex tw-justify-center tw-w-full">
                             <div className="tw-overflow-hidden tw-rounded-2xl tw-shadow-xl hover:tw-shadow-2xl tw-transition-all tw-duration-300 tw-w-full">
-                              <div className="tw-relative tw-w-full tw-pb-[66.67%]"> {/* 3:2 aspect ratio */}
+                              <div className="tw-relative tw-w-full tw-pb-[66.67%]">
+                                {" "}
+                                {/* 3:2 aspect ratio */}
                                 <Image
                                   src={(block.image?.src as Media)?.url || ""}
                                   alt={block.image?.alt || ""}
@@ -167,11 +183,11 @@ export default function PageClient({ solution }: PageClientProps) {
                               {block.title}
                             </h1>
                           )}
-                          {block.description && <p className="w-95 md-w-100">{block.description}</p>}
+                          {block.description && (
+                            <p className="w-95 md-w-100">{block.description}</p>
+                          )}
                           {block.contentFooter && (
-                            <div className="tw-mt-6">
-                              {block.contentFooter}
-                            </div>
+                            <div className="tw-mt-6">{block.contentFooter}</div>
                           )}
                         </div>
                       </>
@@ -188,11 +204,11 @@ export default function PageClient({ solution }: PageClientProps) {
                               {block.title}
                             </h1>
                           )}
-                          {block.description && <p className="w-95 md-w-100">{block.description}</p>}
+                          {block.description && (
+                            <p className="w-95 md-w-100">{block.description}</p>
+                          )}
                           {block.contentFooter && (
-                            <div className="tw-mt-6">
-                              {block.contentFooter}
-                            </div>
+                            <div className="tw-mt-6">{block.contentFooter}</div>
                           )}
                         </div>
                         <div
@@ -256,13 +272,6 @@ export default function PageClient({ solution }: PageClientProps) {
                     </div>
                   </div>
                 );
-              case "newsletter":
-                return (
-                  <div>
-                    <NewsletterBlock />
-                  </div>
-                );
-
 
               default:
                 return null;
@@ -283,6 +292,7 @@ export default function PageClient({ solution }: PageClientProps) {
           </React.Fragment>
         ))}
       </div>
+      <NewsletterBlock />
       <Footer />
     </div>
   );
