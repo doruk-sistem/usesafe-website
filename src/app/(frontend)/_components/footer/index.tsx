@@ -2,7 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import React from "react";
-import Logo from "../logo";
+
+import { SOCIAL_LINKS, CONTACT_INFO } from "@/assets/constants/links";
 import {
   LinkedInIcon,
   FacebookIcon,
@@ -10,13 +11,13 @@ import {
   XIcon,
 } from "@/assets/icons";
 
-import { SOCIAL_LINKS, CONTACT_INFO } from "@/assets/constants/links";
+import Logo from "../logo";
 
 export default function Footer() {
   const t = useTranslations("ContactUs.Footer");
 
   return (
-    <footer className={`tw-bg-white tw-border-t tw-border-gray-10`}>
+    <footer className="tw-bg-white tw-border-t tw-border-gray-10">
       <div className="container tw-py-8">
         <div className="row justify-content-between tw-gap-y-6">
           {/* Logo ve Copyright */}
