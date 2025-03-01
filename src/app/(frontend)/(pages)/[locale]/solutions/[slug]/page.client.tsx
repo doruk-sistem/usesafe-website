@@ -2,15 +2,17 @@
 
 import Image from "next/image";
 import React from "react";
+
+import { Button } from "@/app/(frontend)/_components/button";
+import { MediaBlock } from "@/blocks/media-block/Component";
+import NewsletterBlock from "@/blocks/newsletter-block";
+
 import { PageTitleBlock } from "@/blocks/page-title-block/Component";
 import Footer from "@/frontend/_components/footer";
 import Header from "@/frontend/_components/header";
 import { Media, Solution } from "@/payload-types";
-import { MediaBlock } from "@/blocks/media-block/Component";
-import NewsletterBlock from "@/blocks/newsletter-block";
 import { useParams } from "next/navigation";
-import { Button } from "@/app/(frontend)/_components/button";
-
+  
 interface PageClientProps {
   solution: Solution;
 }
@@ -84,10 +86,7 @@ export default function PageClient({ solution }: PageClientProps) {
             switch (block.blockType) {
               case "pageTitle":
                 return (
-                  <div
-                    className="tw--mt-[80px]"
-                    style={{ marginBottom: "-1px" }}
-                  >
+                  <div className="tw--mt-[80px]" style={{ marginBottom: "-1px" }}>
                     <div className="tw-relative">
                       <PageTitleBlock
                         title={block.title || ""}
@@ -105,7 +104,6 @@ export default function PageClient({ solution }: PageClientProps) {
                     </div>
                   </div>
                 );
-
               case "mediaBlock":
                 const mediaItem = block.mediaItems?.[0];
                 const buttonText = block.sectionOptions?.buttonText;

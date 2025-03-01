@@ -1,13 +1,15 @@
 import { notFound } from "next/navigation";
 import { getLocale } from "next-intl/server";
+
 import generateMeta from "@/frontend/_utils/generate-meta";
 import { initPayload } from "@/utils/getPayload";
+
 import PageClient from "./page.client";
 
 export default async function SolutionPage({
   params,
 }: {
-  params: { slug: string; locale: string };
+  params: any;
 }) {
   try {
     const { slug, locale: urlLocale } = await Promise.resolve(params);
@@ -39,7 +41,7 @@ export default async function SolutionPage({
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string; locale: string };
+  params: any;
 }) {
   const { slug, locale } = await Promise.resolve(params);
   return await generateMeta(null, {

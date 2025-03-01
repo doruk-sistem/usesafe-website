@@ -1,97 +1,116 @@
-import { CollectionConfig } from 'payload';
+import { CollectionConfig } from "payload";
 
 export const Solutions: CollectionConfig = {
-  slug: 'solutions',
+  slug: "solutions",
   admin: {
-    group: 'Pages',
-    useAsTitle: 'title',
+    group: "Pages",
+    useAsTitle: "title",
   },
   fields: [
     {
-      name: 'title',
-      type: 'text',
+      name: "title",
+      type: "text",
       required: true,
       localized: true,
     },
     {
-      name: 'slug',
-      type: 'text',
+      name: "slug",
+      type: "text",
       required: true,
       unique: true,
     },
     {
-      name: 'layout',
-      type: 'blocks',
+      name: "layout",
+      type: "blocks",
       localized: true,
       blocks: [
         {
-          slug: 'pageTitle',
+          slug: "pageTitle",
           fields: [
             {
-              name: 'title',
-              type: 'text',
+              name: "title",
+              type: "text",
               required: true,
               localized: true,
             },
             {
-              name: 'topTitle',
-              type: 'text',
+              name: "topTitle",
+              type: "text",
               localized: true,
             },
             {
-              name: 'backgroundImage',
-              type: 'upload',
-              relationTo: 'media',
+              name: "backgroundImage",
+              type: "upload",
+              relationTo: "media",
+            },
+            {
+              name: "downSectionId",
+              type: "text",
             }
           ]
         },
         {
-          slug: 'mediaBlock',
+          slug: "mediaBlock",
           fields: [
             {
-              name: 'mediaItems',
-              type: 'array',
-              label: 'Medya Öğeleri',
+              name: "mediaItems",
+              type: "array",
+              label: "Medya Öğeleri",
               minRows: 1,
               maxRows: 6,
               labels: {
-                singular: 'Medya',
-                plural: 'Medyalar',
+                singular: "Medya",
+                plural: "Medyalar",
               },
               fields: [
                 {
-                  name: 'image',
-                  type: 'upload',
-                  relationTo: 'media',
+                  name: "image",
+                  type: "upload",
+                  relationTo: "media",
                   required: true,
-                  label: 'Görsel',
+                  label: "Görsel",
                 },
                 {
-                  name: 'title',
-                  type: 'text',
-                  label: 'Başlık',
+                  name: "title",
+                  type: "text",
+                  label: "Başlık",
                 },
                 {
-                  name: 'description',
-                  type: 'textarea',
-                  label: 'Açıklama',
+                  name: "description",
+                  type: "textarea",
+                  label: "Açıklama",
                 },
                 {
-                  name: 'link',
-                  type: 'text',
-                  label: 'Bağlantı',
+                  name: "link",
+                  type: "text",
+                  label: "Bağlantı",
                 }
               ],
             },
             {
-              name: 'sectionOptions',
-              type: 'group',
-              label: 'Bölüm Seçenekleri',
+              name: "sectionOptions",
+              type: "group",
+              label: "Bölüm Seçenekleri",
               fields: [
                 {
-                  name: 'buttonText',
-                  type: 'text',
-                  label: 'Buton Metni',
+                  name: "className",
+                  type: "text",
+                  label: "CSS Sınıfı"
+                },
+                {
+                  name: "innerContainer",
+                  type: "checkbox",
+                  label: "İç Container Kullan"
+                },
+                {
+                  name: "sectionId",
+                  type: "text",
+                  label: "Bölüm ID"
+                },
+                {
+                  name: "buttonText",
+                  type: "text",
+                  label: "Buton Metni",
                   localized: true,
                   required: true,
                 }
@@ -100,77 +119,88 @@ export const Solutions: CollectionConfig = {
           ]
         },
         {
-          slug: 'contentWithImage',
+          slug: "contentWithImage",
           fields: [
             {
-              name: 'title',
-              type: 'text',
+              name: "title",
+              type: "text",
               localized: true,
             },
             {
-              name: 'description',
-              type: 'textarea',
+              name: "description",
+              type: "textarea",
               localized: true,
             },
             {
-              name: 'image',
-              type: 'group',
+              name: "image",
+              type: "group",
               fields: [
                 {
-                  name: 'src',
-                  type: 'upload',
-                  relationTo: 'media',
+                  name: "src",
+                  type: "upload",
+                  relationTo: "media",
                   required: true,
                 },
                 {
-                  name: 'alt',
-                  type: 'text',
+                  name: "alt",
+                  type: "text",
                   localized: true,
+                },
+                {
+                  name: "width",
+                  type: "number",
+                },
+                {
+                  name: "height",
+                  type: "number",
+                },
+                {
+                  name: "imgClassName",
+                  type: "text",
                 }
               
               ]
             },
             {
-              name: 'imagePosition',
-              type: 'select',
+              name: "imagePosition",
+              type: "select",
               options: [
-                { label: 'Left', value: 'left' },
-                { label: 'Right', value: 'right' }
+                { label: "Left", value: "left" },
+                { label: "Right", value: "right" }
               ]
             }
           ]
         },
         {
-          slug: 'backgroundVideo',
+          slug: "backgroundVideo",
           fields: [
             {
-              name: 'title',
-              type: 'text',
+              name: "title",
+              type: "text",
               localized: true,
             },
             {
-              name: 'description',
-              type: 'textarea',
+              name: "description",
+              type: "textarea",
               localized: true,
             },
             {
-              name: 'video',
-              type: 'group',
+              name: "video",
+              type: "group",
               fields: [
                 {
-                  name: 'src',
-                  type: 'upload',
-                  relationTo: 'media',
+                  name: "src",
+                  type: "upload",
+                  relationTo: "media",
                   required: true,
                   filterOptions: {
-                    mimeType: { contains: 'video/' }  
+                    mimeType: { contains: "video/" }  
                   }
                 }
               ]
             }
           ]
         },
-        
       ]
     }
   ]
