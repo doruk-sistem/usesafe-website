@@ -10,23 +10,27 @@ const NEXT_PUBLIC_SERVER_URL = process.env.VERCEL_PROJECT_PRODUCTION_URL
 
 const nextConfig: NextConfig = {
   webpack(config) {
-    const fileLoaderRule = config.module.rules.find((rule: any) =>
-      rule.test?.test?.('.svg'),
-    )
-    config.module.rules.push(
-      {
-        ...fileLoaderRule,
-        test: /\.svg$/i,
-        resourceQuery: /url/, // *.svg?url
-      },
-      {
-        test: /\.svg$/i,
-        issuer: /\.[jt]sx?$/,
-        resourceQuery: { not: /url/ }, // exclude if *.svg?url
-        use: ['@svgr/webpack'],
-      },
-    )
-    return config
+    // Remove any existing rules for SVG and image files
+    config.module.rules = config.module.rules.filter((rule: any) => {
+      if (typeof rule.test === "object" && rule.test instanceof RegExp) {
+        return !rule.test.test(".svg") && !rule.test.test(".png");
+      }
+      return true;
+    });
+
+    // Add rules for SVG files
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
+
+    // Add rules for image files
+    config.module.rules.push({
+      test: /\.(png|jpg|jpeg|gif|webp|ico)$/i,
+      type: "asset/resource",
+    });
+
+    return config;
   },
   images: {
     remotePatterns: [

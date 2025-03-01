@@ -3,14 +3,13 @@
 import Image from "next/image";
 import React from "react";
 
+import { Button } from "@/app/(frontend)/_components/button";
+import { MediaBlock } from "@/blocks/media-block/Component";
 import NewsletterBlock from "@/blocks/newsletter-block";
 import { PageTitleBlock } from "@/blocks/page-title-block/Component";
 import Footer from "@/frontend/_components/footer";
 import Header from "@/frontend/_components/header";
 import { Media, Solution } from "@/payload-types";
-import { MediaBlock } from "@/blocks/media-block/Component";
-import { useParams } from "next/navigation";
-import { Button } from "@/app/(frontend)/_components/button";
 interface PageClientProps {
   solution: Solution;
 }
@@ -60,7 +59,6 @@ type Block = {
 };
 
 export default function PageClient({ solution }: PageClientProps) {
-  const params = useParams();
   if (!solution) {
     return <div>Solution not found</div>;
   }
@@ -79,7 +77,7 @@ export default function PageClient({ solution }: PageClientProps) {
             switch (block.blockType) {
               case "pageTitle":
                 return (
-                  <div className="tw--mt-[80px]" style={{ marginBottom: '-1px' }}> 
+                  <div className="tw--mt-[80px]" style={{ marginBottom: "-1px" }}>
                     <div className="tw-relative">
                       <PageTitleBlock
                         title={block.title || ""}
@@ -99,7 +97,7 @@ export default function PageClient({ solution }: PageClientProps) {
                 case "mediaBlock":
   const mediaItem = block.mediaItems?.[0];
   const buttonText = block.sectionOptions?.buttonText;
-  
+
   return (
     <div className="tw-container tw-mx-auto">
       <div className="tw-max-w-4xl tw-mx-auto">
@@ -113,7 +111,7 @@ export default function PageClient({ solution }: PageClientProps) {
             {mediaItem.description}
           </p>
         )}
-        <MediaBlock 
+        <MediaBlock
           media={mediaItem?.image}
           mediaWidth="auto"
           blockType={block.blockType}
@@ -122,9 +120,9 @@ export default function PageClient({ solution }: PageClientProps) {
           <Button
             variant="default"
             size="default"
-            onClick={() => window.location.href = mediaItem?.link || '/contact'}
+            onClick={() => window.location.href = mediaItem?.link || "/contact"}
           >
-            {buttonText || 'İletişime Geç'}
+            {buttonText || "İletişime Geç"}
           </Button>
         </div>
       </div>
@@ -135,7 +133,7 @@ export default function PageClient({ solution }: PageClientProps) {
     <div className="row tw-items-center tw-justify-center tw-space-y-10 tw-space-x-10">
       {block.imagePosition === "left" ? (
         <>
-          <div 
+          <div
             className="col-lg-6 position-relative"
             data-aos="fade-right"
             data-aos-duration="1000"
@@ -156,7 +154,7 @@ export default function PageClient({ solution }: PageClientProps) {
               </div>
             </div>
           </div>
-          <div 
+          <div
             className="col-lg-5 col-md-9 text-center text-lg-start"
             data-aos="fade-left"
             data-aos-duration="1000"
@@ -177,7 +175,7 @@ export default function PageClient({ solution }: PageClientProps) {
         </>
       ) : (
         <>
-          <div 
+          <div
             className="col-lg-5 col-md-9 text-center text-lg-start"
             data-aos="fade-right"
             data-aos-duration="1000"
@@ -195,7 +193,7 @@ export default function PageClient({ solution }: PageClientProps) {
               </div>
             )}
           </div>
-          <div 
+          <div
             className="col-lg-6 position-relative"
             data-aos="fade-left"
             data-aos-duration="1000"
@@ -260,7 +258,6 @@ export default function PageClient({ solution }: PageClientProps) {
                     <NewsletterBlock />
                   </div>
                 );
-
 
               default:
                 return null;
