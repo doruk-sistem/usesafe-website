@@ -12,6 +12,7 @@ export default async function SolutionPage({
   params: any;
 }) {
   try {
+    const { slug, locale: urlLocale } = await Promise.resolve(params);
     const payload = await initPayload();
     const locale = await getLocale();
 
@@ -19,22 +20,20 @@ export default async function SolutionPage({
       collection: "solutions",
       where: {
         slug: {
-          equals: params.slug,
+          equals: slug,
         },
       },
       locale: locale as any,
-      depth: 3
+      depth: 3,
     });
 
     if (!solution.docs.length) {
       notFound();
     }
 
-    // solution.docs[0] direkt olarak geçiyoruz
     return <PageClient solution={solution.docs[0] as any} />;
   } catch (error) {
     console.error("Error loading solution:", error);
-    // Boş solution objesi dönüyoruz
     return <PageClient solution={{ layout: [] } as any} />;
   }
 }
@@ -44,8 +43,9 @@ export async function generateMetadata({
 }: {
   params: any;
 }) {
+  const { slug, locale } = await Promise.resolve(params);
   return await generateMeta(null, {
-    path: `/solutions/${params.slug}`,
-    locale: params.locale
+    path: `/solutions/${slug}`,
+    locale: locale,
   });
 }

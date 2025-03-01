@@ -158,6 +158,7 @@ export const Solutions: CollectionConfig = {
                   name: "imgClassName",
                   type: "text",
                 }
+              
               ]
             },
             {
@@ -189,23 +190,17 @@ export const Solutions: CollectionConfig = {
               fields: [
                 {
                   name: "src",
-                  type: "text",
-                  required: true,
-                },
-                {
-                  name: "poster",
                   type: "upload",
                   relationTo: "media",
+                  required: true,
+                  filterOptions: {
+                    mimeType: { contains: "video/" }  
+                  }
                 }
               ]
             }
           ]
         },
-
-        {
-          slug: "newsletter",
-          fields: []
-        }
       ]
     }
   ]
