@@ -68,6 +68,7 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
+    solutions: Solution;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -76,6 +77,7 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    solutions: SolutionsSelect<false> | SolutionsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -155,6 +157,68 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "solutions".
+ */
+export interface Solution {
+  id: number;
+  title: string;
+  slug: string;
+  layout?:
+    | (
+        | {
+            title: string;
+            topTitle?: string | null;
+            backgroundImage?: (number | null) | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pageTitle';
+          }
+        | {
+            mediaItems?:
+              | {
+                  image: number | Media;
+                  title?: string | null;
+                  description?: string | null;
+                  link?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            sectionOptions: {
+              buttonText: string;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'mediaBlock';
+          }
+        | {
+            title?: string | null;
+            description?: string | null;
+            image: {
+              src: number | Media;
+              alt?: string | null;
+            };
+            imagePosition?: ('left' | 'right') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'contentWithImage';
+          }
+        | {
+            title?: string | null;
+            description?: string | null;
+            video: {
+              src: number | Media;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'backgroundVideo';
+          }
+      )[]
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -167,6 +231,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'media';
         value: number | Media;
+      } | null)
+    | ({
+        relationTo: 'solutions';
+        value: number | Solution;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -243,6 +311,77 @@ export interface MediaSelect<T extends boolean = true> {
   height?: T;
   focalX?: T;
   focalY?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "solutions_select".
+ */
+export interface SolutionsSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  layout?:
+    | T
+    | {
+        pageTitle?:
+          | T
+          | {
+              title?: T;
+              topTitle?: T;
+              backgroundImage?: T;
+              id?: T;
+              blockName?: T;
+            };
+        mediaBlock?:
+          | T
+          | {
+              mediaItems?:
+                | T
+                | {
+                    image?: T;
+                    title?: T;
+                    description?: T;
+                    link?: T;
+                    id?: T;
+                  };
+              sectionOptions?:
+                | T
+                | {
+                    buttonText?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        contentWithImage?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              image?:
+                | T
+                | {
+                    src?: T;
+                    alt?: T;
+                  };
+              imagePosition?: T;
+              id?: T;
+              blockName?: T;
+            };
+        backgroundVideo?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              video?:
+                | T
+                | {
+                    src?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+      };
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

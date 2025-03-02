@@ -10,39 +10,49 @@ import SwitchLanguage from "../switch-language";
 
 import NavLink from "./navlink";
 
-export default function Navbar() {
-  const t = useTranslations();
+interface Solution {
+  title: string;
+  slug: string;
+}
 
+interface NavbarProps {
+  solutions?: Solution[];
+}
+
+export default function Navbar({ solutions = [] }: NavbarProps) {
+  const t = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: t("common.homepage"), href: "/" },
     {
-      label: t("common.solutions"),
-      subItems: [
-        {
-          label: t("common.digital_product_passport"),
-          href: "/solutions/digital-product-passport",
-        },
-        {
-          label: t("common.digital_twins"),
-          href: "/solutions/digital-twins",
-        },
-        {
-          label: t("common.use_safe_certification"),
-          href: "/solutions/use-safe-certification",
-        },
-      ],
+      key: "home",
+      label: t("common.homepage"),
+      href: "/"
     },
     {
+      key: "solutions",
+      label: t("common.solutions"),
+      subItems: solutions.map((solution, index) => ({
+        key: `solution-${solution.slug || index}`,
+        label: solution.title,
+        href: `/solutions/${solution.slug}` || `#solution-${index}`,
+      })),
+    },
+    {
+      key: "blog",
       label: t("common.blog"),
       href: "/blog",
     },
     {
+      key: "about",
       label: t("common.about_dpp"),
       href: "/resources/about-dpp",
     },
-    { label: t("common.contact_us"), href: "/contact" },
+    {
+      key: "contact",
+      label: t("common.contact_us"),
+      href: "/contact"
+    },
   ];
 
   return (
@@ -61,7 +71,7 @@ export default function Navbar() {
           <div className="tw-hidden xl:tw-flex tw-items-center tw-space-x-5">
             {navItems.map((item) => (
               <NavLink
-                key={item.label}
+                key={item.key}
                 label={item.label}
                 href={item.href}
                 subItems={item.subItems}
@@ -71,9 +81,7 @@ export default function Navbar() {
 
           {/* Action Buttons and Language Selector */}
           <div className="tw-hidden xl:tw-flex tw-items-center tw-space-x-1">
-            {/* Language Selector */}
             <SwitchLanguage />
-
             <a href="/demo">
               <Button variant="default">{t("common.try_for_free")}</Button>
             </a>
@@ -98,7 +106,7 @@ export default function Navbar() {
             <div className="tw-flex tw-flex-col tw-space-y-4 tw-py-4">
               {navItems.map((item) => (
                 <NavLink
-                  key={item.label}
+                  key={item.key}
                   label={item.label}
                   href={item.href}
                   subItems={item.subItems}

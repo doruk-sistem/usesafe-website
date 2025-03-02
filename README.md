@@ -2,7 +2,6 @@ Usesafe.net web page
 
 
 
-
 ## Getting Started
 
 First, run the development server:
