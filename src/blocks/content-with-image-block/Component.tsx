@@ -15,7 +15,6 @@ export function ContentWithImageBlock({
   description,
   buttonLink,
   buttonText,
-  blockOptions,
 }: ContentWithImageBlockProps) {
   const layout =
     position === "left" ? (
