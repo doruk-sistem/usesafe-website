@@ -12,7 +12,7 @@ export default async function SolutionPage({
   params: any;
 }) {
   try {
-    const { slug, locale: urlLocale } = await Promise.resolve(params);
+    const { slug } = await Promise.resolve(params);
     const payload = await initPayload();
     const locale = await getLocale();
 

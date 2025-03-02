@@ -6,13 +6,11 @@ import React from "react";
 import { Button } from "@/app/(frontend)/_components/button";
 import { MediaBlock } from "@/blocks/media-block/Component";
 import NewsletterBlock from "@/blocks/newsletter-block";
-
 import { PageTitleBlock } from "@/blocks/page-title-block/Component";
 import Footer from "@/frontend/_components/footer";
 import Header from "@/frontend/_components/header";
 import { Media, Solution } from "@/payload-types";
-import { useParams } from "next/navigation";
-  
+
 interface PageClientProps {
   solution: Solution;
 }

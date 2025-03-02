@@ -158,7 +158,7 @@ export const Solutions: CollectionConfig = {
                   name: "imgClassName",
                   type: "text",
                 }
-              
+
               ]
             },
             {
@@ -194,7 +194,7 @@ export const Solutions: CollectionConfig = {
                   relationTo: "media",
                   required: true,
                   filterOptions: {
-                    mimeType: { contains: "video/" }  
+                    mimeType: { contains: "video/" }
                   }
                 }
               ]
