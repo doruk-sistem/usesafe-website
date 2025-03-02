@@ -5,6 +5,7 @@ import React from "react";
 
 import { Button } from "@/app/(frontend)/_components/button";
 import { Media } from "@/components/Media";
+import RichText from "@/components/RichText";
 import { ContentWithImageBlock as ContentWithImageBlockProps } from "@/payload-types";
 
 export function ContentWithImageBlock({
@@ -29,7 +30,11 @@ export function ContentWithImageBlock({
               {title}
             </h1>
           )}
-          {description && <p className="w-95 md-w-100">{description}</p>}
+          {description && (
+            <p className="w-95 md-w-100">
+              <RichText content={description} />
+            </p>
+          )}
           {buttonLink && buttonText && (
             <Link href={buttonLink}>
               <Button variant="white">{buttonText}</Button>
@@ -45,7 +50,11 @@ export function ContentWithImageBlock({
               {title}
             </h1>
           )}
-          {description && <p className="w-95 md-w-100">{description}</p>}
+          {description && (
+            <p className="w-95 md-w-100">
+              <RichText content={description} />
+            </p>
+          )}
           {buttonLink && buttonText && (
             <Link href={buttonLink}>
               <Button variant="white">{buttonText}</Button>

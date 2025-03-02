@@ -19,7 +19,7 @@ export const Counter: CollectionConfig = {
       type: "array",
       required: true,
       admin: {
-        description: undefined  // Description'ı kaldır
+        description: undefined,  // Description'ı kaldır
       },
       fields: [
         {
@@ -32,8 +32,8 @@ export const Counter: CollectionConfig = {
           name: "value",
           type: "number",
           required: true,
-        }
-      ]
+        },
+      ],
     },
     {
       name: "active",

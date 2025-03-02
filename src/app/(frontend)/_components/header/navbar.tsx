@@ -27,7 +27,7 @@ export default function Navbar({ solutions = [] }: NavbarProps) {
     {
       key: "home",
       label: t("common.homepage"),
-      href: "/"
+      href: "/",
     },
     {
       key: "solutions",
@@ -51,7 +51,7 @@ export default function Navbar({ solutions = [] }: NavbarProps) {
     {
       key: "contact",
       label: t("common.contact_us"),
-      href: "/contact"
+      href: "/contact",
     },
   ];
 

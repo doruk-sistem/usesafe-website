@@ -46,8 +46,8 @@ export const Solutions: CollectionConfig = {
             {
               name: "downSectionId",
               type: "text",
-            }
-          ]
+            },
+          ],
         },
         {
           slug: "mediaBlock",
@@ -84,7 +84,7 @@ export const Solutions: CollectionConfig = {
                   name: "link",
                   type: "text",
                   label: "Bağlantı",
-                }
+                },
               ],
             },
             {
@@ -95,17 +95,17 @@ export const Solutions: CollectionConfig = {
                 {
                   name: "className",
                   type: "text",
-                  label: "CSS Sınıfı"
+                  label: "CSS Sınıfı",
                 },
                 {
                   name: "innerContainer",
                   type: "checkbox",
-                  label: "İç Container Kullan"
+                  label: "İç Container Kullan",
                 },
                 {
                   name: "sectionId",
                   type: "text",
-                  label: "Bölüm ID"
+                  label: "Bölüm ID",
                 },
                 {
                   name: "buttonText",
@@ -113,10 +113,10 @@ export const Solutions: CollectionConfig = {
                   label: "Buton Metni",
                   localized: true,
                   required: true,
-                }
-              ]
-            }
-          ]
+                },
+              ],
+            },
+          ],
         },
         {
           slug: "contentWithImage",
@@ -157,19 +157,19 @@ export const Solutions: CollectionConfig = {
                 {
                   name: "imgClassName",
                   type: "text",
-                }
+                },
 
-              ]
+              ],
             },
             {
               name: "imagePosition",
               type: "select",
               options: [
                 { label: "Left", value: "left" },
-                { label: "Right", value: "right" }
-              ]
-            }
-          ]
+                { label: "Right", value: "right" },
+              ],
+            },
+          ],
         },
         {
           slug: "backgroundVideo",
@@ -194,14 +194,14 @@ export const Solutions: CollectionConfig = {
                   relationTo: "media",
                   required: true,
                   filterOptions: {
-                    mimeType: { contains: "video/" }
-                  }
-                }
-              ]
-            }
-          ]
+                    mimeType: { contains: "video/" },
+                  },
+                },
+              ],
+            },
+          ],
         },
-      ]
-    }
-  ]
+      ],
+    },
+  ],
 };

@@ -23,6 +23,7 @@ const buttonVariants = cva(
         sm: "tw-h-10 tw-px-6 tw-text-xs",
         lg: "tw-h-14 tw-px-9 tw-text-lg",
         icon: "tw-h-12 tw-w-12",
+        clear: "",
       },
       uppercase: {
         true: "tw-uppercase",
