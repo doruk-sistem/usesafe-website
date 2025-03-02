@@ -1,6 +1,9 @@
 import { DefaultNodeTypes, SerializedBlockNode } from "@payloadcms/richtext-lexical";
 import React, { Fragment, JSX } from "react";
 
+import { CMSLink } from "@/components/Link";
+
+// eslint-disable-next-line import/order
 import {
   IS_BOLD,
   IS_CODE,
@@ -10,8 +13,6 @@ import {
   IS_SUPERSCRIPT,
   IS_UNDERLINE,
 } from "./nodeFormat";
-
-import { CMSLink } from "@/components/Link";
 
 export type NodeTypes =
   | DefaultNodeTypes

@@ -1,8 +1,8 @@
 import React from "react";
 
-import { serializeLexical } from "./serialize";
-
 import { cn } from "@/utils/cn";
+
+import { serializeLexical } from "./serialize";
 
 type Props = {
   className?: string
