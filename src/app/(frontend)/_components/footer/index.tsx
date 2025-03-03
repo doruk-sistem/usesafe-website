@@ -142,7 +142,7 @@ export default function Footer({ footerData }: FooterProps) {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div>  
 
           {/* Social Links */}
           <div className="col-6 col-lg-2 col-sm-4 order-sm-4">

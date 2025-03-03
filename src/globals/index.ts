@@ -1,4 +1,4 @@
-import { Homepage } from "./Homepage/config";
+import { Homepage } from "./homepage";
 
 const globals = [Homepage];
 
