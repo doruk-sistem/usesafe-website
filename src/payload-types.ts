@@ -169,6 +169,7 @@ export interface Solution {
             title: string;
             topTitle?: string | null;
             backgroundImage?: (number | null) | Media;
+            downSectionId?: string | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'pageTitle';
@@ -184,6 +185,9 @@ export interface Solution {
                 }[]
               | null;
             sectionOptions: {
+              className?: string | null;
+              innerContainer?: boolean | null;
+              sectionId?: string | null;
               buttonText: string;
             };
             id?: string | null;
@@ -196,6 +200,9 @@ export interface Solution {
             image: {
               src: number | Media;
               alt?: string | null;
+              width?: number | null;
+              height?: number | null;
+              imgClassName?: string | null;
             };
             imagePosition?: ('left' | 'right') | null;
             id?: string | null;
@@ -328,6 +335,7 @@ export interface SolutionsSelect<T extends boolean = true> {
               title?: T;
               topTitle?: T;
               backgroundImage?: T;
+              downSectionId?: T;
               id?: T;
               blockName?: T;
             };
@@ -346,6 +354,9 @@ export interface SolutionsSelect<T extends boolean = true> {
               sectionOptions?:
                 | T
                 | {
+                    className?: T;
+                    innerContainer?: T;
+                    sectionId?: T;
                     buttonText?: T;
                   };
               id?: T;
@@ -361,6 +372,9 @@ export interface SolutionsSelect<T extends boolean = true> {
                 | {
                     src?: T;
                     alt?: T;
+                    width?: T;
+                    height?: T;
+                    imgClassName?: T;
                   };
               imagePosition?: T;
               id?: T;

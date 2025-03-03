@@ -1,9 +1,11 @@
-import { DefaultNodeTypes, SerializedBlockNode } from "@payloadcms/richtext-lexical";
+import {
+  DefaultNodeTypes,
+  SerializedBlockNode,
+} from "@payloadcms/richtext-lexical";
 import React, { Fragment, JSX } from "react";
 
 import { CMSLink } from "@/components/Link";
 
-// eslint-disable-next-line import/order
 import {
   IS_BOLD,
   IS_CODE,
@@ -17,13 +19,15 @@ import {
 export type NodeTypes =
   | DefaultNodeTypes
   // | SerializedBlockNode<CTABlockProps | MediaBlockProps | BannerBlockProps | CodeBlockProps>
-  | SerializedBlockNode
+  | SerializedBlockNode;
 
 type Props = {
-  nodes: NodeTypes[]
-}
+  nodes: NodeTypes[];
+};
 
 export function serializeLexical({ nodes }: Props): JSX.Element {
+  console.log(nodes);
+
   return (
     <Fragment>
       {nodes?.map((node, index): JSX.Element | null => {
@@ -32,7 +36,13 @@ export function serializeLexical({ nodes }: Props): JSX.Element {
         }
 
         if (node.type === "text") {
-          let text = <React.Fragment key={index}>{node.text}</React.Fragment>;
+          let text = (
+            <React.Fragment key={index}>
+              <span className="tw-text-muted-foreground tw-text-base">
+                {node.text}
+              </span>
+            </React.Fragment>
+          );
           if (node.format & IS_BOLD) {
             text = <strong key={index}>{text}</strong>;
           }
@@ -86,7 +96,8 @@ export function serializeLexical({ nodes }: Props): JSX.Element {
           }
         };
 
-        const serializedChildren = "children" in node ? serializedChildrenFn(node) : "";
+        const serializedChildren =
+          "children" in node ? serializedChildrenFn(node) : "";
 
         if (node.type === "block") {
           const block = node.fields;
@@ -142,7 +153,7 @@ export function serializeLexical({ nodes }: Props): JSX.Element {
             case "list": {
               const Tag = node?.tag;
               return (
-                <Tag className="list col-start-2" key={index}>
+                <Tag className="tw-list col-start-1" key={index}>
                   {serializedChildren}
                 </Tag>
               );
@@ -151,20 +162,20 @@ export function serializeLexical({ nodes }: Props): JSX.Element {
               if (node?.checked !== null) {
                 return (
                   <li
-                    aria-checked={node.checked ? "true" : "false"}
-                    className={` ${node.checked ? "" : ""}`}
+                    //aria-checked={node.checked ? "true" : "false"}
+                    className="tw-flex tw-items-start tw-gap-3"
                     key={index}
-
-                    role="checkbox"
-                    tabIndex={-1}
-                    value={node?.value}
+                    // role="listitem"
+                    //tabIndex={-1}
+                    // value={node?.value}
                   >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-check-big tw-h-5 tw-w-5 tw-text-primary tw-mt-1 tw-flex-shrink-0"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
                     {serializedChildren}
                   </li>
                 );
               } else {
                 return (
-                  <li key={index} value={node?.value}>
+                  <li className="tw-my-1" key={index} value={node?.value}>
                     {serializedChildren}
                   </li>
                 );

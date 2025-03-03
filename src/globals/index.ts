@@ -1,5 +1,3 @@
-import { Homepage } from "./Homepage/config";
-
-const globals = [Homepage];
+const globals: never[] = [];
 
 export default globals;
