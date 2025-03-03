@@ -1,22 +1,17 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
-import { useTranslations } from "next-intl";
 
-interface AccordionBlockProps {
-  title?: string;
-  description?: string;
-}
+import { Media } from "@/components/Media";
+import { AccordionBlock as AccordionBlockProps } from "@/payload-types";
 
-export function AccordionBlock({ title, description }: AccordionBlockProps) {
-  const t = useTranslations('AccordionBlock');
+export function AccordionBlock({
+  title,
+  description,
+  image,
+  items,
+}: AccordionBlockProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  const items = Array.from({ length: t.raw('items').length }).map((_, index) => ({
-    title: t(`items.${index}.title`),
-    description: t(`items.${index}.description`)
-  }));
 
   const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -100,13 +95,13 @@ export function AccordionBlock({ title, description }: AccordionBlockProps) {
           data-bottom-top="transform: translateY(100px)"
           data-top-bottom="transform: translateY(-100px)"
         >
-          <Image
-            src="/crafto/images/demo-seo-agency-process-01.png"
-            alt="Demo Seo Agency Process 01"
-            width={1000}
-            height={1000}
-            className="tw-w-full tw-h-full tw-object-contain tw-absolute tw-left-0"
-          />
+          {image && (
+            <Media
+              resource={image}
+              className="tw-w-full tw-h-full"
+              imgClassName="tw-w-full tw-h-full tw-object-contain tw-absolute tw-left-0"
+            />
+          )}
         </div>
       </div>
     </div>

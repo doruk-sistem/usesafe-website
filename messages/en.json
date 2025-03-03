@@ -4,13 +4,13 @@
   },
   "meta": {
     "common": {
-      "title": "Hello world!",
-      "description": "Go to the about page",
-      "keywords": "Hello world!",
-      "og_title": "Hello world!",
-      "og_description": "Go to the about page",
-      "og_image_alt": "Hello world!",
-      "twitter_title": "Hello world!",
+      "title": "UseSafe - Digital Product Passport, Verification & Traceability",
+      "description": "Ensuring product safety, compliance, and sustainability through our digital product certification system.",
+      "keywords": "Digital Product Passport, Verification, Traceability, Safety, Compliance, Sustainability",
+      "og_title": "UseSafe - Digital Product Passport, Verification & Traceability",
+      "og_description": "Ensuring product safety, compliance, and sustainability through our digital product certification system.",
+      "og_image_alt": "UseSafe - Digital Product Passport, Verification & Traceability",
+      "twitter_title": "UseSafe - Digital Product Passport, Verification & Traceability",
       "twitter_description": "Go to the about page"
     }
   },
@@ -97,7 +97,8 @@
     "top_header_ads": "Special Campaign: 50% discount for the first month!",
     "about_dpp": "About DPP",
     "resources": "Resources",
-    "digital_twins": "Digital Twins"
+    "digital_twins": "Digital Twins",
+    "blog": "Blog"
   },
   "DigitalTwins": {
     "page_title": "Digital Twins",
@@ -227,41 +228,41 @@
         }
       },
       "Footer": {
+        "copyright": "© 2025 by UseSafe.",
         "company": {
-          "title": "Company",
-          "about": "About",
-          "hosting": "Hosting",
-          "domain": "Domain",
-          "pricing": "Pricing"
-        },
-        "customer": {
-          "title": "Customer",
-          "client_support": "Client support",
-          "help_center": "Help center",
-          "system_status": "System status",
-          "feedback": "Feedback"
-        },
-        "contact": {
-          "title": "Say hello",
-          "need_support": "Need support?",
-          "email": "hi@domain.com",
-          "customer_care": "Customer care",
-          "phone": "+1 234 567 8910"
-        },
-        "newsletter": {
-          "title": "Subscribe our newsletter",
-          "description": "Subscribe our newsletter to get the latest news and updates!",
-          "placeholder": "Enter your email",
-          "button_label": "submit"
+          "title": "COMPANY",
+          "usesafe": "UseSafe",
+          "about": "About"
         },
         "legal": {
-          "recaptcha_text": "This site is protected by reCAPTCHA and the Google",
-          "privacy_policy": "privacy policy",
-          "and": "and",
-          "terms": "terms of service",
-          "disclaimer": "apply. You must not use this website if you disagree with any of these website standard terms and conditions."
+  "title": "LEGAL",
+  "terms-conditions": "Terms & Conditions",
+  "privacy-policy": "Privacy Policy"
+},
+        "social": {
+          "title": "SOCIAL",
+          "LinkedIn": "LinkedIn",
+          "Facebook": "Facebook",
+          "Instagram": "Instagram",
+          "X": "X"
         },
-        "company_description": "Lorem ipsum amet adipiscing elit to eiusmod ad tempor incididunt enim."
+        "newsletter": {
+        "title": "CONTACT",
+        "company": "DORUKSISTEM",
+        "email": "info@usesafe.net",
+        "phone": "Tell: +90-850-532-35-97",
+        "address": {
+          "germany": {
+            "street": "An der Münze 1",
+            "city": "50668 Köln Germany"
+          },
+          "turkey": {
+            "street": "Fahrettin Kerim Gökay Cd. 74/2",
+            "city": "34730 Kadikoy Turkiye"
+          }
+        }
+      }
+        
       }
     },
     "Slider": {
@@ -282,34 +283,54 @@
         }
       ]
     },
-    "AccordionBlock": {
-      "items": [
-        {
-          "title": "Ensuring Top-Tier Safety and Quality",
-          "description": "Usesafe certification involves comprehensive testing of your products to ensure they meet stringent safety and quality standards. Our rigorous evaluation process includes chemical analysis, physical testing, and performance assessments to guarantee the safety and reliability of your products. By passing these rigorous tests, your products are proven to be safe for consumer use, minimizing the risk of accidents, injuries, or health hazards."
+    "PrivacyPage": {
+    "PrivacyContent": {
+      "title": "Privacy Policy",
+      "sections": {
+        "legalDisclaimer": {
+          "title": "A LEGAL DISCLAIMER",
+          "content": "The explanations and information provided on this page are only general and high-level explanations and information on how to write your own document of a Privacy Policy. You should not rely on this article as legal advice or as recommendations regarding what you should actually do, because we cannot know in advance what are the specific privacy policies you wish to establish between your business and your customers and visitors. We recommend that you seek legal advice to help you understand and to assist you in the creation of your own Privacy Policy."
         },
-        {
-          "title": "Compliance with Regulatory Standards",
-          "description": "Usesafe ensures that your products comply with all relevant local, national, and international safety regulations. Our certification process is designed to thoroughly check for compliance, protecting your business from legal issues and potential recalls. Staying compliant with regulations not only enhances product safety but also demonstrates your commitment to quality and consumer protection."
+        "basics": {
+          "title": "PRIVACY POLICY - THE BASICS",
+          "content": "Having said that, a privacy policy is a statement that discloses some or all of the ways a website collects, uses, discloses, processes, and manages the data of its visitors and customers. It usually also includes a statement regarding the website's commitment to protecting its visitors' or customers' privacy, and an explanation about the different mechanisms the website is implementing in order to protect privacy."
         },
-        {
-          "title": "Building Consumer Trust",
-          "description": "Displaying the Usesafe certification mark on your products reassures consumers about their safety and quality. The Usesafe logo is a symbol of trust that increases consumer confidence, leading to higher customer satisfaction and loyalty.\n\nA strong reputation built on trust attracts more customers and business partners, creating opportunities for growth and collaboration."
+        "jurisdiction": {
+          "content": "Different jurisdictions have different legal obligations of what must be included in a Privacy Policy. You are responsible to make sure you are following the relevant legislation to your activities and location."
         },
-        {
-          "title": "Transparency and Accountability",
-          "description": "The Usesafe certification process is transparent and accountable. We provide detailed reports and documentation, allowing businesses and consumers to understand the evaluation criteria and results. This transparency fosters trust by showing that the certification is based on objective, rigorous standards rather than subjective judgments. Businesses can confidently showcase their commitment to quality and compliance."
-        },
-        {
-          "title": "Ongoing Monitoring and Support",
-          "description": "Usesafe certification involves continuous monitoring and periodic re-evaluation of certified products. This ensures that products maintain their safety and quality over time, adapting to any changes in regulations or standards. Our proactive approach helps identify and address potential safety issues early, preventing them from reaching consumers and maintaining continuous compliance"
-        },
-        {
-          "title": "Social Responsibility and Ethical Commitment",
-          "description": "By achieving Usesafe certification, businesses show their commitment to social responsibility. They demonstrate that they care about the safety and well-being of their customers and the environment. This commitment to social responsibility enhances trust among socially conscious consumers, who prefer to support brands that align with their values."
+        "inclusion": {
+          "title": "WHAT TO INCLUDE IN THE PRIVACY POLICY",
+          "content": "Generally speaking, a Privacy Policy often addresses these types of issues: the types of information the website is collecting and the manner in which it collects the data; an explanation about why is the website collecting these types of information; what are the website's practices on sharing the information with third parties; ways in which your visitors an customers can exercise their rights according to the relevant privacy legislation; the specific practices regarding minors' data collection; and much much more."
         }
-      ]
+      }
+    }
+  },
+    "TermsPage": {
+      "TermsContent": {
+        "title": "Terms & Conditions",
+        "sections": {
+          "legalDisclaimer": {
+            "title": "A LEGAL DISCLAIMER",
+            "content": "The explanations and information provided on this page are only general and high-level explanations and information on how to write your own document of Terms & Conditions. You should not rely on this article as legal advice or as recommendations regarding what you should actually do, because we cannot know in advance what are the specific terms you wish to establish between your business and your customers and visitors. We recommend that you seek legal advice to help you understand and to assist you in the creation of your own Terms & Conditions."
+          },
+          "basics": {
+            "title": "TERMS & CONDITIONS - THE BASICS",
+            "content": "Having said that, Terms and Conditions (T&C) are a set of legally binding terms defined by you, as the owner of this website. The T&C set forth the legal boundaries governing the activities of the website visitors, or your customers, while they visit or engage with this website. The T&C are meant to establish the legal relationship between the site visitors and you as the website owner."
+          },
+          "specificity": {
+            "content": "T&C should be defined according to the specific needs and nature of each website. For example, a website offering products to customers in e-commerce transactions requires T&C that are different from the T&C of a website only providing information (like a blog, a landing page, and so on)."
+          },
+          "protection": {
+            "content": "T&C provide you as the website owner the ability to protect yourself from potential legal exposure, but this may differ from jurisdiction to jurisdiction, so make sure to receive local legal advice if you are trying to protect yourself from legal exposure."
+          },
+          "inclusion": {
+            "title": "WHAT TO INCLUDE IN THE T&C DOCUMENT",
+            "content": "Generally speaking, T&C often address these types of issues: Who is allowed to use the website; the possible payment methods; a declaration that the website owner may change his or her offering in the future; the types of warranties the website owner gives his or her customers; a reference to issues of intellectual property or copyrights, where relevant; the website owner's right to suspend or cancel a member's account; and much much more."
+          }
+        }
+      }
     },
+   
     "PricingBlock": {
     "header": {
       "tag": "Predictable pricing",
@@ -374,6 +395,17 @@
         "text": "You can cancel anytime"
       }
     ]
+  },
+  "Components": {
+    "Newsletter": {
+      "title": "Subscribe to Our Newsletter",
+      "description": "Stay updated with our latest news and updates",
+      "emailPlaceholder": "Enter your email address",
+      "subscribe": "Subscribe",
+      "subscribing": "Subscribing...",
+      "successMessage": "Thank you for subscribing!",
+      "errorMessage": "An error occurred. Please try again."
+    }
   },
   "DemoPage": {
     "title": "Request Product Demo",

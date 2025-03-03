@@ -87,11 +87,11 @@ export default function TopHeader() {
               </a>
               |
               <a
-                href="https://turkrech.net.tr"
+                href="https://turkreach.com.tr"
                 target="_blank"
                 className="tw-flex tw-items-center tw-gap-2 tw-text-gray-600 hover:tw-text-primary"
               >
-                turkrech.net.tr <GoArrowUpRight className="tw-w-4 tw-h-4" />
+                turkrech.com.tr <GoArrowUpRight className="tw-w-4 tw-h-4" />
               </a>
             </div>
           </div>

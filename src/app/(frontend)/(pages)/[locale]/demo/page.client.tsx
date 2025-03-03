@@ -1,22 +1,22 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
-import { HiArrowNarrowRight } from "react-icons/hi";
-import { toast, Toaster } from "react-hot-toast";
-import { FaCheck } from "react-icons/fa";
-import { BsArrowUpRight } from "react-icons/bs";
 import { useTranslations } from "next-intl";
+import React, { useState } from "react";
+import { toast, Toaster } from "react-hot-toast";
+import { BsArrowUpRight } from "react-icons/bs";
+import { FaCheck } from "react-icons/fa";
+import { HiArrowNarrowRight } from "react-icons/hi";
 
+import { Button } from "@/app/(frontend)/_components/button";
 import ButtonSwitchAnimation from "@/app/(frontend)/_components/button-switch-animation";
 import Footer from "@/app/(frontend)/_components/footer";
 import Header from "@/app/(frontend)/_components/header";
-import { Button } from "@/app/(frontend)/_components/button";
-
+import NewsletterBlock from "@/blocks/newsletter-block";
 import products from "@/constants/products";
 
 export default function DemoPageClient() {
-  const t = useTranslations('DemoPage');
+  const t = useTranslations("DemoPage");
   const [selectedProduct, setSelectedProduct] = useState("");
   const [formData, setFormData] = useState({
     name: "",
@@ -24,12 +24,11 @@ export default function DemoPageClient() {
     company: "",
     phone: "",
     message: "",
-    
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
@@ -41,7 +40,7 @@ export default function DemoPageClient() {
     e.preventDefault();
 
     if (!selectedProduct) {
-      toast.error(t('toast.error.selectProduct'));
+      toast.error(t("toast.error.selectProduct"));
       return;
     }
 
@@ -64,11 +63,9 @@ export default function DemoPageClient() {
           <div>
             <h3 className="tw-text-lg tw-mb-0 tw-font-semibold">
               <FaCheck className="tw-text-green-500 tw-mr-2" />
-              {t('toast.success.title')}
+              {t("toast.success.title")}
             </h3>
-            <p className="tw-text-base tw-mb-0">
-              {t('toast.success.message')}
-            </p>
+            <p className="tw-text-base tw-mb-0">{t("toast.success.message")}</p>
           </div>
         ));
         setFormData({
@@ -82,8 +79,9 @@ export default function DemoPageClient() {
       } else {
         throw new Error("An error occurred");
       }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      toast.error(t('toast.error.generic'));
+      toast.error(t("toast.error.generic"));
     } finally {
       setIsSubmitting(false);
     }
@@ -95,14 +93,14 @@ export default function DemoPageClient() {
       <Toaster position="bottom-center" />
       <main className="tw-flex-1 tw-container tw-mx-auto tw-px-4 tw-py-12">
         <h1 className="tw-text-3xl tw-font-bold tw-text-black tw-text-center tw-mb-6">
-          {t('title')}
+          {t("title")}
         </h1>
 
         <form onSubmit={handleSubmit} className="tw-max-w-4xl tw-mx-auto">
           <div className="tw-bg-white tw-rounded-lg tw-p-6 tw-shadow-lg">
             <div className="tw-mb-8">
               <h2 className="tw-text-xl tw-text-black tw-font-semibold tw-mb-4">
-                {t('productSection.title')}
+                {t("productSection.title")}
               </h2>
               <div className="tw-flex tw-flex-col tw-gap-4">
                 {products.map((product) => (
@@ -141,13 +139,13 @@ export default function DemoPageClient() {
                       <div className="tw-flex tw-items-center tw-justify-between">
                         <a href={product.href} target="_blank">
                           <Button variant="default" size="sm" type="button">
-                            {t('productSection.moreDetails')}
+                            {t("productSection.moreDetails")}
                             <BsArrowUpRight className="tw-ml-2" />
                           </Button>
                         </a>
                         {selectedProduct === product.id && (
                           <span className="tw-text-primary tw-text-sm">
-                            {t('productSection.selected')}
+                            {t("productSection.selected")}
                           </span>
                         )}
                       </div>
@@ -159,12 +157,12 @@ export default function DemoPageClient() {
 
             <div className="tw-mt-8">
               <h2 className="tw-text-xl tw-text-black tw-font-semibold tw-mb-6">
-                {t('contactSection.title')}
+                {t("contactSection.title")}
               </h2>
               <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-6">
                 <div>
                   <label className="tw-block tw-text-sm tw-font-medium tw-mb-2">
-                    {t('contactSection.fields.fullName')}
+                    {t("contactSection.fields.fullName")}
                   </label>
                   <input
                     type="text"
@@ -177,7 +175,7 @@ export default function DemoPageClient() {
                 </div>
                 <div>
                   <label className="tw-block tw-text-sm tw-font-medium tw-mb-2">
-                    {t('contactSection.fields.email')}
+                    {t("contactSection.fields.email")}
                   </label>
                   <input
                     type="email"
@@ -190,7 +188,7 @@ export default function DemoPageClient() {
                 </div>
                 <div>
                   <label className="tw-block tw-text-sm tw-font-medium tw-mb-2">
-                    {t('contactSection.fields.company')}
+                    {t("contactSection.fields.company")}
                   </label>
                   <input
                     type="text"
@@ -203,7 +201,7 @@ export default function DemoPageClient() {
                 </div>
                 <div>
                   <label className="tw-block tw-text-sm tw-font-medium tw-mb-2">
-                    {t('contactSection.fields.phone')}
+                    {t("contactSection.fields.phone")}
                   </label>
                   <input
                     type="tel"
@@ -216,7 +214,7 @@ export default function DemoPageClient() {
                 </div>
                 <div className="md:tw-col-span-2">
                   <label className="tw-block tw-text-sm tw-font-medium tw-mb-2">
-                    {t('contactSection.fields.message')}
+                    {t("contactSection.fields.message")}
                   </label>
                   <textarea
                     name="message"
@@ -235,12 +233,13 @@ export default function DemoPageClient() {
                 disabled={isSubmitting}
                 icon={<HiArrowNarrowRight />}
               >
-                {isSubmitting ? t('button.sending') : t('button.submit')}
+                {isSubmitting ? t("button.sending") : t("button.submit")}
               </ButtonSwitchAnimation>
             </div>
           </div>
         </form>
       </main>
+      <NewsletterBlock />
       <Footer />
     </div>
   );

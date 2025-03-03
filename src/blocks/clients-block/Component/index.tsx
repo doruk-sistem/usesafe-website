@@ -1,12 +1,14 @@
 import React from "react";
 
-import ClientsSlick from "./clients-slick";
+import { Media } from "@/payload-types";
+
 import ClientsList from "./clients-list";
+import ClientsSlick from "./clients-slick";
 
 export interface ClientsBlockProps {
   clients: {
     name: string;
-    imageSrc: string;
+    image: Media;
   }[];
   type?: "list" | "slick";
   /**

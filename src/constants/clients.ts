@@ -11,7 +11,6 @@ export const clients = [
     name: "Client 3",
     imageSrc: "/crafto/images/logo-jquery-white.svg",
   },
-
   {
     name: "Client 6",
     imageSrc: "/crafto/images/logo-monday-white.svg",

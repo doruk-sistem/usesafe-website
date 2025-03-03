@@ -1,27 +1,28 @@
 "use client";
 
+// import { useTranslations } from "next-intl";
 import React from "react";
-import { HiArrowNarrowRight } from "react-icons/hi";
-import { useTranslations } from 'next-intl';
-import { Button } from "@/frontend/_components/button";
-import Header from "@/frontend/_components/header";
-import Footer from "@/frontend/_components/footer";
-import ButtonSwitchAnimation from "@/frontend/_components/button-switch-animation";
-import RenderBlocks from "@/blocks/RenderBlocks";
+// import { HiArrowNarrowRight } from "react-icons/hi";
 
+import NewsletterBlock from "@/blocks/newsletter-block";
+// import RenderBlocks from "@/blocks/RenderBlocks";
+// import { Button } from "@/frontend/_components/button";
+// import ButtonSwitchAnimation from "@/frontend/_components/button-switch-animation";
+import Footer from "@/frontend/_components/footer";
+import Header from "@/frontend/_components/header";
 export default function AboutDppPageClient() {
-  const t = useTranslations('AboutDpp');
+  // const t = useTranslations("AboutDpp");
 
   return (
     <div>
       <Header />
-      <RenderBlocks
+      {/* <RenderBlocks
         blocks={[
           {
-            blockType: "contentWithImage",
+            blockType: "contentWithImageBlock",
             layout: {
-              title: t('dpp_intro.title'),
-              description: t('dpp_intro.description'),
+              title: t("dpp_intro.title"),
+              description: t("dpp_intro.description"),
               image: {
                 src: "/images/product-security-1-1.webp",
                 alt: "Digital Product Passport",
@@ -35,7 +36,7 @@ export default function AboutDppPageClient() {
                   uppercase
                   icon={<HiArrowNarrowRight />}
                 >
-                  {t('dpp_intro.button')}
+                  {t("dpp_intro.button")}
                 </ButtonSwitchAnimation>
               ),
             },
@@ -44,10 +45,10 @@ export default function AboutDppPageClient() {
             },
           },
           {
-            blockType: "contentWithImage",
+            blockType: "contentWithImageBlock",
             layout: {
-              title: t('core_components.title'),
-              description: t('core_components.description'),
+              title: t("core_components.title"),
+              description: t("core_components.description"),
               image: {
                 src: "/images/touch-id-1-1.webp",
                 alt: "DPP Components",
@@ -66,24 +67,24 @@ export default function AboutDppPageClient() {
             layout: {
               items: [
                 {
-                  description: t('benefits.items.material_efficiency.description'),
-                  value: Number(t('benefits.items.material_efficiency.value')),
-                  suffix: t('benefits.items.material_efficiency.suffix'),
+                  description: t("benefits.items.material_efficiency.description"),
+                  value: Number(t("benefits.items.material_efficiency.value")),
+                  suffix: t("benefits.items.material_efficiency.suffix"),
                 },
                 {
-                  description: t('benefits.items.waste_reduction.description'),
-                  value: Number(t('benefits.items.waste_reduction.value')),
-                  suffix: t('benefits.items.waste_reduction.suffix'),
+                  description: t("benefits.items.waste_reduction.description"),
+                  value: Number(t("benefits.items.waste_reduction.value")),
+                  suffix: t("benefits.items.waste_reduction.suffix"),
                 },
                 {
-                  description: t('benefits.items.carbon_footprint.description'),
-                  value: Number(t('benefits.items.carbon_footprint.value')),
-                  suffix: t('benefits.items.carbon_footprint.suffix'),
+                  description: t("benefits.items.carbon_footprint.description"),
+                  value: Number(t("benefits.items.carbon_footprint.value")),
+                  suffix: t("benefits.items.carbon_footprint.suffix"),
                 },
               ],
             },
             sectionOptions: {
-              title: t('benefits.title'),
+              title: t("benefits.title"),
               innerContainer: true,
             },
           },
@@ -99,18 +100,19 @@ export default function AboutDppPageClient() {
             },
             sectionOptions: {
               innerContainer: true,
-              title: t('implementation.title'),
-              description: t('implementation.description'),
+              title: t("implementation.title"),
+              description: t("implementation.description"),
               footerContent: (
                 <div className="tw-flex tw-justify-center tw-items-center">
-                  <Button>{t('implementation.button')}</Button>
+                  <Button>{t("implementation.button")}</Button>
                 </div>
               ),
               className: "tw-bg-gradient-to-b tw-from-gray-100 tw-to-white",
             },
           },
         ]}
-      />
+      /> */}
+      <NewsletterBlock />
       <Footer />
     </div>
   );

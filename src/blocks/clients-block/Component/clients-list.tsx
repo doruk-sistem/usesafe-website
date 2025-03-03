@@ -1,5 +1,7 @@
-import Image from "next/image";
 import React from "react";
+
+import { Media } from "@/components/Media";
+
 import { ClientsBlockProps } from ".";
 
 interface ClientsListProps extends ClientsBlockProps {
@@ -15,12 +17,9 @@ export default function ClientsList({ clients = [] }: ClientsListProps) {
           className="col text-center pt-5 pb-5 sm-pt-8 sm-pb-8"
         >
           <a href="#">
-            <Image
-              src={client.imageSrc}
+            <Media
+              resource={client.image}
               className="h-40px md-h-30px sm-h-40px tw-object-contain"
-              alt={client.name}
-              width={150}
-              height={150}
             />
           </a>
         </div>
