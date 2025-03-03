@@ -18,10 +18,24 @@ import { headers } from "next/headers";
 async function getFooterData() {
   try {
     const payload = await initPayload();
-    const response = await payload.findGlobal({
-      slug: "footer",
-    });
-    return response;
+    // Tüm diller için veriyi çek
+    const locales = ["en", "tr"];
+    const footerData: any = { content: {} };
+
+    // Her dil için ayrı ayrı veri çek
+    for (const locale of locales) {
+      const response = await payload.findGlobal({
+        slug: "footer",
+        locale: locale as "en" | "tr" | "all",
+      });
+
+      // Her dilin verisini content altında o dilin key'i ile sakla
+      if (response?.content) {
+        footerData.content[locale] = response.content;
+      }
+    }
+
+    return footerData;
   } catch (error) {
     console.error("Error fetching footer data:", error);
     return null;

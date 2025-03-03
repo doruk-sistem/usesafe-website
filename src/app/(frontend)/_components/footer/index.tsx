@@ -32,28 +32,30 @@ interface Address {
 interface FooterProps {
   footerData?: {
     content: {
-      copyright: string;
-      company: {
-        title: string;
-        usesafe: { text: string; link: string };
-        about: { text: string; link: string };
-      };
-      legal: {
-        title: string;
-        terms: { text: string; link: string };
-        privacy: { text: string; link: string };
-      };
-      social: {
-        title: string;
-        platforms?: Platform[] | null | undefined;
-      };
-      newsletter: {
-        title: string;
-        company: string;
-        email: string;
-        phone: string;
-        addresses?: Address[] | null | undefined;
-      };
+      [locale: string]: {
+        copyright: string;
+        company: {
+          title: string;
+          usesafe: { text: string; link: string };
+          about: { text: string; link: string };
+        };
+        legal: {
+          title: string;
+          terms: { text: string; link: string };
+          privacy: { text: string; link: string };
+        };
+        social: {
+          title: string;
+          platforms?: Platform[] | null | undefined;
+        };
+        newsletter: {
+          title: string;
+          company: string;
+          email: string;
+          phone: string;
+          addresses?: Address[] | null | undefined;
+        };
+      }
     };
   };
 }
@@ -62,11 +64,10 @@ export default function Footer({ footerData }: FooterProps) {
   const params = useParams();
   const locale = params.locale as string;
 
-  if (!footerData?.content) {
+  if (!footerData?.content || !footerData.content[locale]) {
     return null;
   }
-
-  const { content } = footerData;
+  const content = footerData.content[locale];
 
   const socialIcons = {
     linkedin: LinkedInIcon,
@@ -190,12 +191,9 @@ export default function Footer({ footerData }: FooterProps) {
                 {content.newsletter.phone}
               </a>
 
-              {content.newsletter.addresses
-                ?.filter((address): address is Address =>
-                  Boolean(address.isActive)
-                )
-                .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
-                .map((address) => (
+              {content.newsletter.addresses?.map((address) => {
+                console.log('Processing address:', address);
+                return (
                   <a
                     key={address.country}
                     href={address.maps}
@@ -206,7 +204,8 @@ export default function Footer({ footerData }: FooterProps) {
                     <p>{address.street}</p>
                     <p className="tw-mt-1">{address.city}</p>
                   </a>
-                ))}
+                );
+              })}
             </div>
           </div>
         </div>
