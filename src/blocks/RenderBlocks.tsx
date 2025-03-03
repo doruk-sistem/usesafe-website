@@ -13,7 +13,6 @@ import { ContentWithImageBlock } from "./content-with-image-block/Component";
 import { CounterBlock } from "./counter-block/Component";
 import { IconListBlock } from "./icon-list-block/Component";
 import { MediaBlock } from "./media-block/Component";
-import { PageTitleBlock } from "./page-title-block/Component";
 import { SliderBlock } from "./slider-block/Component";
 
 const blockComponents = {
@@ -24,7 +23,6 @@ const blockComponents = {
   iconListBlock: IconListBlock,
   clients: ClientsBlock,
   counter: CounterBlock,
-  pageTitle: PageTitleBlock,
   backgroundVideo: BackgroundVideoBlock,
   contactForm: ContactFormBlock,
   certificationIntro: CertificationIntroBlock,
