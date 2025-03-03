@@ -20,7 +20,7 @@ export const ContentWithImage: Block = {
     },
     {
       name: "description",
-      type: "textarea",
+      type: "richText",
       localized: true,
       admin: {
         description: {

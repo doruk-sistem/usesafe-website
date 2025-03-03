@@ -14,7 +14,6 @@ export default async function HomePage() {
       slug: "homepage",
       locale: locale as any,
     });
-
     return <PageClient layout={homepage.layout} />;
   } catch (error) {
     console.error("Error loading homepage:", error);

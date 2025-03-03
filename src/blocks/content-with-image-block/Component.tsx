@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import React from "react";
+import { HiArrowNarrowRight } from "react-icons/hi";
 
-import { Button } from "@/app/(frontend)/_components/button";
+import ButtonSwitchAnimation from "@/app/(frontend)/_components/button-switch-animation";
 import { Media } from "@/components/Media";
+import RichText from "@/components/RichText";
 import { ContentWithImageBlock as ContentWithImageBlockProps } from "@/payload-types";
 
 export function ContentWithImageBlock({
@@ -23,32 +25,40 @@ export function ContentWithImageBlock({
             <Media resource={image} />
           </div>
         </div>
-        <div className="col-lg-5 col-md-9 text-center text-lg-start">
+        <div className="col-lg-5 col-md-9 tw-text-lg-start">
           {title && (
-            <h1 className="alt-font fw-600 text-dark-gray ls-minus-1px">
+            <h2 className="alt-font tw-fw-600 tw-text-dark-gray ls-minus-1px">
               {title}
-            </h1>
+            </h2>
           )}
-          {description && <p className="w-95 md-w-100">{description}</p>}
+          {description && (
+            <article className="w-95 md-w-100">
+              <RichText content={description} enableGutter={false}/>
+            </article>
+          )}
           {buttonLink && buttonText && (
             <Link href={buttonLink}>
-              <Button variant="white">{buttonText}</Button>
+              <ButtonSwitchAnimation icon={<HiArrowNarrowRight />}>{buttonText}</ButtonSwitchAnimation>
             </Link>
           )}
         </div>
       </>
     ) : (
       <>
-        <div className="col-lg-5 col-md-9 text-center text-lg-start">
+        <div className="col-lg-5 col-md-9 tw-text-lg-start">
           {title && (
-            <h1 className="alt-font fw-600 text-dark-gray ls-minus-1px">
+            <h2 className="alt-font tw-fw-600 tw-text-dark-gray ls-minus-1px">
               {title}
-            </h1>
+            </h2>
           )}
-          {description && <p className="w-95 md-w-100">{description}</p>}
+          {description && (
+            <article className="w-95 md-w-100">
+              <RichText content={description} enableGutter={false} />
+            </article>
+          )}
           {buttonLink && buttonText && (
             <Link href={buttonLink}>
-              <Button variant="white">{buttonText}</Button>
+              <ButtonSwitchAnimation icon={<HiArrowNarrowRight />}>{buttonText}</ButtonSwitchAnimation>
             </Link>
           )}
         </div>

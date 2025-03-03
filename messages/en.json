@@ -4,13 +4,13 @@
   },
   "meta": {
     "common": {
-      "title": "Hello world!",
-      "description": "Go to the about page",
-      "keywords": "Hello world!",
-      "og_title": "Hello world!",
-      "og_description": "Go to the about page",
-      "og_image_alt": "Hello world!",
-      "twitter_title": "Hello world!",
+      "title": "UseSafe - Digital Product Passport, Verification & Traceability",
+      "description": "Ensuring product safety, compliance, and sustainability through our digital product certification system.",
+      "keywords": "Digital Product Passport, Verification, Traceability, Safety, Compliance, Sustainability",
+      "og_title": "UseSafe - Digital Product Passport, Verification & Traceability",
+      "og_description": "Ensuring product safety, compliance, and sustainability through our digital product certification system.",
+      "og_image_alt": "UseSafe - Digital Product Passport, Verification & Traceability",
+      "twitter_title": "UseSafe - Digital Product Passport, Verification & Traceability",
       "twitter_description": "Go to the about page"
     }
   },

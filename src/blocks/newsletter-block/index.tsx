@@ -3,6 +3,8 @@
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
+import { Button } from "@/frontend/_components/button";
+
 export default function NewsletterBlock() {
   const t = useTranslations("Components.Newsletter");
   const [email, setEmail] = useState("");
@@ -38,13 +40,13 @@ export default function NewsletterBlock() {
                   className="form-control tw-max-w-md"
                   required
                 />
-                <button
-                  type="submit"
+                <Button
+                  variant="default"
+                  size="lg"
                   disabled={status === "loading"}
-                  className="btn btn-primary"
                 >
                   {status === "loading" ? t("subscribing") : t("subscribe")}
-                </button>
+                </Button>
               </form>
 
               {status === "success" && (

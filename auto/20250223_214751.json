@@ -1,5 +1,5 @@
 {
-  "id": "a4d41d93-3535-4333-b18d-9cfe0d542eb1",
+  "id": "df9bdd1d-23ba-426e-b852-831d2bcfab10",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -1007,7 +1007,7 @@
         },
         "description": {
           "name": "description",
-          "type": "varchar",
+          "type": "jsonb",
           "primaryKey": false,
           "notNull": false
         },
@@ -1609,6 +1609,14 @@
           "type": "integer",
           "primaryKey": false,
           "notNull": false
+        },
+        "media_width": {
+          "name": "media_width",
+          "type": "enum_homepage_blocks_media_block_media_width",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'auto'"
         },
         "block_options_title": {
           "name": "block_options_title",
@@ -2394,6 +2402,14 @@
       "values": [
         "left",
         "right"
+      ]
+    },
+    "public.enum_homepage_blocks_media_block_media_width": {
+      "name": "enum_homepage_blocks_media_block_media_width",
+      "schema": "public",
+      "values": [
+        "full",
+        "auto"
       ]
     },
     "public.enum_homepage_blocks_icon_list_block_items_icon": {

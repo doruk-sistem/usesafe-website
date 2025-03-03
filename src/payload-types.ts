@@ -68,19 +68,25 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
-    blogs: Blog;
-    'payload-locked-documents': PayloadLockedDocument;
-    'payload-preferences': PayloadPreference;
-    'payload-migrations': PayloadMigration;
-  };
-  collectionsJoins: {};
-  collectionsSelect: {
-    users: UsersSelect<false> | UsersSelect<true>;
-    media: MediaSelect<false> | MediaSelect<true>;
-    blogs: BlogsSelect<false> | BlogsSelect<true>;
-    'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
-    'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
-    'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
+    collections: {
+      users: User;
+      media: Media;
+      blogs: Blog;
+      solutions: Solution;
+      'payload-locked-documents': PayloadLockedDocument;
+      'payload-preferences': PayloadPreference;
+      'payload-migrations': PayloadMigration;
+    };
+    collectionsJoins: {};
+    collectionsSelect: {
+      users: UsersSelect<false> | UsersSelect<true>;
+      media: MediaSelect<false> | MediaSelect<true>;
+      blogs: BlogsSelect<false> | BlogsSelect<true>;
+      solutions: SolutionsSelect<false> | SolutionsSelect<true>;
+      'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
+      'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
+      'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
+    };
   };
   db: {
     defaultIDType: number;
@@ -100,6 +106,7 @@ export interface Config {
     workflows: unknown;
   };
 }
+
 export interface UserAuthOperations {
   forgotPassword: {
     email: string;
@@ -118,6 +125,7 @@ export interface UserAuthOperations {
     password: string;
   };
 }
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users".
@@ -136,6 +144,7 @@ export interface User {
   lockUntil?: string | null;
   password?: string | null;
 }
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "media".
@@ -155,6 +164,7 @@ export interface Media {
   focalX?: number | null;
   focalY?: number | null;
 }
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "blogs".
@@ -191,6 +201,37 @@ export interface Blog {
   updatedAt: string;
   createdAt: string;
 }
+
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "solutions".
+ */
+export interface Solution {
+  id: number;
+  title: string;
+  slug: string;
+  backgroundImage: number | Media;
+  layout?:
+    | (
+        | ContentWithImageBlock
+        | MediaBlock
+        | IconListBlock
+        | {
+            title?: string | null;
+            description?: string | null;
+            video: {
+              src: number | Media;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'backgroundVideo';
+          }
+      )[]
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
@@ -209,6 +250,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'blogs';
         value: number | Blog;
+      } | null)
+    | ({
+        relationTo: 'solutions';
+        value: number | Solution;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -218,6 +263,7 @@ export interface PayloadLockedDocument {
   updatedAt: string;
   createdAt: string;
 }
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-preferences".
@@ -241,6 +287,7 @@ export interface PayloadPreference {
   updatedAt: string;
   createdAt: string;
 }
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-migrations".
@@ -252,6 +299,7 @@ export interface PayloadMigration {
   updatedAt: string;
   createdAt: string;
 }
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users_select".
@@ -268,6 +316,7 @@ export interface UsersSelect<T extends boolean = true> {
   loginAttempts?: T;
   lockUntil?: T;
 }
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "media_select".
@@ -286,6 +335,7 @@ export interface MediaSelect<T extends boolean = true> {
   focalX?: T;
   focalY?: T;
 }
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "blogs_select".
@@ -307,6 +357,108 @@ export interface BlogsSelect<T extends boolean = true> {
   updatedAt?: T;
   createdAt?: T;
 }
+
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "solutions_select".
+ */
+export interface SolutionsSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  backgroundImage?: T;
+  layout?:
+    | T
+    | {
+        contentWithImageBlock?: T | ContentWithImageBlockSelect<T>;
+        mediaBlock?: T | MediaBlockSelect<T>;
+        iconListBlock?: T | IconListBlockSelect<T>;
+        backgroundVideo?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              video?:
+                | T
+                | {
+                    src?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+      };
+  updatedAt?: T;
+  createdAt?: T;
+}
+
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ContentWithImageBlock_select".
+ */
+export interface ContentWithImageBlockSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  image?: T;
+  buttonText?: T;
+  buttonLink?: T;
+  position?: T;
+  blockOptions?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        heroContent?: T;
+        footerContent?: T;
+        innerContainer?: T;
+      };
+  id?: T;
+  blockName?: T;
+}
+
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "MediaBlock_select".
+ */
+export interface MediaBlockSelect<T extends boolean = true> {
+  media?: T;
+  mediaWidth?: T;
+  blockOptions?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        heroContent?: T;
+        footerContent?: T;
+        innerContainer?: T;
+      };
+  id?: T;
+  blockName?: T;
+}
+
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "IconListBlock_select".
+ */
+export interface IconListBlockSelect<T extends boolean = true> {
+  items?:
+    | T
+    | {
+        icon?: T;
+        description?: T;
+        id?: T;
+      };
+  blockOptions?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        heroContent?: T;
+        footerContent?: T;
+        innerContainer?: T;
+      };
+  id?: T;
+  blockName?: T;
+}
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents_select".
@@ -318,6 +470,7 @@ export interface PayloadLockedDocumentsSelect<T extends boolean = true> {
   updatedAt?: T;
   createdAt?: T;
 }
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-preferences_select".
@@ -329,6 +482,7 @@ export interface PayloadPreferencesSelect<T extends boolean = true> {
   updatedAt?: T;
   createdAt?: T;
 }
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-migrations_select".
@@ -339,6 +493,7 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   updatedAt?: T;
   createdAt?: T;
 }
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "homepage".
@@ -349,71 +504,7 @@ export interface Homepage {
   updatedAt?: string | null;
   createdAt?: string | null;
 }
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "ContentWithImageBlock".
- */
-export interface ContentWithImageBlock {
-  /**
-   * Title
-   */
-  title: string;
-  /**
-   * Description
-   */
-  description?: string | null;
-  image: number | Media;
-  /**
-   * Button Text
-   */
-  buttonText?: string | null;
-  /**
-   * Button Link
-   */
-  buttonLink?: string | null;
-  position?: ('left' | 'right') | null;
-  /**
-   * Block'a özel ayarlar.
-   */
-  blockOptions?: {
-    title?: string | null;
-    description?: string | null;
-    heroContent?: {
-      root: {
-        type: string;
-        children: {
-          type: string;
-          version: number;
-          [k: string]: unknown;
-        }[];
-        direction: ('ltr' | 'rtl') | null;
-        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-        indent: number;
-        version: number;
-      };
-      [k: string]: unknown;
-    } | null;
-    footerContent?: {
-      root: {
-        type: string;
-        children: {
-          type: string;
-          version: number;
-          [k: string]: unknown;
-        }[];
-        direction: ('ltr' | 'rtl') | null;
-        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-        indent: number;
-        version: number;
-      };
-      [k: string]: unknown;
-    } | null;
-    innerContainer?: boolean | null;
-  };
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'contentWithImageBlock';
-}
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "SliderBlock".
@@ -436,55 +527,7 @@ export interface SliderBlock {
   blockName?: string | null;
   blockType: 'sliderBlock';
 }
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "MediaBlock".
- */
-export interface MediaBlock {
-  media?: (number | null) | Media;
-  mediaWidth?: ('full' | 'auto') | null;
-  /**
-   * Block'a özel ayarlar.
-   */
-  blockOptions?: {
-    title?: string | null;
-    description?: string | null;
-    heroContent?: {
-      root: {
-        type: string;
-        children: {
-          type: string;
-          version: number;
-          [k: string]: unknown;
-        }[];
-        direction: ('ltr' | 'rtl') | null;
-        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-        indent: number;
-        version: number;
-      };
-      [k: string]: unknown;
-    } | null;
-    footerContent?: {
-      root: {
-        type: string;
-        children: {
-          type: string;
-          version: number;
-          [k: string]: unknown;
-        }[];
-        direction: ('ltr' | 'rtl') | null;
-        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-        indent: number;
-        version: number;
-      };
-      [k: string]: unknown;
-    } | null;
-    innerContainer?: boolean | null;
-  };
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'mediaBlock';
-}
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "AccordionBlock".
@@ -540,19 +583,198 @@ export interface AccordionBlock {
   blockName?: string | null;
   blockType: 'accordionBlock';
 }
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "IconListBlock".
+ * via the `definition` "homepage_select".
  */
+export interface HomepageSelect<T extends boolean = true> {
+  layout?:
+    | T
+    | {
+        contentWithImageBlock?: T | ContentWithImageBlockSelect<T>;
+        sliderBlock?: T | SliderBlockSelect<T>;
+        mediaBlock?: T | MediaBlockSelect<T>;
+        accordionBlock?: T | AccordionBlockSelect<T>;
+        iconListBlock?: T | IconListBlockSelect<T>;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "SliderBlock_select".
+ */
+export interface SliderBlockSelect<T extends boolean = true> {
+  sliders?:
+    | T
+    | {
+        image?: T;
+        title?: T;
+        description?: T;
+        buttonText?: T;
+        buttonLink?: T;
+        id?: T;
+      };
+  clients?:
+    | T
+    | {
+        name?: T;
+        image?: T;
+        id?: T;
+      };
+  id?: T;
+  blockName?: T;
+}
+
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "AccordionBlock_select".
+ */
+export interface AccordionBlockSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  image?: T;
+  items?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        id?: T;
+      };
+  blockOptions?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        heroContent?: T;
+        footerContent?: T;
+        innerContainer?: T;
+      };
+  id?: T;
+  blockName?: T;
+}
+
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "auth".
+ */
+export interface Auth {
+  [k: string]: unknown;
+}
+
+export interface ContentWithImageBlock {
+  title: string;
+  description?: {
+    root: {
+      type: string;
+      children: {
+        type: string;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  image: number | Media;
+  buttonText?: string | null;
+  buttonLink?: string | null;
+  position?: ('left' | 'right') | null;
+  blockOptions?: {
+    title?: string | null;
+    description?: string | null;
+    heroContent?: {
+      root: {
+        type: string;
+        children: {
+          type: string;
+          version: number;
+          [k: string]: unknown;
+        }[];
+        direction: ('ltr' | 'rtl') | null;
+        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+        indent: number;
+        version: number;
+      };
+      [k: string]: unknown;
+    } | null;
+    footerContent?: {
+      root: {
+        type: string;
+        children: {
+          type: string;
+          version: number;
+          [k: string]: unknown;
+        }[];
+        direction: ('ltr' | 'rtl') | null;
+        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+        indent: number;
+        version: number;
+      };
+      [k: string]: unknown;
+    } | null;
+    innerContainer?: boolean | null;
+  };
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'contentWithImageBlock';
+}
+
+export interface MediaBlock {
+  media?: (number | null) | Media;
+  mediaWidth?: ('full' | 'auto') | null;
+  blockOptions?: {
+    title?: string | null;
+    description?: string | null;
+    heroContent?: {
+      root: {
+        type: string;
+        children: {
+          type: string;
+          version: number;
+          [k: string]: unknown;
+        }[];
+        direction: ('ltr' | 'rtl') | null;
+        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+        indent: number;
+        version: number;
+      };
+      [k: string]: unknown;
+    } | null;
+    footerContent?: {
+      root: {
+        type: string;
+        children: {
+          type: string;
+          version: number;
+          [k: string]: unknown;
+        }[];
+        direction: ('ltr' | 'rtl') | null;
+        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+        indent: number;
+        version: number;
+      };
+      [k: string]: unknown;
+    } | null;
+    innerContainer?: boolean | null;
+  };
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'mediaBlock';
+}
+
 export interface IconListBlock {
   items: {
     icon: 'GiWorld' | 'CiDiscount1' | 'GiWaterRecycling' | 'LuFootprints' | 'IoQrCodeOutline' | 'GiConversation';
     description: string;
     id?: string | null;
   }[];
-  /**
-   * Block'a özel ayarlar.
-   */
   blockOptions?: {
     title?: string | null;
     description?: string | null;
@@ -592,150 +814,6 @@ export interface IconListBlock {
   blockName?: string | null;
   blockType: 'iconListBlock';
 }
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "homepage_select".
- */
-export interface HomepageSelect<T extends boolean = true> {
-  layout?:
-    | T
-    | {
-        contentWithImageBlock?: T | ContentWithImageBlockSelect<T>;
-        sliderBlock?: T | SliderBlockSelect<T>;
-        mediaBlock?: T | MediaBlockSelect<T>;
-        accordionBlock?: T | AccordionBlockSelect<T>;
-        iconListBlock?: T | IconListBlockSelect<T>;
-      };
-  updatedAt?: T;
-  createdAt?: T;
-  globalType?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "ContentWithImageBlock_select".
- */
-export interface ContentWithImageBlockSelect<T extends boolean = true> {
-  title?: T;
-  description?: T;
-  image?: T;
-  buttonText?: T;
-  buttonLink?: T;
-  position?: T;
-  blockOptions?:
-    | T
-    | {
-        title?: T;
-        description?: T;
-        heroContent?: T;
-        footerContent?: T;
-        innerContainer?: T;
-      };
-  id?: T;
-  blockName?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "SliderBlock_select".
- */
-export interface SliderBlockSelect<T extends boolean = true> {
-  sliders?:
-    | T
-    | {
-        image?: T;
-        title?: T;
-        description?: T;
-        buttonText?: T;
-        buttonLink?: T;
-        id?: T;
-      };
-  clients?:
-    | T
-    | {
-        name?: T;
-        image?: T;
-        id?: T;
-      };
-  id?: T;
-  blockName?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "MediaBlock_select".
- */
-export interface MediaBlockSelect<T extends boolean = true> {
-  media?: T;
-  mediaWidth?: T;
-  blockOptions?:
-    | T
-    | {
-        title?: T;
-        description?: T;
-        heroContent?: T;
-        footerContent?: T;
-        innerContainer?: T;
-      };
-  id?: T;
-  blockName?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "AccordionBlock_select".
- */
-export interface AccordionBlockSelect<T extends boolean = true> {
-  title?: T;
-  description?: T;
-  image?: T;
-  items?:
-    | T
-    | {
-        title?: T;
-        description?: T;
-        id?: T;
-      };
-  blockOptions?:
-    | T
-    | {
-        title?: T;
-        description?: T;
-        heroContent?: T;
-        footerContent?: T;
-        innerContainer?: T;
-      };
-  id?: T;
-  blockName?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "IconListBlock_select".
- */
-export interface IconListBlockSelect<T extends boolean = true> {
-  items?:
-    | T
-    | {
-        icon?: T;
-        description?: T;
-        id?: T;
-      };
-  blockOptions?:
-    | T
-    | {
-        title?: T;
-        description?: T;
-        heroContent?: T;
-        footerContent?: T;
-        innerContainer?: T;
-      };
-  id?: T;
-  blockName?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "auth".
- */
-export interface Auth {
-  [k: string]: unknown;
-}
-
 
 declare module 'payload' {
   export interface GeneratedTypes extends Config {}

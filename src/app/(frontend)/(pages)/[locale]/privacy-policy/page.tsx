@@ -74,7 +74,6 @@ const PrivacyPolicy = async ({ params }: PageProps) => {
       </>
     );
   } catch (error) {
-
     console.error("Privacy Policy error:", error);
 
     return <ErrorComponent message="Could not load Privacy Policy content. Please try again later." />;

@@ -14,7 +14,6 @@ import { CounterBlock } from "./counter-block/Component";
 import { IconListBlock } from "./icon-list-block/Component";
 import { MediaBlock } from "./media-block/Component";
 import { PageTitleBlock } from "./page-title-block/Component";
-import { PricingBlock } from "./pricing-block";
 import { SliderBlock } from "./slider-block/Component";
 
 const blockComponents = {
@@ -23,7 +22,6 @@ const blockComponents = {
   contentWithImageBlock: ContentWithImageBlock,
   accordionBlock: AccordionBlock,
   iconListBlock: IconListBlock,
-  pricing: PricingBlock,
   clients: ClientsBlock,
   counter: CounterBlock,
   pageTitle: PageTitleBlock,

@@ -11,6 +11,7 @@ import Footer from "@/app/(frontend)/_components/footer";
 import Header from "@/app/(frontend)/_components/header";
 import NewsletterBlock from "@/blocks/newsletter-block";
 import RenderBlocks from "@/blocks/RenderBlocks";
+
 export default function ContactPageClient() {
   const t = useTranslations("ContactUs");
 
@@ -24,7 +25,7 @@ export default function ContactPageClient() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
