@@ -9,6 +9,7 @@ import collections from "./collections";
 import { Users } from "./collections/Users";
 import globals from "./globals";
 import { plugins } from "./plugins";
+import { Footer } from "./collections/globals/Footer";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -35,7 +36,7 @@ export default buildConfig({
     fallback: true,
   },
   collections,
-  globals,
+  globals: [...globals, Footer],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {

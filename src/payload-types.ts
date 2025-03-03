@@ -87,9 +87,11 @@ export interface Config {
   };
   globals: {
     homepage: Homepage;
+    footer: Footer;
   };
   globalsSelect: {
     homepage: HomepageSelect<false> | HomepageSelect<true>;
+    footer: FooterSelect<false> | FooterSelect<true>;
   };
   locale: 'en' | 'tr';
   user: User & {
@@ -169,6 +171,7 @@ export interface Solution {
             title: string;
             topTitle?: string | null;
             backgroundImage?: (number | null) | Media;
+            downSectionId?: string | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'pageTitle';
@@ -184,6 +187,9 @@ export interface Solution {
                 }[]
               | null;
             sectionOptions: {
+              className?: string | null;
+              innerContainer?: boolean | null;
+              sectionId?: string | null;
               buttonText: string;
             };
             id?: string | null;
@@ -196,6 +202,9 @@ export interface Solution {
             image: {
               src: number | Media;
               alt?: string | null;
+              width?: number | null;
+              height?: number | null;
+              imgClassName?: string | null;
             };
             imagePosition?: ('left' | 'right') | null;
             id?: string | null;
@@ -328,6 +337,7 @@ export interface SolutionsSelect<T extends boolean = true> {
               title?: T;
               topTitle?: T;
               backgroundImage?: T;
+              downSectionId?: T;
               id?: T;
               blockName?: T;
             };
@@ -346,6 +356,9 @@ export interface SolutionsSelect<T extends boolean = true> {
               sectionOptions?:
                 | T
                 | {
+                    className?: T;
+                    innerContainer?: T;
+                    sectionId?: T;
                     buttonText?: T;
                   };
               id?: T;
@@ -361,6 +374,9 @@ export interface SolutionsSelect<T extends boolean = true> {
                 | {
                     src?: T;
                     alt?: T;
+                    width?: T;
+                    height?: T;
+                    imgClassName?: T;
                   };
               imagePosition?: T;
               id?: T;
@@ -684,6 +700,68 @@ export interface IconListBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "footer".
+ */
+export interface Footer {
+  id: number;
+  content: {
+    copyright: string;
+    company: {
+      title: string;
+      usesafe: {
+        text: string;
+        link: string;
+      };
+      about: {
+        text: string;
+        link: string;
+      };
+    };
+    legal: {
+      title: string;
+      terms: {
+        text: string;
+        link: string;
+      };
+      privacy: {
+        text: string;
+        link: string;
+      };
+    };
+    social: {
+      title: string;
+      platforms?:
+        | {
+            name: 'linkedin' | 'facebook' | 'instagram' | 'twitter';
+            url: string;
+            isActive?: boolean | null;
+            order?: number | null;
+            id?: string | null;
+          }[]
+        | null;
+    };
+    newsletter: {
+      title: string;
+      company: string;
+      email: string;
+      phone: string;
+      addresses?:
+        | {
+            country: 'germany' | 'turkey';
+            street: string;
+            city: string;
+            maps: string;
+            order?: number | null;
+            id?: string | null;
+          }[]
+        | null;
+    };
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "homepage_select".
  */
 export interface HomepageSelect<T extends boolean = true> {
@@ -817,6 +895,86 @@ export interface IconListBlockSelect<T extends boolean = true> {
       };
   id?: T;
   blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "footer_select".
+ */
+export interface FooterSelect<T extends boolean = true> {
+  content?:
+    | T
+    | {
+        copyright?: T;
+        company?:
+          | T
+          | {
+              title?: T;
+              usesafe?:
+                | T
+                | {
+                    text?: T;
+                    link?: T;
+                  };
+              about?:
+                | T
+                | {
+                    text?: T;
+                    link?: T;
+                  };
+            };
+        legal?:
+          | T
+          | {
+              title?: T;
+              terms?:
+                | T
+                | {
+                    text?: T;
+                    link?: T;
+                  };
+              privacy?:
+                | T
+                | {
+                    text?: T;
+                    link?: T;
+                  };
+            };
+        social?:
+          | T
+          | {
+              title?: T;
+              platforms?:
+                | T
+                | {
+                    name?: T;
+                    url?: T;
+                    isActive?: T;
+                    order?: T;
+                    id?: T;
+                  };
+            };
+        newsletter?:
+          | T
+          | {
+              title?: T;
+              company?: T;
+              email?: T;
+              phone?: T;
+              addresses?:
+                | T
+                | {
+                    country?: T;
+                    street?: T;
+                    city?: T;
+                    maps?: T;
+                    order?: T;
+                    id?: T;
+                  };
+            };
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

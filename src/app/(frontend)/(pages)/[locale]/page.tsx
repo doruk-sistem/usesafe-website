@@ -4,6 +4,7 @@ import generateMeta from "@/frontend/_utils/generate-meta";
 import { initPayload } from "@/utils/getPayload";
 
 import PageClient from "./page.client";
+import Footer from "@/app/(frontend)/_components/footer";
 
 export default async function HomePage() {
   try {
@@ -11,10 +12,12 @@ export default async function HomePage() {
     const payload = await initPayload();
 
     const homepage = await payload.findGlobal({
-      slug: "homepage",
+      slug: "homepage" as any,
       locale: locale as any,
     });
-    return <PageClient layout={homepage.layout} />;
+    return <PageClient layout={homepage.layout}
+    footer={Footer}
+     />;
   } catch (error) {
     console.error("Error loading homepage:", error);
     return <PageClient layout={[]} />;

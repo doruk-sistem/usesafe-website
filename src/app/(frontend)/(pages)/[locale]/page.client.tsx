@@ -10,15 +10,16 @@ import { Config } from "@/payload-types";
 
 interface PageClientProps {
   layout: Config["globals"]["homepage"]["layout"];
+  footer?: any;
 }
 
-export default function PageClient({ layout }: PageClientProps) {
+export default function PageClient({ layout, footer }: PageClientProps) {
   return (
     <div>
       <Header />
       <RenderBlocks blocks={layout as any} />
       <NewsletterBlock />
-      <Footer />
+      <Footer footerData={footer} />
     </div>
   );
 }

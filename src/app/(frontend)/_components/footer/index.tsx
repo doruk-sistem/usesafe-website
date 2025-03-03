@@ -1,20 +1,79 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import React from "react";
 
-import { SOCIAL_LINKS, CONTACT_INFO } from "@/assets/constants/links";
 import {
   LinkedInIcon,
   FacebookIcon,
   InstagramIcon,
   XIcon,
 } from "@/assets/icons";
+import Logo from "@/frontend/_components/logo";
+import { useParams } from "next/navigation";
+import Link from "next/link";
+interface Platform {
+  name: "linkedin" | "facebook" | "instagram" | "twitter";
+  url: string;
+  isActive?: boolean | null;
+  order?: number | null;
+  id?: string | null;
+}
 
-import Logo from "../logo";
+interface Address {
+  country: string;
+  street: string;
+  city: string;
+  maps: string;
+  isActive?: boolean | null;
+  order?: number | null;
+  id?: string | null;
+}
 
-export default function Footer() {
-  const t = useTranslations("ContactUs.Footer");
+interface FooterProps {
+  footerData?: {
+    content: {
+      copyright: string;
+      company: {
+        title: string;
+        usesafe: { text: string; link: string };
+        about: { text: string; link: string };
+      };
+      legal: {
+        title: string;
+        terms: { text: string; link: string };
+        privacy: { text: string; link: string };
+      };
+      social: {
+        title: string;
+        platforms?: Platform[] | null | undefined;
+      };
+      newsletter: {
+        title: string;
+        company: string;
+        email: string;
+        phone: string;
+        addresses?: Address[] | null | undefined;
+      };
+    };
+  };
+}
+
+export default function Footer({ footerData }: FooterProps) {
+  const params = useParams();
+  const locale = params.locale as string;
+
+  if (!footerData?.content) {
+    return null;
+  }
+
+  const { content } = footerData;
+
+  const socialIcons = {
+    linkedin: LinkedInIcon,
+    facebook: FacebookIcon,
+    instagram: InstagramIcon,
+    twitter: XIcon,
+  } as const;
 
   return (
     <footer className="tw-bg-white tw-border-t tw-border-gray-10">
@@ -22,36 +81,36 @@ export default function Footer() {
         <div className="row justify-content-between tw-gap-y-6">
           {/* Logo ve Copyright */}
           <div className="col-12 col-lg-3 order-sm-1">
-            <a
-              href="/"
+            <Link
+              href={`/${locale}`}
               className="tw-block tw-w-[120px] md:tw-w-[135px] lg:tw-w-[150px] tw-h-[120px] md:tw-h-[135px] lg:tw-h-[150px]"
             >
               <Logo className="!tw-w-[120px] !tw-h-[120px] md:!tw-w-[135px] md:!tw-h-[135px] lg:!tw-w-[150px] lg:!tw-h-[150px]" />
-            </a>
-            <p className="tw-text-gray-600 tw-mt-4">{t("copyright")}</p>
+            </Link>
+            <p className="tw-text-gray-600 tw-mt-4">{content.copyright}</p>
           </div>
 
           {/* Company Links */}
           <div className="col-6 col-lg-2 col-sm-4 order-sm-3">
             <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-6">
-              {t("company.title")}
+              {content.company.title}
             </h3>
             <ul className="tw-space-y-4">
               <li>
-                <a
-                  href="/solutions/use-safe-certification"
+                <Link
+                  href={`/${locale}${content.company.usesafe.link}`}
                   className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors"
                 >
-                  {t("company.usesafe")}
-                </a>
+                  {content.company.usesafe.text}
+                </Link>
               </li>
               <li>
-                <a
-                  href="/resources/about-dpp"
+                <Link
+                  href={`/${locale}${content.company.about.link}`}
                   className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors"
                 >
-                  {t("company.about")}
-                </a>
+                  {content.company.about.text}
+                </Link>
               </li>
             </ul>
           </div>
@@ -59,24 +118,24 @@ export default function Footer() {
           {/* Legal Links */}
           <div className="col-6 col-lg-2 col-sm-4 order-sm-3">
             <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-6">
-              {t("legal.title")}
+              {content.legal.title}
             </h3>
             <ul className="tw-space-y-4">
               <li>
-                <a
-                  href="/terms-conditions"
+                <Link
+                  href={`/${locale}${content.legal.terms.link}`}
                   className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors"
                 >
-                  {t("legal.terms-conditions")}
-                </a>
+                  {content.legal.terms.text}
+                </Link>
               </li>
               <li>
-                <a
-                  href="/privacy-policy"
+                <Link
+                  href={`/${locale}${content.legal.privacy.link}`}
                   className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors"
                 >
-                  {t("legal.privacy-policy")}
-                </a>
+                  {content.legal.privacy.text}
+                </Link>
               </li>
             </ul>
           </div>
@@ -84,91 +143,70 @@ export default function Footer() {
           {/* Social Links */}
           <div className="col-6 col-lg-2 col-sm-4 order-sm-4">
             <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-6">
-              {t("social.title")}
+              {content.social.title}
             </h3>
             <ul className="tw-space-y-4">
-              <li>
-                <a
-                  href={SOCIAL_LINKS.linkedin}
-                  className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors tw-flex tw-items-center tw-gap-2"
-                >
-                  <LinkedInIcon className="tw-w-5 tw-h-5" />
-                  {t("social.LinkedIn")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={SOCIAL_LINKS.facebook}
-                  className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors tw-flex tw-items-center tw-gap-2"
-                >
-                  <FacebookIcon className="tw-w-5 tw-h-5" />
-                  {t("social.Facebook")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={SOCIAL_LINKS.instagram}
-                  className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors tw-flex tw-items-center tw-gap-2"
-                >
-                  <InstagramIcon className="tw-w-5 tw-h-5" />
-                  {t("social.Instagram")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={SOCIAL_LINKS.twitter}
-                  className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors tw-flex tw-items-center tw-gap-2"
-                >
-                  <XIcon className="tw-w-5 tw-h-5" />
-                  {t("social.X")}
-                </a>
-              </li>
+              {content.social.platforms
+                ?.filter((platform): platform is Platform =>
+                  Boolean(platform.isActive)
+                )
+                .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+                .map((platform) => {
+                  const Icon = socialIcons[platform.name];
+                  return (
+                    <li key={platform.name}>
+                      <a
+                        href={platform.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors tw-flex tw-items-center tw-gap-2"
+                      >
+                        <Icon className="tw-w-5 tw-h-5" />
+                        {platform.name}
+                      </a>
+                    </li>
+                  );
+                })}
             </ul>
           </div>
 
           {/* Contact Info */}
           <div className="col-lg-3 col-sm-6 order-sm-5">
             <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-6">
-              {t("newsletter.title")}
+              {content.newsletter.title}
             </h3>
             <div className="tw-space-y-4 tw-text-gray-600">
-              <p>{t("newsletter.company")}</p>
-
+              <p>{content.newsletter.company}</p>
               <a
-                href={`mailto:${CONTACT_INFO.email}`}
+                href={`mailto:${content.newsletter.email}`}
                 className="tw-block hover:tw-text-gray-900 tw-transition-colors"
               >
-                {t("newsletter.email")}
+                {content.newsletter.email}
               </a>
-
               <a
-                href={`tel:${CONTACT_INFO.phone}`}
+                href={`tel:${content.newsletter.phone}`}
                 className="tw-block hover:tw-text-gray-900 tw-transition-colors"
               >
-                {t("newsletter.phone")}
+                {content.newsletter.phone}
               </a>
 
-              <a
-                href={CONTACT_INFO.addresses.germany.maps}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="tw-block tw-mt-6 hover:tw-text-gray-900 tw-transition-colors"
-              >
-                <p>{t("newsletter.address.germany.street")}</p>
-                <p className="tw-mt-1">
-                  {t("newsletter.address.germany.city")}
-                </p>
-              </a>
-
-              <a
-                href={CONTACT_INFO.addresses.turkey.maps}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="tw-block tw-mt-6 hover:tw-text-gray-900 tw-transition-colors"
-              >
-                <p>{t("newsletter.address.turkey.street")}</p>
-                <p className="tw-mt-1">{t("newsletter.address.turkey.city")}</p>
-              </a>
+              {content.newsletter.addresses
+                ?.filter((address): address is Address =>
+                  Boolean(address.isActive)
+                )
+                .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+                .map((address) => (
+                  <a
+                    key={address.country}
+                    href={address.maps}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="tw-block tw-mt-6 hover:tw-text-gray-900 tw-transition-colors"
+                  >
+                    <p>{address.street}</p>
+                    <p className="tw-mt-1">{address.city}</p>
+                  </a>
+                ))}
             </div>
           </div>
         </div>

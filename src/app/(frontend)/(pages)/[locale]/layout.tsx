@@ -8,8 +8,25 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import CraftoProvider from "@/frontend/_providers/CraftoProvider";
 import ReactSlickProvider from "@/frontend/_providers/ReactSlickProvider";
 import { routing } from "@/i18n/routing";
+import { initPayload } from "@/app/api/utils/getPayload";
+import Footer from "../../_components/footer";
 
 import "@/frontend/globals.css";
+import { headers } from "next/headers";
+
+// Server-side'da çalışacak async fonksiyon
+async function getFooterData() {
+  try {
+    const payload = await initPayload();
+    const response = await payload.findGlobal({
+      slug: "footer",
+    });
+    return response;
+  } catch (error) {
+    console.error("Error fetching footer data:", error);
+    return null;
+  }
+}
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +51,6 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const params = await paramsPromise;
-
   const { locale } = params;
 
   if (!routing.locales.includes(locale as any)) {
@@ -46,6 +62,9 @@ export default async function LocaleLayout({
   // Client tarafına mesajları gönder
   const messages = await getMessages();
 
+  // Footer verilerini REST API üzerinden çek
+  const footerData = await getFooterData();
+
   return (
     <html lang={locale}>
       <body
@@ -53,7 +72,10 @@ export default async function LocaleLayout({
       >
         <NextIntlClientProvider messages={messages}>
           <CraftoProvider>
-            <ReactSlickProvider>{children}</ReactSlickProvider>
+            <ReactSlickProvider>
+              {children}
+              {footerData && <Footer footerData={footerData} />}
+            </ReactSlickProvider>
           </CraftoProvider>
         </NextIntlClientProvider>
       </body>
