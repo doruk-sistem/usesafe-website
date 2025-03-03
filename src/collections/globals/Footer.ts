@@ -22,78 +22,68 @@ export const Footer: GlobalConfig = {
             tr: "Telif Hakkı Metni",
           },
         },
-        // Company Section
+       // Company Section
+{
+  name: "company",
+  type: "group",
+  localized: true,
+  fields: [
+    {
+      name: "title",
+      type: "text",
+      required: true,
+      localized: true,
+      label: {
+        en: "Company Section Title",
+        tr: "Şirket Bölümü Başlığı",
+      },
+    },
+    {
+      name: "links",
+      type: "array",
+      localized: true,
+      fields: [
         {
-          name: "company",
-          type: "group",
+          name: "text",
+          type: "text",
+          required: true,
           localized: true,
-          fields: [
-            {
-              name: "title",
-              type: "text",
-              required: true,
-              localized: true,
-              label: {
-                en: "Company Section Title",
-                tr: "Şirket Bölümü Başlığı",
-              },
-            },
-            {
-              name: "usesafe",
-              type: "group",
-              localized: true,
-              fields: [
-                {
-                  name: "text",
-                  type: "text",
-                  required: true,
-                  localized: true,
-                  label: {
-                    en: "Usesafe Text",
-                    tr: "Usesafe Metni",
-                  },
-                },
-                {
-                  name: "link",
-                  type: "text",
-                  required: true,
-                  defaultValue: "/solutions/use-safe-certification",
-                  label: {
-                    en: "Usesafe Link",
-                    tr: "Usesafe Linki",
-                  },
-                },
-              ],
-            },
-            {
-              name: "about",
-              type: "group",
-              localized: true,
-              fields: [
-                {
-                  name: "text",
-                  type: "text",
-                  required: true,
-                  localized: true,
-                  label: {
-                    en: "About Text",
-                    tr: "Hakkımızda Metni",
-                  },
-                },
-                {
-                  name: "link",
-                  type: "text",
-                  required: true,
-                  defaultValue: "/resources/about-dpp",
-                  label: {
-                    en: "About Link",
-                    tr: "Hakkımızda Linki",
-                  },
-                },
-              ],
-            },
-          ],
+          label: {
+            en: "Link Text",
+            tr: "Link Metni",
+          },
         },
+        {
+          name: "url",
+          type: "text",
+          required: true,
+          label: {
+            en: "Link URL",
+            tr: "Link URL",
+          },
+        },
+        {
+          name: "isActive",
+          type: "checkbox",
+          defaultValue: true,
+          label: {
+            en: "Is Active",
+            tr: "Aktif mi",
+          },
+        },
+        {
+          name: "order",
+          type: "number",
+          defaultValue: 0,
+          label: {
+            en: "Display Order",
+            tr: "Görüntüleme Sırası",
+          },
+        },
+      ],
+    },
+  ],
+},
         // Legal Section
         {
           name: "legal",

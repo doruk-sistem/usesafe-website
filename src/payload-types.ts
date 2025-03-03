@@ -708,14 +708,15 @@ export interface Footer {
     copyright: string;
     company: {
       title: string;
-      usesafe: {
-        text: string;
-        link: string;
-      };
-      about: {
-        text: string;
-        link: string;
-      };
+      links?:
+        | {
+            text: string;
+            url: string;
+            isActive?: boolean | null;
+            order?: number | null;
+            id?: string | null;
+          }[]
+        | null;
     };
     legal: {
       title: string;
@@ -909,17 +910,14 @@ export interface FooterSelect<T extends boolean = true> {
           | T
           | {
               title?: T;
-              usesafe?:
+              links?:
                 | T
                 | {
                     text?: T;
-                    link?: T;
-                  };
-              about?:
-                | T
-                | {
-                    text?: T;
-                    link?: T;
+                    url?: T;
+                    isActive?: T;
+                    order?: T;
+                    id?: T;
                   };
             };
         legal?:

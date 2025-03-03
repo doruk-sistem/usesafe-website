@@ -18,6 +18,13 @@ interface Platform {
   order?: number | null;
   id?: string | null;
 }
+interface CompanyLink {
+  text: string;
+  url: string;
+  isActive?: boolean;
+  order?: number;
+  id?: string;
+}
 
 interface Address {
   country: string;
@@ -36,8 +43,7 @@ interface FooterProps {
         copyright: string;
         company: {
           title: string;
-          usesafe: { text: string; link: string };
-          about: { text: string; link: string };
+          links: CompanyLink[];
         };
         legal: {
           title: string;
@@ -55,7 +61,7 @@ interface FooterProps {
           phone: string;
           addresses?: Address[] | null | undefined;
         };
-      }
+      };
     };
   };
 }
@@ -97,22 +103,19 @@ export default function Footer({ footerData }: FooterProps) {
               {content.company.title}
             </h3>
             <ul className="tw-space-y-4">
-              <li>
-                <Link
-                  href={`/${locale}${content.company.usesafe.link}`}
-                  className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors"
-                >
-                  {content.company.usesafe.text}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={`/${locale}${content.company.about.link}`}
-                  className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors"
-                >
-                  {content.company.about.text}
-                </Link>
-              </li>
+              {content.company.links
+                ?.filter((link) => link.isActive)
+                .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+                .map((link) => (
+                  <li key={link.id}>
+                    <Link
+                      href={`/${locale}${link.url}`}
+                      className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors"
+                    >
+                      {link.text}
+                    </Link>
+                  </li>
+                ))}
             </ul>
           </div>
 
@@ -192,7 +195,7 @@ export default function Footer({ footerData }: FooterProps) {
               </a>
 
               {content.newsletter.addresses?.map((address) => {
-                console.log('Processing address:', address);
+                console.log("Processing address:", address);
                 return (
                   <a
                     key={address.country}
