@@ -10,10 +10,10 @@ export const MediaBlock: React.FC<MediaBlockProps> = ({
   mediaWidth,
 }) => {
   return (
-    <div className="tw-flex tw-justify-center tw-items-center">
+    <div className="tw-flex tw-justify-center tw-items-center ">
       <Media
         resource={media}
-        className={mediaWidth === "full" ? "tw-w-full" : "tw-w-auto"}
+        className="col-lg-8 col-md-10"
         imgClassName={mediaWidth === "full" ? "tw-w-full" : "tw-w-auto"}
       />
     </div>

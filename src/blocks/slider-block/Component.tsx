@@ -25,7 +25,7 @@ export function SliderBlock({ sliders, clients }: SliderBlock) {
           autoplaySpeed={3000}
           dots
           dotsClass="slick-dots tw-relative tw-bottom-0"
-          infinite={false}
+          infinite={true}
           speed={500}
           slidesToScroll={1}
           slidesToShow={1}
