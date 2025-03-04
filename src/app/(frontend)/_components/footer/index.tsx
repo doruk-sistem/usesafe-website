@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import React from "react";
 
 import {
@@ -9,8 +11,6 @@ import {
   XIcon,
 } from "@/assets/icons";
 import Logo from "@/frontend/_components/logo";
-import { useParams } from "next/navigation";
-import Link from "next/link";
 interface Platform {
   name: "linkedin" | "facebook" | "instagram" | "twitter";
   url: string;
@@ -71,6 +71,7 @@ export default function Footer({ footerData }: FooterProps) {
   const locale = params.locale as string;
 
   if (!footerData?.content || !footerData.content[locale]) {
+    console.log("No content found for locale:", locale);
     return null;
   }
   const content = footerData.content[locale];
@@ -119,60 +120,55 @@ export default function Footer({ footerData }: FooterProps) {
             </ul>
           </div>
 
-          {/* Legal Links */}
-          <div className="col-6 col-lg-2 col-sm-4 order-sm-3">
-            <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-6">
-              {content.legal.title}
-            </h3>
-            <ul className="tw-space-y-4">
-              <li>
-                <Link
-                  href={`/${locale}${content.legal.terms.link}`}
-                  className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors"
-                >
-                  {content.legal.terms.text}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={`/${locale}${content.legal.privacy.link}`}
-                  className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors"
-                >
-                  {content.legal.privacy.text}
-                </Link>
-              </li>
-            </ul>
-          </div>  
+       {/* Legal Links */}
+<div className="col-6 col-lg-2 col-sm-4 order-sm-3">
+  <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-6">
+    {content.legal.title}
+  </h3>
+  <ul className="tw-space-y-4">
+    <li>
+      <Link
+        href={content.legal.terms.link || "#"}
+        className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors"
+      >
+        {content.legal.terms.text}
+      </Link>
+    </li>
+    <li>
+      <Link
+        href={content.legal.privacy.link || "#"}
+        className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors"
+      >
+        {content.legal.privacy.text}
+      </Link>
+    </li>
+  </ul>
+</div>
 
-          {/* Social Links */}
-          <div className="col-6 col-lg-2 col-sm-4 order-sm-4">
-            <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-6">
-              {content.social.title}
-            </h3>
-            <ul className="tw-space-y-4">
-              {content.social.platforms
-                ?.filter((platform): platform is Platform =>
-                  Boolean(platform.isActive)
-                )
-                .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
-                .map((platform) => {
-                  const Icon = socialIcons[platform.name];
-                  return (
-                    <li key={platform.name}>
-                      <a
-                        href={platform.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors tw-flex tw-items-center tw-gap-2"
-                      >
-                        <Icon className="tw-w-5 tw-h-5" />
-                        {platform.name}
-                      </a>
-                    </li>
-                  );
-                })}
-            </ul>
-          </div>
+{/* Social Links */}
+<div className="col-6 col-lg-2 col-sm-4 order-sm-4">
+  <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-6">
+    {content.social.title}
+  </h3>
+  <ul className="tw-space-y-4">
+    {Array.isArray(content.social.platforms) && content.social.platforms.map((platform) => {
+      const Icon = socialIcons[platform.name];
+      return (
+        <li key={platform.id || platform.name}>
+          <a
+            href={platform.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors tw-flex tw-items-center tw-gap-2"
+          >
+            {Icon && <Icon className="tw-w-5 tw-h-5" />}
+            {platform.name}
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+</div>
 
           {/* Contact Info */}
           <div className="col-lg-3 col-sm-6 order-sm-5">

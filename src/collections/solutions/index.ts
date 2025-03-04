@@ -3,10 +3,10 @@ import { CollectionConfig } from "payload";
 export const Solutions: CollectionConfig = {
   slug: "solutions",
   access: {
-    read: () => true,   
-    create: () => true,  
-    update: () => true,  
-    delete: () => true, 
+    read: () => true,
+    create: () => true,
+    update: () => true,
+    delete: () => true,
   },
   admin: {
     group: "Pages",

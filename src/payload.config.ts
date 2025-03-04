@@ -6,10 +6,10 @@ import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { buildConfig } from "payload";
 
 import collections from "./collections";
+import { Footer } from "./collections/globals/Footer";
 import { Users } from "./collections/Users";
 import globals from "./globals";
 import { plugins } from "./plugins";
-import { Footer } from "./collections/globals/Footer";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
