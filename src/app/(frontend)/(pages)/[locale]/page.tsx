@@ -1,10 +1,10 @@
 import { getLocale } from "next-intl/server";
 
+import Footer from "@/app/(frontend)/_components/footer";
 import generateMeta from "@/frontend/_utils/generate-meta";
 import { initPayload } from "@/utils/getPayload";
 
 import PageClient from "./page.client";
-import Footer from "@/app/(frontend)/_components/footer";
 
 export default async function HomePage() {
   try {

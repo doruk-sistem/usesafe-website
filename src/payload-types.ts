@@ -69,6 +69,7 @@ export interface Config {
     users: User;
     media: Media;
     solutions: Solution;
+    pages: Page;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -78,6 +79,7 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     solutions: SolutionsSelect<false> | SolutionsSelect<true>;
+    pages: PagesSelect<false> | PagesSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -368,6 +370,119 @@ export interface IconListBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages".
+ */
+export interface Page {
+  id: number;
+  title: string;
+  /**
+   * URL tüm diller için aynı olmalıdır (örn: "about-us")
+   */
+  slug: string;
+  backgroundImage?: (number | null) | Media;
+  layout: (ContentWithImageBlock | SliderBlock | MediaBlock | AccordionBlock | IconListBlock)[];
+  content: {
+    root: {
+      type: string;
+      children: {
+        type: string;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  showInMenu?: boolean | null;
+  menuOrder?: number | null;
+  isActive?: boolean | null;
+  metaTitle?: string | null;
+  metaDescription?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "SliderBlock".
+ */
+export interface SliderBlock {
+  sliders: {
+    image: number | Media;
+    title: string;
+    description: string;
+    buttonText?: string | null;
+    buttonLink?: string | null;
+    id?: string | null;
+  }[];
+  clients: {
+    name: string;
+    image: number | Media;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'sliderBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "AccordionBlock".
+ */
+export interface AccordionBlock {
+  title: string;
+  description: string;
+  image: number | Media;
+  items: {
+    title: string;
+    description: string;
+    id?: string | null;
+  }[];
+  /**
+   * Block'a özel ayarlar.
+   */
+  blockOptions?: {
+    title?: string | null;
+    description?: string | null;
+    heroContent?: {
+      root: {
+        type: string;
+        children: {
+          type: string;
+          version: number;
+          [k: string]: unknown;
+        }[];
+        direction: ('ltr' | 'rtl') | null;
+        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+        indent: number;
+        version: number;
+      };
+      [k: string]: unknown;
+    } | null;
+    footerContent?: {
+      root: {
+        type: string;
+        children: {
+          type: string;
+          version: number;
+          [k: string]: unknown;
+        }[];
+        direction: ('ltr' | 'rtl') | null;
+        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+        indent: number;
+        version: number;
+      };
+      [k: string]: unknown;
+    } | null;
+    innerContainer?: boolean | null;
+  };
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'accordionBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -384,6 +499,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'solutions';
         value: number | Solution;
+      } | null)
+    | ({
+        relationTo: 'pages';
+        value: number | Page;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -560,6 +679,84 @@ export interface IconListBlockSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages_select".
+ */
+export interface PagesSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  backgroundImage?: T;
+  layout?:
+    | T
+    | {
+        contentWithImageBlock?: T | ContentWithImageBlockSelect<T>;
+        sliderBlock?: T | SliderBlockSelect<T>;
+        mediaBlock?: T | MediaBlockSelect<T>;
+        accordionBlock?: T | AccordionBlockSelect<T>;
+        iconListBlock?: T | IconListBlockSelect<T>;
+      };
+  content?: T;
+  showInMenu?: T;
+  menuOrder?: T;
+  isActive?: T;
+  metaTitle?: T;
+  metaDescription?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "SliderBlock_select".
+ */
+export interface SliderBlockSelect<T extends boolean = true> {
+  sliders?:
+    | T
+    | {
+        image?: T;
+        title?: T;
+        description?: T;
+        buttonText?: T;
+        buttonLink?: T;
+        id?: T;
+      };
+  clients?:
+    | T
+    | {
+        name?: T;
+        image?: T;
+        id?: T;
+      };
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "AccordionBlock_select".
+ */
+export interface AccordionBlockSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  image?: T;
+  items?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        id?: T;
+      };
+  blockOptions?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        heroContent?: T;
+        footerContent?: T;
+        innerContainer?: T;
+      };
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents_select".
  */
 export interface PayloadLockedDocumentsSelect<T extends boolean = true> {
@@ -599,83 +796,6 @@ export interface Homepage {
   layout?: (ContentWithImageBlock | SliderBlock | MediaBlock | AccordionBlock | IconListBlock)[] | null;
   updatedAt?: string | null;
   createdAt?: string | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "SliderBlock".
- */
-export interface SliderBlock {
-  sliders: {
-    image: number | Media;
-    title: string;
-    description: string;
-    buttonText?: string | null;
-    buttonLink?: string | null;
-    id?: string | null;
-  }[];
-  clients: {
-    name: string;
-    image: number | Media;
-    id?: string | null;
-  }[];
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'sliderBlock';
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "AccordionBlock".
- */
-export interface AccordionBlock {
-  title: string;
-  description: string;
-  image: number | Media;
-  items: {
-    title: string;
-    description: string;
-    id?: string | null;
-  }[];
-  /**
-   * Block'a özel ayarlar.
-   */
-  blockOptions?: {
-    title?: string | null;
-    description?: string | null;
-    heroContent?: {
-      root: {
-        type: string;
-        children: {
-          type: string;
-          version: number;
-          [k: string]: unknown;
-        }[];
-        direction: ('ltr' | 'rtl') | null;
-        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-        indent: number;
-        version: number;
-      };
-      [k: string]: unknown;
-    } | null;
-    footerContent?: {
-      root: {
-        type: string;
-        children: {
-          type: string;
-          version: number;
-          [k: string]: unknown;
-        }[];
-        direction: ('ltr' | 'rtl') | null;
-        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-        indent: number;
-        version: number;
-      };
-      [k: string]: unknown;
-    } | null;
-    innerContainer?: boolean | null;
-  };
-  id?: string | null;
-  blockName?: string | null;
-  blockType: 'accordionBlock';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -757,58 +877,6 @@ export interface HomepageSelect<T extends boolean = true> {
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "SliderBlock_select".
- */
-export interface SliderBlockSelect<T extends boolean = true> {
-  sliders?:
-    | T
-    | {
-        image?: T;
-        title?: T;
-        description?: T;
-        buttonText?: T;
-        buttonLink?: T;
-        id?: T;
-      };
-  clients?:
-    | T
-    | {
-        name?: T;
-        image?: T;
-        id?: T;
-      };
-  id?: T;
-  blockName?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "AccordionBlock_select".
- */
-export interface AccordionBlockSelect<T extends boolean = true> {
-  title?: T;
-  description?: T;
-  image?: T;
-  items?:
-    | T
-    | {
-        title?: T;
-        description?: T;
-        id?: T;
-      };
-  blockOptions?:
-    | T
-    | {
-        title?: T;
-        description?: T;
-        heroContent?: T;
-        footerContent?: T;
-        innerContainer?: T;
-      };
-  id?: T;
-  blockName?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

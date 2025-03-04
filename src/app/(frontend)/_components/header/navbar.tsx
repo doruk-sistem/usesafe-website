@@ -1,5 +1,6 @@
 "use client";
 
+import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -15,13 +16,23 @@ interface Solution {
   slug: string;
 }
 
+interface DynamicPage {
+  title: string;
+  slug: string;
+  menuOrder: number;
+  translationKey: string;
+}
 interface NavbarProps {
   solutions?: Solution[];
+  dynamicPages?: DynamicPage[];
 }
 
-export default function Navbar({ solutions = [] }: NavbarProps) {
+export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProps) {
   const t = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const sortedDynamicPages = [...dynamicPages].sort((a, b) => a.menuOrder - b.menuOrder);
+  const params = useParams();
+  const locale = params.locale as string;
 
   const navItems = [
     {
@@ -38,6 +49,12 @@ export default function Navbar({ solutions = [] }: NavbarProps) {
         href: `/solutions/${solution.slug}` || `#solution-${index}`,
       })),
     },
+    // Dinamik sayfaları ekleyelim
+    ...sortedDynamicPages.map((page, index) => ({
+      key: `dynamic-${page.translationKey || page.slug || index}`,  // Fallback ekledik
+      label: page.title,
+      href: `/${locale}/${page.slug}`,  // locale'i URL'e ekle
+    })),
     {
       key: "blog",
       label: t("common.blog"),
