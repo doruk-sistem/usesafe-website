@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Navbar from "./navbar";
 import TopHeader from "./top-header";
@@ -21,23 +21,11 @@ interface HeaderProps {
   dynamicPages: DynamicPage[];
 }
 
-export default function Header({ initialSolutions = [], dynamicPages = [] }: HeaderProps) {
-  console.log("Header rendering at:", new Date().toISOString(), {
-    initialSolutions,
-    dynamicPages,
-    trace: new Error().stack,
-  });
+export default function Header({
+  initialSolutions = [],
+  dynamicPages = [],
+}: HeaderProps) {
   const [solutions, setSolutions] = useState<Solution[]>(initialSolutions);
-  const renderCount = useRef(0);
-
-  useEffect(() => {
-    renderCount.current += 1;
-    console.log("Header render count:", renderCount.current, {
-      initialSolutions,
-      dynamicPages,
-      trace: new Error().stack,
-    });
-  });
 
   useEffect(() => {
     async function fetchSolutions() {

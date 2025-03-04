@@ -8,26 +8,29 @@ import RenderBlocks from "@/blocks/RenderBlocks";
 import generateMeta from "@/frontend/_utils/generate-meta";
 import { Media } from "@/payload-types";
 import { initPayload } from "@/utils/getPayload";
+
+type PageProps = {
+  params: {
+    slug: string;
+    locale: string;
+  };
+};
 export default async function DynamicPage({
-  params,
+  params: { slug, locale },
 }: {
-  params: { slug: string };
+  params: { slug: string; locale: string };
 }) {
   try {
-    const locale = await getLocale();
+    const currentLocale = await getLocale();
     const payload = await initPayload();
 
     const page = await payload.find({
       collection: "pages",
       where: {
-        slug: {
-          equals: params.slug,
-        },
-        isActive: {
-          equals: true,
-        },
+        slug: { equals: slug },
+        isActive: { equals: true },
       },
-      locale: locale as any,
+      locale: currentLocale as "en" | "tr" | "all",
     });
 
     if (!page.docs || page.docs.length === 0) {
@@ -54,9 +57,9 @@ export default async function DynamicPage({
 }
 
 export async function generateMetadata({
-  params,
+  params: { slug, locale },
 }: {
   params: { slug: string; locale: string };
 }) {
-  return await generateMeta(null, { path: `/${params.slug}`, locale: params.locale });
+  return await generateMeta(null, { path: `/${slug}`, locale });
 }

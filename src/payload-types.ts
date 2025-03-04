@@ -381,21 +381,6 @@ export interface Page {
   slug: string;
   backgroundImage?: (number | null) | Media;
   layout: (ContentWithImageBlock | SliderBlock | MediaBlock | AccordionBlock | IconListBlock)[];
-  content: {
-    root: {
-      type: string;
-      children: {
-        type: string;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  };
   showInMenu?: boolean | null;
   menuOrder?: number | null;
   isActive?: boolean | null;
@@ -694,7 +679,6 @@ export interface PagesSelect<T extends boolean = true> {
         accordionBlock?: T | AccordionBlockSelect<T>;
         iconListBlock?: T | IconListBlockSelect<T>;
       };
-  content?: T;
   showInMenu?: T;
   menuOrder?: T;
   isActive?: T;

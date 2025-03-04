@@ -35,7 +35,7 @@ export const Pages: CollectionConfig = {
       type: "upload",
       relationTo: "media",
       label: "Arka Plan Görseli",
-      localized: false, // Eğer her dil için farklı bir arka plan resmi istersen true yap
+      localized: false,
     },
     {
         name: "layout",
@@ -51,13 +51,6 @@ export const Pages: CollectionConfig = {
           IconList,
         ],
       },
-    {
-      name: "content",
-      type: "richText",
-      required: true,
-      label: "Sayfa İçeriği",
-      localized: true,
-    },
     {
       name: "showInMenu",
       type: "checkbox",

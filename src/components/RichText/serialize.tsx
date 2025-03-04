@@ -26,7 +26,6 @@ type Props = {
 };
 
 export function serializeLexical({ nodes }: Props): JSX.Element {
-  console.log(nodes);
 
   return (
     <Fragment>

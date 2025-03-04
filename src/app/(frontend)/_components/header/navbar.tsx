@@ -20,7 +20,6 @@ interface DynamicPage {
   title: string;
   slug: string;
   menuOrder: number;
-  translationKey: string;
 }
 interface NavbarProps {
   solutions?: Solution[];
@@ -49,11 +48,11 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
         href: `/solutions/${solution.slug}` || `#solution-${index}`,
       })),
     },
-    // Dinamik sayfaları ekleyelim
+
     ...sortedDynamicPages.map((page, index) => ({
-      key: `dynamic-${page.translationKey || page.slug || index}`,  // Fallback ekledik
+      key: `dynamic-${page.slug || index}`,
       label: page.title,
-      href: `/${locale}/${page.slug}`,  // locale'i URL'e ekle
+      href: `/${locale}/${page.slug}`,
     })),
     {
       key: "blog",

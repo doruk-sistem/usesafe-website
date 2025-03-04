@@ -71,7 +71,6 @@ export default function Footer({ footerData }: FooterProps) {
   const locale = params.locale as string;
 
   if (!footerData?.content || !footerData.content[locale]) {
-    console.log("No content found for locale:", locale);
     return null;
   }
   const content = footerData.content[locale];
@@ -191,7 +190,6 @@ export default function Footer({ footerData }: FooterProps) {
               </a>
 
               {content.newsletter.addresses?.map((address) => {
-                console.log("Processing address:", address);
                 return (
                   <a
                     key={address.country}
