@@ -1,6 +1,5 @@
-import { Block } from "payload";
-import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import {
+  lexicalEditor,
   HeadingFeature,
   LinkFeature,
   UploadFeature,
@@ -10,6 +9,7 @@ import {
   ItalicFeature,
   UnderlineFeature,
 } from "@payloadcms/richtext-lexical";
+import { Block } from "payload";
 
 export const TextBlock: Block = {
   slug: "text",
@@ -28,7 +28,7 @@ export const TextBlock: Block = {
         features: ({ defaultFeatures }) => [
           ...defaultFeatures,
           HeadingFeature({
-            enabledHeadingSizes: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+            enabledHeadingSizes: ["h1", "h2", "h3", "h4", "h5", "h6"],
           }),
           OrderedListFeature(),
           UnorderedListFeature(),
@@ -54,12 +54,12 @@ export const TextBlock: Block = {
           namespace: "textBlock",
           theme: {
             heading: {
-              h1: 'text-4xl font-bold',
-              h2: 'text-3xl font-bold',
-              h3: 'text-2xl font-bold',
-              h4: 'text-xl font-bold',
-              h5: 'text-lg font-bold',
-              h6: 'text-base font-bold',
+              h1: "text-4xl font-bold",
+              h2: "text-3xl font-bold",
+              h3: "text-2xl font-bold",
+              h4: "text-xl font-bold",
+              h5: "text-lg font-bold",
+              h6: "text-base font-bold",
             },
           },
         },
