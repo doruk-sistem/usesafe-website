@@ -9,20 +9,15 @@ import generateMeta from "@/frontend/_utils/generate-meta";
 import { Media } from "@/payload-types";
 import { initPayload } from "@/utils/getPayload";
 
-type PageProps = {
-  params: {
-    slug: string;
-    locale: string;
-  };
-};
 export default async function DynamicPage({
-  params: { slug, locale },
+  params,
 }: {
-  params: { slug: string; locale: string };
+  params: any;
 }) {
   try {
     const currentLocale = await getLocale();
     const payload = await initPayload();
+    const { slug } = await Promise.resolve(params);
 
     const page = await payload.find({
       collection: "pages",
@@ -56,10 +51,20 @@ export default async function DynamicPage({
   }
 }
 
+// export async function generateMetadata({
+//   params: { slug },
+// }: {
+//   params: { slug: string };
+// }) {
+//   return await generateMeta(null, { path: `/${slug}` });
+// }
+
 export async function generateMetadata({
-  params: { slug, locale },
+  params: paramsPromise,
 }: {
-  params: { slug: string; locale: string };
+  params: any;
 }) {
-  return await generateMeta(null, { path: `/${slug}`, locale });
+  const params = await paramsPromise;
+
+  return generateMeta(null, { path: `/${params.slug}` });
 }

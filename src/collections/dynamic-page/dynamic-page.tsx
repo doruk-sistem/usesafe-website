@@ -72,14 +72,20 @@ export const Pages: CollectionConfig = {
     {
       name: "metaTitle",
       type: "text",
-      label: "Meta Başlık",
+      label: "SEO Başlık",
       localized: true,
+      admin: {
+        description: "Google SEO için kullanılacak başlık",
+      },
     },
     {
       name: "metaDescription",
       type: "textarea",
-      label: "Meta Açıklama",
+      label: "SEO Açıklama",
       localized: true,
+      admin: {
+        description: "Google SEO için kullanılacak açıklama",
+      },
     },
   ],
 };

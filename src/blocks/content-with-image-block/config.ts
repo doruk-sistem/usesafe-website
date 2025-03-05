@@ -62,6 +62,12 @@ export const ContentWithImage: Block = {
       type: "select",
       options: ["left", "right"],
       defaultValue: "left",
+      admin: {
+        description: {
+          tr: "Görselin konumu",
+          en: "Image Position",
+        },
+      },
     },
     blockOptionsField(),
   ],

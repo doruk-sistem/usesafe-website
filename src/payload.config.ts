@@ -6,7 +6,6 @@ import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { buildConfig } from "payload";
 
 import collections from "./collections";
-import { Footer } from "./collections/globals/Footer";
 import { Users } from "./collections/Users";
 import globals from "./globals";
 import { plugins } from "./plugins";
@@ -36,7 +35,7 @@ export default buildConfig({
     fallback: true,
   },
   collections,
-  globals: [...globals, Footer],
+  globals: [...globals],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {

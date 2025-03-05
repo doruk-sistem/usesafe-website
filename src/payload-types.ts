@@ -224,6 +224,9 @@ export interface ContentWithImageBlock {
    * Button Link
    */
   buttonLink?: string | null;
+  /**
+   * Image Position
+   */
   position?: ('left' | 'right') | null;
   /**
    * Block'a özel ayarlar.
@@ -384,7 +387,13 @@ export interface Page {
   showInMenu?: boolean | null;
   menuOrder?: number | null;
   isActive?: boolean | null;
+  /**
+   * Google SEO için kullanılacak başlık
+   */
   metaTitle?: string | null;
+  /**
+   * Google SEO için kullanılacak açıklama
+   */
   metaDescription?: string | null;
   updatedAt: string;
   createdAt: string;

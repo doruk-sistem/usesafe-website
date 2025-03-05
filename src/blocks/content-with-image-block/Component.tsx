@@ -32,9 +32,9 @@ export function ContentWithImageBlock({
             </h2>
           )}
           {description && (
-            <div className="w-95 md-w-100">
-              <RichText content={description} />
-            </div>
+            <article className="w-95 md-w-100">
+              <RichText content={description} enableGutter={false} />
+            </article>
           )}
           {buttonLink && buttonText && (
             <Link href={buttonLink}>
@@ -54,9 +54,9 @@ export function ContentWithImageBlock({
             </h2>
           )}
           {description && (
-            <div className="w-95 md-w-100">
-              <RichText content={description} />
-            </div>
+            <article className="w-95 md-w-100">
+              <RichText content={description} enableGutter={false} />
+            </article>
           )}
           {buttonLink && buttonText && (
             <Link href={buttonLink}>
