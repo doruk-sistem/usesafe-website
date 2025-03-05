@@ -35,7 +35,7 @@ export default buildConfig({
     fallback: true,
   },
   collections,
-  globals,
+  globals: [...globals],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {

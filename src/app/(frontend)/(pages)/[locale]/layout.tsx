@@ -5,11 +5,72 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 
+import { initPayload } from "@/app/api/utils/getPayload";
+import Footer from "@/frontend/_components/footer";
+import Header from "@/frontend/_components/header";
 import CraftoProvider from "@/frontend/_providers/CraftoProvider";
 import ReactSlickProvider from "@/frontend/_providers/ReactSlickProvider";
 import { routing } from "@/i18n/routing";
-
 import "@/frontend/globals.css";
+
+async function getHeaderData(locale: string) {
+  try {
+    const payload = await initPayload();
+
+    const pagesData = await payload.find({
+      collection: "pages",
+      where: {
+        showInMenu: {
+          equals: true,
+        },
+        isActive: {
+          equals: true,
+        },
+      },
+      sort: "menuOrder",
+      locale: locale as "en" | "tr",
+    });
+
+    const dynamicPages = pagesData.docs.map((page) => ({
+      ...page,
+      menuOrder: page.menuOrder ?? 0,
+    }));
+
+    return { dynamicPages };
+  } catch (error) {
+    console.error("Error fetching header data:", error);
+    return { dynamicPages: [] };
+  }
+}
+
+async function getFooterData() {
+  try {
+    const payload = await initPayload();
+    const locales = ["en", "tr"];
+    const footerData: any = { content: {} };
+
+    for (const locale of locales) {
+      const response = await payload.findGlobal({
+        slug: "footer",
+        locale: locale as "en" | "tr" | "all",
+      });
+
+      if (response?.content) {
+        footerData.content[locale] = {
+          copyright: response.content.copyright,
+          company: response.content.company,
+          legal: response.content.legal,
+          social: response.content.social,
+          newsletter: response.content.newsletter,
+        };
+      }
+    }
+    return footerData;
+  } catch (error) {
+    console.error("Error fetching footer data:", error);
+    return null;
+  }
+}
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,8 +94,8 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }>) {
-  const params = await paramsPromise;
 
+  const params = await paramsPromise;
   const { locale } = params;
 
   if (!routing.locales.includes(locale as any)) {
@@ -43,17 +104,22 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
-  // Client tarafına mesajları gönder
-  const messages = await getMessages();
+  const headerData = await getHeaderData(locale);
+
+  const footerData = await getFooterData();
 
   return (
     <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={await getMessages()}>
           <CraftoProvider>
-            <ReactSlickProvider>{children}</ReactSlickProvider>
+            <ReactSlickProvider>
+              <Header initialSolutions={[]} dynamicPages={headerData.dynamicPages} />
+              {children}
+              {footerData && <Footer footerData={footerData} />}
+            </ReactSlickProvider>
           </CraftoProvider>
         </NextIntlClientProvider>
       </body>

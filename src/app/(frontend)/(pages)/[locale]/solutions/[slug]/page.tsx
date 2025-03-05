@@ -44,7 +44,8 @@ export async function generateMetadata({
   params: any;
 }) {
   const { slug, locale } = await Promise.resolve(params);
-  return await generateMeta(null, {
+
+  return generateMeta(null, {
     path: `/solutions/${slug}`,
     locale: locale,
   });

@@ -10,8 +10,22 @@ interface Solution {
   slug: string;
 }
 
-export default function Header() {
-  const [solutions, setSolutions] = useState<Solution[]>([]);
+interface DynamicPage {
+  title: string;
+  slug: string;
+  menuOrder: number;
+}
+
+interface HeaderProps {
+  initialSolutions: Solution[];
+  dynamicPages: DynamicPage[];
+}
+
+export default function Header({
+  initialSolutions = [],
+  dynamicPages = [],
+}: HeaderProps) {
+  const [solutions, setSolutions] = useState<Solution[]>(initialSolutions);
 
   useEffect(() => {
     async function fetchSolutions() {
@@ -31,7 +45,7 @@ export default function Header() {
     <header className="tw-sticky tw-top-0 tw-z-50">
       <TopHeader />
       <div>
-        <Navbar solutions={solutions} />
+        <Navbar solutions={solutions} dynamicPages={dynamicPages} />
       </div>
     </header>
   );

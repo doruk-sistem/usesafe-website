@@ -8,7 +8,6 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 
 import ButtonSwitchAnimation from "@/app/(frontend)/_components/button-switch-animation";
 import Footer from "@/app/(frontend)/_components/footer";
-import Header from "@/app/(frontend)/_components/header";
 import NewsletterBlock from "@/blocks/newsletter-block";
 import RenderBlocks from "@/blocks/RenderBlocks";
 
@@ -78,7 +77,6 @@ export default function ContactPageClient() {
 
   return (
     <div className="tw-min-h-screen tw-flex tw-flex-col">
-      <Header />
       <Toaster position="bottom-center" />
 
       <RenderBlocks
