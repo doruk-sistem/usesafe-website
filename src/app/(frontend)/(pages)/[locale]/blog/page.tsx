@@ -8,7 +8,6 @@ import React, { useRef, useEffect, useState } from "react";
 
 import { Button } from "@/app/(frontend)/_components/button";
 import Footer from "@/app/(frontend)/_components/footer";
-import Header from "@/app/(frontend)/_components/header";
 
 interface PayloadBlogDoc {
   id: string;
@@ -36,7 +35,7 @@ interface BlogCardProps {
   locale: string;
 }
 
-const BlogBanner = ({ locale, scrollToReferences }: { locale: string, scrollToReferences: () => void }) => {
+const BlogBanner = ({ scrollToReferences }: { scrollToReferences: () => void }) => {
   return (
     <section className="tw-relative tw-w-full tw-h-screen tw-flex tw-items-center tw-justify-center tw-overflow-hidden">
       <motion.div
@@ -176,8 +175,7 @@ export default function BlogPage() {
 
   return (
     <div className="tw-w-full tw-min-h-screen">
-      <Header />
-      <BlogBanner locale={locale as string} scrollToReferences={() => referenceSection.current?.scrollIntoView({ behavior: "smooth" })} />
+      <BlogBanner scrollToReferences={() => referenceSection.current?.scrollIntoView({ behavior: "smooth" })} />
       <section ref={referenceSection} className="tw-max-w-7xl tw-mx-auto tw-py-16 tw-px-4">
         <h2 className="tw-text-4xl tw-font-bold tw-text-center tw-mb-12">{locale === "tr" ? "Blog Yazıları" : "Blog Posts"}</h2>
         <BlogList blogs={blogs} isLoading={isLoading} locale={locale as string} />

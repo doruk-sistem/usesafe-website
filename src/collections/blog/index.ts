@@ -1,4 +1,4 @@
-import { lexicalEditor } from "@payloadcms/richtext-lexical";  // ✅ Rich Text Editor için gerekli import
+import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import type { CollectionConfig } from "payload";
 
 import { authenticated } from "@/access/authenticated";
@@ -9,11 +9,11 @@ export const Blog: CollectionConfig = {
     admin: authenticated,
     create: authenticated,
     delete: authenticated,
-    read: () => true, // Blog postları herkese açık olacak
+    read: () => true,
     update: authenticated,
   },
   admin: {
-    defaultColumns: ["title", "author", "status", "createdAt"],
+    defaultColumns: ["title", "content", "author", "status", "createdAt"],
     useAsTitle: "title",
   },
   fields: [
@@ -25,7 +25,7 @@ export const Blog: CollectionConfig = {
     {
       name: "content",
       type: "richText",
-      editor: lexicalEditor(),  // ✅ Rich Text Editörü eklendi!
+      editor: lexicalEditor(),
       required: true,
     },
     {

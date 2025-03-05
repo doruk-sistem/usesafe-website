@@ -1,14 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 import { Button } from "@/app/(frontend)/_components/button";
 import Footer from "@/app/(frontend)/_components/footer";
-import Header from "@/app/(frontend)/_components/header";
+import RichText from "@/components/RichText";
 
 interface BlogPost {
   id: string;
@@ -31,34 +30,6 @@ interface BlogPost {
   createdAt: string;
   excerpt?: string;
 }
-
-const RichText = ({ content }: { content: any }) => {
-  if (!content?.root?.children) return null;
-
-  return (
-    <div className="tw-text-gray-800 tw-prose tw-prose-lg tw-max-w-none">
-      {content.root.children.map((node: any, i: number) => {
-        const text = node.text || "";
-        if (node.type === "h1") return <h1 key={i} className="tw-text-4xl tw-font-bold tw-mb-6">{text}</h1>;
-        if (node.type === "h2") return <h2 key={i} className="tw-text-3xl tw-font-semibold tw-mb-4">{text}</h2>;
-        if (node.type === "paragraph") {
-          return (
-            <p key={i} className="tw-leading-relaxed tw-mb-4">
-              {node.children?.map((child: any, j: number) => {
-                if (child.bold) return <strong key={j}>{child.text}</strong>;
-                if (child.italic) return <em key={j}>{child.text}</em>;
-                return child.text;
-              })}
-            </p>
-          );
-        }
-        if (node.type === "ul") return <ul key={i} className="tw-list-disc tw-ml-5 tw-mb-4">{node.children?.map((item: any, j: number) => <li key={j}>{item.children?.[0]?.text}</li>)}</ul>;
-        if (node.type === "ol") return <ol key={i} className="tw-list-decimal tw-ml-5 tw-mb-4">{node.children?.map((item: any, j: number) => <li key={j}>{item.children?.[0]?.text}</li>)}</ol>;
-        return <p key={i}>{text}</p>;
-      })}
-    </div>
-  );
-};
 
 export default function BlogDetailPage() {
   const [blog, setBlog] = useState<BlogPost | null>(null);
@@ -108,8 +79,6 @@ export default function BlogDetailPage() {
 
   return (
     <div className="tw-min-h-screen tw-bg-gray-50">
-      <Header />
-
       {/* Hero Bölümü */}
       <div className="tw-relative tw-h-[60vh] tw-w-full tw-overflow-hidden">
         {blog.featuredImage?.url && (
