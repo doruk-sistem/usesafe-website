@@ -15,7 +15,7 @@ import { IconListBlock } from "./icon-list-block/Component";
 import { MediaBlock } from "./media-block/Component";
 import { PageTitleBlock } from "./page-title-block/Component";
 import { SliderBlock } from "./slider-block/Component";
-
+import TextBlock from "./text-block";
 const blockComponents = {
   sliderBlock: SliderBlock,
   mediaBlock: MediaBlock,
@@ -28,6 +28,7 @@ const blockComponents = {
   backgroundVideo: BackgroundVideoBlock,
   contactForm: ContactFormBlock,
   certificationIntro: CertificationIntroBlock,
+  text: TextBlock,
 } as const;
 
 type BlockType = keyof typeof blockComponents;
