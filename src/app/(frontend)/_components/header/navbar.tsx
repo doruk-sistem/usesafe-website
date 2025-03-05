@@ -60,11 +60,6 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
       href: "/blog",
     },
     {
-      key: "about",
-      label: t("common.about_dpp"),
-      href: "/resources/about-dpp",
-    },
-    {
       key: "contact",
       label: t("common.contact_us"),
       href: "/contact",
