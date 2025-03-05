@@ -1,11 +1,19 @@
 import { CollectionConfig } from "payload";
 
+import { authenticated } from "@/access/authenticated";
 import { ContentWithImage } from "@/blocks/content-with-image-block/config";
 import { IconList } from "@/blocks/icon-list-block/config";
 import { MediaBlock } from "@/blocks/media-block/config";
 
 export const Solutions: CollectionConfig = {
   slug: "solutions",
+  access: {
+    admin: authenticated,
+    create: authenticated,
+    delete: authenticated,
+    read: () => true,
+    update: authenticated,
+  },
   admin: {
     group: "Pages",
     useAsTitle: "title",

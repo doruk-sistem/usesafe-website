@@ -33,12 +33,14 @@ export function ContentWithImageBlock({
           )}
           {description && (
             <article className="w-95 md-w-100">
-              <RichText content={description} enableGutter={false}/>
+              <RichText content={description} enableGutter={false} />
             </article>
           )}
           {buttonLink && buttonText && (
             <Link href={buttonLink}>
-              <ButtonSwitchAnimation icon={<HiArrowNarrowRight />}>{buttonText}</ButtonSwitchAnimation>
+              <ButtonSwitchAnimation icon={<HiArrowNarrowRight />}>
+                {buttonText}
+              </ButtonSwitchAnimation>
             </Link>
           )}
         </div>
@@ -58,7 +60,9 @@ export function ContentWithImageBlock({
           )}
           {buttonLink && buttonText && (
             <Link href={buttonLink}>
-              <ButtonSwitchAnimation icon={<HiArrowNarrowRight />}>{buttonText}</ButtonSwitchAnimation>
+              <ButtonSwitchAnimation icon={<HiArrowNarrowRight />}>
+                {buttonText}
+              </ButtonSwitchAnimation>
             </Link>
           )}
         </div>

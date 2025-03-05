@@ -11,7 +11,6 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 import { Button } from "@/app/(frontend)/_components/button";
 import ButtonSwitchAnimation from "@/app/(frontend)/_components/button-switch-animation";
 import Footer from "@/app/(frontend)/_components/footer";
-import Header from "@/app/(frontend)/_components/header";
 import NewsletterBlock from "@/blocks/newsletter-block";
 import products from "@/constants/products";
 
@@ -89,7 +88,6 @@ export default function DemoPageClient() {
 
   return (
     <div className="tw-min-h-screen tw-flex tw-flex-col">
-      <Header />
       <Toaster position="bottom-center" />
       <main className="tw-flex-1 tw-container tw-mx-auto tw-px-4 tw-py-12">
         <h1 className="tw-text-3xl tw-font-bold tw-text-black tw-text-center tw-mb-6">
