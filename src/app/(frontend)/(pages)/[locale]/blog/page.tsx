@@ -1,13 +1,14 @@
-'use client';
+"use client";
 
-import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Header from "@/app/(frontend)/_components/header";
-import Footer from "@/app/(frontend)/_components/footer";
-import { Button } from "@/app/(frontend)/_components/button";
-import { useParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
+import React, { useRef, useEffect, useState } from "react";
+
+import { Button } from "@/app/(frontend)/_components/button";
+import Footer from "@/app/(frontend)/_components/footer";
+import Header from "@/app/(frontend)/_components/header";
 
 interface PayloadBlogDoc {
   id: string;
@@ -21,7 +22,7 @@ interface PayloadBlogDoc {
   author?: {
     name: string;
   };
-  status: 'draft' | 'published';
+  status: "draft" | "published";
 }
 
 interface BlogListProps {
@@ -52,14 +53,14 @@ const BlogBanner = ({ locale, scrollToReferences }: { locale: string, scrollToRe
           priority
         />
       </motion.div>
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.4 }}
         transition={{ duration: 1 }}
         className="tw-absolute tw-inset-0 tw-bg-black"
       />
       <div className="tw-relative tw-z-10 tw-text-white tw-text-center tw-w-full tw-h-full tw-flex tw-flex-col tw-justify-center tw-items-center">
-        <motion.h1 
+        <motion.h1
           className="tw-text-5xl tw-font-bold"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -104,7 +105,7 @@ const BlogList: React.FC<BlogListProps> = ({ blogs, isLoading, locale }) => {
 
 const BlogCard: React.FC<BlogCardProps> = ({ blog, locale }) => {
   return (
-    <motion.div 
+    <motion.div
       className="tw-bg-transparent tw-rounded-lg tw-shadow-lg tw-overflow-hidden hover:tw-shadow-xl tw-transition-shadow tw-duration-300"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -113,30 +114,30 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, locale }) => {
     >
       {blog.featuredImage?.url && (
         <div className="tw-relative tw-h-48 tw-overflow-hidden">
-          <Image 
+          <Image
             src={blog.featuredImage.url}
-            alt={blog.title || 'Blog görseli'}
+            alt={blog.title || "Blog görseli"}
             fill
             className="tw-object-cover"
           />
         </div>
       )}
       <div className="tw-p-6">
-        <h3 className="tw-text-xl tw-font-semibold tw-mb-2 tw-text-gray-800">{blog.title || 'Başlıksız Blog'}</h3>
-        <p className="tw-text-gray-600 tw-mb-4 tw-line-clamp-3">{blog.excerpt || 'İçerik yüklenemedi'}</p>
+        <h3 className="tw-text-xl tw-font-semibold tw-mb-2 tw-text-gray-800">{blog.title || "Başlıksız Blog"}</h3>
+        <p className="tw-text-gray-600 tw-mb-4 tw-line-clamp-3">{blog.excerpt || "İçerik yüklenemedi"}</p>
         <div className="tw-flex tw-justify-between tw-items-center">
           <span className="tw-text-sm tw-text-gray-500">
-            {blog.createdAt 
-              ? new Date(blog.createdAt).toLocaleDateString(locale === 'tr' ? 'tr-TR' : 'en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
+            {blog.createdAt
+              ? new Date(blog.createdAt).toLocaleDateString(locale === "tr" ? "tr-TR" : "en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
                 })
-              : 'Tarih belirtilmemiş'}
+              : "Tarih belirtilmemiş"}
           </span>
           <Button variant="default" size="sm">
             <Link href={`/${locale}/blog/${blog.id}`}>
-              {locale === 'tr' ? 'Devamını Oku' : 'Read More'}
+              {locale === "tr" ? "Devamını Oku" : "Read More"}
             </Link>
           </Button>
         </div>
@@ -155,16 +156,16 @@ export default function BlogPage() {
     const fetchBlogs = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch('/api/blogs?where[status][equals]=published&depth=2', {
+        const response = await fetch("/api/blogs?where[status][equals]=published&depth=2", {
           headers: {
-            'Accept-Language': locale as string,
+            "Accept-Language": locale as string,
           },
         });
-        if (!response.ok) throw new Error('Blog verileri çekilemedi');
+        if (!response.ok) throw new Error("Blog verileri çekilemedi");
         const data = await response.json();
         setBlogs(data.docs || []);
       } catch (error) {
-        console.error('Error fetching blogs:', error);
+        console.error("Error fetching blogs:", error);
         setBlogs([]);
       } finally {
         setIsLoading(false);
@@ -178,7 +179,7 @@ export default function BlogPage() {
       <Header />
       <BlogBanner locale={locale as string} scrollToReferences={() => referenceSection.current?.scrollIntoView({ behavior: "smooth" })} />
       <section ref={referenceSection} className="tw-max-w-7xl tw-mx-auto tw-py-16 tw-px-4">
-        <h2 className="tw-text-4xl tw-font-bold tw-text-center tw-mb-12">{locale === 'tr' ? 'Blog Yazıları' : 'Blog Posts'}</h2>
+        <h2 className="tw-text-4xl tw-font-bold tw-text-center tw-mb-12">{locale === "tr" ? "Blog Yazıları" : "Blog Posts"}</h2>
         <BlogList blogs={blogs} isLoading={isLoading} locale={locale as string} />
       </section>
       <Footer />
