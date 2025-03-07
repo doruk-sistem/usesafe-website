@@ -5,16 +5,6 @@ import {
 import React, { Fragment, JSX } from "react";
 
 import {
-  IS_BOLD,
-  IS_CODE,
-  IS_ITALIC,
-  IS_STRIKETHROUGH,
-  IS_SUBSCRIPT,
-  IS_SUPERSCRIPT,
-  IS_UNDERLINE,
-} from "./nodeFormat";
-
-import {
   Heading,
   HorizontalRule,
   LineBreak,
@@ -24,8 +14,18 @@ import {
   Paragraph,
   Quote,
   Relationship,
-  Upload  
-} from '@/assets/rich-text/components';
+  Upload,
+} from "@/assets/rich-text/components";
+
+import {
+  IS_BOLD,
+  IS_CODE,
+  IS_ITALIC,
+  IS_STRIKETHROUGH,
+  IS_SUBSCRIPT,
+  IS_SUPERSCRIPT,
+  IS_UNDERLINE,
+} from "./nodeFormat";
 
 export type NodeTypes =
   | DefaultNodeTypes
@@ -143,31 +143,31 @@ export function serializeLexical({ nodes }: Props): JSX.Element {
             case "linebreak": {
               return <LineBreak key={index} />;
             }
-          
+
             case "paragraph": {
               return <Paragraph key={index}>{serializedChildren}</Paragraph>;
             }
-          
+
             case "relationship": {
               const relationTo = node.relationTo;
               const relationValue = node.value;
               if (!relationValue) return null;
-          
+
               return (
-                <Relationship 
+                <Relationship
                   key={index}
                   relationTo={relationTo}
                   value={relationValue}
                 />
               );
             }
-          
+
             case "upload": {
               const uploadValue = node.value as unknown as MediaType;
-          
+
               if (node.relationTo === "media" && uploadValue?.url) {
                 return (
-                  <Upload 
+                  <Upload
                     key={index}
                     value={uploadValue}
                     alt={uploadValue.alt || node.fields?.alt || "Image"}
@@ -176,11 +176,11 @@ export function serializeLexical({ nodes }: Props): JSX.Element {
               }
               return null;
             }
-          
+
             case "horizontalrule": {
               return <HorizontalRule key={index} />;
             }
-          
+
             case "heading": {
               const level = parseInt(node.tag.slice(1)) as 1 | 2 | 3 | 4 | 5 | 6;
               return (
@@ -189,22 +189,22 @@ export function serializeLexical({ nodes }: Props): JSX.Element {
                 </Heading>
               );
             }
-          
+
             case "list": {
               return (
-                <List 
-                  key={index} 
-                  type={node.tag as 'ul' | 'ol'}
+                <List
+                  key={index}
+                  type={node.tag as "ul" | "ol"}
                 >
                   {serializedChildren}
                 </List>
               );
             }
-          
+
             case "listitem": {
               const typedNode = node as any;
               return (
-                <ListItem 
+                <ListItem
                   key={index}
                   checked={typedNode.checked}
                   value={typedNode.value}
@@ -213,14 +213,14 @@ export function serializeLexical({ nodes }: Props): JSX.Element {
                 </ListItem>
               );
             }
-          
+
             case "quote": {
               return <Quote key={index}>{serializedChildren}</Quote>;
             }
-          
+
             case "link": {
               const fields = node.fields;
-            
+
               return (
                 <Link
                   key={index}
@@ -233,7 +233,7 @@ export function serializeLexical({ nodes }: Props): JSX.Element {
                 </Link>
               );
             }
-          
+
             default:
               return null;
           }

@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
 interface ListProps {
-  type?: 'ul' | 'ol';
+  type?: "ul" | "ol";
   children: React.ReactNode;
 }
 
-export const List: React.FC<ListProps> = ({ type = 'ul', children }) => {
+export const List: React.FC<ListProps> = ({ type = "ul", children }) => {
   const className = "tw-pl-8 tw-space-y-2 tw-my-4";
-  
-  if (type === 'ol') {
+
+  if (type === "ol") {
     return (
       <ol className={`tw-list-decimal ${className}`}>
         {children}

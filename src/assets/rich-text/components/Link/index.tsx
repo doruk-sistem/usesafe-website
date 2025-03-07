@@ -1,28 +1,28 @@
-import React from 'react';
-import NextLink from 'next/link';
+import NextLink from "next/link";
+import React from "react";
 
 interface LinkProps {
   newTab?: boolean;
   reference?: any;
-  type?: 'reference' | 'custom';
+  type?: "reference" | "custom";
   url?: string;
   children: React.ReactNode;
 }
 
-export const Link: React.FC<LinkProps> = ({ 
-  newTab, 
-  reference, 
-  type = 'custom',
+export const Link: React.FC<LinkProps> = ({
+  newTab,
+  reference,
+  type = "custom",
   url,
-  children 
+  children,
 }) => {
-  const href = type === 'reference' ? reference?.slug : url;
-  
+  const href = type === "reference" ? reference?.slug : url;
+
   if (!href) return null;
 
-  if (type === 'custom' && href.startsWith('http')) {
+  if (type === "custom" && href.startsWith("http")) {
     return (
-      <a 
+      <a
         href={href}
         target={newTab ? "_blank" : undefined}
         rel={newTab ? "noopener noreferrer" : undefined}

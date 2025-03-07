@@ -1,4 +1,4 @@
-import React, { ElementType } from 'react';
+import React, { ElementType } from "react";
 
 interface HeadingProps {
   level: 1 | 2 | 3 | 4 | 5 | 6;
@@ -7,7 +7,7 @@ interface HeadingProps {
 
 export const Heading: React.FC<HeadingProps> = ({ level, children }) => {
   const Tag = `h${level}` as ElementType;
-  
+
   const headingClasses = {
     1: "col-start-2 tw-text-6xl tw-font-bold tw-mb-6 tw-leading-tight",
     2: "col-start-2 tw-text-5xl tw-font-bold tw-mb-5 tw-leading-tight",
