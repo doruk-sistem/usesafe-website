@@ -385,7 +385,33 @@ export interface Page {
    */
   slug: string;
   backgroundImage?: (number | null) | Media;
-  layout: (ContentWithImageBlock | SliderBlock | MediaBlock | AccordionBlock | IconListBlock)[];
+  layout: (
+    | ContentWithImageBlock
+    | SliderBlock
+    | MediaBlock
+    | AccordionBlock
+    | IconListBlock
+    | {
+        content: {
+          root: {
+            type: string;
+            children: {
+              type: string;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        };
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'text';
+      }
+  )[];
   showInMenu?: boolean | null;
   menuOrder?: number | null;
   isActive?: boolean | null;
@@ -729,6 +755,13 @@ export interface PagesSelect<T extends boolean = true> {
         mediaBlock?: T | MediaBlockSelect<T>;
         accordionBlock?: T | AccordionBlockSelect<T>;
         iconListBlock?: T | IconListBlockSelect<T>;
+        text?:
+          | T
+          | {
+              content?: T;
+              id?: T;
+              blockName?: T;
+            };
       };
   showInMenu?: T;
   menuOrder?: T;
@@ -854,6 +887,8 @@ export interface Homepage {
   createdAt?: string | null;
 }
 /**
+ * Footer settings for all languages
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "footer".
  */

@@ -5,6 +5,7 @@ import { ContentWithImage } from "@/blocks/content-with-image-block/config";
 import { IconList } from "@/blocks/icon-list-block/config";
 import { MediaBlock } from "@/blocks/media-block/config";
 import { Slider } from "@/blocks/slider-block/config";
+import { TextBlock } from "@/blocks/text-block/config";
 
 export const Pages: CollectionConfig = {
   slug: "pages",
@@ -49,6 +50,7 @@ export const Pages: CollectionConfig = {
           MediaBlock,
           Accordion,
           IconList,
+          TextBlock,
         ],
       },
     {
