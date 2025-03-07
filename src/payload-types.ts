@@ -71,6 +71,7 @@ export interface Config {
     solutions: Solution;
     pages: Page;
     blogs: Blog;
+    references: Reference;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -82,6 +83,7 @@ export interface Config {
     solutions: SolutionsSelect<false> | SolutionsSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
     blogs: BlogsSelect<false> | BlogsSelect<true>;
+    references: ReferencesSelect<false> | ReferencesSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -515,6 +517,18 @@ export interface Blog {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "references".
+ */
+export interface Reference {
+  id: number;
+  title: string;
+  image?: (number | null) | Media;
+  status: 'draft' | 'published';
+  createdAt: string;
+  updatedAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -539,6 +553,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'blogs';
         value: number | Blog;
+      } | null)
+    | ({
+        relationTo: 'references';
+        value: number | Reference;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -810,6 +828,17 @@ export interface BlogsSelect<T extends boolean = true> {
       };
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "references_select".
+ */
+export interface ReferencesSelect<T extends boolean = true> {
+  title?: T;
+  image?: T;
+  status?: T;
+  createdAt?: T;
+  updatedAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

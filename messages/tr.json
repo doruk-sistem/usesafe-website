@@ -14,6 +14,10 @@
       "twitter_description": "Hakkımızda sayfasına git"
     }
   },
+   
+   
+  
+
   "HomePage": {
     "revolutionize_title": "GÜVENLİ Ürünler Dünyasını Dönüştürmeye Buradayız",
     "revolutionize_description": "Usesafe, güvenilir bir danışmanlık firması olan Doruksistem tarafından desteklenmektedir. Proje, çevrimiçi alışveriş platformlarındaki ürünlerin güvenli ve yönetmeliklere uygun olmasını sağlar. Usesafe, ürün kalitesini ve güvenliğini titizlikle doğrulayarak öne çıkar. Temel değerlerimiz güven, şeffaflık ve tüketici korumasıdır. Bu site, Usesafe sertifikasyon süreci ve hem tüketiciler hem de satıcılar için faydaları hakkında detaylı bilgiler sunar.",
@@ -98,7 +102,8 @@
     "about_dpp": "DPP Hakkında",
     "resources": "Kaynaklar",
     "digital_twins": "Dijital İkizler",
-    "blog": "Blog"
+    "blog": "Blog",
+    "references": "Referanslar"
   },
   "DigitalTwins": {
     "page_title": "Dijital İkizler",
@@ -455,7 +460,6 @@
   }
 
 
-  }
-
+  } 
 
 

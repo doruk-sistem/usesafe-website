@@ -6,6 +6,7 @@ import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { buildConfig } from "payload";
 
 import collections from "./collections";
+import { References } from "./collections/references/page";
 import { Users } from "./collections/Users";
 import globals from "./globals";
 import { plugins } from "./plugins";
@@ -22,19 +23,13 @@ export default buildConfig({
   },
   localization: {
     locales: [
-      {
-        code: "en",
-        label: "English",
-      },
-      {
-        code: "tr",
-        label: "Türkçe",
-      },
+      { code: "en", label: "English" },
+      { code: "tr", label: "Türkçe" },
     ],
     defaultLocale: "en",
     fallback: true,
   },
-  collections,
+  collections: [...collections, References],
   globals: [...globals],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",

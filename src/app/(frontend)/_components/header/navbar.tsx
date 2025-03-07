@@ -21,6 +21,7 @@ interface DynamicPage {
   slug: string;
   menuOrder: number;
 }
+
 interface NavbarProps {
   solutions?: Solution[];
   dynamicPages?: DynamicPage[];
@@ -54,16 +55,25 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
       label: page.title,
       href: `/${locale}/${page.slug}`,
     })),
+
     {
       key: "blog",
       label: t("common.blog"),
       href: "/blog",
     },
+
+    {
+      key: "references",
+      label: t("common.references"),
+      href: "/references", // ✅ Referanslar linki eklendi
+    },
+
     {
       key: "about",
       label: t("common.about_dpp"),
       href: "/resources/about-dpp",
     },
+
     {
       key: "contact",
       label: t("common.contact_us"),

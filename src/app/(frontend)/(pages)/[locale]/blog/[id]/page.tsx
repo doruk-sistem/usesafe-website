@@ -9,6 +9,27 @@ import { Button } from "@/app/(frontend)/_components/button";
 import Footer from "@/app/(frontend)/_components/footer";
 import RichText from "@/components/RichText";
 
+// interface BlogPost {
+//   id: string;
+//   title: string;
+//   content: {
+//     root: {
+//       children: Array<{
+//         text?: string;
+//         type?: string;
+//         children?: any[];
+//       }>;
+//     };
+//   };
+//   featuredImage: {
+//     url: string;
+//   };
+//   author?: {
+//     name: string;
+//   };
+//   createdAt: string;
+//   excerpt?: string;
+// }
 interface BlogPost {
   id: string;
   title: string;
@@ -17,7 +38,7 @@ interface BlogPost {
       children: Array<{
         text?: string;
         type?: string;
-        children?: any[];
+        children?: unknown[]; // `any[]` yerine `unknown[]`
       }>;
     };
   };

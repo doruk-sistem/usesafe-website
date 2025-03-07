@@ -1,16 +1,12 @@
-import React from "react";
-
-interface PageTitleProps {
-  title?: string;
-  topTitle?: string;
-  backgroundImage?: string;
-  downSectionId?: string;
-}
+import { url } from "node:inspector";
 
 export function PageTitle({
   title,
   backgroundImage,
-}: PageTitleProps) {
+}: {
+  title?: string;
+  backgroundImage?: string;
+}) {
   return (
     <div className="tw--mt-[80px]" style={{ marginBottom: "-1px" }}>
       <div className="tw-relative">
@@ -28,7 +24,7 @@ export function PageTitle({
                 {!!title && (
                   <h2
                     className="m-auto text-white alt-font text-shadow-double-large fw-700 tw-w-full lg:tw-w-[800px] tw-text-4xl md:tw-text-5xl"
-                    data-fancy-text={`{ "opacity": [0, 1], "translateY": [50, 0], "filter": ["blur(20px)", "blur(0px)"], "string": ["${title}"], "duration": 400, "delay": 0, "speed": 50, "easing": "easeOutQuad" }`}
+                    data-fancy-text={{ "opacity": [0, 1], "translateY": [50, 0], "filter": ["blur(20px)", "blur(0px)"], "string": ["${title}"], "duration": 400, "delay": 0, "speed": 50, "easing": "easeOutQuad" }}
                   />
                 )}
               </div>
