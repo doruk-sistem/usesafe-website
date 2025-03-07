@@ -1,156 +1,108 @@
 import { GlobalConfig } from "payload";
 
-export const Footer: GlobalConfig = {
+const Footer: GlobalConfig = {
   slug: "footer",
   access: {
     read: () => true,
+  },
+  admin: {
+    group: "Globals",
+    description: "Footer settings for all languages",
   },
   fields: [
     {
       name: "content",
       type: "group",
-      localized: true,
       fields: [
-        // Copyright
+        // Copyright Section
         {
           name: "copyright",
           type: "text",
           required: true,
           localized: true,
-          label: {
-            en: "Copyright Text",
-            tr: "Telif Hakkı Metni",
-          },
         },
-       // Company Section
-{
-  name: "company",
-  type: "group",
-  localized: true,
-  fields: [
-    {
-      name: "title",
-      type: "text",
-      required: true,
-      localized: true,
-      label: {
-        en: "Company Section Title",
-        tr: "Şirket Bölümü Başlığı",
-      },
-    },
-    {
-      name: "links",
-      type: "array",
-      localized: true,
-      fields: [
+        // Company Section
         {
-          name: "text",
-          type: "text",
-          required: true,
-          localized: true,
-          label: {
-            en: "Link Text",
-            tr: "Link Metni",
-          },
-        },
-        {
-          name: "url",
-          type: "text",
-          required: true,
-          label: {
-            en: "Link URL",
-            tr: "Link URL",
-          },
-        },
-        {
-          name: "isActive",
-          type: "checkbox",
-          defaultValue: true,
-          label: {
-            en: "Is Active",
-            tr: "Aktif mi",
-          },
-        },
-        {
-          name: "order",
-          type: "number",
-          defaultValue: 0,
-          label: {
-            en: "Display Order",
-            tr: "Görüntüleme Sırası",
-          },
-        },
-      ],
-    },
-  ],
-},
-        // Legal Section
-        {
-          name: "legal",
+          name: "company",
           type: "group",
-          localized: true,
           fields: [
             {
               name: "title",
               type: "text",
               required: true,
               localized: true,
-              label: {
-                en: "Legal Section Title",
-                tr: "Yasal Bölüm Başlığı",
-              },
             },
             {
-              name: "terms",
-              type: "group",
-              localized: true,
+              name: "links",
+              type: "array",
               fields: [
                 {
                   name: "text",
                   type: "text",
                   required: true,
                   localized: true,
-                  label: {
-                    en: "Terms Text",
-                    tr: "Kullanım Koşulları Metni",
-                  },
+                },
+                {
+                  name: "url",
+                  type: "text",
+                  required: true,
+                },
+                {
+                  name: "isActive",
+                  type: "checkbox",
+                  defaultValue: true,
+                },
+                {
+                  name: "order",
+                  type: "number",
+                  defaultValue: 0,
+                },
+              ],
+            },
+          ],
+        },
+        // Legal Section
+        {
+          name: "legal",
+          type: "group",
+          fields: [
+            {
+              name: "title",
+              type: "text",
+              required: true,
+              localized: true,
+            },
+            {
+              name: "terms",
+              type: "group",
+              fields: [
+                {
+                  name: "text",
+                  type: "text",
+                  required: true,
+                  localized: true,
                 },
                 {
                   name: "link",
                   type: "text",
                   required: true,
-                  defaultValue: "/terms-conditions",
-                  label: {
-                    en: "Terms Link",
-                    tr: "Kullanım Koşulları Linki",
-                  },
                 },
               ],
             },
             {
               name: "privacy",
               type: "group",
-              localized: true,
               fields: [
                 {
                   name: "text",
                   type: "text",
                   required: true,
                   localized: true,
-                  label: {
-                    en: "Privacy Text",
-                    tr: "Gizlilik Metni",
-                  },
                 },
                 {
                   name: "link",
                   type: "text",
                   required: true,
-                  defaultValue: "/privacy-policy",
-                  label: {
-                    en: "Privacy Link",
-                    tr: "Gizlilik Linki",
-                  },
                 },
               ],
             },
@@ -160,22 +112,16 @@ export const Footer: GlobalConfig = {
         {
           name: "social",
           type: "group",
-          localized: true,
           fields: [
             {
               name: "title",
               type: "text",
               required: true,
               localized: true,
-              label: {
-                en: "Social Section Title",
-                tr: "Sosyal Medya Başlığı",
-              },
             },
             {
               name: "platforms",
               type: "array",
-              localized: true,
               fields: [
                 {
                   name: "name",
@@ -185,7 +131,7 @@ export const Footer: GlobalConfig = {
                     { label: "LinkedIn", value: "linkedin" },
                     { label: "Facebook", value: "facebook" },
                     { label: "Instagram", value: "instagram" },
-                    { label: "X (Twitter)", value: "twitter" },
+                    { label: "Twitter", value: "twitter" },
                   ],
                 },
                 {
@@ -211,17 +157,12 @@ export const Footer: GlobalConfig = {
         {
           name: "newsletter",
           type: "group",
-          localized: true,
           fields: [
             {
               name: "title",
               type: "text",
               required: true,
               localized: true,
-              label: {
-                en: "Newsletter Section Title",
-                tr: "İletişim Başlığı",
-              },
             },
             {
               name: "company",
@@ -231,7 +172,7 @@ export const Footer: GlobalConfig = {
             },
             {
               name: "email",
-              type: "email",
+              type: "text",
               required: true,
             },
             {
@@ -242,7 +183,6 @@ export const Footer: GlobalConfig = {
             {
               name: "addresses",
               type: "array",
-              localized: true,
               fields: [
                 {
                   name: "country",
