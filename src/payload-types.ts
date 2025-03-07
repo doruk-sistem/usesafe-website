@@ -887,6 +887,8 @@ export interface Homepage {
   createdAt?: string | null;
 }
 /**
+ * Footer settings for all languages
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "footer".
  */
