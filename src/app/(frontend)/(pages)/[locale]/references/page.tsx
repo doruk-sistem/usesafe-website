@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-
+import { Link } from "@/i18n/routing"; 
 import { Button } from "@/app/(frontend)/_components/button";
 import { PageTitle } from "@/app/(frontend)/_components/page-title"; // ✅ Hero bileşeni
 
@@ -128,10 +128,15 @@ export default function ReferencesPage() {
                 ></textarea>
               </div>
 
-              {/* Buton */}
-              <Button variant="default" size="lg" className="tw-w-full">
-                {locale === "tr" ? "Gönder" : "Send"}
-              </Button>
+              <Link href="/contact">
+                <Button 
+                  variant="default" 
+                  size="lg" 
+                  className="tw-w-full"
+                >
+                  {locale === "tr" ? "İletişime Geç" : "Contact Us"}
+                </Button>
+              </Link>
             </form>
           </div>
         </div>

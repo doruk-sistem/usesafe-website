@@ -38,7 +38,7 @@ interface BlogPost {
       children: Array<{
         text?: string;
         type?: string;
-        children?: unknown[]; // `any[]` yerine `unknown[]`
+        children?: object[]; // ✅ any yerine object kullanıldı
       }>;
     };
   };

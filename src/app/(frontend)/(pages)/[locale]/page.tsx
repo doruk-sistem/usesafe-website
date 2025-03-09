@@ -1,6 +1,6 @@
 import { getLocale } from "next-intl/server";
 
-import Footer from "@/app/(frontend)/_components/footer";
+import Footer from "@/app/(frontend)/_components/footer"; // ✅ Kullanmaya hazır
 import generateMeta from "@/frontend/_utils/generate-meta";
 import { initPayload } from "@/utils/getPayload";
 
@@ -15,12 +15,20 @@ export default async function HomePage() {
       slug: "homepage" as any,
       locale: locale as any,
     });
-    return <PageClient layout={homepage.layout}
-    footer={Footer}
-     />;
+    return (
+      <>
+        <PageClient layout={homepage.layout} />
+        <Footer /> 
+      </>
+    );
   } catch (error) {
     console.error("Error loading homepage:", error);
-    return <PageClient layout={[]} />;
+    return (
+      <>
+        <PageClient layout={null as any} />
+        <Footer />
+      </>
+    );
   }
 }
 
@@ -33,3 +41,4 @@ export async function generateMetadata({
 
   return await generateMeta(null, { path: "/", locale: params.locale });
 }
+

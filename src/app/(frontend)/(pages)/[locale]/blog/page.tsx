@@ -9,20 +9,6 @@ import React, { useRef, useEffect, useState } from "react";
 import { Button } from "@/app/(frontend)/_components/button";
 import Footer from "@/app/(frontend)/_components/footer";
 
-// interface PayloadBlogDoc {
-//   id: string;
-//   title: string;
-//   featuredImage: {
-//     url: string;
-//   };
-//   createdAt: string;
-//   content: any;
-//   excerpt?: string;
-//   author?: {
-//     name: string;
-//   };
-//   status: "draft" | "published";
-// }
 interface PayloadBlogDoc {
   id: string;
   title: string;
@@ -30,7 +16,7 @@ interface PayloadBlogDoc {
     url: string;
   };
   createdAt: string;
-  content: string | { blocks: unknown[] };
+  content: any;
   excerpt?: string;
   author?: {
     name: string;
