@@ -3,9 +3,10 @@
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Link } from "@/i18n/routing"; 
+
 import { Button } from "@/app/(frontend)/_components/button";
 import { PageTitle } from "@/app/(frontend)/_components/page-title"; // ✅ Hero bileşeni
+import { Link } from "@/i18n/routing";
 
 interface Reference {
   id: string;
@@ -129,9 +130,9 @@ export default function ReferencesPage() {
               </div>
 
               <Link href="/contact">
-                <Button 
-                  variant="default" 
-                  size="lg" 
+                <Button
+                  variant="default"
+                  size="lg"
                   className="tw-w-full"
                 >
                   {locale === "tr" ? "İletişime Geç" : "Contact Us"}

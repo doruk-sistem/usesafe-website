@@ -18,7 +18,7 @@ export default async function HomePage() {
     return (
       <>
         <PageClient layout={homepage.layout} />
-        <Footer /> 
+        <Footer />
       </>
     );
   } catch (error) {
@@ -41,4 +41,3 @@ export async function generateMetadata({
 
   return await generateMeta(null, { path: "/", locale: params.locale });
 }
-
