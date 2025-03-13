@@ -4,7 +4,18 @@ import {
 } from "@payloadcms/richtext-lexical";
 import React, { Fragment, JSX } from "react";
 
-import { CMSLink } from "@/components/Link";
+import {
+  Heading,
+  HorizontalRule,
+  LineBreak,
+  Link,
+  List,
+  ListItem,
+  Paragraph,
+  Quote,
+  Relationship,
+  Upload,
+} from "@/assets/rich-text/components";
 
 import {
   IS_BOLD,
@@ -130,202 +141,96 @@ export function serializeLexical({ nodes }: Props): JSX.Element {
         } else {
           switch (node.type) {
             case "linebreak": {
-              return <br className="col-start-2" key={index} />;
+              return <LineBreak key={index} />;
             }
+
             case "paragraph": {
-              return (
-                <p className="col-start-2" key={index}>
-                  {serializedChildren}
-                </p>
-              );
+              return <Paragraph key={index}>{serializedChildren}</Paragraph>;
             }
+
             case "relationship": {
               const relationTo = node.relationTo;
               const relationValue = node.value;
               if (!relationValue) return null;
-              if (relationTo === "solutions") {
-                const solution = relationValue as any;
-                return (
-                  <div
-                    className="tw-relationship-container tw-my-6 tw-rounded-lg tw-overflow-hidden tw-border tw-border-gray-200"
-                    key={index}
-                  >
-                    {solution.backgroundImage?.url && (
-                      <div className="tw-aspect-video tw-relative tw-overflow-hidden">
-                        <img
-                          src={solution.backgroundImage.url}
-                          alt={solution.backgroundImage.alt || solution.title}
-                          className="tw-w-full tw-h-full tw-object-cover"
-                        />
-                      </div>
-                    )}
 
-                    <div className="tw-p-4">
-                      <h3 className="tw-text-xl tw-font-bold tw-mb-2">
-                        {solution.title}
-                      </h3>
-                      <a
-                        href={`/solutions/${solution.slug}`}
-                        className="tw-inline-block tw-px-4 tw-py-2 tw-bg-black tw-text-white tw-rounded tw-font-medium tw-text-sm"
-                      >
-                        Sayfayı İncele
-                      </a>
-                    </div>
-                  </div>
-                );
-              }
               return (
-                <div
-                  className="tw-relationship-container tw-my-4 tw-p-4 tw-bg-gray-50 tw-rounded-lg"
+                <Relationship
                   key={index}
-                >
-                  <h4 className="tw-font-semibold">
-                    {typeof relationValue === "object" &&
-                    "title" in relationValue
-                      ? (relationValue as any).title
-                      : "İlişkili İçerik"}
-                  </h4>
-                  <details className="tw-mt-2 tw-text-xs">
-                    <summary className="tw-cursor-pointer tw-text-blue-500">
-                      Detaylı Bilgi
-                    </summary>
-                    <pre className="tw-mt-2 tw-bg-gray-100 tw-p-2 tw-rounded tw-overflow-auto tw-max-h-40">
-                      {JSON.stringify(relationValue, null, 2)}
-                    </pre>
-                  </details>
-                </div>
+                  relationTo={relationTo}
+                  value={relationValue}
+                />
               );
             }
+
             case "upload": {
               const uploadValue = node.value as unknown as MediaType;
 
               if (node.relationTo === "media" && uploadValue?.url) {
                 return (
-                  <div className="col-start-2 tw-my-8" key={index}>
-                    <figure className="tw-relative tw-w-full">
-                      <img
-                        src={uploadValue.url}
-                        alt={uploadValue.alt || node.fields.alt || "Image"}
-                        className="tw-w-full tw-h-auto tw-rounded-lg"
-                        loading="lazy"
-                      />
-                    </figure>
-                  </div>
+                  <Upload
+                    key={index}
+                    value={uploadValue}
+                    alt={uploadValue.alt || node.fields?.alt || "Image"}
+                  />
                 );
               }
               return null;
             }
+
             case "horizontalrule": {
-              return (
-                <hr
-                  className="col-start-2 tw-my-8 tw-border-t tw-border-gray-200"
-                  key={index}
-                />
-              );
+              return <HorizontalRule key={index} />;
             }
+
             case "heading": {
-              const Tag = node?.tag;
-              const headingClasses = {
-                h1: "col-start-2 tw-text-6xl tw-font-bold tw-mb-6 tw-leading-tight",
-                h2: "col-start-2 tw-text-5xl tw-font-bold tw-mb-5 tw-leading-tight",
-                h3: "col-start-2 tw-text-4xl tw-font-bold tw-mb-4 tw-leading-tight",
-                h4: "col-start-2 tw-text-3xl tw-font-semibold tw-mb-4 tw-leading-tight",
-                h5: "col-start-2 tw-text-2xl tw-font-semibold tw-mb-3 tw-leading-tight",
-                h6: "col-start-2 tw-text-xl tw-font-semibold tw-mb-3 tw-leading-tight",
-              };
-
+              const level = parseInt(node.tag.slice(1)) as 1 | 2 | 3 | 4 | 5 | 6;
               return (
-                <Tag
-                  className={
-                    headingClasses[node.tag as keyof typeof headingClasses]
-                  }
-                  key={index}
-                >
+                <Heading key={index} level={level}>
                   {serializedChildren}
-                </Tag>
+                </Heading>
               );
             }
-            case "list": {
-              const listType = node?.tag || "ul";
-              if (listType === "ol") {
-                return (
-                  <ol
-                    className="tw-list-decimal tw-pl-8 tw-space-y-2 tw-my-4"
-                    key={index}
-                  >
-                    {serializedChildren}
-                  </ol>
-                );
-              }
 
+            case "list": {
               return (
-                <ul
-                  className="tw-list-disc tw-pl-8 tw-space-y-2 tw-my-4"
+                <List
                   key={index}
+                  type={node.tag as "ul" | "ol"}
                 >
                   {serializedChildren}
-                </ul>
+                </List>
               );
             }
 
             case "listitem": {
               const typedNode = node as any;
-              if (typedNode.checked !== undefined) {
-                return (
-                  <li
-                    className="tw-pl-2 tw-flex tw-items-start tw-gap-3"
-                    key={index}
-                    // role="listitem"
-                    //tabIndex={-1}
-                    // value={node?.value}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="tw-h-5 tw-w-5 tw-text-primary tw-mt-0.5 tw-flex-shrink-0"
-                    >
-                      <path d="M20 6 9 17l-5-5" />
-                    </svg>
-                    <span>{serializedChildren}</span>
-                  </li>
-                );
-              }
               return (
-                <li className="tw-pl-2" key={index} value={typedNode.value}>
-                  {serializedChildren}
-                </li>
-              );
-            }
-            case "quote": {
-              return (
-                <blockquote
-                  className="col-start-2 tw-pl-4 tw-border-l-4 tw-border-gray-200 tw-italic tw-my-6"
+                <ListItem
                   key={index}
+                  checked={typedNode.checked}
+                  value={typedNode.value}
                 >
                   {serializedChildren}
-                </blockquote>
+                </ListItem>
               );
             }
+
+            case "quote": {
+              return <Quote key={index}>{serializedChildren}</Quote>;
+            }
+
             case "link": {
               const fields = node.fields;
 
               return (
-                <CMSLink
+                <Link
                   key={index}
                   newTab={Boolean(fields?.newTab)}
-                  reference={fields.doc as any}
+                  reference={fields.doc}
                   type={fields.linkType === "internal" ? "reference" : "custom"}
                   url={fields.url}
                 >
                   {serializedChildren}
-                </CMSLink>
+                </Link>
               );
             }
 
