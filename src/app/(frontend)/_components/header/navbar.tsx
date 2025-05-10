@@ -92,7 +92,7 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
 
           {/* Action Buttons and Language Selector */}
           <div className="tw-hidden xl:tw-flex tw-items-center tw-space-x-1">
-            <SwitchLanguage />
+            {/* <SwitchLanguage /> */}
             <a href="/demo">
               <Button variant="default">{t("common.try_for_free")}</Button>
             </a>
@@ -100,7 +100,7 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
 
           {/* Mobile Menu Button */}
           <div className="tw-flex tw-items-center tw-gap-4 xl:tw-hidden">
-            <SwitchLanguage size="lg" />
+            {/* <SwitchLanguage size="lg" /> */}
             <Button size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? (
                 <HiX className="tw-h-6 tw-w-6" />
