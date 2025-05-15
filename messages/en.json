@@ -98,7 +98,8 @@
     "about_dpp": "About DPP",
     "resources": "Resources",
     "digital_twins": "Digital Twins",
-    "blog": "Blog"
+    "blog": "Blog",
+    "platform": "Platform"
   },
   "DigitalTwins": {
     "page_title": "Digital Twins",
@@ -452,10 +453,54 @@
         "description": "Secure certification system"
       }
     }
+  },
+  "platform": { 
+    "frameworks": "Frameworks",
+    "products": "Products",
+    "integration": "Integration",
+    "dpp-in-espr": {
+      "title": "DPP in ESPR",
+      "description": "Digital product passports for ESPR compliance"
+    },
+    "iscc-plus": {
+      "title": "ISCC PLUS",
+      "description": "Streamline the ISCC PLUS certification process"
+    },
+    "iscc-eu-redcert-eu": {
+      "title": "ISCC EU/REDcert-EU",
+      "description": "ISCC EU/RED II compliance with a single platform"
+    },
+    "battery-passport": {
+      "title": "Battery passport",
+      "description": "Meet all the EU Battery Regulation requirements"
+    },
+    "custom-frameworks": {
+      "title": "Custom frameworks",
+      "description": "Tailor sustainability compliance to your needs"
+    },
+    "internal-traceability": {
+      "title": "Internal traceability",
+      "description": "Streamline material bookkeeping"
+    },
+    "supplier-data-collection": {
+      "title": "Supplier data collection",
+      "description": "Collect accurate, verifiable data from complex supply chains"
+    },
+    "sustainability-data-disclosure": {
+      "title": "Sustainability data disclosure",
+      "description": "Securely disclose verifiable sustainability data"
+    },
+    "api-integrations": {
+      "title": "API integrations",
+      "description": "Integrate systems for scalability"
+    },
+    "udb-integration": {
+      "title": "UDB integration",
+      "description": "UDB reporting with automation"
+    },
+    "lca-integrations": {
+      "title": "LCA integrations",
+      "description": "Integration with Minviro's LCA software"
+    }
   }
 }
-    
-  
-
-
-    
