@@ -18,7 +18,7 @@ import { HiMenu, HiX } from "react-icons/hi";
 
 import { Button } from "../button";
 import Logo from "../logo";
-import SwitchLanguage from "../switch-language";
+// import SwitchLanguage from "../switch-language";
 
 import NavLink from "./navlink";
 
