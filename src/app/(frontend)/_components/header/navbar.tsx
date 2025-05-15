@@ -10,7 +10,6 @@ import {
 } from "react-icons/bs";
 import {
   FaBatteryFull,
-  FaProjectDiagram,
   FaLink,
 } from "react-icons/fa";
 import { FiSettings, FiDatabase } from "react-icons/fi";
@@ -82,7 +81,6 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
           label: t("platform.products"), // Column title
           isTitle: true,
           subItems: [
-            { key: "internal-traceability", label: t("platform.internal-traceability.title"), description: t("platform.internal-traceability.description"), href: "/platform/products/internal-traceability", icon: FaProjectDiagram },
             { key: "supplier-data-collection", label: t("platform.supplier-data-collection.title"), description: t("platform.supplier-data-collection.description"), href: "/platform/products/supplier-data-collection", icon: BsDatabaseFillCheck },
             { key: "sustainability-data-disclosure", label: t("platform.sustainability-data-disclosure.title"), description: t("platform.sustainability-data-disclosure.description"), href: "/platform/products/sustainability-data-disclosure", icon: BsShieldCheck },
           ],
