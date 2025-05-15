@@ -99,20 +99,19 @@ export default function DppInEsprPage() {
               </div>
             </div>
             <div className="tw-flex-1 tw-mt-12 md:tw-mt-0">
-              <div className="tw-relative tw-h-[350px] md:tw-h-[450px] tw-w-full tw-rounded-2xl tw-overflow-hidden tw-shadow-2xl tw-transform md:tw-rotate-2 tw-transition-all hover:tw-rotate-0 tw-duration-500">
+              <div className="tw-relative tw-h-[350px] md:tw-h-[450px] tw-w-full tw-rounded-2xl tw-overflow-hidden tw-shadow-2xl">
                 {/* Frosted glass overlay */}
                 <div
-                  className="tw-absolute tw-inset-0 tw-bg-white/30 tw-backdrop-blur-[6px] tw-z-10 tw-pointer-events-none"
+                  className="tw-absolute tw-inset-0 tw-bg-white/30  tw-z-10 tw-pointer-events-none"
                   style={{ borderRadius: "1rem" }}
                 ></div>
                 <Image
-                  src="/crafto/images/dpp-espr-hero.jpg"
+                  src="/images/digital-product-passport-usesafe.png"
                   alt="Digital Product Passport"
                   fill
                   className="tw-object-cover"
                   priority
                 />
-                <div className="tw-absolute tw-inset-0 tw-bg-gradient-to-t tw-from-black/30 tw-to-transparent"></div>
               </div>
             </div>
           </div>
