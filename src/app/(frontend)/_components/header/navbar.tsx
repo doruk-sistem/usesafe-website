@@ -2,7 +2,18 @@
 
 import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
-import React, { useState } from "react";
+import React, { useState, ElementType } from "react";
+import {
+  BsFileEarmarkText,
+  BsDatabaseFillCheck,
+  BsShieldCheck,
+} from "react-icons/bs";
+import {
+  FaBatteryFull,
+  FaLink,
+} from "react-icons/fa";
+import { FiSettings, FiDatabase } from "react-icons/fi";
+import { GrCycle } from "react-icons/gr";
 import { HiMenu, HiX } from "react-icons/hi";
 
 import { Button } from "../button";
@@ -21,9 +32,26 @@ interface DynamicPage {
   slug: string;
   menuOrder: number;
 }
+
 interface NavbarProps {
   solutions?: Solution[];
   dynamicPages?: DynamicPage[];
+}
+
+// Define the NavItem type
+interface NavItem {
+  key: string;
+  label: string;
+  href?: string; // Optional
+  subItems?: Array<{ // Structure should align with NavLink's SubItem and allow nesting
+    key: string;
+    label: string; // This will be the item title
+    href?: string;
+    description?: string; // This will be the item description
+    isTitle?: boolean;
+    icon?: ElementType; // Changed from any to ElementType
+    subItems?: NavItem["subItems"]; // Recursive for further nesting if needed
+  }>; // Optional
 }
 
 export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProps) {
@@ -33,11 +61,41 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
   const params = useParams();
   const locale = params.locale as string;
 
-  const navItems = [
+  const navItems: NavItem[] = [
     {
-      key: "home",
-      label: t("common.homepage"),
-      href: "/",
+      key: "platform",
+      label: t("common.platform"),
+      subItems: [
+        {
+          key: "frameworks-column",
+          label: t("platform.frameworks"), // Column title
+          isTitle: true,
+          subItems: [
+            { key: "dpp-in-espr", label: t("platform.dpp-in-espr.title"), description: t("platform.dpp-in-espr.description"), href: "/platform/frameworks/dpp-in-espr", icon: BsFileEarmarkText },
+            { key: "battery-passport", label: t("platform.battery-passport.title"), description: t("platform.battery-passport.description"), href: "/platform/frameworks/battery-passport", icon: FaBatteryFull },
+            { key: "custom-frameworks", label: t("platform.custom-frameworks.title"), description: t("platform.custom-frameworks.description"), href: "/platform/frameworks/custom-frameworks", icon: FiSettings },
+          ],
+        },
+        {
+          key: "products-column",
+          label: t("platform.products"), // Column title
+          isTitle: true,
+          subItems: [
+            { key: "supplier-data-collection", label: t("platform.supplier-data-collection.title"), description: t("platform.supplier-data-collection.description"), href: "/platform/products/supplier-data-collection", icon: BsDatabaseFillCheck },
+            { key: "sustainability-data-disclosure", label: t("platform.sustainability-data-disclosure.title"), description: t("platform.sustainability-data-disclosure.description"), href: "/platform/products/sustainability-data-disclosure", icon: BsShieldCheck },
+          ],
+        },
+        {
+          key: "integration-column",
+          label: t("platform.integration"), // Column title
+          isTitle: true,
+          subItems: [
+            { key: "api-integrations", label: t("platform.api-integrations.title"), description: t("platform.api-integrations.description"), href: "/platform/integration/api-integrations", icon: FaLink },
+            { key: "udb-integration", label: t("platform.udb-integration.title"), description: t("platform.udb-integration.description"), href: "/platform/integration/udb-integration", icon: FiDatabase },
+            { key: "lca-integrations", label: t("platform.lca-integrations.title"), description: t("platform.lca-integrations.description"), href: "/platform/integration/lca-integrations", icon: GrCycle },
+          ],
+        },
+      ],
     },
     {
       key: "solutions",
@@ -49,7 +107,7 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
       })),
     },
 
-    ...sortedDynamicPages.map((page, index) => ({
+    ...sortedDynamicPages.map((page, index): NavItem => ({
       key: `dynamic-${page.slug || index}`,
       label: page.title,
       href: `/${locale}/${page.slug}`,
@@ -83,9 +141,10 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
             {navItems.map((item) => (
               <NavLink
                 key={item.key}
+                itemKey={item.key}
                 label={item.label}
-                href={item.href}
-                subItems={item.subItems}
+                href={item.href?.toString()}
+                subItems={item.subItems ?? []}
               />
             ))}
           </div>
@@ -118,9 +177,10 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
               {navItems.map((item) => (
                 <NavLink
                   key={item.key}
+                  itemKey={item.key}
                   label={item.label}
-                  href={item.href}
-                  subItems={item.subItems}
+                  href={item.href?.toString()}
+                  subItems={item.subItems ?? []}
                   isMobile
                 />
               ))}

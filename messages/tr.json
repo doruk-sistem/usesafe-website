@@ -98,7 +98,8 @@
     "about_dpp": "DPP Hakkında",
     "resources": "Kaynaklar",
     "digital_twins": "Dijital İkizler",
-    "blog": "Blog"
+    "blog": "Blog",
+    "platform": "Platform (TR)"
   },
   "DigitalTwins": {
     "page_title": "Dijital İkizler",
@@ -421,20 +422,20 @@
         "email": "E-posta",
         "company": "Şirket",
         "phone": "Telefon",
-        "message": "Mesaj"
+        "message": "Mesajınız"
       }
     },
     "button": {
       "sending": "Gönderiliyor...",
-      "submit": "Demo İste"
+      "submit": "Demo Talep Et"
     },
     "toast": {
       "error": {
         "selectProduct": "Lütfen bir ürün seçin",
-        "generic": "Demo isteği gönderilirken bir hata oluştu"
+        "generic": "Demo talebi gönderilirken bir hata oluştu"
       },
       "success": {
-        "title": "Demo İsteği Gönderildi",
+        "title": "Demo Talebi Gönderildi",
         "message": "En kısa sürede sizinle iletişime geçeceğiz"
       }
     },
@@ -452,10 +453,54 @@
         "description": "Güvenli sertifikasyon sistemi"
       }
     }
+  },
+  "platform": {
+    "frameworks": "Frameworks (TR)",
+    "products": "Products (TR)",
+    "integration": "Integration (TR)",
+    "dpp-in-espr": {
+      "title": "DPP in ESPR (TR)",
+      "description": "Digital product passports for ESPR compliance (TR)"
+    },
+    "iscc-plus": {
+      "title": "ISCC PLUS (TR)",
+      "description": "Streamline the ISCC PLUS certification process (TR)"
+    },
+    "iscc-eu-redcert-eu": {
+      "title": "ISCC EU/REDcert-EU (TR)",
+      "description": "ISCC EU/RED II compliance with a single platform (TR)"
+    },
+    "battery-passport": {
+      "title": "Battery passport (TR)",
+      "description": "Meet all the EU Battery Regulation requirements (TR)"
+    },
+    "custom-frameworks": {
+      "title": "Custom frameworks (TR)",
+      "description": "Tailor sustainability compliance to your needs (TR)"
+    },
+    "internal-traceability": {
+      "title": "Internal traceability (TR)",
+      "description": "Streamline material bookkeeping (TR)"
+    },
+    "supplier-data-collection": {
+      "title": "Supplier data collection (TR)",
+      "description": "Collect accurate, verifiable data from complex supply chains (TR)"
+    },
+    "sustainability-data-disclosure": {
+      "title": "Sustainability data disclosure (TR)",
+      "description": "Securely disclose verifiable sustainability data (TR)"
+    },
+    "api-integrations": {
+      "title": "API integrations (TR)",
+      "description": "Integrate systems for scalability (TR)"
+    },
+    "udb-integration": {
+      "title": "UDB integration (TR)",
+      "description": "UDB reporting with automation (TR)"
+    },
+    "lca-integrations": {
+      "title": "LCA integrations (TR)",
+      "description": "Integration with Minviro's LCA software (TR)"
+    }
   }
-
-
-  }
-
-
-
+}
