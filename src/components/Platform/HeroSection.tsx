@@ -8,7 +8,7 @@ import CtaButton from "./CtaButton";
 interface HeroSectionProps {
   badge?: string;
   title: string;
-  description: string;
+  description: React.ReactNode;
   imageSrc: string;
   imageAlt: string;
   primaryCta?: {

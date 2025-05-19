@@ -4,7 +4,7 @@ import React from "react";
 
 interface SectionHeaderProps {
   title: string;
-  description?: string;
+  description?: React.ReactNode;
   highlightedText?: string;
   className?: string;
 }

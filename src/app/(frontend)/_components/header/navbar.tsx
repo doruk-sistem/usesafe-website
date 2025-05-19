@@ -9,8 +9,8 @@ import {
   BsShieldCheck,
 } from "react-icons/bs";
 import {
-  FaBatteryFull,
   FaLink,
+  FaTshirt,
 } from "react-icons/fa";
 import { FiSettings, FiDatabase } from "react-icons/fi";
 import { GrCycle } from "react-icons/gr";
@@ -38,20 +38,19 @@ interface NavbarProps {
   dynamicPages?: DynamicPage[];
 }
 
-// Define the NavItem type
 interface NavItem {
   key: string;
   label: string;
-  href?: string; // Optional
+  href?: string;
   subItems?: Array<{ // Structure should align with NavLink's SubItem and allow nesting
     key: string;
-    label: string; // This will be the item title
+    label: string;
     href?: string;
-    description?: string; // This will be the item description
+    description?: string;
     isTitle?: boolean;
-    icon?: ElementType; // Changed from any to ElementType
-    subItems?: NavItem["subItems"]; // Recursive for further nesting if needed
-  }>; // Optional
+    icon?: ElementType;
+    subItems?: NavItem["subItems"];
+  }>;
 }
 
 export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProps) {
@@ -68,17 +67,17 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
       subItems: [
         {
           key: "frameworks-column",
-          label: t("platform.frameworks"), // Column title
+          label: t("platform.frameworks"),
           isTitle: true,
           subItems: [
             { key: "dpp-in-espr", label: t("platform.dpp-in-espr.title"), description: t("platform.dpp-in-espr.description"), href: "/platform/frameworks/dpp-in-espr", icon: BsFileEarmarkText },
-            { key: "battery-passport", label: t("platform.battery-passport.title"), description: t("platform.battery-passport.description"), href: "/platform/frameworks/battery-passport", icon: FaBatteryFull },
+            { key: "textile-passport", label: t("platform.textile-passport.title"), description: t("platform.textile-passport.description"), href: "/platform/frameworks/textile-passport", icon: FaTshirt },
             { key: "custom-frameworks", label: t("platform.custom-frameworks.title"), description: t("platform.custom-frameworks.description"), href: "/platform/frameworks/custom-frameworks", icon: FiSettings },
           ],
         },
         {
           key: "products-column",
-          label: t("platform.products"), // Column title
+          label: t("platform.products"),
           isTitle: true,
           subItems: [
             { key: "supplier-data-collection", label: t("platform.supplier-data-collection.title"), description: t("platform.supplier-data-collection.description"), href: "/platform/products/supplier-data-collection", icon: BsDatabaseFillCheck },
@@ -87,7 +86,7 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
         },
         {
           key: "integration-column",
-          label: t("platform.integration"), // Column title
+          label: t("platform.integration"),
           isTitle: true,
           subItems: [
             { key: "api-integrations", label: t("platform.api-integrations.title"), description: t("platform.api-integrations.description"), href: "/platform/integration/api-integrations", icon: FaLink },
@@ -128,7 +127,6 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
     <nav className="tw-border-b-[1px] tw-border-b-gray-200 tw-border-solid tw-border-transparent tw-bg-white/80 tw-backdrop-blur-md">
       <div className="tw-container tw-mx-auto">
         <div className="tw-flex tw-items-center tw-justify-between tw-py-4">
-          {/* Logo */}
           <a
             href="/"
             className="tw-flex tw-items-center tw-justify-center tw-w-20 tw-h-20"
@@ -136,7 +134,6 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
             <Logo />
           </a>
 
-          {/* Desktop Navigation */}
           <div className="tw-hidden xl:tw-flex tw-items-center tw-space-x-5">
             {navItems.map((item) => (
               <NavLink
@@ -149,7 +146,6 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
             ))}
           </div>
 
-          {/* Action Buttons and Language Selector */}
           <div className="tw-hidden xl:tw-flex tw-items-center tw-space-x-1">
             <SwitchLanguage />
             <a href="/demo">
@@ -157,7 +153,6 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="tw-flex tw-items-center tw-gap-4 xl:tw-hidden">
             <SwitchLanguage size="lg" />
             <Button size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -170,7 +165,6 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="xl:tw-hidden tw-border-t">
             <div className="tw-flex tw-flex-col tw-space-y-4 tw-py-4">
