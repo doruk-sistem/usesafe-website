@@ -20,6 +20,7 @@ import {
   HeroSection,
   SectionHeader,
   CtaSection,
+  TraceTrustSection,
 } from "@/components/Platform";
 
 export default function TextilePassportPage() {
@@ -232,6 +233,9 @@ export default function TextilePassportPage() {
           </div>
         </div>
       </section>
+
+      {/* TRACE TRUST SECTION */}
+      <TraceTrustSection />
 
       <CtaSection
         title="Ready to Implement Digital Product Passports for ESPR Compliance?"

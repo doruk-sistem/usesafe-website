@@ -80,7 +80,7 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
           label: t("platform.products"),
           isTitle: true,
           subItems: [
-            { key: "supplier-data-collection", label: t("platform.supplier-data-collection.title"), description: t("platform.supplier-data-collection.description"), href: "/platform/products/supplier-data-collection", icon: BsDatabaseFillCheck },
+            { key: "usesafe-certification", label: t("platform.usesafe-certification.title"), description: t("platform.usesafe-certification.description"), href: "/platform/products/usesafe-certification", icon: BsDatabaseFillCheck },
             { key: "sustainability-data-disclosure", label: t("platform.sustainability-data-disclosure.title"), description: t("platform.sustainability-data-disclosure.description"), href: "/platform/products/sustainability-data-disclosure", icon: BsShieldCheck },
           ],
         },

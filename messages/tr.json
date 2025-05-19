@@ -528,6 +528,54 @@
         "competitive_advantage_title": "Rekabet Avantajı",
         "competitive_advantage_description": "Sürdürülebilir üretim ve şeffaf veriler, markaların öne çıkmasına ve çevreye duyarlı tüketicilerle sadakat oluşturmasına yardımcı olur."
       },
+      "trace_trust_section": {
+        "main_title": "Her adımı izleyin. Her kaynağa güvenin",
+        "learn_more_button": "Daha Fazla Bilgi Edinin",
+        "sector_button_manufacturers": "Üreticiler için",
+        "sector_button_service_providers": "Hizmet Sağlayıcıları için",
+        "sector_button_retailers_brands": "Perakendeciler ve Markalar için",
+        "sector_button_recyclers": "Geri Dönüştürücüler için",
+        "sector_button_consumers": "Tüketiciler için",
+        "sector_content": {
+          "manufacturers": {
+            "content_title": "Üreticiler için",
+            "feature_1": "ESPR ve gelecekteki AB gereksinimleri için düzenleyici hazırlık",
+            "feature_2": "Uyumluluk ve raporlama için tam malzeme ve kimyasal bileşim görünürlüğü",
+            "feature_3": "Dayanıklılık, yeniden kullanım ve azaltılmış çevresel etki için geliştirilmiş ürün tasarımı",
+            "feature_4": "İzlenebilir ve sürdürülebilir ürün iddialarıyla rekabet avantajı",
+            "image_alt": "Tekstil endüstrisinde üreticiler için faydaları temsil eden bir illüstrasyon"
+          },
+          "service_providers": {
+            "content_title": "Hizmet Sağlayıcıları için (Tamir, Kiralama, Lojistik)",
+            "feature_1": "Tamir talimatları, malzeme türleri ve bakım etiketleri dahil ürün verilerine gerçek zamanlı erişim",
+            "feature_2": "İzlenebilir tanımlayıcılar ile ters lojistik ve iade akışlarının otomatikleştirilmesi",
+            "feature_3": "İyileştirilmiş yenileme ve ikinci yaşam stratejileri",
+            "image_alt": "Tekstil endüstrisinde hizmet sağlayıcıları için faydaları temsil eden bir illüstrasyon"
+          },
+          "retailers_brands": {
+            "content_title": "Perakendeciler ve Markalar için",
+            "feature_1": "Satış noktasında artan şeffaflık, doğrulanmış yaşam döngüsü ve sürdürülebilirlik verilerine erişim",
+            "feature_2": "Tüketici güveni ve marka farklılaştırması desteği",
+            "feature_3": "DPP'lerin sürdürülebilir satın alma kolaylaştıran dijital pazar yerlerine entegrasyonu",
+            "feature_4": "Basitleştirilmiş denetim ve tedarik zinciri belgeleri",
+            "image_alt": "Tekstil endüstrisinde perakendeciler ve markalar için faydaları temsil eden bir illüstrasyon"
+          },
+          "recyclers": {
+            "content_title": "Geri Dönüştürücüler için",
+            "feature_1": "Malzeme spesifik verileri (örn. lif karışımı, kimyasal işlemler) için erken erişim",
+            "feature_2": "Kirlenmeyi azaltan ve çıktı kalitesini iyileştiren verimli sıralama ve işleme",
+            "feature_3": "Ürünlerin geri dönüşümünü kolaylaştıran ürünler ve geri dönüşüm ortakları arasındaki dijital bağlantılar",
+            "image_alt": "Tekstil endüstrisinde geri dönüştürücüler için faydaları temsil eden bir illüstrasyon"
+          },
+          "consumers": {
+            "content_title": "Tüketiciler için",
+            "feature_1": "Ürün kökeni, bakım bilgileri, çevresel ayak izi ve geri dönüştürülebilirlik hakkında anında erişim",
+            "feature_2": "Sorumlu ve bilinçli satın alma kararları almak için güçlendirilmiş tüketiciler",
+            "feature_3": "Dijital kimlik ve yaşam döngüsü kayıtları ile kullanılmış ürünleri yeniden satma veya iade etme yeteneği",
+            "image_alt": "Tekstil endüstrisinde tüketiciler için faydaları temsil eden bir illüstrasyon"
+          }
+        }
+      },
       "why_dpp_image_alt": "Tekstil DPP Faydaları",
       "supply_chain_title": "Tedarik Zinciri Şeffaflığı",
       "supply_chain_description": "Ürünlerin kökenini, yolculuğunu ve hedefini tüm tedarik zinciri boyunca takip edin, ESPR'nin şeffaflık gereksinimlerini karşılayan ayrıntılı kayıtlar tutun.",
