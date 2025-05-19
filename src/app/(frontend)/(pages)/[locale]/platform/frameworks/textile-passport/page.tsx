@@ -2,21 +2,25 @@
 
 import AOS from "aos";
 import Image from "next/image";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
-import { BsArrowRight } from "react-icons/bs";
 import "aos/dist/aos.css";
 import {
   FaShieldAlt,
-  FaChartLine,
   FaRecycle,
+  FaChartLine,
   FaFileAlt,
   FaGlobe,
 } from "react-icons/fa";
 
-import FadeInCard from "@/components/Card/FadeInCard";
-import { CtaButton, FeatureCard, GradientBackground, SectionHeader } from "@/components/Platform";
+import {
+  CtaButton,
+  FeatureCard,
+  GradientBackground,
+  HeroSection,
+  SectionHeader,
+  CtaSection,
+} from "@/components/Platform";
 
 export default function TextilePassportPage() {
   useEffect(() => {
@@ -32,118 +36,52 @@ export default function TextilePassportPage() {
 
   return (
     <div className="tw-w-full">
-      {/* HERO SECTION */}
-      <section className="tw-relative tw-overflow-hidden tw-py-24 md:tw-py-32 tw-bg-gradient-to-br tw-from-[#1e3c72] tw-via-[#2a5298] tw-to-[#6dd5ed] tw-text-white">
-        {/* Animated SVG Background */}
-        <svg
-          className="tw-absolute tw-top-0 tw-left-0 tw-w-full tw-h-full tw-z-0"
-          viewBox="0 0 1440 320"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          style={{ opacity: 0.18 }}
-        >
-          <path
-            fill="url(#gradient1)"
-            d="M0,64L60,69.3C120,75,240,85,360,112C480,139,600,181,720,181.3C840,181,960,139,1080,112C1200,85,1320,75,1380,69.3L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
-          ></path>
-          <defs>
-            <linearGradient
-              id="gradient1"
-              x1="0"
-              y1="0"
-              x2="0"
-              y2="1"
-              gradientTransform="rotate(90)"
-            >
-              <stop offset="0%" stopColor="#6dd5ed" />
-              <stop offset="100%" stopColor="#1e3c72" />
-            </linearGradient>
-          </defs>
-        </svg>
-        {/* Background Elements */}
-        <div className="tw-absolute tw-top-0 tw-left-0 tw-w-full tw-h-full tw-overflow-hidden tw-opacity-10 tw-pointer-events-none">
-          <div className="tw-absolute tw-top-1/4 tw-left-1/4 tw-w-64 tw-h-64 tw-rounded-full tw-bg-primary tw-opacity-20 tw-blur-3xl"></div>
-          <div className="tw-absolute tw-bottom-1/3 tw-right-1/3 tw-w-96 tw-h-96 tw-rounded-full tw-bg-blue-400 tw-opacity-20 tw-blur-3xl"></div>
-        </div>
-        <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6 tw-relative tw-z-10">
-          <div className="tw-flex tw-flex-col md:tw-flex-row tw-items-center tw-gap-16">
-            <div className="tw-flex-1 tw-max-w-2xl">
-              <div className="tw-inline-block tw-px-6 tw-py-2 tw-rounded-full tw-bg-white/20 tw-backdrop-blur-md tw-text-white tw-font-semibold tw-text-base tw-mb-8 tw-shadow-lg tw-border tw-border-white/30 tw-uppercase tw-tracking-wider">
-                <span style={{ letterSpacing: "0.08em" }}>
-                  Digital Product Passport in Textile
-                </span>
-              </div>
-              <h1 className="tw-text-4xl md:tw-text-5xl lg:tw-text-6xl tw-font-bold tw-text-white tw-mb-6 tw-leading-tight">
-                Transforming Textile Industry with Digital Product Passports
-              </h1>
-              <p className="tw-text-xl tw-text-white tw-mb-10 tw-leading-relaxed">
-                Enhance transparency, traceability, and sustainability in the textile sector with Digital Product Passports. Comply with EU regulations and empower your supply chain with verifiable lifecycle data for every garment and textile product.
-              </p>
-              <div className="tw-flex tw-flex-col sm:tw-flex-row tw-gap-5">
-                <Link
-                  href="/contact"
-                  className="tw-group tw-bg-gradient-to-r tw-from-[#43cea2] tw-to-[#185a9d] tw-text-white tw-font-semibold tw-py-4 tw-px-10 tw-rounded-xl tw-shadow-2xl tw-border-2 tw-border-white/30 hover:tw-shadow-3xl hover:tw-border-[#43cea2] tw-transition-all tw-flex tw-items-center tw-justify-center tw-ring-2 tw-ring-[#43cea2]/30 hover:tw-ring-4 hover:tw-ring-[#43cea2]/60 tw-duration-300"
-                >
-                  <span>{t("common.contact_us")}</span>
-                  <BsArrowRight className="tw-ml-2 tw-transform tw-transition-transform tw-duration-300 group-hover:tw-translate-x-1" />
-                </Link>
-                <Link
-                  href="https://app.usesafe.net/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="tw-bg-white/80 tw-text-primary tw-border-2 tw-border-primary tw-font-semibold tw-py-4 tw-px-10 tw-rounded-xl tw-shadow-lg hover:tw-shadow-2xl hover:tw-bg-blue-100/60 tw-transition-all tw-flex tw-items-center tw-justify-center hover:tw-scale-105 tw-duration-300"
-                >
-                  {t("common.try_for_free")}
-                </Link>
-              </div>
-            </div>
-            <div className="tw-flex-1 tw-flex tw-justify-center tw-items-center">
-              <Image
-                src="/images/platform/textile-passport.jpeg"
-                alt="Digital Product Passport in Textile"
-                width={500}
-                height={500}
-                className="tw-rounded-3xl tw-shadow-xl"
-                data-aos="fade-left"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        badge="Digital Product Passport in Textile"
+        title="Transforming Textile Industry with Digital Product Passports"
+        description="Enhance transparency, traceability, and sustainability in the textile sector with Digital Product Passports. Comply with EU regulations and empower your supply chain with verifiable lifecycle data for every garment and textile product."
+        imageSrc="/images/platform/textile-passport.jpeg"
+        imageAlt="Digital Product Passport in Textile"
+        primaryCta={{
+          text: t("common.contact_us"),
+          href: "/contact",
+        }}
+        secondaryCta={{
+          text: t("common.try_for_free"),
+          href: "https://app.usesafe.net/",
+          external: true,
+        }}
+      />
 
       {/* DPP NEDİR? */}
       <section className="tw-py-24 tw-bg-white">
         <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6">
-          <div className="tw-max-w-3xl tw-mx-auto tw-mb-16">
-            <div className="tw-flex tw-justify-center tw-mb-6">
-              <div className="tw-h-1 tw-w-24 tw-bg-primary tw-rounded-full"></div>
-            </div>
-            <h2 className="tw-text-5xl tw-font-extrabold tw-text-gray-900 tw-drop-shadow-lg tw-mb-6 tw-text-center">
-              What is a Digital Product Passport?
-            </h2>
-            <p className="tw-text-xl tw-text-gray-700 tw-text-center tw-leading-relaxed">
-              The Digital Product Passport (DPP) is a dynamic digital record that stores and communicates essential information about a textile product throughout its entire lifecycle. It provides detailed data on materials, chemicals, processes, and environmental impact—empowering brands, consumers, and regulators to make responsible and informed decisions.
-            </p>
-          </div>
+          <SectionHeader
+            title={t("platform.textile-passport.what_is_dpp.title")}
+            description={t("platform.textile-passport.what_is_dpp.description")}
+          />
           <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-3 tw-gap-8 tw-mt-12">
-            <FadeInCard
+            <FeatureCard
               icon={<FaShieldAlt className="tw-w-8 tw-h-8" />}
-              title="Transparency & Trust"
+              title={t("platform.textile-passport.what_is_dpp.transparency_trust_title")}
+              variant="glass"
             >
-              Verified product data including material composition, carbon footprint, repair history, and recycling information—enabling trust and informed choices.
-            </FadeInCard>
-            <FadeInCard
+              {t("platform.textile-passport.what_is_dpp.transparency_trust_description")}
+            </FeatureCard>
+            <FeatureCard
               icon={<FaRecycle className="tw-w-8 tw-h-8" />}
-              title="Circularity"
+              title={t("platform.textile-passport.what_is_dpp.circularity_title")}
+              variant="glass"
             >
-              DPP enables repair, reuse, and recycling, supporting the transition to a more sustainable and circular textile economy.
-            </FadeInCard>
-            <FadeInCard
+              {t("platform.textile-passport.what_is_dpp.circularity_description")}
+            </FeatureCard>
+            <FeatureCard
               icon={<FaChartLine className="tw-w-8 tw-h-8" />}
-              title="Competitive Advantage"
+              title={t("platform.textile-passport.what_is_dpp.competitive_advantage_title")}
+              variant="glass"
             >
-              Sustainable production and transparent data help brands stand out and build loyalty with environmentally conscious consumers.
-            </FadeInCard>
+              {t("platform.textile-passport.what_is_dpp.competitive_advantage_description")}
+            </FeatureCard>
           </div>
         </div>
       </section>
@@ -153,67 +91,36 @@ export default function TextilePassportPage() {
         <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6">
           <div className="tw-flex tw-flex-col md:tw-flex-row tw-items-center tw-gap-16">
             <div className="tw-flex-1 tw-max-w-2xl">
-              <div className="tw-inline-block tw-px-4 tw-py-1 tw-rounded-full tw-bg-primary/10 tw-text-primary tw-font-medium tw-text-sm tw-mb-6">
-                Why DPP for Textile?
-              </div>
-              <h2 className="tw-text-5xl tw-font-extrabold tw-text-gray-900 tw-drop-shadow-lg tw-mb-6 tw-leading-tight">
-                Unlocking Circularity, Compliance, and Innovation
-              </h2>
-              <p className="tw-text-xl tw-text-gray-700 tw-mb-8 tw-leading-relaxed">
-                The EU's DPP initiative is a cornerstone of the Ecodesign for Sustainable Products Regulation (ESPR), aiming to make the textile industry more sustainable and transparent. DPPs provide detailed information about a product’s lifecycle, materials, and environmental impact, helping brands and consumers make responsible choices and comply with global standards.
-              </p>
+              <SectionHeader
+                title={t("platform.textile-passport.why_dpp.title")}
+                description={t("platform.textile-passport.why_dpp.description")}
+                className="tw-text-left tw-mx-0 tw-max-w-none tw-mb-8"
+              /> {/* Removed badge, adjusted className for left alignment and no max-width from SectionHeader default */}
+              {/* Note: The original "Why DPP for Textile?" badge was removed for simplicity. It can be added back as a custom element if needed. */}
               <div className="tw-space-y-6 tw-mb-10">
-                <div className="tw-flex tw-items-start tw-bg-white/70 tw-backdrop-blur-lg tw-rounded-2xl tw-shadow-xl tw-p-6 tw-border-l-4 tw-border-gradient-to-b tw-from-[#43cea2] tw-to-[#185a9d]">
-                  <div className="tw-flex-shrink-0 tw-bg-gradient-to-br tw-from-[#43cea2] tw-to-[#185a9d] tw-rounded-full tw-p-3 tw-mr-5 tw-shadow-md tw-flex tw-items-center tw-justify-center">
-                    <FaShieldAlt className="tw-text-white tw-w-6 tw-h-6 tw-drop-shadow" />
-                  </div>
-                  <div>
-                    <div className="tw-font-bold tw-text-lg tw-text-gray-900">ESPR Compliance</div>
-                    <div className="tw-text-gray-700 tw-leading-relaxed tw-text-base">Meet the EU's Ecodesign for Sustainable Products Regulation and future-proof your business.</div>
-                  </div>
-                </div>
-                <div className="tw-flex tw-items-start tw-bg-white/70 tw-backdrop-blur-lg tw-rounded-2xl tw-shadow-xl tw-p-6 tw-border-l-4 tw-border-gradient-to-b tw-from-[#43cea2] tw-to-[#185a9d]">
-                  <div className="tw-flex-shrink-0 tw-bg-gradient-to-br tw-from-[#43cea2] tw-to-[#185a9d] tw-rounded-full tw-p-3 tw-mr-5 tw-shadow-md tw-flex tw-items-center tw-justify-center">
-                    <FaChartLine className="tw-text-white tw-w-6 tw-h-6 tw-drop-shadow" />
-                  </div>
-                  <div>
-                    <div className="tw-font-bold tw-text-lg tw-text-gray-900">Supply Chain Transparency</div>
-                    <div className="tw-text-gray-700 tw-leading-relaxed tw-text-base">Track the origin, journey, and destination of products through the supply chain, maintaining detailed records for compliance and sustainability.</div>
-                  </div>
-                </div>
-                <div className="tw-flex tw-items-start tw-bg-white/70 tw-backdrop-blur-lg tw-rounded-2xl tw-shadow-xl tw-p-6 tw-border-l-4 tw-border-gradient-to-b tw-from-[#43cea2] tw-to-[#185a9d]">
-                  <div className="tw-flex-shrink-0 tw-bg-gradient-to-br tw-from-[#43cea2] tw-to-[#185a9d] tw-rounded-full tw-p-3 tw-mr-5 tw-shadow-md tw-flex tw-items-center tw-justify-center">
-                    <FaFileAlt className="tw-text-white tw-w-6 tw-h-6 tw-drop-shadow" />
-                  </div>
-                  <div>
-                    <div className="tw-font-bold tw-text-lg tw-text-gray-900">Sensitive Data Protection</div>
-                    <div className="tw-text-gray-700 tw-leading-relaxed tw-text-base">Protect sensitive business information while meeting regulatory requirements with secure data-sharing tools.</div>
-                  </div>
-                </div>
-                <div className="tw-flex tw-items-start tw-bg-white/70 tw-backdrop-blur-lg tw-rounded-2xl tw-shadow-xl tw-p-6 tw-border-l-4 tw-border-gradient-to-b tw-from-[#43cea2] tw-to-[#185a9d]">
-                  <div className="tw-flex-shrink-0 tw-bg-gradient-to-br tw-from-[#43cea2] tw-to-[#185a9d] tw-rounded-full tw-p-3 tw-mr-5 tw-shadow-md tw-flex tw-items-center tw-justify-center">
-                    <FaGlobe className="tw-text-white tw-w-6 tw-h-6 tw-drop-shadow" />
-                  </div>
-                  <div>
-                    <div className="tw-font-bold tw-text-lg tw-text-gray-900">Consumer Engagement</div>
-                    <div className="tw-text-gray-700 tw-leading-relaxed tw-text-base">Connect your DPP data directly to customer-facing platforms to enhance transparency and engagement throughout the product lifecycle.</div>
-                  </div>
-                </div>
+                <FeatureCard icon={<FaShieldAlt className="tw-w-6 tw-h-6" />} title={t("platform.textile-passport.why_dpp.espr_compliance_title")} variant="horizontal">
+                  {t("platform.textile-passport.why_dpp.espr_compliance_description")}
+                </FeatureCard>
+                <FeatureCard icon={<FaChartLine className="tw-w-6 tw-h-6" />} title={t("platform.textile-passport.why_dpp.supply_chain_transparency_title")} variant="horizontal">
+                  {t("platform.textile-passport.why_dpp.supply_chain_transparency_description")}
+                </FeatureCard>
+                <FeatureCard icon={<FaFileAlt className="tw-w-6 tw-h-6" />} title={t("platform.textile-passport.why_dpp.data_protection_title")} variant="horizontal">
+                  {t("platform.textile-passport.why_dpp.data_protection_description")}
+                </FeatureCard>
+                <FeatureCard icon={<FaGlobe className="tw-w-6 tw-h-6" />} title={t("platform.textile-passport.why_dpp.consumer_engagement_title")} variant="horizontal">
+                  {t("platform.textile-passport.why_dpp.consumer_engagement_description")}
+                </FeatureCard>
               </div>
-              <Link
-                href="/demo"
-                className="tw-inline-flex tw-items-center tw-bg-gradient-to-r tw-from-[#43cea2] tw-to-[#185a9d] tw-text-white tw-font-semibold tw-py-3 tw-px-8 tw-rounded-xl tw-shadow-xl tw-border-2 tw-border-white/30 hover:tw-shadow-2xl hover:tw-border-[#43cea2] tw-transition-all tw-ring-2 tw-ring-[#43cea2]/30 hover:tw-ring-4 hover:tw-ring-[#43cea2]/60 tw-duration-300"
-              >
-                <span>Request a Demo</span>
-                <BsArrowRight className="tw-ml-2" />
-              </Link>
+              <CtaButton href="/demo" variant="primary">
+                {t("platform.textile-passport.request_demo_button")}
+              </CtaButton>
             </div>
             <div className="tw-flex-1 tw-mt-12 md:tw-mt-0">
               <div className="tw-relative tw-h-[350px] md:tw-h-[450px] tw-w-full tw-rounded-2xl tw-overflow-hidden tw-shadow-2xl">
                 <div className="tw-absolute tw-inset-0 tw-bg-white/30  tw-z-10 tw-pointer-events-none" style={{ borderRadius: "1rem" }}></div>
                 <Image
                   src="/images/platform/usesafe_men_wear.avif"
-                  alt="Textile DPP Benefits"
+                  alt={t("platform.textile-passport.why_dpp_image_alt")}
                   fill
                   className="tw-object-cover"
                   priority
@@ -228,8 +135,8 @@ export default function TextilePassportPage() {
 
       <GradientBackground type="white">
         <SectionHeader
-          title="How Does a Textile DPP Work?"
-          description="DPP collects, stores, and shares data at every stage of a textile product’s lifecycle—design, production, distribution, use, and recycling. Blockchain or decentralized technologies ensure data integrity and accessibility for all stakeholders."
+          title={t("platform.textile-passport.how_it_works_title")}
+          description={t("platform.textile-passport.how_it_works_description")}
         />
 
         <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-12 tw-mt-12">
@@ -275,94 +182,70 @@ export default function TextilePassportPage() {
       {/* FAYDALAR SECTION */}
       <section className="tw-py-24 tw-bg-gradient-to-br tw-from-gray-50 tw-to-blue-50">
         <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6">
-          <div className="tw-max-w-3xl tw-mx-auto tw-mb-16">
-            <div className="tw-flex tw-justify-center tw-mb-6">
-              <div className="tw-h-1 tw-w-24 tw-bg-primary tw-rounded-full"></div>
-            </div>
-            <h2 className="tw-text-5xl tw-font-extrabold tw-text-gray-900 tw-drop-shadow-lg tw-mb-6 tw-text-center">Benefits of Textile DPP</h2>
-            <p className="tw-text-xl tw-text-gray-700 tw-text-center tw-leading-relaxed">
-              Our comprehensive DPP solution offers numerous advantages for textile businesses:
-            </p>
-          </div>
+          <SectionHeader
+            title="Benefits of Textile DPP"
+            description="Our comprehensive DPP solution offers numerous advantages for textile businesses:"
+          />
           <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8 tw-mt-12">
-            <FadeInCard
+            <FeatureCard
               icon={<FaShieldAlt className="tw-w-8 tw-h-8" />}
               title="Regulatory Compliance"
+              variant="glass"
             >
-              Stay compliant with EU’s Green Deal, ESPR, and Circular Economy Action Plan.
-            </FadeInCard>
-            <FadeInCard
+              Stay compliant with EU&apos;s Green Deal, ESPR, and Circular Economy Action Plan.
+            </FeatureCard>
+            <FeatureCard
               icon={<FaGlobe className="tw-w-8 tw-h-8" />}
               title="Supply Chain Transparency"
+              variant="glass"
             >
               Track the origin, journey, and destination of products through the entire supply chain.
-            </FadeInCard>
-            <FadeInCard
+            </FeatureCard>
+            <FeatureCard
               icon={<FaFileAlt className="tw-w-8 tw-h-8" />}
               title="Data Security"
+              variant="glass"
             >
               Protect sensitive business information while meeting regulatory demands.
-            </FadeInCard>
-            <FadeInCard
+            </FeatureCard>
+            <FeatureCard
               icon={<FaChartLine className="tw-w-8 tw-h-8" />}
               title="Consumer Engagement"
+              variant="glass"
             >
               Connect your DPP data to customer platforms to enhance transparency and engagement.
-            </FadeInCard>
-            <FadeInCard
+            </FeatureCard>
+            <FeatureCard
               icon={<FaRecycle className="tw-w-8 tw-h-8" />}
               title="Sustainability Assessment"
+              variant="glass"
             >
               Collect and analyze data to refine sustainability strategies and identify improvement areas.
-            </FadeInCard>
-            <FadeInCard
+            </FeatureCard>
+            <FeatureCard
               icon={<FaGlobe className="tw-w-8 tw-h-8" />}
               title="Scalable Platform"
+              variant="glass"
             >
               Build a strong foundation for end-to-end supply chain traceability.
-            </FadeInCard>
+            </FeatureCard>
           </div>
         </div>
       </section>
 
-      {/* CTA SECTION */}
-      <section className="tw-relative tw-py-24 tw-overflow-hidden">
-        <div className="tw-absolute tw-inset-0 tw-bg-primary"></div>
-        <div className="tw-absolute tw-inset-0 tw-bg-gradient-to-br tw-from-primary tw-to-blue-700 tw-opacity-90"></div>
-        {/* Background Elements */}
-        <div className="tw-absolute tw-top-0 tw-left-0 tw-w-full tw-h-full tw-overflow-hidden tw-opacity-10 tw-pointer-events-none">
-          <div className="tw-absolute tw-top-1/4 tw-left-1/4 tw-w-64 tw-h-64 tw-rounded-full tw-bg-white tw-opacity-20 tw-blur-3xl"></div>
-          <div className="tw-absolute tw-bottom-1/3 tw-right-1/3 tw-w-96 tw-h-96 tw-rounded-full tw-bg-white tw-opacity-20 tw-blur-3xl"></div>
-        </div>
-        <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6 tw-relative tw-z-10">
-          <div className="tw-max-w-4xl tw-mx-auto tw-text-center">
-            <h2 className="tw-text-4xl md:tw-text-5xl tw-font-bold tw-mb-8 tw-text-white">
-              Ready to Implement Digital Product Passports for ESPR Compliance?
-            </h2>
-            <p className="tw-text-xl tw-mb-10 tw-text-white/90 tw-leading-relaxed">
-              Partner with us to implement your vision of a sustainable, responsible, and circular organization. Our team of experts will guide you through every step of the process.
-            </p>
-            <div className="tw-flex tw-flex-col sm:tw-flex-row tw-justify-center tw-gap-6">
-              <Link
-                href="/contact"
-                className="tw-group tw-bg-white tw-text-primary tw-font-medium tw-py-4 tw-px-8 tw-rounded-lg tw-shadow-lg hover:tw-shadow-xl tw-transition-all tw-flex tw-items-center tw-justify-center"
-              >
-                <span>Contact Our Team</span>
-                <BsArrowRight className="tw-ml-2 tw-transform tw-transition-transform tw-duration-300 group-hover:tw-translate-x-1" />
-              </Link>
-              <Link
-                href="https://app.usesafe.net/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="tw-group tw-bg-transparent tw-text-white tw-border-2 tw-border-white tw-font-medium tw-py-4 tw-px-8 tw-rounded-lg tw-shadow-lg hover:tw-shadow-xl hover:tw-bg-white/10 tw-transition-all tw-flex tw-items-center tw-justify-center"
-              >
-                <span>Request a Demo</span>
-                <BsArrowRight className="tw-ml-2 tw-transform tw-transition-transform tw-duration-300 group-hover:tw-translate-x-1" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CtaSection
+        title="Ready to Implement Digital Product Passports for ESPR Compliance?"
+        description="Partner with us to implement your vision of a sustainable, responsible, and circular organization. Our team of experts will guide you through every step of the process."
+        primaryCta={{
+          text: "Contact Our Team",
+          href: "/contact",
+        }}
+        secondaryCta={{
+          text: "Request a Demo",
+          href: "https://app.usesafe.net/",
+          external: true,
+        }}
+      />
     </div>
   );
 }
