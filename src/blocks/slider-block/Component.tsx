@@ -65,15 +65,15 @@ export function SliderBlock({ sliders, clients }: SliderBlock) {
               </div>
 
               <div
-  className="tw-w-full tw-h-[400px] tw-flex tw-items-center tw-justify-center"
-  data-bottom-top="transform: translateY(100px)"
-  data-top-bottom="transform: translateY(-100px)"
->
-  <Media
-    resource={slide.image}
-    className="tw-w-full tw-h-full tw-object-cover tw-min-h-[300px] tw-min-w-[300px] tw-max-w-[600px]"
-  />
-</div>
+                className="tw-w-full tw-h-[400px] tw-flex tw-items-center tw-justify-center"
+                data-bottom-top="transform: translateY(100px)"
+                data-top-bottom="transform: translateY(-100px)"
+              >
+                <Media
+                  resource={slide.image}
+                  className="tw-w-full tw-h-full tw-object-cover tw-min-h-[300px] tw-min-w-[300px] tw-max-w-[600px]"
+                />
+              </div>
             </div>
           ))}
         </Slider>
