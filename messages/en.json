@@ -522,6 +522,80 @@
       "badge": "Sustainable Textile Industry",
       "hero_title": "Digital Product Passports for Textile Industry",
       "hero_description": "Enhance transparency and sustainability in the textile supply chain with our comprehensive digital passport solution tailored for the fashion and textile industry.",
+      "how_it_works_title": "How Does a Textile DPP Work?",
+      "how_it_works_description": "DPP collects, stores, and shares data at every stage of a textile product’s lifecycle—design, production, distribution, use, and recycling. Blockchain or decentralized technologies ensure data integrity and accessibility for all stakeholders.",
+      "why_dpp": {
+        "title": "Unlocking Circularity, Compliance, and Innovation",
+        "description": "The EU's DPP initiative is a cornerstone of the Ecodesign for Sustainable Products Regulation (ESPR), aiming to make the textile industry more sustainable and transparent. DPPs provide detailed information about a product's lifecycle, materials, and environmental impact, helping brands and consumers make responsible choices and comply with global standards.",
+        "espr_compliance_title": "ESPR Compliance",
+        "espr_compliance_description": "Meet the EU's Ecodesign for Sustainable Products Regulation and future-proof your business.",
+        "supply_chain_transparency_title": "Supply Chain Transparency",
+        "supply_chain_transparency_description": "Track the origin, journey, and destination of products through the supply chain, maintaining detailed records for compliance and sustainability.",
+        "data_protection_title": "Sensitive Data Protection",
+        "data_protection_description": "Protect sensitive business information while meeting regulatory requirements with secure data-sharing tools.",
+        "consumer_engagement_title": "Consumer Engagement",
+        "consumer_engagement_description": "Connect your DPP data directly to customer-facing platforms to enhance transparency and engagement throughout the product lifecycle."
+      },
+      "request_demo_button": "Request a Demo",
+      "what_is_dpp": {
+        "title": "What is a Digital Product Passport?",
+        "description": "The Digital Product Passport (DPP) is a dynamic digital record that stores and communicates essential information about a textile product throughout its entire lifecycle. It provides detailed data on materials, chemicals, processes, and environmental impact—empowering brands, consumers, and regulators to make responsible and informed decisions.",
+        "transparency_trust_title": "Transparency & Trust",
+        "transparency_trust_description": "Verified product data including material composition, carbon footprint, repair history, and recycling information—enabling trust and informed choices.",
+        "circularity_title": "Circularity",
+        "circularity_description": "DPP enables repair, reuse, and recycling, supporting the transition to a more sustainable and circular textile economy.",
+        "competitive_advantage_title": "Competitive Advantage",
+        "competitive_advantage_description": "Sustainable production and transparent data help brands stand out and build loyalty with environmentally conscious consumers."
+      },
+      "trace_trust_section": {
+        "main_title": "Trace every step. Trust every source",
+        "learn_more_button": "Learn More",
+        "sector_button_manufacturers": "For Manufacturers",
+        "sector_button_service_providers": "For Service Providers",
+        "sector_button_retailers_brands": "For Retailers & Brands",
+        "sector_button_recyclers": "For Recyclers",
+        "sector_button_consumers": "For Consumers",
+        "sector_content": {
+          "manufacturers": {
+            "content_title": "For Manufacturers",
+            "feature_1": "Regulatory readiness for ESPR and future EU requirements",
+            "feature_2": "Full visibility into material and chemical composition for compliance and reporting",
+            "feature_3": "Enhanced product design for durability, reusability, and reduced environmental impact",
+            "feature_4": "Competitive advantage through traceable and sustainable product claims",
+            "image_alt": "Illustration representing benefits for manufacturers in the textile industry"
+          },
+          "service_providers": {
+            "content_title": "For Service Providers (Repair, Rental, Logistics)",
+            "feature_1": "Real-time access to product data including repair instructions, material types, and care labels",
+            "feature_2": "Automation of reverse logistics and return flows with traceable identifiers",
+            "feature_3": "Optimization of refurbishment and second-life strategies",
+            "image_alt": "Illustration representing benefits for service providers in the textile industry"
+          },
+          "retailers_brands": {
+            "content_title": "For Retailers & Brands",
+            "feature_1": "Increased transparency at the point of sale, with access to verified lifecycle and sustainability data",
+            "feature_2": "Support for consumer trust and brand differentiation",
+            "feature_3": "Integration of DPPs into digital marketplaces, facilitating sustainable procurement",
+            "feature_4": "Simplified auditing and supply chain documentation",
+            "image_alt": "Illustration representing benefits for retailers and brands in the textile industry"
+          },
+          "recyclers": {
+            "content_title": "For Recyclers",
+            "feature_1": "Early access to material-specific data (e.g. fiber blend, chemical treatments)",
+            "feature_2": "Efficient sorting and processing, reducing contamination and improving output quality",
+            "feature_3": "Digital linkages between products and recycling partners to close the loop",
+            "image_alt": "Illustration representing benefits for recyclers in the textile industry"
+          },
+          "consumers": {
+            "content_title": "For Consumers",
+            "feature_1": "Instant access to product origin, care information, environmental footprint, and recyclability",
+            "feature_2": "Empowered to make informed and sustainable purchasing decisions",
+            "feature_3": "Ability to resell or return used goods with digital authenticity and lifecycle records",
+            "image_alt": "Illustration representing benefits for consumers in the textile industry"
+          }
+        }
+      },
+      "why_dpp_image_alt": "Textile DPP Benefits",
       "supply_chain_title": "Supply Chain Transparency",
       "supply_chain_description": "Track the origin, journey, and destination of products through the entire supply chain, maintaining detailed records that meet ESPR's transparency requirements.",
       "data_security_title": "Data Security",
@@ -557,9 +631,9 @@
       "title": "Internal traceability",
       "description": "Streamline material bookkeeping"
     },
-    "supplier-data-collection": {
-      "title": "Supplier data collection",
-      "description": "Collect accurate, verifiable data from complex supply chains"
+    "usesafe-certification": {
+      "title": "Usesafe certification",
+      "description": "Certify your products with Usesafe"
     },
     "sustainability-data-disclosure": {
       "title": "Sustainability data disclosure",

@@ -503,6 +503,80 @@
       "badge": "Sürdürülebilir Tekstil Endüstrisi",
       "hero_title": "Tekstil Endüstrisi için Dijital Ürün Pasaportları",
       "hero_description": "Moda ve tekstil endüstrisi için özel olarak tasarlanmış kapsamlı dijital pasaport çözümümüz ile tekstil tedarik zincirinde şeffaflığı ve sürdürülebilirliği artırın.",
+      "how_it_works_title": "Tekstil DPP Nasıl Çalışır?",
+      "how_it_works_description": "DPP, bir tekstil ürününün yaşam döngüsünün her aşamasında (tasarım, üretim, dağıtım, kullanım ve geri dönüşüm) veri toplar, depolar ve paylaşır. Blockchain veya merkezi olmayan teknolojiler, tüm paydaşlar için veri bütünlüğünü ve erişilebilirliğini sağlar.",
+      "why_dpp": {
+        "title": "Döngüselliğin, Uyumluluğun ve Yeniliğin Kilidini Açmak",
+        "description": "AB'nin DPP girişimi, tekstil endüstrisini daha sürdürülebilir ve şeffaf hale getirmeyi amaçlayan Sürdürülebilir Ürünler için Ekotasarım Yönetmeliği'nin (ESPR) bir temel taşıdır. DPP'ler, bir ürünün yaşam döngüsü, malzemeleri ve çevresel etkisi hakkında ayrıntılı bilgi sağlayarak markaların ve tüketicilerin sorumlu seçimler yapmasına ve küresel standartlara uymasına yardımcı olur.",
+        "espr_compliance_title": "ESPR Uyumluluğu",
+        "espr_compliance_description": "AB'nin Sürdürülebilir Ürünler için Ekotasarım Yönetmeliği'ni karşılayın ve işletmenizi geleceğe hazırlayın.",
+        "supply_chain_transparency_title": "Tedarik Zinciri Şeffaflığı",
+        "supply_chain_transparency_description": "Uyumluluk ve sürdürülebilirlik için ayrıntılı kayıtlar tutarak ürünlerin kökenini, yolculuğunu ve hedefini tedarik zinciri boyunca takip edin.",
+        "data_protection_title": "Hassas Veri Koruma",
+        "data_protection_description": "Güvenli veri paylaşım araçlarıyla düzenleyici gereksinimleri karşılarken hassas iş bilgilerini koruyun.",
+        "consumer_engagement_title": "Tüketici Etkileşimi",
+        "consumer_engagement_description": "Ürün yaşam döngüsü boyunca şeffaflığı ve etkileşimi artırmak için DPP verilerinizi doğrudan müşteri odaklı platformlara bağlayın."
+      },
+      "request_demo_button": "Demo Talep Edin",
+      "what_is_dpp": {
+        "title": "Dijital Ürün Pasaportu Nedir?",
+        "description": "Dijital Ürün Pasaportu (DPP), bir tekstil ürününün tüm yaşam döngüsü boyunca temel bilgileri depolayan ve ileten dinamik bir dijital kayıttır. Malzemeler, kimyasallar, süreçler ve çevresel etki hakkında ayrıntılı veriler sağlayarak markaların, tüketicilerin ve düzenleyicilerin sorumlu ve bilinçli kararlar almalarını sağlar.",
+        "transparency_trust_title": "Şeffaflık ve Güven",
+        "transparency_trust_description": "Malzeme bileşimi, karbon ayak izi, onarım geçmişi ve geri dönüşüm bilgileri dahil olmak üzere doğrulanmış ürün verileri—güven ve bilinçli seçimler sağlar.",
+        "circularity_title": "Döngüsellik",
+        "circularity_description": "DPP, onarım, yeniden kullanım ve geri dönüşümü mümkün kılarak daha sürdürülebilir ve döngüsel bir tekstil ekonomisine geçişi destekler.",
+        "competitive_advantage_title": "Rekabet Avantajı",
+        "competitive_advantage_description": "Sürdürülebilir üretim ve şeffaf veriler, markaların öne çıkmasına ve çevreye duyarlı tüketicilerle sadakat oluşturmasına yardımcı olur."
+      },
+      "trace_trust_section": {
+        "main_title": "Her adımı izleyin. Her kaynağa güvenin",
+        "learn_more_button": "Daha Fazla Bilgi Edinin",
+        "sector_button_manufacturers": "Üreticiler için",
+        "sector_button_service_providers": "Hizmet Sağlayıcıları için",
+        "sector_button_retailers_brands": "Perakendeciler ve Markalar için",
+        "sector_button_recyclers": "Geri Dönüştürücüler için",
+        "sector_button_consumers": "Tüketiciler için",
+        "sector_content": {
+          "manufacturers": {
+            "content_title": "Üreticiler için",
+            "feature_1": "ESPR ve gelecekteki AB gereksinimleri için düzenleyici hazırlık",
+            "feature_2": "Uyumluluk ve raporlama için tam malzeme ve kimyasal bileşim görünürlüğü",
+            "feature_3": "Dayanıklılık, yeniden kullanım ve azaltılmış çevresel etki için geliştirilmiş ürün tasarımı",
+            "feature_4": "İzlenebilir ve sürdürülebilir ürün iddialarıyla rekabet avantajı",
+            "image_alt": "Tekstil endüstrisinde üreticiler için faydaları temsil eden bir illüstrasyon"
+          },
+          "service_providers": {
+            "content_title": "Hizmet Sağlayıcıları için (Tamir, Kiralama, Lojistik)",
+            "feature_1": "Tamir talimatları, malzeme türleri ve bakım etiketleri dahil ürün verilerine gerçek zamanlı erişim",
+            "feature_2": "İzlenebilir tanımlayıcılar ile ters lojistik ve iade akışlarının otomatikleştirilmesi",
+            "feature_3": "İyileştirilmiş yenileme ve ikinci yaşam stratejileri",
+            "image_alt": "Tekstil endüstrisinde hizmet sağlayıcıları için faydaları temsil eden bir illüstrasyon"
+          },
+          "retailers_brands": {
+            "content_title": "Perakendeciler ve Markalar için",
+            "feature_1": "Satış noktasında artan şeffaflık, doğrulanmış yaşam döngüsü ve sürdürülebilirlik verilerine erişim",
+            "feature_2": "Tüketici güveni ve marka farklılaştırması desteği",
+            "feature_3": "DPP'lerin sürdürülebilir satın alma kolaylaştıran dijital pazar yerlerine entegrasyonu",
+            "feature_4": "Basitleştirilmiş denetim ve tedarik zinciri belgeleri",
+            "image_alt": "Tekstil endüstrisinde perakendeciler ve markalar için faydaları temsil eden bir illüstrasyon"
+          },
+          "recyclers": {
+            "content_title": "Geri Dönüştürücüler için",
+            "feature_1": "Malzeme spesifik verileri (örn. lif karışımı, kimyasal işlemler) için erken erişim",
+            "feature_2": "Kirlenmeyi azaltan ve çıktı kalitesini iyileştiren verimli sıralama ve işleme",
+            "feature_3": "Ürünlerin geri dönüşümünü kolaylaştıran ürünler ve geri dönüşüm ortakları arasındaki dijital bağlantılar",
+            "image_alt": "Tekstil endüstrisinde geri dönüştürücüler için faydaları temsil eden bir illüstrasyon"
+          },
+          "consumers": {
+            "content_title": "Tüketiciler için",
+            "feature_1": "Ürün kökeni, bakım bilgileri, çevresel ayak izi ve geri dönüştürülebilirlik hakkında anında erişim",
+            "feature_2": "Sorumlu ve bilinçli satın alma kararları almak için güçlendirilmiş tüketiciler",
+            "feature_3": "Dijital kimlik ve yaşam döngüsü kayıtları ile kullanılmış ürünleri yeniden satma veya iade etme yeteneği",
+            "image_alt": "Tekstil endüstrisinde tüketiciler için faydaları temsil eden bir illüstrasyon"
+          }
+        }
+      },
+      "why_dpp_image_alt": "Tekstil DPP Faydaları",
       "supply_chain_title": "Tedarik Zinciri Şeffaflığı",
       "supply_chain_description": "Ürünlerin kökenini, yolculuğunu ve hedefini tüm tedarik zinciri boyunca takip edin, ESPR'nin şeffaflık gereksinimlerini karşılayan ayrıntılı kayıtlar tutun.",
       "data_security_title": "Veri Güvenliği",
