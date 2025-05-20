@@ -13,13 +13,37 @@ export default function NewsletterBlock() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
-    setTimeout(() => {
-      setStatus("success");
-      setEmail("");
+
+    try {
+      // Call Constant Contact API to add subscriber as a new contact
+      const response = await fetch("/api/newsletter/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setEmail("");
+        setTimeout(() => {
+          setStatus("idle");
+        }, 3000);
+      } else {
+        // Log error but don't expose to user interface
+        setStatus("error");
+        setTimeout(() => {
+          setStatus("idle");
+        }, 3000);
+      }
+    } catch {
+      // Log error but don't expose to user interface
+      setStatus("error");
       setTimeout(() => {
         setStatus("idle");
       }, 3000);
-    }, 1000);
+    }
   };
 
   return (
