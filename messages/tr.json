@@ -448,9 +448,53 @@
         "title": "Dijital İkizler",
         "description": "Dijital ikiz çözümü"
       },
-      "use-safe-certification": {
+      "usesafe-certification": {
         "title": "UseSafe Sertifikasyonu",
-        "description": "Güvenli sertifikasyon sistemi"
+        "description": "Küresel ticarette dijital ürün sertifikasyonu ve izlenebilirliği için kapsamlı bir sistem",
+        "hero_badge": "Dijital Ürün Sertifikasyonu",
+        "hero_title": "UseSafe Sertifikasyonu: Yeni Nesil Ürün Uyumluluğu ve İzlenebilirlik",
+        "hero_description": "Küresel ticarette dijital ürün sertifikasyonu ve izlenebilirliği için kapsamlı bir sistem. Her paydaşa güvenilir, doğrulanabilir ve akıllı uyumluluk gücü sağlar.",
+        "hero_image_alt": "UseSafe dijital ürün sertifikasyon platformu ekran görüntüsü",
+        "intro_title": "UseSafe Nedir?",
+        "intro_description": "UseSafe, tüm ürün kategorileri ve piyasa katılımcıları için mevzuat uyumluluğu, ürün güvenliği ve sürdürülebilirliği sağlayan dijital entegre bir platformdur.",
+        "feature_trust_title": "Küresel Güven İnşa Edin",
+        "feature_trust_description": "Şeffaf ve doğrulanabilir ürün verileriyle tüketici güvenini ve düzenleyici denetimini artırın.",
+        "feature_global_title": "Küresel Uyumluluk",
+        "feature_global_description": "Ulusal ve uluslararası düzenlemeleri tek bir birleşik sertifikasyon sistemiyle karşılayın.",
+        "feature_compliance_title": "Kapsamlı İzlenebilirlik",
+        "feature_compliance_description": "Uyumluluk bilgisini tedarik zinciri boyunca dijital olarak belgeleyin, paylaşın ve izleyin.",
+        "core_purpose_title": "UseSafe'in Temel Amacı",
+        "core_purpose_description": "UseSafe, ürün paydaşlarının ürünleri sertifikalandırmasını, belgelemesini ve izlemesini sağlar; güvenli dijital kimlikler ve uyumluluk geçmişleri sunar.",
+        "purpose_certification_title": "Sertifikalandırma",
+        "purpose_certification_description": "Ürünlerin tüm ilgili mevzuat ve standartlara uygun olduğunu belgeleyin.",
+        "purpose_documentation_title": "Dijital Dokümantasyon",
+        "purpose_documentation_description": "Uyumluluk bilgisini dijital olarak saklayın ve tüm paydaşların erişimine açın.",
+        "purpose_traceability_title": "İzlenebilirlik",
+        "purpose_traceability_description": "Tüketicilere ve düzenleyicilere şeffaf ve izlenebilir ürün geçmişleri sunun.",
+        "purpose_identity_title": "Güvenli Dijital Kimlik",
+        "purpose_identity_description": "Her ürün için hammaddeden ömrü sonuna kadar güvenli bir dijital kimlik oluşturun.",
+        "compliance_title": "Uyumluluk Kapsamı: Küresel Mevzuatlar",
+        "compliance_description": "UseSafe, dünya çapında başlıca düzenleyici çerçeveler altında sertifikasyon desteği sunar:",
+        "compliance_eu": "GPSR, ESPR, DPP, DSA, REACH, CLP, WEEE, RoHS ve daha fazlası.",
+        "compliance_us": "MoCRA, TSCA, CPSIA, FDA etiketleme yönetmelikleri ve daha fazlası.",
+        "compliance_tr": "KKDİK, SEA, CE İşareti, Kozmetik Yönetmeliği ve daha fazlası.",
+        "compliance_uk": "UK REACH, UKCA İşareti, Ürün Güvenliği Standartları ve daha fazlası.",
+        "compliance_other": "Kanada CCPSA, Brezilya ANVISA, ASEAN kimyasal standartları ve daha fazlası.",
+        "sustainability_title": "Sürdürülebilirlik ve Döngüsel Ekonomi",
+        "sustainability_description": "UseSafe, döngüsel ekonomi ilkelerini destekler ve ürün yaşam döngüsünü takip eder:",
+        "sustainability_collection": "Ömrü sonu bilgisi (geri dönüştürülebilirlik, geri alma programları) toplama ve paylaşma.",
+        "sustainability_monitoring": "Onarılabilirlik, yeniden kullanılabilirlik ve sürdürülebilir bertaraf yollarının izlenmesi.",
+        "sustainability_dpp_integration": "Sürdürülebilirlik göstergeleriyle (karbon ayak izi, eko-etiketler) DPP entegrasyonu.",
+        "sustainability_engagement": "Satın alma sonrası talimatlar ve iyileştirme bildirimleriyle tüketici etkileşimi.",
+        "future_title": "Gelecek Vizyonu ve Platform Gelişimi",
+        "future_description": "UseSafe dijital bir ekosistem olarak gelişmeye devam ediyor. Yakında gelecek yenilikler:",
+        "future_marketplace": "Sertifikalı ürünlerin öne çıkarıldığı halka açık bir UseSafe Pazaryeri.",
+        "future_sector_modules": "Sektöre özel modüllerin genişletilmesi (kozmetik, oyuncak, elektronik vb.).",
+        "future_egov": "E-devlet portalları ve gümrük veri tabanlarıyla entegrasyon.",
+        "future_mobile": "Mobil uygulamalar ve etkileşimli tüketici panellerinin geliştirilmesi.",
+        "cta_title": "Ürün Uyumluluğunuzu Dönüştürmeye Hazır mısınız?",
+        "cta_description": "UseSafe Sertifikasyonu'nu uygulamak veya platformun demosunu görmek için bizimle iletişime geçin.",
+        "request_demo": "Demo Talep Edin" 
       }
     }
   },
@@ -643,13 +687,9 @@
       "title": "API integrations (TR)",
       "description": "Integrate systems for scalability (TR)"
     },
-    "udb-integration": {
-      "title": "UDB integration (TR)",
-      "description": "UDB reporting with automation (TR)"
-    },
-    "lca-integrations": {
-      "title": "LCA integrations (TR)",
-      "description": "Integration with Minviro's LCA software (TR)"
+    "digital-twin": {
+      "title": "Digital Twin",
+      "description": "Digital Twins solution"
     }
   }
 }
