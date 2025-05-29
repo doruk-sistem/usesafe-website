@@ -77,7 +77,7 @@ const ComplianceMapSection = () => {
                 aria-hidden={open !== region.key}
               >
                 <div className="tw-text-gray-700 tw-text-base">
-                  {t(region.detailKey)}
+                  {t(region.detailKey as any)}
                 </div>
               </div>
             </div>
