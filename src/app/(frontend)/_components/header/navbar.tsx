@@ -58,6 +58,9 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
   const params = useParams();
   const locale = params.locale as string;
 
+  // eslint-disable-next-line no-console
+  console.log(solutions);
+
   const navItems: NavItem[] = [
     {
       key: "platform",
