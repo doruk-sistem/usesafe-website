@@ -632,8 +632,52 @@
       "description": "Streamline material bookkeeping"
     },
     "usesafe-certification": {
-      "title": "Usesafe certification",
-      "description": "Certify your products with Usesafe"
+      "title": "UseSafe Certification",
+      "description": "Digital Product Certification and Traceability System",
+      "hero_badge": "Digital Product Certification",
+      "hero_title": "UseSafe Certification: Next-Generation Product Compliance & Traceability",
+      "hero_description": "A comprehensive system for digital product certification and traceability in global commerce. Empower every stakeholder with trusted, verifiable, and intelligent compliance.",
+      "hero_image_alt": "UseSafe digital product certification platform screenshot",
+      "intro_title": "What is UseSafe?",
+      "intro_description": "UseSafe is a digitally integrated platform that ensures regulatory compliance, product safety, and sustainability across all product categories and market participants.",
+      "feature_trust_title": "Build Trust Globally",
+      "feature_trust_description": "Enhance consumer trust and regulatory oversight with transparent, verifiable product data.",
+      "feature_global_title": "Global Compliance",
+      "feature_global_description": "Meet national and international regulations with a single, unified certification system.",
+      "feature_compliance_title": "Comprehensive Traceability",
+      "feature_compliance_description": "Digitally document, share, and trace compliance information across the entire supply chain.",
+      "core_purpose_title": "Core Purpose of UseSafe",
+      "core_purpose_description": "UseSafe enables product stakeholders to certify, document, and trace products, providing secure digital identities and compliance histories.",
+      "purpose_certification_title": "Certification",
+      "purpose_certification_description": "Certify that products meet all relevant regulations and standards.",
+      "purpose_documentation_title": "Digital Documentation",
+      "purpose_documentation_description": "Store and share compliance information digitally, accessible to all stakeholders.",
+      "purpose_traceability_title": "Traceability",
+      "purpose_traceability_description": "Offer transparent and traceable product histories to consumers and regulators.",
+      "purpose_identity_title": "Secure Digital Identity",
+      "purpose_identity_description": "Create a secure digital identity for each product from raw material to end-of-life.",
+      "compliance_title": "Compliance Coverage: Global Regulations",
+      "compliance_description": "UseSafe supports certification under major regulatory frameworks worldwide:",
+      "compliance_eu": "GPSR, ESPR, DPP, DSA, REACH, CLP, WEEE, RoHS, and more.",
+      "compliance_us": "MoCRA, TSCA, CPSIA, FDA labeling regulations, and more.",
+      "compliance_tr": "KKDIK, SEA, CE Marking, Cosmetic Regulation, and more.",
+      "compliance_uk": "UK REACH, UKCA Marking, Product Safety Standards, and more.",
+      "compliance_other": "Canada's CCPSA, Brazil's ANVISA, ASEAN chemical standards, and more.",
+      "sustainability_title": "Sustainability & Circular Economy",
+      "sustainability_description": "UseSafe promotes circular economy principles and tracks the full product lifecycle:",
+      "sustainability_collection": "Collection and sharing of end-of-life information (recyclability, take-back programs).",
+      "sustainability_monitoring": "Monitoring repairability, reusability, and sustainable disposal pathways.",
+      "sustainability_dpp_integration": "DPP integration with sustainability indicators (carbon footprint, eco-labels).",
+      "sustainability_engagement": "Consumer engagement with post-purchase instructions and improvement alerts.",
+      "future_title": "Future Outlook & Platform Development",
+      "future_description": "UseSafe continues to evolve as a digital ecosystem. Upcoming innovations include:",
+      "future_marketplace": "A public UseSafe Marketplace to highlight certified products.",
+      "future_sector_modules": "Expansion into sector-specific modules (e.g., cosmetics, toys, electronics).",
+      "future_egov": "Integration with e-government portals and customs databases.",
+      "future_mobile": "Development of mobile apps and interactive consumer dashboards.",
+      "cta_title": "Ready to Transform Your Product Compliance?",
+      "cta_description": "Contact us to implement UseSafe Certification or request a demo to see the platform in action.",
+      "request_demo": "Request a Demo"
     },
     "sustainability-data-disclosure": {
       "title": "Sustainability data disclosure",
@@ -643,13 +687,9 @@
       "title": "API integrations",
       "description": "Integrate systems for scalability"
     },
-    "udb-integration": {
-      "title": "UDB integration",
-      "description": "UDB reporting with automation"
-    },
-    "lca-integrations": {
-      "title": "LCA integrations",
-      "description": "Integration with Minviro's LCA software"
+    "digital-twin": {
+      "title": "Digital Twin",
+      "description": "Digital Twins solution"
     }
   }
 }

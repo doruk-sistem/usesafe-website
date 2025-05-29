@@ -6,13 +6,11 @@ import React, { useState, ElementType } from "react";
 import {
   BsFileEarmarkText,
   BsDatabaseFillCheck,
-  BsShieldCheck,
 } from "react-icons/bs";
 import {
   FaLink,
   FaTshirt,
 } from "react-icons/fa";
-import { FiSettings, FiDatabase } from "react-icons/fi";
 import { GrCycle } from "react-icons/gr";
 import { HiMenu, HiX } from "react-icons/hi";
 
@@ -72,7 +70,7 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
           subItems: [
             { key: "dpp-in-espr", label: t("platform.dpp-in-espr.title"), description: t("platform.dpp-in-espr.description"), href: "/platform/frameworks/dpp-in-espr", icon: BsFileEarmarkText },
             { key: "textile-passport", label: t("platform.textile-passport.title"), description: t("platform.textile-passport.description"), href: "/platform/frameworks/textile-passport", icon: FaTshirt },
-            { key: "custom-frameworks", label: t("platform.custom-frameworks.title"), description: t("platform.custom-frameworks.description"), href: "/platform/frameworks/custom-frameworks", icon: FiSettings },
+            // { key: "custom-frameworks", label: t("platform.custom-frameworks.title"), description: t("platform.custom-frameworks.description"), href: "/platform/frameworks/custom-frameworks", icon: FiSettings },
           ],
         },
         {
@@ -80,8 +78,8 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
           label: t("platform.products"),
           isTitle: true,
           subItems: [
-            { key: "usesafe-certification", label: t("platform.usesafe-certification.title"), description: t("platform.usesafe-certification.description"), href: "/platform/products/usesafe-certification", icon: BsDatabaseFillCheck },
-            { key: "sustainability-data-disclosure", label: t("platform.sustainability-data-disclosure.title"), description: t("platform.sustainability-data-disclosure.description"), href: "/platform/products/sustainability-data-disclosure", icon: BsShieldCheck },
+            { key: "usesafe-certification", label: t("platform.usesafe-certification.title"), description: t("platform.usesafe-certification.description"), href: "/platform/products/usesafe-certification", icon: GrCycle },
+            { key: "digital-twin", label: t("platform.digital-twin.title"), description: t("platform.digital-twin.description"), href: "#", icon: BsDatabaseFillCheck },
           ],
         },
         {
@@ -89,22 +87,20 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
           label: t("platform.integration"),
           isTitle: true,
           subItems: [
-            { key: "api-integrations", label: t("platform.api-integrations.title"), description: t("platform.api-integrations.description"), href: "/platform/integration/api-integrations", icon: FaLink },
-            { key: "udb-integration", label: t("platform.udb-integration.title"), description: t("platform.udb-integration.description"), href: "/platform/integration/udb-integration", icon: FiDatabase },
-            { key: "lca-integrations", label: t("platform.lca-integrations.title"), description: t("platform.lca-integrations.description"), href: "/platform/integration/lca-integrations", icon: GrCycle },
+            { key: "api-integrations", label: t("platform.api-integrations.title"), description: t("platform.api-integrations.description"), href: "#", icon: FaLink },
           ],
         },
       ],
     },
-    {
-      key: "solutions",
-      label: t("common.solutions"),
-      subItems: solutions.map((solution, index) => ({
-        key: `solution-${solution.slug || index}`,
-        label: solution.title,
-        href: `/solutions/${solution.slug}` || `#solution-${index}`,
-      })),
-    },
+    // {
+    //   key: "solutions",
+    //   label: t("common.solutions"),
+    //   subItems: solutions.map((solution, index) => ({
+    //     key: `solution-${solution.slug || index}`,
+    //     label: solution.title,
+    //     href: `/solutions/${solution.slug}` || `#solution-${index}`,
+    //   })),
+    // },
 
     ...sortedDynamicPages.map((page, index): NavItem => ({
       key: `dynamic-${page.slug || index}`,
