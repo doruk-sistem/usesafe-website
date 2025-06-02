@@ -116,7 +116,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     alternateLocale: "tr_TR",
-    url: "https://usesafe-website.vercel.app",
+    url: "https://www.usesafe.com",
     siteName: "UseSafe",
     title: "UseSafe | Digital Product Passport & Traceability Platform",
     description: "Transform your product compliance and traceability with UseSafe's Digital Product Passport solution. Ensure safety, sustainability, and regulatory compliance.",
@@ -141,7 +141,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "UseSafe | Digital Product Passport Platform",
-    description: "Transform product compliance & traceability with UseSafe DPP solution",
+    description: "Transform product compliance & traceability with UseSafe",
     images: [{
       url: "/image/twitter/usesafe-twitter-card.png",
       width: 1200,
@@ -175,16 +175,16 @@ export const metadata: Metadata = {
     icon: [
       { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
       { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico" },
+      { url: "/logos/usesafe-logo.ico" },
     ],
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: ["/favicon.ico"],
+    shortcut: ["/logos/usesafe-logo.ico"],
   },
 
   alternates: {
-    canonical: "https://usesafe-website.vercel.app",
+    canonical: "https://usesafe.com",
     languages: {
       "en": "/en",
       "tr": "/tr",
@@ -197,13 +197,13 @@ export const metadata: Metadata = {
       "@type": "Organization",
       name: "UseSafe",
       url: "https://usesafe-website.vercel.app",
-      logo: "https://usesafe-website.vercel.app/logos/logo-primary.png",
+      logo: "https://usesafe-website.vercel.app/USESAFE_MARKA.png",
       description: "Digital Product Passport and Traceability Solutions",
       sameAs: [
         "https://x.com/Usesafe_",
         "https://www.linkedin.com/company/doruksistem-as",
         "https://www.facebook.com/doruksistem",
-        "https://www.instagram.com/usesafe_safeuse",
+        "https://www.linkedin.com/company/dorukwell",
       ],
       contactPoint: {
         "@type": "ContactPoint",
