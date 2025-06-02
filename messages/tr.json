@@ -186,8 +186,8 @@
       "description": "DPP sistemi, blockchain teknolojisi ve akıllı sözleşmeler kullanarak güvenli ve şeffaf veri paylaşımı sağlar. QR kodları veya RFID etiketleri aracılığıyla ürün bilgilerine kolay erişim sağlanır.",
       "button": "Ücretsiz Danışmanlık"
     }
-  }
-  ,"ContactUs": {
+  },
+  "ContactUs": {
     "page_title": "İletişim",
     "form": {
       "title": "Bize Mesaj Gönderin",
@@ -653,6 +653,9 @@
       "sensitive_data_description": "düzenleyici gereklilikleri karşılarken",
       "transparency_engagement_title": "Şeffaflık ve Katılım",
       "transparency_engagement_description": "gelişmiş ürün şeffaflığı ve tüketici katılımı için",
+      "get_started": "Başlayın"
+    },
+    "usesafe-certification": {
       "get_started": "Başlayın"
     },
     "iscc-plus": {

@@ -10,6 +10,7 @@ import {
   CtaSection,
   StakeholderRoles,
   TechnicalFeatures,
+  FeatureSectionWithImage,
 } from "@/components/Platform";
 import ComplianceMapSection from "@/components/Platform/ComplianceMapSection";
 
@@ -69,44 +70,46 @@ export default function UseSafeCertificationPage() {
       </section>
 
       {/* CORE PURPOSE SECTION */}
-      <section className="tw-py-24 tw-bg-gradient-to-br tw-from-gray-50 tw-to-blue-50">
-        <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6">
-          <SectionHeader
-            title={t("platform.usesafe-certification.core_purpose_title")}
-            description={t("platform.usesafe-certification.core_purpose_description")}
-          />
-          <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-8 tw-mt-12">
-            <FeatureCard
-              icon={<FaShieldAlt className="tw-w-8 tw-h-8" />}
-              title={t("platform.usesafe-certification.purpose_certification_title")}
-              variant="glass"
-            >
-              {t("platform.usesafe-certification.purpose_certification_description")}
-            </FeatureCard>
-            <FeatureCard
-              icon={<FaFileAlt className="tw-w-8 tw-h-8" />}
-              title={t("platform.usesafe-certification.purpose_documentation_title")}
-              variant="glass"
-            >
-              {t("platform.usesafe-certification.purpose_documentation_description")}
-            </FeatureCard>
-            <FeatureCard
-              icon={<FaChartLine className="tw-w-8 tw-h-8" />}
-              title={t("platform.usesafe-certification.purpose_traceability_title")}
-              variant="glass"
-            >
-              {t("platform.usesafe-certification.purpose_traceability_description")}
-            </FeatureCard>
-            <FeatureCard
-              icon={<FaRecycle className="tw-w-8 tw-h-8" />}
-              title={t("platform.usesafe-certification.purpose_identity_title")}
-              variant="glass"
-            >
-              {t("platform.usesafe-certification.purpose_identity_description")}
-            </FeatureCard>
-          </div>
-        </div>
-      </section>
+      <FeatureSectionWithImage
+        title={t("platform.usesafe-certification.core_purpose_title")}
+        description={t("platform.usesafe-certification.core_purpose_description")}
+        features={[
+          {
+            icon: <FaShieldAlt className="tw-w-8 tw-h-8" />,
+            title: t("platform.usesafe-certification.purpose_certification_title"),
+            description: t("platform.usesafe-certification.purpose_certification_description"),
+            delay: 100,
+          },
+          {
+            icon: <FaFileAlt className="tw-w-8 tw-h-8" />,
+            title: t("platform.usesafe-certification.purpose_documentation_title"),
+            description: t("platform.usesafe-certification.purpose_documentation_description"),
+            delay: 200,
+          },
+          {
+            icon: <FaChartLine className="tw-w-8 tw-h-8" />,
+            title: t("platform.usesafe-certification.purpose_traceability_title"),
+            description: t("platform.usesafe-certification.purpose_traceability_description"),
+            delay: 300,
+          },
+          {
+            icon: <FaRecycle className="tw-w-8 tw-h-8" />,
+            title: t("platform.usesafe-certification.purpose_identity_title"),
+            description: t("platform.usesafe-certification.purpose_identity_description"),
+            delay: 400,
+          },
+        ]}
+        imageSrc="/images/platform/usesafe_men_wear.avif"
+        imageAlt="UseSafe Certification Core Purpose"
+        imageOnRight={true}
+        gradientType="light"
+        className="tw-py-24"
+        cta={{
+          text: t("platform.usesafe-certification.get_started"),
+          href: "https://app.usesafe.net/",
+          variant: "primary",
+        }}
+      />
 
       {/* KEY STAKEHOLDERS SECTION */}
       <StakeholderRoles />
