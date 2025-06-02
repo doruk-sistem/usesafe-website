@@ -200,7 +200,7 @@ export const metadata: Metadata = {
       logo: "https://usesafe-website.vercel.app/USESAFE_MARKA.png",
       description: "Digital Product Passport and Traceability Solutions",
       sameAs: [
-        "https://x.com/Usesafe_",
+        "https://x.com/",
         "https://www.linkedin.com/company/doruksistem-as",
         "https://www.facebook.com/doruksistem",
         "https://www.linkedin.com/company/dorukwell",
