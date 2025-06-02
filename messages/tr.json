@@ -656,7 +656,99 @@
       "get_started": "Başlayın"
     },
     "usesafe-certification": {
-      "get_started": "Başlayın"
+      "title": "UseSafe Sertifikasyonu",
+      "description": "Dijital Ürün Sertifikasyonu ve İzlenebilirlik Sistemi",
+      "hero_badge": "Dijital Ürün Sertifikasyonu",
+      "hero_title": "UseSafe Sertifikasyonu: Yeni Nesil Ürün Uyumluluğu ve İzlenebilirliği",
+      "hero_description": "Küresel ticarette dijital ürün sertifikasyonu ve izlenebilirliği için kapsamlı bir sistem. Her paydaşı güvenilir, doğrulanabilir ve akıllı uyumlulukla güçlendirin.",
+      "hero_image_alt": "UseSafe dijital ürün sertifikasyonu platformu",
+      "intro_title": "UseSafe Nedir?",
+      "intro_description": "UseSafe, tüm ürün kategorileri ve pazar katılımcıları genelinde düzenleyici uyumluluğu, ürün güvenliğini ve sürdürülebilirliği sağlayan dijital olarak entegre bir platformdur.",
+      "feature_trust_title": "Küresel Güven Oluşturun",
+      "feature_trust_description": "Şeffaf, doğrulanabilir ürün verileriyle tüketici güvenini ve düzenleyici gözetimi artırın.",
+      "feature_global_title": "Küresel Uyumluluk",
+      "feature_global_description": "Tek, birleşik bir sertifikasyon sistemiyle ulusal ve uluslararası düzenlemeleri karşılayın.",
+      "feature_compliance_title": "Kapsamlı İzlenebilirlik",
+      "feature_compliance_description": "Tüm tedarik zinciri boyunca uyumluluk bilgilerini dijital olarak belgeleyin, paylaşın ve izleyin.",
+      "core_purpose_title": "UseSafe'in Temel Amacı",
+      "core_purpose_description": "UseSafe, ürün paydaşlarının ürünleri sertifikalandırmasını, belgelemesini ve izlemesini sağlayarak güvenli dijital kimlikler ve uyumluluk geçmişleri sağlar.",
+      "purpose_certification_title": "Sertifikasyon",
+      "purpose_certification_description": "Ürünlerin tüm ilgili düzenlemeler ve standartları karşıladığını sertifikalandırın.",
+      "purpose_documentation_title": "Dijital Belgeleme",
+      "purpose_documentation_description": "Uyumluluk bilgilerini dijital olarak depolayın ve paylaşın, tüm paydaşların erişimine açın.",
+      "purpose_traceability_title": "İzlenebilirlik",
+      "purpose_traceability_description": "Tüketicilere ve düzenleyicilere şeffaf ve izlenebilir ürün geçmişleri sunun.",
+      "purpose_identity_title": "Güvenli Dijital Kimlik",
+      "purpose_identity_description": "Her ürün için hammaddeden kullanım ömrü sonuna kadar güvenli bir dijital kimlik oluşturun.",
+      "sustainability_title": "Sürdürülebilirlik ve Döngüsel Ekonomi",
+      "sustainability_description": "UseSafe, döngüsel ekonomi ilkelerini destekler ve tam ürün yaşam döngüsünü takip eder:",
+      "sustainability_collection": "Ömür sonu bilgilerinin toplanması ve paylaşılması (geri dönüştürülebilirlik, geri alım programları).",
+      "sustainability_monitoring": "Onarılabilirlik, yeniden kullanılabilirlik ve sürdürülebilir bertaraf yollarının izlenmesi.",
+      "sustainability_dpp_integration": "Sürdürülebilirlik göstergeleri (karbon ayak izi, çevre etiketleri) ile DPP entegrasyonu.",
+      "sustainability_engagement": "Satış sonrası talimatlar ve iyileştirme uyarıları ile tüketici katılımı.",
+      "future_title": "Gelecek Görünümü ve Platform Geliştirimi",
+      "future_description": "UseSafe, dijital bir ekosistem olarak gelişmeye devam ediyor. Yaklaşan yenilikler şunları içeriyor:",
+      "future_marketplace": "Sertifikalı ürünleri öne çıkarmak için halka açık bir UseSafe Pazaryeri.",
+      "future_sector_modules": "Sektöre özel modüllere genişleme (örn. kozmetik, oyuncak, elektronik).",
+      "future_egov": "E-devlet portalları ve gümrük veritabanlarıyla entegrasyon.",
+      "future_mobile": "Mobil uygulamalar ve etkileşimli tüketici panellerinin geliştirilmesi.",
+      "cta_title": "Ürün Uyumluluğunuzu Dönüştürmeye Hazır mısınız?",
+      "cta_description": "UseSafe Sertifikasyonunu uygulamak için bizimle iletişime geçin veya platformu görmek için demo talep edin.",
+      "request_demo": "Demo Talep Edin",
+      "get_started": "Başlayın",
+      "stakeholders_main_title": "UseSafe Ekosistemindeki Temel Paydaşlar",
+      "stakeholders_learn_more": "Daha Fazla Bilgi Edinin",
+      "stakeholder_manufacturers_label": "Üreticiler ve Marka Sahipleri",
+      "stakeholder_sellers_label": "E-ticaret Satıcıları ve Distribütörleri",
+      "stakeholder_marketplaces_label": "Pazaryerleri ve Perakendeciler",
+      "stakeholder_authorities_label": "Düzenleyici Kurumlar ve Devlet Kurumları",
+      "stakeholder_logistics_label": "Lojistik ve Gümrük Operatörleri",
+      "stakeholder_consumers_label": "Son Tüketiciler",
+      "stakeholder_content": {
+        "manufacturers": {
+          "content_title": "Üreticiler ve Marka Sahipleri",
+          "feature_1": "Yasal yükümlülükleri ve pazar gereksinimlerini yerine getirmek için sertifikasyon süreçlerini başlatın",
+          "feature_2": "Doğrulanmış ürün uyumluluk kimlik bilgileriyle e-ticaret platformlarına erişin",
+          "feature_3": "Doğrulanabilir güvenlik ve kalite sertifikaları ile ürünleri farklılaştırın",
+          "feature_4": "Şeffaf sertifikasyon süreçleri aracılığıyla tüketici güveni oluşturun",
+          "image_alt": "Üreticiler ve marka sahipleri için faydaları temsil eden illüstrasyon"
+        },
+        "sellers": {
+          "content_title": "E-ticaret Satıcıları ve Distribütörleri",
+          "feature_1": "Pazaryerleri ve tüketicilere ürün uyumluluğunu gösterin",
+          "feature_2": "Ürün güvenilirliğini artırmak için UseSafe rozetlerini görüntüleyin",
+          "feature_3": "Azaltılmış düzenleyici riskler ve pazar erişim engellerinden yararlanın",
+          "image_alt": "E-ticaret satıcıları ve distribütörleri için faydaları temsil eden illüstrasyon"
+        },
+        "marketplaces": {
+          "content_title": "Pazaryerleri ve Perakendeciler",
+          "feature_1": "Ürün incelemesi ve uyumluluk doğrulama süreçlerini otomatikleştirin",
+          "feature_2": "Sertifikalı ürünleri arama sonuçlarında ve önerilerde öne çıkarın",
+          "feature_3": "Güvenilir sertifikasyon ortaklarıyla uyumluluk programlarında işbirliği yapın",
+          "image_alt": "Pazaryerleri ve perakendeciler için faydaları temsil eden illüstrasyon"
+        },
+        "authorities": {
+          "content_title": "Düzenleyici Kurumlar ve Devlet Kurumları",
+          "feature_1": "Gerçek zamanlı uyumluluk belgelerine ve raporlamaya erişin",
+          "feature_2": "Pazar gözetimi ve uygulama faaliyetlerini kolaylaştırın",
+          "feature_3": "Dijitalleşme hedefleri ve düzenleyici yenilikle uyum sağlayın",
+          "image_alt": "Düzenleyici kurumlar ve devlet kurumları için faydaları temsil eden illüstrasyon"
+        },
+        "logistics": {
+          "content_title": "Lojistik ve Gümrük Operatörleri",
+          "feature_1": "Uyumluluk belgelerini ve sertifikaları dijital olarak temizleyin",
+          "feature_2": "Tutarsızlıkları ve uyumluluk sorunlarını gerçek zamanlı olarak tespit edin",
+          "feature_3": "İzlenebilir ve sertifikalı ürünlerin işlemesine öncelik verin",
+          "image_alt": "Lojistik ve gümrük operatörleri için faydaları temsil eden illüstrasyon"
+        },
+        "consumers": {
+          "content_title": "Son Tüketiciler",
+          "feature_1": "Satın alma öncesi ürün uyumluluğunu ve güvenliğini doğrulayın",
+          "feature_2": "Kapsamlı yaşam döngüsü verilerine ve sürdürülebilirlik bilgilerine erişin",
+          "feature_3": "Bilinçli ve sürdürülebilir satın alma kararları verin",
+          "image_alt": "Son tüketiciler için faydaları temsil eden illüstrasyon"
+        }
+      }
     },
     "iscc-plus": {
       "title": "ISCC PLUS (TR)",

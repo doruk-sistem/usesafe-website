@@ -20,7 +20,7 @@ import {
   HeroSection,
   SectionHeader,
   CtaSection,
-  TraceTrustSection,
+  SectorTabsSection,
 } from "@/components/Platform";
 
 export default function TextilePassportPage() {
@@ -34,6 +34,49 @@ export default function TextilePassportPage() {
   }, []);
 
   const t = useTranslations();
+
+  const textileSectorsData = [
+    {
+      id: "manufacturers",
+      labelKey: "platform.textile-passport.trace_trust_section.sector_button_manufacturers",
+      contentTitleKey: "content_title",
+      featuresKeys: ["feature_1", "feature_2", "feature_3", "feature_4"],
+      imageSrc: "/images/platform/sector-manufacturers.jpg",
+      imageAltKey: "image_alt",
+    },
+    {
+      id: "service_providers",
+      labelKey: "platform.textile-passport.trace_trust_section.sector_button_service_providers",
+      contentTitleKey: "content_title",
+      featuresKeys: ["feature_1", "feature_2", "feature_3"],
+      imageSrc: "/images/platform/sector-service_providers.jpg",
+      imageAltKey: "image_alt",
+    },
+    {
+      id: "retailers_brands",
+      labelKey: "platform.textile-passport.trace_trust_section.sector_button_retailers_brands",
+      contentTitleKey: "content_title",
+      featuresKeys: ["feature_1", "feature_2", "feature_3", "feature_4"],
+      imageSrc: "/images/platform/sector-retailers_brands.jpg",
+      imageAltKey: "image_alt",
+    },
+    {
+      id: "recyclers",
+      labelKey: "platform.textile-passport.trace_trust_section.sector_button_recyclers",
+      contentTitleKey: "content_title",
+      featuresKeys: ["feature_1", "feature_2", "feature_3"],
+      imageSrc: "/images/platform/sector-recyclers.jpg",
+      imageAltKey: "image_alt",
+    },
+    {
+      id: "consumers",
+      labelKey: "platform.textile-passport.trace_trust_section.sector_button_consumers",
+      contentTitleKey: "content_title",
+      featuresKeys: ["feature_1", "feature_2", "feature_3"],
+      imageSrc: "/images/platform/sector-consumers.jpg",
+      imageAltKey: "image_alt",
+    },
+  ];
 
   return (
     <div className="tw-w-full">
@@ -235,7 +278,13 @@ export default function TextilePassportPage() {
       </section>
 
       {/* TRACE TRUST SECTION */}
-      <TraceTrustSection />
+      <SectorTabsSection
+        mainTitleKey="platform.textile-passport.trace_trust_section.main_title"
+        learnMoreButtonKey="platform.textile-passport.trace_trust_section.learn_more_button"
+        translationNamespace="platform.textile-passport.trace_trust_section.sector_content"
+        sectorsData={textileSectorsData}
+        backgroundColor="white"
+      />
 
       <CtaSection
         title="Ready to Implement Digital Product Passports for ESPR Compliance?"

@@ -678,7 +678,60 @@
       "cta_title": "Ready to Transform Your Product Compliance?",
       "cta_description": "Contact us to implement UseSafe Certification or request a demo to see the platform in action.",
       "request_demo": "Request a Demo",
-      "get_started": "Get Started"
+      "get_started": "Get Started",
+      "stakeholders_main_title": "Key Stakeholders in the UseSafe Ecosystem",
+      "stakeholders_learn_more": "Learn More",
+      "stakeholder_manufacturers_label": "Manufacturers & Brand Owners",
+      "stakeholder_sellers_label": "E-commerce Sellers & Distributors",
+      "stakeholder_marketplaces_label": "Marketplaces & Retailers",
+      "stakeholder_authorities_label": "Regulatory Authorities & Government Agencies",
+      "stakeholder_logistics_label": "Logistics & Customs Operators",
+      "stakeholder_consumers_label": "End Consumers",
+      "stakeholder_content": {
+        "manufacturers": {
+          "content_title": "Manufacturers & Brand Owners",
+          "feature_1": "Initiate certification processes to fulfill legal obligations and market requirements",
+          "feature_2": "Access e-commerce platforms with verified product compliance credentials",
+          "feature_3": "Differentiate products with verifiable safety and quality certifications",
+          "feature_4": "Build consumer trust through transparent certification processes",
+          "image_alt": "Illustration representing benefits for manufacturers and brand owners"
+        },
+        "sellers": {
+          "content_title": "E-commerce Sellers & Distributors",
+          "feature_1": "Demonstrate product compliance to marketplaces and consumers",
+          "feature_2": "Display UseSafe badges to enhance product credibility",
+          "feature_3": "Benefit from reduced regulatory risks and market access barriers",
+          "image_alt": "Illustration representing benefits for e-commerce sellers and distributors"
+        },
+        "marketplaces": {
+          "content_title": "Marketplaces & Retailers",
+          "feature_1": "Automate product vetting and compliance verification processes",
+          "feature_2": "Elevate certified products in search results and recommendations",
+          "feature_3": "Collaborate on compliance programs with trusted certification partners",
+          "image_alt": "Illustration representing benefits for marketplaces and retailers"
+        },
+        "authorities": {
+          "content_title": "Regulatory Authorities & Government Agencies",
+          "feature_1": "Access real-time compliance documentation and reporting",
+          "feature_2": "Streamline market surveillance and enforcement activities",
+          "feature_3": "Align with digitalization goals and regulatory innovation",
+          "image_alt": "Illustration representing benefits for regulatory authorities and government agencies"
+        },
+        "logistics": {
+          "content_title": "Logistics & Customs Operators",
+          "feature_1": "Digitally clear compliance documents and certifications",
+          "feature_2": "Identify discrepancies and compliance issues in real-time",
+          "feature_3": "Prioritize processing of traceable and certified products",
+          "image_alt": "Illustration representing benefits for logistics and customs operators"
+        },
+        "consumers": {
+          "content_title": "End Consumers",
+          "feature_1": "Verify product compliance and safety before purchase",
+          "feature_2": "Access comprehensive lifecycle data and sustainability information",
+          "feature_3": "Make informed and sustainable purchasing decisions",
+          "image_alt": "Illustration representing benefits for end consumers"
+        }
+      }
     },
     "sustainability-data-disclosure": {
       "title": "Sustainability data disclosure",
