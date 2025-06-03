@@ -21,6 +21,13 @@
   - Preserved existing translation keys and structure
   - Enhanced component reusability
 
+- **Newsletter Block Component**: Replaced custom React form with Constant Contact inline form
+  - Removed custom form implementation with email state and submit handler
+  - Integrated Constant Contact inline form with data-form-id="f4e8991a-a588-4780-a79b-093a438678e9"
+  - Simplified component by removing unused imports (useState, Button component)
+  - Maintained existing styling and layout structure
+  - Improved newsletter subscription functionality with external service integration
+
 ### Refactored
 - **TraceTrustSection**: Made the component more generic and reusable
   - Extracted hardcoded values to props
