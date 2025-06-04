@@ -2,6 +2,15 @@
 
 ## [Latest Changes] - 2025-06-02
 
+### Enhanced
+- **Contact Form Terms and Conditions**: Improved user consent experience and transparency
+  - Added proper links to privacy policy and terms of service pages
+  - Implemented interactive info icon with detailed tooltip explaining user rights and data usage
+  - Enhanced transparency about data collection and processing practices
+  - Added clear explanations of what users agree to when submitting the form
+  - Improved compliance with GDPR, CCPA, and other privacy regulations
+  - Enhanced user experience with hover tooltip showing key consent points
+
 ### Added
 - **SectorTabsSection Component**: Created a new reusable component based on TraceTrustSection
   - Configurable sector data through props
