@@ -102,4 +102,62 @@
 - `src/app/(frontend)/(pages)/[locale]/platform/products/usesafe-certification/page.tsx` - Updated to use SectorTabsSection
 - `src/app/(frontend)/(pages)/[locale]/platform/frameworks/textile-passport/page.tsx` - Updated to use SectorTabsSection
 - `messages/tr.json` - Added complete UseSafe certification translations
-- `messages/en.json` - Verified and confirmed existing translations 
+- `messages/en.json` - Verified and confirmed existing translations
+
+## [2024-12-19] - Modern Contact Form Implementation
+
+### Added
+- **ModernContactForm Component**: Created a new modern contact form component in `src/components/Platform/ModernContactForm.tsx`
+  - Two-column layout matching the provided design
+  - Left column with content and call-to-action section
+  - Right column with form fields
+  - Modern styling with borderless inputs and bottom borders
+  - Icon integration for visual enhancement
+  - Responsive design that works on mobile and desktop
+
+- **Type Definitions**: Created `src/components/Platform/types.ts`
+  - `ContactFormData` interface for form data structure
+  - `ModernContactFormProps` interface for component props
+
+### Updated
+- **Platform Components Index**: Updated `src/components/Platform/index.ts` to export new components
+- **Contact Page**: Simplified `src/app/(frontend)/(pages)/[locale]/contact/page.client.tsx` to use the new ModernContactForm component
+
+### Form Fields
+Maintained all required form fields as requested:
+- `fullName`: User's full name (required)
+- `workEmail`: Work email address (required)
+- `phoneNumber`: Phone number (required)
+- `companyName`: Company name (required)
+- `jobTitle`: Job title (required)
+- `country`: Country selection (required)
+- `reasonForReachingOut`: Subject/reason for contact (required)
+- `message`: Message content (required)
+- `acceptTerms`: Terms and conditions acceptance (required)
+
+### Features
+- **Form Validation**: Complete client-side validation for all fields
+- **API Integration**: Maintains compatibility with existing `/api/send-contact-form` endpoint
+- **Accessibility**: Proper ARIA labels, keyboard navigation, and screen reader support
+- **Modern UI/UX**: 
+  - Clean, minimalist design
+  - Smooth transitions and focus states
+  - Professional styling with proper spacing
+  - Call-to-action section with phone contact information
+- **Toast Notifications**: Success and error feedback using react-hot-toast
+- **Internationalization**: Full support for existing translation system
+
+### Technical Implementation
+- **Framework**: React with TypeScript
+- **Styling**: TailwindCSS with custom utilities
+- **Icons**: React Icons (FontAwesome)
+- **Form Handling**: Native React state management
+- **Validation**: Real-time validation with visual feedback
+- **Responsive**: Mobile-first responsive design
+
+### Design Alignment
+- Matches the provided modern contact form design
+- Two-column layout with content on left, form on right
+- Clean typography and spacing
+- Professional color scheme
+- Modern form elements with subtle styling 
