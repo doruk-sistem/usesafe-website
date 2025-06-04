@@ -151,6 +151,85 @@
       "description": "UseSafe logolu ürünlerle kullanıcı dostu alışverişin en iyisini keşfedin. Platformumuz, en yüksek güvenlik standartlarını karşılayan ürünleri bulmanızı ve satın almanızı kolaylaştıran pürüzsüz ve zahmetsiz bir deneyim sunar. UseSafe logosunu taşıyan her ürün, size eşsiz bir huzur sağlamak için titiz test ve sertifikasyon süreçlerinden geçmiştir. Güvenli ve güvenilir ürünleri seçtiğinizi bilerek, göz atmadan ödemeye kadar sorunsuz bir alışveriş yolculuğunun keyfini çıkarın. E-ticaret deneyiminizi UseSafe'in getirdiği güvenle yükseltin."
     }
   },
+  "PrivacyPolicy": {
+    "page_title": "Gizlilik Politikası",
+    "hero": {
+      "title": "Gizlilik Politikası",
+      "description": "Gizliliğiniz bizim için önemlidir. Bu politika, bilgilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar.",
+      "last_updated": "Son güncelleme"
+    },
+    "sections": {
+      "overview": {
+        "title": "Genel Bakış",
+        "content": "Bu gizlilik bildirimi UseSafe (\"Şirket,\" \"biz,\" \"bizim\" veya \"bizimle\") için, hizmetlerimizi (\"Hizmetler\") kullandığınızda, web sitemizi ziyaret ettiğinizde veya bizimle başka şekillerde etkileşime geçtiğinizde bilgilerinizi nasıl ve neden toplayabileceğimizi, saklayabileceğimizi, kullanabileceğimizi ve/veya paylaşabileceğimizi (\"işleme\") açıklar."
+      },
+      "information_we_collect": {
+        "title": "Topladığımız Bilgiler",
+        "content": "Hakkımızda veya ürün ve hizmetlerimiz hakkında bilgi almaya ilgi duyduğunuzda, web sitemizde etkinliklere katıldığınızda veya bizimle iletişime geçtiğinizde gönüllü olarak sağladığınız kişisel bilgileri topluyoruz.",
+        "items": {
+          "personal_information": "Kişisel kimlik bilgileri (Ad, e-posta adresi, telefon numarası)",
+          "business_information": "İş bilgileri (Şirket adı, iş unvanı, ülke)",
+          "communication_data": "İletişim verileri (Bize gönderdiğiniz mesajlar)",
+          "technical_data": "Teknik veriler (IP adresi, tarayıcı türü, cihaz bilgileri)"
+        }
+      },
+      "how_we_use": {
+        "title": "Bilgilerinizi Nasıl Kullanırız",
+        "content": "Kişisel bilgilerinizi, Hizmetlerimizle nasıl etkileşime geçtiğinize bağlı olarak çeşitli nedenlerle işleriz:",
+        "items": {
+          "communication": "Hesap oluşturma ve kimlik doğrulama ile kullanıcı hesaplarını yönetmek",
+          "respond_inquiries": "Kullanıcı sorgularına yanıt vermek/kullanıcılara destek sunmak",
+          "send_marketing": "Size yönetimsel bilgiler göndermek",
+          "fulfill_obligations": "Siparişlerinizi, ödemelerinizi, iadelerinizi ve takaslarınızı yerine getirmek ve yönetmek",
+          "enable_features": "Kullanıcıdan kullanıcıya iletişimi etkinleştirmek",
+          "request_feedback": "Geri bildirim talep etmek ve Hizmetlerimizi kullanımınız hakkında sizinle iletişime geçmek"
+        }
+      },
+      "information_sharing": {
+        "title": "Bilgilerinizi Ne Zaman ve Kimlerle Paylaşırız",
+        "content": "Aşağıdaki durumlarda kişisel bilgilerinizi paylaşmamız gerekebilir:",
+        "items": {
+          "business_transfers": "İş Transferleri: Birleşme, şirket varlıklarının satışı, finansman veya devralma ile bağlantılı olarak veya bu konulardaki müzakereler sırasında bilgilerinizi paylaşabilir veya transfer edebiliriz.",
+          "legal_requirements": "Yasal Gereklilikler: Geçerli yasalara uymak için yasal olarak gerekli olduğu durumlarda bilgilerinizi açıklayabiliriz.",
+          "vital_interests": "Hayati Çıkarlar: Politikalarımızın potansiyel ihlalleri hakkında araştırma yapma, önleme veya harekete geçme konusunda gerekli olduğuna inandığımız durumlarda bilgilerinizi açıklayabiliriz."
+        }
+      },
+      "data_retention": {
+        "title": "Bilgilerinizi Ne Kadar Süre Saklarız",
+        "content": "Kişisel bilgilerinizi yalnızca bu gizlilik bildiriminde belirtilen amaçlar için gerekli olduğu sürece saklayacağız, yasal olarak daha uzun bir saklama süresi gerekli veya izin verilmediği sürece."
+      },
+      "your_rights": {
+        "title": "Gizlilik Haklarınız",
+        "content": "Hesabınızı istediğiniz zaman inceleyebilir, değiştirebilir veya sonlandırabilirsiniz. Bulunduğunuz yere bağlı olarak aşağıdaki haklara sahip olabilirsiniz:",
+        "items": {
+          "access": "Erişim hakkı – Kişisel verilerinizin kopyalarını talep etme hakkınız var",
+          "rectification": "Düzeltme hakkı – Yanlış olduğuna inandığınız bilgileri düzeltmemizi talep etme hakkınız var",
+          "erasure": "Silme hakkı – Kişisel verilerinizi silmemizi talep etme hakkınız var",
+          "restrict": "İşlemeyi kısıtlama hakkı – Kişisel verilerinizin işlenmesini kısıtlamamızı talep etme hakkınız var",
+          "portability": "Veri taşınabilirliği hakkı – Verileri başka bir kuruluşa aktarmamızı talep etme hakkınız var",
+          "object": "İşlemeye itiraz hakkı – Kişisel verilerinizin işlenmesine itiraz etme hakkınız var"
+        }
+      },
+      "security": {
+        "title": "Bilgilerinizi Nasıl Güvenli Tutarız",
+        "content": "İşlediğimiz kişisel bilgilerin güvenliğini korumak için uygun ve makul teknik ve organizasyonel güvenlik önlemleri uyguladık. Ancak, koruma önlemlerimize ve bilgilerinizi güvence altına alma çabalarımıza rağmen, İnternet üzerinden elektronik iletim veya bilgi depolama teknolojisinin %100 güvenli olacağı garanti edilemez."
+      },
+      "cookies": {
+        "title": "Çerezler ve İzleme Teknolojileri",
+        "content": "Bilgilere erişmek veya bilgileri saklamak için çerezler ve benzer izleme teknolojilerini kullanabiliriz. Bu tür teknolojileri nasıl kullandığımız ve belirli çerezleri nasıl reddedebileceğiniz hakkında özel bilgiler Çerez Bildirimizde belirtilmiştir."
+      },
+      "updates": {
+        "title": "Politika Güncellemeleri",
+        "content": "Bu gizlilik bildirimini zaman zaman güncelleyebiliriz. Güncellenmiş sürüm, güncellenmiş bir \"Revize edildi\" tarihi ile belirtilecek ve güncellenmiş sürüm erişilebilir olur olmaz yürürlüğe girecektir."
+      },
+      "contact": {
+        "title": "Bizimle İletişime Geçin",
+        "content": "Bu bildirim hakkında sorularınız veya yorumlarınız varsa, bizimle şu adreslerden iletişime geçebilirsiniz:",
+        "email": "privacy@usesafe.com",
+        "address": "Doruksistem Ltd. Şti., Türkiye"
+      }
+    }
+  },
   "AboutDpp": {
     "dpp_intro": {
       "title": "Dijital Ürün Pasaportu (DPP)",

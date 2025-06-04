@@ -1,6 +1,57 @@
 # Changelog
 
-## [Latest Changes] - 2025-06-02
+## [Latest Changes] - 2025-06-04
+
+### Added
+- **Privacy Policy Page**: Created a comprehensive privacy policy page following the project's design standards
+  - New `PrivacyPolicyContent` component in `src/components/Platform/PrivacyPolicyContent.tsx`
+  - Privacy policy page at `/privacy-policy` route
+  - Full internationalization support with English and Turkish translations
+  - Modern design with sections for overview, data collection, usage, sharing, retention, user rights, security, cookies, and contact information
+  - Responsive layout with icons and professional styling matching the site's design language
+
+### Updated
+- **Internationalization**: Added comprehensive privacy policy translations
+  - English translations in `messages/en.json` under `PrivacyPolicy` namespace
+  - Turkish translations in `messages/tr.json` under `PrivacyPolicy` namespace
+  - Complete translation coverage for all privacy policy sections
+  - Proper GDPR and privacy law compliance content
+
+- **Component Architecture**: Enhanced Platform components structure
+  - Added `PrivacyPolicyContent` export to `src/components/Platform/index.ts`
+  - Created page structure following project conventions:
+    - `src/app/(frontend)/(pages)/[locale]/privacy-policy/page.tsx` (server component)
+    - `src/app/(frontend)/(pages)/[locale]/privacy-policy/page.client.tsx` (client component)
+
+### Features
+- **Modern Privacy Policy UI**: Professional design with clear sections and visual hierarchy
+  - Shield icon header emphasizing security and privacy
+  - Section-based layout with relevant icons for each topic
+  - Contact information section with email and address details
+  - Last updated date display for transparency
+  - Responsive design that works on all devices
+
+- **Content Sections**: Comprehensive privacy policy coverage
+  - Overview of data processing practices
+  - Information collection policies
+  - Data usage explanations
+  - Information sharing guidelines
+  - Data retention policies
+  - User privacy rights (access, rectification, erasure, etc.)
+  - Security measures implementation
+  - Cookies and tracking technologies
+  - Policy update procedures
+  - Contact information for privacy inquiries
+
+### Technical Implementation
+- **Framework**: Next.js with TypeScript and React
+- **Styling**: TailwindCSS with consistent design tokens
+- **Icons**: React Icons (FontAwesome) for visual enhancement
+- **Internationalization**: next-intl integration
+- **Routing**: Next.js App Router with locale support
+- **Accessibility**: Proper semantic HTML and ARIA considerations
+
+## [Previous Changes] - 2025-06-02
 
 ### Enhanced
 - **Contact Form Terms and Conditions**: Improved user consent experience and transparency

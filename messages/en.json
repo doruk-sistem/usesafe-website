@@ -152,6 +152,85 @@
       "description": "Discover the ultimate in user-friendly shopping with UseSafe logo products. Our platform ensures a smooth and effortless experience, making it easy to find and purchase items that meet the highest safety standards. Every product featuring the UseSafe logo has undergone rigorous testing and certification, providing you with unparalleled peace of mind. Enjoy a streamlined shopping journey, from browsing to checkout, knowing you are choosing safe and reliable products. Elevate your e-commerce experience with the confidence that comes from UseSafe."
     }
   },
+  "PrivacyPolicy": {
+    "page_title": "Privacy Policy",
+    "hero": {
+      "title": "Privacy Policy",
+      "description": "Your privacy is important to us. This policy explains how we collect, use, and protect your information.",
+      "last_updated": "Last updated"
+    },
+    "sections": {
+      "overview": {
+        "title": "Overview",
+        "content": "This privacy notice for UseSafe (\"Company,\" \"we,\" \"us,\" or \"our\"), describes how and why we might collect, store, use, and/or share (\"process\") your information when you use our services (\"Services\"), such as when you visit our website or engage with us in other related ways."
+      },
+      "information_we_collect": {
+        "title": "Information We Collect",
+        "content": "We collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and services, when you participate in activities on our website, or otherwise when you contact us.",
+        "items": {
+          "personal_information": "Personal identification information (Name, email address, phone number)",
+          "business_information": "Business information (Company name, job title, country)",
+          "communication_data": "Communication data (Messages you send to us)",
+          "technical_data": "Technical data (IP address, browser type, device information)"
+        }
+      },
+      "how_we_use": {
+        "title": "How We Use Your Information",
+        "content": "We process your personal information for a variety of reasons, depending on how you interact with our Services:",
+        "items": {
+          "communication": "To facilitate account creation and authentication and otherwise manage user accounts",
+          "respond_inquiries": "To respond to user inquiries/offer support to users",
+          "send_marketing": "To send administrative information to you",
+          "fulfill_obligations": "To fulfill and manage your orders, payments, returns, and exchanges",
+          "enable_features": "To enable user-to-user communications",
+          "request_feedback": "To request feedback and to contact you about your use of our Services"
+        }
+      },
+      "information_sharing": {
+        "title": "When and With Whom We Share Your Information",
+        "content": "We may need to share your personal information in the following situations:",
+        "items": {
+          "business_transfers": "Business Transfers: We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition.",
+          "legal_requirements": "Legal Requirements: We may disclose your information where we are legally required to do so in order to comply with applicable law.",
+          "vital_interests": "Vital Interests: We may disclose your information where we believe it is necessary to investigate, prevent, or take action regarding potential violations of our policies."
+        }
+      },
+      "data_retention": {
+        "title": "How Long We Keep Your Information",
+        "content": "We will only keep your personal information for as long as it is necessary for the purposes set out in this privacy notice, unless a longer retention period is required or permitted by law."
+      },
+      "your_rights": {
+        "title": "Your Privacy Rights",
+        "content": "You may review, change, or terminate your account at any time. Depending on your location, you may have the following rights:",
+        "items": {
+          "access": "The right to access – You have the right to request copies of your personal data",
+          "rectification": "The right to rectification – You have the right to request that we correct any information you believe is inaccurate",
+          "erasure": "The right to erasure – You have the right to request that we erase your personal data",
+          "restrict": "The right to restrict processing – You have the right to request that we restrict the processing of your personal data",
+          "portability": "The right to data portability – You have the right to request that we transfer the data to another organization",
+          "object": "The right to object to processing – You have the right to object to our processing of your personal data"
+        }
+      },
+      "security": {
+        "title": "How We Keep Your Information Safe",
+        "content": "We have implemented appropriate and reasonable technical and organizational security measures designed to protect the security of any personal information we process. However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure."
+      },
+      "cookies": {
+        "title": "Cookies and Tracking Technologies",
+        "content": "We may use cookies and similar tracking technologies to access or store information. Specific information about how we use such technologies and how you can refuse certain cookies is set out in our Cookie Notice."
+      },
+      "updates": {
+        "title": "Policy Updates",
+        "content": "We may update this privacy notice from time to time. The updated version will be indicated by an updated \"Revised\" date and the updated version will be effective as soon as it is accessible."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "content": "If you have questions or comments about this notice, you may contact us at:",
+        "email": "info@dorukwell.eu",
+        "address": "DorukWell GmbH, An der Münze 1, 50668 Köln, Germany"
+      }
+    }
+  },
   "AboutDpp": {
     "dpp_intro": {
       "title": "Digital Product Passport (DPP)",
@@ -373,51 +452,6 @@
     "header": {
       "tag": "Predictable pricing",
       "title": "Tailored pricing plans for everyone"
-    },
-    "plans": {
-      "starter": {
-        "tag": "Starter",
-        "title": "Individual",
-        "price": "$29",
-        "period": "Per user/month billed annually*",
-        "features": [
-          { "text": "Marketing strategy", "included": true },
-          { "text": "Competitive work analysis", "included": true },
-          { "text": "Social media share audit", "included": false },
-          { "text": "Monthly management", "included": false }
-        ],
-        "button": "Join this plan",
-        "cancel": "Cancel anytime"
-      },
-      "professional": {
-        "tag": "Professional",
-        "title": "Business",
-        "popular": "Popular",
-        "price": "$39",
-        "period": "Per user/month billed annually*",
-        "features": [
-          { "text": "Marketing strategy", "included": true },
-          { "text": "Competitive work analysis", "included": true },
-          { "text": "Social media share audit", "included": true },
-          { "text": "Monthly management", "included": false }
-        ],
-        "button": "Join this plan",
-        "cancel": "Cancel anytime"
-      },
-      "enterprise": {
-        "tag": "Enterprise",
-        "title": "Corporate",
-        "price": "$59",
-        "period": "Per user/month billed annually*",
-        "features": [
-          { "text": "Marketing strategy", "included": true },
-          { "text": "Competitive work analysis", "included": true },
-          { "text": "Social media share audit", "included": true },
-          { "text": "Monthly management", "included": true }
-        ],
-        "button": "Join this plan",
-        "cancel": "Cancel anytime"
-      }
     },
     "features": [
       {
