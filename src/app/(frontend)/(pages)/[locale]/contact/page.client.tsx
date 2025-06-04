@@ -86,7 +86,7 @@ export default function ContactPageClient() {
             layout: {
               title: t("page_title"),
               backgroundImage: "/images/contact-1.webp",
-              downSectionId: "down-section",
+              downSectionId: "contact-form",
             },
             blockOptions: {
               className: "tw-py-0",
@@ -95,7 +95,7 @@ export default function ContactPageClient() {
         ]}
       />
 
-      <main className="tw-flex-1 tw-container tw-mx-auto tw-px-4 tw-py-12">
+      <main className="tw-flex-1 tw-container tw-mx-auto tw-px-4 tw-py-12" id="contact-form">
         <div className="tw-max-w-3xl tw-mx-auto">
           <form
             onSubmit={handleSubmit}

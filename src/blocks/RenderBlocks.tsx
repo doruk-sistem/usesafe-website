@@ -62,11 +62,11 @@ export default function RenderBlocks({ blocks }: RenderBlocksProps) {
           return null;
         }
 
-        if (blockType === "sliderBlock") {
+        if (blockType === "sliderBlock" || blockType === "pageTitle") {
           return (
             <Fragment key={index}>
               {/* @ts-expect-error - Type safety is handled by BlockTypeProps */}
-              <Component {...block} />
+              <Component {...block.layout} />
             </Fragment>
           );
         }
@@ -74,7 +74,7 @@ export default function RenderBlocks({ blocks }: RenderBlocksProps) {
         return (
           <Section key={index} {...blockOptions}>
             {/* @ts-expect-error - Type safety is handled by BlockTypeProps */}
-            <Component {...block} />
+            <Component {...block.layout} />
           </Section>
         );
       })}
