@@ -230,6 +230,92 @@
       }
     }
   },
+  "TermsOfService": {
+    "page_title": "Hizmet Şartları",
+    "hero": {
+      "title": "Hizmet Şartları",
+      "description": "Bu şartlar hizmetlerimizi kullanımınızı yönetir. Lütfen dikkatlice okuyun.",
+      "last_updated": "Son güncelleme"
+    },
+    "sections": {
+      "overview": {
+        "title": "Genel Bakış",
+        "content": "Bu Hizmet Şartları (\"Şartlar\") DorukWell GmbH (\"Şirket\", \"biz\", \"bizim\" veya \"bizimle\") tarafından işletilen UseSafe web sitesi ve hizmetlerinin (\"Hizmetler\") kullanımınızı yönetir. Hizmetlerimize erişerek veya bunları kullanarak, bu Şartlara bağlı olmayı kabul edersiniz."
+      },
+      "acceptance": {
+        "title": "Şartların Kabulü",
+        "content": "Bu web sitesine erişerek ve kullanarak, bu anlaşmanın şart ve hükümlerine bağlı olmayı kabul etmiş olursunuz. Yukarıdakilere uymayı kabul etmiyorsanız, lütfen bu hizmeti kullanmayın."
+      },
+      "services_description": {
+        "title": "Hizmetlerin Açıklaması",
+        "content": "UseSafe dijital ürün sertifikasyonu, doğrulama ve izlenebilirlik hizmetleri sunar. Platformumuz şunları içerir:",
+        "items": {
+          "certification": "Ürün güvenliği ve uygunluk sertifikasyonu hizmetleri",
+          "verification": "Ürün özgünlük doğrulama ve dijital ürün pasaportları",
+          "digital_passport": "Dijital Ürün Pasaportu (DPP) oluşturma ve yönetimi",
+          "compliance": "Düzenleyici uygunluk takibi ve raporlama"
+        }
+      },
+      "user_obligations": {
+        "title": "Kullanıcı Yükümlülükleri",
+        "content": "Hizmetlerimizin kullanıcısı olarak şunları kabul edersiniz:",
+        "items": {
+          "accurate_information": "Kayıt ve kullanım sırasında doğru, güncel ve eksiksiz bilgi sağlamak",
+          "account_security": "Hesap kimlik bilgilerinizin güvenliğini ve gizliliğini korumak",
+          "prohibited_activities": "Hizmetlerimize zarar verebilecek, devre dışı bırakabilecek veya müdahale edebilecek hiçbir faaliyette bulunmamak",
+          "compliance_laws": "Hizmetlerimizi kullanırken tüm geçerli yasa ve düzenlemelere uymak",
+          "intellectual_property": "UseSafe ve üçüncü tarafların fikri mülkiyet haklarına saygı göstermek"
+        }
+      },
+      "payment_terms": {
+        "title": "Ödeme Şartları",
+        "content": "Ücretli hizmetler için aşağıdaki şartlar geçerlidir:",
+        "items": {
+          "pricing": "Fiyatlar Euro cinsinden gösterilir ve geçerli vergilere tabidir",
+          "billing": "Faturalandırma, seçtiğiniz plana göre aylık veya yıllık olarak işlenir",
+          "refunds": "İadeler, iade politikamıza tabi olarak satın alma tarihinden itibaren 30 gün içinde mevcuttur",
+          "cancellation": "Aboneliğinizi hesap ayarlarınızdan istediğiniz zaman iptal edebilirsiniz"
+        }
+      },
+      "limitations": {
+        "title": "Hizmet Kısıtlamaları ve Feragatnameler",
+        "content": "Lütfen aşağıdaki kısıtlamaları unutmayın:",
+        "items": {
+          "service_availability": "Hizmetler bakım veya teknik sorunlar nedeniyle geçici olarak kullanılamayabilir",
+          "accuracy": "Doğruluk için çaba göstermemize rağmen, tüm bilgilerin eksiksizliğini garanti edemeyiz",
+          "third_party": "Platformumuzdan bağlantılı üçüncü taraf içerik veya hizmetlerden sorumlu değiliz",
+          "liability": "Sorumluluğumuz geçerli yasaların izin verdiği maksimum ölçüde sınırlıdır"
+        }
+      },
+      "intellectual_property": {
+        "title": "Fikri Mülkiyet Hakları",
+        "content": "Tüm içerik, özellikler ve işlevsellik dahil olmak üzere UseSafe platformu DorukWell GmbH'ye aittir ve uluslararası telif hakkı, marka, patent, ticari sır ve diğer fikri mülkiyet yasalarıyla korunmaktadır."
+      },
+      "termination": {
+        "title": "Sonlandırma",
+        "content": "Hesabınızı ve Hizmetlerimize erişiminizi sonlandırma veya askıya alma hakkını saklı tutarız:",
+        "items": {
+          "termination_by_user": "Destek ekibimizle iletişime geçerek hesabınızı istediğiniz zaman sonlandırabilirsiniz",
+          "termination_by_us": "Bu Şartları ihlal eden veya zararlı faaliyetlerde bulunan hesapları sonlandırabiliriz",
+          "effect_termination": "Sonlandırma üzerine, Hizmetleri kullanma hakkınız derhal sona erecektir"
+        }
+      },
+      "governing_law": {
+        "title": "Yürürlükteki Hukuk",
+        "content": "Bu Şartlar Almanya yasalarına göre yönetilir ve yorumlanır. Bu Şartlardan kaynaklanan herhangi bir anlaşmazlık, Köln, Almanya mahkemelerinin münhasır yargı yetkisine tabi olacaktır."
+      },
+      "updates": {
+        "title": "Şartlarda Güncellemeler",
+        "content": "Bu Şartları istediğimiz zaman değiştirme hakkını saklı tutarız. Herhangi bir önemli değişikliği kullanıcılara e-posta veya web sitemiz aracılığıyla bildireceğiz. Değişikliklerden sonra Hizmetlerimizi kullanmaya devam etmek, güncellenmiş Şartları kabul ettiğiniz anlamına gelir."
+      },
+      "contact": {
+        "title": "İletişim Bilgileri",
+        "content": "Bu Hizmet Şartları hakkında sorularınız varsa, lütfen bizimle iletişime geçin:",
+        "email": "info@dorukwell.eu",
+        "address": "DorukWell GmbH, An der Münze 1, 50668 Köln, Almanya"
+      }
+    }
+  },
   "AboutDpp": {
     "dpp_intro": {
       "title": "Dijital Ürün Pasaportu (DPP)",

@@ -3,6 +3,61 @@
 ## [Latest Changes] - 2025-06-04
 
 ### Added
+- **Terms of Service Page**: Created a comprehensive terms of service page following the privacy policy structure
+  - New `TermsOfServiceContent` component in `src/components/Platform/TermsOfServiceContent.tsx`
+  - Terms of service page at `/terms-of-service` route
+  - Full internationalization support with English and Turkish translations
+  - Modern design with sections for overview, acceptance, services description, user obligations, payment terms, limitations, intellectual property, termination, governing law, and contact information
+  - Responsive layout with relevant icons for each section and professional styling
+
+### Updated
+- **Internationalization**: Added comprehensive terms of service translations
+  - English translations in `messages/en.json` under `TermsOfService` namespace
+  - Turkish translations in `messages/tr.json` under `TermsOfService` namespace
+  - Complete translation coverage for all terms of service sections
+  - Legal compliance content for German law jurisdiction
+
+- **Component Architecture**: Enhanced Platform components structure
+  - Added `TermsOfServiceContent` export to `src/components/Platform/index.ts`
+  - Created page structure following project conventions:
+    - `src/app/(frontend)/(pages)/[locale]/terms-of-service/page.tsx` (server component)
+    - `src/app/(frontend)/(pages)/[locale]/terms-of-service/page.client.tsx` (client component)
+
+- **Footer Component**: Updated legal links to properly include locale prefix
+  - Fixed Terms & Conditions and Privacy Policy links in footer to include `/${locale}` prefix
+  - Improved navigation consistency across the application
+
+### Features
+- **Terms of Service UI**: Professional design matching the privacy policy style
+  - File contract icon header emphasizing legal documentation
+  - Section-based layout with relevant icons for each topic (gavel for legal sections, credit card for payments, etc.)
+  - Contact information section with email and address details
+  - Last updated date display for legal transparency
+  - Responsive design that works on all devices
+
+- **Content Sections**: Comprehensive terms of service coverage
+  - Overview of service terms and user agreements
+  - Acceptance of terms policies
+  - Detailed services description (certification, verification, DPP, compliance)
+  - User obligations and responsibilities
+  - Payment terms and billing information
+  - Service limitations and disclaimers
+  - Intellectual property rights protection
+  - Account termination procedures
+  - Governing law (German jurisdiction) and dispute resolution
+  - Terms update procedures
+
+### Technical Implementation
+- **Framework**: Next.js with TypeScript and React
+- **Styling**: TailwindCSS with consistent design tokens matching privacy policy
+- **Icons**: React Icons (FontAwesome) with appropriate legal and business icons
+- **Internationalization**: next-intl integration with complete German/Turkish translations
+- **Routing**: Next.js App Router with locale support
+- **Background Image**: Reused existing background image for consistency
+
+## [Previous Changes] - 2025-06-04
+
+### Added
 - **Privacy Policy Page**: Created a comprehensive privacy policy page following the project's design standards
   - New `PrivacyPolicyContent` component in `src/components/Platform/PrivacyPolicyContent.tsx`
   - Privacy policy page at `/privacy-policy` route

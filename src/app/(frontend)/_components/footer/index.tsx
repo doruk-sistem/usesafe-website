@@ -127,7 +127,7 @@ export default function Footer({ footerData }: FooterProps) {
   <ul className="tw-space-y-4">
     <li>
       <Link
-        href={content.legal.terms.link || "#"}
+        href={`/${locale}${content.legal.terms.link || "#"}`}
         className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors"
       >
         {content.legal.terms.text}
@@ -135,7 +135,7 @@ export default function Footer({ footerData }: FooterProps) {
     </li>
     <li>
       <Link
-        href={content.legal.privacy.link || "#"}
+        href={`/${locale}${content.legal.privacy.link || "#"}`}
         className="tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors"
       >
         {content.legal.privacy.text}
