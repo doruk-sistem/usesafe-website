@@ -56,7 +56,7 @@ export default function ContactPageClient() {
     e.preventDefault();
 
     if (!formData.acceptTerms) {
-      toast.error("Please accept the terms and conditions");
+      toast.error(t("form.validation.accept_terms"));
       return;
     }
     setIsSubmitting(true);
@@ -134,13 +134,13 @@ export default function ContactPageClient() {
           >
             <div className="tw-mb-10 tw-text-center">
               <h2 className="tw-text-3xl md:tw-text-4xl tw-font-bold tw-text-gray-900 tw-mb-4">
-                Let's Start a Conversation
+                {t("hero.title")}
               </h2>
               <p className="tw-text-lg tw-text-gray-600 tw-mb-2">
-                Ready to transform your business? We'd love to hear from you.
+                {t("hero.description")}
               </p>
               <p className="tw-text-base tw-text-gray-500">
-                Fill out the form below and our team will get back to you within 24 hours.
+                {t("hero.subtitle")}
               </p>
             </div>
 
@@ -148,7 +148,7 @@ export default function ContactPageClient() {
               {/* Full Name - Single Column */}
               <div>
                 <label className="tw-block tw-text-base tw-font-medium tw-mb-2 tw-text-blue-600">
-                  Full name*
+                  {t("form.fields.full_name.label")}*
                 </label>
                 <input
                   type="text"
@@ -157,7 +157,8 @@ export default function ContactPageClient() {
                   value={formData.fullName}
                   onChange={handleInputChange}
                   className="tw-w-full tw-px-4 tw-py-3 tw-border tw-border-gray-300 tw-rounded-lg focus:tw-ring-2 focus:tw-ring-blue-500/20 focus:tw-border-blue-500 tw-transition-all tw-text-base"
-                  aria-label="Full name"
+                  placeholder={t("form.fields.full_name.placeholder")}
+                  aria-label={t("form.fields.full_name.label")}
                 />
               </div>
 
@@ -165,7 +166,7 @@ export default function ContactPageClient() {
               <div className="tw-grid md:tw-grid-cols-2 tw-gap-6">
                 <div>
                   <label className="tw-block tw-text-base tw-font-medium tw-mb-2 tw-text-blue-600">
-                    Work email*
+                    {t("form.fields.work_email.label")}*
                   </label>
                   <input
                     type="email"
@@ -174,21 +175,22 @@ export default function ContactPageClient() {
                     value={formData.workEmail}
                     onChange={handleInputChange}
                     className="tw-w-full tw-px-4 tw-py-3 tw-border tw-border-gray-300 tw-rounded-lg focus:tw-ring-2 focus:tw-ring-blue-500/20 focus:tw-border-blue-500 tw-transition-all tw-text-base"
-                    aria-label="Work email"
+                    placeholder={t("form.fields.work_email.placeholder")}
+                    aria-label={t("form.fields.work_email.label")}
                   />
                 </div>
 
                 <div>
                   <label className="tw-block tw-text-base tw-font-medium tw-mb-2 tw-text-blue-600">
-                    Phone number*
+                    {t("form.fields.phone_number.label")}*
                   </label>
                   <input
                     type="tel"
                     name="phoneNumber"
                     required
                     value={formData.phoneNumber}
-                    placeholder="Enter your phone number"
-                    aria-label="Phone number"
+                    placeholder={t("form.fields.phone_number.placeholder")}
+                    aria-label={t("form.fields.phone_number.label")}
                     onChange={handleInputChange}
                     className="tw-w-full tw-px-4 tw-py-3 tw-border tw-border-gray-300 tw-rounded-lg focus:tw-ring-2 focus:tw-ring-blue-500/20 focus:tw-border-blue-500 tw-transition-all tw-text-base"
                   />
@@ -199,7 +201,7 @@ export default function ContactPageClient() {
               <div className="tw-grid md:tw-grid-cols-2 tw-gap-6">
                 <div>
                   <label className="tw-block tw-text-base tw-font-medium tw-mb-2 tw-text-blue-600">
-                    Company name*
+                    {t("form.fields.company_name.label")}*
                   </label>
                   <input
                     type="text"
@@ -208,14 +210,14 @@ export default function ContactPageClient() {
                     value={formData.companyName}
                     onChange={handleInputChange}
                     className="tw-w-full tw-px-4 tw-py-3 tw-border tw-border-gray-300 tw-rounded-lg focus:tw-ring-2 focus:tw-ring-blue-500/20 focus:tw-border-blue-500 tw-transition-all tw-text-base"
-                    aria-label="Company name"
-                    placeholder="Enter your company name"
+                    aria-label={t("form.fields.company_name.label")}
+                    placeholder={t("form.fields.company_name.placeholder")}
                   />
                 </div>
 
                 <div>
                   <label className="tw-block tw-text-base tw-font-medium tw-mb-2 tw-text-blue-600">
-                    Job title*
+                    {t("form.fields.job_title.label")}*
                   </label>
                   <input
                     type="text"
@@ -224,8 +226,8 @@ export default function ContactPageClient() {
                     value={formData.jobTitle}
                     onChange={handleInputChange}
                     className="tw-w-full tw-px-4 tw-py-3 tw-border tw-border-gray-300 tw-rounded-lg focus:tw-ring-2 focus:tw-ring-blue-500/20 focus:tw-border-blue-500 tw-transition-all tw-text-base"
-                    aria-label="Job title"
-                    placeholder="Enter your job title"
+                    aria-label={t("form.fields.job_title.label")}
+                    placeholder={t("form.fields.job_title.placeholder")}
                   />
                 </div>
               </div>
@@ -234,7 +236,7 @@ export default function ContactPageClient() {
               <div className="tw-grid md:tw-grid-cols-2 tw-gap-6">
                 <div>
                   <label className="tw-block tw-text-base tw-font-medium tw-mb-2 tw-text-blue-600">
-                    Country*
+                    {t("form.fields.country.label")}*
                   </label>
                   <select
                     name="country"
@@ -242,7 +244,7 @@ export default function ContactPageClient() {
                     value={formData.country}
                     onChange={handleInputChange}
                     className="tw-w-full tw-px-4 tw-py-3 tw-border tw-border-gray-300 tw-rounded-lg focus:tw-ring-2 focus:tw-ring-blue-500/20 focus:tw-border-blue-500 tw-transition-all tw-text-base tw-bg-white"
-                    aria-label="Country"
+                    aria-label={t("form.fields.country.label")}
                   >
                     {countries.map((country) => (
                       <option key={country.value} value={country.value}>
@@ -254,7 +256,7 @@ export default function ContactPageClient() {
 
                 <div>
                   <label className="tw-block tw-text-base tw-font-medium tw-mb-2 tw-text-blue-600">
-                    Reason for reaching out*
+                    {t("form.fields.reason_for_reaching_out.label")}*
                   </label>
                   <select
                     name="reasonForReachingOut"
@@ -262,7 +264,7 @@ export default function ContactPageClient() {
                     value={formData.reasonForReachingOut}
                     onChange={handleInputChange}
                     className="tw-w-full tw-px-4 tw-py-3 tw-border tw-border-gray-300 tw-rounded-lg focus:tw-ring-2 focus:tw-ring-blue-500/20 focus:tw-border-blue-500 tw-transition-all tw-text-base tw-bg-white"
-                    aria-label="Reason for reaching out"
+                    aria-label={t("form.fields.reason_for_reaching_out.label")}
                   >
                     {reasonsForReachingOut.map((reason) => (
                       <option key={reason.value} value={reason.label}>
@@ -276,7 +278,7 @@ export default function ContactPageClient() {
               {/* Message */}
               <div>
                 <label className="tw-block tw-text-base tw-font-medium tw-mb-2 tw-text-blue-600">
-                  Message*
+                  {t("form.fields.message.label")}*
                 </label>
                 <textarea
                   name="message"
@@ -285,7 +287,7 @@ export default function ContactPageClient() {
                   value={formData.message}
                   onChange={handleInputChange}
                   className="tw-w-full tw-px-4 tw-py-3 tw-border tw-border-gray-300 tw-rounded-lg focus:tw-ring-2 focus:tw-ring-blue-500/20 focus:tw-border-blue-500 tw-transition-all tw-text-base"
-                  placeholder="Let us know what you're looking for!"
+                  placeholder={t("form.fields.message.placeholder")}
                 />
               </div>
 
@@ -302,39 +304,37 @@ export default function ContactPageClient() {
                 />
                 <div className="tw-flex tw-items-center tw-space-x-2">
                   <label htmlFor="acceptTerms" className="tw-text-gray-700 tw-text-base">
-                    I accept the{" "}
+                    {t("form.terms.text")}{" "}
                     <a
                       href="/privacy-policy"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="tw-text-blue-600 hover:tw-text-blue-700 tw-underline"
                     >
-                      privacy policy
+                      {t("form.terms.privacy_policy")}
                     </a>
-                    {" "}and{" "}
+                    {" "}{t("form.terms.and")}{" "}
                     <a
                       href="/terms-of-service"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="tw-text-blue-600 hover:tw-text-blue-700 tw-underline"
                     >
-                      terms of service
+                      {t("form.terms.terms_of_service")}
                     </a>
                   </label>
                   <div className="tw-relative tw-group">
                     <FaInfoCircle className="tw-text-gray-400 tw-text-sm hover:tw-text-gray-600 tw-cursor-help" />
                     <div className="tw-absolute tw-bottom-full tw-left-1/2 tw-transform tw--translate-x-1/2 tw-mb-2 tw-w-80 tw-p-4 tw-bg-gray-900 tw-text-white tw-text-sm tw-rounded-lg tw-shadow-lg tw-opacity-0 tw-invisible group-hover:tw-opacity-100 group-hover:tw-visible tw-transition-all tw-duration-200 tw-z-10">
                       <div className="tw-space-y-2">
-                        <b className="tw-font-semibold tw-text-white">What you're agreeing to:</b>
+                        <b className="tw-font-semibold tw-text-white">{t("form.terms.tooltip.title")}</b>
                         <ul className="tw-space-y-1 tw-text-xs">
-                          <li>• We'll use your information to respond to your inquiry</li>
-                          <li>• Your data will be processed according to our privacy policy</li>
-                          <li>• We may contact you via email or phone regarding your request</li>
-                          <li>• Your information will be stored securely and not shared with third parties for marketing</li>
-                          <li>• You can request deletion of your data at any time</li>
+                          {t.raw("form.terms.tooltip.items").map((item: string, index: number) => (
+                            <li key={index}>• {item}</li>
+                          ))}
                         </ul>
                         <p className="tw-text-xs tw-text-gray-300 tw-mt-2">
-                          Click the links above to read our full policies.
+                          {t("form.terms.tooltip.footer")}
                         </p>
                       </div>
                       <div className="tw-absolute tw-top-full tw-left-1/2 tw-transform tw--translate-x-1/2 tw-w-0 tw-h-0 tw-border-l-4 tw-border-r-4 tw-border-t-4 tw-border-l-transparent tw-border-r-transparent tw-border-t-gray-900"></div>
@@ -350,7 +350,7 @@ export default function ContactPageClient() {
                   disabled={isSubmitting || !isFormValid()}
                   className="tw-w-full tw-bg-slate-800 tw-text-white tw-px-8 tw-py-4 tw-rounded-full tw-font-medium tw-text-lg hover:tw-bg-slate-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-slate-500 focus:tw-ring-offset-2 tw-transition-all disabled:tw-opacity-50 disabled:tw-cursor-not-allowed"
                 >
-                  {isSubmitting ? "Sending..." : "Submit"}
+                  {isSubmitting ? t("form.submit.sending") : t("form.submit.send")}
                 </button>
               </div>
             </div>

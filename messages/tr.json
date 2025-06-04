@@ -189,34 +189,71 @@
   },
   "ContactUs": {
     "page_title": "İletişim",
+    "hero": {
+      "title": "Bir Konuşma Başlatalım",
+      "description": "İşletmenizi dönüştürmeye hazır mısınız? Sizden haber almayı çok isteriz.",
+      "subtitle": "Aşağıdaki formu doldurun, ekibimiz 24 saat içinde size geri dönüş yapacak."
+    },
     "form": {
       "title": "Bize Mesaj Gönderin",
       "description": "Aşağıdaki formu doldurun, en kısa sürede size geri döneceğiz.",
       "fields": {
         "full_name": {
           "label": "Ad Soyad",
-          "placeholder": "John Doe"
+          "placeholder": "Ad ve soyadınızı girin"
         },
-        "email": {
-          "label": "E-posta",
-          "placeholder": "john@example.com"
+        "work_email": {
+          "label": "İş e-postası",
+          "placeholder": "İş e-posta adresinizi girin"
         },
-        "phone": {
-          "label": "Telefon",
-          "placeholder": "+90 (___) ___ __ __"
+        "phone_number": {
+          "label": "Telefon numarası",
+          "placeholder": "Telefon numaranızı girin"
         },
-        "subject": {
-          "label": "Konu",
-          "placeholder": "Size nasıl yardımcı olabiliriz?"
+        "company_name": {
+          "label": "Şirket adı",
+          "placeholder": "Şirket adınızı girin"
+        },
+        "job_title": {
+          "label": "İş unvanı",
+          "placeholder": "İş unvanınızı girin"
+        },
+        "country": {
+          "label": "Ülke",
+          "placeholder": "Ülkenizi seçin"
+        },
+        "reason_for_reaching_out": {
+          "label": "İletişim kurma sebebi",
+          "placeholder": "Sebep seçin"
         },
         "message": {
           "label": "Mesaj",
-          "placeholder": "Mesajınızı buraya yazın..."
+          "placeholder": "Ne aradığınızı bize bildirin!"
+        }
+      },
+      "terms": {
+        "text": "Kabul ediyorum",
+        "privacy_policy": "gizlilik politikası",
+        "and": "ve",
+        "terms_of_service": "hizmet şartları",
+        "tooltip": {
+          "title": "Neyi kabul ettiğiniz:",
+          "items": [
+            "Bilgilerinizi sorgunuza yanıt vermek için kullanacağız",
+            "Verileriniz gizlilik politikamıza göre işlenecektir",
+            "Talebiniz hakkında e-posta veya telefon ile iletişime geçebiliriz",
+            "Bilgileriniz güvenli bir şekilde saklanacak ve pazarlama için üçüncü taraflarla paylaşılmayacaktır",
+            "Verilerinizin silinmesini istediğiniz zaman talep edebilirsiniz"
+          ],
+          "footer": "Tam politikalarımızı okumak için yukarıdaki bağlantılara tıklayın."
         }
       },
       "submit": {
         "sending": "Gönderiliyor...",
-        "send": "Mesaj Gönder"
+        "send": "Gönder"
+      },
+      "validation": {
+        "accept_terms": "Lütfen şartları ve koşulları kabul edin"
       },
       "toast": {
         "success": {

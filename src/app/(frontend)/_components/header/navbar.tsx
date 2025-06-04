@@ -51,15 +51,12 @@ interface NavItem {
   }>;
 }
 
-export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProps) {
+export default function Navbar({ dynamicPages = [] }: NavbarProps) {
   const t = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const sortedDynamicPages = [...dynamicPages].sort((a, b) => a.menuOrder - b.menuOrder);
   const params = useParams();
   const locale = params.locale as string;
-
-  // eslint-disable-next-line no-console
-  console.log(solutions);
 
   const navItems: NavItem[] = [
     {
@@ -147,7 +144,7 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
 
           <div className="tw-hidden xl:tw-flex tw-items-center tw-space-x-1">
             {/* <SwitchLanguage /> */}
-            <a href="/demo">
+            <a href="/contact">
               <Button variant="default">{t("common.try_for_free")}</Button>
             </a>
           </div>
@@ -178,9 +175,11 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
                 />
               ))}
               <div className="tw-flex tw-flex-col tw-space-y-2 tw-px-4">
-                <Button variant="default" size="lg" className="tw-w-full">
-                  {t("common.try_for_free")}
-                </Button>
+                <a href="/contact">
+                  <Button variant="default" size="lg" className="tw-w-full">
+                    {t("common.try_for_free")}
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
