@@ -7,7 +7,6 @@ import { FaCheck } from "react-icons/fa";
 import { HiArrowNarrowRight } from "react-icons/hi";
 
 import ButtonSwitchAnimation from "@/app/(frontend)/_components/button-switch-animation";
-import Footer from "@/app/(frontend)/_components/footer";
 import NewsletterBlock from "@/blocks/newsletter-block";
 import RenderBlocks from "@/blocks/RenderBlocks";
 
@@ -205,7 +204,6 @@ export default function ContactPageClient() {
         </div>
       </main>
       <NewsletterBlock />
-      <Footer />
     </div>
   );
 }

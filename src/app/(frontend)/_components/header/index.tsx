@@ -33,8 +33,8 @@ export default function Header({
         const response = await fetch("/api/solutions");
         const data = await response.json();
         setSolutions(data?.docs || []);
-      } catch (error) {
-        console.error("Failed to fetch solutions:", error);
+      } catch {
+        // Failed to fetch solutions
       }
     }
 

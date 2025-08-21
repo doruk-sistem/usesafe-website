@@ -11,12 +11,12 @@ export default async function HomePage() {
     const payload = await initPayload();
 
     const homepage = await payload.findGlobal({
-      slug: "homepage" as any,
-      locale: locale as any,
+      slug: "homepage",
+      locale: locale as "en" | "tr",
     });
     return <PageClient layout={homepage.layout} />;
-  } catch (error) {
-    console.error("Error loading homepage:", error);
+  } catch {
+    // Error loading homepage
     return <PageClient layout={[]} />;
   }
 }

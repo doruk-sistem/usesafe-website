@@ -81,7 +81,7 @@ export function SliderBlock({ sliders, clients }: SliderBlock) {
         {clients && Array.isArray(clients) && clients.length > 0 && (
           <div className="tw-py-10">
             <ClientsBlock
-              clients={clients as any}
+              clients={clients}
               type="slick"
               gradientColor="transparent"
             />

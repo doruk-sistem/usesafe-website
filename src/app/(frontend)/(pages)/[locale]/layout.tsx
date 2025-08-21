@@ -37,8 +37,8 @@ async function getHeaderData(locale: string) {
     }));
 
     return { dynamicPages };
-  } catch (error) {
-    console.error("Error fetching header data:", error);
+  } catch {
+    // Error fetching header data
     return { dynamicPages: [] };
   }
 }
@@ -232,7 +232,7 @@ export default async function LocaleLayout({
   const params = await paramsPromise;
   const { locale } = params;
 
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as "en" | "tr")) {
     notFound();
   }
 

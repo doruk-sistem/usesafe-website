@@ -1,9 +1,9 @@
 
-function isObject(item: any): item is Record<string, any> {
-  return item && typeof item === "object" && !Array.isArray(item);
+function isObject(item: unknown): item is Record<string, unknown> {
+  return Boolean(item && typeof item === "object" && !Array.isArray(item));
 }
 
-export function deepMerge<T extends Record<string, any>>(
+export function deepMerge<T extends Record<string, unknown>>(
   target: T,
   ...sources: T[]
 ): T {
@@ -14,7 +14,7 @@ export function deepMerge<T extends Record<string, any>>(
     for (const key in source) {
       if (isObject(source[key])) {
         if (!target[key]) Object.assign(target, { [key]: {} });
-        deepMerge(target[key], source[key]);
+        deepMerge(target[key] as Record<string, unknown>, source[key] as Record<string, unknown>);
       } else {
         Object.assign(target, { [key]: source[key] });
       }

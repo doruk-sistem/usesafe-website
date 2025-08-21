@@ -10,27 +10,27 @@ export const footerData = {
             url: "/usesafe",
             isActive: true,
             order: 1,
-            id: "usesafe"
+            id: "usesafe",
           },
           {
             text: "DIGITAL TWINS",
             url: "/digital-twins",
             isActive: true,
             order: 2,
-            id: "digital-twins"
-          }
-        ]
+            id: "digital-twins",
+          },
+        ],
       },
       legal: {
         title: "LEGAL",
         terms: {
           text: "Terms & Conditions",
-          link: "/terms-conditions"
+          link: "/terms-conditions",
         },
         privacy: {
           text: "Privacy Policy",
-          link: "/privacy-policy"
-        }
+          link: "/privacy-policy",
+        },
       },
       social: {
         title: "SOCIAL MEDIA",
@@ -40,30 +40,30 @@ export const footerData = {
             url: "https://linkedin.com/company/usesafe",
             isActive: true,
             order: 1,
-            id: "linkedin"
+            id: "linkedin",
           },
           {
             name: "facebook" as const,
             url: "https://facebook.com/usesafe",
             isActive: true,
             order: 2,
-            id: "facebook"
+            id: "facebook",
           },
           {
             name: "instagram" as const,
             url: "https://instagram.com/usesafe",
             isActive: true,
             order: 3,
-            id: "instagram"
+            id: "instagram",
           },
           {
             name: "twitter" as const,
             url: "https://twitter.com/usesafe",
             isActive: true,
             order: 4,
-            id: "twitter"
-          }
-        ]
+            id: "twitter",
+          },
+        ],
       },
       newsletter: {
         title: "CONTACT",
@@ -78,7 +78,7 @@ export const footerData = {
             maps: "https://maps.google.com/?q=An+der+Münze+1,+50668+Köln+Germany",
             isActive: true,
             order: 1,
-            id: "germany"
+            id: "germany",
           },
           {
             country: "turkey",
@@ -87,10 +87,10 @@ export const footerData = {
             maps: "https://maps.google.com/?q=Fahrettin+Kerim+Gökay+Cd.+74/2,+34730+Kadikoy+Turkey",
             isActive: true,
             order: 2,
-            id: "turkey"
-          }
-        ]
-      }
-    }
-  }
+            id: "turkey",
+          },
+        ],
+      },
+    },
+  },
 };

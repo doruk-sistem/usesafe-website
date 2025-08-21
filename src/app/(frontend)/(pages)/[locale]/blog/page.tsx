@@ -7,7 +7,6 @@ import { useParams } from "next/navigation";
 import React, { useRef, useEffect, useState } from "react";
 
 import { Button } from "@/app/(frontend)/_components/button";
-import Footer from "@/app/(frontend)/_components/footer";
 
 interface PayloadBlogDoc {
   id: string;
@@ -16,7 +15,7 @@ interface PayloadBlogDoc {
     url: string;
   };
   createdAt: string;
-  content: any;
+  content: Record<string, unknown>;
   excerpt?: string;
   author?: {
     name: string;
@@ -163,8 +162,8 @@ export default function BlogPage() {
         if (!response.ok) throw new Error("Blog verileri çekilemedi");
         const data = await response.json();
         setBlogs(data.docs || []);
-      } catch (error) {
-        console.error("Error fetching blogs:", error);
+      } catch {
+        // Error fetching blogs
         setBlogs([]);
       } finally {
         setIsLoading(false);
@@ -180,7 +179,6 @@ export default function BlogPage() {
         <h2 className="tw-text-4xl tw-font-bold tw-text-center tw-mb-12">{locale === "tr" ? "Blog Yazıları" : "Blog Posts"}</h2>
         <BlogList blogs={blogs} isLoading={isLoading} locale={locale as string} />
       </section>
-      <Footer />
     </div>
   );
 }

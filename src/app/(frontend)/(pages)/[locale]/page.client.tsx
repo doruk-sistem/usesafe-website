@@ -13,7 +13,7 @@ interface PageClientProps {
 export default function PageClient({ layout }: PageClientProps) {
   return (
     <div>
-      <RenderBlocks blocks={layout as any} />
+      <RenderBlocks blocks={(layout || []) as any} />
       <NewsletterBlock />
     </div>
   );
