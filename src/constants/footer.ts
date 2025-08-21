@@ -1,34 +1,41 @@
 export const footerData = {
   content: {
     en: {
-      copyright: "© 2025 by UseSafe.",
+      copyright: "© 2025 Usesafe. All rights reserved.",
       company: {
-        title: "COMPANY",
+        title: "Company",
         links: [
           {
-            text: "USESAFE",
-            url: "/usesafe",
+            text: "UseSafe Certification",
+            url: "/platform/products/usesafe-certification",
             isActive: true,
             order: 1,
-            id: "usesafe",
+            id: "usesafe-certification",
           },
           {
-            text: "DIGITAL TWINS",
-            url: "/digital-twins",
+            text: "DPP in ESPR",
+            url: "/platform/frameworks/dpp-in-espr",
             isActive: true,
             order: 2,
-            id: "digital-twins",
+            id: "dpp-in-espr",
+          },
+          {
+            text: "Textile Passport",
+            url: "/platform/frameworks/textile-passport",
+            isActive: true,
+            order: 3,
+            id: "textile-passport",
           },
         ],
       },
       legal: {
         title: "LEGAL",
         terms: {
-          text: "Terms & Conditions",
-          link: "/terms-conditions",
+          text: "Terms",
+          link: "#",
         },
         privacy: {
-          text: "Privacy Policy",
+          text: "Privacy",
           link: "/privacy-policy",
         },
       },
@@ -43,33 +50,26 @@ export const footerData = {
             id: "linkedin",
           },
           {
-            name: "facebook" as const,
-            url: "https://facebook.com/usesafe",
-            isActive: true,
-            order: 2,
-            id: "facebook",
-          },
-          {
             name: "instagram" as const,
             url: "https://instagram.com/usesafe",
             isActive: true,
-            order: 3,
+            order: 2,
             id: "instagram",
           },
           {
             name: "twitter" as const,
             url: "https://twitter.com/usesafe",
             isActive: true,
-            order: 4,
+            order: 3,
             id: "twitter",
           },
         ],
       },
       newsletter: {
         title: "CONTACT",
-        company: "DORUKSISTEM",
-        email: "info@usesafe.net",
-        phone: "+90-850-532-35-97",
+        company: "DorukWell GmbH",
+        email: "info@dorukwell.eu",
+        phone: "Tell: +90-850-532-35-97",
         addresses: [
           {
             country: "germany",
@@ -79,15 +79,6 @@ export const footerData = {
             isActive: true,
             order: 1,
             id: "germany",
-          },
-          {
-            country: "turkey",
-            street: "Fahrettin Kerim Gökay Cd. 74/2",
-            city: "34730 Kadikoy Turkiye",
-            maps: "https://maps.google.com/?q=Fahrettin+Kerim+Gökay+Cd.+74/2,+34730+Kadikoy+Turkey",
-            isActive: true,
-            order: 2,
-            id: "turkey",
           },
         ],
       },
