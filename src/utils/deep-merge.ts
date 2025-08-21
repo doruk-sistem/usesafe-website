@@ -3,7 +3,7 @@ function isObject(item: unknown): item is Record<string, unknown> {
   return Boolean(item && typeof item === "object" && !Array.isArray(item));
 }
 
-export function deepMerge<T extends Record<string, unknown>>(
+export function deepMerge<T>(
   target: T,
   ...sources: T[]
 ): T {
