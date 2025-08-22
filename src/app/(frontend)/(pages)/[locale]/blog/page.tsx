@@ -58,24 +58,18 @@ export default function BlogPage() {
                   </div>
                   <div className="tw-p-6">
                     <h3 className="tw-text-xl tw-font-semibold tw-mb-2 tw-text-gray-800">
-                      {locale === "tr" 
-                        ? "Türkiye'nin Yeni E-Ticaret Ürün Güvenliği Yönetmeliği: Uluslararası Üreticiler İçin Rehber"
-                        : "Turkey&apos;s New E-Commerce Product Safety Regulation: A Guide for International Manufacturers"
-                      }
+                      Turkey&apos;s New E-Commerce Product Safety Regulation: A Guide for International Manufacturers
                     </h3>
                     <p className="tw-text-gray-600 tw-mb-4 tw-line-clamp-3">
-                      {locale === "tr"
-                        ? "Türkiye'de e-ticaret ürün güvenliği konusunda yeni düzenlemeler yürürlüğe girdi. Bu rehber, uluslararası üreticilerin bu düzenlemelere uyum sağlaması için gerekli adımları açıklıyor."
-                        : "New regulations on e-commerce product safety have come into effect in Turkey. This guide explains the necessary steps for international manufacturers to comply with these regulations."
-                      }
+                      New regulations on e-commerce product safety have come into effect in Turkey. This guide explains the necessary steps for international manufacturers to comply with these regulations.
                     </p>
                     <div className="tw-flex tw-justify-between tw-items-center">
                       <span className="tw-text-sm tw-text-gray-500">
-                        {locale === "tr" ? "8 Mart 2025" : "March 8, 2025"}
+                        March 8, 2025
                       </span>
                       <Link href={`/${locale}/blog/turkey-ecommerce-regulation`}>
                         <Button variant="default" size="sm">
-                          {locale === "tr" ? "Devamını Oku" : "Read More"}
+                          Read More
                         </Button>
                       </Link>
                     </div>
