@@ -1,8 +1,7 @@
 "use client";
 
-import React from "react";
-
 import Image from "next/image";
+import React from "react";
 
 export default function AboutDppPage() {
   return (
@@ -26,7 +25,7 @@ export default function AboutDppPage() {
           </div>
         </div>
       </div>
-      
+
       <div className="tw-py-16">
       <div className="tw-container">
         <div className="tw-max-w-5xl tw-mx-auto">
@@ -37,9 +36,9 @@ export default function AboutDppPage() {
                 Digital Product Passport (DPP): Key to a Transparent and Sustainable Future
               </h1>
               <p className="tw-text-lg tw-text-gray-700 tw-leading-relaxed tw-mb-8">
-                Today's consumers are no longer just looking at price and quality. They want to know where the products they buy come from, how they are produced, and their environmental impact. Similarly, businesses need transparent information to manage complex supply chains, meet sustainability goals, and comply with increasing regulations. Digital Product Passports (DPP) offer an innovative solution to meet these needs. DPPs ensure transparency and traceability throughout the product's lifecycle, bringing significant benefits for both consumers and producers.
+                Today&apos;s consumers are no longer just looking at price and quality. They want to know where the products they buy come from, how they are produced, and their environmental impact. Similarly, businesses need transparent information to manage complex supply chains, meet sustainability goals, and comply with increasing regulations. Digital Product Passports (DPP) offer an innovative solution to meet these needs. DPPs ensure transparency and traceability throughout the product&apos;s lifecycle, bringing significant benefits for both consumers and producers.
               </p>
-              
+
               {/* Hero Image */}
               <div className="tw-flex tw-justify-center tw-mb-8">
                 <div className="tw-relative tw-w-full tw-max-w-4xl tw-h-[640px] tw-md:h-[768px]">
@@ -99,7 +98,7 @@ export default function AboutDppPage() {
                 </div>
               </div>
               <p className="tw-text-lg tw-text-gray-700 tw-leading-relaxed">
-                The Digital Product Passport not only enhances supply chain efficiency but also greatly contributes to the achievement of sustainability goals. Tracking a product's lifecycle helps increase recycling rates, minimize energy and resource usage, and plan the necessary steps for improvement.
+                The Digital Product Passport not only enhances supply chain efficiency but also greatly contributes to the achievement of sustainability goals. Tracking a product&apos;s lifecycle helps increase recycling rates, minimize energy and resource usage, and plan the necessary steps for improvement.
               </p>
             </div>
 
@@ -108,7 +107,7 @@ export default function AboutDppPage() {
               <h2 className="tw-text-4xl tw-font-bold tw-text-gray-900 tw-mb-8">
                 Advantages of DPPs for Consumers and Businesses
               </h2>
-              
+
               {/* Consumer Advantages */}
               <div className="tw-mb-8">
                 <h3 className="tw-text-2xl tw-font-semibold tw-text-gray-900 tw-mb-6">
@@ -136,7 +135,7 @@ export default function AboutDppPage() {
                       Enhanced Product Experience
                     </h4>
                     <p className="tw-text-gray-700 tw-leading-relaxed">
-                      DPPs provide instant access to user manuals, maintenance instructions, and repair information, enhancing the product experience. Consumers can also obtain information about potential repairs and maintenance throughout the product's lifespan, which contributes to extending the product's life.
+                      DPPs provide instant access to user manuals, maintenance instructions, and repair information, enhancing the product experience. Consumers can also obtain information about potential repairs and maintenance throughout the product&apos;s lifespan, which contributes to extending the product&apos;s life.
                     </p>
                   </div>
                   <div className="tw-p-4">
@@ -177,7 +176,7 @@ export default function AboutDppPage() {
                       New Business Models
                     </h4>
                     <p className="tw-text-gray-700 tw-leading-relaxed">
-                      DPPs enable the development of new business models, such as product-service systems, rental models, and recycling programs. For instance, using DPPs for rentable products provides information on the product's usage history and condition. Such models help businesses build longer-term and ongoing relationships with customers.
+                      DPPs enable the development of new business models, such as product-service systems, rental models, and recycling programs. For instance, using DPPs for rentable products provides information on the product&apos;s usage history and condition. Such models help businesses build longer-term and ongoing relationships with customers.
                     </p>
                   </div>
                   <div className="tw-p-4">
@@ -211,7 +210,7 @@ export default function AboutDppPage() {
                     Ecodesign Regulation for Sustainable Products (ESPR)
                   </h3>
                   <p className="tw-text-gray-700 tw-leading-relaxed">
-                    The European Union's Ecodesign Regulation for Sustainable Products mandates the design of products based on criteria such as energy efficiency, durability, recyclability, and environmental impact. DPPs document compliance with these criteria transparently, facilitating adherence to this regulation. Transparent reporting of criteria like reducing the carbon footprint from production processes, optimizing energy consumption, and increasing resource efficiency makes compliance easier.
+                    The European Union&apos;s Ecodesign Regulation for Sustainable Products mandates the design of products based on criteria such as energy efficiency, durability, recyclability, and environmental impact. DPPs document compliance with these criteria transparently, facilitating adherence to this regulation. Transparent reporting of criteria like reducing the carbon footprint from production processes, optimizing energy consumption, and increasing resource efficiency makes compliance easier.
                   </p>
                 </div>
                 <div className="tw-p-4">
@@ -252,19 +251,19 @@ export default function AboutDppPage() {
                 Blockchain technology is a powerful tool for ensuring the data integrity and transparency of Digital Product Passports. Thanks to blockchain, all data within a Digital Product Passport DPP is stored in a distributed network, minimizing the risk of manipulation. This enhances stakeholder trust in the data and contributes to high-level traceability. In particular, blockchain-based DPP usage in supply chains offers significant advantages for companies prioritizing data integrity and transparency. Additionally, blockchain technology increases the security of data transfers, enabling faster and safer information flow among all stakeholders.
               </p>
               <p className="tw-text-lg tw-text-gray-700 tw-leading-relaxed">
-                The use of blockchain infrastructure not only ensures data security but also makes this data accessible and verifiable by everyone. This is particularly advantageous for complex supply chains, as every link in the chain can monitor the product's stage and processes it has gone through. This helps businesses enhance transparency throughout the supply chain, improve reliability, and build a more responsible brand image in the eyes of consumers.
+                The use of blockchain infrastructure not only ensures data security but also makes this data accessible and verifiable by everyone. This is particularly advantageous for complex supply chains, as every link in the chain can monitor the product&apos;s stage and processes it has gone through. This helps businesses enhance transparency throughout the supply chain, improve reliability, and build a more responsible brand image in the eyes of consumers.
               </p>
             </div>
 
             {/* Doruksistem Service Section */}
             <div>
               <h2 className="tw-text-4xl tw-font-bold tw-text-gray-900 tw-mb-6">
-                Doruksistem's DPP Preparation Service
+                Doruksistem&apos;s DPP Preparation Service
               </h2>
               <p className="tw-text-lg tw-text-gray-700 tw-leading-relaxed tw-mb-8">
                 DORUKSISTEM offers a comprehensive service for preparing and managing Digital Product Passports (DPPs). This service gathers all the necessary information about products, stores it securely, and manages it effectively. Using blockchain technology, Doruksistem ensures the reliability of the data and helps you comply with regulatory requirements.
               </p>
-              
+
               {/* Yeni görsel ekleyelim */}
               <div className="tw-flex tw-justify-center tw-mb-8">
                 <div className="tw-relative tw-w-full tw-max-w-4xl tw-h-[500px] tw-md:h-[600px]">
@@ -276,7 +275,7 @@ export default function AboutDppPage() {
                   />
                 </div>
               </div>
-              
+
               <div className="tw-grid tw-grid-cols-1 tw-md:grid-cols-2 tw-gap-4 tw-mb-8">
                 <div className="tw-p-4">
                   <h3 className="tw-text-lg tw-font-semibold tw-text-gray-900 tw-mb-2">
@@ -311,7 +310,7 @@ export default function AboutDppPage() {
                   </p>
                 </div>
               </div>
-              
+
               <p className="tw-text-lg tw-text-gray-700 tw-leading-relaxed">
                 Doruksistem AS supports businesses in achieving their sustainability and transparency goals by providing expert assistance throughout the Digital Product Passport DPP processes. This way, you can gain consumer trust and strengthen your competitive advantage. Furthermore, ongoing updates and consultancy services provided by Doruksistem ensure continuous improvement in regulatory compliance and sustainability performance.
               </p>
