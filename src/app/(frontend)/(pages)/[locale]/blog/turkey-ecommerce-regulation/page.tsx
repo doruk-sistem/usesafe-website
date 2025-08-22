@@ -34,7 +34,7 @@ export default function TurkeyEcommerceRegulationPage() {
           </div>
         </div>
       </div>
-        
+
       {/* Content Section */}
       <div className="tw-max-w-4xl tw-mx-auto tw-px-4 tw-py-12">
         <div className="tw-bg-gray-50 tw-p-8 tw-mb-8">

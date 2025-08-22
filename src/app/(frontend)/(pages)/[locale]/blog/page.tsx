@@ -45,7 +45,7 @@ export default function BlogPage() {
 
               {/* Blog Posts Grid */}
               <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-6 tw-justify-items-center">
-                
+
                 {/* Blog Post 1 */}
                 <div className="tw-bg-white tw-rounded-lg tw-shadow-lg tw-overflow-hidden hover:tw-shadow-xl tw-transition-shadow tw-duration-300 tw-max-w-md">
                   <div className="tw-relative tw-h-48 tw-overflow-hidden">
