@@ -19,7 +19,7 @@ export default function AboutDppPage() {
         <div className="tw-absolute tw-inset-0 tw-bg-gray-100/20"></div>
         <div className="tw-absolute tw-inset-0 tw-flex tw-items-center tw-justify-center">
           <div className="tw-text-center tw-text-white">
-            <h1 className="tw-text-5xl tw-md:text-6xl tw-font-bold tw-mb-4 tw-shadow-lg">
+            <h1 className="tw-text-5xl tw-md:text-6xl tw-font-bold tw-mb-4">
               About DPP
             </h1>
           </div>
