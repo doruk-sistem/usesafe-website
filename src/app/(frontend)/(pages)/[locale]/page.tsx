@@ -1,6 +1,5 @@
 import { getLocale } from "next-intl/server";
 
-import Footer from "@/app/(frontend)/_components/footer";
 import generateMeta from "@/frontend/_utils/generate-meta";
 import { initPayload } from "@/utils/getPayload";
 
@@ -12,14 +11,12 @@ export default async function HomePage() {
     const payload = await initPayload();
 
     const homepage = await payload.findGlobal({
-      slug: "homepage" as any,
-      locale: locale as any,
+      slug: "homepage",
+      locale: locale as "en" | "tr",
     });
-    return <PageClient layout={homepage.layout}
-    footer={Footer}
-     />;
-  } catch (error) {
-    console.error("Error loading homepage:", error);
+    return <PageClient layout={homepage.layout} />;
+  } catch {
+    // Error loading homepage
     return <PageClient layout={[]} />;
   }
 }

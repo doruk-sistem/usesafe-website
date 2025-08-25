@@ -5,11 +5,11 @@ import type { Plugin } from "payload";
 
 import { getServerSideURL } from "@/utils/get-url";
 
-const generateTitle: GenerateTitle<any> = ({ doc }) => {
+const generateTitle: GenerateTitle<Record<string, unknown>> = ({ doc }) => {
   return doc?.title ? `${doc.title} | UseSafe` : "UseSafe";
 };
 
-const generateURL: GenerateURL<any> = ({ doc }) => {
+const generateURL: GenerateURL<Record<string, unknown>> = ({ doc }) => {
   const url = getServerSideURL();
 
   return doc?.slug ? `${url}/${doc.slug}` : url;
@@ -27,15 +27,15 @@ if (process.env.NODE_ENV === "production") {
     collections: {
       media: true,
     },
-    bucket: process.env.S3_BUCKET!,
+    bucket: process.env.S3_BUCKET || "",
     config: {
       forcePathStyle: true,
       credentials: {
-        accessKeyId: process.env.S3_ACCESS_KEY_ID!,
-        secretAccessKey: process.env.S3_SECRET_ACCESS_KEY!,
+        accessKeyId: process.env.S3_ACCESS_KEY_ID || "",
+        secretAccessKey: process.env.S3_SECRET_ACCESS_KEY || "",
       },
-      region: process.env.S3_REGION!,
-      endpoint: process.env.S3_ENDPOINT!,
+      region: process.env.S3_REGION || "",
+      endpoint: process.env.S3_ENDPOINT || "",
     },
   });
 
@@ -46,15 +46,15 @@ const s3StoragePlugin = s3Storage({
   collections: {
     media: true,
   },
-  bucket: process.env.S3_BUCKET!,
+  bucket: process.env.S3_BUCKET || "",
   config: {
     forcePathStyle: true,
     credentials: {
-      accessKeyId: process.env.S3_ACCESS_KEY_ID!,
-      secretAccessKey: process.env.S3_SECRET_ACCESS_KEY!,
+      accessKeyId: process.env.S3_ACCESS_KEY_ID || "",
+      secretAccessKey: process.env.S3_SECRET_ACCESS_KEY || "",
     },
-    region: process.env.S3_REGION!,
-    endpoint: process.env.S3_ENDPOINT!,
+    region: process.env.S3_REGION || "",
+    endpoint: process.env.S3_ENDPOINT || "",
   },
 });
 
