@@ -28,9 +28,6 @@
       ],
       "@/frontend/*": [
         "./src/app/(frontend)/*"
-      ],
-      "@payload-config": [
-        "./src/payload.config.ts"
       ]
     }
   },

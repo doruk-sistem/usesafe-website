@@ -95,6 +95,11 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
         },
       ],
     },
+    {
+      key: "about-dpp",
+      label: "About DPP",
+      href: "/about-dpp",
+    },
     // {
     //   key: "solutions",
     //   label: t("common.solutions"),

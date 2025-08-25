@@ -5,10 +5,9 @@ import React, { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
 import { FaCheck } from "react-icons/fa";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import Image from "next/image";
 
 import ButtonSwitchAnimation from "@/app/(frontend)/_components/button-switch-animation";
-import NewsletterBlock from "@/blocks/newsletter-block";
-import RenderBlocks from "@/blocks/RenderBlocks";
 
 export default function ContactPageClient() {
   const t = useTranslations("ContactUs");
@@ -78,21 +77,25 @@ export default function ContactPageClient() {
     <div className="tw-min-h-screen tw-flex tw-flex-col">
       <Toaster position="bottom-center" />
 
-      <RenderBlocks
-        blocks={[
-          {
-            blockType: "pageTitle",
-            layout: {
-              title: t("page_title"),
-              backgroundImage: "/images/contact-1.webp",
-              downSectionId: "down-section",
-            },
-            blockOptions: {
-              className: "tw-py-0",
-            },
-          },
-        ]}
-      />
+      {/* Banner Section */}
+      <div className="tw-relative tw-h-[300px] tw-md:h-[300px] tw-overflow-hidden">
+        <Image
+          src="/images/contact-1.webp"
+          alt="Contact Us Banner"
+          fill
+          className="tw-object-cover"
+          priority
+        />
+        {/* Light gray overlay for better text readability */}
+        <div className="tw-absolute tw-inset-0 tw-bg-gray-100/20"></div>
+        <div className="tw-absolute tw-inset-0 tw-flex tw-items-center tw-justify-center">
+          <div className="tw-text-center tw-text-white">
+            <h1 className="tw-text-5xl tw-md:text-6xl tw-font-bold tw-mb-4">
+              {t("page_title")}
+            </h1>
+          </div>
+        </div>
+      </div>
 
       <main className="tw-flex-1 tw-container tw-mx-auto tw-px-4 tw-py-12">
         <div className="tw-max-w-3xl tw-mx-auto">
@@ -203,7 +206,6 @@ export default function ContactPageClient() {
           </form>
         </div>
       </main>
-      <NewsletterBlock />
     </div>
   );
 }
