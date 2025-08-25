@@ -4,36 +4,43 @@ import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { FaChevronDown, FaGlobeEurope, FaGlobeAmericas, FaFlag, FaGlobe } from "react-icons/fa";
 
+type TranslationKey =
+  | "platform.usesafe-certification.compliance_eu"
+  | "platform.usesafe-certification.compliance_us"
+  | "platform.usesafe-certification.compliance_tr"
+  | "platform.usesafe-certification.compliance_uk"
+  | "platform.usesafe-certification.compliance_other";
+
 const regions = [
   {
     key: "eu",
     labelKey: "European Union",
     icon: <FaGlobeEurope className="tw-w-6 tw-h-6 tw-mr-2 tw-text-primary tw-text-blue-700" />,
-    detailKey: "platform.usesafe-certification.compliance_eu",
+    detailKey: "platform.usesafe-certification.compliance_eu" as TranslationKey,
   },
   {
     key: "us",
     labelKey: "United States",
     icon: <FaGlobeAmericas className="tw-w-6 tw-h-6 tw-mr-2 tw-text-primary tw-text-red-600" />,
-    detailKey: "platform.usesafe-certification.compliance_us",
+    detailKey: "platform.usesafe-certification.compliance_us" as TranslationKey,
   },
   {
     key: "tr",
     labelKey: "Turkey",
     icon: <FaFlag className="tw-w-6 tw-h-6 tw-mr-2 tw-text-primary tw-text-red-500" />,
-    detailKey: "platform.usesafe-certification.compliance_tr",
+    detailKey: "platform.usesafe-certification.compliance_tr" as TranslationKey,
   },
   {
     key: "uk",
     labelKey: "United Kingdom",
     icon: <FaGlobeEurope className="tw-w-6 tw-h-6 tw-mr-2 tw-text-primary tw-text-indigo-600" />,
-    detailKey: "platform.usesafe-certification.compliance_uk",
+    detailKey: "platform.usesafe-certification.compliance_uk" as TranslationKey,
   },
   {
     key: "other",
     labelKey: "Other Regions",
     icon: <FaGlobe className="tw-w-6 tw-h-6 tw-mr-2 tw-text-primary tw-text-green-600" />,
-    detailKey: "platform.usesafe-certification.compliance_other",
+    detailKey: "platform.usesafe-certification.compliance_other" as TranslationKey,
   },
 ];
 
@@ -77,7 +84,7 @@ const ComplianceMapSection = () => {
                 aria-hidden={open !== region.key}
               >
                 <div className="tw-text-gray-700 tw-text-base">
-                  {t(region.detailKey as any)}
+                  {t(region.detailKey)}
                 </div>
               </div>
             </div>

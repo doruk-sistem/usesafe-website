@@ -1,11 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
 import { FaCheck } from "react-icons/fa";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import Image from "next/image";
 
 import ButtonSwitchAnimation from "@/app/(frontend)/_components/button-switch-animation";
 
