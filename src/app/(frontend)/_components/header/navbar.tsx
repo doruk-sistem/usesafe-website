@@ -147,7 +147,7 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
 
           <div className="tw-hidden xl:tw-flex tw-items-center tw-space-x-1">
             {/* <SwitchLanguage /> */}
-            <a href="/demo">
+            <a href="/contact">
               <Button variant="default">{t("common.try_for_free")}</Button>
             </a>
           </div>
@@ -178,9 +178,11 @@ export default function Navbar({ solutions = [], dynamicPages = [] }: NavbarProp
                 />
               ))}
               <div className="tw-flex tw-flex-col tw-space-y-2 tw-px-4">
-                <Button variant="default" size="lg" className="tw-w-full">
-                  {t("common.try_for_free")}
-                </Button>
+                <a href="/contact" className="tw-w-full">
+                  <Button variant="default" size="lg" className="tw-w-full">
+                    {t("common.try_for_free")}
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
