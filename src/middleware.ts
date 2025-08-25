@@ -1,13 +1,11 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import createMiddleware from "next-intl/middleware";
-
-import { routing } from "./i18n/routing";
 
 export async function middleware(request: NextRequest) {
   const handleI18nRouting = createMiddleware({
     locales: ["en"],
     defaultLocale: "en",
-    localePrefix: "never"
+    localePrefix: "never",
   });
 
   return handleI18nRouting(request);
