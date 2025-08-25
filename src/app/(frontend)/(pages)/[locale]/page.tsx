@@ -1,5 +1,3 @@
-import { getLocale } from "next-intl/server";
-
 import generateMeta from "@/frontend/_utils/generate-meta";
 
 import PageClient from "./page.client";
