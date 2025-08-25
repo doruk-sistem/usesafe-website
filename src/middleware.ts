@@ -9,7 +9,7 @@ export async function middleware(request: NextRequest) {
   }
 
   const handleI18nRouting = createMiddleware({
-    locales: ["en", "tr"],
+    locales: ["en"],
     defaultLocale: "en",
     localePrefix: "never"
   });
