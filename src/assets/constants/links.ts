@@ -1,13 +1,13 @@
 export const SOCIAL_LINKS = {
-    linkedin: "https://www.linkedin.com/company/doruksistem-as/posts/?feedView=all",
+    linkedin: "https://www.linkedin.com/company/dorukwell",
     facebook: "https://www.facebook.com/doruksistem",
     instagram: "https://www.instagram.com/doruksistem",
     twitter: "https://x.com/doruksistem",
   } as const;
 
   export const CONTACT_INFO = {
-    email: "info@doruksistem.com.tr",
-    phone: "+902163653400",
+    email: "info@dorukwell.eu",
+    phone: "+90 (850) 532 35 97",
     addresses: {
       germany: {
         maps: "https://maps.google.com/?q=Doruk+Sistem,Königsallee+92a+40212+Düsseldorf",
