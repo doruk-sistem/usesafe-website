@@ -103,7 +103,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
 
           <div className="tw-flex-1 tw-mt-12 md:tw-mt-0">
-            <div className="tw-relative tw-h-[350px] md:tw-h-[450px] tw-w-full tw-rounded-2xl tw-overflow-hidden tw-shadow-2xl">
+            <div className="tw-relative tw-h-[350px] md:tw-h-[500px] tw-w-full tw-rounded-2xl tw-overflow-hidden tw-shadow-2xl">
               {/* Frosted glass overlay */}
               <div
                 className="tw-absolute tw-inset-0 tw-bg-white/30 tw-z-10 tw-pointer-events-none"

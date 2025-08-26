@@ -1,64 +1,41 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import React, { useState } from "react";
-
-import { Button } from "@/frontend/_components/button";
+import Script from "next/script";
+import React from "react";
 
 export default function NewsletterBlock() {
-  const t = useTranslations("Components.Newsletter");
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("loading");
-    setTimeout(() => {
-      setStatus("success");
-      setEmail("");
-      setTimeout(() => {
-        setStatus("idle");
-      }, 3000);
-    }, 1000);
-  };
-
   return (
-    <section className="newsletter-block tw-bg-gray-100">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-12 col-lg-8">
-            <div className="tw-text-center tw-py-12">
-              <h2 className="tw-text-2xl tw-font-bold tw-mb-4">{t("title")}</h2>
-              <p className="tw-text-gray-600 tw-mb-6">{t("description")}</p>
+    <>
+      {/* Begin Constant Contact Active Forms */}
+      <Script id="ctct-universal-code" strategy="afterInteractive">
+        {"var _ctct_m = \"1748c0f7acdfc50d220932aa2e2d2c3c\";"}
+      </Script>
+      <Script
+        id="signupScript"
+        src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js"
+        strategy="afterInteractive"
+        async
+        defer
+      />
+      {/* End Constant Contact Active Forms */}
 
-              <form onSubmit={handleSubmit} className="tw-flex tw-flex-col sm:tw-flex-row tw-gap-4 tw-justify-center">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder={t("emailPlaceholder")}
-                  className="form-control tw-max-w-md"
-                  required
-                />
-                <Button
-                  variant="default"
-                  size="lg"
-                  disabled={status === "loading"}
-                >
-                  {status === "loading" ? t("subscribing") : t("subscribe")}
-                </Button>
-              </form>
+      <section className="newsletter-block">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-12 col-lg-8">
+              <div className="tw-text-center tw-py-12">
 
-              {status === "success" && (
-                <p className="tw-text-green-600 tw-mt-4">{t("successMessage")}</p>
-              )}
-              {status === "error" && (
-                <p className="tw-text-red-600 tw-mt-4">{t("errorMessage")}</p>
-              )}
+                {/* Begin Constant Contact Inline Form Code */}
+                <div
+                  className="ctct-inline-form tw-flex tw-justify-center"
+                  data-form-id="f4e8991a-a588-4780-a79b-093a438678e9"
+                ></div>
+                {/* End Constant Contact Inline Form Code */}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

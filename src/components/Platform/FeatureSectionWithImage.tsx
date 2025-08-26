@@ -47,7 +47,7 @@ const FeatureSectionWithImage: React.FC<FeatureSectionWithImageProps> = ({
   return (
     <GradientBackground type={gradientType} className={className}>
       <div className={`tw-flex tw-flex-col md:tw-flex-row tw-items-center tw-gap-16${imageOnRight ? "" : " md:tw-flex-row-reverse"}`}>
-        <div className="tw-flex-1 tw-max-w-2xl">
+        <div className="tw-flex-1 tw-max-w-xl">
           {badge && (
             <div className="tw-inline-block tw-px-4 tw-py-1 tw-rounded-full tw-bg-primary/10 tw-text-primary tw-font-medium tw-text-sm tw-mb-6">
               {badge}
@@ -83,8 +83,8 @@ const FeatureSectionWithImage: React.FC<FeatureSectionWithImageProps> = ({
             </CtaButton>
           )}
         </div>
-        <div className="tw-flex-1 tw-mt-12 md:tw-mt-0">
-          <div className="tw-relative tw-h-[400px] md:tw-h-[500px] tw-w-full">
+        <div className="tw-flex-[1.2] tw-mt-12 md:tw-mt-0">
+          <div className="tw-relative tw-h-[500px] md:tw-h-[600px] tw-w-full">
             <Image
               src={imageSrc}
               alt={imageAlt}

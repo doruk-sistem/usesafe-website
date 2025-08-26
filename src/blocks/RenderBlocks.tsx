@@ -8,7 +8,6 @@ import { AccordionBlock } from "./accordion-block/Component";
 import BackgroundVideoBlock from "./background-video/Component";
 import { CertificationIntroBlock } from "./certification-intro-block/Component";
 import { ClientsBlock } from "./clients-block/Component";
-import { ContactFormBlock } from "./contact-form-block/Component";
 import { ContentWithImageBlock } from "./content-with-image-block/Component";
 import { CounterBlock } from "./counter-block/Component";
 import { IconListBlock } from "./icon-list-block/Component";
@@ -26,7 +25,6 @@ const blockComponents = {
   counter: CounterBlock,
   pageTitle: PageTitleBlock,
   backgroundVideo: BackgroundVideoBlock,
-  contactForm: ContactFormBlock,
   certificationIntro: CertificationIntroBlock,
   text: TextBlock,
 } as const;
@@ -66,6 +64,15 @@ export default function RenderBlocks({ blocks }: RenderBlocksProps) {
             <Fragment key={index}>
               {/* @ts-expect-error - Component props are dynamic */}
               <Component {...componentProps} />
+            </Fragment>
+          );
+        }
+
+        if (blockType === "pageTitle") {
+          return (
+            <Fragment key={index}>
+              {/* @ts-expect-error - Type safety is handled by BlockTypeProps */}
+              <Component {...block.layout} />
             </Fragment>
           );
         }

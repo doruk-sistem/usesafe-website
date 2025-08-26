@@ -2,27 +2,25 @@
 
 import { useTranslations } from "next-intl";
 import React from "react";
-import { Toaster } from "react-hot-toast";
 
+import Footer from "@/app/(frontend)/_components/footer";
 import NewsletterBlock from "@/blocks/newsletter-block";
 import RenderBlocks from "@/blocks/RenderBlocks";
-import { ModernContactForm } from "@/components/Platform";
+import { TermsOfServiceContent } from "@/components/Platform";
 
-export default function ContactPageClient() {
-  const t = useTranslations("ContactUs");
+export default function TermsOfServicePageClient() {
+  const t = useTranslations("TermsOfService");
 
   return (
     <div className="tw-min-h-screen tw-flex tw-flex-col">
-      <Toaster position="bottom-center" />
-
       <RenderBlocks
         blocks={[
           {
             blockType: "pageTitle",
             layout: {
               title: t("page_title"),
-              backgroundImage: "/images/contact-1.webp",
-              downSectionId: "contact-form",
+              backgroundImage: "/images/background-16-9-1.png",
+              downSectionId: "terms-of-service-content",
             },
             blockOptions: {
               className: "tw-py-0",
@@ -31,11 +29,12 @@ export default function ContactPageClient() {
         ]}
       />
 
-      <section id="contact-form">
-        <ModernContactForm />
+      <section id="terms-of-service-content">
+        <TermsOfServiceContent />
       </section>
 
       <NewsletterBlock />
+      <Footer />
     </div>
   );
 }

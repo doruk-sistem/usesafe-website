@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 interface PageTitleBlockProps {
   title?: string;
@@ -13,14 +13,23 @@ export function PageTitleBlock({
   backgroundImage,
   downSectionId,
 }: PageTitleBlockProps) {
+  const divRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (divRef.current && backgroundImage) {
+      divRef.current.style.setProperty("--bg-image", `url(${backgroundImage})`);
+    }
+  }, [backgroundImage]);
+
   return (
     <div
-      className="page-title-big-typography tw-py-0 md:tw-py-22 ipad-top-space-margin tw-bg-black tw-bg-center tw-bg-cover"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+      ref={divRef}
+      className="page-title-big-typography tw-py-0 md:tw-py-22 ipad-top-space-margin tw-bg-black tw-bg-center tw-bg-cover tw-relative tw-min-h-[400px] md:tw-min-h-[500px]"
+      data-bg-image={backgroundImage}
     >
       <div className="tw-opacity-85 tw-bg-black tw-w-full tw-h-full tw-absolute tw-top-0 tw-left-0"></div>
-      <div className="container">
-        <div className="row align-items-center justify-content-center small-screen">
+      <div className="container tw-relative tw-z-10 tw-h-full tw-flex tw-items-center tw-justify-center">
+        <div className="row align-items-center justify-content-center small-screen tw-w-full">
           <div
             className="col-xl-8 col-lg-9 col-sm-10 position-relative text-center page-title-extra-small"
             data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 100, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'

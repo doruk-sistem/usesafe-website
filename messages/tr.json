@@ -151,6 +151,171 @@
       "description": "UseSafe logolu ürünlerle kullanıcı dostu alışverişin en iyisini keşfedin. Platformumuz, en yüksek güvenlik standartlarını karşılayan ürünleri bulmanızı ve satın almanızı kolaylaştıran pürüzsüz ve zahmetsiz bir deneyim sunar. UseSafe logosunu taşıyan her ürün, size eşsiz bir huzur sağlamak için titiz test ve sertifikasyon süreçlerinden geçmiştir. Güvenli ve güvenilir ürünleri seçtiğinizi bilerek, göz atmadan ödemeye kadar sorunsuz bir alışveriş yolculuğunun keyfini çıkarın. E-ticaret deneyiminizi UseSafe'in getirdiği güvenle yükseltin."
     }
   },
+  "PrivacyPolicy": {
+    "page_title": "Gizlilik Politikası",
+    "hero": {
+      "title": "Gizlilik Politikası",
+      "description": "Gizliliğiniz bizim için önemlidir. Bu politika, bilgilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar.",
+      "last_updated": "Son güncelleme"
+    },
+    "sections": {
+      "overview": {
+        "title": "Genel Bakış",
+        "content": "Bu gizlilik bildirimi UseSafe (\"Şirket,\" \"biz,\" \"bizim\" veya \"bizimle\") için, hizmetlerimizi (\"Hizmetler\") kullandığınızda, web sitemizi ziyaret ettiğinizde veya bizimle başka şekillerde etkileşime geçtiğinizde bilgilerinizi nasıl ve neden toplayabileceğimizi, saklayabileceğimizi, kullanabileceğimizi ve/veya paylaşabileceğimizi (\"işleme\") açıklar."
+      },
+      "information_we_collect": {
+        "title": "Topladığımız Bilgiler",
+        "content": "Hakkımızda veya ürün ve hizmetlerimiz hakkında bilgi almaya ilgi duyduğunuzda, web sitemizde etkinliklere katıldığınızda veya bizimle iletişime geçtiğinizde gönüllü olarak sağladığınız kişisel bilgileri topluyoruz.",
+        "items": {
+          "personal_information": "Kişisel kimlik bilgileri (Ad, e-posta adresi, telefon numarası)",
+          "business_information": "İş bilgileri (Şirket adı, iş unvanı, ülke)",
+          "communication_data": "İletişim verileri (Bize gönderdiğiniz mesajlar)",
+          "technical_data": "Teknik veriler (IP adresi, tarayıcı türü, cihaz bilgileri)"
+        }
+      },
+      "how_we_use": {
+        "title": "Bilgilerinizi Nasıl Kullanırız",
+        "content": "Kişisel bilgilerinizi, Hizmetlerimizle nasıl etkileşime geçtiğinize bağlı olarak çeşitli nedenlerle işleriz:",
+        "items": {
+          "communication": "Hesap oluşturma ve kimlik doğrulama ile kullanıcı hesaplarını yönetmek",
+          "respond_inquiries": "Kullanıcı sorgularına yanıt vermek/kullanıcılara destek sunmak",
+          "send_marketing": "Size yönetimsel bilgiler göndermek",
+          "fulfill_obligations": "Siparişlerinizi, ödemelerinizi, iadelerinizi ve takaslarınızı yerine getirmek ve yönetmek",
+          "enable_features": "Kullanıcıdan kullanıcıya iletişimi etkinleştirmek",
+          "request_feedback": "Geri bildirim talep etmek ve Hizmetlerimizi kullanımınız hakkında sizinle iletişime geçmek"
+        }
+      },
+      "information_sharing": {
+        "title": "Bilgilerinizi Ne Zaman ve Kimlerle Paylaşırız",
+        "content": "Aşağıdaki durumlarda kişisel bilgilerinizi paylaşmamız gerekebilir:",
+        "items": {
+          "business_transfers": "İş Transferleri: Birleşme, şirket varlıklarının satışı, finansman veya devralma ile bağlantılı olarak veya bu konulardaki müzakereler sırasında bilgilerinizi paylaşabilir veya transfer edebiliriz.",
+          "legal_requirements": "Yasal Gereklilikler: Geçerli yasalara uymak için yasal olarak gerekli olduğu durumlarda bilgilerinizi açıklayabiliriz.",
+          "vital_interests": "Hayati Çıkarlar: Politikalarımızın potansiyel ihlalleri hakkında araştırma yapma, önleme veya harekete geçme konusunda gerekli olduğuna inandığımız durumlarda bilgilerinizi açıklayabiliriz."
+        }
+      },
+      "data_retention": {
+        "title": "Bilgilerinizi Ne Kadar Süre Saklarız",
+        "content": "Kişisel bilgilerinizi yalnızca bu gizlilik bildiriminde belirtilen amaçlar için gerekli olduğu sürece saklayacağız, yasal olarak daha uzun bir saklama süresi gerekli veya izin verilmediği sürece."
+      },
+      "your_rights": {
+        "title": "Gizlilik Haklarınız",
+        "content": "Hesabınızı istediğiniz zaman inceleyebilir, değiştirebilir veya sonlandırabilirsiniz. Bulunduğunuz yere bağlı olarak aşağıdaki haklara sahip olabilirsiniz:",
+        "items": {
+          "access": "Erişim hakkı – Kişisel verilerinizin kopyalarını talep etme hakkınız var",
+          "rectification": "Düzeltme hakkı – Yanlış olduğuna inandığınız bilgileri düzeltmemizi talep etme hakkınız var",
+          "erasure": "Silme hakkı – Kişisel verilerinizi silmemizi talep etme hakkınız var",
+          "restrict": "İşlemeyi kısıtlama hakkı – Kişisel verilerinizin işlenmesini kısıtlamamızı talep etme hakkınız var",
+          "portability": "Veri taşınabilirliği hakkı – Verileri başka bir kuruluşa aktarmamızı talep etme hakkınız var",
+          "object": "İşlemeye itiraz hakkı – Kişisel verilerinizin işlenmesine itiraz etme hakkınız var"
+        }
+      },
+      "security": {
+        "title": "Bilgilerinizi Nasıl Güvenli Tutarız",
+        "content": "İşlediğimiz kişisel bilgilerin güvenliğini korumak için uygun ve makul teknik ve organizasyonel güvenlik önlemleri uyguladık. Ancak, koruma önlemlerimize ve bilgilerinizi güvence altına alma çabalarımıza rağmen, İnternet üzerinden elektronik iletim veya bilgi depolama teknolojisinin %100 güvenli olacağı garanti edilemez."
+      },
+      "cookies": {
+        "title": "Çerezler ve İzleme Teknolojileri",
+        "content": "Bilgilere erişmek veya bilgileri saklamak için çerezler ve benzer izleme teknolojilerini kullanabiliriz. Bu tür teknolojileri nasıl kullandığımız ve belirli çerezleri nasıl reddedebileceğiniz hakkında özel bilgiler Çerez Bildirimizde belirtilmiştir."
+      },
+      "updates": {
+        "title": "Politika Güncellemeleri",
+        "content": "Bu gizlilik bildirimini zaman zaman güncelleyebiliriz. Güncellenmiş sürüm, güncellenmiş bir \"Revize edildi\" tarihi ile belirtilecek ve güncellenmiş sürüm erişilebilir olur olmaz yürürlüğe girecektir."
+      },
+      "contact": {
+        "title": "Bizimle İletişime Geçin",
+        "content": "Bu bildirim hakkında sorularınız veya yorumlarınız varsa, bizimle şu adreslerden iletişime geçebilirsiniz:",
+        "email": "privacy@usesafe.com",
+        "address": "Doruksistem Ltd. Şti., Türkiye"
+      }
+    }
+  },
+  "TermsOfService": {
+    "page_title": "Hizmet Şartları",
+    "hero": {
+      "title": "Hizmet Şartları",
+      "description": "Bu şartlar hizmetlerimizi kullanımınızı yönetir. Lütfen dikkatlice okuyun.",
+      "last_updated": "Son güncelleme"
+    },
+    "sections": {
+      "overview": {
+        "title": "Genel Bakış",
+        "content": "Bu Hizmet Şartları (\"Şartlar\") DorukWell GmbH (\"Şirket\", \"biz\", \"bizim\" veya \"bizimle\") tarafından işletilen UseSafe web sitesi ve hizmetlerinin (\"Hizmetler\") kullanımınızı yönetir. Hizmetlerimize erişerek veya bunları kullanarak, bu Şartlara bağlı olmayı kabul edersiniz."
+      },
+      "acceptance": {
+        "title": "Şartların Kabulü",
+        "content": "Bu web sitesine erişerek ve kullanarak, bu anlaşmanın şart ve hükümlerine bağlı olmayı kabul etmiş olursunuz. Yukarıdakilere uymayı kabul etmiyorsanız, lütfen bu hizmeti kullanmayın."
+      },
+      "services_description": {
+        "title": "Hizmetlerin Açıklaması",
+        "content": "UseSafe dijital ürün sertifikasyonu, doğrulama ve izlenebilirlik hizmetleri sunar. Platformumuz şunları içerir:",
+        "items": {
+          "certification": "Ürün güvenliği ve uygunluk sertifikasyonu hizmetleri",
+          "verification": "Ürün özgünlük doğrulama ve dijital ürün pasaportları",
+          "digital_passport": "Dijital Ürün Pasaportu (DPP) oluşturma ve yönetimi",
+          "compliance": "Düzenleyici uygunluk takibi ve raporlama"
+        }
+      },
+      "user_obligations": {
+        "title": "Kullanıcı Yükümlülükleri",
+        "content": "Hizmetlerimizin kullanıcısı olarak şunları kabul edersiniz:",
+        "items": {
+          "accurate_information": "Kayıt ve kullanım sırasında doğru, güncel ve eksiksiz bilgi sağlamak",
+          "account_security": "Hesap kimlik bilgilerinizin güvenliğini ve gizliliğini korumak",
+          "prohibited_activities": "Hizmetlerimize zarar verebilecek, devre dışı bırakabilecek veya müdahale edebilecek hiçbir faaliyette bulunmamak",
+          "compliance_laws": "Hizmetlerimizi kullanırken tüm geçerli yasa ve düzenlemelere uymak",
+          "intellectual_property": "UseSafe ve üçüncü tarafların fikri mülkiyet haklarına saygı göstermek"
+        }
+      },
+      "payment_terms": {
+        "title": "Ödeme Şartları",
+        "content": "Ücretli hizmetler için aşağıdaki şartlar geçerlidir:",
+        "items": {
+          "pricing": "Fiyatlar Euro cinsinden gösterilir ve geçerli vergilere tabidir",
+          "billing": "Faturalandırma, seçtiğiniz plana göre aylık veya yıllık olarak işlenir",
+          "refunds": "İadeler, iade politikamıza tabi olarak satın alma tarihinden itibaren 30 gün içinde mevcuttur",
+          "cancellation": "Aboneliğinizi hesap ayarlarınızdan istediğiniz zaman iptal edebilirsiniz"
+        }
+      },
+      "limitations": {
+        "title": "Hizmet Kısıtlamaları ve Feragatnameler",
+        "content": "Lütfen aşağıdaki kısıtlamaları unutmayın:",
+        "items": {
+          "service_availability": "Hizmetler bakım veya teknik sorunlar nedeniyle geçici olarak kullanılamayabilir",
+          "accuracy": "Doğruluk için çaba göstermemize rağmen, tüm bilgilerin eksiksizliğini garanti edemeyiz",
+          "third_party": "Platformumuzdan bağlantılı üçüncü taraf içerik veya hizmetlerden sorumlu değiliz",
+          "liability": "Sorumluluğumuz geçerli yasaların izin verdiği maksimum ölçüde sınırlıdır"
+        }
+      },
+      "intellectual_property": {
+        "title": "Fikri Mülkiyet Hakları",
+        "content": "Tüm içerik, özellikler ve işlevsellik dahil olmak üzere UseSafe platformu DorukWell GmbH'ye aittir ve uluslararası telif hakkı, marka, patent, ticari sır ve diğer fikri mülkiyet yasalarıyla korunmaktadır."
+      },
+      "termination": {
+        "title": "Sonlandırma",
+        "content": "Hesabınızı ve Hizmetlerimize erişiminizi sonlandırma veya askıya alma hakkını saklı tutarız:",
+        "items": {
+          "termination_by_user": "Destek ekibimizle iletişime geçerek hesabınızı istediğiniz zaman sonlandırabilirsiniz",
+          "termination_by_us": "Bu Şartları ihlal eden veya zararlı faaliyetlerde bulunan hesapları sonlandırabiliriz",
+          "effect_termination": "Sonlandırma üzerine, Hizmetleri kullanma hakkınız derhal sona erecektir"
+        }
+      },
+      "governing_law": {
+        "title": "Yürürlükteki Hukuk",
+        "content": "Bu Şartlar Almanya yasalarına göre yönetilir ve yorumlanır. Bu Şartlardan kaynaklanan herhangi bir anlaşmazlık, Köln, Almanya mahkemelerinin münhasır yargı yetkisine tabi olacaktır."
+      },
+      "updates": {
+        "title": "Şartlarda Güncellemeler",
+        "content": "Bu Şartları istediğimiz zaman değiştirme hakkını saklı tutarız. Herhangi bir önemli değişikliği kullanıcılara e-posta veya web sitemiz aracılığıyla bildireceğiz. Değişikliklerden sonra Hizmetlerimizi kullanmaya devam etmek, güncellenmiş Şartları kabul ettiğiniz anlamına gelir."
+      },
+      "contact": {
+        "title": "İletişim Bilgileri",
+        "content": "Bu Hizmet Şartları hakkında sorularınız varsa, lütfen bizimle iletişime geçin:",
+        "email": "info@dorukwell.eu",
+        "address": "DorukWell GmbH, An der Münze 1, 50668 Köln, Almanya"
+      }
+    }
+  },
   "AboutDpp": {
     "dpp_intro": {
       "title": "Dijital Ürün Pasaportu (DPP)",
@@ -186,37 +351,74 @@
       "description": "DPP sistemi, blockchain teknolojisi ve akıllı sözleşmeler kullanarak güvenli ve şeffaf veri paylaşımı sağlar. QR kodları veya RFID etiketleri aracılığıyla ürün bilgilerine kolay erişim sağlanır.",
       "button": "Ücretsiz Danışmanlık"
     }
-  }
-  ,"ContactUs": {
+  },
+  "ContactUs": {
     "page_title": "İletişim",
+    "hero": {
+      "title": "Bir Konuşma Başlatalım",
+      "description": "İşletmenizi dönüştürmeye hazır mısınız? Sizden haber almayı çok isteriz.",
+      "subtitle": "Aşağıdaki formu doldurun, ekibimiz 24 saat içinde size geri dönüş yapacak."
+    },
     "form": {
       "title": "Bize Mesaj Gönderin",
       "description": "Aşağıdaki formu doldurun, en kısa sürede size geri döneceğiz.",
       "fields": {
         "full_name": {
           "label": "Ad Soyad",
-          "placeholder": "John Doe"
+          "placeholder": "Ad ve soyadınızı girin"
         },
-        "email": {
-          "label": "E-posta",
-          "placeholder": "john@example.com"
+        "work_email": {
+          "label": "İş e-postası",
+          "placeholder": "İş e-posta adresinizi girin"
         },
-        "phone": {
-          "label": "Telefon",
-          "placeholder": "+90 (___) ___ __ __"
+        "phone_number": {
+          "label": "Telefon numarası",
+          "placeholder": "Telefon numaranızı girin"
         },
-        "subject": {
-          "label": "Konu",
-          "placeholder": "Size nasıl yardımcı olabiliriz?"
+        "company_name": {
+          "label": "Şirket adı",
+          "placeholder": "Şirket adınızı girin"
+        },
+        "job_title": {
+          "label": "İş unvanı",
+          "placeholder": "İş unvanınızı girin"
+        },
+        "country": {
+          "label": "Ülke",
+          "placeholder": "Ülkenizi seçin"
+        },
+        "reason_for_reaching_out": {
+          "label": "İletişim kurma sebebi",
+          "placeholder": "Sebep seçin"
         },
         "message": {
           "label": "Mesaj",
-          "placeholder": "Mesajınızı buraya yazın..."
+          "placeholder": "Ne aradığınızı bize bildirin!"
+        }
+      },
+      "terms": {
+        "text": "Kabul ediyorum",
+        "privacy_policy": "gizlilik politikası",
+        "and": "ve",
+        "terms_of_service": "hizmet şartları",
+        "tooltip": {
+          "title": "Neyi kabul ettiğiniz:",
+          "items": [
+            "Bilgilerinizi sorgunuza yanıt vermek için kullanacağız",
+            "Verileriniz gizlilik politikamıza göre işlenecektir",
+            "Talebiniz hakkında e-posta veya telefon ile iletişime geçebiliriz",
+            "Bilgileriniz güvenli bir şekilde saklanacak ve pazarlama için üçüncü taraflarla paylaşılmayacaktır",
+            "Verilerinizin silinmesini istediğiniz zaman talep edebilirsiniz"
+          ],
+          "footer": "Tam politikalarımızı okumak için yukarıdaki bağlantılara tıklayın."
         }
       },
       "submit": {
         "sending": "Gönderiliyor...",
-        "send": "Mesaj Gönder"
+        "send": "Gönder"
+      },
+      "validation": {
+        "accept_terms": "Lütfen şartları ve koşulları kabul edin"
       },
       "toast": {
         "success": {
@@ -247,9 +449,9 @@
       },
       "newsletter": {
         "title": "İLETİŞİM",
-        "company": "DORUKSISTEM",
-        "email": "info@usesafe.net",
-        "phone": "Tel: +90-850-532-35-97",
+        "company": "Dorukwell",
+        "email": "info@dorukwell.eu",
+        "phone": "Tel:  +90-850-532-35-97",
         "address": {
           "germany": {
             "street": "An der Münze 1",
@@ -396,17 +598,6 @@
         "text": "İstediğiniz zaman iptal edebilirsiniz"
       }
     ]
-  },
-  "Components": {
-    "Newsletter": {
-      "title": "Bültenimize Abone Olun",
-      "description": "En son haberler ve güncellemelerden haberdar olun",
-      "emailPlaceholder": "E-posta adresinizi girin",
-      "subscribe": "Abone Ol",
-      "subscribing": "Abone olunuyor...",
-      "successMessage": "Abone olduğunuz için teşekkürler!",
-      "errorMessage": "Bir hata oluştu. Lütfen tekrar deneyin."
-    }
   },
   "DemoPage": {
     "title": "Ürün Demosu İsteği",
@@ -725,6 +916,101 @@
       "transparency_engagement_title": "Şeffaflık ve Katılım",
       "transparency_engagement_description": "gelişmiş ürün şeffaflığı ve tüketici katılımı için",
       "get_started": "Başlayın"
+    },
+    "usesafe-certification": {
+      "title": "UseSafe Sertifikasyonu",
+      "description": "Dijital Ürün Sertifikasyonu ve İzlenebilirlik Sistemi",
+      "hero_badge": "Dijital Ürün Sertifikasyonu",
+      "hero_title": "UseSafe Sertifikasyonu: Yeni Nesil Ürün Uyumluluğu ve İzlenebilirliği",
+      "hero_description": "Küresel ticarette dijital ürün sertifikasyonu ve izlenebilirliği için kapsamlı bir sistem. Her paydaşı güvenilir, doğrulanabilir ve akıllı uyumlulukla güçlendirin.",
+      "hero_image_alt": "UseSafe dijital ürün sertifikasyonu platformu",
+      "intro_title": "UseSafe Nedir?",
+      "intro_description": "UseSafe, tüm ürün kategorileri ve pazar katılımcıları genelinde düzenleyici uyumluluğu, ürün güvenliğini ve sürdürülebilirliği sağlayan dijital olarak entegre bir platformdur.",
+      "feature_trust_title": "Küresel Güven Oluşturun",
+      "feature_trust_description": "Şeffaf, doğrulanabilir ürün verileriyle tüketici güvenini ve düzenleyici gözetimi artırın.",
+      "feature_global_title": "Küresel Uyumluluk",
+      "feature_global_description": "Tek, birleşik bir sertifikasyon sistemiyle ulusal ve uluslararası düzenlemeleri karşılayın.",
+      "feature_compliance_title": "Kapsamlı İzlenebilirlik",
+      "feature_compliance_description": "Tüm tedarik zinciri boyunca uyumluluk bilgilerini dijital olarak belgeleyin, paylaşın ve izleyin.",
+      "core_purpose_title": "UseSafe'in Temel Amacı",
+      "core_purpose_description": "UseSafe, ürün paydaşlarının ürünleri sertifikalandırmasını, belgelemesini ve izlemesini sağlayarak güvenli dijital kimlikler ve uyumluluk geçmişleri sağlar.",
+      "purpose_certification_title": "Sertifikasyon",
+      "purpose_certification_description": "Ürünlerin tüm ilgili düzenlemeler ve standartları karşıladığını sertifikalandırın.",
+      "purpose_documentation_title": "Dijital Belgeleme",
+      "purpose_documentation_description": "Uyumluluk bilgilerini dijital olarak depolayın ve paylaşın, tüm paydaşların erişimine açın.",
+      "purpose_traceability_title": "İzlenebilirlik",
+      "purpose_traceability_description": "Tüketicilere ve düzenleyicilere şeffaf ve izlenebilir ürün geçmişleri sunun.",
+      "purpose_identity_title": "Güvenli Dijital Kimlik",
+      "purpose_identity_description": "Her ürün için hammaddeden kullanım ömrü sonuna kadar güvenli bir dijital kimlik oluşturun.",
+      "sustainability_title": "Sürdürülebilirlik ve Döngüsel Ekonomi",
+      "sustainability_description": "UseSafe, döngüsel ekonomi ilkelerini destekler ve tam ürün yaşam döngüsünü takip eder:",
+      "sustainability_collection": "Ömür sonu bilgilerinin toplanması ve paylaşılması (geri dönüştürülebilirlik, geri alım programları).",
+      "sustainability_monitoring": "Onarılabilirlik, yeniden kullanılabilirlik ve sürdürülebilir bertaraf yollarının izlenmesi.",
+      "sustainability_dpp_integration": "Sürdürülebilirlik göstergeleri (karbon ayak izi, çevre etiketleri) ile DPP entegrasyonu.",
+      "sustainability_engagement": "Satış sonrası talimatlar ve iyileştirme uyarıları ile tüketici katılımı.",
+      "future_title": "Gelecek Görünümü ve Platform Geliştirimi",
+      "future_description": "UseSafe, dijital bir ekosistem olarak gelişmeye devam ediyor. Yaklaşan yenilikler şunları içeriyor:",
+      "future_marketplace": "Sertifikalı ürünleri öne çıkarmak için halka açık bir UseSafe Pazaryeri.",
+      "future_sector_modules": "Sektöre özel modüllere genişleme (örn. kozmetik, oyuncak, elektronik).",
+      "future_egov": "E-devlet portalları ve gümrük veritabanlarıyla entegrasyon.",
+      "future_mobile": "Mobil uygulamalar ve etkileşimli tüketici panellerinin geliştirilmesi.",
+      "cta_title": "Ürün Uyumluluğunuzu Dönüştürmeye Hazır mısınız?",
+      "cta_description": "UseSafe Sertifikasyonunu uygulamak için bizimle iletişime geçin veya platformu görmek için demo talep edin.",
+      "request_demo": "Demo Talep Edin",
+      "get_started": "Başlayın",
+      "stakeholders_main_title": "UseSafe Ekosistemindeki Temel Paydaşlar",
+      "stakeholders_learn_more": "Daha Fazla Bilgi Edinin",
+      "stakeholder_manufacturers_label": "Üreticiler ve Marka Sahipleri",
+      "stakeholder_sellers_label": "E-ticaret Satıcıları ve Distribütörleri",
+      "stakeholder_marketplaces_label": "Pazaryerleri ve Perakendeciler",
+      "stakeholder_authorities_label": "Düzenleyici Kurumlar ve Devlet Kurumları",
+      "stakeholder_logistics_label": "Lojistik ve Gümrük Operatörleri",
+      "stakeholder_consumers_label": "Son Tüketiciler",
+      "stakeholder_content": {
+        "manufacturers": {
+          "content_title": "Üreticiler ve Marka Sahipleri",
+          "feature_1": "Yasal yükümlülükleri ve pazar gereksinimlerini yerine getirmek için sertifikasyon süreçlerini başlatın",
+          "feature_2": "Doğrulanmış ürün uyumluluk kimlik bilgileriyle e-ticaret platformlarına erişin",
+          "feature_3": "Doğrulanabilir güvenlik ve kalite sertifikaları ile ürünleri farklılaştırın",
+          "feature_4": "Şeffaf sertifikasyon süreçleri aracılığıyla tüketici güveni oluşturun",
+          "image_alt": "Üreticiler ve marka sahipleri için faydaları temsil eden illüstrasyon"
+        },
+        "sellers": {
+          "content_title": "E-ticaret Satıcıları ve Distribütörleri",
+          "feature_1": "Pazaryerleri ve tüketicilere ürün uyumluluğunu gösterin",
+          "feature_2": "Ürün güvenilirliğini artırmak için UseSafe rozetlerini görüntüleyin",
+          "feature_3": "Azaltılmış düzenleyici riskler ve pazar erişim engellerinden yararlanın",
+          "image_alt": "E-ticaret satıcıları ve distribütörleri için faydaları temsil eden illüstrasyon"
+        },
+        "marketplaces": {
+          "content_title": "Pazaryerleri ve Perakendeciler",
+          "feature_1": "Ürün incelemesi ve uyumluluk doğrulama süreçlerini otomatikleştirin",
+          "feature_2": "Sertifikalı ürünleri arama sonuçlarında ve önerilerde öne çıkarın",
+          "feature_3": "Güvenilir sertifikasyon ortaklarıyla uyumluluk programlarında işbirliği yapın",
+          "image_alt": "Pazaryerleri ve perakendeciler için faydaları temsil eden illüstrasyon"
+        },
+        "authorities": {
+          "content_title": "Düzenleyici Kurumlar ve Devlet Kurumları",
+          "feature_1": "Gerçek zamanlı uyumluluk belgelerine ve raporlamaya erişin",
+          "feature_2": "Pazar gözetimi ve uygulama faaliyetlerini kolaylaştırın",
+          "feature_3": "Dijitalleşme hedefleri ve düzenleyici yenilikle uyum sağlayın",
+          "image_alt": "Düzenleyici kurumlar ve devlet kurumları için faydaları temsil eden illüstrasyon"
+        },
+        "logistics": {
+          "content_title": "Lojistik ve Gümrük Operatörleri",
+          "feature_1": "Uyumluluk belgelerini ve sertifikaları dijital olarak temizleyin",
+          "feature_2": "Tutarsızlıkları ve uyumluluk sorunlarını gerçek zamanlı olarak tespit edin",
+          "feature_3": "İzlenebilir ve sertifikalı ürünlerin işlemesine öncelik verin",
+          "image_alt": "Lojistik ve gümrük operatörleri için faydaları temsil eden illüstrasyon"
+        },
+        "consumers": {
+          "content_title": "Son Tüketiciler",
+          "feature_1": "Satın alma öncesi ürün uyumluluğunu ve güvenliğini doğrulayın",
+          "feature_2": "Kapsamlı yaşam döngüsü verilerine ve sürdürülebilirlik bilgilerine erişin",
+          "feature_3": "Bilinçli ve sürdürülebilir satın alma kararları verin",
+          "image_alt": "Son tüketiciler için faydaları temsil eden illüstrasyon"
+        }
+      }
     },
     "iscc-plus": {
       "title": "ISCC PLUS (TR)",

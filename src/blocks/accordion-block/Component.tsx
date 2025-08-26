@@ -31,7 +31,7 @@ export function AccordionBlock({
           )}
 
           <div className="tw-space-y-2">
-            {items.map((item, index) => (
+            {items?.map((item, index) => (
               <div
                 key={index}
                 className="tw-border tw-rounded-lg tw-overflow-hidden"
