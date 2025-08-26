@@ -4,13 +4,11 @@ import { useTranslations } from "next-intl";
 import React, { useState, ElementType } from "react";
 import {
   BsFileEarmarkText,
-  BsDatabaseFillCheck,
 } from "react-icons/bs";
 import {
   FaLink,
   FaTshirt,
 } from "react-icons/fa";
-import { GrCycle } from "react-icons/gr";
 import { HiMenu, HiX } from "react-icons/hi";
 
 import { Button } from "../button";

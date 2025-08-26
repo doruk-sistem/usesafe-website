@@ -1,8 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { FaShieldAlt, FaGlobe, FaFileAlt, FaRecycle, FaChartLine, FaUsers, FaShoppingCart, FaCogs, FaBuilding, FaMobile } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 import {
   HeroSection,
@@ -32,13 +32,13 @@ export default function UseSafeCertificationPage() {
   };
 
   const cardVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       y: 100,
-      scale: 0.8
+      scale: 0.8,
     },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       scale: 1,
       transition: {
@@ -49,12 +49,12 @@ export default function UseSafeCertificationPage() {
   };
 
   const iconVariants = {
-    hidden: { 
+    hidden: {
       scale: 0.4,
       opacity: 0,
-      rotate: -20
+      rotate: -20,
     },
-    visible: { 
+    visible: {
       scale: 1,
       opacity: 1,
       rotate: 0,
@@ -241,7 +241,7 @@ export default function UseSafeCertificationPage() {
             </p>
           </div>
 
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -341,7 +341,6 @@ export default function UseSafeCertificationPage() {
             </motion.div>
           </motion.div>
 
-
         </div>
       </section>
 
@@ -361,7 +360,7 @@ export default function UseSafeCertificationPage() {
             </p>
           </div>
 
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -461,7 +460,6 @@ export default function UseSafeCertificationPage() {
                          </motion.div>
            </motion.div>
 
-  
         </div>
       </section>
 
