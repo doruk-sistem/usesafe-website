@@ -4,9 +4,10 @@ import { useTranslations } from "next-intl";
 import React from "react";
 
 import Footer from "@/app/(frontend)/_components/footer";
+import { TermsOfServiceContent } from "@/components/Platform";
+
 import NewsletterBlock from "@/blocks/newsletter-block";
 import RenderBlocks from "@/blocks/RenderBlocks";
-import { TermsOfServiceContent } from "@/components/Platform";
 
 export default function TermsOfServicePageClient() {
   const t = useTranslations("TermsOfService");

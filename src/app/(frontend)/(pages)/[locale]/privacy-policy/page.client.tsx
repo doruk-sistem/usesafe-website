@@ -4,9 +4,10 @@ import { useTranslations } from "next-intl";
 import React from "react";
 
 import Footer from "@/app/(frontend)/_components/footer";
+import { PrivacyPolicyContent } from "@/components/Platform";
+
 import NewsletterBlock from "@/blocks/newsletter-block";
 import RenderBlocks from "@/blocks/RenderBlocks";
-import { PrivacyPolicyContent } from "@/components/Platform";
 
 export default function PrivacyPolicyPageClient() {
   const t = useTranslations("PrivacyPolicy");

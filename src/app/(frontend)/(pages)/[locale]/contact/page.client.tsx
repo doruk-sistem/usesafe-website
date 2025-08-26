@@ -4,9 +4,8 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import React from "react";
 import { Toaster } from "react-hot-toast";
-import ButtonSwitchAnimation from "@/app/(frontend)/_components/button-switch-animation";
-import ModernContactForm from "@/components/Platform/ModernContactForm";
 
+import ModernContactForm from "@/components/Platform/ModernContactForm";
 
 export default function ContactPageClient() {
   const t = useTranslations("ContactUs");
@@ -34,7 +33,6 @@ export default function ContactPageClient() {
           </div>
         </div>
       </div>
-
 
       <section id="contact-form">
         <ModernContactForm />
