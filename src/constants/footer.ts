@@ -6,24 +6,17 @@ export const footerData = {
         title: "Company",
         links: [
           {
-            text: "UseSafe Certification",
-            url: "/platform/products/usesafe-certification",
-            isActive: true,
-            order: 1,
-            id: "usesafe-certification",
-          },
-          {
             text: "DPP in ESPR",
             url: "/platform/frameworks/dpp-in-espr",
             isActive: true,
-            order: 2,
+            order: 1,
             id: "dpp-in-espr",
           },
           {
             text: "Textile Passport",
             url: "/platform/frameworks/textile-passport",
             isActive: true,
-            order: 3,
+            order: 2,
             id: "textile-passport",
           },
         ],

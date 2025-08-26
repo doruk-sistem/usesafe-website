@@ -58,7 +58,6 @@ export default function Navbar() {
           label: t("platform.products"),
           isTitle: true,
           subItems: [
-            { key: "usesafe-certification", label: t("platform.usesafe-certification.title"), description: t("platform.usesafe-certification.description"), href: "/platform/products/usesafe-certification", icon: GrCycle },
             { key: "digital-twin", label: t("platform.digital-twin.title"), description: t("platform.digital-twin.description"), href: "#", icon: BsDatabaseFillCheck },
           ],
         },
