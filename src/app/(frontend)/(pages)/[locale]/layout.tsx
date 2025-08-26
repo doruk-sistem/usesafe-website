@@ -12,11 +12,6 @@ import ReactSlickProvider from "@/frontend/_providers/ReactSlickProvider";
 import { routing } from "@/i18n/routing";
 import "@/frontend/globals.css";
 
-// Static header data since Payload CMS is removed
-const getHeaderData = () => {
-  return { dynamicPages: [] };
-};
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -204,13 +199,11 @@ export default async function LocaleLayout({
   const params = await paramsPromise;
   const { locale } = params;
 
-  if (!routing.locales.includes(locale as "en" | "tr")) {
+  if (!routing.locales.includes(locale as "en")) {
     notFound();
   }
 
   setRequestLocale(locale);
-
-  const headerData = getHeaderData();
 
   return (
     <html lang={locale}>
@@ -220,7 +213,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={await getMessages()}>
           <CraftoProvider>
             <ReactSlickProvider>
-              <Header initialSolutions={[]} dynamicPages={headerData.dynamicPages} />
+              <Header />
               {children}
               <Footer />
             </ReactSlickProvider>
