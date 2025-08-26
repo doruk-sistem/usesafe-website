@@ -53,14 +53,13 @@ export default function Navbar() {
             // { key: "custom-frameworks", label: t("platform.custom-frameworks.title"), description: t("platform.custom-frameworks.description"), href: "/platform/frameworks/custom-frameworks", icon: FiSettings },
           ],
         },
-        {
-          key: "products-column",
-          label: t("platform.products"),
-          isTitle: true,
-          subItems: [
-            { key: "digital-twin", label: t("platform.digital-twin.title"), description: t("platform.digital-twin.description"), href: "#", icon: BsDatabaseFillCheck },
-          ],
-        },
+                 {
+           key: "products-column",
+           label: t("platform.products"),
+           isTitle: true,
+           subItems: [
+           ],
+         },
         {
           key: "integration-column",
           label: t("platform.integration"),
@@ -70,11 +69,6 @@ export default function Navbar() {
           ],
         },
       ],
-    },
-    {
-      key: "about-dpp",
-      label: "About DPP",
-      href: "/about-dpp",
     },
     {
       key: "blog",
