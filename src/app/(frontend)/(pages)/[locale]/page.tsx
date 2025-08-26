@@ -1,24 +1,9 @@
-import { getLocale } from "next-intl/server";
-
 import generateMeta from "@/frontend/_utils/generate-meta";
-import { initPayload } from "@/utils/getPayload";
 
 import PageClient from "./page.client";
 
 export default async function HomePage() {
-  try {
-    const locale = await getLocale();
-    const payload = await initPayload();
-
-    const homepage = await payload.findGlobal({
-      slug: "homepage",
-      locale: locale as "en" | "tr",
-    });
-    return <PageClient layout={homepage.layout} />;
-  } catch {
-    // Error loading homepage
-    return <PageClient layout={[]} />;
-  }
+  return <PageClient />;
 }
 
 export async function generateMetadata({
