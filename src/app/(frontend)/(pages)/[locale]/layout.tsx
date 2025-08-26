@@ -5,45 +5,12 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 
-import { initPayload } from "@/app/api/utils/getPayload";
 import Footer from "@/frontend/_components/footer";
 import Header from "@/frontend/_components/header";
 import CraftoProvider from "@/frontend/_providers/CraftoProvider";
 import ReactSlickProvider from "@/frontend/_providers/ReactSlickProvider";
 import { routing } from "@/i18n/routing";
 import "@/frontend/globals.css";
-
-async function getHeaderData(locale: string) {
-  try {
-    const payload = await initPayload();
-
-    const pagesData = await payload.find({
-      collection: "pages",
-      where: {
-        showInMenu: {
-          equals: true,
-        },
-        isActive: {
-          equals: true,
-        },
-      },
-      sort: "menuOrder",
-      locale: locale as "en" | "tr",
-    });
-
-    const dynamicPages = pagesData.docs.map((page) => ({
-      ...page,
-      menuOrder: page.menuOrder ?? 0,
-    }));
-
-    return { dynamicPages };
-  } catch {
-    // Error fetching header data
-    return { dynamicPages: [] };
-  }
-}
-
-// Removed getFooterData function since we're using static data
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -231,16 +198,11 @@ export default async function LocaleLayout({
   const params = await paramsPromise;
   const { locale } = params;
 
-  if (!routing.locales.includes(locale as "en" | "tr")) {
+  if (!routing.locales.includes(locale as "en")) {
     notFound();
   }
 
   setRequestLocale(locale);
-
-  const headerData = await getHeaderData(locale);
-
-  // Remove footer data fetching since we're using static data
-  // const footerData = await getFooterData();
 
   return (
     <html lang={locale}>
@@ -250,7 +212,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={await getMessages()}>
           <CraftoProvider>
             <ReactSlickProvider>
-              <Header initialSolutions={[]} dynamicPages={headerData.dynamicPages} />
+              <Header />
               {children}
               <Footer />
             </ReactSlickProvider>

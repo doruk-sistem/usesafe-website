@@ -1,6 +1,5 @@
 "use client";
 
-import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import React, { useState, ElementType } from "react";
 import {
@@ -20,22 +19,6 @@ import Logo from "../logo";
 
 import NavLink from "./navlink";
 
-interface Solution {
-  title: string;
-  slug: string;
-}
-
-interface DynamicPage {
-  title: string;
-  slug: string;
-  menuOrder: number;
-}
-
-interface NavbarProps {
-  solutions?: Solution[];
-  dynamicPages?: DynamicPage[];
-}
-
 interface NavItem {
   key: string;
   label: string;
@@ -51,12 +34,9 @@ interface NavItem {
   }>;
 }
 
-export default function Navbar({ dynamicPages = [] }: NavbarProps) {
+export default function Navbar() {
   const t = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const sortedDynamicPages = [...dynamicPages].sort((a, b) => a.menuOrder - b.menuOrder);
-  const params = useParams();
-  const locale = params.locale as string;
 
   const navItems: NavItem[] = [
     {
@@ -92,21 +72,11 @@ export default function Navbar({ dynamicPages = [] }: NavbarProps) {
         },
       ],
     },
-    // {
-    //   key: "solutions",
-    //   label: t("common.solutions"),
-    //   subItems: solutions.map((solution, index) => ({
-    //     key: `solution-${solution.slug || index}`,
-    //     label: solution.title,
-    //     href: `/solutions/${solution.slug}` || `#solution-${index}`,
-    //   })),
-    // },
-
-    ...sortedDynamicPages.map((page, index): NavItem => ({
-      key: `dynamic-${page.slug || index}`,
-      label: page.title,
-      href: `/${locale}/${page.slug}`,
-    })),
+    {
+      key: "about-dpp",
+      label: "About DPP",
+      href: "/about-dpp",
+    },
     {
       key: "blog",
       label: t("common.blog"),
