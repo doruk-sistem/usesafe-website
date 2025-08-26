@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import {
@@ -10,7 +11,6 @@ import {
   FaGlobe,
   FaMapMarkedAlt,
 } from "react-icons/fa";
-import Image from "next/image";
 
 type TranslationKey =
   | "platform.usesafe-certification.compliance_eu"
@@ -106,7 +106,6 @@ const ComplianceMapSection = () => {
   const handleRegionHover = (key: string | null, event?: React.MouseEvent) => {
     setHoveredRegion(key);
     if (key && event) {
-      const rect = event.currentTarget.getBoundingClientRect();
       const parentElement = event.currentTarget.parentElement;
       if (parentElement) {
         const svgRect = parentElement.getBoundingClientRect();
