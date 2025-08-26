@@ -1,8 +1,8 @@
 import React from "react";
 
-import PrivacyPolicyPageClient from "./page.client";
-
 import generateMeta from "@/app/(frontend)/_utils/generate-meta";
+
+import PrivacyPolicyPageClient from "./page.client";
 
 export default function PrivacyPolicyPage() {
   return <PrivacyPolicyPageClient />;
