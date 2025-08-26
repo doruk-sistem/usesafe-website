@@ -54,7 +54,7 @@ const generateMeta = async (
       languages,
     },
     icons: {
-      icon: "/favicon.ico",
+      icon: "/logos/usesafe-logo.ico",
     },
     openGraph: {
       title: t("meta.common.og_title"),
