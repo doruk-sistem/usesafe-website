@@ -17,7 +17,7 @@ export const Media: React.FC<MediaProps> = (props) => {
     (typeof resource === "object" && resource?.mimeType?.includes("image")) ||
     type === "image";
 
-  const Tag = (htmlElement as React.ElementType) || Fragment;
+  const Tag = (htmlElement as any) || Fragment;
 
   return (
     <Tag

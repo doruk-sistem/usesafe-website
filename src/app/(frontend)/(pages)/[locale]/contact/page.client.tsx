@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import React from "react";
 import { Toaster } from "react-hot-toast";
 
+import Footer from "@/app/(frontend)/_components/footer";
 import NewsletterBlock from "@/blocks/newsletter-block";
 import RenderBlocks from "@/blocks/RenderBlocks";
 import { ModernContactForm } from "@/components/Platform";
@@ -36,6 +37,7 @@ export default function ContactPageClient() {
       </section>
 
       <NewsletterBlock />
+      <Footer />
     </div>
   );
 }

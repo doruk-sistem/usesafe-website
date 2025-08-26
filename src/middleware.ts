@@ -12,7 +12,7 @@ export async function middleware(request: NextRequest) {
   const defaultLocale = routing.defaultLocale;
 
   const [, segment1, ...segments] = request.nextUrl.pathname.split("/");
-  const isValidLocale = locales.includes(segment1 as "en" | "tr");
+  const isValidLocale = locales.includes(segment1 as any);
 
   if (!isValidLocale) {
     const localeCookie = request.cookies.get("NEXT_LOCALE")?.value;

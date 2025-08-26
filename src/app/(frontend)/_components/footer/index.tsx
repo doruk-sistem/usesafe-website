@@ -10,7 +10,6 @@ import {
   InstagramIcon,
   XIcon,
 } from "@/assets/icons";
-import { footerData } from "@/constants/footer";
 import Logo from "@/frontend/_components/logo";
 interface Platform {
   name: "linkedin" | "facebook" | "instagram" | "twitter";
@@ -67,15 +66,14 @@ interface FooterProps {
   };
 }
 
-export default function Footer({ footerData: propFooterData }: FooterProps) {
+export default function Footer({ footerData }: FooterProps) {
   const params = useParams();
   const locale = params.locale as string;
 
-  // Use static data if no prop data is provided
-  const data = propFooterData || footerData;
-
-  // Always use English content since we only have English data
-  const content = data.content.en;
+  if (!footerData?.content || !footerData.content[locale]) {
+    return null;
+  }
+  const content = footerData.content[locale];
 
   const socialIcons = {
     linkedin: LinkedInIcon,

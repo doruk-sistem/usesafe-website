@@ -9,7 +9,7 @@ import PageClient from "./page.client";
 export default async function SolutionPage({
   params,
 }: {
-  params: Promise<{ slug: string; locale: string }>;
+  params: any;
 }) {
   try {
     const { slug } = await Promise.resolve(params);
@@ -23,7 +23,7 @@ export default async function SolutionPage({
           equals: slug,
         },
       },
-      locale: locale as "en" | "tr",
+      locale: locale as any,
       depth: 3,
     });
 
@@ -31,17 +31,17 @@ export default async function SolutionPage({
       notFound();
     }
 
-    return <PageClient solution={solution.docs[0]} />;
-  } catch {
-    // Error loading solution
-    return <PageClient solution={{ layout: [], title: "", slug: "", id: "", createdAt: "", updatedAt: "" } as any} />;
+    return <PageClient solution={solution.docs[0] as any} />;
+  } catch (error) {
+    console.error("Error loading solution:", error);
+    return <PageClient solution={{ layout: [] } as any} />;
   }
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string; locale: string }>;
+  params: any;
 }) {
   const { slug, locale } = await Promise.resolve(params);
 

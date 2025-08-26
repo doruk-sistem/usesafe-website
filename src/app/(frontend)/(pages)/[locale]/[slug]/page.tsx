@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getLocale } from "next-intl/server";
 
+import Footer from "@/app/(frontend)/_components/footer";
 import { PageTitle } from "@/app/(frontend)/_components/page-title";
 import NewsletterBlock from "@/blocks/newsletter-block";
 import RenderBlocks from "@/blocks/RenderBlocks";
@@ -11,7 +12,7 @@ import { initPayload } from "@/utils/getPayload";
 export default async function DynamicPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: any;
 }) {
   try {
     const currentLocale = await getLocale();
@@ -39,12 +40,13 @@ export default async function DynamicPage({
           title={pageData.title || ""}
           backgroundImage={(pageData.backgroundImage as Media)?.url || ""}
         />
-        <RenderBlocks blocks={(pageData.layout || []) as any} />
+        <RenderBlocks blocks={pageData.layout as any} />
         <NewsletterBlock />
+        <Footer />
       </div>
     );
-  } catch {
-    // Error loading dynamic page
+  } catch (error) {
+    console.error("Error loading dynamic page:", error);
     return notFound();
   }
 }
@@ -60,7 +62,7 @@ export default async function DynamicPage({
 export async function generateMetadata({
   params: paramsPromise,
 }: {
-  params: Promise<{ slug: string }>;
+  params: any;
 }) {
   const params = await paramsPromise;
 

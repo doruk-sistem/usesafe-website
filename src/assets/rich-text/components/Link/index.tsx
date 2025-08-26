@@ -3,7 +3,7 @@ import React from "react";
 
 interface LinkProps {
   newTab?: boolean;
-  reference?: { slug: string };
+  reference?: any;
   type?: "reference" | "custom";
   url?: string;
   children: React.ReactNode;

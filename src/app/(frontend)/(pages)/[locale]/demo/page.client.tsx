@@ -10,6 +10,7 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 
 import { Button } from "@/app/(frontend)/_components/button";
 import ButtonSwitchAnimation from "@/app/(frontend)/_components/button-switch-animation";
+import Footer from "@/app/(frontend)/_components/footer";
 import NewsletterBlock from "@/blocks/newsletter-block";
 import products from "@/constants/products";
 
@@ -237,6 +238,7 @@ export default function DemoPageClient() {
         </form>
       </main>
       <NewsletterBlock />
+      <Footer />
     </div>
   );
 }

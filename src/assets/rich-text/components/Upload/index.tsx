@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 interface MediaType {
@@ -16,12 +15,10 @@ export const Upload: React.FC<MediaProps> = ({ value, alt }) => {
 
   return (
     <div className="col-start-2 tw-my-8">
-      <figure className="tw-relative tw-w-full tw-h-auto">
-        <Image
+      <figure className="tw-relative tw-w-full">
+        <img
           src={value.url}
           alt={value.alt || alt || "Image"}
-          width={800}
-          height={600}
           className="tw-w-full tw-h-auto tw-rounded-lg"
           loading="lazy"
         />

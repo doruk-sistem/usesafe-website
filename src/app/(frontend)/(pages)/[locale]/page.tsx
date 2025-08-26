@@ -1,9 +1,27 @@
+import { getLocale } from "next-intl/server";
+
+import Footer from "@/app/(frontend)/_components/footer";
 import generateMeta from "@/frontend/_utils/generate-meta";
+import { initPayload } from "@/utils/getPayload";
 
 import PageClient from "./page.client";
 
 export default async function HomePage() {
-  return <PageClient />;
+  try {
+    const locale = await getLocale();
+    const payload = await initPayload();
+
+    const homepage = await payload.findGlobal({
+      slug: "homepage" as any,
+      locale: locale as any,
+    });
+    return <PageClient layout={homepage.layout}
+    footer={Footer}
+     />;
+  } catch (error) {
+    console.error("Error loading homepage:", error);
+    return <PageClient layout={[]} />;
+  }
 }
 
 export async function generateMetadata({

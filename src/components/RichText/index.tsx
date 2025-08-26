@@ -6,7 +6,7 @@ import { serializeLexical } from "./serialize";
 
 type Props = {
   className?: string
-  content: Record<string, unknown>
+  content: Record<string, any>
   enableGutter?: boolean
   enableProse?: boolean
 }
@@ -36,8 +36,7 @@ const RichText: React.FC<Props> = ({
         !Array.isArray(content) &&
         typeof content === "object" &&
         "root" in content &&
-        (content.root as any)?.children &&
-        serializeLexical({ nodes: (content.root as any).children })}
+        serializeLexical({ nodes: content?.root?.children })}
     </div>
   );
 };

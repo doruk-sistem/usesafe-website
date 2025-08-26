@@ -202,12 +202,12 @@ export function serializeLexical({ nodes }: Props): JSX.Element {
             }
 
             case "listitem": {
-              const typedNode = node as Record<string, unknown>;
+              const typedNode = node as any;
               return (
                 <ListItem
                   key={index}
-                  checked={typedNode.checked as boolean}
-                  value={typedNode.value as number | undefined}
+                  checked={typedNode.checked}
+                  value={typedNode.value}
                 >
                   {serializedChildren}
                 </ListItem>
@@ -225,7 +225,7 @@ export function serializeLexical({ nodes }: Props): JSX.Element {
                 <Link
                   key={index}
                   newTab={Boolean(fields?.newTab)}
-                  reference={fields.doc as any}
+                  reference={fields.doc}
                   type={fields.linkType === "internal" ? "reference" : "custom"}
                   url={fields.url}
                 >

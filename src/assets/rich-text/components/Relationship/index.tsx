@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 interface SolutionType {
@@ -24,11 +23,10 @@ export const Relationship: React.FC<RelationshipProps> = ({ relationTo, value })
       <div className="tw-relationship-container tw-my-6 tw-rounded-lg tw-overflow-hidden tw-border tw-border-gray-200">
         {solution.backgroundImage?.url && (
           <div className="tw-aspect-video tw-relative tw-overflow-hidden">
-            <Image
+            <img
               src={solution.backgroundImage.url}
               alt={solution.backgroundImage.alt || solution.title}
-              fill
-              className="tw-object-cover"
+              className="tw-w-full tw-h-full tw-object-cover"
             />
           </div>
         )}
