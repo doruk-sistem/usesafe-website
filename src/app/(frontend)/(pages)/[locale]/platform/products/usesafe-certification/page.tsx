@@ -1,7 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { FaShieldAlt, FaGlobe, FaFileAlt, FaRecycle, FaChartLine } from "react-icons/fa";
+import { FaShieldAlt, FaGlobe, FaFileAlt, FaRecycle, FaChartLine, FaUsers, FaShoppingCart, FaCogs, FaBuilding, FaMobile } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 import {
   HeroSection,
@@ -16,6 +17,54 @@ import ComplianceMapSection from "@/components/Platform/ComplianceMapSection";
 
 export default function UseSafeCertificationPage() {
   const t = useTranslations();
+
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.8,
+        delayChildren: 0.5,
+        duration: 1.2,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 100,
+      scale: 0.8
+    },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 1.8,
+        ease: [0.25, 0.46, 0.45, 0.94], // Smooth easing
+      },
+    },
+  };
+
+  const iconVariants = {
+    hidden: { 
+      scale: 0.4,
+      opacity: 0,
+      rotate: -20
+    },
+    visible: { 
+      scale: 1,
+      opacity: 1,
+      rotate: 0,
+      transition: {
+        duration: 1.4,
+        ease: "easeOut",
+        delay: 0.8,
+      },
+    },
+  };
 
   const stakeholderSectorsData = [
     {
@@ -179,32 +228,240 @@ export default function UseSafeCertificationPage() {
       {/* SUSTAINABILITY & CIRCULAR ECONOMY SECTION */}
       <section className="tw-py-24 tw-bg-gradient-to-br tw-from-blue-50 tw-to-indigo-50">
         <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6">
-          <SectionHeader
-            title={t("platform.usesafe-certification.sustainability_title")}
-            description={t("platform.usesafe-certification.sustainability_description")}
-          />
-          <ul className="tw-list-disc tw-list-inside tw-mt-8 tw-space-y-4 tw-text-lg">
-            <li>{t("platform.usesafe-certification.sustainability_collection")}</li>
-            <li>{t("platform.usesafe-certification.sustainability_monitoring")}</li>
-            <li>{t("platform.usesafe-certification.sustainability_dpp_integration")}</li>
-            <li>{t("platform.usesafe-certification.sustainability_engagement")}</li>
-          </ul>
+          <div className="tw-text-center tw-mb-16">
+            <div className="tw-inline-flex tw-items-center tw-mb-4 tw-px-4 tw-py-2 tw-bg-blue-100 tw-text-blue-700 tw-font-medium tw-text-sm tw-rounded-full">
+              <FaRecycle className="tw-w-4 tw-h-4 tw-mr-2" />
+              Circular Economy
+            </div>
+            <h2 className="tw-text-4xl md:tw-text-5xl tw-font-bold tw-mb-6 tw-text-gray-900">
+              {t("platform.usesafe-certification.sustainability_title")}
+            </h2>
+            <p className="tw-text-xl tw-text-gray-700 tw-max-w-3xl tw-mx-auto">
+              {t("platform.usesafe-certification.sustainability_description")}
+            </p>
+          </div>
+
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-8"
+          >
+            {/* Collection Card */}
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              animate="visible"
+              className="tw-bg-white tw-rounded-2xl tw-p-8 tw-shadow-lg tw-border tw-border-blue-100 hover:tw-shadow-xl tw-transition-all tw-duration-300"
+            >
+              <motion.div
+                variants={iconVariants}
+                initial="hidden"
+                animate="visible"
+                className="tw-bg-blue-100 tw-w-16 tw-h-16 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6"
+              >
+                <FaRecycle className="tw-w-8 tw-h-8 tw-text-blue-600" />
+              </motion.div>
+              <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
+                End-of-Life Information
+              </h3>
+              <p className="tw-text-gray-700 tw-leading-relaxed">
+                {t("platform.usesafe-certification.sustainability_collection")}
+              </p>
+            </motion.div>
+
+            {/* Monitoring Card */}
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              animate="visible"
+              className="tw-bg-white tw-rounded-2xl tw-p-8 tw-shadow-lg tw-border tw-border-blue-100 hover:tw-shadow-xl tw-transition-all tw-duration-300"
+            >
+              <motion.div
+                variants={iconVariants}
+                initial="hidden"
+                animate="visible"
+                className="tw-bg-blue-100 tw-w-16 tw-h-16 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6"
+              >
+                <FaChartLine className="tw-w-8 tw-h-8 tw-text-blue-600" />
+              </motion.div>
+              <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
+                Lifecycle Monitoring
+              </h3>
+              <p className="tw-text-gray-700 tw-leading-relaxed">
+                {t("platform.usesafe-certification.sustainability_monitoring")}
+              </p>
+            </motion.div>
+
+            {/* DPP Integration Card */}
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              animate="visible"
+              className="tw-bg-white tw-rounded-2xl tw-p-8 tw-shadow-lg tw-border tw-border-blue-100 hover:tw-shadow-xl tw-transition-all tw-duration-300"
+            >
+              <motion.div
+                variants={iconVariants}
+                initial="hidden"
+                animate="visible"
+                className="tw-bg-blue-100 tw-w-16 tw-h-16 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6"
+              >
+                <FaFileAlt className="tw-w-8 tw-h-8 tw-text-blue-600" />
+              </motion.div>
+              <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
+                DPP Integration
+              </h3>
+              <p className="tw-text-gray-700 tw-leading-relaxed">
+                {t("platform.usesafe-certification.sustainability_dpp_integration")}
+              </p>
+            </motion.div>
+
+            {/* Consumer Engagement Card */}
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              animate="visible"
+              className="tw-bg-white tw-rounded-2xl tw-p-8 tw-shadow-lg tw-border tw-border-blue-100 hover:tw-shadow-xl tw-transition-all tw-duration-300"
+            >
+              <motion.div
+                variants={iconVariants}
+                initial="hidden"
+                animate="visible"
+                className="tw-bg-blue-100 tw-w-16 tw-h-16 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6"
+              >
+                <FaUsers className="tw-w-8 tw-h-8 tw-text-blue-600" />
+              </motion.div>
+              <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
+                Consumer Engagement
+              </h3>
+              <p className="tw-text-gray-700 tw-leading-relaxed">
+                {t("platform.usesafe-certification.sustainability_engagement")}
+              </p>
+            </motion.div>
+          </motion.div>
+
+
         </div>
       </section>
 
       {/* FUTURE OUTLOOK SECTION */}
-      <section className="tw-py-24 tw-bg-white">
+      <section className="tw-py-24 tw-bg-gradient-to-br tw-from-blue-50 tw-to-indigo-50">
         <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6">
-          <SectionHeader
-            title={t("platform.usesafe-certification.future_title")}
-            description={t("platform.usesafe-certification.future_description")}
-          />
-          <ul className="tw-list-disc tw-list-inside tw-mt-8 tw-space-y-4 tw-text-lg">
-            <li>{t("platform.usesafe-certification.future_marketplace")}</li>
-            <li>{t("platform.usesafe-certification.future_sector_modules")}</li>
-            <li>{t("platform.usesafe-certification.future_egov")}</li>
-            <li>{t("platform.usesafe-certification.future_mobile")}</li>
-          </ul>
+          <div className="tw-text-center tw-mb-16">
+            <div className="tw-inline-flex tw-items-center tw-mb-4 tw-px-4 tw-py-2 tw-bg-blue-100 tw-text-blue-700 tw-font-medium tw-text-sm tw-rounded-full">
+              <FaGlobe className="tw-w-4 tw-h-4 tw-mr-2" />
+              Platform Development
+            </div>
+            <h2 className="tw-text-4xl md:tw-text-5xl tw-font-bold tw-mb-6 tw-text-gray-900">
+              {t("platform.usesafe-certification.future_title")}
+            </h2>
+            <p className="tw-text-xl tw-text-gray-700 tw-max-w-3xl tw-mx-auto">
+              {t("platform.usesafe-certification.future_description")}
+            </p>
+          </div>
+
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-8"
+          >
+            {/* Marketplace Card */}
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              animate="visible"
+              className="tw-bg-white tw-rounded-2xl tw-p-8 tw-shadow-lg tw-border tw-border-blue-100 hover:tw-shadow-xl tw-transition-all tw-duration-300"
+            >
+              <motion.div
+                variants={iconVariants}
+                initial="hidden"
+                animate="visible"
+                className="tw-bg-blue-100 tw-w-16 tw-h-16 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6"
+              >
+                <FaShoppingCart className="tw-w-8 tw-h-8 tw-text-blue-600" />
+              </motion.div>
+              <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
+                Public Marketplace
+              </h3>
+              <p className="tw-text-gray-700 tw-leading-relaxed">
+                {t("platform.usesafe-certification.future_marketplace")}
+              </p>
+            </motion.div>
+
+            {/* Sector Modules Card */}
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              animate="visible"
+              className="tw-bg-white tw-rounded-2xl tw-p-8 tw-shadow-lg tw-border tw-border-blue-100 hover:tw-shadow-xl tw-transition-all tw-duration-300"
+            >
+              <motion.div
+                variants={iconVariants}
+                initial="hidden"
+                animate="visible"
+                className="tw-bg-blue-100 tw-w-16 tw-h-16 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6"
+              >
+                <FaCogs className="tw-w-8 tw-h-8 tw-text-blue-600" />
+              </motion.div>
+              <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
+                Sector Modules
+              </h3>
+              <p className="tw-text-gray-700 tw-leading-relaxed">
+                {t("platform.usesafe-certification.future_sector_modules")}
+              </p>
+            </motion.div>
+
+            {/* E-Government Card */}
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              animate="visible"
+              className="tw-bg-white tw-rounded-2xl tw-p-8 tw-shadow-lg tw-border tw-border-blue-100 hover:tw-shadow-xl tw-transition-all tw-duration-300"
+            >
+              <motion.div
+                variants={iconVariants}
+                initial="hidden"
+                animate="visible"
+                className="tw-bg-blue-100 tw-w-16 tw-h-16 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6"
+              >
+                <FaBuilding className="tw-w-8 tw-h-8 tw-text-blue-600" />
+              </motion.div>
+              <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
+                E-Government Integration
+              </h3>
+              <p className="tw-text-gray-700 tw-leading-relaxed">
+                {t("platform.usesafe-certification.future_egov")}
+              </p>
+            </motion.div>
+
+            {/* Mobile Apps Card */}
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              animate="visible"
+              className="tw-bg-white tw-rounded-2xl tw-p-8 tw-shadow-lg tw-border tw-border-blue-100 hover:tw-shadow-xl tw-transition-all tw-duration-300"
+            >
+              <motion.div
+                variants={iconVariants}
+                initial="hidden"
+                animate="visible"
+                className="tw-bg-blue-100 tw-w-16 tw-h-16 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6"
+              >
+                <FaMobile className="tw-w-8 tw-h-8 tw-text-blue-600" />
+              </motion.div>
+              <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
+                Mobile Apps & Dashboards
+              </h3>
+              <p className="tw-text-gray-700 tw-leading-relaxed">
+                {t("platform.usesafe-certification.future_mobile")}
+              </p>
+                         </motion.div>
+           </motion.div>
+
+  
         </div>
       </section>
 
