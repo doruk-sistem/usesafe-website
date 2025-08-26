@@ -55,7 +55,7 @@ export default function UseSafeCertificationPage() {
       labelKey: "platform.usesafe-certification.stakeholder_logistics_label",
       contentTitleKey: "content_title",
       featuresKeys: ["feature_1", "feature_2", "feature_3"],
-      imageSrc: "/images/platform/sector-service_providers.jpg",
+      imageSrc: "/images/platform/logistics-customs-operators-image.png",
       imageAltKey: "image_alt",
     },
     {
