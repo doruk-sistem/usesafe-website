@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ComponentProps, Fragment } from "react";
+import React, { Fragment } from "react";
 
 import Section, { type SectionProps } from "@/components/Section";
 
@@ -31,15 +31,12 @@ const blockComponents = {
 
 type BlockType = keyof typeof blockComponents;
 
-type BlockTypeProps = {
-  [K in BlockType]: {
-    blockType: K;
-    layout: ComponentProps<(typeof blockComponents)[K]>;
-    blockOptions?: Omit<SectionProps, "children">;
-  };
+type Block = {
+  blockType: string;
+  layout?: Record<string, unknown>;
+  blockOptions?: Omit<SectionProps, "children">;
+  [key: string]: any;
 };
-
-type Block = BlockTypeProps[BlockType];
 
 interface RenderBlocksProps {
   blocks: Block[];
@@ -53,18 +50,20 @@ export default function RenderBlocks({ blocks }: RenderBlocksProps) {
   return (
     <Fragment>
       {blocks.map((block, index) => {
-        const { blockType, blockOptions } = block;
-        const Component = blockComponents[blockType];
+        const { blockType, blockOptions, layout, ...blockProps } = block;
+        const Component = blockComponents[blockType as BlockType];
 
         if (!Component) {
           return null;
         }
 
+        const componentProps = layout || blockProps;
+
         if (blockType === "sliderBlock") {
           return (
             <Fragment key={index}>
-              {/* @ts-expect-error - Type safety is handled by BlockTypeProps */}
-              <Component {...block} />
+              {/* @ts-expect-error - Component props are dynamic */}
+              <Component {...componentProps} />
             </Fragment>
           );
         }
@@ -80,8 +79,8 @@ export default function RenderBlocks({ blocks }: RenderBlocksProps) {
 
         return (
           <Section key={index} {...blockOptions}>
-            {/* @ts-expect-error - Type safety is handled by BlockTypeProps */}
-            <Component {...block} />
+            {/* @ts-expect-error - Component props are dynamic */}
+            <Component {...componentProps} />
           </Section>
         );
       })}

@@ -74,7 +74,7 @@ export default function UseSafeCertificationPage() {
         badge={t("platform.usesafe-certification.hero_badge")}
         title={t("platform.usesafe-certification.hero_title")}
         description={t("platform.usesafe-certification.hero_description")}
-        imageSrc="/logos/USESAFE_MARKA.png"
+        imageSrc="/images/usesafe-certification-homepage.png"
         imageAlt={t("platform.usesafe-certification.hero_image_alt")}
         primaryCta={{
           text: t("common.contact_us"),

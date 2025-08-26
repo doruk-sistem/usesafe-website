@@ -6,7 +6,6 @@ import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 import { Button } from "@/app/(frontend)/_components/button";
-import Footer from "@/app/(frontend)/_components/footer";
 import RichText from "@/components/RichText";
 
 interface BlogPost {
@@ -17,7 +16,7 @@ interface BlogPost {
       children: Array<{
         text?: string;
         type?: string;
-        children?: any[];
+        children?: Array<Record<string, unknown>>;
       }>;
     };
   };
@@ -48,8 +47,8 @@ export default function BlogDetailPage() {
 
         const data = await response.json();
         setBlog(data);
-      } catch (error) {
-        console.error("Error fetching blog details:", error);
+      } catch {
+        // Error fetching blog details
       } finally {
         setIsLoading(false);
       }
@@ -129,8 +128,6 @@ export default function BlogDetailPage() {
           </Button>
         </div>
       </motion.div>
-
-      <Footer />
     </div>
   );
 }

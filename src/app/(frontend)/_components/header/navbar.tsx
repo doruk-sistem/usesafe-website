@@ -175,7 +175,7 @@ export default function Navbar({ dynamicPages = [] }: NavbarProps) {
                 />
               ))}
               <div className="tw-flex tw-flex-col tw-space-y-2 tw-px-4">
-                <a href="/contact">
+                <a href="/contact" className="tw-w-full">
                   <Button variant="default" size="lg" className="tw-w-full">
                     {t("common.try_for_free")}
                   </Button>

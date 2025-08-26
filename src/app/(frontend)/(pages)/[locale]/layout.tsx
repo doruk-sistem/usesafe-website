@@ -37,40 +37,13 @@ async function getHeaderData(locale: string) {
     }));
 
     return { dynamicPages };
-  } catch (error) {
-    console.error("Error fetching header data:", error);
+  } catch {
+    // Error fetching header data
     return { dynamicPages: [] };
   }
 }
 
-async function getFooterData() {
-  try {
-    const payload = await initPayload();
-    const locales = ["en", "tr"];
-    const footerData: any = { content: {} };
-
-    for (const locale of locales) {
-      const response = await payload.findGlobal({
-        slug: "footer",
-        locale: locale as "en" | "tr" | "all",
-      });
-
-      if (response?.content) {
-        footerData.content[locale] = {
-          copyright: response.content.copyright,
-          company: response.content.company,
-          legal: response.content.legal,
-          social: response.content.social,
-          newsletter: response.content.newsletter,
-        };
-      }
-    }
-    return footerData;
-  } catch (error) {
-    console.error("Error fetching footer data:", error);
-    return null;
-  }
-}
+// Removed getFooterData function since we're using static data
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -258,7 +231,7 @@ export default async function LocaleLayout({
   const params = await paramsPromise;
   const { locale } = params;
 
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as "en" | "tr")) {
     notFound();
   }
 
@@ -266,7 +239,8 @@ export default async function LocaleLayout({
 
   const headerData = await getHeaderData(locale);
 
-  const footerData = await getFooterData();
+  // Remove footer data fetching since we're using static data
+  // const footerData = await getFooterData();
 
   return (
     <html lang={locale}>
@@ -278,7 +252,7 @@ export default async function LocaleLayout({
             <ReactSlickProvider>
               <Header initialSolutions={[]} dynamicPages={headerData.dynamicPages} />
               {children}
-              {footerData && <Footer footerData={footerData} />}
+              <Footer />
             </ReactSlickProvider>
           </CraftoProvider>
         </NextIntlClientProvider>

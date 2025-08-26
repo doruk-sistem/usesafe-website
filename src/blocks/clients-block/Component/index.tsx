@@ -1,14 +1,12 @@
 import React from "react";
 
-import { Media } from "@/payload-types";
-
 import ClientsList from "./clients-list";
 import ClientsSlick from "./clients-slick";
 
 export interface ClientsBlockProps {
   clients: {
     name: string;
-    image: Media;
+    image: any;
   }[];
   type?: "list" | "slick";
   /**
@@ -18,7 +16,7 @@ export interface ClientsBlockProps {
   gradientColor?: string;
 }
 
-const clientsComponents: Record<NonNullable<ClientsBlockProps["type"]>, any> = {
+const clientsComponents: Record<NonNullable<ClientsBlockProps["type"]>, React.ComponentType<ClientsBlockProps>> = {
   list: ClientsList,
   slick: ClientsSlick,
 };
