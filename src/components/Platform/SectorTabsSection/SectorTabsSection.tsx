@@ -99,9 +99,9 @@ const SectorTabsSection: React.FC<SectorTabsSectionProps> = ({
               </ul>
               <CtaButton
                 href={
-                  activeTabIndex === 0 
-                    ? "/stakeholders/manufacturers-brand-owners" 
-                    : activeTabIndex === 1 
+                  activeTabIndex === 0
+                    ? "/stakeholders/manufacturers-brand-owners"
+                    : activeTabIndex === 1
                     ? "/stakeholders/ecommerce-sellers-distributors"
                     : "#"
                 }

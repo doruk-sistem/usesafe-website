@@ -7,13 +7,9 @@ import "aos/dist/aos.css";
 import {
   FaStore,
   FaShieldAlt,
-  FaChartLine,
   FaGlobe,
-  FaShoppingCart,
   FaFileAlt,
   FaCheckCircle,
-  FaUsers,
-  FaCogs,
   FaSearch,
   FaHandshake,
 } from "react-icons/fa";
@@ -102,7 +98,7 @@ export default function EcommerceSellersDistributorsPage() {
               <p className="tw-text-xl tw-text-gray-600 tw-mb-8 tw-leading-relaxed">
                 Integrate UseSafe certification into your existing e-commerce workflows and marketplace listings without disrupting your sales operations.
               </p>
-              
+
               <div className="tw-space-y-6">
                 <div className="tw-flex tw-items-start tw-space-x-4">
                   <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary tw-mt-1 tw-flex-shrink-0" />
@@ -115,7 +111,7 @@ export default function EcommerceSellersDistributorsPage() {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="tw-flex tw-items-start tw-space-x-4">
                   <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary tw-mt-1 tw-flex-shrink-0" />
                   <div>
@@ -127,7 +123,7 @@ export default function EcommerceSellersDistributorsPage() {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="tw-flex tw-items-start tw-space-x-4">
                   <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary tw-mt-1 tw-flex-shrink-0" />
                   <div>
