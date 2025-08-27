@@ -142,8 +142,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               <Swiper
                 modules={[Autoplay]}
                 spaceBetween={16}
-                slidesPerView={2}
+                slidesPerView={5}
                 breakpoints={{
+                  320: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                  },
                   640: {
                     slidesPerView: 3,
                     spaceBetween: 20,
@@ -156,20 +160,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                     slidesPerView: 5,
                     spaceBetween: 32,
                   },
-                  1280: {
-                    slidesPerView: 6,
-                    spaceBetween: 16,
-                  },
                 }}
                 centeredSlides={false}
                 loop={true}
                 autoplay={{
                   delay: 0,
                   disableOnInteraction: false,
+                  pauseOnMouseEnter: true,
                 }}
-                speed={2000}
+                speed={3000}
                 allowTouchMove={true}
                 grabCursor={true}
+                freeMode={true}
                 className="tw-w-full tw-h-full"
               >
                 {logos.map((logo, index) => (
