@@ -97,9 +97,9 @@ const SectorTabsSection: React.FC<SectorTabsSectionProps> = ({
                   return null;
                 })}
               </ul>
-              <CtaButton 
-                href={activeTabIndex === 0 ? "/stakeholders/manufacturers-brand-owners" : "#"} 
-                variant="primary" 
+              <CtaButton
+                href={activeTabIndex === 0 ? "/stakeholders/manufacturers-brand-owners" : "#"}
+                variant="primary"
                 className="tw-w-full sm:tw-w-auto"
               >
                 {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}

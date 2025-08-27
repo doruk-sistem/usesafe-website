@@ -2,7 +2,6 @@
 
 import AOS from "aos";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
 import {
@@ -21,7 +20,6 @@ import {
   SectionHeader,
   GradientBackground,
   FeatureCard,
-  CtaButton,
   HeroSection,
   CtaSection,
 } from "@/components/Platform";
@@ -35,8 +33,6 @@ export default function ManufacturersBrandOwnersPage() {
       easing: "ease-out-cubic",
     });
   }, []);
-
-  const t = useTranslations();
 
   return (
     <div className="tw-w-full">
@@ -104,7 +100,7 @@ export default function ManufacturersBrandOwnersPage() {
               <p className="tw-text-xl tw-text-gray-600 tw-mb-8 tw-leading-relaxed">
                 Integrate digital product passports into your existing manufacturing workflow without disrupting production efficiency.
               </p>
-              
+
               <div className="tw-space-y-6">
                 <div className="tw-flex tw-items-start tw-space-x-4">
                   <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary tw-mt-1 tw-flex-shrink-0" />
@@ -117,7 +113,7 @@ export default function ManufacturersBrandOwnersPage() {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="tw-flex tw-items-start tw-space-x-4">
                   <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary tw-mt-1 tw-flex-shrink-0" />
                   <div>
@@ -129,7 +125,7 @@ export default function ManufacturersBrandOwnersPage() {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="tw-flex tw-items-start tw-space-x-4">
                   <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary tw-mt-1 tw-flex-shrink-0" />
                   <div>
