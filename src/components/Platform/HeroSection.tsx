@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Swiper CSS
 import "swiper/css";
@@ -138,7 +138,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="tw-mt-16 tw-pt-12 tw-pb-0 tw-border-t tw-border-white/20">
             <div className="tw-relative tw-overflow-hidden tw-h-32 tw-w-full">
               <div className="tw-absolute tw-inset-0 tw-bg-gradient-to-r tw-from-transparent tw-via-white/5 tw-to-transparent tw-z-10 tw-pointer-events-none"></div>
-              
+
               <Swiper
                 modules={[Autoplay]}
                 spaceBetween={16}
