@@ -2,8 +2,20 @@
 
 import Image from "next/image";
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+// Swiper CSS
+import "swiper/css";
 
 import CtaButton from "./CtaButton";
+
+interface Logo {
+  id: number;
+  src: string;
+  alt: string;
+  name: string;
+}
 
 interface HeroSectionProps {
   badge?: string;
@@ -20,6 +32,7 @@ interface HeroSectionProps {
     href: string;
     external?: boolean;
   };
+  logos?: Logo[];
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -30,9 +43,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   imageAlt,
   primaryCta,
   secondaryCta,
+  logos,
 }) => {
   return (
-    <section className="tw-relative tw-overflow-hidden tw-py-24 md:tw-py-32 tw-bg-gradient-to-br tw-from-[#1e3c72] tw-via-[#2a5298] tw-to-[#6dd5ed] tw-text-white">
+    <section className="tw-relative tw-overflow-hidden tw-pt-24 md:tw-pt-32 tw-pb-0 tw-bg-gradient-to-br tw-from-[#1e3c72] tw-via-[#2a5298] tw-to-[#6dd5ed] tw-text-white">
       {/* Animated SVG Background */}
       <svg
         className="tw-absolute tw-top-0 tw-left-0 tw-w-full tw-h-full tw-z-0"
@@ -119,6 +133,62 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
           </div>
         </div>
+        {/* Logo Slider */}
+        {logos && logos.length > 0 && (
+          <div className="tw-mt-16 tw-pt-12 tw-pb-0 tw-border-t tw-border-white/20">
+            <div className="tw-relative tw-overflow-hidden tw-h-32 tw-w-full">
+              <div className="tw-absolute tw-inset-0 tw-bg-gradient-to-r tw-from-transparent tw-via-white/5 tw-to-transparent tw-z-10 tw-pointer-events-none"></div>
+              
+              <Swiper
+                modules={[Autoplay]}
+                spaceBetween={16}
+                slidesPerView={2}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 4,
+                    spaceBetween: 24,
+                  },
+                  1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 32,
+                  },
+                  1280: {
+                    slidesPerView: 6,
+                    spaceBetween: 16,
+                  },
+                }}
+                centeredSlides={false}
+                loop={true}
+                autoplay={{
+                  delay: 0,
+                  disableOnInteraction: false,
+                }}
+                speed={2000}
+                allowTouchMove={true}
+                grabCursor={true}
+                className="tw-w-full tw-h-full"
+              >
+                {logos.map((logo, index) => (
+                  <SwiperSlide key={`logo-${logo.id}-${index}`} className="tw-w-auto">
+                    <div className="tw-flex tw-items-center tw-justify-center tw-w-40 tw-h-20 tw-bg-white/10 tw-backdrop-blur-sm tw-rounded-2xl tw-border tw-border-white/20 hover:tw-bg-white/20 hover:tw-scale-110 tw-transition-all tw-duration-300 tw-cursor-pointer">
+                      <Image
+                        src={logo.src}
+                        alt={logo.alt}
+                        width={160}
+                        height={80}
+                        className="tw-object-contain tw-max-w-full tw-max-h-full tw-filter tw-brightness-0 tw-invert hover:tw-filter-none tw-transition-all tw-duration-300"
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
