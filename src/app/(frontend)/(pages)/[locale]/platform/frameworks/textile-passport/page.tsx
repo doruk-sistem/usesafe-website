@@ -100,6 +100,7 @@ export default function TextilePassportPage() {
           href: "https://app.usesafe.net/",
           external: true,
         }}
+        className="tw-py-24 md:tw-py-32"
       />
 
       {/* DPP NEDİR? */}

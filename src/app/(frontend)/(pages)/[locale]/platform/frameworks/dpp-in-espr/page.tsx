@@ -40,20 +40,7 @@ export default function DppInEsprPage() {
       <HeroSection
         badge={t("platform.dpp-in-espr.badge")}
         title={t("platform.dpp-in-espr.hero_title")}
-        description={
-          <>
-            {t("platform.dpp-in-espr.hero_description").replace(
-              "UseSAFE platform",
-              ""
-            )}{" "}
-            <b>UseSAFE platform</b>,{" "}
-            {
-              t("platform.dpp-in-espr.hero_description").split(
-                "UseSAFE platform"
-              )[1]
-            }
-          </>
-        }
+        description={t("platform.dpp-in-espr.hero_description")}
         imageSrc="/images/digital-product-passport-usesafe.png"
         imageAlt="Digital Product Passport"
         primaryCta={{
@@ -65,6 +52,7 @@ export default function DppInEsprPage() {
           href: "https://app.usesafe.net/",
           external: true,
         }}
+        className="tw-py-24 md:tw-py-32"
       />
 
       {/* What is DPP Section */}
