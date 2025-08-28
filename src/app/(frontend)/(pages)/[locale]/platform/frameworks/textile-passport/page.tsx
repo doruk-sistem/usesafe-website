@@ -114,34 +114,34 @@ export default function TextilePassportPage() {
             <FeatureCard
               icon={<FaShieldAlt className="tw-w-8 tw-h-8" />}
               title={t(
-                "platform.textile-passport.what_is_dpp.transparency_trust_title"
+                "platform.textile-passport.what_is_dpp.transparency_trust_title",
               )}
               variant="glass"
             >
               {t(
-                "platform.textile-passport.what_is_dpp.transparency_trust_description"
+                "platform.textile-passport.what_is_dpp.transparency_trust_description",
               )}
             </FeatureCard>
             <FeatureCard
               icon={<FaRecycle className="tw-w-8 tw-h-8" />}
               title={t(
-                "platform.textile-passport.what_is_dpp.circularity_title"
+                "platform.textile-passport.what_is_dpp.circularity_title",
               )}
               variant="glass"
             >
               {t(
-                "platform.textile-passport.what_is_dpp.circularity_description"
+                "platform.textile-passport.what_is_dpp.circularity_description",
               )}
             </FeatureCard>
             <FeatureCard
               icon={<FaChartLine className="tw-w-8 tw-h-8" />}
               title={t(
-                "platform.textile-passport.what_is_dpp.competitive_advantage_title"
+                "platform.textile-passport.what_is_dpp.competitive_advantage_title",
               )}
               variant="glass"
             >
               {t(
-                "platform.textile-passport.what_is_dpp.competitive_advantage_description"
+                "platform.textile-passport.what_is_dpp.competitive_advantage_description",
               )}
             </FeatureCard>
           </div>
@@ -164,45 +164,45 @@ export default function TextilePassportPage() {
                 <FeatureCard
                   icon={<FaShieldAlt className="tw-w-6 tw-h-6" />}
                   title={t(
-                    "platform.textile-passport.why_dpp.espr_compliance_title"
+                    "platform.textile-passport.why_dpp.espr_compliance_title",
                   )}
                   variant="horizontal"
                 >
                   {t(
-                    "platform.textile-passport.why_dpp.espr_compliance_description"
+                    "platform.textile-passport.why_dpp.espr_compliance_description",
                   )}
                 </FeatureCard>
                 <FeatureCard
                   icon={<FaChartLine className="tw-w-6 tw-h-6" />}
                   title={t(
-                    "platform.textile-passport.why_dpp.supply_chain_transparency_title"
+                    "platform.textile-passport.why_dpp.supply_chain_transparency_title",
                   )}
                   variant="horizontal"
                 >
                   {t(
-                    "platform.textile-passport.why_dpp.supply_chain_transparency_description"
+                    "platform.textile-passport.why_dpp.supply_chain_transparency_description",
                   )}
                 </FeatureCard>
                 <FeatureCard
                   icon={<FaFileAlt className="tw-w-6 tw-h-6" />}
                   title={t(
-                    "platform.textile-passport.why_dpp.data_protection_title"
+                    "platform.textile-passport.why_dpp.data_protection_title",
                   )}
                   variant="horizontal"
                 >
                   {t(
-                    "platform.textile-passport.why_dpp.data_protection_description"
+                    "platform.textile-passport.why_dpp.data_protection_description",
                   )}
                 </FeatureCard>
                 <FeatureCard
                   icon={<FaGlobe className="tw-w-6 tw-h-6" />}
                   title={t(
-                    "platform.textile-passport.why_dpp.consumer_engagement_title"
+                    "platform.textile-passport.why_dpp.consumer_engagement_title",
                   )}
                   variant="horizontal"
                 >
                   {t(
-                    "platform.textile-passport.why_dpp.consumer_engagement_description"
+                    "platform.textile-passport.why_dpp.consumer_engagement_description",
                   )}
                 </FeatureCard>
               </div>
@@ -260,7 +260,7 @@ export default function TextilePassportPage() {
             <h3 className="tw-text-3xl tw-font-bold tw-text-gray-900 tw-mb-6 tw-text-center">
               {
                 t("platform.dpp-in-espr.our_approach_title").split(
-                  "DPP Implementation"
+                  "DPP Implementation",
                 )[0]
               }{" "}
               <span className="tw-text-primary">

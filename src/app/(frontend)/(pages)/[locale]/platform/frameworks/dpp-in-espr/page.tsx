@@ -111,7 +111,7 @@ export default function DppInEsprPage() {
             <h2 className="tw-text-5xl tw-font-extrabold tw-text-gray-900 tw-drop-shadow-lg tw-mb-6 tw-leading-tight">
               {
                 t("platform.dpp-in-espr.espr_compliance_title").split(
-                  "Made Simple"
+                  "Made Simple",
                 )[0]
               }{" "}
               <span className="tw-text-primary">
@@ -207,7 +207,7 @@ export default function DppInEsprPage() {
             <h3 className="tw-text-3xl tw-font-bold tw-text-gray-900 tw-mb-6 tw-text-center">
               {
                 t("platform.dpp-in-espr.our_approach_title").split(
-                  "DPP Implementation"
+                  "DPP Implementation",
                 )[0]
               }{" "}
               <span className="tw-text-primary">
