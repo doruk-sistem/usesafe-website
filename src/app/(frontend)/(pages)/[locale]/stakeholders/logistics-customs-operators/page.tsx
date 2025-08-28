@@ -66,7 +66,8 @@ export default function LogisticsCustomsOperatorsPage() {
             title="Digital Clearance"
             delay={0}
           >
-            Digitally clear compliance documents and certifications for faster processing and reduced paperwork.
+            Digitally clear compliance documents and certifications for faster
+            processing and reduced paperwork.
           </FeatureCard>
 
           <FeatureCard
@@ -74,7 +75,8 @@ export default function LogisticsCustomsOperatorsPage() {
             title="Real-time Monitoring"
             delay={100}
           >
-            Identify discrepancies and compliance issues in real-time to prevent delays and ensure smooth operations.
+            Identify discrepancies and compliance issues in real-time to prevent
+            delays and ensure smooth operations.
           </FeatureCard>
 
           <FeatureCard
@@ -82,7 +84,8 @@ export default function LogisticsCustomsOperatorsPage() {
             title="Priority Processing"
             delay={200}
           >
-            Prioritize processing of traceable and certified products to optimize logistics flow and reduce clearance times.
+            Prioritize processing of traceable and certified products to
+            optimize logistics flow and reduce clearance times.
           </FeatureCard>
         </div>
       </GradientBackground>
@@ -96,7 +99,9 @@ export default function LogisticsCustomsOperatorsPage() {
                 Seamless Logistics Integration
               </h2>
               <p className="tw-text-xl tw-text-gray-600 tw-mb-8 tw-leading-relaxed">
-                Integrate UseSafe compliance verification into your existing logistics and customs systems to streamline operations and enhance efficiency.
+                Integrate UseSafe compliance verification into your existing
+                logistics and customs systems to streamline operations and
+                enhance efficiency.
               </p>
 
               <div className="tw-space-y-6">
@@ -107,7 +112,8 @@ export default function LogisticsCustomsOperatorsPage() {
                       Automated Verification
                     </h3>
                     <p className="tw-text-gray-600">
-                      Automatically verify compliance documents and certifications during customs clearance processes
+                      Automatically verify compliance documents and
+                      certifications during customs clearance processes
                     </p>
                   </div>
                 </div>
@@ -119,7 +125,8 @@ export default function LogisticsCustomsOperatorsPage() {
                       Real-time Alerts
                     </h3>
                     <p className="tw-text-gray-600">
-                      Receive real-time alerts for compliance issues and discrepancies to prevent shipment delays
+                      Receive real-time alerts for compliance issues and
+                      discrepancies to prevent shipment delays
                     </p>
                   </div>
                 </div>
@@ -131,7 +138,8 @@ export default function LogisticsCustomsOperatorsPage() {
                       Priority Queue Management
                     </h3>
                     <p className="tw-text-gray-600">
-                      Automatically prioritize certified products in processing queues for faster clearance
+                      Automatically prioritize certified products in processing
+                      queues for faster clearance
                     </p>
                   </div>
                 </div>
@@ -160,7 +168,11 @@ export default function LogisticsCustomsOperatorsPage() {
         />
 
         <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8 tw-mt-12">
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="0">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaClipboardCheck className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -168,11 +180,16 @@ export default function LogisticsCustomsOperatorsPage() {
               Digital Clearance
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Digitally clear compliance documents and certifications for faster processing and reduced paperwork.
+              Digitally clear compliance documents and certifications for faster
+              processing and reduced paperwork.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="100">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaEye className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -180,11 +197,16 @@ export default function LogisticsCustomsOperatorsPage() {
               Real-time Monitoring
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Identify discrepancies and compliance issues in real-time to prevent delays and ensure smooth operations.
+              Identify discrepancies and compliance issues in real-time to
+              prevent delays and ensure smooth operations.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="200">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaShip className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -192,11 +214,16 @@ export default function LogisticsCustomsOperatorsPage() {
               Priority Processing
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Prioritize processing of traceable and certified products to optimize logistics flow and reduce clearance times.
+              Prioritize processing of traceable and certified products to
+              optimize logistics flow and reduce clearance times.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="300">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaTruck className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -204,11 +231,16 @@ export default function LogisticsCustomsOperatorsPage() {
               Supply Chain Visibility
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Gain complete visibility into product origins and compliance status throughout the supply chain.
+              Gain complete visibility into product origins and compliance
+              status throughout the supply chain.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="400">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaHandshake className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -216,11 +248,16 @@ export default function LogisticsCustomsOperatorsPage() {
               Stakeholder Collaboration
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Collaborate with manufacturers, distributors, and regulatory authorities for seamless operations.
+              Collaborate with manufacturers, distributors, and regulatory
+              authorities for seamless operations.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="500">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaGlobe className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -228,7 +265,8 @@ export default function LogisticsCustomsOperatorsPage() {
               Global Standards
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Ensure compliance with international customs standards and cross-border regulations.
+              Ensure compliance with international customs standards and
+              cross-border regulations.
             </p>
           </div>
         </div>
@@ -243,8 +281,8 @@ export default function LogisticsCustomsOperatorsPage() {
           href: "/contact",
         }}
         secondaryCta={{
-          text: "Schedule Demo",
-          href: "/demo",
+          text: "Contact Us",
+          href: "/contact",
         }}
       />
     </div>

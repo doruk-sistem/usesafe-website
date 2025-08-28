@@ -66,7 +66,8 @@ export default function MarketplacesRetailersPage() {
             title="Automated Vetting"
             delay={0}
           >
-            Automate product vetting and compliance verification processes to ensure only certified products reach your customers.
+            Automate product vetting and compliance verification processes to
+            ensure only certified products reach your customers.
           </FeatureCard>
 
           <FeatureCard
@@ -74,7 +75,8 @@ export default function MarketplacesRetailersPage() {
             title="Elevated Visibility"
             delay={100}
           >
-            Elevate certified products in search results and recommendations to boost customer trust and sales.
+            Elevate certified products in search results and recommendations to
+            boost customer trust and sales.
           </FeatureCard>
 
           <FeatureCard
@@ -82,7 +84,8 @@ export default function MarketplacesRetailersPage() {
             title="Trusted Partnerships"
             delay={200}
           >
-            Collaborate on compliance programs with trusted certification partners to maintain platform integrity.
+            Collaborate on compliance programs with trusted certification
+            partners to maintain platform integrity.
           </FeatureCard>
         </div>
       </GradientBackground>
@@ -96,7 +99,9 @@ export default function MarketplacesRetailersPage() {
                 Seamless Platform Integration
               </h2>
               <p className="tw-text-xl tw-text-gray-600 tw-mb-8 tw-leading-relaxed">
-                Integrate UseSafe compliance verification into your existing marketplace infrastructure to enhance product quality and customer trust.
+                Integrate UseSafe compliance verification into your existing
+                marketplace infrastructure to enhance product quality and
+                customer trust.
               </p>
 
               <div className="tw-space-y-6">
@@ -107,7 +112,8 @@ export default function MarketplacesRetailersPage() {
                       API Integration
                     </h3>
                     <p className="tw-text-gray-600">
-                      Seamlessly integrate compliance verification APIs into your existing platform infrastructure
+                      Seamlessly integrate compliance verification APIs into
+                      your existing platform infrastructure
                     </p>
                   </div>
                 </div>
@@ -119,7 +125,8 @@ export default function MarketplacesRetailersPage() {
                       Real-time Verification
                     </h3>
                     <p className="tw-text-gray-600">
-                      Verify product compliance in real-time as products are listed on your platform
+                      Verify product compliance in real-time as products are
+                      listed on your platform
                     </p>
                   </div>
                 </div>
@@ -131,7 +138,8 @@ export default function MarketplacesRetailersPage() {
                       Automated Filtering
                     </h3>
                     <p className="tw-text-gray-600">
-                      Automatically filter and prioritize certified products in search and recommendation algorithms
+                      Automatically filter and prioritize certified products in
+                      search and recommendation algorithms
                     </p>
                   </div>
                 </div>
@@ -160,7 +168,11 @@ export default function MarketplacesRetailersPage() {
         />
 
         <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8 tw-mt-12">
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="0">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaCogs className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -168,11 +180,16 @@ export default function MarketplacesRetailersPage() {
               Automated Verification
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Automate product vetting and compliance verification processes to ensure platform quality.
+              Automate product vetting and compliance verification processes to
+              ensure platform quality.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="100">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaSearch className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -180,11 +197,16 @@ export default function MarketplacesRetailersPage() {
               Smart Curation
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Elevate certified products in search results and recommendations to boost customer trust.
+              Elevate certified products in search results and recommendations
+              to boost customer trust.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="200">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaHandshake className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -192,11 +214,16 @@ export default function MarketplacesRetailersPage() {
               Partner Collaboration
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Collaborate on compliance programs with trusted certification partners and manufacturers.
+              Collaborate on compliance programs with trusted certification
+              partners and manufacturers.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="300">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaChartLine className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -204,11 +231,16 @@ export default function MarketplacesRetailersPage() {
               Performance Analytics
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Track compliance metrics and performance analytics to optimize your marketplace operations.
+              Track compliance metrics and performance analytics to optimize
+              your marketplace operations.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="400">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaUsers className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -216,11 +248,16 @@ export default function MarketplacesRetailersPage() {
               Customer Trust
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Build customer confidence with transparent compliance information and verified product badges.
+              Build customer confidence with transparent compliance information
+              and verified product badges.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="500">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaGlobe className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -228,7 +265,8 @@ export default function MarketplacesRetailersPage() {
               Global Standards
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Meet international compliance standards and regulatory requirements across all markets.
+              Meet international compliance standards and regulatory
+              requirements across all markets.
             </p>
           </div>
         </div>
@@ -243,8 +281,8 @@ export default function MarketplacesRetailersPage() {
           href: "/contact",
         }}
         secondaryCta={{
-          text: "Schedule Demo",
-          href: "/demo",
+          text: "Contact Us",
+          href: "/contact",
         }}
       />
     </div>

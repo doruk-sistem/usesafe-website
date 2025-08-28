@@ -40,7 +40,20 @@ export default function DppInEsprPage() {
       <HeroSection
         badge={t("platform.dpp-in-espr.badge")}
         title={t("platform.dpp-in-espr.hero_title")}
-        description={<>{t("platform.dpp-in-espr.hero_description").replace("UseSAFE platform", "")} <b>UseSAFE platform</b>, {t("platform.dpp-in-espr.hero_description").split("UseSAFE platform")[1]}</>}
+        description={
+          <>
+            {t("platform.dpp-in-espr.hero_description").replace(
+              "UseSAFE platform",
+              ""
+            )}{" "}
+            <b>UseSAFE platform</b>,{" "}
+            {
+              t("platform.dpp-in-espr.hero_description").split(
+                "UseSAFE platform"
+              )[1]
+            }
+          </>
+        }
         imageSrc="/images/digital-product-passport-usesafe.png"
         imageAlt="Digital Product Passport"
         primaryCta={{
@@ -59,7 +72,8 @@ export default function DppInEsprPage() {
         <SectionHeader
           title={t("platform.dpp-in-espr.what_is_dpp_title")}
           description={
-            <>{t("platform.dpp-in-espr.what_is_dpp_description")}
+            <>
+              {t("platform.dpp-in-espr.what_is_dpp_description")}
               <a
                 href="https://app.usesafe.net/"
                 target="_blank"
@@ -107,8 +121,14 @@ export default function DppInEsprPage() {
               {t("platform.dpp-in-espr.regulatory_compliance_badge")}
             </div>
             <h2 className="tw-text-5xl tw-font-extrabold tw-text-gray-900 tw-drop-shadow-lg tw-mb-6 tw-leading-tight">
-              {t("platform.dpp-in-espr.espr_compliance_title").split("Made Simple")[0]}{" "}
-              <span className="tw-text-primary">{t("platform.dpp-in-espr.made_simple")}</span>
+              {
+                t("platform.dpp-in-espr.espr_compliance_title").split(
+                  "Made Simple"
+                )[0]
+              }{" "}
+              <span className="tw-text-primary">
+                {t("platform.dpp-in-espr.made_simple")}
+              </span>
             </h2>
             <p className="tw-text-xl tw-text-gray-700 tw-mb-8 tw-leading-relaxed">
               {t("platform.dpp-in-espr.espr_compliance_description")}
@@ -152,7 +172,7 @@ export default function DppInEsprPage() {
               </FeatureCard>
             </div>
 
-            <CtaButton href="/demo" variant="primary">
+            <CtaButton href="/contact" variant="primary">
               {t("platform.dpp-in-espr.get_started")}
             </CtaButton>
           </div>
@@ -197,8 +217,14 @@ export default function DppInEsprPage() {
         <div className="tw-mt-20 tw-bg-gradient-to-br tw-from-blue-50 tw-to-indigo-50 tw-p-12 tw-rounded-2xl tw-shadow-xl tw-border tw-border-white/80">
           <div className="tw-max-w-3xl tw-mx-auto">
             <h3 className="tw-text-3xl tw-font-bold tw-text-gray-900 tw-mb-6 tw-text-center">
-              {t("platform.dpp-in-espr.our_approach_title").split("DPP Implementation")[0]}{" "}
-              <span className="tw-text-primary">{t("platform.dpp-in-espr.dpp_implementation")}</span>
+              {
+                t("platform.dpp-in-espr.our_approach_title").split(
+                  "DPP Implementation"
+                )[0]
+              }{" "}
+              <span className="tw-text-primary">
+                {t("platform.dpp-in-espr.dpp_implementation")}
+              </span>
             </h3>
             <p className="tw-text-xl tw-text-gray-700 tw-text-center tw-mb-10 tw-leading-relaxed">
               {t("platform.dpp-in-espr.our_approach_description")}
