@@ -8,6 +8,12 @@ import {
 import {
   FaLink,
   FaTshirt,
+  FaIndustry,
+  FaUsers,
+  FaGlobe,
+  FaShieldAlt,
+  FaCogs,
+  FaCheckCircle,
 } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 
@@ -57,6 +63,32 @@ export default function Navbar() {
           isTitle: true,
           subItems: [
             { key: "api-integrations", label: t("platform.api-integrations.title"), description: t("platform.api-integrations.description"), href: "#", icon: FaLink },
+          ],
+        },
+      ],
+    },
+    {
+      key: "stakeholders",
+      label: "Stakeholders",
+      subItems: [
+        {
+          key: "business-column",
+          label: "Business Stakeholders",
+          isTitle: true,
+          subItems: [
+            { key: "manufacturers", label: "Manufacturers & Brand Owners", description: "Empower your products with digital product passports", href: "/stakeholders/manufacturers-brand-owners", icon: FaIndustry },
+            { key: "sellers", label: "E-commerce Sellers & Distributors", description: "Demonstrate product compliance to marketplaces and consumers", href: "/stakeholders/ecommerce-sellers-distributors", icon: FaUsers },
+            { key: "marketplaces", label: "Marketplaces & Retailers", description: "Automate product vetting and compliance verification", href: "/stakeholders/marketplaces-retailers", icon: FaGlobe },
+          ],
+        },
+        {
+          key: "regulatory-column",
+          label: "Regulatory & End Users",
+          isTitle: true,
+          subItems: [
+            { key: "authorities", label: "Regulatory Authorities & Government Agencies", description: "Access real-time compliance documentation and reporting", href: "/stakeholders/regulatory-authorities-government-agencies", icon: FaShieldAlt },
+            { key: "logistics", label: "Logistics & Customs Operators", description: "Digitally clear compliance documents and certifications", href: "/stakeholders/logistics-customs-operators", icon: FaCogs },
+            { key: "consumers", label: "End Consumers", description: "Verify product compliance and safety before purchase", href: "/stakeholders/end-consumers", icon: FaCheckCircle },
           ],
         },
       ],
