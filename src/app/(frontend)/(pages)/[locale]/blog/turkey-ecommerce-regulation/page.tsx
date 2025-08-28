@@ -10,27 +10,34 @@ import { Button } from "@/app/(frontend)/_components/button";
 export default function TurkeyEcommerceRegulationPage() {
   const { locale } = useParams();
 
-  return (
+    return (
     <div className="tw-bg-gray-50">
       {/* Hero Section */}
-      <div className="tw-relative tw-h-[60vh] tw-w-full tw-overflow-hidden">
-        <Image
-          src="/images/blockchain-16-9-1.webp"
-          alt="Turkey&apos;s New E-Commerce Product Safety Regulation"
-          fill
-          className="tw-object-cover"
-          priority
-        />
-        <div className="tw-absolute tw-inset-0 tw-bg-black tw-bg-opacity-50"></div>
+      <div className="tw-relative tw-h-[70vh] tw-w-full tw-overflow-hidden tw-bg-gradient-to-br tw-from-gray-900 tw-via-black tw-to-gray-800">
+        {/* Animated Background Elements */}
+        <div className="tw-absolute tw-top-1/4 tw-left-1/4 tw-w-64 tw-h-64 tw-rounded-full tw-bg-amber-500/20 tw-blur-3xl tw-animate-pulse"></div>
+        <div className="tw-absolute tw-bottom-1/4 tw-right-1/4 tw-w-80 tw-h-80 tw-rounded-full tw-bg-yellow-600/15 tw-blur-3xl tw-animate-pulse tw-animation-delay-1000"></div>
+
+        {/* Decorative Lines */}
+        <div className="tw-absolute tw-top-20 tw-left-20 tw-w-32 tw-h-px tw-bg-gradient-to-r tw-from-transparent tw-via-amber-400 tw-to-transparent tw-opacity-60"></div>
+        <div className="tw-absolute tw-bottom-20 tw-right-20 tw-w-32 tw-h-px tw-bg-gradient-to-r tw-from-transparent tw-via-amber-400 tw-to-transparent tw-opacity-60"></div>
+
         <div className="tw-absolute tw-inset-0 tw-flex tw-items-center tw-justify-center">
-          <div className="tw-text-center tw-text-white tw-px-4">
-            <h1 className="tw-text-4xl tw-md:text-5xl tw-font-bold tw-mb-4">
-              Turkey&apos;s New E-Commerce Product Safety Regulation: A Guide for International Manufacturers
+          <div className="tw-text-center tw-text-white tw-px-4 tw-max-w-5xl tw-relative tw-z-10">
+
+            {/* Main Title - Large and Bold */}
+            <h1 className="tw-text-5xl md:tw-text-6xl lg:tw-text-7xl tw-font-black tw-mb-8 tw-leading-tight tw-text-white tw-drop-shadow-2xl">
+              Turkey&apos;s New E-Commerce Product Safety Regulation
             </h1>
-            <div className="tw-flex tw-items-center tw-justify-center tw-space-x-4 tw-text-gray-300">
-              <span>•</span>
-              <span>March 8, 2025</span>
-            </div>
+
+            {/* Subtitle */}
+            <h2 className="tw-text-2xl md:tw-text-3xl tw-font-semibold tw-mb-8 tw-text-amber-200 tw-leading-relaxed tw-max-w-4xl tw-mx-auto">
+              A Guide for International Manufacturers
+            </h2>
+
+            {/* Decorative Elements */}
+            <div className="tw-absolute tw-top-1/2 tw-left-10 tw-w-16 tw-h-16 tw-border-2 tw-border-amber-400/40 tw-rounded-full tw-animate-spin tw-animation-duration-20s"></div>
+            <div className="tw-absolute tw-top-1/3 tw-right-10 tw-w-12 tw-h-12 tw-border-2 tw-border-amber-400/30 tw-rounded-full tw-animate-spin tw-animation-duration-15s tw-animation-reverse"></div>
           </div>
         </div>
       </div>
