@@ -37,26 +37,9 @@ export default function ContactPageClient() {
 
         <div className="tw-absolute tw-inset-0 tw-flex tw-items-center tw-justify-center">
           <div className="tw-text-center tw-text-white tw-z-10">
-            <div
-              className="tw-text-5xl md:tw-text-7xl tw-font-bold tw-mb-8 tw-leading-tight tw-shadow-lg"
-              style={{
-                background: "transparent !important",
-                backgroundColor: "transparent !important",
-                backgroundImage: "none !important",
-                backgroundClip: "unset !important",
-                WebkitBackgroundClip: "unset !important",
-                WebkitTextFillColor: "white !important",
-                color: "white !important",
-                textShadow: "2px 2px 4px rgba(0,0,0,0.8) !important",
-                padding: "0 !important",
-                margin: "0 0 2rem 0 !important",
-                border: "none !important",
-                outline: "none !important",
-                boxShadow: "none !important",
-              }}
-            >
+            <h1 className="tw-text-5xl md:tw-text-7xl tw-font-bold tw-mb-8 tw-leading-tight tw-text-white">
               {t("page_title")}
-            </div>
+            </h1>
 
             {/* Social Media Icons */}
             <div className="tw-flex tw-justify-center tw-items-center tw-space-x-6 tw-mb-6">
