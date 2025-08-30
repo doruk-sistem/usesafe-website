@@ -51,13 +51,6 @@ export default function Navbar() {
             // { key: "custom-frameworks", label: t("platform.custom-frameworks.title"), description: t("platform.custom-frameworks.description"), href: "/platform/frameworks/custom-frameworks", icon: FiSettings },
           ],
         },
-                 {
-           key: "products-column",
-           label: t("platform.products"),
-           isTitle: true,
-           subItems: [
-           ],
-         },
         {
           key: "integration-column",
           label: t("platform.integration"),

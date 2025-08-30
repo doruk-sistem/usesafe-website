@@ -26,6 +26,7 @@ import {
   AnimatedCard,
 } from "@/components/Platform";
 import ComplianceMapSection from "@/components/Platform/ComplianceMapSection";
+import { heroLogos } from "@/constants/heroLogos";
 
 export default function UseSafeCertificationPage() {
   const t = useTranslations();
@@ -94,6 +95,7 @@ export default function UseSafeCertificationPage() {
       imageAltKey: "image_alt",
     },
   ];
+
   return (
     <div className="tw-w-full">
       {/* HERO SECTION */}
@@ -112,6 +114,7 @@ export default function UseSafeCertificationPage() {
           href: "https://app.usesafe.net/",
           external: true,
         }}
+        logos={heroLogos}
       />
 
       {/* INTRODUCTION SECTION */}
