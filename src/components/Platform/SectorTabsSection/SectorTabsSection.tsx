@@ -46,6 +46,7 @@ const SectorTabsSection: React.FC<SectorTabsSectionProps> = ({
   const getSectorTranslation = (key: string): string => {
     const fullKey = `${sectorTranslationKey}.${key}`;
     try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       return t(fullKey as any) || key;
     } catch {
       return key;
@@ -56,6 +57,7 @@ const SectorTabsSection: React.FC<SectorTabsSectionProps> = ({
     <section className={`tw-py-16 md:tw-py-24 ${bgClass}`}>
       <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6">
         <h2 className="tw-text-3xl md:tw-text-4xl lg:tw-text-5xl tw-font-bold tw-text-center tw-mb-10 md:tw-mb-12 tw-text-gray-800">
+          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
           {t(mainTitleKey as any)}
         </h2>
 
@@ -63,7 +65,10 @@ const SectorTabsSection: React.FC<SectorTabsSectionProps> = ({
           {sectorsData.map((sector, index) => (
             <SectorButton
               key={index}
-              label={t(sector.labelKey as any)}
+              label={
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                t(sector.labelKey as any)
+              }
               isActive={index === activeTabIndex}
               onClick={() => handleTabChange(index)}
             />

@@ -1,8 +1,8 @@
 import React from "react";
 
-import TermsOfServicePageClient from "./page.client";
-
 import generateMeta from "@/app/(frontend)/_utils/generate-meta";
+
+import TermsOfServicePageClient from "./page.client";
 
 export default function TermsOfServicePage() {
   return <TermsOfServicePageClient />;

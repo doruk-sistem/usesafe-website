@@ -4,6 +4,14 @@ import Image from "next/image";
 import React from "react";
 
 import CtaButton from "./CtaButton";
+import LogoSlider from "./LogoSlider";
+
+interface Logo {
+  id: number;
+  src: string;
+  alt: string;
+  name: string;
+}
 
 interface HeroSectionProps {
   badge?: string;
@@ -20,6 +28,7 @@ interface HeroSectionProps {
     href: string;
     external?: boolean;
   };
+  logos?: Logo[];
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -30,9 +39,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   imageAlt,
   primaryCta,
   secondaryCta,
+  logos,
 }) => {
   return (
-    <section className="tw-relative tw-overflow-hidden tw-py-24 md:tw-py-32 tw-bg-gradient-to-br tw-from-[#1e3c72] tw-via-[#2a5298] tw-to-[#6dd5ed] tw-text-white">
+    <section className="tw-relative tw-overflow-hidden tw-pt-24 md:tw-pt-32 tw-pb-0 tw-bg-gradient-to-br tw-from-[#1e3c72] tw-via-[#2a5298] tw-to-[#6dd5ed] tw-text-white">
       {/* Animated SVG Background */}
       <svg
         className="tw-absolute tw-top-0 tw-left-0 tw-w-full tw-h-full tw-z-0"
@@ -119,6 +129,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
           </div>
         </div>
+        {/* Logo Slider */}
+        <LogoSlider logos={logos || []} />
       </div>
     </section>
   );

@@ -1,17 +1,14 @@
 "use client";
 
-import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import React, { useState, ElementType } from "react";
 import {
   BsFileEarmarkText,
-  BsDatabaseFillCheck,
 } from "react-icons/bs";
 import {
   FaLink,
   FaTshirt,
 } from "react-icons/fa";
-import { GrCycle } from "react-icons/gr";
 import { HiMenu, HiX } from "react-icons/hi";
 
 import { Button } from "../button";
@@ -19,22 +16,6 @@ import Logo from "../logo";
 // import SwitchLanguage from "../switch-language";
 
 import NavLink from "./navlink";
-
-interface Solution {
-  title: string;
-  slug: string;
-}
-
-interface DynamicPage {
-  title: string;
-  slug: string;
-  menuOrder: number;
-}
-
-interface NavbarProps {
-  solutions?: Solution[];
-  dynamicPages?: DynamicPage[];
-}
 
 interface NavItem {
   key: string;
@@ -51,12 +32,9 @@ interface NavItem {
   }>;
 }
 
-export default function Navbar({ dynamicPages = [] }: NavbarProps) {
+export default function Navbar() {
   const t = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const sortedDynamicPages = [...dynamicPages].sort((a, b) => a.menuOrder - b.menuOrder);
-  const params = useParams();
-  const locale = params.locale as string;
 
   const navItems: NavItem[] = [
     {
@@ -74,15 +52,6 @@ export default function Navbar({ dynamicPages = [] }: NavbarProps) {
           ],
         },
         {
-          key: "products-column",
-          label: t("platform.products"),
-          isTitle: true,
-          subItems: [
-            { key: "usesafe-certification", label: t("platform.usesafe-certification.title"), description: t("platform.usesafe-certification.description"), href: "/platform/products/usesafe-certification", icon: GrCycle },
-            { key: "digital-twin", label: t("platform.digital-twin.title"), description: t("platform.digital-twin.description"), href: "#", icon: BsDatabaseFillCheck },
-          ],
-        },
-        {
           key: "integration-column",
           label: t("platform.integration"),
           isTitle: true,
@@ -92,21 +61,6 @@ export default function Navbar({ dynamicPages = [] }: NavbarProps) {
         },
       ],
     },
-    // {
-    //   key: "solutions",
-    //   label: t("common.solutions"),
-    //   subItems: solutions.map((solution, index) => ({
-    //     key: `solution-${solution.slug || index}`,
-    //     label: solution.title,
-    //     href: `/solutions/${solution.slug}` || `#solution-${index}`,
-    //   })),
-    // },
-
-    ...sortedDynamicPages.map((page, index): NavItem => ({
-      key: `dynamic-${page.slug || index}`,
-      label: page.title,
-      href: `/${locale}/${page.slug}`,
-    })),
     {
       key: "blog",
       label: t("common.blog"),

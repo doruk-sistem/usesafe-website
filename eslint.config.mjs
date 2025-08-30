@@ -16,7 +16,6 @@ const eslintConfig = [
       "**/.next/**",
       "**/build/**",
       "**/dist/**",
-      "**/src/app/(payload)/**",
       "**/.git/**",
       "**/*.log",
       "**/auto/**",

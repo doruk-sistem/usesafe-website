@@ -1,4 +1,0 @@
-export interface TextBlockType {
-    blockType: "text";
-    content: Record<string, unknown>;
-  }

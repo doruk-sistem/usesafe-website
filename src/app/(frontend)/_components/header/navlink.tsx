@@ -108,10 +108,10 @@ export default function NavLink({
         </button>
         {isOpen && (
           <div
-            className={`tw-absolute tw-z-50 tw-mt-2 tw-rounded-lg tw-shadow-xl tw-bg-white tw-border-none tw-origin-top-right tw-right-0 md:tw-origin-top-left md:tw-left-0 ${isPlatformMenu ? (isMobile ? "tw-w-full tw-max-h-[calc(100vh-var(--header-height,100px)-2rem)] tw-overflow-y-auto" : "md:tw-w-[850px]") : "tw-w-56"}`}
+            className={`tw-absolute tw-z-50 tw-mt-2 tw-rounded-lg tw-shadow-xl tw-bg-white tw-border-none tw-origin-top-right tw-right-0 md:tw-origin-top-left md:tw-left-0 ${isPlatformMenu ? (isMobile ? "tw-w-full tw-max-h-[calc(100vh-var(--header-height,100px)-2rem)] tw-overflow-y-auto" : "md:tw-w-[600px]") : "tw-w-56"}`}
           >
             {isPlatformMenu ? (
-              <div className={`tw-p-6 ${isMobile ? "" : "tw-grid tw-grid-cols-3 tw-gap-x-8"}`}>
+              <div className={`tw-p-6 ${isMobile ? "" : "tw-grid tw-grid-cols-2 tw-gap-x-8"}`}>
                 {subItems.map((column, colIndex) => (
                   <div key={column.key} className={`tw-overflow-hidden ${!isMobile && colIndex < subItems.length - 1 ? "tw-border-r tw-border-gray-200 tw-pr-8" : ""} ${isMobile && colIndex > 0 ? "tw-mt-6 tw-pt-6 tw-border-t tw-border-gray-200" : ""}`}>
                     {column.isTitle && (
