@@ -2,7 +2,18 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { FaShieldAlt, FaGlobe, FaFileAlt, FaRecycle, FaChartLine, FaUsers, FaShoppingCart, FaCogs, FaBuilding, FaMobile } from "react-icons/fa";
+import {
+  FaShieldAlt,
+  FaGlobe,
+  FaFileAlt,
+  FaRecycle,
+  FaChartLine,
+  FaUsers,
+  FaShoppingCart,
+  FaCogs,
+  FaBuilding,
+  FaMobile,
+} from "react-icons/fa";
 
 import {
   HeroSection,
@@ -32,12 +43,11 @@ export default function UseSafeCertificationPage() {
     },
   };
 
-
-
   const stakeholderSectorsData = [
     {
       id: "manufacturers",
-      labelKey: "platform.usesafe-certification.stakeholder_manufacturers_label",
+      labelKey:
+        "platform.usesafe-certification.stakeholder_manufacturers_label",
       contentTitleKey: "content_title",
       featuresKeys: ["feature_1", "feature_2", "feature_3", "feature_4"],
       imageSrc: "/images/platform/sector-manufacturers.jpg",
@@ -128,10 +138,14 @@ export default function UseSafeCertificationPage() {
             </FeatureCard>
             <FeatureCard
               icon={<FaFileAlt className="tw-w-8 tw-h-8" />}
-              title={t("platform.usesafe-certification.feature_compliance_title")}
+              title={t(
+                "platform.usesafe-certification.feature_compliance_title",
+              )}
               variant="glass"
             >
-              {t("platform.usesafe-certification.feature_compliance_description")}
+              {t(
+                "platform.usesafe-certification.feature_compliance_description",
+              )}
             </FeatureCard>
           </div>
         </div>
@@ -140,30 +154,46 @@ export default function UseSafeCertificationPage() {
       {/* CORE PURPOSE SECTION */}
       <FeatureSectionWithImage
         title={t("platform.usesafe-certification.core_purpose_title")}
-        description={t("platform.usesafe-certification.core_purpose_description")}
+        description={t(
+          "platform.usesafe-certification.core_purpose_description",
+        )}
         features={[
           {
             icon: <FaShieldAlt className="tw-w-8 tw-h-8" />,
-            title: t("platform.usesafe-certification.purpose_certification_title"),
-            description: t("platform.usesafe-certification.purpose_certification_description"),
+            title: t(
+              "platform.usesafe-certification.purpose_certification_title",
+            ),
+            description: t(
+              "platform.usesafe-certification.purpose_certification_description",
+            ),
             delay: 100,
           },
           {
             icon: <FaFileAlt className="tw-w-8 tw-h-8" />,
-            title: t("platform.usesafe-certification.purpose_documentation_title"),
-            description: t("platform.usesafe-certification.purpose_documentation_description"),
+            title: t(
+              "platform.usesafe-certification.purpose_documentation_title",
+            ),
+            description: t(
+              "platform.usesafe-certification.purpose_documentation_description",
+            ),
             delay: 200,
           },
           {
             icon: <FaChartLine className="tw-w-8 tw-h-8" />,
-            title: t("platform.usesafe-certification.purpose_traceability_title"),
-            description: t("platform.usesafe-certification.purpose_traceability_description"),
+            title: t(
+              "platform.usesafe-certification.purpose_traceability_title",
+            ),
+            description: t(
+              "platform.usesafe-certification.purpose_traceability_description",
+            ),
             delay: 300,
           },
           {
             icon: <FaRecycle className="tw-w-8 tw-h-8" />,
             title: t("platform.usesafe-certification.purpose_identity_title"),
-            description: t("platform.usesafe-certification.purpose_identity_description"),
+            description: t(
+              "platform.usesafe-certification.purpose_identity_description",
+            ),
             delay: 400,
           },
         ]}
@@ -219,25 +249,38 @@ export default function UseSafeCertificationPage() {
             <AnimatedCard
               icon={<FaRecycle className="tw-w-8 tw-h-8 tw-text-blue-600" />}
               title={t("platform.usesafe-certification.card_end_of_life_title")}
-              description={t("platform.usesafe-certification.sustainability_collection")}
+              description={t(
+                "platform.usesafe-certification.sustainability_collection",
+              )}
             />
             <AnimatedCard
               icon={<FaChartLine className="tw-w-8 tw-h-8 tw-text-blue-600" />}
-              title={t("platform.usesafe-certification.card_lifecycle_monitoring_title")}
-              description={t("platform.usesafe-certification.sustainability_monitoring")}
+              title={t(
+                "platform.usesafe-certification.card_lifecycle_monitoring_title",
+              )}
+              description={t(
+                "platform.usesafe-certification.sustainability_monitoring",
+              )}
             />
             <AnimatedCard
               icon={<FaFileAlt className="tw-w-8 tw-h-8 tw-text-blue-600" />}
-              title={t("platform.usesafe-certification.card_dpp_integration_title")}
-              description={t("platform.usesafe-certification.sustainability_dpp_integration")}
+              title={t(
+                "platform.usesafe-certification.card_dpp_integration_title",
+              )}
+              description={t(
+                "platform.usesafe-certification.sustainability_dpp_integration",
+              )}
             />
             <AnimatedCard
               icon={<FaUsers className="tw-w-8 tw-h-8 tw-text-blue-600" />}
-              title={t("platform.usesafe-certification.card_consumer_engagement_title")}
-              description={t("platform.usesafe-certification.sustainability_engagement")}
+              title={t(
+                "platform.usesafe-certification.card_consumer_engagement_title",
+              )}
+              description={t(
+                "platform.usesafe-certification.sustainability_engagement",
+              )}
             />
           </motion.div>
-
         </div>
       </section>
 
@@ -265,18 +308,30 @@ export default function UseSafeCertificationPage() {
             className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-8"
           >
             <AnimatedCard
-              icon={<FaShoppingCart className="tw-w-8 tw-h-8 tw-text-blue-600" />}
-              title={t("platform.usesafe-certification.card_public_marketplace_title")}
-              description={t("platform.usesafe-certification.future_marketplace")}
+              icon={
+                <FaShoppingCart className="tw-w-8 tw-h-8 tw-text-blue-600" />
+              }
+              title={t(
+                "platform.usesafe-certification.card_public_marketplace_title",
+              )}
+              description={t(
+                "platform.usesafe-certification.future_marketplace",
+              )}
             />
             <AnimatedCard
               icon={<FaCogs className="tw-w-8 tw-h-8 tw-text-blue-600" />}
-              title={t("platform.usesafe-certification.card_sector_modules_title")}
-              description={t("platform.usesafe-certification.future_sector_modules")}
+              title={t(
+                "platform.usesafe-certification.card_sector_modules_title",
+              )}
+              description={t(
+                "platform.usesafe-certification.future_sector_modules",
+              )}
             />
             <AnimatedCard
               icon={<FaBuilding className="tw-w-8 tw-h-8 tw-text-blue-600" />}
-              title={t("platform.usesafe-certification.card_egov_integration_title")}
+              title={t(
+                "platform.usesafe-certification.card_egov_integration_title",
+              )}
               description={t("platform.usesafe-certification.future_egov")}
             />
             <AnimatedCard
@@ -285,7 +340,6 @@ export default function UseSafeCertificationPage() {
               description={t("platform.usesafe-certification.future_mobile")}
             />
           </motion.div>
-
         </div>
       </section>
 
