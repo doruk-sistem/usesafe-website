@@ -166,15 +166,6 @@ export const metadata: Metadata = {
   applicationName: "UseSafe",
   generator: "Next.js",
   referrer: "origin-when-cross-origin",
-  themeColor: "#0066FF",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    minimumScale: 1,
-    userScalable: false,
-    viewportFit: "cover",
-  },
 
   formatDetection: {
     telephone: false,
@@ -185,6 +176,16 @@ export const metadata: Metadata = {
   },
 
   category: "technology",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  minimumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
+  themeColor: "#0066FF",
 };
 
 export default async function LocaleLayout({

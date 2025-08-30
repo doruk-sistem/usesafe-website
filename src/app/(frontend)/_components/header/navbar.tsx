@@ -4,13 +4,11 @@ import { useTranslations } from "next-intl";
 import React, { useState, ElementType } from "react";
 import {
   BsFileEarmarkText,
-  BsDatabaseFillCheck,
 } from "react-icons/bs";
 import {
   FaLink,
   FaTshirt,
 } from "react-icons/fa";
-import { GrCycle } from "react-icons/gr";
 import { HiMenu, HiX } from "react-icons/hi";
 
 import { Button } from "../button";
@@ -53,15 +51,13 @@ export default function Navbar() {
             // { key: "custom-frameworks", label: t("platform.custom-frameworks.title"), description: t("platform.custom-frameworks.description"), href: "/platform/frameworks/custom-frameworks", icon: FiSettings },
           ],
         },
-        {
-          key: "products-column",
-          label: t("platform.products"),
-          isTitle: true,
-          subItems: [
-            { key: "usesafe-certification", label: t("platform.usesafe-certification.title"), description: t("platform.usesafe-certification.description"), href: "/platform/products/usesafe-certification", icon: GrCycle },
-            { key: "digital-twin", label: t("platform.digital-twin.title"), description: t("platform.digital-twin.description"), href: "#", icon: BsDatabaseFillCheck },
-          ],
-        },
+                 {
+           key: "products-column",
+           label: t("platform.products"),
+           isTitle: true,
+           subItems: [
+           ],
+         },
         {
           key: "integration-column",
           label: t("platform.integration"),
@@ -71,11 +67,6 @@ export default function Navbar() {
           ],
         },
       ],
-    },
-    {
-      key: "about-dpp",
-      label: "About DPP",
-      href: "/about-dpp",
     },
     {
       key: "blog",
