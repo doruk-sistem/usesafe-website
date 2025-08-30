@@ -200,7 +200,7 @@ export default function UseSafeCertificationPage() {
           },
         ]}
         imageSrc="/images/platform/usesafe_men_wear.avif"
-        imageAlt="UseSafe Certification Core Purpose"
+        imageAlt={t("platform.usesafe-certification.image_alt_core_purpose")}
         imageOnRight={true}
         gradientType="light"
         className="tw-py-24"
@@ -231,7 +231,7 @@ export default function UseSafeCertificationPage() {
           <div className="tw-text-center tw-mb-16">
             <div className="tw-inline-flex tw-items-center tw-mb-4 tw-px-4 tw-py-2 tw-bg-blue-100 tw-text-blue-700 tw-font-medium tw-text-sm tw-rounded-full">
               <FaRecycle className="tw-w-4 tw-h-4 tw-mr-2" />
-              Circular Economy
+              {t("platform.usesafe-certification.badge_circular_economy")}
             </div>
             <h2 className="tw-text-4xl md:tw-text-5xl tw-font-bold tw-mb-6 tw-text-gray-900">
               {t("platform.usesafe-certification.sustainability_title")}
@@ -264,7 +264,7 @@ export default function UseSafeCertificationPage() {
                 <FaRecycle className="tw-w-8 tw-h-8 tw-text-blue-600" />
               </motion.div>
               <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-                End-of-Life Information
+                {t("platform.usesafe-certification.card_end_of_life_title")}
               </h3>
               <p className="tw-text-gray-700 tw-leading-relaxed">
                 {t("platform.usesafe-certification.sustainability_collection")}
@@ -287,7 +287,7 @@ export default function UseSafeCertificationPage() {
                 <FaChartLine className="tw-w-8 tw-h-8 tw-text-blue-600" />
               </motion.div>
               <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-                Lifecycle Monitoring
+                {t("platform.usesafe-certification.card_lifecycle_monitoring_title")}
               </h3>
               <p className="tw-text-gray-700 tw-leading-relaxed">
                 {t("platform.usesafe-certification.sustainability_monitoring")}
@@ -310,7 +310,7 @@ export default function UseSafeCertificationPage() {
                 <FaFileAlt className="tw-w-8 tw-h-8 tw-text-blue-600" />
               </motion.div>
               <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-                DPP Integration
+                {t("platform.usesafe-certification.card_dpp_integration_title")}
               </h3>
               <p className="tw-text-gray-700 tw-leading-relaxed">
                 {t("platform.usesafe-certification.sustainability_dpp_integration")}
@@ -333,7 +333,7 @@ export default function UseSafeCertificationPage() {
                 <FaUsers className="tw-w-8 tw-h-8 tw-text-blue-600" />
               </motion.div>
               <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-                Consumer Engagement
+                {t("platform.usesafe-certification.card_consumer_engagement_title")}
               </h3>
               <p className="tw-text-gray-700 tw-leading-relaxed">
                 {t("platform.usesafe-certification.sustainability_engagement")}
@@ -350,7 +350,7 @@ export default function UseSafeCertificationPage() {
           <div className="tw-text-center tw-mb-16">
             <div className="tw-inline-flex tw-items-center tw-mb-4 tw-px-4 tw-py-2 tw-bg-blue-100 tw-text-blue-700 tw-font-medium tw-text-sm tw-rounded-full">
               <FaGlobe className="tw-w-4 tw-h-4 tw-mr-2" />
-              Platform Development
+              {t("platform.usesafe-certification.badge_platform_development")}
             </div>
             <h2 className="tw-text-4xl md:tw-text-5xl tw-font-bold tw-mb-6 tw-text-gray-900">
               {t("platform.usesafe-certification.future_title")}
@@ -383,7 +383,7 @@ export default function UseSafeCertificationPage() {
                 <FaShoppingCart className="tw-w-8 tw-h-8 tw-text-blue-600" />
               </motion.div>
               <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-                Public Marketplace
+                {t("platform.usesafe-certification.card_public_marketplace_title")}
               </h3>
               <p className="tw-text-gray-700 tw-leading-relaxed">
                 {t("platform.usesafe-certification.future_marketplace")}
@@ -406,7 +406,7 @@ export default function UseSafeCertificationPage() {
                 <FaCogs className="tw-w-8 tw-h-8 tw-text-blue-600" />
               </motion.div>
               <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-                Sector Modules
+                {t("platform.usesafe-certification.card_sector_modules_title")}
               </h3>
               <p className="tw-text-gray-700 tw-leading-relaxed">
                 {t("platform.usesafe-certification.future_sector_modules")}
@@ -429,7 +429,7 @@ export default function UseSafeCertificationPage() {
                 <FaBuilding className="tw-w-8 tw-h-8 tw-text-blue-600" />
               </motion.div>
               <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-                E-Government Integration
+                {t("platform.usesafe-certification.card_egov_integration_title")}
               </h3>
               <p className="tw-text-gray-700 tw-leading-relaxed">
                 {t("platform.usesafe-certification.future_egov")}
@@ -452,7 +452,7 @@ export default function UseSafeCertificationPage() {
                 <FaMobile className="tw-w-8 tw-h-8 tw-text-blue-600" />
               </motion.div>
               <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-                Mobile Apps & Dashboards
+                {t("platform.usesafe-certification.card_mobile_apps_title")}
               </h3>
               <p className="tw-text-gray-700 tw-leading-relaxed">
                 {t("platform.usesafe-certification.future_mobile")}
