@@ -10,6 +10,7 @@ export { default as SectionHeader } from "./SectionHeader";
 export { default as TermsOfServiceContent } from "./TermsOfServiceContent";
 export { default as StakeholderRoles } from "./StakeholderRoles";
 export { default as TechnicalFeatures } from "./TechnicalFeatures";
+export { default as LogoSlider } from "./LogoSlider";
 export * from "./TraceTrustSection";
 export * from "./SectorTabsSection";
 export * from "./types";
