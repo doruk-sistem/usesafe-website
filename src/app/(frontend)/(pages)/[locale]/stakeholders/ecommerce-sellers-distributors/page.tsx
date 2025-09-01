@@ -113,24 +113,24 @@ export default function EcommerceSellersDistributorsPage() {
       heroDescription="Demonstrate product compliance to marketplaces and consumers with UseSafe certification. Display verified badges, reduce regulatory risks, and enhance your product credibility across all e-commerce platforms."
       heroImageSrc="/images/platform/e-commerce-sellers-hero.png"
       heroImageAlt="E-commerce Sellers and Distributors"
-      
+
       // Key Benefits Section
       benefitsTitle="Why E-commerce Sellers & Distributors Choose UseSafe"
       benefitsDescription="Digital product passports provide e-commerce sellers and distributors with verified compliance credentials, enhanced marketplace visibility, and reduced regulatory barriers."
       keyBenefits={keyBenefits}
-      
+
       // Integration Section
       integrationTitle="Seamless E-commerce Platform Integration"
       integrationDescription="Integrate UseSafe certification into your existing e-commerce workflows and marketplace listings without disrupting your sales operations."
       integrationFeatures={integrationFeatures}
       integrationImageSrc="/images/platform/sector-retailers_brands.jpg"
       integrationImageAlt="E-commerce Platform Integration"
-      
+
       // Features Grid
       featuresTitle="Comprehensive Features for E-commerce Success"
       featuresDescription="Everything you need to showcase product compliance, build consumer trust, and expand your market reach across all major e-commerce platforms."
       features={features}
-      
+
       // CTA Section
       ctaTitle="Ready to Boost Your E-commerce Success?"
       ctaDescription="Join leading e-commerce sellers who trust UseSafe for their product compliance needs. Start building consumer trust and expanding your market reach today."

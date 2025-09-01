@@ -115,24 +115,24 @@ export default function ManufacturersBrandOwnersPage() {
       heroDescription="Transform your manufacturing processes and enhance brand trust with comprehensive digital product passports. Ensure compliance, transparency, and traceability across your entire supply chain."
       heroImageSrc="/images/platform/manufacturers-brand-owners-hero.png"
       heroImageAlt="Manufacturers and Brand Owners"
-      
+
       // Key Benefits Section
       benefitsTitle="Why Manufacturers & Brand Owners Choose UseSafe"
       benefitsDescription="Digital product passports provide manufacturers and brand owners with unprecedented control, transparency, and competitive advantages in today's regulated market."
       keyBenefits={keyBenefits}
-      
+
       // Integration Section
       integrationTitle="Seamless Integration with Your Manufacturing Process"
       integrationDescription="Integrate digital product passports into your existing manufacturing workflow without disrupting production efficiency."
       integrationFeatures={integrationFeatures}
       integrationImageSrc="/images/platform/logistics-customs-operators-image.png"
       integrationImageAlt="Manufacturing Process Integration"
-      
+
       // Features Grid
       featuresTitle="Comprehensive Features for Manufacturers"
       featuresDescription="Everything you need to create, manage, and maintain digital product passports for your entire product portfolio."
       features={features}
-      
+
       // CTA Section
       ctaTitle="Ready to Transform Your Manufacturing Process?"
       ctaDescription="Join leading manufacturers who trust UseSafe for their digital product passport needs. Start your journey towards compliance and transparency today."

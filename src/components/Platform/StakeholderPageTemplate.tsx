@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+
 import { HeroSection, CtaSection } from "@/components/Platform";
 
 export interface StakeholderBenefit {
@@ -167,10 +169,11 @@ const StakeholderPageTemplate: React.FC<StakeholderPageTemplateProps> = ({
 
             <div className="tw-flex-1" data-aos="fade-left">
               <div className="tw-relative tw-h-[400px] tw-w-full tw-rounded-2xl tw-overflow-hidden tw-shadow-2xl">
-                <img
+                <Image
                   src={integrationImageSrc}
                   alt={integrationImageAlt}
-                  className="tw-w-full tw-h-full tw-object-cover"
+                  fill
+                  className="tw-object-cover"
                 />
               </div>
             </div>
