@@ -106,7 +106,6 @@ export default function ManufacturersBrandOwnersPage() {
       delay: 500,
     },
   ];
-
   return (
     <StakeholderPageTemplate
       // Hero Section
