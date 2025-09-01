@@ -827,6 +827,35 @@
       "get_started": "Get Started",
       "stakeholders_main_title": "Key Stakeholders in the UseSafe Ecosystem",
       "stakeholders_learn_more": "Learn More",
+      "stakeholders_navigation": {
+        "title": "Stakeholders",
+        "business_stakeholders": "Business Stakeholders",
+        "regulatory_end_users": "Regulatory & End Users",
+        "manufacturers": {
+          "title": "Manufacturers & Brand Owners",
+          "description": "Empower your products with digital product passports"
+        },
+        "ecommerce_sellers": {
+          "title": "E-commerce Sellers & Distributors",
+          "description": "Demonstrate product compliance to marketplaces and consumers"
+        },
+        "marketplaces": {
+          "title": "Marketplaces & Retailers",
+          "description": "Automate product vetting and compliance verification"
+        },
+        "authorities": {
+          "title": "Regulatory Authorities & Government Agencies",
+          "description": "Access real-time compliance documentation and reporting"
+        },
+        "logistics": {
+          "title": "Logistics & Customs Operators",
+          "description": "Digitally clear compliance documents and certifications"
+        },
+        "consumers": {
+          "title": "End Consumers",
+          "description": "Verify product compliance and safety before purchase"
+        }
+      },
       "stakeholder_manufacturers_label": "Manufacturers & Brand Owners",
       "stakeholder_sellers_label": "E-commerce Sellers & Distributors",
       "stakeholder_marketplaces_label": "Marketplaces & Retailers",

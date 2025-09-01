@@ -69,26 +69,26 @@ export default function Navbar() {
     },
     {
       key: "stakeholders",
-      label: "Stakeholders",
+      label: t("platform.usesafe-certification.stakeholders_navigation.title"),
       subItems: [
         {
           key: "business-column",
-          label: "Business Stakeholders",
+          label: t("platform.usesafe-certification.stakeholders_navigation.business_stakeholders"),
           isTitle: true,
           subItems: [
-            { key: "manufacturers", label: "Manufacturers & Brand Owners", description: "Empower your products with digital product passports", href: "/stakeholders/manufacturers-brand-owners", icon: FaIndustry },
-            { key: "sellers", label: "E-commerce Sellers & Distributors", description: "Demonstrate product compliance to marketplaces and consumers", href: "/stakeholders/ecommerce-sellers-distributors", icon: FaUsers },
-            { key: "marketplaces", label: "Marketplaces & Retailers", description: "Automate product vetting and compliance verification", href: "/stakeholders/marketplaces-retailers", icon: FaGlobe },
+            { key: "manufacturers", label: t("platform.usesafe-certification.stakeholders_navigation.manufacturers.title"), description: t("platform.usesafe-certification.stakeholders_navigation.manufacturers.description"), href: "/stakeholders/manufacturers-brand-owners", icon: FaIndustry },
+            { key: "sellers", label: t("platform.usesafe-certification.stakeholders_navigation.ecommerce_sellers.title"), description: t("platform.usesafe-certification.stakeholders_navigation.ecommerce_sellers.description"), href: "/stakeholders/ecommerce-sellers-distributors", icon: FaUsers },
+            { key: "marketplaces", label: t("platform.usesafe-certification.stakeholders_navigation.marketplaces.title"), description: t("platform.usesafe-certification.stakeholders_navigation.marketplaces.description"), href: "/stakeholders/marketplaces-retailers", icon: FaGlobe },
           ],
         },
         {
           key: "regulatory-column",
-          label: "Regulatory & End Users",
+          label: t("platform.usesafe-certification.stakeholders_navigation.regulatory_end_users"),
           isTitle: true,
           subItems: [
-            { key: "authorities", label: "Regulatory Authorities & Government Agencies", description: "Access real-time compliance documentation and reporting", href: "/stakeholders/regulatory-authorities-government-agencies", icon: FaShieldAlt },
-            { key: "logistics", label: "Logistics & Customs Operators", description: "Digitally clear compliance documents and certifications", href: "/stakeholders/logistics-customs-operators", icon: FaCogs },
-            { key: "consumers", label: "End Consumers", description: "Verify product compliance and safety before purchase", href: "/stakeholders/end-consumers", icon: FaCheckCircle },
+            { key: "authorities", label: t("platform.usesafe-certification.stakeholders_navigation.authorities.title"), description: t("platform.usesafe-certification.stakeholders_navigation.authorities.description"), href: "/stakeholders/regulatory-authorities-government-agencies", icon: FaShieldAlt },
+            { key: "logistics", label: t("platform.usesafe-certification.stakeholders_navigation.logistics.title"), description: t("platform.usesafe-certification.stakeholders_navigation.logistics.description"), href: "/stakeholders/logistics-customs-operators", icon: FaCogs },
+            { key: "consumers", label: t("platform.usesafe-certification.stakeholders_navigation.consumers.title"), description: t("platform.usesafe-certification.stakeholders_navigation.consumers.description"), href: "/stakeholders/end-consumers", icon: FaCheckCircle },
           ],
         },
       ],
