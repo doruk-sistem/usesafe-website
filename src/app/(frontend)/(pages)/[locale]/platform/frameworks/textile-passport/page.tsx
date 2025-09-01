@@ -21,6 +21,7 @@ import {
   SectionHeader,
   CtaSection,
   SectorTabsSection,
+  KeyBenefitsSection,
 } from "@/components/Platform";
 
 export default function TextilePassportPage() {
@@ -34,6 +35,45 @@ export default function TextilePassportPage() {
   }, []);
 
   const t = useTranslations();
+
+  const keyBenefits = [
+    {
+      icon: <FaShieldAlt className="tw-w-8 tw-h-8" />,
+      title: "Regulatory Compliance",
+      description: "Stay compliant with EU's Green Deal, ESPR, and Circular Economy Action Plan.",
+      delay: 0,
+    },
+    {
+      icon: <FaGlobe className="tw-w-8 tw-h-8" />,
+      title: "Supply Chain Transparency",
+      description: "Track the origin, journey, and destination of products through the entire supply chain.",
+      delay: 100,
+    },
+    {
+      icon: <FaFileAlt className="tw-w-8 tw-h-8" />,
+      title: "Data Security",
+      description: "Protect sensitive business information while meeting regulatory demands.",
+      delay: 200,
+    },
+    {
+      icon: <FaChartLine className="tw-w-8 tw-h-8" />,
+      title: "Consumer Engagement",
+      description: "Connect your DPP data to customer platforms to enhance transparency and engagement.",
+      delay: 300,
+    },
+    {
+      icon: <FaRecycle className="tw-w-8 tw-h-8" />,
+      title: "Sustainability Assessment",
+      description: "Collect and analyze data to refine sustainability strategies and identify improvement areas.",
+      delay: 400,
+    },
+    {
+      icon: <FaGlobe className="tw-w-8 tw-h-8" />,
+      title: "Scalable Platform",
+      description: "Build a strong foundation for end-to-end supply chain traceability.",
+      delay: 500,
+    },
+  ];
 
   const textileSectorsData = [
     {
@@ -224,58 +264,14 @@ export default function TextilePassportPage() {
       </GradientBackground>
 
       {/* FAYDALAR SECTION */}
-      <section className="tw-py-24 tw-bg-gradient-to-br tw-from-gray-50 tw-to-blue-50">
-        <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6">
-          <SectionHeader
-            title="Benefits of Textile DPP"
-            description="Our comprehensive DPP solution offers numerous advantages for textile businesses:"
-          />
-          <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8 tw-mt-12">
-            <FeatureCard
-              icon={<FaShieldAlt className="tw-w-8 tw-h-8" />}
-              title="Regulatory Compliance"
-              variant="glass"
-            >
-              Stay compliant with EU&apos;s Green Deal, ESPR, and Circular Economy Action Plan.
-            </FeatureCard>
-            <FeatureCard
-              icon={<FaGlobe className="tw-w-8 tw-h-8" />}
-              title="Supply Chain Transparency"
-              variant="glass"
-            >
-              Track the origin, journey, and destination of products through the entire supply chain.
-            </FeatureCard>
-            <FeatureCard
-              icon={<FaFileAlt className="tw-w-8 tw-h-8" />}
-              title="Data Security"
-              variant="glass"
-            >
-              Protect sensitive business information while meeting regulatory demands.
-            </FeatureCard>
-            <FeatureCard
-              icon={<FaChartLine className="tw-w-8 tw-h-8" />}
-              title="Consumer Engagement"
-              variant="glass"
-            >
-              Connect your DPP data to customer platforms to enhance transparency and engagement.
-            </FeatureCard>
-            <FeatureCard
-              icon={<FaRecycle className="tw-w-8 tw-h-8" />}
-              title="Sustainability Assessment"
-              variant="glass"
-            >
-              Collect and analyze data to refine sustainability strategies and identify improvement areas.
-            </FeatureCard>
-            <FeatureCard
-              icon={<FaGlobe className="tw-w-8 tw-h-8" />}
-              title="Scalable Platform"
-              variant="glass"
-            >
-              Build a strong foundation for end-to-end supply chain traceability.
-            </FeatureCard>
-          </div>
-        </div>
-      </section>
+      <KeyBenefitsSection
+        title="Benefits of Textile DPP"
+        description="Our comprehensive DPP solution offers numerous advantages for textile businesses:"
+        benefits={keyBenefits}
+        variant="glass"
+        useCustomWrapper={true}
+        customWrapperClass="tw-py-24 tw-bg-gradient-to-br tw-from-gray-50 tw-to-blue-50"
+      />
 
       {/* TRACE TRUST SECTION */}
       <SectorTabsSection

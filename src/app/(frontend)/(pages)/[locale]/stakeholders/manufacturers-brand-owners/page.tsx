@@ -22,6 +22,7 @@ import {
   FeatureCard,
   HeroSection,
   CtaSection,
+  KeyBenefitsSection,
 } from "@/components/Platform";
 
 export default function ManufacturersBrandOwnersPage() {
@@ -33,6 +34,27 @@ export default function ManufacturersBrandOwnersPage() {
       easing: "ease-out-cubic",
     });
   }, []);
+
+  const keyBenefits = [
+    {
+      icon: <FaShieldAlt className="tw-w-8 tw-h-8" />,
+      title: "Regulatory Compliance",
+      description: "Ensure full compliance with ESPR, textile regulations, and other industry standards. Stay ahead of evolving requirements with automated compliance management.",
+      delay: 0,
+    },
+    {
+      icon: <FaChartLine className="tw-w-8 tw-h-8" />,
+      title: "Brand Protection",
+      description: "Protect your brand integrity with verifiable product authenticity. Build consumer trust through transparent supply chain information.",
+      delay: 100,
+    },
+    {
+      icon: <FaGlobe className="tw-w-8 tw-h-8" />,
+      title: "Global Market Access",
+      description: "Expand your market reach with products that meet international standards. Access new markets with confidence through digital compliance.",
+      delay: 200,
+    },
+  ];
 
   return (
     <div className="tw-w-full">
@@ -56,38 +78,12 @@ export default function ManufacturersBrandOwnersPage() {
       />
 
       {/* Key Benefits Section */}
-      <GradientBackground type="white">
-        <SectionHeader
-          title="Why Manufacturers & Brand Owners Choose UseSafe"
-          description="Digital product passports provide manufacturers and brand owners with unprecedented control, transparency, and competitive advantages in today's regulated market."
-        />
-
-        <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-3 tw-gap-8 tw-mt-12">
-          <FeatureCard
-            icon={<FaShieldAlt className="tw-w-8 tw-h-8" />}
-            title="Regulatory Compliance"
-            delay={0}
-          >
-            Ensure full compliance with ESPR, textile regulations, and other industry standards. Stay ahead of evolving requirements with automated compliance management.
-          </FeatureCard>
-
-          <FeatureCard
-            icon={<FaChartLine className="tw-w-8 tw-h-8" />}
-            title="Brand Protection"
-            delay={100}
-          >
-            Protect your brand integrity with verifiable product authenticity. Build consumer trust through transparent supply chain information.
-          </FeatureCard>
-
-          <FeatureCard
-            icon={<FaGlobe className="tw-w-8 tw-h-8" />}
-            title="Global Market Access"
-            delay={200}
-          >
-            Expand your market reach with products that meet international standards. Access new markets with confidence through digital compliance.
-          </FeatureCard>
-        </div>
-      </GradientBackground>
+      <KeyBenefitsSection
+        title="Why Manufacturers & Brand Owners Choose UseSafe"
+        description="Digital product passports provide manufacturers and brand owners with unprecedented control, transparency, and competitive advantages in today's regulated market."
+        benefits={keyBenefits}
+        gradientType="white"
+      />
 
       {/* Manufacturing Process Integration */}
       <section className="tw-py-24 tw-bg-gradient-to-br tw-from-gray-50 tw-to-blue-50">

@@ -2,6 +2,7 @@ export { default as CtaButton } from "./CtaButton";
 export { default as CtaSection } from "./CtaSection";
 export { default as FeatureCard } from "./FeatureCard";
 export { default as FeatureSectionWithImage } from "./FeatureSectionWithImage";
+export { default as KeyBenefitsSection } from "./KeyBenefitsSection";
 export { default as GradientBackground } from "./GradientBackground";
 export { default as HeroSection } from "./HeroSection";
 export { default as ModernContactForm } from "./ModernContactForm";

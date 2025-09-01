@@ -20,6 +20,7 @@ import {
   CtaButton,
   HeroSection,
   CtaSection,
+  KeyBenefitsSection,
 } from "@/components/Platform";
 
 export default function DppInEsprPage() {
@@ -33,6 +34,45 @@ export default function DppInEsprPage() {
   }, []);
 
   const t = useTranslations();
+
+  const keyBenefits = [
+    {
+      icon: <FaShieldAlt className="tw-w-8 tw-h-8" />,
+      title: t("platform.dpp-in-espr.regulatory_compliance_title"),
+      description: t("platform.dpp-in-espr.regulatory_compliance_description"),
+      delay: 0,
+    },
+    {
+      icon: <FaGlobe className="tw-w-8 tw-h-8" />,
+      title: t("platform.dpp-in-espr.supply_chain_title"),
+      description: t("platform.dpp-in-espr.supply_chain_description"),
+      delay: 100,
+    },
+    {
+      icon: <FaFileAlt className="tw-w-8 tw-h-8" />,
+      title: t("platform.dpp-in-espr.data_security_title"),
+      description: t("platform.dpp-in-espr.data_security_description"),
+      delay: 200,
+    },
+    {
+      icon: <FaChartLine className="tw-w-8 tw-h-8" />,
+      title: t("platform.dpp-in-espr.consumer_engagement_title"),
+      description: t("platform.dpp-in-espr.consumer_engagement_description"),
+      delay: 300,
+    },
+    {
+      icon: <FaRecycle className="tw-w-8 tw-h-8" />,
+      title: t("platform.dpp-in-espr.sustainability_assessment_title"),
+      description: t("platform.dpp-in-espr.sustainability_assessment_description"),
+      delay: 400,
+    },
+    {
+      icon: <FaGlobe className="tw-w-8 tw-h-8" />,
+      title: t("platform.dpp-in-espr.scalable_platform_title"),
+      description: t("platform.dpp-in-espr.scalable_platform_description"),
+      delay: 500,
+    },
+  ];
 
   return (
     <div className="tw-w-full">
@@ -217,69 +257,14 @@ export default function DppInEsprPage() {
       </GradientBackground>
 
       {/* Benefits Section */}
-      <GradientBackground type="light">
-        <SectionHeader
-          title={t("platform.dpp-in-espr.benefits_title")}
-          highlightedText="DPP Solution"
-          description={t("platform.dpp-in-espr.benefits_description")}
-        />
-
-        <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8 tw-mt-12">
-          <FeatureCard
-            icon={<FaShieldAlt className="tw-w-8 tw-h-8" />}
-            title={t("platform.dpp-in-espr.regulatory_compliance_title")}
-            delay={0}
-            variant="glass"
-          >
-            {t("platform.dpp-in-espr.regulatory_compliance_description")}
-          </FeatureCard>
-
-          <FeatureCard
-            icon={<FaGlobe className="tw-w-8 tw-h-8" />}
-            title={t("platform.dpp-in-espr.supply_chain_title")}
-            delay={100}
-            variant="glass"
-          >
-            {t("platform.dpp-in-espr.supply_chain_description")}
-          </FeatureCard>
-
-          <FeatureCard
-            icon={<FaFileAlt className="tw-w-8 tw-h-8" />}
-            title={t("platform.dpp-in-espr.data_security_title")}
-            delay={200}
-            variant="glass"
-          >
-            {t("platform.dpp-in-espr.data_security_description")}
-          </FeatureCard>
-
-          <FeatureCard
-            icon={<FaChartLine className="tw-w-8 tw-h-8" />}
-            title={t("platform.dpp-in-espr.consumer_engagement_title")}
-            delay={300}
-            variant="glass"
-          >
-            {t("platform.dpp-in-espr.consumer_engagement_description")}
-          </FeatureCard>
-
-          <FeatureCard
-            icon={<FaRecycle className="tw-w-8 tw-h-8" />}
-            title={t("platform.dpp-in-espr.sustainability_assessment_title")}
-            delay={400}
-            variant="glass"
-          >
-            {t("platform.dpp-in-espr.sustainability_assessment_description")}
-          </FeatureCard>
-
-          <FeatureCard
-            icon={<FaGlobe className="tw-w-8 tw-h-8" />}
-            title={t("platform.dpp-in-espr.scalable_platform_title")}
-            delay={500}
-            variant="glass"
-          >
-            {t("platform.dpp-in-espr.scalable_platform_description")}
-          </FeatureCard>
-        </div>
-      </GradientBackground>
+      <KeyBenefitsSection
+        title={t("platform.dpp-in-espr.benefits_title")}
+        highlightedText="DPP Solution"
+        description={t("platform.dpp-in-espr.benefits_description")}
+        benefits={keyBenefits}
+        gradientType="light"
+        variant="glass"
+      />
 
       {/* CTA Section */}
       <CtaSection
