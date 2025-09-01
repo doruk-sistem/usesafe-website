@@ -865,6 +865,17 @@
       "stakeholder_authorities_label": "Regulatory Authorities & Government Agencies",
       "stakeholder_logistics_label": "Logistics & Customs Operators",
       "stakeholder_consumers_label": "End Consumers",
+      "image_alt_core_purpose": "UseSafe Certification Core Purpose",
+      "badge_circular_economy": "Circular Economy",
+      "badge_platform_development": "Platform Development",
+      "card_end_of_life_title": "End-of-Life Information",
+      "card_lifecycle_monitoring_title": "Lifecycle Monitoring",
+      "card_dpp_integration_title": "DPP Integration",
+      "card_consumer_engagement_title": "Consumer Engagement",
+      "card_public_marketplace_title": "Public Marketplace",
+      "card_sector_modules_title": "Sector Modules",
+      "card_egov_integration_title": "E-Government Integration",
+      "card_mobile_apps_title": "Mobile Apps & Dashboards",
       "stakeholder_content": {
         "manufacturers": {
           "content_title": "Manufacturers & Brand Owners",

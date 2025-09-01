@@ -950,6 +950,17 @@
       "stakeholder_authorities_label": "Düzenleyici Kurumlar ve Devlet Kurumları",
       "stakeholder_logistics_label": "Lojistik ve Gümrük Operatörleri",
       "stakeholder_consumers_label": "Son Tüketiciler",
+      "image_alt_core_purpose": "UseSafe Sertifikasyon Temel Amacı",
+    "badge_circular_economy": "Döngüsel Ekonomi",
+    "badge_platform_development": "Platform Gelişimi",
+    "card_end_of_life_title": "Ömrü Sonu Bilgisi",
+    "card_lifecycle_monitoring_title": "Yaşam Döngüsü İzleme",
+    "card_dpp_integration_title": "DPP Entegrasyonu",
+    "card_consumer_engagement_title": "Tüketici Etkileşimi",
+    "card_public_marketplace_title": "Halka Açık Pazaryeri",
+    "card_sector_modules_title": "Sektör Modülleri",
+    "card_egov_integration_title": "E-Devlet Entegrasyonu",
+    "card_mobile_apps_title": "Mobil Uygulamalar ve Paneller",
       "stakeholder_content": {
         "manufacturers": {
           "content_title": "Üreticiler ve Marka Sahipleri",
