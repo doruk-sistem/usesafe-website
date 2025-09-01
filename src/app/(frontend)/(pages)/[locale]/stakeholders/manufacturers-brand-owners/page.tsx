@@ -162,77 +162,53 @@ export default function ManufacturersBrandOwnersPage() {
         />
 
         <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8 tw-mt-12">
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="0">
-            <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
-              <FaIndustry className="tw-w-6 tw-h-6 tw-text-primary" />
-            </div>
-            <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-              Production Tracking
-            </h3>
-            <p className="tw-text-gray-600 tw-leading-relaxed">
-              Track every step of your production process with detailed digital records and real-time monitoring.
-            </p>
-          </div>
+          <FeatureCard
+            icon={<FaIndustry className="tw-w-8 tw-h-8" />}
+            title="Production Tracking"
+            delay={0}
+          >
+            Track every step of your production process with detailed digital records and real-time monitoring.
+          </FeatureCard>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="100">
-            <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
-              <FaUsers className="tw-w-6 tw-h-6 tw-text-primary" />
-            </div>
-            <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-              Supplier Management
-            </h3>
-            <p className="tw-text-gray-600 tw-leading-relaxed">
-              Manage your supplier network with comprehensive tracking and verification of all materials and components.
-            </p>
-          </div>
+          <FeatureCard
+            icon={<FaUsers className="tw-w-8 tw-h-8" />}
+            title="Supplier Management"
+            delay={100}
+          >
+            Manage your supplier network with comprehensive tracking and verification of all materials and components.
+          </FeatureCard>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="200">
-            <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
-              <FaRecycle className="tw-w-6 tw-h-6 tw-text-primary" />
-            </div>
-            <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-              Sustainability Tracking
-            </h3>
-            <p className="tw-text-gray-600 tw-leading-relaxed">
-              Monitor and report on sustainability metrics throughout your supply chain and production process.
-            </p>
-          </div>
+          <FeatureCard
+            icon={<FaRecycle className="tw-w-8 tw-h-8" />}
+            title="Sustainability Tracking"
+            delay={200}
+          >
+            Monitor and report on sustainability metrics throughout your supply chain and production process.
+          </FeatureCard>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="300">
-            <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
-              <FaFileAlt className="tw-w-6 tw-h-6 tw-text-primary" />
-            </div>
-            <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-              Automated Documentation
-            </h3>
-            <p className="tw-text-gray-600 tw-leading-relaxed">
-              Generate comprehensive product documentation automatically with all required compliance information.
-            </p>
-          </div>
+          <FeatureCard
+            icon={<FaFileAlt className="tw-w-8 tw-h-8" />}
+            title="Automated Documentation"
+            delay={300}
+          >
+            Generate comprehensive product documentation automatically with all required compliance information.
+          </FeatureCard>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="400">
-            <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
-              <FaCogs className="tw-w-6 tw-h-6 tw-text-primary" />
-            </div>
-            <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-              Process Optimization
-            </h3>
-            <p className="tw-text-gray-600 tw-leading-relaxed">
-              Optimize your manufacturing processes with data-driven insights and performance analytics.
-            </p>
-          </div>
+          <FeatureCard
+            icon={<FaCogs className="tw-w-8 tw-h-8" />}
+            title="Process Optimization"
+            delay={400}
+          >
+            Optimize your manufacturing processes with data-driven insights and performance analytics.
+          </FeatureCard>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="500">
-            <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
-              <FaGlobe className="tw-w-6 tw-h-6 tw-text-primary" />
-            </div>
-            <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-              Global Standards
-            </h3>
-            <p className="tw-text-gray-600 tw-leading-relaxed">
-              Meet international standards and regulations with built-in compliance frameworks and updates.
-            </p>
-          </div>
+          <FeatureCard
+            icon={<FaGlobe className="tw-w-8 tw-h-8" />}
+            title="Global Standards"
+            delay={500}
+          >
+            Meet international standards and regulations with built-in compliance frameworks and updates.
+          </FeatureCard>
         </div>
       </GradientBackground>
 
