@@ -891,5 +891,17 @@
       "title": "Digital Twin",
       "description": "Digital Twins solution"
     }
+  },
+  "blog": {
+    "page_title": "Blog",
+    "page_subtitle": "Blog Posts",
+    "scroll_down": "Scroll Down",
+    "read_more": "Read More",
+    "regulation_category": "Regulation",
+    "turkey_ecommerce_post": {
+      "title": "Turkey's New E-Commerce Product Safety Regulation: A Guide for International Manufacturers",
+      "description": "New regulations on e-commerce product safety have come into effect in Turkey. This guide explains the necessary steps for international manufacturers to comply with these regulations.",
+      "date": "March 8, 2025"
+    }
   }
 }

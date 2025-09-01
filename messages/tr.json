@@ -1048,5 +1048,17 @@
       "title": "Digital Twin",
       "description": "Digital Twins solution"
     }
+  },
+  "blog": {
+    "page_title": "Blog",
+    "page_subtitle": "Blog Yazıları",
+    "scroll_down": "Aşağı Kaydır",
+    "read_more": "Devamını Oku",
+    "regulation_category": "Regülasyon",
+    "turkey_ecommerce_post": {
+      "title": "Türkiye'nin Yeni E-Ticaret Ürün Güvenliği Regülasyonu: Uluslararası Üreticiler İçin Rehber",
+      "description": "Türkiye'de e-ticaret ürün güvenliği konusunda yeni regülasyonlar yürürlüğe girdi. Bu rehber, uluslararası üreticilerin bu regülasyonlara uyum sağlaması için gerekli adımları açıklıyor.",
+      "date": "8 Mart 2025"
+    }
   }
 }
