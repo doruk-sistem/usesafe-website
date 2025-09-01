@@ -82,7 +82,7 @@ export default function DppInEsprPage() {
         title={t("platform.dpp-in-espr.hero_title")}
         description={<>{t("platform.dpp-in-espr.hero_description").replace("UseSAFE platform", "")} <b>UseSAFE platform</b>, {t("platform.dpp-in-espr.hero_description").split("UseSAFE platform")[1]}</>}
         imageSrc="/images/digital-product-passport-usesafe.png"
-        imageAlt="Digital Product Passport"
+        imageAlt={t("platform.dpp-in-espr.image_alt")}
         primaryCta={{
           text: t("common.contact_us"),
           href: "/contact",
@@ -106,7 +106,7 @@ export default function DppInEsprPage() {
                 rel="noopener noreferrer"
                 className="tw-underline hover:tw-text-primary"
               >
-                UseSAFE platform
+                {t("platform.dpp-in-espr.platform_name")}
               </a>
             </>
           }
@@ -259,7 +259,7 @@ export default function DppInEsprPage() {
       {/* Benefits Section */}
       <KeyBenefitsSection
         title={t("platform.dpp-in-espr.benefits_title")}
-        highlightedText="DPP Solution"
+        highlightedText={t("platform.dpp-in-espr.highlighted_text")}
         description={t("platform.dpp-in-espr.benefits_description")}
         benefits={keyBenefits}
         gradientType="light"

@@ -897,7 +897,9 @@
       "sensitive_data_description": "düzenleyici gereklilikleri karşılarken",
       "transparency_engagement_title": "Şeffaflık ve Katılım",
       "transparency_engagement_description": "gelişmiş ürün şeffaflığı ve tüketici katılımı için",
-      "get_started": "Başlayın"
+      "get_started": "Başlayın",
+      "highlighted_text": "DPP Çözümü",
+      "platform_name": "UseSAFE platformu"
     },
     "usesafe-certification": {
       "title": "UseSafe Sertifikasyonu",
