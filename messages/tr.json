@@ -759,10 +759,40 @@
       "description": "Tekstil endüstrisi için dijital ürün pasaportları",
       "image_alt": "Tekstil Pasaportu için UseSafe ürünü",
       "badge": "Sürdürülebilir Tekstil Endüstrisi",
-      "hero_title": "Tekstil Endüstrisi için Dijital Ürün Pasaportları",
-      "hero_description": "Moda ve tekstil endüstrisi için özel olarak tasarlanmış kapsamlı dijital pasaport çözümümüz ile tekstil tedarik zincirinde şeffaflığı ve sürdürülebilirliği artırın.",
       "how_it_works_title": "Tekstil DPP Nasıl Çalışır?",
       "how_it_works_description": "DPP, bir tekstil ürününün yaşam döngüsünün her aşamasında (tasarım, üretim, dağıtım, kullanım ve geri dönüşüm) veri toplar, depolar ve paylaşır. Blockchain veya merkezi olmayan teknolojiler, tüm paydaşlar için veri bütünlüğünü ve erişilebilirliğini sağlar.",
+      "hero_badge": "Tekstilde Dijital Ürün Pasaportu",
+      "hero_title": "Dijital Ürün Pasaportları ile Tekstil Endüstrisini Dönüştürün",
+      "hero_description": "Dijital Ürün Pasaportları ile tekstil sektöründe şeffaflığı, izlenebilirliği ve sürdürülebilirliği artırın. AB düzenlemelerine uyun ve her giyim ve tekstil ürünü için doğrulanabilir yaşam döngüsü verileriyle tedarik zincirinizi güçlendirin.",
+      "hero_image_alt": "Tekstilde Dijital Ürün Pasaportu",
+      "benefits_title": "Tekstil DPP'nin Faydaları",
+      "benefits_description": "Kapsamlı DPP çözümümüz tekstil işletmeleri için sayısız avantaj sunar:",
+      "benefits": {
+      "regulatory_compliance": {
+      "title": "Düzenleyici Uyumluluk",
+      "description": "AB'nin Yeşil Anlaşması, ESPR ve Döngüsel Ekonomi Eylem Planı'na tam uyum sağlayın."
+      },
+      "supply_chain_transparency": {
+      "title": "Tedarik Zinciri Şeffaflığı",
+      "description": "Ürünlerin kökenini, yolculuğunu ve varış noktasını tüm tedarik zinciri boyunca takip edin."
+      },
+      "data_security": {
+      "title": "Veri Güvenliği",
+      "description": "Düzenleyici talepleri karşılarken hassas iş bilgilerini koruyun."
+      },
+      "consumer_engagement": {
+      "title": "Tüketici Katılımı",
+      "description": "DPP verilerinizi müşteri platformlarına bağlayarak şeffaflığı ve katılımı artırın."
+      },
+      "sustainability_assessment": {
+      "title": "Sürdürülebilirlik Değerlendirmesi",
+      "description": "Sürdürülebilirlik stratejilerini iyileştirmek ve iyileştirme alanlarını belirlemek için veri toplayın ve analiz edin."
+      },
+      "scalable_platform": {
+      "title": "Ölçeklenebilir Platform",
+      "description": "Uçtan uca tedarik zinciri izlenebilirliği için güçlü bir temel oluşturun."
+      }
+      },
       "why_dpp": {
         "title": "Döngüselliğin, Uyumluluğun ve Yeniliğin Kilidini Açmak",
         "description": "AB'nin DPP girişimi, tekstil endüstrisini daha sürdürülebilir ve şeffaf hale getirmeyi amaçlayan Sürdürülebilir Ürünler için Ekotasarım Yönetmeliği'nin (ESPR) bir temel taşıdır. DPP'ler, bir ürünün yaşam döngüsü, malzemeleri ve çevresel etkisi hakkında ayrıntılı bilgi sağlayarak markaların ve tüketicilerin sorumlu seçimler yapmasına ve küresel standartlara uymasına yardımcı olur.",
@@ -867,7 +897,9 @@
       "sensitive_data_description": "düzenleyici gereklilikleri karşılarken",
       "transparency_engagement_title": "Şeffaflık ve Katılım",
       "transparency_engagement_description": "gelişmiş ürün şeffaflığı ve tüketici katılımı için",
-      "get_started": "Başlayın"
+      "get_started": "Başlayın",
+      "highlighted_text": "DPP Çözümü",
+      "platform_name": "UseSAFE platformu"
     },
     "usesafe-certification": {
       "title": "UseSafe Sertifikasyonu",
