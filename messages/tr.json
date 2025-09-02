@@ -959,6 +959,35 @@
       "request_demo": "Demo Talep Edin",
       "get_started": "Başlayın",
       "stakeholders_main_title": "UseSafe Ekosistemindeki Temel Paydaşlar",
+      "stakeholders_navigation": {
+        "title": "Paydaşlar",
+        "business_stakeholders": "İş Paydaşları",
+        "regulatory_end_users": "Düzenleyici & Son Kullanıcılar",
+        "manufacturers": {
+          "title": "Üreticiler & Marka Sahipleri",
+          "description": "Dijital ürün pasaportları ile ürünlerinizi güçlendirin"
+        },
+        "ecommerce_sellers": {
+          "title": "E-ticaret Satıcıları & Distribütörler",
+          "description": "Pazaryerlerine ve tüketicilere ürün uyumluluğunu gösterin"
+        },
+        "marketplaces": {
+          "title": "Pazaryerleri & Perakendeciler",
+          "description": "Ürün doğrulama ve uyumluluk kontrolünü otomatikleştirin"
+        },
+        "authorities": {
+          "title": "Düzenleyici Otoriteler & Devlet Kurumları",
+          "description": "Gerçek zamanlı uyumluluk belgelerine ve raporlamaya erişin"
+        },
+        "logistics": {
+          "title": "Lojistik & Gümrük Operatörleri",
+          "description": "Uyumluluk belgelerini ve sertifikaları dijital olarak temizleyin"
+        },
+        "consumers": {
+          "title": "Son Tüketiciler",
+          "description": "Satın almadan önce ürün uyumluluğunu ve güvenliğini doğrulayın"
+        }
+      },
       "stakeholders_learn_more": "Daha Fazla Bilgi Edinin",
       "stakeholder_manufacturers_label": "Üreticiler ve Marka Sahipleri",
       "stakeholder_sellers_label": "E-ticaret Satıcıları ve Distribütörleri",
