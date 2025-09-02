@@ -102,10 +102,10 @@ const PrivacyPolicyContent: React.FC<PrivacyPolicyContentProps> = ({ className =
   ];
 
   return (
-    <div className={`tw-bg-gray-50 tw-py-16 tw-px-4 sm:tw-px-6 lg:tw-px-8 ${className}`}>
+    <div className={`tw-bg-gray-50 tw-py-8 tw-px-4 sm:tw-px-6 lg:tw-px-8 ${className}`}>
       <div className="tw-max-w-4xl tw-mx-auto">
         {/* Header */}
-        <div className="tw-text-center tw-mb-16">
+        <div className="tw-text-center tw-mb-12">
           <div className="tw-inline-flex tw-items-center tw-justify-center tw-w-20 tw-h-20 tw-bg-gray-900 tw-rounded-full tw-mb-6">
             <FaShieldAlt className="tw-text-white tw-text-3xl" />
           </div>

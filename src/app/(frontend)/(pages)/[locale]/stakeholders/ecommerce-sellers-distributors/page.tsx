@@ -66,7 +66,9 @@ export default function EcommerceSellersDistributorsPage() {
             title="Verified Compliance"
             delay={0}
           >
-            Demonstrate product compliance to marketplaces and regulatory authorities with verified digital product passports and certification badges.
+            Demonstrate product compliance to marketplaces and regulatory
+            authorities with verified digital product passports and
+            certification badges.
           </FeatureCard>
 
           <FeatureCard
@@ -74,7 +76,8 @@ export default function EcommerceSellersDistributorsPage() {
             title="Enhanced Visibility"
             delay={100}
           >
-            Display UseSafe badges to enhance product credibility and improve search rankings on major e-commerce platforms.
+            Display UseSafe badges to enhance product credibility and improve
+            search rankings on major e-commerce platforms.
           </FeatureCard>
 
           <FeatureCard
@@ -82,7 +85,8 @@ export default function EcommerceSellersDistributorsPage() {
             title="Reduced Risks"
             delay={200}
           >
-            Benefit from reduced regulatory risks and market access barriers with comprehensive compliance documentation.
+            Benefit from reduced regulatory risks and market access barriers
+            with comprehensive compliance documentation.
           </FeatureCard>
         </div>
       </GradientBackground>
@@ -96,7 +100,9 @@ export default function EcommerceSellersDistributorsPage() {
                 Seamless E-commerce Platform Integration
               </h2>
               <p className="tw-text-xl tw-text-gray-600 tw-mb-8 tw-leading-relaxed">
-                Integrate UseSafe certification into your existing e-commerce workflows and marketplace listings without disrupting your sales operations.
+                Integrate UseSafe certification into your existing e-commerce
+                workflows and marketplace listings without disrupting your sales
+                operations.
               </p>
 
               <div className="tw-space-y-6">
@@ -107,7 +113,8 @@ export default function EcommerceSellersDistributorsPage() {
                       Easy Badge Integration
                     </h3>
                     <p className="tw-text-gray-600">
-                      Add UseSafe compliance badges to your product listings with simple API integration
+                      Add UseSafe compliance badges to your product listings
+                      with simple API integration
                     </p>
                   </div>
                 </div>
@@ -119,7 +126,8 @@ export default function EcommerceSellersDistributorsPage() {
                       Automated Compliance Checks
                     </h3>
                     <p className="tw-text-gray-600">
-                      Automatically verify product compliance status across multiple marketplaces
+                      Automatically verify product compliance status across
+                      multiple marketplaces
                     </p>
                   </div>
                 </div>
@@ -131,7 +139,8 @@ export default function EcommerceSellersDistributorsPage() {
                       Consumer Trust Building
                     </h3>
                     <p className="tw-text-gray-600">
-                      Build consumer confidence with transparent product compliance information
+                      Build consumer confidence with transparent product
+                      compliance information
                     </p>
                   </div>
                 </div>
@@ -160,7 +169,11 @@ export default function EcommerceSellersDistributorsPage() {
         />
 
         <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8 tw-mt-12">
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="0">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaStore className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -168,11 +181,16 @@ export default function EcommerceSellersDistributorsPage() {
               Marketplace Compliance
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Meet marketplace requirements and regulatory standards with verified product compliance documentation.
+              Meet marketplace requirements and regulatory standards with
+              verified product compliance documentation.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="100">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -180,11 +198,16 @@ export default function EcommerceSellersDistributorsPage() {
               Trust Badges
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Display UseSafe certification badges to enhance product credibility and consumer confidence.
+              Display UseSafe certification badges to enhance product
+              credibility and consumer confidence.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="200">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaSearch className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -192,11 +215,16 @@ export default function EcommerceSellersDistributorsPage() {
               Enhanced Visibility
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Improve product discoverability and search rankings with compliance-verified listings.
+              Improve product discoverability and search rankings with
+              compliance-verified listings.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="300">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaFileAlt className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -204,11 +232,16 @@ export default function EcommerceSellersDistributorsPage() {
               Automated Documentation
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Generate and manage compliance documentation automatically for all your product listings.
+              Generate and manage compliance documentation automatically for all
+              your product listings.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="400">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaHandshake className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -216,11 +249,16 @@ export default function EcommerceSellersDistributorsPage() {
               Partner Network
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Connect with certified manufacturers and suppliers through the UseSafe partner network.
+              Connect with certified manufacturers and suppliers through the
+              UseSafe partner network.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="500">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaGlobe className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -228,7 +266,8 @@ export default function EcommerceSellersDistributorsPage() {
               Global Market Access
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Access international markets with confidence through standardized compliance credentials.
+              Access international markets with confidence through standardized
+              compliance credentials.
             </p>
           </div>
         </div>
@@ -243,8 +282,8 @@ export default function EcommerceSellersDistributorsPage() {
           href: "/contact",
         }}
         secondaryCta={{
-          text: "Schedule Demo",
-          href: "/demo",
+          text: "Contact Us",
+          href: "/contact",
         }}
       />
     </div>

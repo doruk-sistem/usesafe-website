@@ -65,7 +65,8 @@ export default function EndConsumersPage() {
             title="Product Verification"
             delay={0}
           >
-                           Verify product compliance and safety before purchase to ensure you&apos;re buying certified and safe products.
+            Verify product compliance and safety before purchase to ensure
+            you&apos;re buying certified and safe products.
           </FeatureCard>
 
           <FeatureCard
@@ -73,7 +74,8 @@ export default function EndConsumersPage() {
             title="Sustainability Data"
             delay={100}
           >
-            Access comprehensive lifecycle data and sustainability information to make environmentally conscious choices.
+            Access comprehensive lifecycle data and sustainability information
+            to make environmentally conscious choices.
           </FeatureCard>
 
           <FeatureCard
@@ -81,7 +83,8 @@ export default function EndConsumersPage() {
             title="Informed Decisions"
             delay={200}
           >
-            Make informed and sustainable purchasing decisions based on transparent product information and certifications.
+            Make informed and sustainable purchasing decisions based on
+            transparent product information and certifications.
           </FeatureCard>
         </div>
       </GradientBackground>
@@ -94,9 +97,11 @@ export default function EndConsumersPage() {
               <h2 className="tw-text-4xl md:tw-text-5xl tw-font-bold tw-text-gray-900 tw-mb-6">
                 Seamless Consumer Experience
               </h2>
-                             <p className="tw-text-xl tw-text-gray-600 tw-mb-8 tw-leading-relaxed">
-                 Access UseSafe product information through QR codes, web platforms, and online tools to make confident purchasing decisions.
-               </p>
+              <p className="tw-text-xl tw-text-gray-600 tw-mb-8 tw-leading-relaxed">
+                Access UseSafe product information through QR codes, web
+                platforms, and online tools to make confident purchasing
+                decisions.
+              </p>
 
               <div className="tw-space-y-6">
                 <div className="tw-flex tw-items-start tw-space-x-4">
@@ -106,22 +111,24 @@ export default function EndConsumersPage() {
                       QR Code Scanning
                     </h3>
                     <p className="tw-text-gray-600">
-                      Simply scan QR codes on products to instantly access compliance and sustainability information
+                      Simply scan QR codes on products to instantly access
+                      compliance and sustainability information
                     </p>
                   </div>
                 </div>
 
-                                 <div className="tw-flex tw-items-start tw-space-x-4">
-                   <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary tw-mt-1 tw-flex-shrink-0" />
-                   <div>
-                     <h3 className="tw-text-lg tw-font-semibold tw-text-gray-900 tw-mb-2">
-                       Web Platform Access
-                     </h3>
-                     <p className="tw-text-gray-600">
-                       Access product information through our user-friendly web platform from any device
-                     </p>
-                   </div>
-                 </div>
+                <div className="tw-flex tw-items-start tw-space-x-4">
+                  <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary tw-mt-1 tw-flex-shrink-0" />
+                  <div>
+                    <h3 className="tw-text-lg tw-font-semibold tw-text-gray-900 tw-mb-2">
+                      Web Platform Access
+                    </h3>
+                    <p className="tw-text-gray-600">
+                      Access product information through our user-friendly web
+                      platform from any device
+                    </p>
+                  </div>
+                </div>
 
                 <div className="tw-flex tw-items-start tw-space-x-4">
                   <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary tw-mt-1 tw-flex-shrink-0" />
@@ -130,7 +137,8 @@ export default function EndConsumersPage() {
                       Real-time Updates
                     </h3>
                     <p className="tw-text-gray-600">
-                      Get real-time updates on product compliance status and sustainability certifications
+                      Get real-time updates on product compliance status and
+                      sustainability certifications
                     </p>
                   </div>
                 </div>
@@ -159,7 +167,11 @@ export default function EndConsumersPage() {
         />
 
         <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8 tw-mt-12">
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="0">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -167,11 +179,16 @@ export default function EndConsumersPage() {
               Product Verification
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Verify product compliance and safety before purchase to ensure you&apos;re buying certified and safe products.
+              Verify product compliance and safety before purchase to ensure
+              you&apos;re buying certified and safe products.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="100">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaLeaf className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -179,11 +196,16 @@ export default function EndConsumersPage() {
               Sustainability Data
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Access comprehensive lifecycle data and sustainability information to make environmentally conscious choices.
+              Access comprehensive lifecycle data and sustainability information
+              to make environmentally conscious choices.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="200">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaShoppingCart className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -191,11 +213,16 @@ export default function EndConsumersPage() {
               Informed Decisions
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Make informed and sustainable purchasing decisions based on transparent product information and certifications.
+              Make informed and sustainable purchasing decisions based on
+              transparent product information and certifications.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="300">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaShieldAlt className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -203,11 +230,16 @@ export default function EndConsumersPage() {
               Safety Assurance
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Ensure product safety and compliance with international standards and regulations.
+              Ensure product safety and compliance with international standards
+              and regulations.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="400">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaHeart className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -215,11 +247,16 @@ export default function EndConsumersPage() {
               Trust & Transparency
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Build trust through transparent access to product origins, manufacturing processes, and compliance data.
+              Build trust through transparent access to product origins,
+              manufacturing processes, and compliance data.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="500">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaGlobe className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -227,7 +264,8 @@ export default function EndConsumersPage() {
               Global Standards
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Access products that meet international compliance standards and sustainability certifications.
+              Access products that meet international compliance standards and
+              sustainability certifications.
             </p>
           </div>
         </div>
@@ -242,8 +280,8 @@ export default function EndConsumersPage() {
           href: "/contact",
         }}
         secondaryCta={{
-          text: "Schedule Demo",
-          href: "/demo",
+          text: "Contact Us",
+          href: "/contact",
         }}
       />
     </div>
