@@ -25,7 +25,7 @@ export const footerData = {
         title: "LEGAL",
         terms: {
           text: "Terms",
-          link: "#",
+          link: "/terms-of-service",
         },
         privacy: {
           text: "Privacy",

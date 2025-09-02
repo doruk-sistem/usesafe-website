@@ -68,7 +68,9 @@ export default function ManufacturersBrandOwnersPage() {
             title="Regulatory Compliance"
             delay={0}
           >
-            Ensure full compliance with ESPR, textile regulations, and other industry standards. Stay ahead of evolving requirements with automated compliance management.
+            Ensure full compliance with ESPR, textile regulations, and other
+            industry standards. Stay ahead of evolving requirements with
+            automated compliance management.
           </FeatureCard>
 
           <FeatureCard
@@ -76,7 +78,8 @@ export default function ManufacturersBrandOwnersPage() {
             title="Brand Protection"
             delay={100}
           >
-            Protect your brand integrity with verifiable product authenticity. Build consumer trust through transparent supply chain information.
+            Protect your brand integrity with verifiable product authenticity.
+            Build consumer trust through transparent supply chain information.
           </FeatureCard>
 
           <FeatureCard
@@ -84,7 +87,9 @@ export default function ManufacturersBrandOwnersPage() {
             title="Global Market Access"
             delay={200}
           >
-            Expand your market reach with products that meet international standards. Access new markets with confidence through digital compliance.
+            Expand your market reach with products that meet international
+            standards. Access new markets with confidence through digital
+            compliance.
           </FeatureCard>
         </div>
       </GradientBackground>
@@ -98,7 +103,8 @@ export default function ManufacturersBrandOwnersPage() {
                 Seamless Integration with Your Manufacturing Process
               </h2>
               <p className="tw-text-xl tw-text-gray-600 tw-mb-8 tw-leading-relaxed">
-                Integrate digital product passports into your existing manufacturing workflow without disrupting production efficiency.
+                Integrate digital product passports into your existing
+                manufacturing workflow without disrupting production efficiency.
               </p>
 
               <div className="tw-space-y-6">
@@ -109,7 +115,8 @@ export default function ManufacturersBrandOwnersPage() {
                       Easy Implementation
                     </h3>
                     <p className="tw-text-gray-600">
-                      Quick setup with minimal disruption to your existing processes
+                      Quick setup with minimal disruption to your existing
+                      processes
                     </p>
                   </div>
                 </div>
@@ -121,7 +128,8 @@ export default function ManufacturersBrandOwnersPage() {
                       Real-time Data Capture
                     </h3>
                     <p className="tw-text-gray-600">
-                      Automatically capture product data throughout the manufacturing process
+                      Automatically capture product data throughout the
+                      manufacturing process
                     </p>
                   </div>
                 </div>
@@ -133,7 +141,8 @@ export default function ManufacturersBrandOwnersPage() {
                       Quality Assurance
                     </h3>
                     <p className="tw-text-gray-600">
-                      Maintain product quality standards with comprehensive tracking
+                      Maintain product quality standards with comprehensive
+                      tracking
                     </p>
                   </div>
                 </div>
@@ -162,7 +171,11 @@ export default function ManufacturersBrandOwnersPage() {
         />
 
         <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8 tw-mt-12">
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="0">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaIndustry className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -170,11 +183,16 @@ export default function ManufacturersBrandOwnersPage() {
               Production Tracking
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Track every step of your production process with detailed digital records and real-time monitoring.
+              Track every step of your production process with detailed digital
+              records and real-time monitoring.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="100">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaUsers className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -182,11 +200,16 @@ export default function ManufacturersBrandOwnersPage() {
               Supplier Management
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Manage your supplier network with comprehensive tracking and verification of all materials and components.
+              Manage your supplier network with comprehensive tracking and
+              verification of all materials and components.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="200">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaRecycle className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -194,11 +217,16 @@ export default function ManufacturersBrandOwnersPage() {
               Sustainability Tracking
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Monitor and report on sustainability metrics throughout your supply chain and production process.
+              Monitor and report on sustainability metrics throughout your
+              supply chain and production process.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="300">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaFileAlt className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -206,11 +234,16 @@ export default function ManufacturersBrandOwnersPage() {
               Automated Documentation
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Generate comprehensive product documentation automatically with all required compliance information.
+              Generate comprehensive product documentation automatically with
+              all required compliance information.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="400">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaCogs className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -218,11 +251,16 @@ export default function ManufacturersBrandOwnersPage() {
               Process Optimization
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Optimize your manufacturing processes with data-driven insights and performance analytics.
+              Optimize your manufacturing processes with data-driven insights
+              and performance analytics.
             </p>
           </div>
 
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="500">
+          <div
+            className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
               <FaGlobe className="tw-w-6 tw-h-6 tw-text-primary" />
             </div>
@@ -230,7 +268,8 @@ export default function ManufacturersBrandOwnersPage() {
               Global Standards
             </h3>
             <p className="tw-text-gray-600 tw-leading-relaxed">
-              Meet international standards and regulations with built-in compliance frameworks and updates.
+              Meet international standards and regulations with built-in
+              compliance frameworks and updates.
             </p>
           </div>
         </div>
@@ -245,8 +284,8 @@ export default function ManufacturersBrandOwnersPage() {
           href: "/contact",
         }}
         secondaryCta={{
-          text: "Schedule Demo",
-          href: "/demo",
+          text: "Contact Us",
+          href: "/contact",
         }}
       />
     </div>
