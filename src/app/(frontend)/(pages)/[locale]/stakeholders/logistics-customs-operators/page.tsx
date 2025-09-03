@@ -1,7 +1,6 @@
 "use client";
 
 import AOS from "aos";
-import Image from "next/image";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
 import {
@@ -14,13 +13,7 @@ import {
   FaGlobe,
 } from "react-icons/fa";
 
-import {
-  SectionHeader,
-  GradientBackground,
-  FeatureCard,
-  HeroSection,
-  CtaSection,
-} from "@/components/Platform";
+import StakeholderPageTemplate from "@/components/Platform/StakeholderPageTemplate";
 
 export default function LogisticsCustomsOperatorsPage() {
   useEffect(() => {
@@ -32,221 +25,110 @@ export default function LogisticsCustomsOperatorsPage() {
     });
   }, []);
 
-  return (
-    <div className="tw-w-full">
-      {/* Hero Section */}
-      <HeroSection
-        badge="Logistics & Customs Operators"
-        title="Streamline Customs Clearance with Digital Compliance"
-        description="Digitally clear compliance documents and certifications. Identify discrepancies and compliance issues in real-time while prioritizing processing of traceable and certified products."
-        imageSrc="/images/platform/logistics-customs-operators-hero.png"
-        imageAlt="Logistics and Customs Operators"
-        primaryCta={{
-          text: "Contact Us",
-          href: "/contact",
-        }}
-        secondaryCta={{
-          text: "Try for Free",
-          href: "https://app.usesafe.net/",
-          external: true,
-        }}
-        className="tw-py-24 md:tw-py-32"
-      />
+  const pageData = {
+    // Hero Section
+    heroBadge: "Logistics & Customs Operators",
+    heroTitle: "Streamline Customs Clearance with Digital Compliance",
+    heroDescription: "Digitally clear compliance documents and certifications. Identify discrepancies and compliance issues in real-time while prioritizing processing of traceable and certified products.",
+    heroImageSrc: "/images/platform/logistics-customs-operators-hero.png",
+    heroImageAlt: "Logistics and Customs Operators",
 
-      {/* Key Benefits Section */}
-      <GradientBackground type="white">
-        <SectionHeader
-          title="Why Logistics & Customs Operators Choose UseSafe"
-          description="Digital product passports provide logistics operators and customs authorities with streamlined clearance processes, real-time compliance verification, and enhanced operational efficiency."
-        />
+    // Key Benefits Section
+    benefitsTitle: "Why Logistics & Customs Operators Choose UseSafe",
+    benefitsDescription: "Digital product passports provide logistics operators and customs authorities with streamlined clearance processes, real-time compliance verification, and enhanced operational efficiency.",
+    keyBenefits: [
+      {
+        icon: <FaClipboardCheck className="tw-w-8 tw-h-8 tw-text-primary" />,
+        title: "Digital Clearance",
+        description: "Digitally clear compliance documents and certifications for faster processing and reduced paperwork.",
+        delay: 0,
+      },
+      {
+        icon: <FaEye className="tw-w-8 tw-h-8 tw-text-primary" />,
+        title: "Real-time Monitoring",
+        description: "Identify discrepancies and compliance issues in real-time to prevent delays and ensure smooth operations.",
+        delay: 100,
+      },
+      {
+        icon: <FaShip className="tw-w-8 tw-h-8 tw-text-primary" />,
+        title: "Priority Processing",
+        description: "Prioritize processing of traceable and certified products to optimize logistics flow and reduce clearance times.",
+        delay: 200,
+      },
+    ],
 
-        <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-3 tw-gap-8 tw-mt-12">
-          <FeatureCard
-            icon={<FaClipboardCheck className="tw-w-8 tw-h-8" />}
-            title="Digital Clearance"
-            delay={0}
-          >
-            Digitally clear compliance documents and certifications for faster processing and reduced paperwork.
-          </FeatureCard>
+    // Integration Section
+    integrationTitle: "Seamless Logistics Integration",
+    integrationDescription: "Integrate UseSafe compliance verification into your existing logistics and customs systems to streamline operations and enhance efficiency.",
+    integrationFeatures: [
+      {
+        icon: <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary" />,
+        title: "Automated Verification",
+        description: "Automatically verify compliance documents and certifications during customs clearance processes",
+      },
+      {
+        icon: <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary" />,
+        title: "Real-time Alerts",
+        description: "Receive real-time alerts for compliance issues and discrepancies to prevent shipment delays",
+      },
+      {
+        icon: <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary" />,
+        title: "Priority Queue Management",
+        description: "Automatically prioritize certified products in processing queues for faster clearance",
+      },
+    ],
+    integrationImageSrc: "/images/platform/logistics-customs-operators-image.png",
+    integrationImageAlt: "Logistics Integration",
 
-          <FeatureCard
-            icon={<FaEye className="tw-w-8 tw-h-8" />}
-            title="Real-time Monitoring"
-            delay={100}
-          >
-            Identify discrepancies and compliance issues in real-time to prevent delays and ensure smooth operations.
-          </FeatureCard>
+    // Features Grid
+    featuresTitle: "Comprehensive Features for Logistics Excellence",
+    featuresDescription: "Everything you need to streamline customs clearance, enhance compliance verification, and optimize logistics operations.",
+    features: [
+      {
+        icon: <FaClipboardCheck className="tw-w-6 tw-h-6 tw-text-primary" />,
+        title: "Digital Clearance",
+        description: "Digitally clear compliance documents and certifications for faster processing and reduced paperwork.",
+        delay: 0,
+      },
+      {
+        icon: <FaEye className="tw-w-6 tw-h-6 tw-text-primary" />,
+        title: "Real-time Monitoring",
+        description: "Identify discrepancies and compliance issues in real-time to prevent delays and ensure smooth operations.",
+        delay: 100,
+      },
+      {
+        icon: <FaShip className="tw-w-6 tw-h-6 tw-text-primary" />,
+        title: "Priority Processing",
+        description: "Prioritize processing of traceable and certified products to optimize logistics flow and reduce clearance times.",
+        delay: 200,
+      },
+      {
+        icon: <FaTruck className="tw-w-6 tw-h-6 tw-text-primary" />,
+        title: "Supply Chain Visibility",
+        description: "Gain complete visibility into product origins and compliance status throughout the supply chain.",
+        delay: 300,
+      },
+      {
+        icon: <FaHandshake className="tw-w-6 tw-h-6 tw-text-primary" />,
+        title: "Stakeholder Collaboration",
+        description: "Collaborate with manufacturers, distributors, and regulatory authorities for seamless operations.",
+        delay: 400,
+      },
+      {
+        icon: <FaGlobe className="tw-w-6 tw-h-6 tw-text-primary" />,
+        title: "Global Standards",
+        description: "Ensure compliance with international customs standards and cross-border regulations.",
+        delay: 500,
+      },
+    ],
 
-          <FeatureCard
-            icon={<FaShip className="tw-w-8 tw-h-8" />}
-            title="Priority Processing"
-            delay={200}
-          >
-            Prioritize processing of traceable and certified products to optimize logistics flow and reduce clearance times.
-          </FeatureCard>
-        </div>
-      </GradientBackground>
+    // CTA Section
+    ctaTitle: "Ready to Transform Your Logistics Operations?",
+    ctaDescription: "Join leading logistics operators and customs authorities who trust UseSafe for their compliance verification needs. Start streamlining your customs clearance processes and optimizing logistics flow today.",
+    ctaPrimaryText: "Get Started Now",
+    ctaSecondaryText: "Schedule Demo",
+    ctaSecondaryHref: "/demo",
+  };
 
-      {/* Logistics Integration */}
-      <section className="tw-py-24 tw-bg-gradient-to-br tw-from-gray-50 tw-to-blue-50">
-        <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6">
-          <div className="tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-gap-16">
-            <div className="tw-flex-1" data-aos="fade-right">
-              <h2 className="tw-text-4xl md:tw-text-5xl tw-font-bold tw-text-gray-900 tw-mb-6">
-                Seamless Logistics Integration
-              </h2>
-              <p className="tw-text-xl tw-text-gray-600 tw-mb-8 tw-leading-relaxed">
-                Integrate UseSafe compliance verification into your existing logistics and customs systems to streamline operations and enhance efficiency.
-              </p>
-
-              <div className="tw-space-y-6">
-                <div className="tw-flex tw-items-start tw-space-x-4">
-                  <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary tw-mt-1 tw-flex-shrink-0" />
-                  <div>
-                    <h3 className="tw-text-lg tw-font-semibold tw-text-gray-900 tw-mb-2">
-                      Automated Verification
-                    </h3>
-                    <p className="tw-text-gray-600">
-                      Automatically verify compliance documents and certifications during customs clearance processes
-                    </p>
-                  </div>
-                </div>
-
-                <div className="tw-flex tw-items-start tw-space-x-4">
-                  <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary tw-mt-1 tw-flex-shrink-0" />
-                  <div>
-                    <h3 className="tw-text-lg tw-font-semibold tw-text-gray-900 tw-mb-2">
-                      Real-time Alerts
-                    </h3>
-                    <p className="tw-text-gray-600">
-                      Receive real-time alerts for compliance issues and discrepancies to prevent shipment delays
-                    </p>
-                  </div>
-                </div>
-
-                <div className="tw-flex tw-items-start tw-space-x-4">
-                  <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary tw-mt-1 tw-flex-shrink-0" />
-                  <div>
-                    <h3 className="tw-text-lg tw-font-semibold tw-text-gray-900 tw-mb-2">
-                      Priority Queue Management
-                    </h3>
-                    <p className="tw-text-gray-600">
-                      Automatically prioritize certified products in processing queues for faster clearance
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="tw-flex-1" data-aos="fade-left">
-              <div className="tw-relative tw-h-[400px] tw-w-full tw-rounded-2xl tw-overflow-hidden tw-shadow-2xl">
-                <Image
-                  src="/images/platform/logistics-customs-operators-image.png"
-                  alt="Logistics Integration"
-                  fill
-                  className="tw-object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Grid */}
-      <GradientBackground type="white">
-        <SectionHeader
-          title="Comprehensive Features for Logistics Excellence"
-          description="Everything you need to streamline customs clearance, enhance compliance verification, and optimize logistics operations."
-        />
-
-        <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8 tw-mt-12">
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="0">
-            <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
-              <FaClipboardCheck className="tw-w-6 tw-h-6 tw-text-primary" />
-            </div>
-            <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-              Digital Clearance
-            </h3>
-            <p className="tw-text-gray-600 tw-leading-relaxed">
-              Digitally clear compliance documents and certifications for faster processing and reduced paperwork.
-            </p>
-          </div>
-
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="100">
-            <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
-              <FaEye className="tw-w-6 tw-h-6 tw-text-primary" />
-            </div>
-            <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-              Real-time Monitoring
-            </h3>
-            <p className="tw-text-gray-600 tw-leading-relaxed">
-              Identify discrepancies and compliance issues in real-time to prevent delays and ensure smooth operations.
-            </p>
-          </div>
-
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="200">
-            <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
-              <FaShip className="tw-w-6 tw-h-6 tw-text-primary" />
-            </div>
-            <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-              Priority Processing
-            </h3>
-            <p className="tw-text-gray-600 tw-leading-relaxed">
-              Prioritize processing of traceable and certified products to optimize logistics flow and reduce clearance times.
-            </p>
-          </div>
-
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="300">
-            <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
-              <FaTruck className="tw-w-6 tw-h-6 tw-text-primary" />
-            </div>
-            <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-              Supply Chain Visibility
-            </h3>
-            <p className="tw-text-gray-600 tw-leading-relaxed">
-              Gain complete visibility into product origins and compliance status throughout the supply chain.
-            </p>
-          </div>
-
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="400">
-            <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
-              <FaHandshake className="tw-w-6 tw-h-6 tw-text-primary" />
-            </div>
-            <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-              Stakeholder Collaboration
-            </h3>
-            <p className="tw-text-gray-600 tw-leading-relaxed">
-              Collaborate with manufacturers, distributors, and regulatory authorities for seamless operations.
-            </p>
-          </div>
-
-          <div className="tw-bg-white tw-p-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100" data-aos="fade-up" data-aos-delay="500">
-            <div className="tw-w-12 tw-h-12 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6">
-              <FaGlobe className="tw-w-6 tw-h-6 tw-text-primary" />
-            </div>
-            <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-4">
-              Global Standards
-            </h3>
-            <p className="tw-text-gray-600 tw-leading-relaxed">
-              Ensure compliance with international customs standards and cross-border regulations.
-            </p>
-          </div>
-        </div>
-      </GradientBackground>
-
-      {/* CTA Section */}
-      <CtaSection
-        title="Ready to Transform Your Logistics Operations?"
-        description="Join leading logistics operators and customs authorities who trust UseSafe for their compliance verification needs. Start streamlining your customs clearance processes and optimizing logistics flow today."
-        primaryCta={{
-          text: "Get Started Now",
-          href: "/contact",
-        }}
-        secondaryCta={{
-          text: "Schedule Demo",
-          href: "/demo",
-        }}
-      />
-    </div>
-  );
+  return <StakeholderPageTemplate {...pageData} />;
 }
