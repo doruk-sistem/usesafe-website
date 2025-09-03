@@ -659,17 +659,49 @@
       "cta_title": "Ready to Implement Digital Product Passports for ESPR Compliance?",
       "cta_description": "Partner with us to implement your vision of a sustainable, responsible, and circular organization. Our team of experts will guide you through every step of the process.",
       "contact_team": "Contact Our Team",
-      "request_demo": "Request a Demo"
+      "request_demo": "Request a Demo",
+      "highlighted_text": "DPP Solution",
+      "platform_name": "UseSAFE platform"
     },
     "textile-passport": {
       "title": "Textile Passport",
       "description": "Digital product passports for textile industry",
       "image_alt": "Usesafe product for Textile Passport",
       "badge": "Sustainable Textile Industry",
-      "hero_title": "Digital Product Passports for Textile Industry",
-      "hero_description": "Enhance transparency and sustainability in the textile supply chain with our comprehensive digital passport solution tailored for the fashion and textile industry.",
       "how_it_works_title": "How Does a Textile DPP Work?",
       "how_it_works_description": "DPP collects, stores, and shares data at every stage of a textile product’s lifecycle—design, production, distribution, use, and recycling. Blockchain or decentralized technologies ensure data integrity and accessibility for all stakeholders.",
+      "hero_badge": "Digital Product Passport in Textile",
+      "hero_title": "Transforming Textile Industry with Digital Product Passports",
+      "hero_description": "Enhance transparency, traceability, and sustainability in the textile sector with Digital Product Passports. Comply with EU regulations and empower your supply chain with verifiable lifecycle data for every garment and textile product.",
+      "hero_image_alt": "Digital Product Passport in Textile",
+      "benefits_title": "Benefits of Textile DPP",  
+      "benefits_description": "Our comprehensive DPP solution offers numerous advantages for textile businesses:",
+      "benefits": {
+      "regulatory_compliance": {
+      "title": "Regulatory Compliance",
+      "description": "Stay compliant with EU's Green Deal, ESPR, and Circular Economy Action Plan."
+       },
+      "supply_chain_transparency": {
+      "title": "Supply Chain Transparency",
+      "description": "Track the origin, journey, and destination of products through the entire supply chain."
+      },
+      "data_security": {
+      "title": "Data Security",
+      "description": "Protect sensitive business information while meeting regulatory demands."
+      },
+      "consumer_engagement": {
+      "title": "Consumer Engagement",
+      "description": "Connect your DPP data to customer platforms to enhance transparency and engagement."
+      },
+      "sustainability_assessment": {
+      "title": "Sustainability Assessment",
+      "description": "Collect and analyze data to refine sustainability strategies and identify improvement areas."
+      },
+      "scalable_platform": {
+      "title": "Scalable Platform",
+      "description": "Build a strong foundation for end-to-end supply chain traceability."
+      }
+      },
       "why_dpp": {
         "title": "Unlocking Circularity, Compliance, and Innovation",
         "description": "The EU's DPP initiative is a cornerstone of the Ecodesign for Sustainable Products Regulation (ESPR), aiming to make the textile industry more sustainable and transparent. DPPs provide detailed information about a product's lifecycle, materials, and environmental impact, helping brands and consumers make responsible choices and comply with global standards.",
@@ -833,6 +865,17 @@
       "stakeholder_authorities_label": "Regulatory Authorities & Government Agencies",
       "stakeholder_logistics_label": "Logistics & Customs Operators",
       "stakeholder_consumers_label": "End Consumers",
+      "image_alt_core_purpose": "UseSafe Certification Core Purpose",
+      "badge_circular_economy": "Circular Economy",
+      "badge_platform_development": "Platform Development",
+      "card_end_of_life_title": "End-of-Life Information",
+      "card_lifecycle_monitoring_title": "Lifecycle Monitoring",
+      "card_dpp_integration_title": "DPP Integration",
+      "card_consumer_engagement_title": "Consumer Engagement",
+      "card_public_marketplace_title": "Public Marketplace",
+      "card_sector_modules_title": "Sector Modules",
+      "card_egov_integration_title": "E-Government Integration",
+      "card_mobile_apps_title": "Mobile Apps & Dashboards",
       "stakeholder_content": {
         "manufacturers": {
           "content_title": "Manufacturers & Brand Owners",
