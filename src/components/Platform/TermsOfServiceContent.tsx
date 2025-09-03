@@ -20,7 +20,6 @@ interface TermsOfServiceContentProps {
 
 const TermsOfServiceContent: React.FC<TermsOfServiceContentProps> = ({ className = "" }) => {
   const t = useTranslations("TermsOfService");
-
   const currentDate = new Date().toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
@@ -121,10 +120,10 @@ const TermsOfServiceContent: React.FC<TermsOfServiceContentProps> = ({ className
   ];
 
   return (
-    <div className={`tw-bg-gray-50 tw-py-16 tw-px-4 sm:tw-px-6 lg:tw-px-8 ${className}`}>
+    <div className={`tw-bg-gray-50 tw-py-8 tw-px-4 sm:tw-px-6 lg:tw-px-8 ${className}`}>
       <div className="tw-max-w-4xl tw-mx-auto">
         {/* Header */}
-        <div className="tw-text-center tw-mb-16">
+        <div className="tw-text-center tw-mb-12">
           <div className="tw-inline-flex tw-items-center tw-justify-center tw-w-20 tw-h-20 tw-bg-gray-900 tw-rounded-full tw-mb-6">
             <FaFileContract className="tw-text-white tw-text-3xl" />
           </div>
@@ -229,9 +228,9 @@ const TermsOfServiceContent: React.FC<TermsOfServiceContentProps> = ({ className
                       </div>
                       <div>
                         <div className="tw-text-sm tw-font-medium tw-text-gray-900">Address</div>
-                        <div className="tw-text-sm tw-text-gray-600">
+                        <p className="tw-text-sm tw-text-gray-600">
                           {t("sections.contact.address")}
-                        </div>
+                        </p>
                       </div>
                     </div>
                   </div>

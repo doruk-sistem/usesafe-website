@@ -8,6 +8,12 @@ import {
 import {
   FaLink,
   FaTshirt,
+  FaIndustry,
+  FaUsers,
+  FaGlobe,
+  FaShieldAlt,
+  FaCogs,
+  FaCheckCircle,
 } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 
@@ -57,6 +63,32 @@ export default function Navbar() {
           isTitle: true,
           subItems: [
             { key: "api-integrations", label: t("platform.api-integrations.title"), description: t("platform.api-integrations.description"), href: "#", icon: FaLink },
+          ],
+        },
+      ],
+    },
+    {
+      key: "stakeholders",
+      label: t("platform.usesafe-certification.stakeholders_navigation.title"),
+      subItems: [
+        {
+          key: "business-column",
+          label: t("platform.usesafe-certification.stakeholders_navigation.business_stakeholders"),
+          isTitle: true,
+          subItems: [
+            { key: "manufacturers", label: t("platform.usesafe-certification.stakeholders_navigation.manufacturers.title"), description: t("platform.usesafe-certification.stakeholders_navigation.manufacturers.description"), href: "/stakeholders/manufacturers-brand-owners", icon: FaIndustry },
+            { key: "sellers", label: t("platform.usesafe-certification.stakeholders_navigation.ecommerce_sellers.title"), description: t("platform.usesafe-certification.stakeholders_navigation.ecommerce_sellers.description"), href: "/stakeholders/ecommerce-sellers-distributors", icon: FaUsers },
+            { key: "marketplaces", label: t("platform.usesafe-certification.stakeholders_navigation.marketplaces.title"), description: t("platform.usesafe-certification.stakeholders_navigation.marketplaces.description"), href: "/stakeholders/marketplaces-retailers", icon: FaGlobe },
+          ],
+        },
+        {
+          key: "regulatory-column",
+          label: t("platform.usesafe-certification.stakeholders_navigation.regulatory_end_users"),
+          isTitle: true,
+          subItems: [
+            { key: "authorities", label: t("platform.usesafe-certification.stakeholders_navigation.authorities.title"), description: t("platform.usesafe-certification.stakeholders_navigation.authorities.description"), href: "/stakeholders/regulatory-authorities-government-agencies", icon: FaShieldAlt },
+            { key: "logistics", label: t("platform.usesafe-certification.stakeholders_navigation.logistics.title"), description: t("platform.usesafe-certification.stakeholders_navigation.logistics.description"), href: "/stakeholders/logistics-customs-operators", icon: FaCogs },
+            { key: "consumers", label: t("platform.usesafe-certification.stakeholders_navigation.consumers.title"), description: t("platform.usesafe-certification.stakeholders_navigation.consumers.description"), href: "/stakeholders/end-consumers", icon: FaCheckCircle },
           ],
         },
       ],
