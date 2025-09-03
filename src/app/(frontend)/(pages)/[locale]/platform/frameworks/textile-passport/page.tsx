@@ -21,6 +21,7 @@ import {
   SectionHeader,
   CtaSection,
   SectorTabsSection,
+  KeyBenefitsSection,
 } from "@/components/Platform";
 
 export default function TextilePassportPage() {
@@ -34,6 +35,45 @@ export default function TextilePassportPage() {
   }, []);
 
   const t = useTranslations();
+
+  const keyBenefits = [
+    {
+      icon: <FaShieldAlt className="tw-w-8 tw-h-8" />,
+      title: t("platform.textile-passport.benefits.regulatory_compliance.title"),
+      description: t("platform.textile-passport.benefits.regulatory_compliance.description"),
+      delay: 0,
+    },
+    {
+      icon: <FaGlobe className="tw-w-8 tw-h-8" />,
+      title: t("platform.textile-passport.benefits.supply_chain_transparency.title"),
+      description: t("platform.textile-passport.benefits.supply_chain_transparency.description"),
+      delay: 100,
+    },
+    {
+      icon: <FaFileAlt className="tw-w-8 tw-h-8" />,
+      title: t("platform.textile-passport.benefits.data_security.title"),
+      description: t("platform.textile-passport.benefits.data_security.description"),
+      delay: 200,
+    },
+    {
+      icon: <FaChartLine className="tw-w-8 tw-h-8" />,
+      title: t("platform.textile-passport.benefits.consumer_engagement.title"),
+      description: t("platform.textile-passport.benefits.consumer_engagement.description"),
+      delay: 300,
+    },
+    {
+      icon: <FaRecycle className="tw-w-8 tw-h-8" />,
+      title: t("platform.textile-passport.benefits.sustainability_assessment.title"),
+      description: t("platform.textile-passport.benefits.sustainability_assessment.description"),
+      delay: 400,
+    },
+    {
+      icon: <FaGlobe className="tw-w-8 tw-h-8" />,
+      title: t("platform.textile-passport.benefits.scalable_platform.title"),
+      description: t("platform.textile-passport.benefits.scalable_platform.description"),
+      delay: 500,
+    },
+  ];
 
   const textileSectorsData = [
     {
@@ -81,11 +121,11 @@ export default function TextilePassportPage() {
   return (
     <div className="tw-w-full">
       <HeroSection
-        badge="Digital Product Passport in Textile"
-        title="Transforming Textile Industry with Digital Product Passports"
-        description="Enhance transparency, traceability, and sustainability in the textile sector with Digital Product Passports. Comply with EU regulations and empower your supply chain with verifiable lifecycle data for every garment and textile product."
+        badge={t("platform.textile-passport.hero_badge")}
+        title={t("platform.textile-passport.hero_title")}
+        description={t("platform.textile-passport.hero_description")}
         imageSrc="/images/platform/textile-passport.jpeg"
-        imageAlt="Digital Product Passport in Textile"
+        imageAlt={t("platform.textile-passport.hero_image_alt")}
         primaryCta={{
           text: t("common.contact_us"),
           href: "/contact",
@@ -224,58 +264,14 @@ export default function TextilePassportPage() {
       </GradientBackground>
 
       {/* FAYDALAR SECTION */}
-      <section className="tw-py-24 tw-bg-gradient-to-br tw-from-gray-50 tw-to-blue-50">
-        <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6">
-          <SectionHeader
-            title="Benefits of Textile DPP"
-            description="Our comprehensive DPP solution offers numerous advantages for textile businesses:"
-          />
-          <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8 tw-mt-12">
-            <FeatureCard
-              icon={<FaShieldAlt className="tw-w-8 tw-h-8" />}
-              title="Regulatory Compliance"
-              variant="glass"
-            >
-              Stay compliant with EU&apos;s Green Deal, ESPR, and Circular Economy Action Plan.
-            </FeatureCard>
-            <FeatureCard
-              icon={<FaGlobe className="tw-w-8 tw-h-8" />}
-              title="Supply Chain Transparency"
-              variant="glass"
-            >
-              Track the origin, journey, and destination of products through the entire supply chain.
-            </FeatureCard>
-            <FeatureCard
-              icon={<FaFileAlt className="tw-w-8 tw-h-8" />}
-              title="Data Security"
-              variant="glass"
-            >
-              Protect sensitive business information while meeting regulatory demands.
-            </FeatureCard>
-            <FeatureCard
-              icon={<FaChartLine className="tw-w-8 tw-h-8" />}
-              title="Consumer Engagement"
-              variant="glass"
-            >
-              Connect your DPP data to customer platforms to enhance transparency and engagement.
-            </FeatureCard>
-            <FeatureCard
-              icon={<FaRecycle className="tw-w-8 tw-h-8" />}
-              title="Sustainability Assessment"
-              variant="glass"
-            >
-              Collect and analyze data to refine sustainability strategies and identify improvement areas.
-            </FeatureCard>
-            <FeatureCard
-              icon={<FaGlobe className="tw-w-8 tw-h-8" />}
-              title="Scalable Platform"
-              variant="glass"
-            >
-              Build a strong foundation for end-to-end supply chain traceability.
-            </FeatureCard>
-          </div>
-        </div>
-      </section>
+      <KeyBenefitsSection
+        title={t("platform.textile-passport.benefits_title")}
+        description={t("platform.textile-passport.benefits_description")}
+        benefits={keyBenefits}
+        variant="glass"
+        useCustomWrapper={true}
+        customWrapperClass="tw-py-24 tw-bg-gradient-to-br tw-from-gray-50 tw-to-blue-50"
+      />
 
       {/* TRACE TRUST SECTION */}
       <SectorTabsSection
@@ -287,14 +283,14 @@ export default function TextilePassportPage() {
       />
 
       <CtaSection
-        title="Ready to Implement Digital Product Passports for ESPR Compliance?"
-        description="Partner with us to implement your vision of a sustainable, responsible, and circular organization. Our team of experts will guide you through every step of the process."
+        title={t("platform.textile-passport.cta_title")}
+        description={t("platform.textile-passport.cta_description")}
         primaryCta={{
-          text: "Contact Our Team",
+          text: t("platform.textile-passport.contact_team"),
           href: "/contact",
         }}
         secondaryCta={{
-          text: "Request a Demo",
+          text: t("platform.textile-passport.request_demo"),
           href: "https://app.usesafe.net/",
           external: true,
         }}
