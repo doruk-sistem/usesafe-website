@@ -105,6 +105,8 @@ const SectorTabsSection: React.FC<SectorTabsSectionProps> = ({
                     ? "/stakeholders/ecommerce-sellers-distributors"
                     : activeTabIndex === 2
                     ? "/stakeholders/marketplaces-retailers"
+                    : activeTabIndex === 3
+                    ? "/stakeholders/regulatory-authorities-government-agencies"
                     : "#"
                 }
                 variant="primary"
