@@ -859,6 +859,35 @@
       "get_started": "Get Started",
       "stakeholders_main_title": "Key Stakeholders in the UseSafe Ecosystem",
       "stakeholders_learn_more": "Learn More",
+      "stakeholders_navigation": {
+        "title": "Stakeholders",
+        "business_stakeholders": "Business Stakeholders",
+        "regulatory_end_users": "Regulatory & End Users",
+        "manufacturers": {
+          "title": "Manufacturers & Brand Owners",
+          "description": "Empower your products with digital product passports"
+        },
+        "ecommerce_sellers": {
+          "title": "E-commerce Sellers & Distributors",
+          "description": "Demonstrate product compliance to marketplaces and consumers"
+        },
+        "marketplaces": {
+          "title": "Marketplaces & Retailers",
+          "description": "Automate product vetting and compliance verification"
+        },
+        "authorities": {
+          "title": "Regulatory Authorities & Government Agencies",
+          "description": "Access real-time compliance documentation and reporting"
+        },
+        "logistics": {
+          "title": "Logistics & Customs Operators",
+          "description": "Digitally clear compliance documents and certifications"
+        },
+        "consumers": {
+          "title": "End Consumers",
+          "description": "Verify product compliance and safety before purchase"
+        }
+      },
       "stakeholder_manufacturers_label": "Manufacturers & Brand Owners",
       "stakeholder_sellers_label": "E-commerce Sellers & Distributors",
       "stakeholder_marketplaces_label": "Marketplaces & Retailers",
@@ -933,6 +962,18 @@
     "digital-twin": {
       "title": "Digital Twin",
       "description": "Digital Twins solution"
+    }
+  },
+  "blog": {
+    "page_title": "Blog",
+    "page_subtitle": "Blog Posts",
+    "scroll_down": "Scroll Down",
+    "read_more": "Read More",
+    "regulation_category": "Regulation",
+    "turkey_ecommerce_post": {
+      "title": "Turkey's New E-Commerce Product Safety Regulation: A Guide for International Manufacturers",
+      "description": "New regulations on e-commerce product safety have come into effect in Turkey. This guide explains the necessary steps for international manufacturers to comply with these regulations.",
+      "date": "March 8, 2025"
     }
   }
 }
