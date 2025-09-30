@@ -29,6 +29,7 @@ interface HeroSectionProps {
     external?: boolean;
   };
   logos?: Logo[];
+  className?: string;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -40,9 +41,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   primaryCta,
   secondaryCta,
   logos,
+  className = "",
 }) => {
   return (
-    <section className="tw-relative tw-overflow-hidden tw-pt-24 md:tw-pt-32 tw-pb-0 tw-bg-gradient-to-br tw-from-[#1e3c72] tw-via-[#2a5298] tw-to-[#6dd5ed] tw-text-white">
+    <section
+      className={`tw-relative tw-overflow-hidden tw-pt-24 md:tw-pt-32 tw-pb-0 tw-bg-gradient-to-br tw-from-[#1e3c72] tw-via-[#2a5298] tw-to-[#6dd5ed] tw-text-white ${className}`}
+    >
       {/* Animated SVG Background */}
       <svg
         className="tw-absolute tw-top-0 tw-left-0 tw-w-full tw-h-full tw-z-0"

@@ -76,9 +76,13 @@ const SectorTabsSection: React.FC<SectorTabsSectionProps> = ({
         </div>
 
         <div className="tw-bg-gray-50 tw-rounded-xl tw-shadow-lg tw-overflow-hidden tw-p-6 md:tw-p-8 lg:tw-p-12">
-          <div className={`tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 tw-gap-8 md:tw-gap-12 tw-items-center tw-transition-all tw-duration-500 tw-ease-in-out ${
-            isTransitioning ? "tw-opacity-0 tw-transform tw-scale-95" : "tw-opacity-100 tw-transform tw-scale-100"
-          }`}>
+          <div
+            className={`tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 tw-gap-8 md:tw-gap-12 tw-items-center tw-transition-all tw-duration-500 tw-ease-in-out ${
+              isTransitioning
+                ? "tw-opacity-0 tw-transform tw-scale-95"
+                : "tw-opacity-100 tw-transform tw-scale-100"
+            }`}
+          >
             <div>
               <h3 className="tw-text-2xl md:tw-text-3xl tw-font-bold tw-mb-6">
                 {getSectorTranslation(currentSectorContent.contentTitleKey)}
@@ -97,7 +101,25 @@ const SectorTabsSection: React.FC<SectorTabsSectionProps> = ({
                   return null;
                 })}
               </ul>
-              <CtaButton href="#" variant="primary" className="tw-w-full sm:tw-w-auto">
+              <CtaButton
+                href={
+                  activeTabIndex === 0
+                    ? "/stakeholders/manufacturers-brand-owners"
+                    : activeTabIndex === 1
+                      ? "/stakeholders/ecommerce-sellers-distributors"
+                      : activeTabIndex === 2
+                        ? "/stakeholders/marketplaces-retailers"
+                        : activeTabIndex === 3
+                          ? "/stakeholders/regulatory-authorities-government-agencies"
+                          : activeTabIndex === 4
+                            ? "/stakeholders/logistics-customs-operators"
+                            : activeTabIndex === 5
+                              ? "/stakeholders/end-consumers"
+                              : "#"
+                }
+                variant="primary"
+                className="tw-w-full sm:tw-w-auto"
+              >
                 {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                 {t(learnMoreButtonKey as any)}
               </CtaButton>
