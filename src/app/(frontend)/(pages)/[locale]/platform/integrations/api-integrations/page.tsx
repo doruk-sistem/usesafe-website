@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { FaCheckCircle, FaRecycle, FaChartLine, FaFileAlt, FaShieldAlt, FaGlobe, FaCompass, FaFlask, FaPaperPlane, FaDatabase, FaGlobeAmericas } from "react-icons/fa";
 
-import { HeroSection, DigitalProductPassportSection, KeyBenefitsSection, FeaturesWithImageSection, FeatureSectionWithImage, CtaButton, SectorTabsSection } from "@/components/Platform";
+import { HeroSection, DigitalProductPassportSection, KeyBenefitsSection, FeatureSectionWithImage, CtaButton, SectorTabsSection } from "@/components/Platform";
 
 export default function ApiIntegrationsPage() {
   const t = useTranslations();
@@ -107,7 +107,7 @@ export default function ApiIntegrationsPage() {
 
       <FeatureSectionWithImage
         title={t("platform.usesafe-certification.core_purpose_title")}
-        description={t("platform.usesafe-certification.core_purpose_description")}  
+        description={t("platform.usesafe-certification.core_purpose_description")}
         features={[
           {
             icon: <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary" />,
@@ -142,7 +142,7 @@ export default function ApiIntegrationsPage() {
         cta={{
           text: t("platform.api-integrations.features_button_text"),
           href: "/contact",
-          variant: "primary"
+          variant: "primary",
         }}
       />
 
