@@ -40,7 +40,7 @@ const KeyBenefitsSection: React.FC<KeyBenefitsSectionProps> = ({
         description={description}
       />
 
-      <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8 tw-mt-12">
+      <div className="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-6 sm:tw-gap-8 tw-mt-8 sm:tw-mt-12">
         {benefits.map((benefit, index) => (
           <FeatureCard
             key={index}
@@ -59,7 +59,7 @@ const KeyBenefitsSection: React.FC<KeyBenefitsSectionProps> = ({
   if (useCustomWrapper) {
     return (
       <section className={`${customWrapperClass} ${className}`}>
-        <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6">
+        <div className="tw-container tw-mx-auto tw-px-4 sm:tw-px-6 md:tw-px-8 lg:tw-px-6">
           {content}
         </div>
       </section>

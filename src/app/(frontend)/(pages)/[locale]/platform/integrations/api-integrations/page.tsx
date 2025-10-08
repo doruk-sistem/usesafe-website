@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { FaCheckCircle, FaRecycle, FaChartLine, FaFileAlt, FaShieldAlt, FaGlobe, FaCompass, FaFlask, FaPaperPlane, FaDatabase, FaGlobeAmericas } from "react-icons/fa";
 
-import { HeroSection, DigitalProductPassportSection, KeyBenefitsSection, FeaturesWithImageSection,CtaButton, SectorTabsSection } from "@/components/Platform";
+import { HeroSection, DigitalProductPassportSection, KeyBenefitsSection, FeaturesWithImageSection, FeatureSectionWithImage, CtaButton, SectorTabsSection } from "@/components/Platform";
 
 export default function ApiIntegrationsPage() {
   const t = useTranslations();
@@ -87,17 +87,17 @@ export default function ApiIntegrationsPage() {
         description={t("platform.api-integrations.what_is_description")}
         benefits={[
           {
-            icon: <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary" />,
+            icon: <FaCheckCircle className="tw-w-5 tw-h-5 sm:tw-w-6 sm:tw-h-6 tw-text-primary" />,
             title: t("platform.api-integrations.benefit_1_title"),
             description: t("platform.api-integrations.benefit_1_description"),
           },
           {
-            icon: <FaRecycle className="tw-w-6 tw-h-6 tw-text-primary" />,
+            icon: <FaRecycle className="tw-w-5 tw-h-5 sm:tw-w-6 sm:tw-h-6 tw-text-primary" />,
             title: t("platform.api-integrations.benefit_2_title"),
             description: t("platform.api-integrations.benefit_2_description"),
           },
           {
-            icon: <FaChartLine className="tw-w-6 tw-h-6 tw-text-primary" />,
+            icon: <FaChartLine className="tw-w-5 tw-h-5 sm:tw-w-6 sm:tw-h-6 tw-text-primary" />,
             title: t("platform.api-integrations.benefit_3_title"),
             description: t("platform.api-integrations.benefit_3_description"),
           },
@@ -105,33 +105,45 @@ export default function ApiIntegrationsPage() {
         gradientType="white"
       />
 
-      <FeaturesWithImageSection
+      <FeatureSectionWithImage
+        title={t("platform.usesafe-certification.core_purpose_title")}
+        description={t("platform.usesafe-certification.core_purpose_description")}  
         features={[
           {
-            icon: <FaCheckCircle className="tw-w-5 tw-h-5 tw-text-white" />,
+            icon: <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-primary" />,
             title: t("platform.api-integrations.feature_1_title"),
             description: t("platform.api-integrations.feature_1_description"),
+            delay: 100,
           },
           {
-            icon: <FaFileAlt className="tw-w-5 tw-h-5 tw-text-white" />,
+            icon: <FaFileAlt className="tw-w-6 tw-h-6 tw-text-primary" />,
             title: t("platform.api-integrations.feature_2_title"),
             description: t("platform.api-integrations.feature_2_description"),
+            delay: 200,
           },
           {
-            icon: <FaChartLine className="tw-w-5 tw-h-5 tw-text-white" />,
+            icon: <FaChartLine className="tw-w-6 tw-h-6 tw-text-primary" />,
             title: t("platform.api-integrations.feature_3_title"),
             description: t("platform.api-integrations.feature_3_description"),
+            delay: 300,
           },
           {
-            icon: <FaRecycle className="tw-w-5 tw-h-5 tw-text-white" />,
+            icon: <FaRecycle className="tw-w-6 tw-h-6 tw-text-primary" />,
             title: t("platform.api-integrations.feature_4_title"),
             description: t("platform.api-integrations.feature_4_description"),
+            delay: 400,
           },
         ]}
         imageSrc="/images/digital-verification-checkmark.jpg"
         imageAlt={t("platform.api-integrations.features_image_alt")}
-        buttonText={t("platform.api-integrations.features_button_text")}
-        buttonHref="/contact"
+        imageOnRight={true}
+        gradientType="white"
+        className="tw-py-12 sm:tw-py-16 md:tw-py-20 lg:tw-py-24"
+        cta={{
+          text: t("platform.api-integrations.features_button_text"),
+          href: "/contact",
+          variant: "primary"
+        }}
       />
 
       <KeyBenefitsSection
@@ -139,32 +151,32 @@ export default function ApiIntegrationsPage() {
         description=""
         benefits={[
           {
-            icon: <FaPaperPlane className="tw-w-6 tw-h-6 tw-text-teal-600" />,
+            icon: <FaPaperPlane className="tw-w-5 tw-h-5 sm:tw-w-6 sm:tw-h-6 tw-text-teal-600" />,
             title: t("platform.api-integrations.advanced_feature_1_title"),
             description: t("platform.api-integrations.advanced_feature_1_description"),
           },
           {
-            icon: <FaShieldAlt className="tw-w-6 tw-h-6 tw-text-teal-600" />,
+            icon: <FaShieldAlt className="tw-w-5 tw-h-5 sm:tw-w-6 sm:tw-h-6 tw-text-teal-600" />,
             title: t("platform.api-integrations.advanced_feature_2_title"),
             description: t("platform.api-integrations.advanced_feature_2_description"),
           },
           {
-            icon: <FaGlobe className="tw-w-6 tw-h-6 tw-text-teal-600" />,
+            icon: <FaGlobe className="tw-w-5 tw-h-5 sm:tw-w-6 sm:tw-h-6 tw-text-teal-600" />,
             title: t("platform.api-integrations.advanced_feature_3_title"),
             description: t("platform.api-integrations.advanced_feature_3_description"),
           },
           {
-            icon: <FaCompass className="tw-w-6 tw-h-6 tw-text-teal-600" />,
+            icon: <FaCompass className="tw-w-5 tw-h-5 sm:tw-w-6 sm:tw-h-6 tw-text-teal-600" />,
             title: t("platform.api-integrations.advanced_feature_4_title"),
             description: t("platform.api-integrations.advanced_feature_4_description"),
           },
           {
-            icon: <FaCheckCircle className="tw-w-6 tw-h-6 tw-text-teal-600" />,
+            icon: <FaCheckCircle className="tw-w-5 tw-h-5 sm:tw-w-6 sm:tw-h-6 tw-text-teal-600" />,
             title: t("platform.api-integrations.advanced_feature_5_title"),
             description: t("platform.api-integrations.advanced_feature_5_description"),
           },
           {
-            icon: <FaFlask className="tw-w-6 tw-h-6 tw-text-teal-600" />,
+            icon: <FaFlask className="tw-w-5 tw-h-5 sm:tw-w-6 sm:tw-h-6 tw-text-teal-600" />,
             title: t("platform.api-integrations.advanced_feature_6_title"),
             description: t("platform.api-integrations.advanced_feature_6_description"),
           },
