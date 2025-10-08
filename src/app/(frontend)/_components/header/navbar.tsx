@@ -62,7 +62,7 @@ export default function Navbar() {
           label: t("platform.integration"),
           isTitle: true,
           subItems: [
-            { key: "api-integrations", label: t("platform.api-integrations.title"), description: t("platform.api-integrations.description"), href: "#", icon: FaLink },
+            { key: "api-integrations", label: t("platform.api-integrations.title"), description: t("platform.api-integrations.description"), href: "/platform/integrations/api-integrations", icon: FaLink },
           ],
         },
       ],
