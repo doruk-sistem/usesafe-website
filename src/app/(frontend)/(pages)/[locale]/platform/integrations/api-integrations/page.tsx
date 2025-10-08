@@ -173,24 +173,24 @@ export default function ApiIntegrationsPage() {
       />
 
       {/* Custom CTA Section - Horizontal Box Design */}
-      <section className="tw-py-24 tw-bg-white">
-        <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6">
+      <section className="tw-py-12 sm:tw-py-16 md:tw-py-20 lg:tw-py-24 tw-bg-white">
+        <div className="tw-container tw-mx-auto tw-px-4 sm:tw-px-6 md:tw-px-8 lg:tw-px-6">
           <div className="tw-flex tw-justify-center">
-            <div className="tw-bg-gradient-to-r tw-from-teal-500 tw-to-blue-600 tw-p-8 tw-rounded-2xl tw-shadow-xl tw-max-w-4xl tw-w-full">
-              <div className="tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-gap-8">
+            <div className="tw-bg-gradient-to-r tw-from-teal-500 tw-to-blue-600 tw-p-6 sm:tw-p-8 md:tw-p-10 tw-rounded-xl sm:tw-rounded-2xl tw-shadow-xl tw-max-w-4xl tw-w-full">
+              <div className="tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-gap-6 sm:tw-gap-8">
                 {/* Left Side - Text Content */}
-                <div className="tw-flex-1">
-                  <h2 className="tw-text-3xl md:tw-text-4xl tw-font-bold tw-text-white tw-mb-4">
+                <div className="tw-flex-1 tw-text-center lg:tw-text-left">
+                  <h2 className="tw-text-2xl sm:tw-text-3xl md:tw-text-4xl tw-font-bold tw-text-white tw-mb-3 sm:tw-mb-4">
                     {t("platform.api-integrations.cta_1_title")}
                   </h2>
-                  <p className="tw-text-lg tw-text-white/90 tw-leading-relaxed">
+                  <p className="tw-text-base sm:tw-text-lg tw-text-white/90 tw-leading-relaxed">
                     {t("platform.api-integrations.cta_1_description")}
                   </p>
                 </div>
 
                 {/* Right Side - Button */}
-                <div className="tw-flex-shrink-0">
-                  <CtaButton href="/contact" variant="white">
+                <div className="tw-flex-shrink-0 tw-w-full lg:tw-w-auto">
+                  <CtaButton href="/contact" variant="white" className="tw-w-full lg:tw-w-auto">
                     {t("platform.api-integrations.cta_1_button_text")}
                   </CtaButton>
                 </div>
@@ -210,43 +210,43 @@ export default function ApiIntegrationsPage() {
       />
 
       {/* Why UseSafe Section */}
-      <section className="tw-py-24 tw-bg-white">
-        <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6">
+      <section className="tw-py-12 sm:tw-py-16 md:tw-py-20 lg:tw-py-24 tw-bg-white">
+        <div className="tw-container tw-mx-auto tw-px-4 sm:tw-px-6 md:tw-px-8 lg:tw-px-6">
           <div className="tw-max-w-4xl tw-mx-auto tw-text-center">
-            <h2 className="tw-text-4xl md:tw-text-5xl tw-font-bold tw-text-gray-900 tw-mb-8">
+            <h2 className="tw-text-2xl sm:tw-text-3xl md:tw-text-4xl lg:tw-text-5xl tw-font-bold tw-text-gray-900 tw-mb-6 sm:tw-mb-8">
               {t("platform.api-integrations.why_usesafe_title")}
             </h2>
-            <p className="tw-text-xl tw-text-gray-600 tw-mb-16 tw-leading-relaxed">
+            <p className="tw-text-base sm:tw-text-lg md:tw-text-xl tw-text-gray-600 tw-mb-12 sm:tw-mb-16 tw-leading-relaxed tw-px-4">
               {t("platform.api-integrations.why_usesafe_description")}
             </p>
 
-            <div className="tw-space-y-12">
+            <div className="tw-space-y-8 sm:tw-space-y-10 md:tw-space-y-12">
               {/* Seamless Integration */}
               <div className="tw-text-center">
-                <h3 className="tw-text-2xl tw-font-bold tw-text-gray-900 tw-mb-4">
+                <h3 className="tw-text-xl sm:tw-text-2xl tw-font-bold tw-text-gray-900 tw-mb-3 sm:tw-mb-4 tw-px-4">
                   {t("platform.api-integrations.why_usesafe_feature_1_title")}
                 </h3>
-                <p className="tw-text-lg tw-text-gray-600 tw-leading-relaxed">
+                <p className="tw-text-base sm:tw-text-lg tw-text-gray-600 tw-leading-relaxed tw-px-4">
                   {t("platform.api-integrations.why_usesafe_feature_1_description")}
                 </p>
               </div>
 
               {/* Real-Time Transparency */}
               <div className="tw-text-center">
-                <h3 className="tw-text-2xl tw-font-bold tw-text-gray-900 tw-mb-4">
+                <h3 className="tw-text-xl sm:tw-text-2xl tw-font-bold tw-text-gray-900 tw-mb-3 sm:tw-mb-4 tw-px-4">
                   {t("platform.api-integrations.why_usesafe_feature_2_title")}
                 </h3>
-                <p className="tw-text-lg tw-text-gray-600 tw-leading-relaxed">
+                <p className="tw-text-base sm:tw-text-lg tw-text-gray-600 tw-leading-relaxed tw-px-4">
                   {t("platform.api-integrations.why_usesafe_feature_2_description")}
                 </p>
               </div>
 
               {/* Compliance Automation */}
               <div className="tw-text-center">
-                <h3 className="tw-text-2xl tw-font-bold tw-text-gray-900 tw-mb-4">
+                <h3 className="tw-text-xl sm:tw-text-2xl tw-font-bold tw-text-gray-900 tw-mb-3 sm:tw-mb-4 tw-px-4">
                   {t("platform.api-integrations.why_usesafe_feature_3_title")}
                 </h3>
-                <p className="tw-text-lg tw-text-gray-600 tw-leading-relaxed">
+                <p className="tw-text-base sm:tw-text-lg tw-text-gray-600 tw-leading-relaxed tw-px-4">
                   {t("platform.api-integrations.why_usesafe_feature_3_description")}
                 </p>
               </div>
@@ -256,31 +256,31 @@ export default function ApiIntegrationsPage() {
       </section>
 
       {/* Final Features Section */}
-      <section className="tw-py-24 tw-bg-white">
-        <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6">
-          <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-8 tw-max-w-6xl tw-mx-auto">
+      <section className="tw-py-12 sm:tw-py-16 md:tw-py-20 lg:tw-py-24 tw-bg-white">
+        <div className="tw-container tw-mx-auto tw-px-4 sm:tw-px-6 md:tw-px-8 lg:tw-px-6">
+          <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-6 sm:tw-gap-8 tw-max-w-6xl tw-mx-auto">
             {/* Data Accuracy Card */}
-            <div className="tw-bg-white tw-p-6 tw-rounded-xl tw-shadow-lg tw-border tw-border-gray-100 tw-h-64">
+            <div className="tw-bg-white tw-p-6 sm:tw-p-8 tw-rounded-lg sm:tw-rounded-xl tw-shadow-lg tw-border tw-border-gray-100 tw-min-h-[240px] sm:tw-h-64">
               <div className="tw-w-12 tw-h-12 tw-bg-gray-100 tw-rounded-lg tw-flex tw-items-center tw-justify-center tw-mb-4 tw-mx-auto">
                 <FaDatabase className="tw-w-6 tw-h-6 tw-text-gray-800" />
               </div>
-              <h3 className="tw-text-xl tw-font-bold tw-text-gray-800 tw-mb-3 tw-text-center">
+              <h3 className="tw-text-lg sm:tw-text-xl tw-font-bold tw-text-gray-800 tw-mb-3 tw-text-center tw-px-2">
                 {t("platform.api-integrations.final_feature_1_title")}
               </h3>
-              <p className="tw-text-base tw-text-gray-600 tw-leading-relaxed">
+              <p className="tw-text-sm sm:tw-text-base tw-text-gray-600 tw-leading-relaxed tw-text-center">
                 {t("platform.api-integrations.final_feature_1_description")}
               </p>
             </div>
 
             {/* Accessibility Card */}
-            <div className="tw-bg-white tw-p-6 tw-rounded-xl tw-shadow-lg tw-border tw-border-gray-100 tw-h-64">
+            <div className="tw-bg-white tw-p-6 sm:tw-p-8 tw-rounded-lg sm:tw-rounded-xl tw-shadow-lg tw-border tw-border-gray-100 tw-min-h-[240px] sm:tw-h-64">
               <div className="tw-w-12 tw-h-12 tw-bg-gray-100 tw-rounded-lg tw-flex tw-items-center tw-justify-center tw-mb-4 tw-mx-auto">
                 <FaGlobeAmericas className="tw-w-6 tw-h-6 tw-text-gray-800" />
               </div>
-              <h3 className="tw-text-xl tw-font-bold tw-text-gray-800 tw-mb-3 tw-text-center">
+              <h3 className="tw-text-lg sm:tw-text-xl tw-font-bold tw-text-gray-800 tw-mb-3 tw-text-center tw-px-2">
                 {t("platform.api-integrations.final_feature_2_title")}
               </h3>
-              <p className="tw-text-base tw-text-gray-600 tw-leading-relaxed">
+              <p className="tw-text-sm sm:tw-text-base tw-text-gray-600 tw-leading-relaxed tw-text-center">
                 {t("platform.api-integrations.final_feature_2_description")}
               </p>
             </div>
@@ -289,20 +289,20 @@ export default function ApiIntegrationsPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="tw-py-24 tw-bg-gradient-to-r tw-from-teal-500 tw-to-blue-600">
-        <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6">
+      <section className="tw-py-12 sm:tw-py-16 md:tw-py-20 lg:tw-py-24 tw-bg-gradient-to-r tw-from-teal-500 tw-to-blue-600">
+        <div className="tw-container tw-mx-auto tw-px-4 sm:tw-px-6 md:tw-px-8 lg:tw-px-6">
           <div className="tw-max-w-4xl tw-mx-auto tw-text-center">
-            <h2 className="tw-text-4xl md:tw-text-5xl tw-font-bold tw-text-white tw-mb-6">
+            <h2 className="tw-text-2xl sm:tw-text-3xl md:tw-text-4xl lg:tw-text-5xl tw-font-bold tw-text-white tw-mb-4 sm:tw-mb-6 tw-px-4">
               {t("platform.api-integrations.final_cta_title")}
             </h2>
-            <p className="tw-text-xl tw-text-white/90 tw-mb-10 tw-leading-relaxed">
+            <p className="tw-text-base sm:tw-text-lg md:tw-text-xl tw-text-white/90 tw-mb-8 sm:tw-mb-10 tw-leading-relaxed tw-px-4">
               {t("platform.api-integrations.final_cta_description")}
             </p>
-            <div className="tw-flex tw-flex-col sm:tw-flex-row tw-justify-center tw-gap-6">
-              <CtaButton href="/contact" variant="white">
+            <div className="tw-flex tw-flex-col sm:tw-flex-row tw-justify-center tw-gap-4 sm:tw-gap-6 tw-px-4">
+              <CtaButton href="/contact" variant="white" className="tw-w-full sm:tw-w-auto">
                 {t("platform.api-integrations.final_cta_button_1_text")}
               </CtaButton>
-              <CtaButton href="https://app.usesafe.net/" variant="white" external>
+              <CtaButton href="https://app.usesafe.net/" variant="white" external className="tw-w-full sm:tw-w-auto">
                 {t("platform.api-integrations.final_cta_button_2_text")}
               </CtaButton>
             </div>
