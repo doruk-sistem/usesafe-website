@@ -1,8 +1,9 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { HeroSection, DigitalProductPassportSection, KeyBenefitsSection, FeaturesWithImageSection, SectorTabsSection } from "@/components/Platform";
 import { FaMapPin, FaShieldAlt, FaGlobe, FaCheckCircle, FaFileAlt, FaChartLine, FaRecycle } from "react-icons/fa";
+
+import { HeroSection, DigitalProductPassportSection, KeyBenefitsSection, FeaturesWithImageSection, SectorTabsSection } from "@/components/Platform";
 
 export default function BatteryPassportPage() {
   const t = useTranslations();
@@ -63,7 +64,7 @@ export default function BatteryPassportPage() {
     {
       id: "sellers",
       labelKey: "platform.usesafe-certification.stakeholder_sellers_label",
-      contentTitleKey: "content_title", 
+      contentTitleKey: "content_title",
       featuresKeys: ["feature_1", "feature_2", "feature_3"],
       imageSrc: "/images/platform/sector-retailers_brands.jpg",
       imageAltKey: "image_alt",
@@ -73,7 +74,7 @@ export default function BatteryPassportPage() {
       labelKey: "platform.usesafe-certification.stakeholder_marketplaces_label",
       contentTitleKey: "content_title",
       featuresKeys: ["feature_1", "feature_2", "feature_3"],
-      imageSrc: "/images/platform/usesafe_men_wear.avif", 
+      imageSrc: "/images/platform/usesafe_men_wear.avif",
       imageAltKey: "image_alt",
     },
     {
@@ -151,4 +152,3 @@ export default function BatteryPassportPage() {
     </div>
   );
 }
-
