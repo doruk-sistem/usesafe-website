@@ -14,6 +14,7 @@ import {
   FaShieldAlt,
   FaCogs,
   FaCheckCircle,
+  FaBatteryFull,
 } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 
@@ -63,6 +64,7 @@ export default function Navbar() {
           isTitle: true,
           subItems: [
             { key: "api-integrations", label: t("platform.api-integrations.title"), description: t("platform.api-integrations.description"), href: "/platform/integrations/api-integrations", icon: FaLink },
+            { key: "battery-passport", label: t("platform.battery-passport.title"), description: t("platform.battery-passport.description"), href: "/platform/integrations/battery-passport", icon: FaBatteryFull },
           ],
         },
       ],
