@@ -749,6 +749,32 @@
             "description": "Dijital Ürün Pasaportu verilerini tüketici platformlarına bağlayın. QR kodlar, dijital etiketler ve gerçek zamanlı doğrulanmış ürün bilgileri ile güven oluşturun."
           }
         }
+      },
+      "marketplaces": {
+        "heroBadge": "Marketplace'ler ve Perakendeciler",
+        "heroTitle": "Marketplace'ler ve Perakendeciler",
+        "heroDescription": "Üreticiler ve marka sahipleri için özel olarak tasarlanmış UseSafe® çözümleri ile uyumluluk, sertifikasyon ve sürdürülebilir büyüme sağlayın.",
+        "heroImageAlt": "Marketplace'ler ve Perakendeciler",
+        "benefitsTitle": "Marketplace'ler ve Perakendeciler",
+        "benefitsDescription": "Marketplace'ler ve perakendeciler, ürün uyumluluğunu sağlama ve tüketici güvenini koruma konusunda artan baskıyla karşı karşıyadır. UseSafe®, otomatik ürün denetimi, şeffaf veri paylaşımı ve güvenilir sertifikasyon ortaklarıyla işbirliği sağlar. Dijital Ürün Pasaportları (DPP'ler) entegre ederek, platformlar sertifikalı ürünleri yükseltebilir, düzenleyici riskleri azaltabilir ve daha güçlü tüketici güveni oluşturabilir.",
+        "benefits": {
+          "vetting": {
+            "title": "Otomatik Ürün Denetimi",
+            "description": "Otomatik doğrulama süreçleri ile uyumluluk kontrollerini kolaylaştırın, marketplace'inizde sadece uyumlu ürünlerin listelenmesini sağlayın."
+          },
+          "elevate": {
+            "title": "Sertifikalı Ürünleri Yükseltin",
+            "description": "Arama sonuçlarında ve önerilerde sertifikalı ürünleri vurgulayın ve önceliklendirin, görünürlüğü ve tüketici güvenini artırın."
+          },
+          "collaboration": {
+            "title": "Güvenilir İşbirliği",
+            "description": "Platformunuzu ve kullanıcılarınızı koruyan sağlam uyumluluk programları oluşturmak için sertifikasyon ortakları ve düzenleyici otoritelerle işbirliği yapın."
+          },
+          "trust": {
+            "title": "Tüketici Güveni ve Büyüme",
+            "description": "Şeffaf ürün verileri aracılığıyla tüketici güvenini güçlendirin, marketplace'inizi güvenlik, orijinallik ve sürdürülebilirlik alanında lider konumlandırın."
+          }
+        }
       }
     },
     "dpp-in-espr": {

@@ -656,8 +656,33 @@
             "description": "Connect Digital Product Passport data to consumer platforms. Build trust with QR codes, digital labels, and real-time verified product info."
           }
         }
+      },
+      "marketplaces": {
+        "heroBadge": "Marketplaces & Retailers",
+        "heroTitle": "Marketplaces & Retailers",
+        "heroDescription": "Ensure compliance, certification & sustainable growth with UseSafe® solutions tailored for manufacturers and brand owners.",
+        "heroImageAlt": "Marketplaces and Retailers",
+        "benefitsTitle": "Marketplaces & Retailers",
+        "benefitsDescription": "Marketplaces and retailers face increasing pressure to ensure product compliance and protect consumer trust. UseSafe® enables automated product vetting, transparent data sharing, and collaboration with trusted certification partners. By integrating Digital Product Passports (DPPs), platforms can elevate certified products, reduce regulatory risks, and build stronger consumer confidence.",
+        "benefits": {
+          "vetting": {
+            "title": "Automated Product Vetting",
+            "description": "Streamline compliance checks with automated verification processes, ensuring only compliant products are listed on your marketplace."
+          },
+          "elevate": {
+            "title": "Elevate Certified Products",
+            "description": "Highlight and prioritize certified products in search results and recommendations, boosting visibility and consumer confidence."
+          },
+          "collaboration": {
+            "title": "Trusted Collaboration",
+            "description": "Collaborate with certification partners and regulatory authorities to build robust compliance programs that protect your platform and users."
+          },
+          "trust": {
+            "title": "Consumer Trust & Growth",
+            "description": "Strengthen consumer trust through transparent product data, positioning your marketplace as a leader in safety, authenticity, and sustainability."
+          }
+        }
       }
-
     },
     "dpp-in-espr": {
       "title": "DPP in ESPR",
