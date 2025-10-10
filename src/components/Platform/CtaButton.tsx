@@ -23,15 +23,15 @@ const CtaButton: React.FC<CtaButtonProps> = ({
   const getButtonStyles = () => {
     switch (variant) {
       case "primary":
-        return "tw-group tw-bg-gradient-to-r tw-from-[#43cea2] tw-to-[#185a9d] tw-text-white tw-font-semibold tw-py-4 tw-px-10 tw-rounded-xl tw-shadow-2xl tw-border-2 tw-border-white/30 hover:tw-shadow-3xl hover:tw-border-[#43cea2] tw-transition-all tw-flex tw-items-center tw-justify-center tw-ring-2 tw-ring-[#43cea2]/30 hover:tw-ring-4 hover:tw-ring-[#43cea2]/60 tw-duration-300";
+        return "tw-group tw-bg-gradient-to-r tw-from-[#43cea2] tw-to-[#185a9d] tw-text-white tw-font-semibold tw-py-3 sm:tw-py-4 tw-px-6 sm:tw-px-10 tw-rounded-lg sm:tw-rounded-xl tw-shadow-2xl tw-border-2 tw-border-white/30 hover:tw-shadow-3xl hover:tw-border-[#43cea2] tw-transition-all tw-flex tw-items-center tw-justify-center tw-ring-2 tw-ring-[#43cea2]/30 hover:tw-ring-4 hover:tw-ring-[#43cea2]/60 tw-duration-300 tw-text-sm sm:tw-text-base";
       case "secondary":
-        return "tw-bg-white/80 tw-text-primary tw-border-2 tw-border-primary tw-font-semibold tw-py-4 tw-px-10 tw-rounded-xl tw-shadow-lg hover:tw-shadow-2xl hover:tw-bg-blue-100/60 tw-transition-all tw-flex tw-items-center tw-justify-center hover:tw-scale-105 tw-duration-300";
+        return "tw-bg-white/80 tw-text-primary tw-border-2 tw-border-primary tw-font-semibold tw-py-3 sm:tw-py-4 tw-px-6 sm:tw-px-10 tw-rounded-lg sm:tw-rounded-xl tw-shadow-lg hover:tw-shadow-2xl hover:tw-bg-blue-100/60 tw-transition-all tw-flex tw-items-center tw-justify-center hover:tw-scale-105 tw-duration-300 tw-text-sm sm:tw-text-base";
       case "white":
-        return "tw-group tw-bg-white tw-text-primary tw-font-medium tw-py-4 tw-px-8 tw-rounded-lg tw-shadow-lg hover:tw-shadow-xl tw-transition-all tw-flex tw-items-center tw-justify-center";
+        return "tw-group tw-bg-white tw-text-primary tw-font-medium tw-py-3 sm:tw-py-4 tw-px-6 sm:tw-px-8 tw-rounded-lg tw-shadow-lg hover:tw-shadow-xl tw-transition-all tw-flex tw-items-center tw-justify-center tw-text-sm sm:tw-text-base";
       case "outline":
-        return "tw-group tw-bg-transparent tw-text-white tw-border-2 tw-border-white tw-font-medium tw-py-4 tw-px-8 tw-rounded-lg tw-shadow-lg hover:tw-shadow-xl hover:tw-bg-white/10 tw-transition-all tw-flex tw-items-center tw-justify-center";
+        return "tw-group tw-bg-transparent tw-text-white tw-border-2 tw-border-white tw-font-medium tw-py-3 sm:tw-py-4 tw-px-6 sm:tw-px-8 tw-rounded-lg tw-shadow-lg hover:tw-shadow-xl hover:tw-bg-white/10 tw-transition-all tw-flex tw-items-center tw-justify-center tw-text-sm sm:tw-text-base";
       default:
-        return "tw-group tw-bg-gradient-to-r tw-from-[#43cea2] tw-to-[#185a9d] tw-text-white tw-font-semibold tw-py-4 tw-px-10 tw-rounded-xl tw-shadow-2xl tw-border-2 tw-border-white/30 hover:tw-shadow-3xl hover:tw-border-[#43cea2] tw-transition-all tw-flex tw-items-center tw-justify-center tw-ring-2 tw-ring-[#43cea2]/30 hover:tw-ring-4 hover:tw-ring-[#43cea2]/60 tw-duration-300";
+        return "tw-group tw-bg-gradient-to-r tw-from-[#43cea2] tw-to-[#185a9d] tw-text-white tw-font-semibold tw-py-3 sm:tw-py-4 tw-px-6 sm:tw-px-10 tw-rounded-lg sm:tw-rounded-xl tw-shadow-2xl tw-border-2 tw-border-white/30 hover:tw-shadow-3xl hover:tw-border-[#43cea2] tw-transition-all tw-flex tw-items-center tw-justify-center tw-ring-2 tw-ring-[#43cea2]/30 hover:tw-ring-4 hover:tw-ring-[#43cea2]/60 tw-duration-300 tw-text-sm sm:tw-text-base";
     }
   };
 

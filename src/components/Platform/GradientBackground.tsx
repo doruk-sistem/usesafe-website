@@ -28,7 +28,7 @@ const GradientBackground: React.FC<GradientBackgroundProps> = ({
   };
 
   return (
-    <section className={`tw-relative tw-overflow-hidden tw-py-24 ${getBackgroundClasses()} ${className}`}>
+    <section className={`tw-relative tw-overflow-hidden tw-py-12 sm:tw-py-16 md:tw-py-20 lg:tw-py-24 ${getBackgroundClasses()} ${className}`}>
       {/* Animated background elements for primary and secondary types */}
       {(type === "primary" || type === "secondary") && (
         <>
@@ -68,7 +68,7 @@ const GradientBackground: React.FC<GradientBackgroundProps> = ({
         </>
       )}
 
-      <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6 tw-relative tw-z-10">
+      <div className="tw-container tw-mx-auto tw-px-4 sm:tw-px-6 md:tw-px-8 lg:tw-px-6 tw-relative tw-z-10">
         {children}
       </div>
     </section>

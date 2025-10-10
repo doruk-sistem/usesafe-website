@@ -45,7 +45,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   return (
     <section
-      className={`tw-relative tw-overflow-hidden tw-pt-24 md:tw-pt-32 tw-pb-0 tw-bg-gradient-to-br tw-from-[#1e3c72] tw-via-[#2a5298] tw-to-[#6dd5ed] tw-text-white ${className}`}
+      className={`tw-relative tw-overflow-hidden tw-pt-16 sm:tw-pt-20 md:tw-pt-24 lg:tw-pt-32 tw-pb-0 tw-bg-gradient-to-br tw-from-[#1e3c72] tw-via-[#2a5298] tw-to-[#6dd5ed] tw-text-white ${className}`}
     >
       {/* Animated SVG Background */}
       <svg
@@ -80,24 +80,24 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="tw-absolute tw-bottom-1/3 tw-right-1/3 tw-w-96 tw-h-96 tw-rounded-full tw-bg-blue-400 tw-opacity-20 tw-blur-3xl"></div>
       </div>
 
-      <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6 tw-relative tw-z-10">
-        <div className="tw-flex tw-flex-col md:tw-flex-row tw-items-center tw-gap-16">
-          <div className="tw-flex-1 tw-max-w-2xl">
+      <div className="tw-container tw-mx-auto tw-px-4 sm:tw-px-6 md:tw-px-8 lg:tw-px-6 tw-relative tw-z-10">
+        <div className="tw-flex tw-flex-col md:tw-flex-row tw-items-center tw-gap-8 sm:tw-gap-12 md:tw-gap-16">
+          <div className="tw-flex-1 tw-max-w-2xl tw-w-full">
             {badge && (
-              <div className="tw-inline-block tw-px-6 tw-py-2 tw-rounded-full tw-bg-white/20 tw-backdrop-blur-md tw-text-white tw-font-semibold tw-text-base tw-mb-8 tw-shadow-lg tw-border tw-border-white/30 tw-uppercase tw-tracking-wider">
+              <div className="tw-inline-block tw-px-4 sm:tw-px-6 tw-py-2 tw-rounded-full tw-bg-white/20 tw-backdrop-blur-md tw-text-white tw-font-semibold tw-text-sm sm:tw-text-base tw-mb-6 sm:tw-mb-8 tw-shadow-lg tw-border tw-border-white/30 tw-uppercase tw-tracking-wider">
                 <span style={{ letterSpacing: "0.08em" }}>{badge}</span>
               </div>
             )}
 
-            <h1 className="tw-text-4xl md:tw-text-5xl lg:tw-text-6xl tw-font-bold tw-text-white tw-mb-6 tw-leading-tight">
+            <h1 className="tw-text-3xl sm:tw-text-4xl md:tw-text-5xl lg:tw-text-6xl tw-font-bold tw-text-white tw-mb-4 sm:tw-mb-6 tw-leading-tight">
               {title}
             </h1>
 
-            <p className="tw-text-xl tw-text-white tw-mb-10 tw-leading-relaxed">
+            <p className="tw-text-base sm:tw-text-lg md:tw-text-xl tw-text-white tw-mb-8 sm:tw-mb-10 tw-leading-relaxed">
               {description}
             </p>
 
-            <div className="tw-flex tw-flex-col sm:tw-flex-row tw-gap-5">
+            <div className="tw-flex tw-flex-col sm:tw-flex-row tw-gap-4 sm:tw-gap-5">
               {primaryCta && (
                 <CtaButton href={primaryCta.href} variant="primary">
                   {primaryCta.text}
@@ -116,8 +116,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
           </div>
 
-          <div className="tw-flex-1 tw-mt-12 md:tw-mt-0">
-            <div className="tw-relative tw-h-[350px] md:tw-h-[500px] tw-w-full tw-rounded-2xl tw-overflow-hidden tw-shadow-2xl">
+          <div className="tw-flex-1 tw-w-full tw-mt-8 sm:tw-mt-10 md:tw-mt-0">
+            <div className="tw-relative tw-h-[280px] sm:tw-h-[350px] md:tw-h-[450px] lg:tw-h-[500px] tw-w-full tw-rounded-xl sm:tw-rounded-2xl tw-overflow-hidden tw-shadow-2xl">
               {/* Frosted glass overlay */}
               <div
                 className="tw-absolute tw-inset-0 tw-bg-white/30 tw-z-10 tw-pointer-events-none"
