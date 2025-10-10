@@ -775,6 +775,32 @@
             "description": "Şeffaf ürün verileri aracılığıyla tüketici güvenini güçlendirin, marketplace'inizi güvenlik, orijinallik ve sürdürülebilirlik alanında lider konumlandırın."
           }
         }
+      },
+      "regulatory": {
+        "heroBadge": "Düzenleyici Otoriteler ve Devlet Kurumları",
+        "heroTitle": "Düzenleyici Otoriteler ve Devlet Kurumları",
+        "heroDescription": "Otoriteler ve devlet kurumları, sürdürülebilirlik ve ürün güvenliği standartlarını uygulamada kritik rol oynar. UseSafe®, etkili denetim, düzenleyici uyumluluk ve sürdürülebilir büyümeyi desteklemek için şeffaf, standartlaştırılmış veriler sağlar.",
+        "heroImageAlt": "Düzenleyici Otoriteler ve Devlet Kurumları",
+        "benefitsTitle": "Düzenleyici Otoriteler ve Devlet Kurumları",
+        "benefitsDescription": "Düzenleyici otoriteler, karmaşık tedarik zincirlerini izleme, sürdürülebilirlik gereksinimlerini uygulama ve tüketici güvenliğini sağlama zorluğuyla karşı karşıyadır. UseSafe®, sektörler arası standartlaştırılmış, doğrulanabilir veriler sunarak, kurumların daha güçlü uyumluluk çerçeveleri oluşturmasına, riskleri azaltmasına ve şeffaf pazarları teşvik etmesine yardımcı olur.",
+        "benefits": {
+          "oversight": {
+            "title": "Gelişmiş Denetim",
+            "description": "Şeffaf ürün verileri ile pazar denetimini güçlendirin, sürdürülebilirlik ve güvenlik standartlarının daha iyi takibini sağlayın."
+          },
+          "sustainability": {
+            "title": "Sürdürülebilirlik ve Döngüsel Ekonomi",
+            "description": "AB Yeşil Anlaşması ve Döngüsel Ekonomi Eylem Planı ile uyumlu olmak için karbon ayak izini, geri dönüştürülebilirliği ve malzeme kullanımını izleyin."
+          },
+          "compliance": {
+            "title": "Standartlaştırılmış Uyumluluk Verileri",
+            "description": "Sektörler arası uyumluluk izleme ve uygulamayı basitleştiren güvenilir, standartlaştırılmış veri setlerine erişin."
+          },
+          "alignment": {
+            "title": "Küresel Düzenleyici Uyum",
+            "description": "Şeffaf ve karşılaştırılabilir veri setleri ile uyumlu uluslararası düzenlemeleri destekleyin, küresel işbirliğini mümkün kılın."
+          }
+        }
       }
     },
     "dpp-in-espr": {

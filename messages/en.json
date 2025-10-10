@@ -682,6 +682,32 @@
             "description": "Strengthen consumer trust through transparent product data, positioning your marketplace as a leader in safety, authenticity, and sustainability."
           }
         }
+      },
+      "regulatory": {
+        "heroBadge": "Regulatory Authorities & Government Agencies",
+        "heroTitle": "Regulatory Authorities & Government Agencies",
+        "heroDescription": "Authorities and government agencies play a critical role in enforcing sustainability and product safety standards. UseSafe® provides transparent, standardized data to support effective oversight, regulatory compliance, and sustainable growth.",
+        "heroImageAlt": "Regulatory Authorities and Government Agencies",
+        "benefitsTitle": "Regulatory Authorities & Government Agencies",
+        "benefitsDescription": "Regulatory authorities face the challenge of monitoring complex supply chains, enforcing sustainability requirements, and ensuring consumer safety. UseSafe® delivers standardized, verifiable data across industries, helping agencies build stronger compliance frameworks, reduce risks, and promote transparent markets.",
+        "benefits": {
+          "oversight": {
+            "title": "Enhanced Oversight",
+            "description": "Strengthen market oversight with transparent product data, enabling better tracking of sustainability and safety standards."
+          },
+          "sustainability": {
+            "title": "Sustainability & Circular Economy",
+            "description": "Monitor carbon footprint, recyclability, and material usage to align with EU Green Deal and Circular Economy Action Plan."
+          },
+          "compliance": {
+            "title": "Standardized Compliance Data",
+            "description": "Access reliable, standardized datasets that simplify compliance monitoring and enforcement across industries."
+          },
+          "alignment": {
+            "title": "Global Regulatory Alignment",
+            "description": "Support harmonized international regulations with transparent and comparable datasets, enabling global cooperation."
+          }
+        }
       }
     },
     "dpp-in-espr": {
