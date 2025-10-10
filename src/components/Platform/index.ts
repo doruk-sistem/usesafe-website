@@ -1,6 +1,8 @@
 export { default as CtaButton } from "./CtaButton";
 export { default as CtaSection } from "./CtaSection";
+export { default as DigitalProductPassportSection } from "./DigitalProductPassportSection";
 export { default as FeatureCard } from "./FeatureCard";
+export { default as FeaturesWithImageSection } from "./FeaturesWithImageSection";
 export { default as FeatureSectionWithImage } from "./FeatureSectionWithImage";
 export { default as GradientBackground } from "./GradientBackground";
 export { default as HeroSection } from "./HeroSection";
