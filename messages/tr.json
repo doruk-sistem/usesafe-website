@@ -801,6 +801,32 @@
             "description": "Şeffaf ve karşılaştırılabilir veri setleri ile uyumlu uluslararası düzenlemeleri destekleyin, küresel işbirliğini mümkün kılın."
           }
         }
+      },
+      "consumers": {
+        "heroBadge": "Son Tüketiciler",
+        "heroTitle": "Son Tüketiciler",
+        "heroDescription": "Modern tüketiciler şeffaflık, orijinallik ve sürdürülebilirlik bekliyor. UseSafe®, Dijital Ürün Pasaportları aracılığıyla doğrulanmış ürün bilgilerine erişim sağlayarak müşterilerin güvenli ve sorumlu satın alma kararları vermesine yardımcı olur.",
+        "heroImageAlt": "Son Tüketiciler",
+        "benefitsTitle": "Son Tüketiciler",
+        "benefitsDescription": "Bugünün tüketicileri satın aldıkları ürünler hakkında net ve erişilebilir bilgi talep ediyor. UseSafe®, ürün kökeni, güvenlik sertifikaları ve çevresel performans hakkında doğrulanmış verilere gerçek zamanlı erişim sağlayarak markalar ve tüketiciler arasındaki boşluğu kapatır—daha bilinçli ve sürdürülebilir seçimler yapmalarını sağlar.",
+        "benefits": {
+          "safety": {
+            "title": "Doğrulanmış Ürün Güvenliği",
+            "description": "Dijital Ürün Pasaportları aracılığıyla satın alma öncesi ürün orijinalliğini, güvenliğini ve uyumluluğunu anında doğrulayın."
+          },
+          "transparency": {
+            "title": "Tam Yaşam Döngüsü Şeffaflığı",
+            "description": "Malzemeler, köken ve sürdürülebilirlik performansı dahil olmak üzere detaylı yaşam döngüsü verilerine tek bir dijital alanda erişin."
+          },
+          "choices": {
+            "title": "Bilinçli ve Sorumlu Seçimler",
+            "description": "Çevresel ve sosyal etki hakkında güvenilir, doğrulanmış verilerle eğitimli satın alma kararları verin."
+          },
+          "trust": {
+            "title": "Güven ve Marka Bağlantısı",
+            "description": "Şeffaf iletişim ve sürdürülebilirlik odaklı etkileşim aracılığıyla markalarla daha güçlü ilişkiler kurun."
+          }
+        }
       }
     },
     "dpp-in-espr": {

@@ -708,6 +708,32 @@
             "description": "Support harmonized international regulations with transparent and comparable datasets, enabling global cooperation."
           }
         }
+      },
+      "consumers": {
+        "heroBadge": "End Consumers",
+        "heroTitle": "End Consumers",
+        "heroDescription": "Modern consumers expect transparency, authenticity, and sustainability. UseSafe® enables access to verified product information through Digital Product Passports—helping customers make confident, responsible purchasing decisions.",
+        "heroImageAlt": "End Consumers",
+        "benefitsTitle": "End Consumers",
+        "benefitsDescription": "Consumers today demand clear and accessible information about the products they buy. UseSafe® bridges the gap between brands and consumers by providing real-time access to verified data on product origin, safety certifications, and environmental performance—empowering more conscious and sustainable choices.",
+        "benefits": {
+          "safety": {
+            "title": "Verified Product Safety",
+            "description": "Instantly verify product authenticity, safety, and compliance before purchase through Digital Product Passports."
+          },
+          "transparency": {
+            "title": "Full Lifecycle Transparency",
+            "description": "Access detailed lifecycle data, including materials, origin, and sustainability performance, all in one digital space."
+          },
+          "choices": {
+            "title": "Informed & Responsible Choices",
+            "description": "Make educated purchasing decisions with trusted, verified data about environmental and social impact."
+          },
+          "trust": {
+            "title": "Trust & Brand Connection",
+            "description": "Build stronger relationships with brands through transparent communication and sustainability-driven engagement."
+          }
+        }
       }
     },
     "dpp-in-espr": {
