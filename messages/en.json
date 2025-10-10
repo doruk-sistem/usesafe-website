@@ -630,7 +630,34 @@
             "description": "Strengthen brand reputation and customer loyalty by sharing trusted sustainability and safety information across the supply chain."
           }
         }
+      },
+      "ecommerce": {
+        "heroBadge": "E-commerce Sellers & Distributors",
+        "heroTitle": "E-commerce Sellers & Distributors",
+        "heroDescription": "Demonstrate compliance, strengthen consumer trust, and ensure sustainable growth with UseSafe® solutions for online sellers and distributors.",
+        "heroImageAlt": "E-commerce Sellers and Distributors",
+        "benefitsTitle": "E-commerce Sellers & Distributors",
+        "benefitsDescription": "E-commerce sellers and distributors face increasing regulatory and market pressures under the EU Green Deal, ESPR, and sustainability requirements. UseSafe® empowers businesses to stay compliant, simplify certification, and build trust by ensuring full transparency across the supply chain. Beyond compliance, our platform transforms sustainability into a competitive advantage—enabling companies to confidently deliver safe, traceable, and eco-friendly products.",
+        "benefits": {
+          "compliance": {
+            "title": "Regulatory Compliance",
+            "description": "Stay fully compliant with EU's Green Deal, ESPR, and Circular Economy directives. Simplify certification and minimize risks of non-conformance."
+          },
+          "transparency": {
+            "title": "Supply Chain Transparency",
+            "description": "Track product origin, journey, and destination across the entire supply chain. Ensure traceability from raw materials to delivery."
+          },
+          "security": {
+            "title": "Data Security",
+            "description": "Protect sensitive business and customer data with AES encryption, multi-factor authentication, and GDPR/KVKK compliance."
+          },
+          "engagement": {
+            "title": "Consumer Engagement",
+            "description": "Connect Digital Product Passport data to consumer platforms. Build trust with QR codes, digital labels, and real-time verified product info."
+          }
+        }
       }
+
     },
     "dpp-in-espr": {
       "title": "DPP in ESPR",

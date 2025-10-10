@@ -723,6 +723,32 @@
             "description": "Tedarik zinciri boyunca güvenilir sürdürülebilirlik ve güvenlik bilgilerini paylaşarak marka itibarını güçlendirin ve müşteri sadakatini artırın."
           }
         }
+      },
+      "ecommerce": {
+        "heroBadge": "E-ticaret Satıcıları ve Distribütörler",
+        "heroTitle": "E-ticaret Satıcıları ve Distribütörler",
+        "heroDescription": "Online satıcılar ve distribütörler için UseSafe® çözümleri ile uyumluluk gösterin, tüketici güvenini güçlendirin ve sürdürülebilir büyüme sağlayın.",
+        "heroImageAlt": "E-ticaret Satıcıları ve Distribütörler",
+        "benefitsTitle": "E-ticaret Satıcıları ve Distribütörler",
+        "benefitsDescription": "E-ticaret satıcıları ve distribütörler, AB Yeşil Anlaşması, ESPR ve sürdürülebilirlik gereksinimleri altında artan düzenleyici ve pazar baskılarıyla karşı karşıyadır. UseSafe®, tedarik zinciri boyunca tam şeffaflık sağlayarak işletmelerin uyumlu kalmasına, sertifikasyonu basitleştirmesine ve güven oluşturmasına yardımcı olur. Uyumluluğun ötesinde, platformumuz sürdürülebilirliği rekabet avantajına dönüştürür—şirketlerin güvenle güvenli, izlenebilir ve çevre dostu ürünler sunmasını sağlar.",
+        "benefits": {
+          "compliance": {
+            "title": "Düzenleyici Uyumluluk",
+            "description": "AB'nin Yeşil Anlaşması, ESPR ve Döngüsel Ekonomi direktifleri ile tam uyumlu kalın. Sertifikasyonu basitleştirin ve uyumsuzluk risklerini minimize edin."
+          },
+          "transparency": {
+            "title": "Tedarik Zinciri Şeffaflığı",
+            "description": "Tedarik zincirinin tamamında ürün kökenini, yolculuğunu ve varış noktasını takip edin. Hammaddelerden teslimatına kadar izlenebilirlik sağlayın."
+          },
+          "security": {
+            "title": "Veri Güvenliği",
+            "description": "AES şifreleme, çok faktörlü kimlik doğrulama ve GDPR/KVKK uyumluluğu ile hassas iş ve müşteri verilerini koruyun."
+          },
+          "engagement": {
+            "title": "Tüketici Etkileşimi",
+            "description": "Dijital Ürün Pasaportu verilerini tüketici platformlarına bağlayın. QR kodlar, dijital etiketler ve gerçek zamanlı doğrulanmış ürün bilgileri ile güven oluşturun."
+          }
+        }
       }
     },
     "dpp-in-espr": {
