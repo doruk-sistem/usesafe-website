@@ -697,6 +697,34 @@
     "frameworks": "Frameworks (TR)",
     "products": "Products (TR)",
     "integration": "Integration (TR)",
+    "stakeholders": {
+      "manufacturers": {
+        "heroBadge": "Üreticiler ve Marka Sahipleri",
+        "heroTitle": "Üreticiler ve Marka Sahipleri",
+        "heroDescription": "Üreticiler ve marka sahipleri için özel olarak tasarlanmış UseSafe® çözümleri ile uyumluluk, sertifikasyon ve sürdürülebilir büyüme sağlayın.",
+        "heroImageAlt": "Üreticiler ve Marka Sahipleri",
+        "benefitsTitle": "Üreticiler ve Marka Sahipleri",
+        "benefitsDescription": "Üreticiler ve marka sahipleri, AB Yeşil Anlaşması, ESPR ve sürdürülebilirlik gereksinimleri altında artan düzenleyici ve pazar baskılarıyla karşı karşıyadır. UseSafe®, tedarik zinciri boyunca tam şeffaflık sağlayarak işletmelerin uyumlu kalmasına, sertifikasyonu basitleştirmesine ve güven oluşturmasına yardımcı olur. Uyumluluğun ötesinde, platformumuz sürdürülebilirliği rekabet avantajına dönüştürür—şirketlerin güvenle güvenli, izlenebilir ve çevre dostu ürünler sunmasını sağlar.",
+        "benefits": {
+          "compliance": {
+            "title": "Uyumluluk Basitleştirildi",
+            "description": "Malzeme ve kimyasal bileşimde tam görünürlük elde edin, uyumsuzluk risklerini azaltın ve UseSafe® ile sertifikasyon süreçlerini basitleştirin."
+          },
+          "sustainable": {
+            "title": "Sürdürülebilir Ürün Tasarımı",
+            "description": "Dayanıklılık, yeniden kullanılabilirlik ve çevre dostu ilkeleri hem yasal talepleri hem de tüketici beklentilerini karşılamak için ürün geliştirmeye entegre edin."
+          },
+          "transparent": {
+            "title": "Şeffaf Ürün Verileri",
+            "description": "Dijital Ürün Pasaportları aracılığıyla doğru ve doğrulanabilir ürün bilgileri sağlayın, şeffaflığı garanti edin ve yeşil aklama risklerini minimize edin."
+          },
+          "trust": {
+            "title": "Tüketici Güveni ve Sadakati",
+            "description": "Tedarik zinciri boyunca güvenilir sürdürülebilirlik ve güvenlik bilgilerini paylaşarak marka itibarını güçlendirin ve müşteri sadakatini artırın."
+          }
+        }
+      }
+    },
     "dpp-in-espr": {
       "title": "DPP in ESPR (TR)",
       "description": "Digital product passports for ESPR compliance (TR)",

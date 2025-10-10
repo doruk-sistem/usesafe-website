@@ -604,6 +604,34 @@
     "frameworks": "Frameworks",
     "products": "Products",
     "integration": "Integration",
+    "stakeholders":{
+      "manufacturers": {
+        "heroBadge": "Manufacturers & Brand Owners",
+        "heroTitle": "Manufacturers & Brand Owners",
+        "heroDescription": "Ensure compliance, certification & sustainable growth with UseSafe® solutions tailored for manufacturers and brand owners.",
+        "heroImageAlt": "Manufacturers and Brand Owners",
+        "benefitsTitle": "Manufacturers & Brand Owners",
+        "benefitsDescription": "Manufacturers and brand owners face increasing regulatory and market pressures under the EU Green Deal, ESPR, and sustainability requirements. UseSafe® empowers businesses to stay compliant, simplify certification, and build trust by ensuring full transparency across the supply chain. Beyond compliance, our platform transforms sustainability into a competitive advantage—enabling companies to confidently deliver safe, traceable, and eco-friendly products.",
+        "benefits": {
+          "compliance": {
+            "title": "Compliance Made Simple",
+            "description": "Gain full visibility into material and chemical composition, reduce risks of non-compliance, and simplify certification processes with UseSafe®."
+          },
+          "sustainable": {
+            "title": "Sustainable Product Design",
+            "description": "Integrate durability, reusability, and eco-friendly principles into product development to meet both legal demands and consumer expectations."
+          },
+          "transparent": {
+            "title": "Transparent Product Data",
+            "description": "Provide accurate and verifiable product information through Digital Product Passports, ensuring transparency and minimizing greenwashing risks."
+          },
+          "trust": {
+            "title": "Consumer Trust & Loyalty",
+            "description": "Strengthen brand reputation and customer loyalty by sharing trusted sustainability and safety information across the supply chain."
+          }
+        }
+      }
+    },
     "dpp-in-espr": {
       "title": "DPP in ESPR",
       "description": "Digital product passports for ESPR compliance",
