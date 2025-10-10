@@ -1,6 +1,7 @@
 "use client";
 
 import AOS from "aos";
+import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
 import {
@@ -9,7 +10,6 @@ import {
   FaLock,
   FaUsers,
 } from "react-icons/fa";
-import { useTranslations } from "next-intl";
 
 import {
   StakeholderPageTemplate,
