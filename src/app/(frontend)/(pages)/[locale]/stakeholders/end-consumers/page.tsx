@@ -5,10 +5,12 @@ import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
 import {
+  FaQrcode,
   FaShieldAlt,
   FaLeaf,
-  FaLightbulb,
-  FaHandshake,
+  FaTools,
+  FaHandsHelping,
+  FaHeart,
 } from "react-icons/fa";
 
 import StakeholderPageTemplate from "@/components/Platform/StakeholderPageTemplate";
@@ -27,28 +29,40 @@ export default function EndConsumersPage() {
 
   const keyBenefits = [
     {
-      icon: <FaShieldAlt className="tw-w-8 tw-h-8 tw-text-primary" />,
-      title: t("benefits.safety.title"),
-      description: t("benefits.safety.description"),
+      icon: <FaQrcode className="tw-w-8 tw-h-8 tw-text-primary" />,
+      title: t("benefits.instantVerification.title"),
+      description: t("benefits.instantVerification.description"),
       delay: 0,
     },
     {
-      icon: <FaLeaf className="tw-w-8 tw-h-8 tw-text-primary" />,
-      title: t("benefits.transparency.title"),
-      description: t("benefits.transparency.description"),
+      icon: <FaShieldAlt className="tw-w-8 tw-h-8 tw-text-primary" />,
+      title: t("benefits.safetyCompliance.title"),
+      description: t("benefits.safetyCompliance.description"),
       delay: 100,
     },
     {
-      icon: <FaLightbulb className="tw-w-8 tw-h-8 tw-text-primary" />,
-      title: t("benefits.choices.title"),
-      description: t("benefits.choices.description"),
+      icon: <FaLeaf className="tw-w-8 tw-h-8 tw-text-primary" />,
+      title: t("benefits.environmentalImpact.title"),
+      description: t("benefits.environmentalImpact.description"),
       delay: 200,
     },
     {
-      icon: <FaHandshake className="tw-w-8 tw-h-8 tw-text-primary" />,
-      title: t("benefits.trust.title"),
-      description: t("benefits.trust.description"),
+      icon: <FaTools className="tw-w-8 tw-h-8 tw-text-primary" />,
+      title: t("benefits.repairability.title"),
+      description: t("benefits.repairability.description"),
       delay: 300,
+    },
+    {
+      icon: <FaHandsHelping className="tw-w-8 tw-h-8 tw-text-primary" />,
+      title: t("benefits.ethicalSourcing.title"),
+      description: t("benefits.ethicalSourcing.description"),
+      delay: 400,
+    },
+    {
+      icon: <FaHeart className="tw-w-8 tw-h-8 tw-text-primary" />,
+      title: t("benefits.loyaltyTrust.title"),
+      description: t("benefits.loyaltyTrust.description"),
+      delay: 500,
     },
   ];
 

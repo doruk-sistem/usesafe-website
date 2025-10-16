@@ -9,6 +9,9 @@ import {
   FaEye,
   FaLock,
   FaUsers,
+  FaChartLine,
+  FaQrcode,
+  FaStar,
 } from "react-icons/fa";
 
 import {
@@ -36,21 +39,33 @@ export default function EcommerceSellersDistributorsPage() {
     },
     {
       icon: <FaEye className="tw-w-8 tw-h-8 tw-text-primary" />,
-      title: t("benefits.transparency.title"),
-      description: t("benefits.transparency.description"),
+      title: t("benefits.centralized.title"),
+      description: t("benefits.centralized.description"),
       delay: 100,
     },
     {
       icon: <FaLock className="tw-w-8 tw-h-8 tw-text-primary" />,
-      title: t("benefits.security.title"),
-      description: t("benefits.security.description"),
+      title: t("benefits.visibility.title"),
+      description: t("benefits.visibility.description"),
       delay: 200,
     },
     {
-      icon: <FaUsers className="tw-w-8 tw-h-8 tw-text-primary" />,
-      title: t("benefits.engagement.title"),
-      description: t("benefits.engagement.description"),
+      icon: <FaChartLine className="tw-w-8 tw-h-8 tw-text-primary" />,
+      title: t("benefits.analytics.title"),
+      description: t("benefits.analytics.description"),
       delay: 300,
+    },
+    {
+      icon: <FaQrcode className="tw-w-8 tw-h-8 tw-text-primary" />,
+      title: t("benefits.dpp.title"),
+      description: t("benefits.dpp.description"),
+      delay: 400,
+    },
+    {
+      icon: <FaStar className="tw-w-8 tw-h-8 tw-text-primary" />,
+      title: t("benefits.reputation.title"),
+      description: t("benefits.reputation.description"),
+      delay: 500,
     },
   ];
 

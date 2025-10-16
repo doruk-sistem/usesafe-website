@@ -9,6 +9,8 @@ import {
   FaRecycle,
   FaFileAlt,
   FaUsers,
+  FaHandshake,
+  FaChartLine,
 } from "react-icons/fa";
 
 import { StakeholderPageTemplate } from "@/components/Platform";
@@ -49,6 +51,18 @@ export default function ManufacturersBrandOwnersPage() {
       title: t("benefits.trust.title"),
       description: t("benefits.trust.description"),
       delay: 300,
+    },
+    {
+      icon: <FaHandshake className="tw-w-8 tw-h-8 tw-text-primary" />,
+      title: t("benefits.supplier.title"),
+      description: t("benefits.supplier.description"),
+      delay: 400,
+    },
+    {
+      icon: <FaChartLine className="tw-w-8 tw-h-8 tw-text-primary" />,
+      title: t("benefits.insights.title"),
+      description: t("benefits.insights.description"),
+      delay: 500,
     },
   ];
 

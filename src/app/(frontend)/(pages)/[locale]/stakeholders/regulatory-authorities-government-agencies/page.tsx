@@ -4,12 +4,6 @@ import AOS from "aos";
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
-import {
-  FaEye,
-  FaRecycle,
-  FaDatabase,
-  FaGlobe,
-} from "react-icons/fa";
 
 import StakeholderPageTemplate from "@/components/Platform/StakeholderPageTemplate";
 
@@ -25,33 +19,6 @@ export default function RegulatoryAuthoritiesGovernmentAgenciesPage() {
     });
   }, []);
 
-  const keyBenefits = [
-    {
-      icon: <FaEye className="tw-w-8 tw-h-8 tw-text-primary" />,
-      title: t("benefits.oversight.title"),
-      description: t("benefits.oversight.description"),
-      delay: 0,
-    },
-    {
-      icon: <FaRecycle className="tw-w-8 tw-h-8 tw-text-primary" />,
-      title: t("benefits.sustainability.title"),
-      description: t("benefits.sustainability.description"),
-      delay: 100,
-    },
-    {
-      icon: <FaDatabase className="tw-w-8 tw-h-8 tw-text-primary" />,
-      title: t("benefits.compliance.title"),
-      description: t("benefits.compliance.description"),
-      delay: 200,
-    },
-    {
-      icon: <FaGlobe className="tw-w-8 tw-h-8 tw-text-primary" />,
-      title: t("benefits.alignment.title"),
-      description: t("benefits.alignment.description"),
-      delay: 300,
-    },
-  ];
-
   return (
     <StakeholderPageTemplate
       // Hero Section
@@ -63,7 +30,7 @@ export default function RegulatoryAuthoritiesGovernmentAgenciesPage() {
       // Key Benefits Section
       benefitsTitle={t("benefitsTitle")}
       benefitsDescription={t("benefitsDescription")}
-      keyBenefits={keyBenefits}
+      keyBenefits={[]}
     />
   );
 }

@@ -5,10 +5,12 @@ import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
 import {
-  FaCogs,
-  FaSearch,
-  FaHandshake,
-  FaUsers,
+  FaDatabase,
+  FaCheckCircle,
+  FaQrcode,
+  FaUserShield,
+  FaBell,
+  FaChartLine,
 } from "react-icons/fa";
 
 import StakeholderPageTemplate from "@/components/Platform/StakeholderPageTemplate";
@@ -27,28 +29,40 @@ export default function MarketplacesRetailersPage() {
 
   const keyBenefits = [
     {
-      icon: <FaCogs className="tw-w-8 tw-h-8 tw-text-primary" />,
-      title: t("benefits.vetting.title"),
-      description: t("benefits.vetting.description"),
+      icon: <FaDatabase className="tw-w-8 tw-h-8 tw-text-primary" />,
+      title: t("benefits.dataQuality.title"),
+      description: t("benefits.dataQuality.description"),
       delay: 0,
     },
     {
-      icon: <FaSearch className="tw-w-8 tw-h-8 tw-text-primary" />,
-      title: t("benefits.elevate.title"),
-      description: t("benefits.elevate.description"),
+      icon: <FaCheckCircle className="tw-w-8 tw-h-8 tw-text-primary" />,
+      title: t("benefits.listingCompliance.title"),
+      description: t("benefits.listingCompliance.description"),
       delay: 100,
     },
     {
-      icon: <FaHandshake className="tw-w-8 tw-h-8 tw-text-primary" />,
-      title: t("benefits.collaboration.title"),
-      description: t("benefits.collaboration.description"),
+      icon: <FaQrcode className="tw-w-8 tw-h-8 tw-text-primary" />,
+      title: t("benefits.dppScale.title"),
+      description: t("benefits.dppScale.description"),
       delay: 200,
     },
     {
-      icon: <FaUsers className="tw-w-8 tw-h-8 tw-text-primary" />,
-      title: t("benefits.trust.title"),
-      description: t("benefits.trust.description"),
+      icon: <FaUserShield className="tw-w-8 tw-h-8 tw-text-primary" />,
+      title: t("benefits.riskManagement.title"),
+      description: t("benefits.riskManagement.description"),
       delay: 300,
+    },
+    {
+      icon: <FaBell className="tw-w-8 tw-h-8 tw-text-primary" />,
+      title: t("benefits.recall.title"),
+      description: t("benefits.recall.description"),
+      delay: 400,
+    },
+    {
+      icon: <FaChartLine className="tw-w-8 tw-h-8 tw-text-primary" />,
+      title: t("benefits.esgInsights.title"),
+      description: t("benefits.esgInsights.description"),
+      delay: 500,
     },
   ];
 

@@ -107,9 +107,17 @@ const StakeholderPageTemplate: React.FC<StakeholderPageTemplateProps> = ({
             <h2 className="tw-text-4xl md:tw-text-5xl tw-font-bold tw-text-gray-900 tw-mb-6">
               {benefitsTitle}
             </h2>
-            <p className="tw-text-xl tw-text-gray-600 tw-max-w-5xl tw-mx-auto tw-leading-relaxed">
-              {benefitsDescription}
-            </p>
+            <div className="tw-text-xl tw-text-gray-600 tw-max-w-5xl tw-mx-auto tw-leading-relaxed tw-space-y-4">
+              {benefitsDescription.split('. ').map((sentence, index, array) => {
+                // Son cümle değilse nokta ekle
+                const text = index < array.length - 1 ? sentence + '.' : sentence;
+                return (
+                  <p key={index} className="tw-mb-4 tw-last:mb-0">
+                    {text}
+                  </p>
+                );
+              })}
+            </div>
           </div>
 
           <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-8 tw-mt-16 tw-max-w-5xl tw-mx-auto">
