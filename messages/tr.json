@@ -698,6 +698,13 @@
     "products": "Products (TR)",
     "integration": "Integration (TR)",
     "stakeholders": {
+      "defaultCta": {
+      "title": "Ürün Uyumluluğunuzu Dönüştürmeye Hazır mısınız?",
+      "description": "UseSafe Sertifikasyonunu uygulamak için bizimle iletişime geçin veya platformu çalışırken görmek için bir demo talep edin.",
+      "primaryText": "İletişime Geçin",
+      "secondaryText": "Demo Talep Et",
+      "secondaryHref": "https://app.usesafe.net/"
+},
       "manufacturers": {
         "heroBadge": "Üreticiler ve Marka Sahipleri",
         "heroTitle": "Üreticiler ve Marka Sahipleri",

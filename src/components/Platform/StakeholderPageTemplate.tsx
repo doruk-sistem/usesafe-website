@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 import { HeroSection, CtaSection } from "@/components/Platform";
 
@@ -79,6 +80,25 @@ const StakeholderPageTemplate: React.FC<StakeholderPageTemplateProps> = ({
   ctaSecondaryText,
   ctaSecondaryHref,
 }) => {
+  const t = useTranslations("platform.stakeholders.defaultCta");
+  
+  // Default CTA values
+  const defaultCta = {
+    title: t("title"),
+    description: t("description"),
+    primaryText: t("primaryText"),
+    secondaryText: t("secondaryText"),
+    secondaryHref: t("secondaryHref")
+  };
+
+  // Use provided values or fallback to defaults
+  const finalCta = {
+    title: ctaTitle || defaultCta.title,
+    description: ctaDescription || defaultCta.description,
+    primaryText: ctaPrimaryText || defaultCta.primaryText,
+    secondaryText: ctaSecondaryText || defaultCta.secondaryText,
+    secondaryHref: ctaSecondaryHref || defaultCta.secondaryHref,
+  };
   return (
     <div className="tw-w-full">
       {/* Hero Section */}
@@ -120,21 +140,21 @@ const StakeholderPageTemplate: React.FC<StakeholderPageTemplateProps> = ({
             </div>
           </div>
 
-          <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-8 tw-mt-16 tw-max-w-5xl tw-mx-auto">
+          <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-3 tw-gap-8 tw-mt-16 tw-max-w-7xl tw-mx-auto">
             {keyBenefits.map((benefit, index) => (
               <div
                 key={index}
-                className="tw-bg-white tw-py-6 tw-px-8 tw-rounded-2xl tw-shadow-lg tw-border tw-border-gray-100 tw-max-w-3xl"
+                className="tw-group tw-bg-white/60 tw-backdrop-blur-lg tw-border-2 tw-border-[#43cea2]/20 tw-p-8 tw-rounded-2xl tw-shadow-2xl tw-transition-all hover:tw-shadow-3xl hover:tw-border-[#43cea2] hover:-tw-translate-y-2 hover:tw-scale-105 tw-duration-300 tw-min-h-[320px]"
                 data-aos="fade-up"
                 data-aos-delay={benefit.delay || index * 100}
               >
-                <div className="tw-w-16 tw-h-16 tw-bg-primary/10 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-4 tw-mx-auto">
+                <div className="tw-bg-gradient-to-br tw-from-[#43cea2]/30 tw-to-[#6dd5ed]/40 tw-p-4 tw-rounded-xl tw-flex tw-items-center tw-justify-center tw-mb-6 tw-text-primary tw-group-hover:tw-bg-primary/10 tw-transition-colors tw-mx-auto tw-w-fit">
                   {benefit.icon}
                 </div>
-                <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-3 tw-text-center">
+                <h3 className="tw-text-2xl tw-font-bold tw-mb-4 tw-text-gray-900 tw-drop-shadow-sm tw-text-center">
                   {benefit.title}
                 </h3>
-                <p className="tw-text-gray-600 tw-leading-relaxed">
+                <p className="tw-text-gray-700 tw-leading-relaxed tw-text-center">
                   {benefit.description}
                 </p>
               </div>
@@ -235,24 +255,18 @@ const StakeholderPageTemplate: React.FC<StakeholderPageTemplateProps> = ({
       )}
 
       {/* CTA Section */}
-      {ctaTitle &&
-        ctaDescription &&
-        ctaPrimaryText &&
-        ctaSecondaryText &&
-        ctaSecondaryHref && (
-          <CtaSection
-            title={ctaTitle}
-            description={ctaDescription}
-            primaryCta={{
-              text: ctaPrimaryText,
-              href: "/contact",
-            }}
-            secondaryCta={{
-              text: ctaSecondaryText,
-              href: ctaSecondaryHref,
-            }}
-          />
-        )}
+      <CtaSection
+        title={finalCta.title}
+        description={finalCta.description}
+        primaryCta={{
+          text: finalCta.primaryText,
+          href: "/contact",
+        }}
+        secondaryCta={{
+          text: finalCta.secondaryText,
+          href: finalCta.secondaryHref,
+        }}
+      />
     </div>
   );
 };

@@ -605,6 +605,13 @@
     "products": "Products",
     "integration": "Integration",
     "stakeholders":{
+      "defaultCta": {
+        "title": "Ready to Transform Your Product Compliance?",
+        "description": "Contact us to implement UseSafe Certification or request a demo to see the platform in action.",
+        "primaryText": "Contact Us",
+        "secondaryText": "Request a Demo",
+        "secondaryHref": "https://app.usesafe.net/"
+      },
       "manufacturers": {
         "heroBadge": "Manufacturers & Brand Owners",
         "heroTitle": "Manufacturers & Brand Owners",
