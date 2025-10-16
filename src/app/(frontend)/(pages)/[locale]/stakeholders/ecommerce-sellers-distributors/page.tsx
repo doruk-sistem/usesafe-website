@@ -8,7 +8,6 @@ import {
   FaShieldAlt,
   FaEye,
   FaLock,
-  FaUsers,
   FaChartLine,
   FaQrcode,
   FaStar,

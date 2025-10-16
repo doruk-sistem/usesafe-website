@@ -91,7 +91,7 @@ export default function TextilePassportPage() {
         "platform.textile-passport.trace_trust_section.sector_button_service_providers",
       contentTitleKey: "content_title",
       featuresKeys: ["feature_1", "feature_2", "feature_3"],
-      imageSrc: "/images/platform/sector-service_providers.jpg",
+      imageSrc: "/images/platform/logistics-customs-operators-hero.png",
       imageAltKey: "image_alt",
     },
     {
@@ -109,7 +109,7 @@ export default function TextilePassportPage() {
         "platform.textile-passport.trace_trust_section.sector_button_recyclers",
       contentTitleKey: "content_title",
       featuresKeys: ["feature_1", "feature_2", "feature_3"],
-      imageSrc: "/images/platform/sector-recyclers.jpg",
+      imageSrc: "/images/platform/textile-passport.jpeg",
       imageAltKey: "image_alt",
     },
     {
@@ -265,7 +265,7 @@ export default function TextilePassportPage() {
                   style={{ borderRadius: "1rem" }}
                 ></div>
                 <Image
-                  src="/images/platform/usesafe_men_wear.png"
+                  src="/images/platform/usesafe_men_wear.avif"
                   alt={t("platform.textile-passport.why_dpp_image_alt")}
                   fill
                   className="tw-object-cover"

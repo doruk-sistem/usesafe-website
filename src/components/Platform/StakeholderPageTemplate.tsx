@@ -1,6 +1,6 @@
 import Image from "next/image";
-import React from "react";
 import { useTranslations } from "next-intl";
+import React from "react";
 
 import { HeroSection, CtaSection } from "@/components/Platform";
 
@@ -81,14 +81,14 @@ const StakeholderPageTemplate: React.FC<StakeholderPageTemplateProps> = ({
   ctaSecondaryHref,
 }) => {
   const t = useTranslations("platform.stakeholders.defaultCta");
-  
+
   // Default CTA values
   const defaultCta = {
     title: t("title"),
     description: t("description"),
     primaryText: t("primaryText"),
     secondaryText: t("secondaryText"),
-    secondaryHref: t("secondaryHref")
+    secondaryHref: t("secondaryHref"),
   };
 
   // Use provided values or fallback to defaults
@@ -128,9 +128,9 @@ const StakeholderPageTemplate: React.FC<StakeholderPageTemplateProps> = ({
               {benefitsTitle}
             </h2>
             <div className="tw-text-xl tw-text-gray-600 tw-max-w-5xl tw-mx-auto tw-leading-relaxed tw-space-y-4">
-              {benefitsDescription.split('. ').map((sentence, index, array) => {
+              {benefitsDescription.split(". ").map((sentence, index, array) => {
                 // Son cümle değilse nokta ekle
-                const text = index < array.length - 1 ? sentence + '.' : sentence;
+                const text = index < array.length - 1 ? `${sentence}.` : sentence;
                 return (
                   <p key={index} className="tw-mb-4 tw-last:mb-0">
                     {text}
