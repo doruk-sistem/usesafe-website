@@ -91,7 +91,7 @@ export default function TextilePassportPage() {
         "platform.textile-passport.trace_trust_section.sector_button_service_providers",
       contentTitleKey: "content_title",
       featuresKeys: ["feature_1", "feature_2", "feature_3"],
-      imageSrc: "/images/platform/sector-service_providers.jpg",
+      imageSrc: "/images/platform/logistics-customs-operators-hero.png",
       imageAltKey: "image_alt",
     },
     {
@@ -109,7 +109,7 @@ export default function TextilePassportPage() {
         "platform.textile-passport.trace_trust_section.sector_button_recyclers",
       contentTitleKey: "content_title",
       featuresKeys: ["feature_1", "feature_2", "feature_3"],
-      imageSrc: "/images/platform/sector-recyclers.jpg",
+      imageSrc: "/images/platform/textile-passport.jpeg",
       imageAltKey: "image_alt",
     },
     {
@@ -144,8 +144,8 @@ export default function TextilePassportPage() {
       />
 
       {/* DPP NEDİR? */}
-      <section className="tw-py-24 tw-bg-white">
-        <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6">
+      <section className="tw-py-16 md:tw-py-24 tw-bg-white">
+        <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6 tw-max-w-7xl">
           <SectionHeader
             title={t("platform.textile-passport.what_is_dpp.title")}
             description={t("platform.textile-passport.what_is_dpp.description")}
@@ -189,15 +189,23 @@ export default function TextilePassportPage() {
       </section>
 
       {/* NEDEN TEKSTİLDE DPP? */}
-      <section className="tw-py-24 tw-bg-gradient-to-br tw-from-gray-50 tw-to-blue-50">
-        <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6">
-          <div className="tw-flex tw-flex-col md:tw-flex-row tw-items-center tw-gap-16">
-            <div className="tw-flex-1 tw-max-w-2xl">
-              <SectionHeader
-                title={t("platform.textile-passport.why_dpp.title")}
-                description={t("platform.textile-passport.why_dpp.description")}
-                className="tw-text-left tw-mx-0 tw-max-w-none tw-mb-8"
-              />{" "}
+      <section className="tw-py-16 md:tw-py-24 tw-bg-gradient-to-br tw-from-gray-50 tw-to-blue-50">
+        <div className="tw-container tw-mx-auto tw-px-4 md:tw-px-6 tw-max-w-7xl">
+          <div className="tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-gap-8 md:tw-gap-12 lg:tw-gap-16">
+            <div className="tw-flex-1 tw-w-full lg:tw-max-w-2xl">
+              <div className="tw-text-center tw-mx-auto tw-max-w-4xl tw-mb-8">
+                <div className="tw-flex tw-justify-center tw-mb-4">
+                  <div className="tw-h-1 tw-w-16 tw-bg-primary tw-rounded-full"></div>
+                </div>
+                <h2 className="tw-text-4xl md:tw-text-5xl tw-font-extrabold tw-text-gray-900 tw-drop-shadow-lg tw-mb-4 tw-leading-tight">
+                  Unlocking Circularity,<br />
+                  Compliance, and<br />
+                  Innovation
+                </h2>
+                <p className="tw-text-lg tw-text-gray-700 tw-leading-relaxed">
+                  {t("platform.textile-passport.why_dpp.description")}
+                </p>
+              </div>{" "}
               {/* Removed badge, adjusted className for left alignment and no max-width from SectionHeader default */}
               {/* Note: The original "Why DPP for Textile?" badge was removed for simplicity. It can be added back as a custom element if needed. */}
               <div className="tw-space-y-6 tw-mb-10">
@@ -250,8 +258,8 @@ export default function TextilePassportPage() {
                 {t("platform.textile-passport.request_demo_button")}
               </CtaButton>
             </div>
-            <div className="tw-flex-1 tw-mt-12 md:tw-mt-0">
-              <div className="tw-relative tw-h-[350px] md:tw-h-[450px] tw-w-full tw-rounded-2xl tw-overflow-hidden tw-shadow-2xl">
+            <div className="tw-flex-1 tw-w-full tw-mt-8 md:tw-mt-12 lg:tw-mt-0">
+              <div className="tw-relative tw-h-[300px] sm:tw-h-[350px] md:tw-h-[400px] lg:tw-h-[450px] tw-w-full tw-rounded-2xl tw-overflow-hidden tw-shadow-2xl">
                 <div
                   className="tw-absolute tw-inset-0 tw-bg-white/30  tw-z-10 tw-pointer-events-none"
                   style={{ borderRadius: "1rem" }}
@@ -277,7 +285,7 @@ export default function TextilePassportPage() {
           description={t("platform.textile-passport.how_it_works_description")}
         />
 
-        <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-12 tw-mt-12">
+        <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-8 md:tw-gap-12 tw-mt-8 md:tw-mt-12">
           <FeatureCard
             icon={<FaFileAlt className="tw-w-8 tw-h-8" />}
             title={t("platform.dpp-in-espr.data_accuracy_title")}
@@ -295,9 +303,9 @@ export default function TextilePassportPage() {
           </FeatureCard>
         </div>
 
-        <div className="tw-mt-20 tw-bg-gradient-to-br tw-from-blue-50 tw-to-indigo-50 tw-p-12 tw-rounded-2xl tw-shadow-xl tw-border tw-border-white/80">
+        <div className="tw-mt-12 md:tw-mt-20 tw-bg-gradient-to-br tw-from-blue-50 tw-to-indigo-50 tw-p-6 md:tw-p-12 tw-rounded-2xl tw-shadow-xl tw-border tw-border-white/80">
           <div className="tw-max-w-3xl tw-mx-auto">
-            <h3 className="tw-text-3xl tw-font-bold tw-text-gray-900 tw-mb-6 tw-text-center">
+            <h3 className="tw-text-2xl md:tw-text-3xl tw-font-bold tw-text-gray-900 tw-mb-4 md:tw-mb-6 tw-text-center">
               {
                 t("platform.dpp-in-espr.our_approach_title").split(
                   "DPP Implementation",
@@ -307,7 +315,7 @@ export default function TextilePassportPage() {
                 {t("platform.dpp-in-espr.dpp_implementation")}
               </span>
             </h3>
-            <p className="tw-text-xl tw-text-gray-700 tw-text-center tw-mb-10 tw-leading-relaxed">
+            <p className="tw-text-lg md:tw-text-xl tw-text-gray-700 tw-text-center tw-mb-6 md:tw-mb-10 tw-leading-relaxed">
               {t("platform.dpp-in-espr.our_approach_description")}
             </p>
             <div className="tw-flex tw-justify-center">

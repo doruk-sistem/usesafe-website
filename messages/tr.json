@@ -697,6 +697,193 @@
     "frameworks": "Frameworks (TR)",
     "products": "Products (TR)",
     "integration": "Integration (TR)",
+    "stakeholders": {
+      "defaultCta": {
+      "title": "Ürün Uyumluluğunuzu Dönüştürmeye Hazır mısınız?",
+      "description": "UseSafe Sertifikasyonunu uygulamak için bizimle iletişime geçin veya platformu çalışırken görmek için bir demo talep edin.",
+      "primaryText": "İletişime Geçin",
+      "secondaryText": "Demo Talep Et",
+      "secondaryHref": "https://app.usesafe.net/"
+},
+      "manufacturers": {
+        "heroBadge": "Üreticiler ve Marka Sahipleri",
+        "heroTitle": "Üreticiler ve Marka Sahipleri",
+        "heroDescription": "Üreticiler ve marka sahipleri için özel olarak tasarlanmış UseSafe® çözümleri ile uyumluluk, sertifikasyon ve sürdürülebilir büyüme sağlayın.",
+        "heroImageAlt": "Üreticiler ve Marka Sahipleri",
+        "benefitsTitle": "Üreticiler ve Marka Sahipleri",
+        "benefitsDescription": "Küresel pazarlarda üreticiler ve marka sahipleri yeni bir hesap verebilirlik çağına giriyor. AB Yeşil Anlaşması, Sürdürülebilir Ürünler için Ekotasarım Yönetmeliği (ESPR) ve hızla gelişen tüketici beklentileri tarafından yönlendirilen sürdürülebilirlik artık bir tercih meselesi değil—temel bir iş gereksinimdir. Rekabetçi ve uyumlu kalmak için şirketler, değer zincirleri boyunca tam şeffaflık göstermeli, ürün güvenliğini doğrulamalı ve çevresel performansı sürekli iyileştirmelidir. UseSafe, bu hedeflere hassasiyet ve verimlilikle ulaşmak için kapsamlı bir dijital çözüm sunar. Platform, tüm malzeme, kimyasal ve tedarikçi verilerini birleşik bir sistemde birleştirerek REACH, RoHS, ESPR ve diğer önemli yönetmelikler doğrultusunda uyumluluk doğrulama ve sertifikasyon iş akışlarını otomatikleştirir. Gelişmiş veri yönetimi ve gerçek zamanlı raporlama yoluyla UseSafe, idari karmaşıklığı en aza indirir, uyumluluk risklerini azaltır ve uluslararası sürdürülebilirlik standartlarıyla sürekli uyumu sağlar. Düzenleyici uyumluluğun ötesinde, UseSafe işletmelerin sürdürülebilirliği ölçülebilir değere dönüştürmesini sağlar. Doğrulanmış ürün verileri, dijital ürün pasaportları ve şeffaf izlenebilirlik araçlarından yararlanarak şirketler marka bütünlüğünü güçlendirebilir, müşteri güvenini artırabilir ve sürdürülebilir inovasyonda yeni fırsatların kilidini açabilir. UseSafe ile uyumluluk güvene dönüşür—üreticilerin ve marka sahiplerinin sorumlu bir şekilde liderlik etmesini, ölçekte güven oluşturmasını ve endüstrileri için daha sürdürülebilir bir gelecek şekillendirmesini güçlendirir.",
+        "benefits": {
+          "compliance": {
+            "title": "Uyumluluk Basitleştirildi",
+            "description": "Malzeme ve kimyasal bileşimde tam görünürlük elde edin, uyumsuzluk risklerini azaltın ve UseSafe® ile sertifikasyon süreçlerini basitleştirin."
+          },
+          "sustainable": {
+            "title": "Sürdürülebilir Ürün Tasarımı",
+            "description": "Dayanıklılık, yeniden kullanılabilirlik ve çevre dostu ilkeleri hem yasal talepleri hem de tüketici beklentilerini karşılamak için ürün geliştirmeye entegre edin."
+          },
+          "transparent": {
+            "title": "Şeffaf Ürün Verileri",
+            "description": "Dijital Ürün Pasaportları aracılığıyla doğru ve doğrulanabilir ürün bilgileri sağlayın, şeffaflığı garanti edin ve yeşil aklama risklerini minimize edin."
+          },
+          "trust": {
+            "title": "Tüketici Güveni ve Sadakati",
+            "description": "Tedarik zinciri boyunca güvenilir sürdürülebilirlik ve güvenlik bilgilerini paylaşarak marka itibarını güçlendirin ve müşteri sadakatini artırın."
+          },
+          "supplier": {
+            "title": "Tedarikçi İşbirliği ve İzlenebilirlik",
+            "description": "Değer zincirinizdeki her tedarikçiyi bağlayın. UseSafe®, üreticilerin tedarikçi verilerini toplamasına ve doğrulamasına yardımcı olur, tüm bileşenler ve malzemeler genelinde tutarlı standartları garanti eder. Gerçek zamanlı paneller, küresel ağlar genelinde sürdürülebilirlik performansını takip etmeyi kolaylaştırır."
+          },
+          "insights": {
+            "title": "Veri Odaklı İçgörüler ve Raporlama",
+            "description": "Veriyi stratejik avantaja dönüştürün. UseSafe® ile şirketler, otomatik sürdürülebilirlik raporları, risk analizi ve performans panelleri aracılığıyla uygulanabilir içgörüler elde eder—karar vericilerin operasyonları ESG hedefleri ve gelecekteki düzenlemelerle uyumlu hale getirmesine yardımcı olur."
+          }
+        }
+      },
+      "ecommerce": {
+        "heroBadge": "E-ticaret Satıcıları ve Distribütörler",
+        "heroTitle": "E-ticaret Satıcıları ve Distribütörler",
+        "heroDescription": "Online satıcılar ve distribütörler için UseSafe® çözümleri ile uyumluluk gösterin, tüketici güvenini güçlendirin ve sürdürülebilir büyüme sağlayın.",
+        "heroImageAlt": "E-ticaret Satıcıları ve Distribütörler",
+        "benefitsTitle": "E-ticaret Satıcıları ve Distribütörler",
+        "benefitsDescription": "Tüketiciler doğrulanmış sürdürülebilirlik iddiaları talep ediyor, düzenleyiciler daha sıkı ürün veri gereksinimleri getiriyor ve pazaryerleri şeffaflık ve güvenlik için daha yüksek standartlar uyguluyor. Satıcılar ve distribütörler için, büyük ve dinamik ürün portföylerini yönetirken uyumluluğu sürdürmek kritik bir zorluk haline geldi. UseSafe, online satıcılar, distribütörler ve pazaryeri operatörleri için özel olarak tasarlanmış akıllı, uçtan uca bir çözüm sunar. Uyumluluk kontrollerini otomatikleştirerek, dijital ürün verilerini yöneterek ve Dijital Ürün Pasaportları (DPP'ler) sağlayarak UseSafe, işletmelerin listelenen her ürünün yasal, çevresel ve etik standartları karşılamasını sağlar. Platform, mevcut e-ticaret sistemleri ve ERP araçlarıyla sorunsuz entegre olur, satıcılara günlük operasyonları bozmadan ürün kökenleri, malzeme içeriği ve sertifikasyon durumu hakkında tam görünürlük sağlar. Düzenleyici uyumluluğun ötesinde, UseSafe e-ticaret işletmelerinin ölçekte güven ve sadakat oluşturmasını sağlar. Doğrulanabilir ürün bilgileri ve sürdürülebilirlik kimlik bilgileri sunarak, satıcılar rekabetçi pazaryerlerinde kendilerini farklılaştırabilir, ürün listeleme riskini azaltabilir ve müşteri güvenini artırabilir. UseSafe, pazarlamadan öteye geçen şeffaflık sağlar—onu uzun vadeli büyüme ve sorumlu ticareti yönlendiren ölçülebilir güvenilirliğe dönüştürür.",
+        "benefits": {
+          "compliance": {
+            "title": "Online Pazarlar için Otomatik Uyumluluk",
+            "description": "Sattığınız her ürünün en son çevresel ve güvenlik düzenlemelerini karşıladığından emin olun. UseSafe®, büyük ürün katalogları genelinde uyumluluk doğrulamasını otomatikleştirir—REACH, RoHS, ESPR ve pazaryeri özel standartlarını kapsar—böylece satıcılar işi yavaşlatmadan uyumlu kalabilir."
+          },
+          "centralized": {
+            "title": "Merkezi Ürün Veri Yönetimi",
+            "description": "Tüm ürün, tedarikçi ve sertifikasyon verilerini tek güvenli platformda birleştirin. UseSafe®, ERP, PIM veya pazaryeri sistemlerinizle doğrudan bağlantı kurarak parçalanmış elektronik tabloları ve manuel yüklemeleri ortadan kaldırır—listelerinizin her zaman güncel, doğru ve uyumlu olmasını sağlar."
+          },
+          "visibility": {
+            "title": "Distribütörler için Tedarik Zinciri Görünürlüğü",
+            "description": "Tüm dağıtım ağınız genelinde uyumluluk ve sürdürülebilirliği takip edin. UseSafe®, distribütörlerin ürün akışını, tedarikçi sertifikalarını ve lojistik verilerini gerçek zamanlı olarak izlemesini sağlar—üreticiden son kullanıcıya kadar tam görünürlük sunarak tutarlı kalite ve bütünlük sağlar."
+          },
+          "analytics": {
+            "title": "Performans Analitiği ve Raporlama",
+            "description": "Uyumluluk ve sürdürülebilirlik verilerini stratejik içgörüye dönüştürün. UseSafe'in analitik panelleri, ürün performansı, uyumluluk riskleri ve sürdürülebilirlik metrikleri hakkında uygulanabilir istihbarat sunar—karlılığı ve ESG sürdürülebilirlik performansını iyileştiren veri odaklı kararları güçlendirir."
+          },
+          "dpp": {
+            "title": "Dijital Ürün Pasaportları (DPP)",
+            "description": "Her ürüne şeffaflık ve izlenebilirlik getirin. UseSafe®, QR veya NFC doğrulama aracılığıyla sürdürülebilirlik ve güvenlik bilgilerini tüketiciler ve düzenleyiciler için erişilebilir kılan Dijital Ürün Pasaportlarını otomatik olarak oluşturur—güven oluşturmanıza ve yeşil aklama risklerinden kaçınmanıza yardımcı olur."
+          },
+          "reputation": {
+            "title": "Gelişmiş Tüketici Güveni ve Marka İtibarı",
+            "description": "Tüketiciler hiç olmadığı kadar bilinçli—güvenilirlik dönüşümü yönlendirir. Ürün kökeni, malzemeler ve sürdürülebilirlik iddiaları hakkında doğrulanabilir veriler sağlayarak UseSafe®, satıcıların uzun vadeli güven kazanmasına, iade oranlarını azaltmasına ve pazaryerleri genelinde marka itibarını güçlendirmesine yardımcı olur."
+          }
+        }
+      },
+      "marketplaces": {
+        "heroBadge": "Marketplace'ler ve Perakendeciler",
+        "heroTitle": "Marketplace'ler ve Perakendeciler",
+        "heroDescription": "Üreticiler ve marka sahipleri için özel olarak tasarlanmış UseSafe® çözümleri ile uyumluluk, sertifikasyon ve sürdürülebilir büyüme sağlayın.",
+        "heroImageAlt": "Marketplace'ler ve Perakendeciler",
+        "benefitsTitle": "Marketplace'ler ve Perakendeciler",
+        "benefitsDescription": "Marketplace'ler ve perakendeciler, düzenleyici beklentiler, tüketici incelemeleri ve platform yönetişiminin aynı anda sıkılaştığı bir ortamda faaliyet göstermektedir. AB Yeşil Anlaşması ve ESPR gibi çerçeveler altında, şeffaflık, ürün güvenliği ve doğrulanabilir sürdürülebilirlik verileri artık ölçekte ürün listeleme ve satma için temel gereksinimlerdir. Binlerce marka ve satıcı arasında her ürünün bu standartları karşılamasını sağlamak, titiz kontroller, yüksek kaliteli veriler ve otomatik uyumluluk gerektirir. UseSafe, ürün verilerini standartlaştıran, doğrulamayı kolaylaştıran ve geniş, hızlı hareket eden kataloglar genelinde uyumluluk kontrollerini otomatikleştiren birleşik, kurumsal düzeyde bir platform sağlar. Malzeme ve kimyasal bileşimden sertifikalara ve Dijital Ürün Pasaportlarına (DPP'ler) kadar, UseSafe kritik bilgileri tek bir sistemde birleştirir—PIM/ERP ve pazaryeri iş akışlarıyla entegre—böylece ekipler operasyonel hızı korurken riski proaktif olarak yönetebilir. Düzenleyici uyumluluğun ötesinde, UseSafe şeffaflığı ticari avantaja dönüştürür. Doğru, doğrulanabilir ve tüketiciye yönelik ürün bilgilerini sağlayarak, perakendeciler ve pazaryerleri marka bütünlüğünü güçlendirir, müşterileri korur, listeleme ve iade oranlarını azaltır ve güvene dayalı farklılaşma sağlar. UseSafe ile yönetişim ölçeklenebilir hale gelir, listeler güvenilir olur ve büyüme sorumlu perakendecilikle uyumlu hale gelir.",
+        "benefits": {
+          "dataQuality": {
+            "title": "Ürün Veri Kalitesi ve Standardizasyonu",
+            "description": "Parçalanmış, tutarsız ürün verilerini ortadan kaldırın. UseSafe®, markalar ve satıcılar genelinde daha temiz, aranabilir listeler için taksonomi ve şema kurallarını uygulayarak öznitelikleri, sertifikaları ve belgeleri merkezileştirir."
+          },
+          "listingCompliance": {
+            "title": "Listeleme Uyumluluğu ve Yönetişimi",
+            "description": "Listeleme zamanında uyumluluğu standartlaştırın ve otomatikleştirin. UseSafe®, ürünler yayınlanmadan önce ürün güvenliğini, sürdürülebilirliğini ve düzenleyici uyumluluğunu (örn. REACH, RoHS, ESPR) doğrular—listeleme iptalleri, cezalar ve itibar riskini azaltır."
+          },
+          "dppScale": {
+            "title": "Ölçekte Dijital Ürün Pasaportları (DPP)",
+            "description": "Her SKU'ya doğrulanabilir şeffaflık getirin. UseSafe®, QR/NFC erişimi ile DPP'leri oluşturur ve yönetir—köken, malzemeler ve sürdürülebilirlik iddialarını müşteriler, düzenleyiciler ve ortaklar için kolayca doğrulanabilir hale getirir."
+          },
+          "riskManagement": {
+            "title": "Satıcı ve Tedarikçi Risk Yönetimi",
+            "description": "Satıcılarınızı tanıyın; tedarikçilerinize güvenin. UseSafe®, tedarikçi kimlik bilgilerini, denetim sonuçlarını ve olay geçmişini toplar ve izler—boşlukları erken işaretleyerek veri odaklı katılım ve sürekli gözetimi sağlar."
+          },
+          "recall": {
+            "title": "Geri Çağırma, Olay ve Talep Yanıtı",
+            "description": "Eksiksiz, güvenilir verilerle daha hızlı yanıt verin. UseSafe®, SKU'ları malzemeler, partiler ve tedarikçilerle ilişkilendirir—hedefli geri çağırmaları, verimli müşteri bildirimlerini ve savunulabilir talep işlemeyi mümkün kılar."
+          },
+          "esgInsights": {
+            "title": "ESG İçgörüleri ve Yönetici Raporlaması",
+            "description": "Uyumluluk verilerini perakende stratejisine dönüştürün. Panolar, sürdürülebilirlik KPI'larını, satıcı performansını ve risk eğilimlerini takip eder—açıklamaları destekler ve ürün yelpazesi, kaynak sağlama ve kategori kararlarını bilgilendirir."
+          }
+        }
+      },
+      "regulatory": {
+        "heroBadge": "Düzenleyici Otoriteler ve Devlet Kurumları",
+        "heroTitle": "Düzenleyici Otoriteler ve Devlet Kurumları",
+        "heroDescription": "Otoriteler ve devlet kurumları, sürdürülebilirlik ve ürün güvenliği standartlarını uygulamada kritik rol oynar. UseSafe®, etkili denetim, düzenleyici uyumluluk ve sürdürülebilir büyümeyi desteklemek için şeffaf, standartlaştırılmış veriler sağlar.",
+        "heroImageAlt": "Düzenleyici Otoriteler ve Devlet Kurumları",
+        "benefitsTitle": "Düzenleyici Otoriteler ve Devlet Kurumları",
+        "benefitsDescription": "Hükümetler ve düzenleyici otoriteler, sürdürülebilirlik, ürün güvenliği ve tedarik zinciri şeffaflığına yönelik küresel geçişi şekillendirmede kritik bir rol oynamaktadır. Ancak, malzemelerin, pazarların ve teknolojilerin hızlı evrimi, tutarlı uygulama ve gözetimi giderek daha karmaşık hale getirmektedir. Ölçekte uyumluluğu sağlamak yalnızca mevzuat gerektirmez—aynı zamanda güvenilir veriler, izlenebilir sistemler ve düzenleyiciler ile endüstri arasında dijital işbirliği gerektirir. UseSafe, düzenleyici kuruluşları ve devlet kurumlarını ürün uyumluluğunu izlemek, sürdürülebilirlik iddialarını doğrulamak ve pazar verilerini gerçek zamanlı olarak analiz etmek için birleşik bir dijital altyapı sağlayarak destekler. Birlikte çalışabilir veri tabanları, Dijital Ürün Pasaportları (DPP'ler) ve analitik panolar aracılığıyla UseSafe, yetkililerin üretici ve perakendeci verilerini daha verimli bir şekilde doğrulamasını, uyumsuzluk risklerini erken tespit etmesini ve sınırlar ötesi tutarlı uygulama sağlamasını mümkün kılar. Uygulamanın ötesinde, UseSafe kanıta dayalı politika oluşturma ve sürdürülebilir inovasyon için stratejik bir etkinleştirici olarak hizmet eder. Kamu kurumları ve özel paydaşlar arasında güvenilir veri alışverişini kolaylaştırarak platform, hükümetlerin şeffaflığı iyileştirmesine, tüketici korumasını güçlendirmesine ve döngüsel ekonomiyi hızlandırmasına yardımcı olur. UseSafe, düzenleyicileri veri odaklı yönetişimle liderlik etmeye güçlendirir—sürdürülebilirliği ölçülebilir, izlenebilir ve hesap verebilir hale getirir."
+      },
+      "consumers": {
+        "heroBadge": "Son Tüketiciler",
+        "heroTitle": "Son Tüketiciler",
+        "heroDescription": "Modern tüketiciler şeffaflık, orijinallik ve sürdürülebilirlik bekliyor. UseSafe®, Dijital Ürün Pasaportları aracılığıyla doğrulanmış ürün bilgilerine erişim sağlayarak müşterilerin güvenli ve sorumlu satın alma kararları vermesine yardımcı olur.",
+        "heroImageAlt": "Son Tüketiciler",
+        "benefitsTitle": "Son Tüketiciler",
+        "benefitsDescription": "Tüketiciler destekledikleri markalardan şeffaflık, orijinallik ve sorumluluk bekliyor. Yeşil aklama iddiaları ve artan çevresel farkındalık ortamında güven, satın alma kararlarında belirleyici faktör haline gelmiştir. Tüketiciler kanıt istiyor—satın aldıkları ürünlerin güvenli, sürdürülebilir ve etik olarak üretildiğine dair net, doğrulanabilir veriler. UseSafe, tüketicilere bu kanıta anında erişim sağlar. Üreticiler, perakendeciler ve düzenleyici otoritelerden doğrulanmış verileri birbirine bağlayarak UseSafe, bireylerin bir ürünün Dijital Ürün Pasaportunu (DPP) tarayarak kökeni, malzemeleri, uyumluluğu ve çevresel ayak izi hakkında güvenilir bilgileri görüntülemesini sağlar. Bu şeffaflık, markalar ve tüketiciler arasındaki boşluğu kapatarak güveni etkileşimli bir deneyime dönüştürür. Şeffaflığın ötesinde, UseSafe tüketicilerin daha akıllı, daha sürdürülebilir seçimler yapmasına yardımcı olur. Güvenlik, dayanıklılık ve geri dönüştürülebilirlik konusunda güvenilir, erişilebilir içgörüler sağlayarak UseSafe, ürün verilerini günlük rehberliğe dönüştürür—insanların satın alma davranışlarını değerleriyle uyumlu hale getirmelerine yardımcı olur. UseSafe ile sürdürülebilirlik kişiselleşir ve her satın alma daha sorumlu bir geleceğe doğru atılan bir adım haline gelir.",
+        "benefits": {
+          "instantVerification": {
+            "title": "Anında Ürün Doğrulama",
+            "description": "Tam olarak ne satın aldığınızı bilin. Tek bir Dijital Ürün Pasaportu (DPP) taramasıyla tüketiciler, ürün kökeni, malzemeler ve sürdürülebilirlik kimlik bilgileri hakkında doğrulanmış detaylara anında ve güvenilir bir şekilde erişebilir."
+          },
+          "safetyCompliance": {
+            "title": "Güvenlik ve Uyumluluk Şeffaflığı",
+            "description": "Ürün güvenliği konusunda kendinizi güvende hissedin. UseSafe®, tüketicilerin satın alma öncesinde kimyasal güvenlik, malzeme standartları ve çevresel sertifikaları kapsayan doğrulanmış uyumluluk verilerini görüntülemesini sağlar."
+          },
+          "environmentalImpact": {
+            "title": "Çevresel Etki Farkındalığı",
+            "description": "Seçimlerinizin nasıl önemli olduğunu görün. UseSafe®, karbon ayak izi, geri dönüştürülebilirlik, yeniden kullanılabilirlik gibi net sürdürülebilirlik metriklerini görüntüler—böylece tüketiciler her ürünün çevresel etkisini anlar."
+          },
+          "repairability": {
+            "title": "Onarılabilirlik ve Ürün Yaşam Döngüsü Verileri",
+            "description": "Ürününüzün ömrünü güvenle uzatın. UseSafe®, ürün bakımı, onarım seçenekleri ve bileşen bulunabilirliği konusunda rehberlik sağlar—sorumlu tüketimi teşvik eder ve atığı azaltır."
+          },
+          "ethicalSourcing": {
+            "title": "Etik ve Şeffaf Kaynak Sağlama",
+            "description": "Amaçlı satın alın. UseSafe® aracılığıyla tüketiciler, tedarik zinciri etiği hakkında görünürlük kazanır—işçilik uygulamaları, kaynak kökenleri ve adil ticaret uyumluluğu—bilinçli satın alma kararlarını teşvik eder."
+          },
+          "loyaltyTrust": {
+            "title": "Güven Yoluyla Sadakat",
+            "description": "Şeffaflığı ve sorumluluğu ödüllendirin. UseSafe® kullanan markalar, doğrulanmış veriler ve paylaşılan değerler aracılığıyla uzun vadeli tüketici sadakati oluşturur—uyumluluğu anlamlı bir duygusal bağlantıya dönüştürür."
+          }
+        }
+      },
+      "logistics": {
+        "heroBadge": "Lojistik ve Gümrük Operatörleri",
+        "heroTitle": "Lojistik ve Gümrük Operatörleri",
+        "heroDescription": "Dijital ürün pasaportları, lojistik operatörleri ve gümrük yetkililerine kolaylaştırılmış gümrükleme süreçleri, gerçek zamanlı uyumluluk doğrulaması ve gelişmiş operasyonel verimlilik sağlar.",
+        "heroImageAlt": "Lojistik ve Gümrük Operatörleri",
+        "benefitsTitle": "Lojistik ve Gümrük Operatörleri",
+        "benefitsDescription": "Küreselleşmiş bir ekonomide, lojistik ve gümrük operatörleri karmaşık tedarik zincirleri genelinde şeffaflığı, izlenebilirliği ve uyumluluğu sağlamak için artan baskı altındadır. Uluslararası ticaret AB Yeşil Anlaşması, ESPR ve gelişen ithalat/ihracat standartları altında daha fazla düzenlendikçe, ürün kökenini, güvenliğini ve sürdürülebilirliğini doğrulama yeteneği verimli sınır ötesi operasyonlar için vazgeçilmez hale gelmiştir. Manuel dokümantasyon ve parçalanmış veri sistemleri artık modern uyumluluk için gerekli hız veya hassasiyeti karşılayamaz. UseSafe, lojistik sağlayıcılarını, nakliye komisyoncularını ve gümrük yetkililerini tek, güvenilir bir doğrulanmış ürün verisi kaynağına bağlayan entegre bir dijital platform sağlar. Üreticileri, ithalatçıları ve distribütörleri Dijital Ürün Pasaportları (DPP'ler) aracılığıyla birbirine bağlayarak UseSafe, tedarik zinciri boyunca kesintisiz veri akışını sağlar—gümrükleme gecikmelerini, dokümantasyon hatalarını ve uyumsuzluk risklerini azaltır. Verimliliğin ötesinde, UseSafe lojistiği şeffaflık ve sürdürülebilirliğin bir itici gücüne dönüştürür. Doğrulanmış izlenebilirlik, otomatik uyumluluk doğrulaması ve gerçek zamanlı raporlama ile lojistik ve gümrük operatörleri hesap verebilirliği gösterebilir, sürdürülebilir ticaret girişimlerini destekleyebilir ve hükümetler, ortaklar ve tüketiciler arasında güveni güçlendirebilir. UseSafe, uyumluluk ve performans arasındaki boşluğu kapatır—her sevkiyatı doğrulanmış değerin bir kaynağına dönüştürür.",
+        "benefits": {
+          "traceability": {
+            "title": "Uçtan Uca İzlenebilirlik",
+            "description": "Tedarik zincirinizde her hareket genelinde tam görünürlük elde edin. UseSafe®, üreticileri, nakliyecileri ve gümrük sistemlerini doğrulanmış ürün verileri aracılığıyla birbirine bağlar, kökenden hedefe gerçek zamanlı takip sağlar."
+          },
+          "dppIntegration": {
+            "title": "Dijital Ürün Pasaportu Entegrasyonu",
+            "description": "Her kontrol noktasında kesintisiz veri alışverişi sağlayın. UseSafe®, Dijital Ürün Pasaportlarını (DPP'ler) gümrük ve lojistik iş akışlarına entegre eder—ürünlerin köken, malzemeler ve uyumluluk hakkında doğrulanabilir bilgi taşımasını sağlar."
+          },
+          "automatedCompliance": {
+            "title": "Otomatik Uyumluluk Doğrulaması",
+            "description": "Manuel belge incelemelerini ortadan kaldırın. UseSafe®, ürün uyumluluğunu ilgili ticaret, güvenlik ve sürdürülebilirlik düzenlemelerine karşı otomatik olarak kontrol eder—gümrükleme sürelerini ve insan hatasını azaltır."
+          },
+          "riskManagement": {
+            "title": "Risk Yönetimi ve Sahtecilik Önleme",
+            "description": "Anormallikleri ve uyumsuz malları erken tespit edin. UseSafe®, ürün bilgileri, tedarikçi verileri ve sevkiyat belgelerindeki düzensizlikleri tespit etmek için veri analitiği ve doğrulama algoritmaları kullanır—sahteciliğe ve sahte ticarete karşı koruma sağlar."
+          },
+          "sustainabilityReporting": {
+            "title": "Sürdürülebilirlik Raporlaması ve Yeşil Lojistik",
+            "description": "Lojistiği bir sürdürülebilirlik etkinleştiricisine dönüştürün. UseSafe®, karbon ayak izi, malzeme yeniden kullanılabilirliği ve ambalaj uyumluluğu gibi çevresel etki metriklerini takip eder—lojistik sağlayıcılarının yeşil ulaşım ve döngüsel ekonomi hedefleri ile uyumlu olmasına yardımcı olur."
+          },
+          "crossBorderCollaboration": {
+            "title": "Sınır Ötesi İşbirliği ve Veri Paylaşımı",
+            "description": "Uluslararası koordinasyon ve uyumluluğu basitleştirin. UseSafe®, gümrük yetkilileri, lojistik merkezleri ve endüstri veri tabanları arasında birlikte çalışabilirliği sağlar—yasal ve çevresel uyumu sağlarken daha hızlı ticaret akışlarını kolaylaştırır."
+          }
+        }
+      }
+    },
     "dpp-in-espr": {
       "title": "DPP in ESPR (TR)",
       "description": "Digital product passports for ESPR compliance (TR)",
