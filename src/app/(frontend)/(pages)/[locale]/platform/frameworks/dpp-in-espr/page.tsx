@@ -143,12 +143,12 @@ export default function DppInEsprPage() {
 
       {/* ESPR Compliance Section */}
       <GradientBackground type="light">
-        <div className="tw-flex tw-flex-col md:tw-flex-row tw-items-center tw-gap-16">
-          <div className="tw-flex-1 tw-max-w-2xl">
+        <div className="tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-gap-8 lg:tw-gap-16">
+          <div className="tw-flex-1 tw-max-w-2xl tw-order-2 lg:tw-order-1">
             <div className="tw-inline-block tw-px-4 tw-py-1 tw-rounded-full tw-bg-primary/10 tw-text-primary tw-font-medium tw-text-sm tw-mb-6">
               {t("platform.dpp-in-espr.regulatory_compliance_badge")}
             </div>
-            <h2 className="tw-text-5xl tw-font-extrabold tw-text-gray-900 tw-drop-shadow-lg tw-mb-6 tw-leading-tight">
+            <h2 className="tw-text-3xl md:tw-text-4xl lg:tw-text-5xl tw-font-extrabold tw-text-gray-900 tw-drop-shadow-lg tw-mb-6 tw-leading-tight">
               {
                 t("platform.dpp-in-espr.espr_compliance_title").split(
                   "Made Simple",
@@ -158,7 +158,7 @@ export default function DppInEsprPage() {
                 {t("platform.dpp-in-espr.made_simple")}
               </span>
             </h2>
-            <p className="tw-text-xl tw-text-gray-700 tw-mb-8 tw-leading-relaxed">
+            <p className="tw-text-lg md:tw-text-xl tw-text-gray-700 tw-mb-8 tw-leading-relaxed">
               {t("platform.dpp-in-espr.espr_compliance_description")}
             </p>
 
@@ -204,13 +204,14 @@ export default function DppInEsprPage() {
               {t("platform.dpp-in-espr.get_started")}
             </CtaButton>
           </div>
-          <div className="tw-flex-1 tw-mt-12 md:tw-mt-0">
-            <div className="tw-relative tw-h-[400px] md:tw-h-[500px] tw-w-full">
+          <div className="tw-flex-1 tw-w-full tw-max-w-lg lg:tw-max-w-none tw-order-1 lg:tw-order-2 tw-mt-8 lg:tw-mt-0">
+            <div className="tw-relative tw-h-[300px] sm:tw-h-[350px] md:tw-h-[400px] lg:tw-h-[500px] tw-w-full tw-bg-gray-50 tw-rounded-2xl tw-overflow-hidden tw-shadow-lg">
               <Image
                 src="/images/dpp-usesafe.png"
                 alt={t("platform.dpp-in-espr.image_alt")}
                 fill
-                className="tw-object-contain"
+                className="tw-object-contain tw-p-4"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
           </div>

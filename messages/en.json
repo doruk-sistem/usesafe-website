@@ -604,6 +604,193 @@
     "frameworks": "Frameworks",
     "products": "Products",
     "integration": "Integration",
+    "stakeholders":{
+      "defaultCta": {
+        "title": "Ready to Transform Your Product Compliance?",
+        "description": "Contact us to implement UseSafe Certification or request a demo to see the platform in action.",
+        "primaryText": "Contact Us",
+        "secondaryText": "Request a Demo",
+        "secondaryHref": "https://app.usesafe.net/"
+      },
+      "manufacturers": {
+        "heroBadge": "Manufacturers & Brand Owners",
+        "heroTitle": "Manufacturers & Brand Owners",
+        "heroDescription": "Ensure compliance, certification & sustainable growth with UseSafe® solutions tailored for manufacturers and brand owners.",
+        "heroImageAlt": "Manufacturers and Brand Owners",
+        "benefitsTitle": "Manufacturers & Brand Owners",
+        "benefitsDescription": "Across global markets, manufacturers and brand owners are entering a new era of accountability. Driven by the EU Green Deal, the Ecodesign for Sustainable Products Regulation (ESPR), and rapidly evolving consumer expectations, sustainability is no longer a matter of choice—it is a fundamental business requirement. To remain competitive and compliant, companies must demonstrate full transparency across their value chains, verify product safety, and continuously improve environmental performance. UseSafe provides a comprehensive digital solution for achieving these objectives with precision and efficiency. The platform consolidates all material, chemical, and supplier data into a unified system, automating compliance validation and certification workflows in accordance with REACH, RoHS, ESPR, and other key regulations. Through advanced data management and real-time reporting, UseSafe minimizes administrative complexity, mitigates compliance risks, and ensures continuous alignment with international sustainability standards. Beyond regulatory compliance, UseSafe enables businesses to transform sustainability into measurable value. By leveraging verified product data, digital product passports, and transparent traceability tools, companies can strengthen brand integrity, enhance customer trust, and unlock new opportunities in sustainable innovation. With UseSafe, compliance becomes confidence—empowering manufacturers and brand owners to lead responsibly, build trust at scale, and shape a more sustainable future for their industries.",
+        "benefits": {
+          "compliance": {
+            "title": "Compliance Made Simple",
+            "description": "Gain full visibility into material and chemical composition, reduce risks of non-compliance, and simplify certification processes with UseSafe®."
+          },
+          "sustainable": {
+            "title": "Sustainable Product Design",
+            "description": "Integrate durability, reusability, and eco-friendly principles into product development to meet both legal demands and consumer expectations."
+          },
+          "transparent": {
+            "title": "Transparent Product Data",
+            "description": "Provide accurate and verifiable product information through Digital Product Passports, ensuring transparency and minimizing greenwashing risks."
+          },
+          "trust": {
+            "title": "Consumer Trust & Loyalty",
+            "description": "Strengthen brand reputation and customer loyalty by sharing trusted sustainability and safety information across the supply chain."
+          },
+          "supplier": {
+            "title": "Supplier Collaboration & Traceability",
+            "description": "Connect every supplier in your value chain. UseSafe® helps manufacturers collect and verify supplier data, ensuring consistent standards across all components and materials. Real-time dashboards make it easy to track sustainability performance across global networks."
+          },
+          "insights": {
+            "title": "Data-Driven Insights & Reporting",
+            "description": "Transform data into strategic advantage. With UseSafe®, companies gain actionable insights through automated sustainability reports, risk analysis, and performance dashboards—helping decision-makers align operations with ESG goals and future regulations."
+          }
+        }
+      },
+      "ecommerce": {
+        "heroBadge": "E-commerce Sellers & Distributors",
+        "heroTitle": "E-commerce Sellers & Distributors",
+        "heroDescription": "Demonstrate compliance, strengthen consumer trust, and ensure sustainable growth with UseSafe® solutions for online sellers and distributors.",
+        "heroImageAlt": "E-commerce Sellers and Distributors",
+        "benefitsTitle": "E-commerce Sellers & Distributors",
+        "benefitsDescription": "Consumers are demanding verified sustainability claims, regulators are introducing stricter product-data requirements, and marketplaces are enforcing higher standards for transparency and safety. For sellers and distributors, maintaining compliance while managing large and dynamic product portfolios has become a critical challenge. UseSafe provides an intelligent, end-to-end solution designed specifically for online sellers, distributors, and marketplace operators. By automating compliance checks, managing digital product data, and enabling Digital Product Passports (DPPs), UseSafe helps businesses ensure every listed product meets legal, environmental, and ethical standards. The platform integrates seamlessly with existing e-commerce systems and ERP tools, giving sellers complete visibility into product origins, material content, and certification status—without disrupting daily operations. Beyond regulatory compliance, UseSafe empowers e-commerce businesses to build trust and loyalty at scale. By offering verifiable product information and sustainability credentials, sellers can differentiate themselves in competitive marketplaces, reduce the risk of product delistings, and enhance customer confidence. UseSafe enables transparency that goes beyond marketing—transforming it into measurable credibility that drives long-term growth and responsible commerce.",
+        "benefits": {
+          "compliance": {
+            "title": "Automated Compliance for Online Markets",
+            "description": "Ensure every product you sell meets the latest environmental and safety regulations. UseSafe® automates compliance verification across large product catalogs—covering REACH, RoHS, ESPR, and marketplace-specific standards—so sellers can stay compliant without slowing down business."
+          },
+          "centralized": {
+            "title": "Centralized Product Data Management",
+            "description": "Unify all product, supplier, and certification data in one secure platform. UseSafe® eliminates fragmented spreadsheets and manual uploads by connecting directly with your ERP, PIM, or marketplace systems—ensuring your listings are always up to date, accurate, and compliant."
+          },
+          "visibility": {
+            "title": "Supply Chain Visibility for Distributors",
+            "description": "Track compliance and sustainability across your entire distribution network. UseSafe® enables distributors to monitor product flow, supplier certifications, and logistics data in real time—offering full visibility from manufacturer to end-user, ensuring consistent quality and integrity."
+          },
+          "analytics": {
+            "title": "Performance Analytics & Reporting",
+            "description": "Turn compliance and sustainability data into strategic insight. UseSafe's analytics dashboards deliver actionable intelligence on product performance, compliance risks, and sustainability metrics—empowering data-driven decisions that improve profitability and ESG sustainability performance."
+          },
+          "dpp": {
+            "title": "Digital Product Passports (DPP)",
+            "description": "Bring transparency and traceability to every product. UseSafe® automatically generates Digital Product Passports that make sustainability and safety information accessible to consumers and regulators through QR or NFC verification—helping you build trust and avoid greenwashing risks."
+          },
+          "reputation": {
+            "title": "Enhanced Consumer Trust & Brand Reputation",
+            "description": "Consumers are more informed than ever—credibility drives conversion. By providing verifiable data on product origin, materials, and sustainability claims, UseSafe® helps sellers earn long-term trust, reduce return rates, and strengthen brand reputation across marketplaces."
+          }
+        }
+      },
+      "marketplaces": {
+        "heroBadge": "Marketplaces & Retailers",
+        "heroTitle": "Marketplaces & Retailers",
+        "heroDescription": "Ensure compliance, certification & sustainable growth with UseSafe® solutions tailored for manufacturers and brand owners.",
+        "heroImageAlt": "Marketplaces and Retailers",
+        "benefitsTitle": "Marketplaces & Retailers",
+        "benefitsDescription": "Marketplaces and retailers operate in an environment where regulatory expectations, consumer scrutiny, and platform governance are tightening simultaneously. Under frameworks such as the EU Green Deal and the ESPR, transparency, product safety, and verifiable sustainability data are now baseline requirements for listing and selling products at scale. Ensuring that every item—across thousands of brands and sellers—meets these standards demands rigorous controls, high-quality data, and automated compliance. UseSafe provides a unified, enterprise-grade platform that standardizes product data, streamlines verification, and automates compliance checks across vast, fast-moving catalogs. From material and chemical composition to certifications and Digital Product Passports (DPPs), UseSafe consolidates critical information in one system—integrated with PIM/ERP and marketplace workflows—so teams can manage risk proactively while maintaining operational velocity. Beyond regulatory alignment, UseSafe turns transparency into commercial advantage. By enabling accurate, verifiable, and consumer-facing product information, retailers and marketplaces strengthen brand integrity, protect customers, reduce delistings and returns, and differentiate on trust. With UseSafe, governance becomes scalable, listings become reliable, and growth aligns with responsible retail.",
+        "benefits": {
+          "dataQuality": {
+            "title": "Product Data Quality & Standardization",
+            "description": "Eliminate fragmented, inconsistent product data. UseSafe® centralizes attributes, certifications, and documentation, enforcing taxonomy and schema rules across brands and sellers for cleaner, searchable listings."
+          },
+          "listingCompliance": {
+            "title": "Listing Compliance & Governance",
+            "description": "Standardize and automate compliance at listing time. UseSafe® validates product safety, sustainability, and regulatory conformity (e.g., REACH, RoHS, ESPR) before items go live—reducing delistings, penalties, and reputational risk."
+          },
+          "dppScale": {
+            "title": "Digital Product Passports (DPP) at Scale",
+            "description": "Bring verifiable transparency to every SKU. UseSafe® generates and manages DPPs with QR/NFC access—making origin, materials, and sustainability claims easily verifiable for customers, regulators, and partners."
+          },
+          "riskManagement": {
+            "title": "Seller & Supplier Risk Management",
+            "description": "Know your sellers; trust your suppliers. UseSafe® collects and monitors supplier credentials, audit outcomes, and incident history—flagging gaps early and enabling data-driven onboarding and continuous oversight."
+          },
+          "recall": {
+            "title": "Recall, Incident & Claims Response",
+            "description": "Respond faster with complete, reliable data. UseSafe® links SKUs to materials, batches, and suppliers, enabling targeted recalls, efficient customer notifications, and defensible claims handling."
+          },
+          "esgInsights": {
+            "title": "ESG Insights & Executive Reporting",
+            "description": "Turn compliance data into retail strategy. Dashboards track sustainability KPIs, seller performance, and risk trends—supporting disclosures and informing assortment, sourcing, and category decisions."
+          }
+        }
+      },
+      "regulatory": {
+        "heroBadge": "Regulatory Authorities & Government Agencies",
+        "heroTitle": "Regulatory Authorities & Government Agencies",
+        "heroDescription": "Authorities and government agencies play a critical role in enforcing sustainability and product safety standards. UseSafe® provides transparent, standardized data to support effective oversight, regulatory compliance, and sustainable growth.",
+        "heroImageAlt": "Regulatory Authorities and Government Agencies",
+        "benefitsTitle": "Regulatory Authorities & Government Agencies",
+        "benefitsDescription": "Governments and regulatory authorities play a crucial role in shaping the global transition toward sustainability, product safety, and supply chain transparency. Yet, the rapid evolution of materials, markets, and technologies makes consistent enforcement and oversight increasingly complex. Ensuring compliance at scale requires not only legislation—but reliable data, traceable systems, and digital collaboration between regulators and industry. UseSafe supports regulatory bodies and government agencies by providing a unified digital infrastructure for monitoring product compliance, verifying sustainability claims, and analyzing market data in real time. Through interoperable databases, Digital Product Passports (DPPs), and analytics dashboards, UseSafe enables authorities to validate manufacturer and retailer data more efficiently, identify non-compliance risks early, and ensure consistent enforcement across borders. Beyond enforcement, UseSafe serves as a strategic enabler for evidence-based policymaking and sustainable innovation. By facilitating trusted data exchange between public institutions and private stakeholders, the platform helps governments improve transparency, strengthen consumer protection, and accelerate the circular economy. UseSafe empowers regulators to lead with data-driven governance—making sustainability measurable, traceable, and accountable."
+      },
+      "consumers": {
+        "heroBadge": "End Consumers",
+        "heroTitle": "End Consumers",
+        "heroDescription": "Modern consumers expect transparency, authenticity, and sustainability. UseSafe® enables access to verified product information through Digital Product Passports—helping customers make confident, responsible purchasing decisions.",
+        "heroImageAlt": "End Consumers",
+        "benefitsTitle": "End Consumers",
+        "benefitsDescription": "Consumers expect transparency, authenticity, and responsibility from the brands they support. Amid greenwashing claims and rising environmental awareness, trust has become the defining factor in purchasing decisions. Consumers want proof—clear, verifiable data that the products they buy are safe, sustainable, and ethically made. UseSafe empowers consumers to access that proof instantly. By connecting verified data from manufacturers, retailers, and regulatory authorities, UseSafe enables individuals to scan a product's Digital Product Passport (DPP) and view trusted information about its origin, materials, compliance, and environmental footprint. This transparency bridges the gap between brands and consumers, turning trust into an interactive experience. Beyond transparency, UseSafe helps consumers make smarter, more sustainable choices. By providing credible, accessible insights on safety, durability, and recyclability, UseSafe transforms product data into everyday guidance—helping people align their purchasing behavior with their values. With UseSafe, sustainability becomes personal, and every purchase becomes a step toward a more responsible future.",
+        "benefits": {
+          "instantVerification": {
+            "title": "Instant Product Verification",
+            "description": "Know exactly what you buy. With a single scan of a Digital Product Passport (DPP), consumers can access verified details on product origin, materials, and sustainability credentials—instantly and reliably."
+          },
+          "safetyCompliance": {
+            "title": "Safety & Compliance Transparency",
+            "description": "Feel confident about product safety. UseSafe® ensures consumers can view verified compliance data—covering chemical safety, material standards, and environmental certifications—before making a purchase."
+          },
+          "environmentalImpact": {
+            "title": "Environmental Impact Awareness",
+            "description": "See how your choices matter. UseSafe® displays clear sustainability metrics—carbon footprint, recyclability, reusability—so consumers understand each product's environmental impact."
+          },
+          "repairability": {
+            "title": "Repairability & Product Lifecycle Data",
+            "description": "Extend your product's life with confidence. UseSafe® provides guidance on product maintenance, repair options, and component availability—encouraging responsible consumption and reducing waste."
+          },
+          "ethicalSourcing": {
+            "title": "Ethical & Transparent Sourcing",
+            "description": "Buy with purpose. Through UseSafe®, consumers gain visibility into supply chain ethics—labor practices, sourcing origins, and fair-trade compliance—promoting conscious purchasing decisions."
+          },
+          "loyaltyTrust": {
+            "title": "Loyalty Through Trust",
+            "description": "Reward transparency and responsibility. Brands using UseSafe® build long-term consumer loyalty through verified data and shared values—transforming compliance into a meaningful emotional connection."
+          }
+        }
+      },
+      "logistics": {
+        "heroBadge": "Logistics & Customs Operators",
+        "heroTitle": "Logistics & Customs Operators",
+        "heroDescription": "Digital product passports provide logistics operators and customs authorities with streamlined clearance processes, real-time compliance verification, and enhanced operational efficiency.",
+        "heroImageAlt": "Logistics and Customs Operators",
+        "benefitsTitle": "Logistics & Customs Operators",
+        "benefitsDescription": "In a globalized economy, logistics and customs operators are under increasing pressure to ensure transparency, traceability, and compliance across complex supply chains. As international trade becomes more regulated under the EU Green Deal, ESPR, and evolving import/export standards, the ability to verify product origin, safety, and sustainability has become essential for efficient cross-border operations. Manual documentation and fragmented data systems can no longer meet the speed or precision required for modern compliance. UseSafe provides an integrated digital platform that connects logistics providers, freight forwarders, and customs authorities to a single, reliable source of verified product data. By linking manufacturers, importers, and distributors through Digital Product Passports (DPPs), UseSafe enables seamless data flow across the supply chain—reducing clearance delays, documentation errors, and non-compliance risks. Beyond efficiency, UseSafe transforms logistics into a driver of transparency and sustainability. With verified traceability, automated compliance validation, and real-time reporting, logistics and customs operators can demonstrate accountability, support sustainable trade initiatives, and reinforce trust among governments, partners, and consumers. UseSafe bridges the gap between compliance and performance—turning every shipment into a source of verified value.",
+        "benefits": {
+          "traceability": {
+            "title": "End-to-End Traceability",
+            "description": "Gain full visibility across every movement in your supply chain. UseSafe® connects manufacturers, transporters, and customs systems through verified product data, ensuring real-time tracking from origin to destination."
+          },
+          "dppIntegration": {
+            "title": "Digital Product Passport Integration",
+            "description": "Enable seamless data exchange at every checkpoint. UseSafe® integrates Digital Product Passports (DPPs) into customs and logistics workflows—ensuring products carry verifiable information about origin, materials, and compliance."
+          },
+          "automatedCompliance": {
+            "title": "Automated Compliance Validation",
+            "description": "Eliminate manual document reviews. UseSafe® automatically checks product compliance against relevant trade, safety, and sustainability regulations—reducing clearance times and human error."
+          },
+          "riskManagement": {
+            "title": "Risk Management & Fraud Prevention",
+            "description": "Detect anomalies and non-compliant goods early. UseSafe® uses data analytics and verification algorithms to identify irregularities in product information, supplier data, and shipment documentation—protecting against fraud and counterfeit trade."
+          },
+          "sustainabilityReporting": {
+            "title": "Sustainability Reporting & Green Logistics",
+            "description": "Turn logistics into a sustainability enabler. UseSafe® tracks environmental impact metrics such as carbon footprint, material reusability, and packaging compliance—helping logistics providers align with green transport and circular economy goals."
+          },
+          "crossBorderCollaboration": {
+            "title": "Cross-Border Collaboration & Data Sharing",
+            "description": "Simplify international coordination and compliance. UseSafe® enables interoperability between customs authorities, logistics hubs, and industry databases—facilitating faster trade flows while ensuring legal and environmental conformity."
+          }
+        }
+      }
+    },
     "dpp-in-espr": {
       "title": "DPP in ESPR",
       "description": "Digital product passports for ESPR compliance",
