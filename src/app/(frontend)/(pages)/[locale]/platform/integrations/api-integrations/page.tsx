@@ -30,7 +30,7 @@ export default function ApiIntegrationsPage() {
       labelKey: "platform.usesafe-certification.stakeholder_marketplaces_label",
       contentTitleKey: "content_title",
       featuresKeys: ["feature_1", "feature_2", "feature_3"],
-      imageSrc: "/images/platform/usesafe_men_wear.avif",
+      imageSrc: "/images/platform/usesafe_men_wear.jpg",
       imageAltKey: "image_alt",
     },
     {
