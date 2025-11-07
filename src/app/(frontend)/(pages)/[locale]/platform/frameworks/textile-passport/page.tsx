@@ -265,7 +265,7 @@ export default function TextilePassportPage() {
                   style={{ borderRadius: "1rem" }}
                 ></div>
                 <Image
-                  src="/images/platform/usesafe_men_wear.avif"
+                  src="/images/platform/usesafe_men_wear.jpg"
                   alt={t("platform.textile-passport.why_dpp_image_alt")}
                   fill
                   className="tw-object-cover"
