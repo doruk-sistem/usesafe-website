@@ -67,7 +67,7 @@ export default function UseSafeCertificationPage() {
       labelKey: "platform.usesafe-certification.stakeholder_marketplaces_label",
       contentTitleKey: "content_title",
       featuresKeys: ["feature_1", "feature_2", "feature_3"],
-      imageSrc: "/images/platform/usesafe_men_wear.avif",
+      imageSrc: "/images/platform/usesafe_men_wear.jpg",
       imageAltKey: "image_alt",
     },
     {
@@ -200,7 +200,7 @@ export default function UseSafeCertificationPage() {
             delay: 400,
           },
         ]}
-        imageSrc="/images/platform/usesafe_men_wear.avif"
+        imageSrc="/images/platform/usesafe_men_wear.jpg"
         imageAlt={t("platform.usesafe-certification.image_alt_core_purpose")}
         imageOnRight={true}
         gradientType="light"
