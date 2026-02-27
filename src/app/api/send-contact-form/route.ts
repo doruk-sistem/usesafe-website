@@ -16,10 +16,18 @@ export async function POST(request: Request) {
       message,
     } = body;
 
+    const CONTACT_FROM_EMAIL =
+      process.env.CONTACT_FROM_EMAIL || "info@doruksistem.com.tr";
+    const CONTACT_TO_EMAIL =
+      process.env.CONTACT_TO_EMAIL || "info@doruksistem.com.tr";
+    const CONTACT_CC_EMAIL = process.env.CONTACT_CC_EMAIL;
+
     const mailOptions = {
-      from: "furkan.arslan@doruksistem.com.tr",
-      to: "info@doruksistem.com.tr",
-      cc: "furkan.arslan@doruksistem.com.tr",
+      // From: use a brand / generic address instead of a personal mailbox
+      from: CONTACT_FROM_EMAIL,
+      to: CONTACT_TO_EMAIL,
+      // CC only if configured – avoids hard‑coding a personal address
+      cc: CONTACT_CC_EMAIL || undefined,
       replyTo: workEmail,
       subject: `New UsesafeContact Form Submission: ${reasonForReachingOut}`,
       html: `
