@@ -14,6 +14,9 @@ import {
 } from "react-icons/fa";
 
 import { countries, reasonsForReachingOut } from "@/data/countries";
+import { executeRecaptcha } from "@/lib/recaptcha";
+
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? "";
 
 interface ModernContactFormProps {
   className?: string;
@@ -57,12 +60,26 @@ const ModernContactForm: React.FC<ModernContactFormProps> = ({ className = "" })
     setIsSubmitting(true);
 
     try {
+      // reCAPTCHA v3 - get token before submit (if site key is configured)
+      let recaptchaToken: string | null = null;
+      if (RECAPTCHA_SITE_KEY) {
+        recaptchaToken = await executeRecaptcha(RECAPTCHA_SITE_KEY);
+        if (!recaptchaToken) {
+          toast.error(t("form.validation.recaptcha_failed"));
+          setIsSubmitting(false);
+          return;
+        }
+      }
+
       const response = await fetch("/api/send-contact-form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken,
+        }),
       });
 
       if (response.ok) {
@@ -91,10 +108,15 @@ const ModernContactForm: React.FC<ModernContactFormProps> = ({ className = "" })
           acceptTerms: false,
         });
       } else {
-        throw new Error("An error occurred");
+        const errData = await response.json().catch(() => ({}));
+        const errMsg =
+          typeof errData?.error === "string" ? errData.error : undefined;
+        throw new Error(errMsg ?? "An error occurred");
       }
-    } catch {
-      toast.error(t("form.toast.error"));
+    } catch (err) {
+      const message =
+        err instanceof Error && err.message ? err.message : t("form.toast.error");
+      toast.error(message);
     } finally {
       setIsSubmitting(false);
     }
