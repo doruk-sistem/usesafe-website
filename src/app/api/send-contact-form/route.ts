@@ -22,7 +22,7 @@ async function verifyRecaptcha(token: string): Promise<boolean> {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: params.toString(),
-    }
+    },
   );
 
   const data = (await response.json()) as {
@@ -68,14 +68,14 @@ export async function POST(request: Request) {
       if (!recaptchaToken || typeof recaptchaToken !== "string") {
         return NextResponse.json(
           { error: "reCAPTCHA verification required" },
-          { status: 400 }
+          { status: 400 },
         );
       }
       const isValid = await verifyRecaptcha(recaptchaToken);
       if (!isValid) {
         return NextResponse.json(
           { error: "reCAPTCHA verification failed" },
-          { status: 400 }
+          { status: 400 },
         );
       }
     }
