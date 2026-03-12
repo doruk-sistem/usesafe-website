@@ -420,7 +420,8 @@
           "send": "Submit"
         },
         "validation": {
-          "accept_terms": "Please accept the terms and conditions"
+          "accept_terms": "Please accept the terms and conditions",
+          "recaptcha_failed": "Security verification failed. Please refresh the page and try again."
         },
         "toast": {
           "success": {

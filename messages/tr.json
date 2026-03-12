@@ -418,7 +418,8 @@
         "send": "Gönder"
       },
       "validation": {
-        "accept_terms": "Lütfen şartları ve koşulları kabul edin"
+        "accept_terms": "Lütfen şartları ve koşulları kabul edin",
+        "recaptcha_failed": "Güvenlik doğrulaması başarısız. Lütfen sayfayı yenileyip tekrar deneyin."
       },
       "toast": {
         "success": {
