@@ -8,12 +8,16 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope, FaPhone } f
 
 import { CONTACT_INFO } from "@/assets/constants/links";
 import ModernContactForm from "@/components/Platform/ModernContactForm";
+import { ReCaptchaScript } from "@/components/Platform/ReCaptchaScript";
+
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? "";
 
 export default function ContactPageClient() {
   const t = useTranslations("ContactUs");
 
   return (
     <div className="tw-min-h-screen tw-flex tw-flex-col">
+      <ReCaptchaScript siteKey={RECAPTCHA_SITE_KEY} />
       <Toaster position="bottom-center" />
 
       {/* Banner Section */}
