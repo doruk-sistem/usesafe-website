@@ -113,9 +113,9 @@ export default function Navbar() {
         <div className="tw-flex tw-items-center tw-justify-between tw-py-4">
           <a
             href="/"
-            className="tw-flex tw-items-center tw-justify-center tw-w-20 tw-h-20"
+            className="tw-flex tw-items-center tw-h-16 tw-w-auto tw-max-w-[min(calc(100vw-4.5rem),400px)] md:tw-h-[4.5rem] md:tw-max-w-[320px] lg:tw-h-20 lg:tw-max-w-[360px]"
           >
-            <Logo />
+            <Logo className="tw-h-full tw-w-auto" />
           </a>
 
           <div className="tw-hidden xl:tw-flex tw-items-center tw-space-x-5">
