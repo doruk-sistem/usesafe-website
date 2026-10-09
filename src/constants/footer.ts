@@ -1,7 +1,9 @@
+import { SOCIAL_PROFILES } from "@/constants/site";
+
 export const footerData = {
   content: {
     en: {
-      copyright: "© 2025 Usesafe. All rights reserved.",
+      copyright: `© ${new Date().getFullYear()} UseSafe. All rights reserved.`,
       company: {
         title: "Company",
         links: [
@@ -37,21 +39,21 @@ export const footerData = {
         platforms: [
           {
             name: "linkedin" as const,
-            url: "https://linkedin.com/company/usesafe",
+            url: SOCIAL_PROFILES.linkedin,
             isActive: true,
             order: 1,
             id: "linkedin",
           },
           {
             name: "instagram" as const,
-            url: "https://instagram.com/usesafe",
+            url: SOCIAL_PROFILES.instagram,
             isActive: true,
             order: 2,
             id: "instagram",
           },
           {
             name: "twitter" as const,
-            url: "https://twitter.com/usesafe",
+            url: SOCIAL_PROFILES.x,
             isActive: true,
             order: 3,
             id: "twitter",
