@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import {
   FaCheck,
@@ -17,6 +17,12 @@ import { countries, reasonsForReachingOut } from "@/data/countries";
 import { executeRecaptcha } from "@/lib/recaptcha";
 
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? "";
+
+/** Messages prefilled when the contact page is opened from a campaign link (?ref=...). */
+const CONTACT_REF_MESSAGES: Record<string, string> = {
+  "gs1-forum-2026":
+    "I would like to meet the UseSafe team at the GS1 in Europe Forum 2026 in Istanbul (12–15 October).\n\nTopics I'd like to discuss: ",
+};
 
 interface ModernContactFormProps {
   className?: string;
@@ -37,6 +43,24 @@ const ModernContactForm: React.FC<ModernContactFormProps> = ({ className = "" })
     acceptTerms: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Prefill from links such as /contact?reason=product_demo&ref=gs1-forum-2026
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const reason = params.get("reason") ?? "";
+    const ref = params.get("ref") ?? "";
+    // The <select> submits option labels (e.g. "Product Demo"), so map the URL key to its label.
+    const matchedReason = reasonsForReachingOut.find((r) => r.value && r.value === reason);
+    const refMessage = CONTACT_REF_MESSAGES[ref];
+
+    if (!matchedReason && !refMessage) return;
+
+    setFormData((prev) => ({
+      ...prev,
+      reasonForReachingOut: matchedReason ? matchedReason.label : prev.reasonForReachingOut,
+      message: prev.message || refMessage || "",
+    }));
+  }, []);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
