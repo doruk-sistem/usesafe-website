@@ -15,6 +15,7 @@ export default function Gs1StandardsStrip() {
             <FaBarcode className="tw-h-7 tw-w-7" aria-hidden />
           </div>
           <div className="tw-flex-1">
+            <p className="tw-mb-1 tw-text-xs tw-font-semibold tw-uppercase tw-tracking-wider tw-text-[#185a9d]">GS1 Türkiye Solution Partner</p>
             <h2 className="tw-mb-2 tw-text-xl md:tw-text-2xl tw-font-bold tw-text-gray-900">Built around GS1 identifiers</h2>
             <p className="tw-mb-0 tw-text-gray-700">
               Every UseSafe product record is keyed by its GTIN and every passport opens from a QR code. Support for GS1
