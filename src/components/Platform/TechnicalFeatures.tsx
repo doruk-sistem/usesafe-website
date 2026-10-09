@@ -12,7 +12,7 @@ const features: Feature[] = [
     icon: <FaRobot className="tw-w-8 tw-h-8 tw-text-primary" />,
     title: "AI-Driven Compliance Engine",
     description:
-      "Evaluates product conformity with regulations (EU GPSR, ESPR, MoCRA, KKKDIK, etc.), analyzes attributes, labeling, and documentation.",
+      "Evaluates product conformity with regulations (EU GPSR, ESPR, MoCRA, KKDİK, etc.), analyzes attributes, labeling, and documentation.",
   },
   {
     icon: <FaIdBadge className="tw-w-8 tw-h-8 tw-text-primary" />,

@@ -121,7 +121,7 @@ export default function BatteryPassportPage() {
         title={t("platform.battery-passport.dpp_title")}
         description={t("platform.battery-passport.dpp_description")}
         buttonText={t("platform.battery-passport.request_demo")}
-        buttonHref="https://app.usesafe.net/"
+        buttonHref="/contact?reason=product_demo"
         imageSrc="/images/platform/battery-digital-passport.png"
         imageAlt={t("platform.battery-passport.dpp_image_alt")}
       />
