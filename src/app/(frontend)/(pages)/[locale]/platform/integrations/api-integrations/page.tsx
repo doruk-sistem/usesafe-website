@@ -77,7 +77,7 @@ export default function ApiIntegrationsPage() {
         title={t("platform.api-integrations.dpp_title")}
         description={t("platform.api-integrations.dpp_description")}
         buttonText={t("platform.api-integrations.dpp_button_text")}
-        buttonHref="https://app.usesafe.net/"
+        buttonHref="/contact?reason=product_demo"
         imageSrc="/images/usesafe-api-integration.webp"
         imageAlt={t("platform.api-integrations.dpp_image_alt")}
       />
@@ -314,7 +314,7 @@ export default function ApiIntegrationsPage() {
               <CtaButton href="/contact" variant="white" className="tw-w-full sm:tw-w-auto">
                 {t("platform.api-integrations.final_cta_button_1_text")}
               </CtaButton>
-              <CtaButton href="https://app.usesafe.net/" variant="white" external className="tw-w-full sm:tw-w-auto">
+              <CtaButton href="/contact?reason=product_demo" variant="white" className="tw-w-full sm:tw-w-auto">
                 {t("platform.api-integrations.final_cta_button_2_text")}
               </CtaButton>
             </div>
