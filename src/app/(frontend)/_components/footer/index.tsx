@@ -112,9 +112,9 @@ export default function Footer({ footerData: propFooterData }: FooterProps) {
           <div className="col-12 col-lg-2 order-sm-1">
             <Link
               href={`/${locale}`}
-              className="tw-block tw-w-[120px] md:tw-w-[135px] lg:tw-w-[150px] tw-h-[120px] md:tw-h-[135px] lg:tw-h-[150px]"
+              className="tw-block tw-h-24 tw-w-full tw-max-w-full md:tw-h-[4.75rem] md:tw-w-auto md:tw-max-w-[340px] lg:tw-h-20 lg:tw-max-w-[380px]"
             >
-              <Logo className="!tw-w-[120px] !tw-h-[120px] md:!tw-w-[135px] md:!tw-h-[135px] lg:!tw-w-[150px] lg:!tw-h-[150px]" />
+              <Logo className="tw-h-full tw-w-auto" />
             </Link>
             <p className="tw-text-gray-600 tw-mt-4">{content.copyright}</p>
           </div>
