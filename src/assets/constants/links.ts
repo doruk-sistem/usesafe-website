@@ -40,7 +40,9 @@ export const DORUK_GROUP_LOCATIONS: readonly DorukGroupLocation[] = [
   {
     id: "usa",
     label: "DorukWell LLC – Boston – USA",
-    linkable: false,
+    maps:
+      "https://maps.google.com/?q=82+Wendell+Ave+Ste+100,+Pittsfield,+MA+01201,+USA",
+    linkable: true,
     order: 4,
   },
 ];
