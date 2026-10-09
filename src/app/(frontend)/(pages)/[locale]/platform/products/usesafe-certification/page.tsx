@@ -26,6 +26,7 @@ import {
   AnimatedCard,
 } from "@/components/Platform";
 import ComplianceMapSection from "@/components/Platform/ComplianceMapSection";
+import Gs1StandardsStrip from "@/components/Platform/Gs1StandardsStrip";
 import { heroLogos } from "@/constants/heroLogos";
 
 export default function UseSafeCertificationPage() {
@@ -111,11 +112,13 @@ export default function UseSafeCertificationPage() {
         }}
         secondaryCta={{
           text: t("platform.usesafe-certification.request_demo"),
-          href: "https://app.usesafe.net/",
-          external: true,
+          href: "/contact?reason=product_demo",
         }}
         logos={heroLogos}
       />
+
+      {/* GS1 STANDARDS */}
+      <Gs1StandardsStrip />
 
       {/* INTRODUCTION SECTION */}
       <section className="tw-py-24 tw-bg-white">
@@ -356,8 +359,7 @@ export default function UseSafeCertificationPage() {
         }}
         secondaryCta={{
           text: t("platform.usesafe-certification.request_demo"),
-          href: "https://app.usesafe.net/",
-          external: true,
+          href: "/contact?reason=product_demo",
         }}
       />
     </div>
