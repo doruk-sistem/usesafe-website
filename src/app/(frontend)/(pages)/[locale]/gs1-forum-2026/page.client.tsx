@@ -5,6 +5,7 @@ import React from "react";
 import { FaBarcode, FaCalendarAlt, FaHandshake, FaQrcode, FaRoute, FaShieldAlt } from "react-icons/fa";
 
 import { CtaSection, HeroSection, SectionHeader } from "@/components/Platform";
+import Gs1ForumVisual from "@/components/Platform/Gs1ForumVisual";
 
 const MEETING_LINK = "/contact?reason=product_demo&ref=gs1-forum-2026";
 const PARTNER_LINK = "/contact?reason=partnership&ref=gs1-forum-2026";
@@ -80,8 +81,7 @@ export default function Gs1ForumPageClient() {
         badge="GS1 in Europe Forum 2026 · Istanbul · 12–15 October"
         title="From GS1 identifiers to trusted Digital Product Passports"
         description="UseSafe is a proud sponsor of the GS1 in Europe Forum 2026 in Istanbul. Meet our team to see how manufacturers, marketplaces and GS1 Member Organisations can turn GTIN-based product data into verifiable Digital Product Passports and compliance evidence for the EU and Türkiye."
-        imageSrc="/images/digital-product-passport-usesafe.png"
-        imageAlt="UseSafe Digital Product Passport"
+        visual={<Gs1ForumVisual />}
         primaryCta={{ text: "Book a meeting at the Forum", href: MEETING_LINK }}
         secondaryCta={{ text: "Read: GS1 Digital Link meets the DPP", href: "/blog/gs1-digital-link-digital-product-passport" }}
         className="tw-py-24 md:tw-py-32"
@@ -174,9 +174,12 @@ export default function Gs1ForumPageClient() {
               <FaHandshake className="tw-h-8 tw-w-8" />
               <h2 className="tw-text-3xl md:tw-text-4xl tw-font-bold !tw-text-white">For GS1 Member Organisations</h2>
             </div>
+            <p className="tw-mb-4 tw-inline-flex tw-items-center tw-gap-2 tw-rounded-full tw-border tw-border-white/40 tw-bg-white/15 tw-px-4 tw-py-1.5 tw-text-sm tw-font-semibold tw-text-white">
+              <FaHandshake aria-hidden /> UseSafe is a GS1 Türkiye Solution Partner
+            </p>
             <p className="tw-mb-8 tw-text-lg tw-leading-relaxed tw-text-white/90">
-              Your members are asking how to get from a GTIN to a compliant Digital Product Passport. We would like to help
-              you give them a practical answer.
+              Your members are asking how to get from a GTIN to a compliant Digital Product Passport. As a GS1 Türkiye
+              Solution Partner, we would like to help Member Organisations across Europe give them a practical answer.
             </p>
             <ul className="tw-mb-10 tw-space-y-4 tw-text-lg">
               <li>• Onboarding programmes for SMEs that start from the GTINs and product data they already hold.</li>
