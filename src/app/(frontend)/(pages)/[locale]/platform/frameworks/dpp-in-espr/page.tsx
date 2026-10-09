@@ -22,6 +22,8 @@ import {
   CtaSection,
   KeyBenefitsSection,
 } from "@/components/Platform";
+import DppPassportVisual from "@/components/Platform/DppPassportVisual";
+import Gs1StandardsStrip from "@/components/Platform/Gs1StandardsStrip";
 
 export default function DppInEsprPage() {
   useEffect(() => {
@@ -81,8 +83,7 @@ export default function DppInEsprPage() {
         badge={t("platform.dpp-in-espr.badge")}
         title={t("platform.dpp-in-espr.hero_title")}
         description={t("platform.dpp-in-espr.hero_description")}
-        imageSrc="/images/digital-product-passport-usesafe.png"
-        imageAlt={t("platform.dpp-in-espr.image_alt")}
+        visual={<DppPassportVisual />}
         primaryCta={{
           text: t("common.contact_us"),
           href: "/contact",
@@ -110,6 +111,7 @@ export default function DppInEsprPage() {
               >
                 {t("platform.dpp-in-espr.platform_name")}
               </a>
+              .
             </>
           }
         />
@@ -140,6 +142,9 @@ export default function DppInEsprPage() {
           </FeatureCard>
         </div>
       </GradientBackground>
+
+      {/* GS1 STANDARDS */}
+      <Gs1StandardsStrip />
 
       {/* ESPR Compliance Section */}
       <GradientBackground type="light">
@@ -291,8 +296,7 @@ export default function DppInEsprPage() {
         }}
         secondaryCta={{
           text: t("platform.dpp-in-espr.request_demo"),
-          href: "https://app.usesafe.net/",
-          external: true,
+          href: "/contact?reason=product_demo",
         }}
       />
     </div>

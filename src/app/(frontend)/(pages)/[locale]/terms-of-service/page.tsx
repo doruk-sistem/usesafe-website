@@ -15,5 +15,8 @@ export async function generateMetadata({
 }) {
   const params = await paramsPromise;
 
-  return generateMeta(null, { path: "/terms-of-service", locale: params.locale });
+  return generateMeta(
+    { title: "Terms of Service", description: "Terms and conditions for using the UseSafe website and services.", openGraph: { title: "Terms of Service | UseSafe", description: "Terms and conditions for using the UseSafe website and services." } },
+    { path: "/terms-of-service", locale: params.locale },
+  );
 }

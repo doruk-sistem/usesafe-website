@@ -19,7 +19,7 @@ const DigitalProductPassportSection: React.FC<DigitalProductPassportSectionProps
   title = "UseSafe® Digital Product Passport",
   description,
   buttonText = "Request a Demo",
-  buttonHref = "/contact",
+  buttonHref = "/contact?reason=product_demo",
   imageSrc,
   imageAlt,
   className = "",

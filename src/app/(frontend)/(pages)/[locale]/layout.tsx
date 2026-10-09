@@ -5,8 +5,10 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 
+import { SITE_URL, SOCIAL_PROFILES } from "@/constants/site";
 import Footer from "@/frontend/_components/footer";
 import Header from "@/frontend/_components/header";
+import EventBanner from "@/frontend/_components/header/event-banner";
 import CraftoProvider from "@/frontend/_providers/CraftoProvider";
 import ReactSlickProvider from "@/frontend/_providers/ReactSlickProvider";
 import { routing } from "@/i18n/routing";
@@ -23,7 +25,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://usesafe-website.vercel.app"),
+  metadataBase: new URL(SITE_URL),
 
   title: {
     default: "UseSafe | Digital Product Passport & Traceability Solutions",
@@ -50,26 +52,25 @@ export const metadata: Metadata = {
     "supply chain management",
   ],
 
-  authors: [{ name: "UseSafe", url: "https://usesafe-website.vercel.app" }],
+  authors: [{ name: "UseSafe", url: SITE_URL }],
 
   openGraph: {
     type: "website",
     locale: "en_US",
-    alternateLocale: "tr_TR",
-    url: "https://www.usesafe.com",
+    url: SITE_URL,
     siteName: "UseSafe",
     title: "UseSafe | Digital Product Passport & Traceability Platform",
     description: "Transform your product compliance and traceability with UseSafe's Digital Product Passport solution. Ensure safety, sustainability, and regulatory compliance.",
     images: [
       {
-        url: "/image/og/usesafe-og-default.png",
+        url: "/images/og/usesafe-og-default.png",
         width: 1200,
         height: 630,
         alt: "UseSafe Digital Product Passport Platform",
         type: "image/png",
       },
       {
-        url: "/image/og/usesafe-og-square.png",
+        url: "/images/og/usesafe-og-square.png",
         width: 1080,
         height: 1080,
         alt: "UseSafe DPP Platform",
@@ -83,13 +84,17 @@ export const metadata: Metadata = {
     title: "UseSafe | Digital Product Passport Platform",
     description: "Transform product compliance & traceability with UseSafe",
     images: [{
-      url: "/image/twitter/usesafe-twitter-card.png",
+      url: "/images/twitter/usesafe-twitter-card.png",
       width: 1200,
       height: 630,
       alt: "UseSafe Digital Product Passport Platform",
     }],
     site: "@Usesafe_",
     creator: "@Usesafe_",
+  },
+
+  verification: {
+    google: "c-M_poGzJYUZJ5_SzPj5NQpaGK67Z_6pwc8d-5bTek0",
   },
 
   robots: {
@@ -106,11 +111,6 @@ export const metadata: Metadata = {
     notranslate: false,
   },
 
-  verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
-  },
-
   icons: {
     icon: [
       { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
@@ -121,46 +121,6 @@ export const metadata: Metadata = {
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
     shortcut: ["/logos/usesafe-logo.ico"],
-  },
-
-  alternates: {
-    canonical: "https://usesafe.com",
-    languages: {
-      "en": "/en",
-      "tr": "/tr",
-    },
-  },
-
-  other: {
-    "json-ld": JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "UseSafe",
-      url: "https://www.usesafe.com",
-      logo: "https://www.usesafe.com/USESAFE_MARKA.png",
-      description: "Digital Product Passport and Traceability Solutions",
-      sameAs: [
-        "https://www.linkedin.com/company/usesafe",
-        "https://www.instagram.com/usesafe_safeuse",
-        "https://www.x.com/usesafe_safeuse",
-      ],
-      contactPoint: {
-        "@type": "ContactPoint",
-        telephone: "+90 (850) 532 35 97",
-        email: "info@dorukwell.eu",
-        contactType: "customer service",
-        areaServed: ["TR", "EU"],
-        availableLanguage: ["English", "Turkish"],
-      },
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "An der Münze 1",
-        addressLocality: "Köln",
-        addressRegion: "NRW",
-        postalCode: "50668",
-        addressCountry: "DE",
-      },
-    }),
   },
 
   applicationName: "UseSafe",
@@ -177,6 +137,35 @@ export const metadata: Metadata = {
 
   category: "technology",
 };
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "UseSafe",
+  url: SITE_URL,
+  logo: `${SITE_URL}/logos/USESAFE_MARKA.png`,
+  description: "Digital Product Passport and Traceability Solutions",
+  sameAs: [SOCIAL_PROFILES.linkedin, SOCIAL_PROFILES.instagram, SOCIAL_PROFILES.x],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+90 850 532 35 97",
+    email: "info@dorukwell.eu",
+    contactType: "customer service",
+    areaServed: ["TR", "EU"],
+    availableLanguage: ["English", "Turkish"],
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "An der Münze 1",
+    addressLocality: "Köln",
+    addressRegion: "NRW",
+    postalCode: "50668",
+    addressCountry: "DE",
+  },
+};
+
+// Re-render static pages hourly so date-based content (e.g. the event banner) stays current without a redeploy.
+export const revalidate = 3600;
 
 export const viewport = {
   width: "device-width",
@@ -210,9 +199,14 @@ export default async function LocaleLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <NextIntlClientProvider messages={await getMessages()}>
           <CraftoProvider>
             <ReactSlickProvider>
+              <EventBanner />
               <Header />
               {children}
               <Footer />
