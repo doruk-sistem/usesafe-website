@@ -29,12 +29,32 @@ interface CompanyLink {
 
 interface Address {
   country: string;
-  street: string;
-  city: string;
-  maps: string;
+  label: string;
+  maps?: string;
+  linkable?: boolean;
   isActive?: boolean | null;
   order?: number | null;
   id?: string | null;
+}
+
+const contactLinkClass =
+  "tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors lg:tw-whitespace-nowrap";
+
+function AddressBlock({ address }: { address: Address }) {
+  if (address.linkable && address.maps) {
+    return (
+      <a
+        href={address.maps}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={contactLinkClass}
+      >
+        {address.label}
+      </a>
+    );
+  }
+
+  return <span className="tw-text-gray-600">{address.label}</span>;
 }
 
 interface FooterProps {
@@ -57,9 +77,9 @@ interface FooterProps {
         };
         newsletter: {
           title: string;
-          company: string;
-          email: string;
+          emails: string[];
           phone: string;
+          phoneTel: string;
           addresses?: Address[] | null | undefined;
         };
       };
@@ -89,7 +109,7 @@ export default function Footer({ footerData: propFooterData }: FooterProps) {
       <div className="container tw-py-8">
         <div className="row justify-content-between tw-gap-y-6">
           {/* Logo ve Copyright */}
-          <div className="col-12 col-lg-3 order-sm-1">
+          <div className="col-12 col-lg-2 order-sm-1">
             <Link
               href={`/${locale}`}
               className="tw-block tw-w-[120px] md:tw-w-[135px] lg:tw-w-[150px] tw-h-[120px] md:tw-h-[135px] lg:tw-h-[150px]"
@@ -172,40 +192,29 @@ export default function Footer({ footerData: propFooterData }: FooterProps) {
 </div>
 
           {/* Contact Info */}
-          <div className="col-lg-3 col-sm-6 order-sm-5">
+          <div className="col-12 col-sm-6 col-lg-4 order-sm-5">
             <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-6">
               {content.newsletter.title}
             </h3>
-            <div className="tw-space-y-4 tw-text-gray-600">
-              <p>{content.newsletter.company}</p>
-              <a
-                href={`mailto:${content.newsletter.email}`}
-                className="tw-block hover:tw-text-gray-900 tw-transition-colors"
-              >
-                {content.newsletter.email}
-              </a>
-              <a
-                href={`tel:${content.newsletter.phone}`}
-                className="tw-block hover:tw-text-gray-900 tw-transition-colors"
-              >
-                {content.newsletter.phone}
-              </a>
-
-              {content.newsletter.addresses?.map((address) => {
-                return (
-                  <a
-                    key={address.country}
-                    href={address.maps}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="tw-block tw-mt-6 hover:tw-text-gray-900 tw-transition-colors"
-                  >
-                    <p>{address.street}</p>
-                    <p className="tw-mt-1">{address.city}</p>
+            <ul className="tw-space-y-4">
+              {content.newsletter.addresses?.map((address) => (
+                <li key={address.country}>
+                  <AddressBlock address={address} />
+                </li>
+              ))}
+              <li>
+                <a href={`tel:${content.newsletter.phoneTel}`} className={contactLinkClass}>
+                  {content.newsletter.phone}
+                </a>
+              </li>
+              {content.newsletter.emails.map((email) => (
+                <li key={email}>
+                  <a href={`mailto:${email}`} className={contactLinkClass}>
+                    {email}
                   </a>
-                );
-              })}
-            </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

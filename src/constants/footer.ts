@@ -1,3 +1,4 @@
+import { CONTACT_INFO, DORUK_GROUP_LOCATIONS } from "@/assets/constants/links";
 import { SOCIAL_PROFILES } from "@/constants/site";
 
 export const footerData = {
@@ -61,21 +62,19 @@ export const footerData = {
         ],
       },
       newsletter: {
-        title: "CONTACT",
-        company: "DorukWell GmbH",
-        email: "info@dorukwell.eu",
-        phone: "Tell: +90-850-532-35-97",
-        addresses: [
-          {
-            country: "germany",
-            street: "An der Münze 1",
-            city: "50668 Köln Germany",
-            maps: "https://maps.google.com/?q=An+der+Münze+1,+50668+Köln+Germany",
-            isActive: true,
-            order: 1,
-            id: "germany",
-          },
-        ],
+        title: CONTACT_INFO.groupName,
+        emails: [...CONTACT_INFO.emails],
+        phone: CONTACT_INFO.phone,
+        phoneTel: CONTACT_INFO.phoneTel,
+        addresses: DORUK_GROUP_LOCATIONS.map((location) => ({
+          country: location.id,
+          label: location.label,
+          maps: location.maps,
+          linkable: location.linkable,
+          isActive: true,
+          order: location.order,
+          id: location.id,
+        })),
       },
     },
   },
