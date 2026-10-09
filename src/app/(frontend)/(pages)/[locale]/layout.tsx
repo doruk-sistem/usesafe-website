@@ -93,6 +93,10 @@ export const metadata: Metadata = {
     creator: "@Usesafe_",
   },
 
+  verification: {
+    google: "c-M_poGzJYUZJ5_SzPj5NQpaGK67Z_6pwc8d-5bTek0",
+  },
+
   robots: {
     index: true,
     follow: true,
@@ -159,6 +163,9 @@ const organizationJsonLd = {
     addressCountry: "DE",
   },
 };
+
+// Re-render static pages hourly so date-based content (e.g. the event banner) stays current without a redeploy.
+export const revalidate = 3600;
 
 export const viewport = {
   width: "device-width",
