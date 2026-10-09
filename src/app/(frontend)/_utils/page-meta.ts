@@ -5,7 +5,7 @@ import { DEFAULT_OG_IMAGE, absoluteUrl } from "@/constants/site";
 type PageMetaInput = {
   /** Route path without locale prefix, e.g. "/platform/frameworks/dpp-in-espr" */
   path: string;
-  /** Page title. The root layout appends " | UseSafe". */
+  /** Page title without the brand; " | UseSafe" is appended. */
   title: string;
   description: string;
   /** Path to canonicalise to when the page duplicates another one. Defaults to `path`. */
@@ -21,7 +21,8 @@ export const pageMeta = ({ path, title, description, canonicalPath, type = "webs
   const url = absoluteUrl(canonicalPath ?? path);
 
   return {
-    title,
+    // Absolute title: nested layouts (e.g. /blog) would otherwise drop the root "%s | UseSafe" template.
+    title: { absolute: `${title} | UseSafe` },
     description,
     alternates: { canonical: url },
     openGraph: {
