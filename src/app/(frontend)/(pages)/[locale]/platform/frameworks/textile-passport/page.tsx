@@ -254,7 +254,7 @@ export default function TextilePassportPage() {
                   )}
                 </FeatureCard>
               </div>
-              <CtaButton href="/contact" variant="primary">
+              <CtaButton href="/contact?reason=product_demo" variant="primary">
                 {t("platform.textile-passport.request_demo_button")}
               </CtaButton>
             </div>
@@ -359,8 +359,7 @@ export default function TextilePassportPage() {
         }}
         secondaryCta={{
           text: t("platform.textile-passport.request_demo"),
-          href: "https://app.usesafe.net/",
-          external: true,
+          href: "/contact?reason=product_demo",
         }}
       />
     </div>
