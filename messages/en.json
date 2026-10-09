@@ -11,15 +11,15 @@
       "og_description": "Ensuring product safety, compliance, and sustainability through our digital product certification system.",
       "og_image_alt": "UseSafe - Digital Product Passport, Verification & Traceability",
       "twitter_title": "UseSafe - Digital Product Passport, Verification & Traceability",
-      "twitter_description": "Go to the about page"
+      "twitter_description": "Digital Product Passports, compliance automation and traceability for products sold in the EU and Türkiye."
     }
   },
   "HomePage": {
     "revolutionize_title": "We're Here to Revolutionize the World of SAFE Products",
-    "revolutionize_description": "Usesafe is backed by Doruksistem, a trusted consultancy firm. The project ensures that products on online shopping platforms like are safe and compliant with regulations. Usesafe stands out by rigorously verifying product quality and safety. The core values are trust, transparency, and consumer protection. This site offers detailed information about the Usesafe certification process and its benefits for both consumers and sellers.",
+    "revolutionize_description": "UseSafe is backed by Doruksistem, a trusted consultancy firm. The project ensures that products on online shopping platforms are safe and compliant with regulations. UseSafe stands out by rigorously verifying product quality and safety. The core values are trust, transparency, and consumer protection. This site offers detailed information about the UseSafe certification process and its benefits for both consumers and sellers.",
     "join_us": "Join Us",
     "trusted_brands_title": "Join the community of trusted brands",
-    "trusted_brands_description": "Join the community of trusted brands and gain consumer confidence by certifying your products with UseSafe. Usesafe certification ensures that your products meet the highest safety and regulatory standards, giving your customers peace of mind.",
+    "trusted_brands_description": "Join the community of trusted brands and gain consumer confidence by certifying your products with UseSafe. UseSafe certification ensures that your products meet the highest safety and regulatory standards, giving your customers peace of mind.",
     "certified_products": "Certified Products", 
     "certified_partner": "Certified Partner",
     "learn_more": "Learn More",
@@ -56,9 +56,9 @@
       }
     },
     "why_usesafe": {
-      "title": "Why Usesafe?",
+      "title": "Why UseSafe?",
       "approach_title": "A Different Approach, Using a New Method of Trusted Shopping",
-      "approach_description": "Usesafe certification ensures that your products meet the highest safety, quality, and regulatory standards, building trust with consumers and enhancing your brand's reputation."
+      "approach_description": "UseSafe certification ensures that your products meet the highest safety, quality, and regulatory standards, building trust with consumers and enhancing your brand's reputation."
     }
 
   },
@@ -432,7 +432,7 @@
         }
       },
       "Footer": {
-        "copyright": "© 2025 by UseSafe.",
+        "copyright": "© 2026 UseSafe.",
         "company": {
           "title": "COMPANY",
           "usesafe": "UseSafe",
@@ -611,7 +611,7 @@
         "description": "Contact us to implement UseSafe Certification or request a demo to see the platform in action.",
         "primaryText": "Contact Us",
         "secondaryText": "Request a Demo",
-        "secondaryHref": "https://app.usesafe.net/"
+        "secondaryHref": "/contact?reason=product_demo"
       },
       "manufacturers": {
         "heroBadge": "Manufacturers & Brand Owners",
@@ -795,12 +795,12 @@
     "dpp-in-espr": {
       "title": "DPP in ESPR",
       "description": "Digital product passports for ESPR compliance",
-      "image_alt": "Usesafe product for DPP in ESPR Compliance",
-      "badge": "European Sustainability Products Regulation",
+      "image_alt": "UseSafe product for DPP in ESPR Compliance",
+      "badge": "Ecodesign for Sustainable Products Regulation (ESPR)",
       "hero_title": "Digital Product Passports for ESPR Compliance",
-      "hero_description": "Unlock sustainability and compliance with verifiable supply chain data through our UseSAFE platform, a comprehensive DPP solution tailored for the European market.",
+      "hero_description": "Unlock sustainability and compliance with verifiable supply chain data through the UseSafe platform, a comprehensive DPP solution tailored for the European market.",
       "what_is_dpp_title": "What is a Digital Product Passport?",
-      "what_is_dpp_description": "A Digital Product Passport (DPP) is a digital record containing key information about a product's sustainability, material composition, and authenticity throughout its lifecycle. Under the European Union's Sustainable Products Regulation (ESPR), DPPs will become mandatory for many product categories starting in 2026.",
+      "what_is_dpp_description": "A Digital Product Passport (DPP) is a digital record containing key information about a product's sustainability, material composition, and authenticity throughout its lifecycle. The EU Ecodesign for Sustainable Products Regulation (ESPR) has been in force since July 2024, and DPP requirements apply product group by product group as the Commission adopts delegated acts. Textiles and iron & steel are among the first priority groups, while the EU Battery Regulation's battery passport applies from 18 February 2027. See how it works on the ",
       "transparency_trust_title": "Transparency and Trust",
       "transparency_trust_description": "Product data including carbon footprint, material composition, repair history, and recycling information is presented from verified sources, giving consumers clear insights into the environmental and technical characteristics of products.",
       "circular_economy_title": "Circular Economy",
@@ -810,7 +810,7 @@
       "regulatory_compliance_badge": "Regulatory Compliance",
       "espr_compliance_title": "ESPR Compliance Made Simple",
       "made_simple": "Made Simple",
-      "espr_compliance_description": "Our DPP solution reduces up to 80% of the administrative effort for ESPR compliance, accelerating market access. Our integrated platform ensures alignment with overlapping regulatory standards, reducing duplicated efforts.",
+      "espr_compliance_description": "Our DPP solution cuts the administrative effort of ESPR compliance by capturing product data once and reusing it across passports, labels and declarations, accelerating market access. Our integrated platform ensures alignment with overlapping regulatory standards, reducing duplicated efforts.",
       "comprehensive_compliance_title": "Comprehensive Compliance",
       "comprehensive_compliance_description": "with EU's Ecodesign for Sustainable Products Regulation",
       "streamlined_data_title": "Streamlined Data Collection",
@@ -849,12 +849,12 @@
       "contact_team": "Contact Our Team",
       "request_demo": "Request a Demo",
       "highlighted_text": "DPP Solution",
-      "platform_name": "UseSAFE platform"
+      "platform_name": "UseSafe platform"
     },
     "textile-passport": {
       "title": "Textile Passport",
       "description": "Digital product passports for textile industry",
-      "image_alt": "Usesafe product for Textile Passport",
+      "image_alt": "UseSafe product for Textile Passport",
       "badge": "Sustainable Textile Industry",
       "how_it_works_title": "How Does a Textile DPP Work?",
       "how_it_works_description": "DPP collects, stores, and shares data at every stage of a textile product’s lifecycle—design, production, distribution, use, and recycling. Blockchain or decentralized technologies ensure data integrity and accessibility for all stakeholders.",
@@ -1007,7 +1007,7 @@
       "hero_image_alt": "Battery Passport Digital Solution",
       "get_started": "Contact Us",
       "dpp_title": "UseSafe® Digital Product Passport",
-      "dpp_description": "Enhance transparency, traceability, and sustainability in the textile sector with Digital Product Passports. Comply with EU regulations and empower your supply chain with verifiable lifecycle data for every garment and textile product.",
+      "dpp_description": "Give every battery a unique digital identity and a QR-accessible passport. Collect and share the information the EU Battery Regulation requires, such as carbon footprint, materials and composition, recycled content, supply chain due diligence and end-of-life data, with consumers, recyclers and market surveillance authorities.",
       "request_demo": "Request a Demo",
       "dpp_image_alt": "Battery Passport Digital Platform",
       "what_is_title": "What is a Digital Battery Passport?",
@@ -1178,7 +1178,7 @@
       "hero_image_alt": "API Integration for Supply Chain Compliance",
       "hero_cta_text": "Contact Us",
       "dpp_title": "UseSafe® Digital Product Passport",
-      "dpp_description": "Enhance transparency, traceability, and sustainability in the textile sector with Digital Product Passports. Comply with EU regulations and empower your supply chain with verifiable lifecycle data for every garment and textile product.",
+      "dpp_description": "Feed your Digital Product Passports straight from the systems you already run. UseSafe APIs connect ERP, PIM, e-commerce, logistics and customs platforms so product, compliance and traceability data is captured once and reused everywhere.",
       "dpp_button_text": "Request a Demo",
       "dpp_image_alt": "UseSafe Digital Product Passport Mobile App and Shopping Cart",
       "what_is_title": "What is UseSafe API Integration?",
