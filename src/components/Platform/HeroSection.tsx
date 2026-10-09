@@ -17,8 +17,10 @@ interface HeroSectionProps {
   badge?: string;
   title: string;
   description: React.ReactNode;
-  imageSrc: string;
-  imageAlt: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  /** Custom visual (e.g. an interactive React illustration) shown instead of the image. */
+  visual?: React.ReactNode;
   primaryCta?: {
     text: string;
     href: string;
@@ -37,7 +39,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   title,
   description,
   imageSrc,
-  imageAlt,
+  imageAlt = "",
+  visual,
   primaryCta,
   secondaryCta,
   logos,
@@ -117,20 +120,24 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
 
           <div className="tw-flex-1 tw-w-full tw-mt-8 sm:tw-mt-10 md:tw-mt-0">
-            <div className="tw-relative tw-h-[280px] sm:tw-h-[350px] md:tw-h-[450px] lg:tw-h-[500px] tw-w-full tw-rounded-xl sm:tw-rounded-2xl tw-overflow-hidden tw-shadow-2xl">
-              {/* Frosted glass overlay */}
-              <div
-                className="tw-absolute tw-inset-0 tw-bg-white/30 tw-z-10 tw-pointer-events-none"
-                style={{ borderRadius: "1rem" }}
-              ></div>
-              <Image
-                src={imageSrc}
-                alt={imageAlt}
-                fill
-                className="tw-object-cover"
-                priority
-              />
-            </div>
+            {visual ? (
+              <div className="tw-relative tw-w-full">{visual}</div>
+            ) : imageSrc ? (
+              <div className="tw-relative tw-h-[280px] sm:tw-h-[350px] md:tw-h-[450px] lg:tw-h-[500px] tw-w-full tw-rounded-xl sm:tw-rounded-2xl tw-overflow-hidden tw-shadow-2xl">
+                {/* Frosted glass overlay */}
+                <div
+                  className="tw-absolute tw-inset-0 tw-bg-white/30 tw-z-10 tw-pointer-events-none"
+                  style={{ borderRadius: "1rem" }}
+                ></div>
+                <Image
+                  src={imageSrc}
+                  alt={imageAlt}
+                  fill
+                  className="tw-object-cover"
+                  priority
+                />
+              </div>
+            ) : null}
           </div>
         </div>
         {/* Logo Slider */}
