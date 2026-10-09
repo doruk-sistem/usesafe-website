@@ -15,5 +15,8 @@ export async function generateMetadata({
 }) {
   const params = await paramsPromise;
 
-  return generateMeta(null, { path: "/privacy-policy", locale: params.locale });
+  return generateMeta(
+    { title: "Privacy Policy", description: "How UseSafe collects, uses and protects personal data.", openGraph: { title: "Privacy Policy | UseSafe", description: "How UseSafe collects, uses and protects personal data." } },
+    { path: "/privacy-policy", locale: params.locale },
+  );
 }
