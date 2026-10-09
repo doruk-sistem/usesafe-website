@@ -10,6 +10,36 @@ export default function BlogPage() {
   const { locale } = useParams();
   const t = useTranslations();
 
+  // Newest first
+  const posts = [
+    {
+      slug: "gs1-digital-link-digital-product-passport",
+      category: "Standards",
+      date: "October 9, 2026",
+      image: "/images/dpp-product.webp",
+      title: "One QR code for checkout, consumers and regulators: GS1 Digital Link meets the Digital Product Passport",
+      description:
+        "ESPR passports and the move to 2D barcodes are arriving at the same time. Here is how one GS1 Digital Link QR code can serve the till, the consumer and the regulator.",
+    },
+    {
+      slug: "battery-passport-2027-readiness-checklist",
+      category: t("blog.regulation_category"),
+      date: "October 9, 2026",
+      image: "/images/platform/battery-passport-hero.jpg",
+      title: "EU Battery Passport: a readiness checklist for 18 February 2027",
+      description:
+        "Scope, identifiers, QR codes, data and access levels: what manufacturers, importers and suppliers need in place before the first mandatory EU Digital Product Passport.",
+    },
+    {
+      slug: "turkey-ecommerce-regulation",
+      category: t("blog.regulation_category"),
+      date: t("blog.turkey_ecommerce_post.date"),
+      image: "/images/blockchain-16-9-1.webp",
+      title: t("blog.turkey_ecommerce_post.title"),
+      description: t("blog.turkey_ecommerce_post.description"),
+    },
+  ];
+
   return (
     <div className="tw-bg-gray-50">
       {/* Hero Banner Section */}
@@ -58,46 +88,47 @@ export default function BlogPage() {
               {/* Blog Posts Grid */}
               <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-6 tw-justify-items-center">
 
-                {/* Blog Post 1 */}
-                <article className="tw-group tw-bg-white tw-rounded-2xl tw-shadow-lg tw-overflow-hidden hover:tw-shadow-2xl tw-transition-all tw-duration-500 tw-w-full tw-max-w-lg tw-transform hover:tw-scale-105">
-                  <div className="tw-relative tw-h-64 tw-overflow-hidden">
-                    <Image
-                      src="/images/blockchain-16-9-1.webp"
-                      alt="Turkey's New E-Commerce Product Safety Regulation"
-                      fill
-                      className="tw-object-cover tw-transition-transform tw-duration-500 group-hover:tw-scale-110"
-                    />
-                    {/* Category Badge */}
-                    <div className="tw-absolute tw-top-4 tw-left-4">
-                      <span className="tw-inline-flex tw-items-center tw-px-3 tw-py-1 tw-rounded-full tw-bg-blue-500/90 tw-backdrop-blur-sm tw-text-white tw-text-xs tw-font-semibold tw-uppercase tw-tracking-wide">
-                        {t("blog.regulation_category")}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="tw-p-8">
-                    <div className="tw-flex tw-items-center tw-mb-4 tw-text-sm tw-text-gray-500">
-                      <span>{t("blog.turkey_ecommerce_post.date")}</span>
+                {posts.map((post) => (
+                  <article key={post.slug} className="tw-group tw-bg-white tw-rounded-2xl tw-shadow-lg tw-overflow-hidden hover:tw-shadow-2xl tw-transition-all tw-duration-500 tw-w-full tw-max-w-lg tw-transform hover:tw-scale-105">
+                    <div className="tw-relative tw-h-64 tw-overflow-hidden">
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className="tw-object-cover tw-transition-transform tw-duration-500 group-hover:tw-scale-110"
+                      />
+                      {/* Category Badge */}
+                      <div className="tw-absolute tw-top-4 tw-left-4">
+                        <span className="tw-inline-flex tw-items-center tw-px-3 tw-py-1 tw-rounded-full tw-bg-blue-500/90 tw-backdrop-blur-sm tw-text-white tw-text-xs tw-font-semibold tw-uppercase tw-tracking-wide">
+                          {post.category}
+                        </span>
+                      </div>
                     </div>
 
-                    <Link href={`/${locale}/blog/turkey-ecommerce-regulation`}>
-                      <h3 className="tw-text-2xl tw-font-bold tw-mb-4 tw-text-gray-900 tw-leading-tight group-hover:tw-text-blue-600 tw-transition-colors tw-duration-300 tw-cursor-pointer">
-                        {t("blog.turkey_ecommerce_post.title")}
-                      </h3>
-                    </Link>
+                    <div className="tw-p-8">
+                      <div className="tw-flex tw-items-center tw-mb-4 tw-text-sm tw-text-gray-500">
+                        <span>{post.date}</span>
+                      </div>
 
-                    <p className="tw-text-gray-600 tw-mb-6 tw-line-clamp-3 tw-leading-relaxed tw-text-base">
-                      {t("blog.turkey_ecommerce_post.description")}
-                    </p>
+                      <Link href={`/${locale}/blog/${post.slug}`}>
+                        <h3 className="tw-text-2xl tw-font-bold tw-mb-4 tw-text-gray-900 tw-leading-tight group-hover:tw-text-blue-600 tw-transition-colors tw-duration-300 tw-cursor-pointer">
+                          {post.title}
+                        </h3>
+                      </Link>
 
-                    <Link href={`/${locale}/blog/turkey-ecommerce-regulation`} className="tw-inline-flex tw-items-center tw-text-blue-600 hover:tw-text-blue-700 tw-font-semibold tw-transition-colors tw-duration-300 group-hover:tw-translate-x-1">
-                      {t("blog.read_more")}
-                      <svg className="tw-w-4 tw-h-4 tw-ml-2 tw-transition-transform tw-duration-300 group-hover:tw-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
-                  </div>
-                </article>
+                      <p className="tw-text-gray-600 tw-mb-6 tw-line-clamp-3 tw-leading-relaxed tw-text-base">
+                        {post.description}
+                      </p>
+
+                      <Link href={`/${locale}/blog/${post.slug}`} className="tw-inline-flex tw-items-center tw-text-blue-600 hover:tw-text-blue-700 tw-font-semibold tw-transition-colors tw-duration-300 group-hover:tw-translate-x-1">
+                        {t("blog.read_more")}
+                        <svg className="tw-w-4 tw-h-4 tw-ml-2 tw-transition-transform tw-duration-300 group-hover:tw-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
+                  </article>
+                ))}
 
               </div>
             </div>
