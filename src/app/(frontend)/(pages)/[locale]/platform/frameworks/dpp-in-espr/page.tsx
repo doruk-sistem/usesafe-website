@@ -22,6 +22,7 @@ import {
   CtaSection,
   KeyBenefitsSection,
 } from "@/components/Platform";
+import DppPassportVisual from "@/components/Platform/DppPassportVisual";
 import Gs1StandardsStrip from "@/components/Platform/Gs1StandardsStrip";
 
 export default function DppInEsprPage() {
@@ -82,8 +83,7 @@ export default function DppInEsprPage() {
         badge={t("platform.dpp-in-espr.badge")}
         title={t("platform.dpp-in-espr.hero_title")}
         description={t("platform.dpp-in-espr.hero_description")}
-        imageSrc="/images/digital-product-passport-usesafe.png"
-        imageAlt={t("platform.dpp-in-espr.image_alt")}
+        visual={<DppPassportVisual />}
         primaryCta={{
           text: t("common.contact_us"),
           href: "/contact",
