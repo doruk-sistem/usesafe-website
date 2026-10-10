@@ -49,8 +49,12 @@ export const DORUK_GROUP_LOCATIONS: readonly DorukGroupLocation[] = [
 
 export const CONTACT_INFO = {
   groupName: "DORUK GROUP CONTACT",
-  emails: ["info@doruksistem.com.tr", "info@dorukwell.eu"] as const,
-  email: "info@dorukwell.eu",
+  emails: [
+    "info@doruksistem.com.tr",
+    "info@dorukwell.eu",
+    "info@usesafe.com",
+  ] as const,
+  email: "info@usesafe.com",
   phone: "+90 (850) 532 3597",
   phoneTel: "+908505323597",
 } as const;
