@@ -6,39 +6,13 @@ import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import React from "react";
 
+import { BLOG_POSTS, formatPostDate } from "@/constants/blogPosts";
+
 export default function BlogPage() {
   const { locale } = useParams();
   const t = useTranslations();
 
-  // Newest first
-  const posts = [
-    {
-      slug: "gs1-digital-link-digital-product-passport",
-      category: "Standards",
-      date: "October 9, 2026",
-      image: "/images/dpp-product.webp",
-      title: "One QR code for checkout, consumers and regulators: GS1 Digital Link meets the Digital Product Passport",
-      description:
-        "ESPR passports and the move to 2D barcodes are arriving at the same time. Here is how one GS1 Digital Link QR code can serve the till, the consumer and the regulator.",
-    },
-    {
-      slug: "battery-passport-2027-readiness-checklist",
-      category: t("blog.regulation_category"),
-      date: "October 9, 2026",
-      image: "/images/platform/battery-passport-hero.jpg",
-      title: "EU Battery Passport: a readiness checklist for 18 February 2027",
-      description:
-        "Scope, identifiers, QR codes, data and access levels: what manufacturers, importers and suppliers need in place before the first mandatory EU Digital Product Passport.",
-    },
-    {
-      slug: "turkey-ecommerce-regulation",
-      category: t("blog.regulation_category"),
-      date: t("blog.turkey_ecommerce_post.date"),
-      image: "/images/blockchain-16-9-1.webp",
-      title: t("blog.turkey_ecommerce_post.title"),
-      description: t("blog.turkey_ecommerce_post.description"),
-    },
-  ];
+  const posts = BLOG_POSTS.map((post) => ({ ...post, date: formatPostDate(post.date) }));
 
   return (
     <div className="tw-bg-gray-50">
@@ -90,7 +64,7 @@ export default function BlogPage() {
 
                 {posts.map((post) => (
                   <article key={post.slug} className="tw-group tw-bg-white tw-rounded-2xl tw-shadow-lg tw-overflow-hidden hover:tw-shadow-2xl tw-transition-all tw-duration-500 tw-w-full tw-max-w-lg tw-transform hover:tw-scale-105">
-                    <div className="tw-relative tw-h-64 tw-overflow-hidden">
+                    <div className="tw-relative tw-aspect-[1200/630] tw-overflow-hidden">
                       <Image
                         src={post.image}
                         alt={post.title}
