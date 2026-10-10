@@ -11,6 +11,9 @@ export type BlogPost = {
   image: string;
 };
 
+/** Blog list page size (pagination). */
+export const BLOG_PAGE_SIZE = 6;
+
 /** All blog posts, newest first. Used by the blog list, post metadata and sitemap.xml. */
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -128,3 +131,55 @@ export const getBlogPost = (slug: string): BlogPost => {
   if (!post) throw new Error(`Unknown blog post: ${slug}`);
   return post;
 };
+
+export function parseBlogListPageParam(pageParam?: string): number {
+  if (!pageParam) return 1;
+  const parsed = Number.parseInt(pageParam, 10);
+  if (!Number.isFinite(parsed) || parsed < 1) return 1;
+  return parsed;
+}
+
+export function getBlogListPage(requestedPage: number) {
+  const totalPosts = BLOG_POSTS.length;
+  const totalPages = Math.max(1, Math.ceil(totalPosts / BLOG_PAGE_SIZE));
+  const currentPage = Math.min(Math.max(1, requestedPage), totalPages);
+  const start = (currentPage - 1) * BLOG_PAGE_SIZE;
+  const posts = BLOG_POSTS.slice(start, start + BLOG_PAGE_SIZE);
+
+  return { posts, currentPage, totalPages, totalPosts };
+}
+
+export type BlogPaginationItem = number | "ellipsis";
+
+/** Page numbers shown in the blog list pager (collapses with … when there are many pages). */
+export function getBlogPaginationItems(
+  currentPage: number,
+  totalPages: number,
+): BlogPaginationItem[] {
+  if (totalPages <= 7) {
+    return Array.from({ length: totalPages }, (_, i) => i + 1);
+  }
+
+  const sibling = 1;
+  const pagesToShow = new Set<number>([1, totalPages]);
+  for (
+    let page = currentPage - sibling;
+    page <= currentPage + sibling;
+    page += 1
+  ) {
+    if (page >= 1 && page <= totalPages) {
+      pagesToShow.add(page);
+    }
+  }
+
+  const sorted = [...pagesToShow].sort((a, b) => a - b);
+  const items: BlogPaginationItem[] = [];
+  for (let i = 0; i < sorted.length; i += 1) {
+    const page = sorted[i];
+    if (i > 0 && page - sorted[i - 1] > 1) {
+      items.push("ellipsis");
+    }
+    items.push(page);
+  }
+  return items;
+}

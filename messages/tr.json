@@ -1350,6 +1350,11 @@
     "page_subtitle": "Blog Yazıları",
     "scroll_down": "Aşağı Kaydır",
     "read_more": "Devamını Oku",
+    "pagination": {
+      "aria_label": "Blog listesi sayfalama",
+      "previous": "Önceki",
+      "next": "Sonraki"
+    },
     "regulation_category": "Regülasyon",
     "turkey_ecommerce_post": {
       "title": "Türkiye'nin Yeni E-Ticaret Ürün Güvenliği Regülasyonu: Uluslararası Üreticiler İçin Rehber",
