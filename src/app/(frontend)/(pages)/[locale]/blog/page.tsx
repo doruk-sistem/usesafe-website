@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 
-import { pageMeta } from "@/frontend/_utils/page-meta";
 import {
   getBlogListPage,
   parseBlogListPageParam,
 } from "@/constants/blogPosts";
+import { pageMeta } from "@/frontend/_utils/page-meta";
 
 import BlogPageClient from "./page.client";
 

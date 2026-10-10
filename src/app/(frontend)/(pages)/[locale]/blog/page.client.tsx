@@ -5,16 +5,16 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useRef } from "react";
 
+import { BlogPagination } from "@/components/Blog/BlogPagination";
+import type { BlogPost } from "@/constants/blogPosts";
+import { formatPostDate } from "@/constants/blogPosts";
+
 function scrollToBlogPosts() {
   document.getElementById("blog-posts")?.scrollIntoView({
     behavior: "smooth",
     block: "start",
   });
 }
-
-import { BlogPagination } from "@/components/Blog/BlogPagination";
-import type { BlogPost } from "@/constants/blogPosts";
-import { formatPostDate } from "@/constants/blogPosts";
 
 type BlogPageClientProps = {
   posts: BlogPost[];
