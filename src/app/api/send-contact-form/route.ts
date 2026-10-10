@@ -81,16 +81,26 @@ export async function POST(request: Request) {
     }
 
     const CONTACT_FROM_EMAIL =
-      process.env.CONTACT_FROM_EMAIL || "info@doruksistem.com.tr";
+      process.env.CONTACT_FROM_EMAIL?.trim() ||
+      process.env.SMTP_USER?.trim() ||
+      "info@usesafe.com";
     const CONTACT_TO_EMAIL =
-      process.env.CONTACT_TO_EMAIL || "info@doruksistem.com.tr";
+      process.env.CONTACT_TO_EMAIL?.trim() ||
+      process.env.SMTP_USER?.trim() ||
+      "info@usesafe.com";
+    const CONTACT_TO_EXTRA =
+      process.env.CONTACT_TO_EXTRA?.trim() || "info@doruksistem.com.tr";
     const CONTACT_CC_EMAIL = process.env.CONTACT_CC_EMAIL;
+
+    const contactNotificationRecipients = [
+      CONTACT_TO_EMAIL,
+      CONTACT_TO_EXTRA,
+    ].filter((email, index, emails) => Boolean(email) && emails.indexOf(email) === index);
 
     const mailOptions = {
       // From: use a brand / generic address instead of a personal mailbox
       from: CONTACT_FROM_EMAIL,
-      to: CONTACT_TO_EMAIL,
-      // CC only if configured – avoids hard‑coding a personal address
+      to: contactNotificationRecipients,
       cc: CONTACT_CC_EMAIL || undefined,
       replyTo: workEmail,
       subject: `New UsesafeContact Form Submission: ${reasonForReachingOut}`,
@@ -220,10 +230,20 @@ export async function POST(request: Request) {
       { message: "Email sent successfully" },
       { status: 200 },
     );
-  } catch {
-    // Error sending email
+  } catch (error) {
+    if (process.env.NODE_ENV === "development") {
+      console.error("[send-contact-form]", error);
+    }
+    const devMessage =
+      process.env.NODE_ENV === "development" && error instanceof Error
+        ? error.message
+        : undefined;
     return NextResponse.json(
-      { error: "Failed to send email" },
+      {
+        error: devMessage
+          ? `Failed to send email: ${devMessage}`
+          : "Failed to send email",
+      },
       { status: 500 },
     );
   }
