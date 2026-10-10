@@ -1241,6 +1241,11 @@
     "page_subtitle": "Blog Posts",
     "scroll_down": "Scroll Down",
     "read_more": "Read More",
+    "pagination": {
+      "aria_label": "Blog list pagination",
+      "previous": "Previous",
+      "next": "Next"
+    },
     "regulation_category": "Regulation",
     "turkey_ecommerce_post": {
       "title": "Turkey's New E-Commerce Product Safety Regulation: A Guide for International Manufacturers",
