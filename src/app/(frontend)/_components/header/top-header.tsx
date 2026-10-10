@@ -11,6 +11,8 @@ import {
 } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
 
+import { CONTACT_INFO } from "@/assets/constants/links";
+
 export default function TopHeader() {
   return (
     <div className="tw-bg-gray-100">
@@ -26,11 +28,11 @@ export default function TopHeader() {
               <span className="tw-text-sm">+90 (850) 532 35 97</span>
             </a>
             <a
-              href="mailto:info@dorukwell.eu"
+              href={`mailto:${CONTACT_INFO.email}`}
               className="tw-flex tw-items-center tw-gap-2 hover:tw-text-primary tw-transition-colors"
             >
               <FaEnvelope className="tw-text-primary" />
-              <span className="tw-text-sm">info@dorukwell.eu</span>
+              <span className="tw-text-sm">{CONTACT_INFO.email}</span>
             </a>
           </div>
 
