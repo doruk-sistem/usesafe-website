@@ -21,7 +21,7 @@ export const absoluteUrl = (path = "/") => {
 
 /**
  * Public, indexable routes. Keep in sync with the pages under
- * src/app/(frontend)/(pages)/[locale]. Used by sitemap.xml.
+ * src/app/(frontend)/(pages)/[locale]. Used by sitemap.xml (blog posts are added from BLOG_POSTS).
  */
 export const PUBLIC_ROUTES: { path: string; priority: number; changeFrequency: "weekly" | "monthly" | "yearly" }[] = [
   { path: "/", priority: 1, changeFrequency: "weekly" },
@@ -37,9 +37,6 @@ export const PUBLIC_ROUTES: { path: string; priority: number; changeFrequency: "
   { path: "/stakeholders/logistics-customs-operators", priority: 0.6, changeFrequency: "monthly" },
   { path: "/stakeholders/end-consumers", priority: 0.6, changeFrequency: "monthly" },
   { path: "/blog", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/blog/gs1-digital-link-digital-product-passport", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/blog/battery-passport-2027-readiness-checklist", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/blog/turkey-ecommerce-regulation", priority: 0.6, changeFrequency: "yearly" },
   { path: "/contact", priority: 0.6, changeFrequency: "yearly" },
   { path: "/privacy-policy", priority: 0.2, changeFrequency: "yearly" },
   { path: "/terms-of-service", priority: 0.2, changeFrequency: "yearly" },
