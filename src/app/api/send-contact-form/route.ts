@@ -232,6 +232,7 @@ export async function POST(request: Request) {
     );
   } catch (error) {
     if (process.env.NODE_ENV === "development") {
+      // eslint-disable-next-line no-console -- dev-only SMTP debugging
       console.error("[send-contact-form]", error);
     }
     const devMessage =
